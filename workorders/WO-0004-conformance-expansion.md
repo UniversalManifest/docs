@@ -1,6 +1,6 @@
 # WO-0004 — Expand conformance fixtures (TTL + unknown fields)
 
-**Status:** In progress  
+**Status:** Done  
 **Created:** 2026-02-12
 
 ## Objective
@@ -25,7 +25,6 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] `npm test` passes (valid fixtures + expected invalid fixtures)
-- [ ] Conformance doc lists the new fixtures
-- [ ] Harness reports useful errors when a fixture unexpectedly passes/fails
-
+- [x] `npm test` passes (valid fixtures + expected invalid fixtures)
+- [x] Conformance doc lists the new fixtures
+- [x] Harness reports useful errors when a fixture unexpectedly passes/fails

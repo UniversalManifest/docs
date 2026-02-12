@@ -1,6 +1,6 @@
 # WO-0001 — Commit + push current repo changes
 
-**Status:** In progress  
+**Status:** Done  
 **Created:** 2026-02-12
 
 ## Objective
@@ -21,11 +21,10 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] `git status` is clean
-- [ ] Commit(s) exist locally for the current changes
-- [ ] `git push` succeeds
+- [x] `git status` is clean
+- [x] Commit(s) exist locally for the current changes
+- [x] `git push` succeeds
 
 ## Notes
 
 - Keep this repo private for now.
-
