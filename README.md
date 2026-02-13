@@ -16,10 +16,14 @@ This is the entry point for the Universal Manifest spec repo.
 - `docs/PROJECT-VISION.md` — What this standard aims to enable (and what’s out of scope)
 - `docs/DEPTH-AND-SCOPE.md` — High-level depth + scope map for this repo
 - `docs/STATE-OF-THE-PROJECT.md` — Current status, milestones, and next steps
+- `docs/DOMAIN-ARCHITECTURE.md` — Domain split: standards site vs UMID resolver
 - `docs/PUBLISHING-AND-VERSIONING.md` — How spec artifacts get hosted + versioned for adopters
 - `docs/RELEASING.md` — Draft release process for spec versions + publishing
 - `docs/CRUCIAL-DETAILS.md` — Non-obvious decisions and “gotchas”
 - `docs/DECISIONS.md` — Decisions made while drafting the standard
+- `docs/DONE-DONE-DEFINITION.md` — Official completion criteria (“done done”) for releases
+- `docs/DONE-DONE-CHECKLIST.md` — Gate-by-gate checklist for release readiness
+- `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md` — Required evidence template for done-done sign-off
 - `docs/STUB-MANIFESTS.md` — Near-real example manifests (fixtures) + section drivers
 - `docs/WORKLOG-2026-02-11.md` — Initial repo bootstrap worklog
 - `docs/WORKLOG-2026-02-12.md` — Stub fixtures + validation worklog

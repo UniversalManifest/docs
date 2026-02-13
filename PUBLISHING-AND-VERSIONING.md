@@ -15,22 +15,26 @@ For broad adoption, these artifacts need stable, HTTPS-hosted URLs:
 - JSON Schema (per spec version)
   - `spec/v0.1/schema.json`
 
-The current spec files already assume canonical URLs via:
+Current repository history includes `localartist.network` namespace references in v0.1 files. Canonical hosting direction is now:
 
-- `spec/v0.1/schema.json` → `$id: https://localartist.network/ns/universal-manifest/v0.1/schema.json`
-- `spec/v0.1/schema.jsonld` → namespace `https://localartist.network/ns/universal-manifest/v0.1#`
+- `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
+
+Compatibility requirement:
+
+- Keep legacy `localartist.network/ns/universal-manifest/...` URLs resolvable once published.
 
 ## 2) URL layout (recommended)
 
 Use versioned, immutable paths:
 
-- `https://localartist.network/ns/universal-manifest/v0.1/schema.jsonld`
-- `https://localartist.network/ns/universal-manifest/v0.1/schema.json`
+- `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
 
 Optional convenience aliases (non-normative):
 
-- `https://localartist.network/ns/universal-manifest/latest/schema.jsonld`
-- `https://localartist.network/ns/universal-manifest/latest/schema.json`
+- `https://universalmanifest.net/ns/universal-manifest/latest/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/latest/schema.json`
 
 If `latest/` exists, it MUST redirect (301/302) to a concrete version and MUST NOT serve mutable content directly.
 
@@ -43,6 +47,10 @@ Any static hosting that supports correct headers is fine. Examples:
 - GitHub Pages (with custom domain + correct MIME types)
 
 The only hard requirement is that the URLs above resolve over HTTPS consistently.
+
+Resolver note:
+
+- Runtime UMID resolution belongs on `https://myum.net/{UMID}` and is intentionally separate from spec hosting.
 
 ## 4) Required HTTP headers
 
@@ -115,9 +123,10 @@ For ecosystems that prefer package managers:
 
 Before calling a version “adoptable”:
 
-- [ ] URLs resolve over HTTPS on `localartist.network`
+- [ ] URLs resolve over HTTPS on `universalmanifest.net`
 - [ ] Correct `Content-Type` headers for `.jsonld` and `.json`
 - [ ] CORS enabled for tooling
 - [ ] Versioned artifacts are immutable
 - [ ] Conformance fixtures (valid + invalid) exist and are referenced
 - [ ] A signature profile exists (v0.1 may defer; v0.2+ should specify)
+- [ ] `myum.net/{UMID}` resolver behavior is documented and reachable for runtime usage

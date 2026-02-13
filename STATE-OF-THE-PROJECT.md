@@ -25,6 +25,11 @@ This repo is a **spec + fixtures + minimal tooling** project. It is not a runnin
   - Social/profile adoption: `integrations/social.md`
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
+  - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
+- **Official completion framework**
+  - Done-done definition: `docs/DONE-DONE-DEFINITION.md`
+  - Release checklist: `docs/DONE-DONE-CHECKLIST.md`
+  - Evidence pack template: `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
 - **Tooling**
   - TypeScript types + runtime assertion for v0.1: `packages/universal-manifest/`
   - Fixture validation run via `npm test` (build + validate valid + invalid fixtures)
@@ -50,6 +55,11 @@ v0.1 is “done enough” when:
 3. The spec clearly documents TTL + caching + ID guidance and why it exists.
 
 We are close on (1) and (2). Remaining work is primarily around making (3) sharper and expanding conformance + signature guarantees.
+
+For formal gate-level completion criteria and evidence requirements, use:
+
+- `docs/DONE-DONE-DEFINITION.md`
+- `docs/DONE-DONE-CHECKLIST.md`
 
 ## Next milestones (recommended)
 

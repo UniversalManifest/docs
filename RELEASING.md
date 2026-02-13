@@ -42,12 +42,12 @@ If changes are purely additive (new optional fields/fixtures/docs), you may stay
    - `git tag vX.Y.Z`
    - `git push --tags`
 
-## 3) Release steps (publishing to `localartist.network`)
+## 3) Release steps (publishing to `universalmanifest.net`)
 
 Goal: make these resolve over HTTPS with correct headers:
 
-- `https://localartist.network/ns/universal-manifest/vX.Y/schema.jsonld`
-- `https://localartist.network/ns/universal-manifest/vX.Y/schema.json`
+- `https://universalmanifest.net/ns/universal-manifest/vX.Y/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/vX.Y/schema.json`
 
 Required headers are described in:
 
@@ -66,10 +66,26 @@ Minimum verification checklist:
 
 If `latest/` aliases exist, they should redirect to a concrete version and should not be cached long-term.
 
+Compatibility rule:
+
+- Keep any previously published `localartist.network/ns/universal-manifest/...` URLs resolvable as aliases.
+- Do not repoint or remove old public URLs once clients depend on them.
+
+## 3.1 Resolver publication (`myum.net`)
+
+Release also includes runtime resolver checks for:
+
+- `https://myum.net/{UMID}`
+
+Minimum validation:
+
+1. Known UMID returns either `200` (manifest payload) or redirect to canonical payload location.
+2. Unknown UMID returns deterministic `404`.
+3. Resolver does not require spec-site deployment coupling.
+
 ## 4) Post-release hygiene
 
 - Add/update a worklog entry (e.g., `docs/WORKLOG-YYYY-MM-DD.md`).
 - Update `docs/STATE-OF-THE-PROJECT.md` milestones and links.
 - If you added new well-known names, update:
   - `spec/v0.1/REGISTRY.md` (or the versioned equivalent)
-

@@ -10,6 +10,7 @@ If you only read one thing first:
 
 - `docs/PROJECT-VISION.md`
 - `docs/STATE-OF-THE-PROJECT.md`
+- `docs/DONE-DONE-DEFINITION.md`
 
 ---
 
