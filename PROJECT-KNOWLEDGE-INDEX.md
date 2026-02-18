@@ -4,7 +4,7 @@ This document is the local pointer to the global GAS shared project index for Un
 
 ## Canonical shared index (GAS)
 
-- `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-17_02-35_universal-manifest_master-index.md`
+- `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-17_19-37_universal-manifest_master-index.md`
 
 ## Registry entry
 
