@@ -1,14 +1,14 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-17  
-**Status:** v0.1 draft spec + fixtures + proof surfaces are working locally; v0.2 signature interop remains draft; production publishing is blocked only on external deploy actions.
+**Date:** 2026-02-18  
+**Status:** v0.1/v0.2 artifacts, docs site, and resolver are now live in production (`universalmanifest.net` + `myum.net`); next critical work is onboarding clarity and interactive adopter tooling.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
 This repo is a **spec + fixtures + minimal tooling** project. It is not a running service.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
-For the latest condensed status summary, see: `docs/reports/2026-02-17-current-status-and-decoupling.md`.
+For the latest condensed status summary, see: `docs/reports/2026-02-18-live-status-and-next-critical-path.md`.
 
 ## Current snapshot
 
@@ -42,6 +42,9 @@ For the latest condensed status summary, see: `docs/reports/2026-02-17-current-s
   - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`)
   - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- **Visual onboarding assets (new)**
+  - Excalidraw source-of-truth scaffold: `docs/diagrams/`
+  - Published diagram assets path: `site/public/diagrams/`
 - **Public docs IA + editorial polish**
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
@@ -60,13 +63,14 @@ For the latest condensed status summary, see: `docs/reports/2026-02-17-current-s
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
-- Stable hosting guarantees for the context/schema URLs (planned; see publishing plan and WO-0003)
+- Interactive manifest workbench for import/create/validate/export (`WO-0014`)
+- First-time onboarding validation with external reader testing (`WO-0015`)
 
-## Work-order status (2026-02-17)
+## Work-order status (2026-02-18)
 
-- Completed: `WO-0001`, `WO-0002`, `WO-0004` through `WO-0013`
-- Blocked: `WO-0003` (`docs/workorders/WO-0003-publishing-and-release.md`)
-  - Requires external Cloudflare + DNS deployment actions and production smoke validation.
+- Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
+- Open: `WO-0014` interactive workbench
+- In progress: `WO-0015` first-time overview and visual onboarding
 
 ## Local verification status (latest runs)
 
@@ -74,6 +78,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-17-current-s
 - `packages/universal-manifest` tests (`npm test`): PASS
 - Journeys proof (`npm run journeys`): PASS
 - Endpoint smoke dev (`npm run smoke:endpoints:dev`): PASS
+- Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS
 - Harness autorun (`/harness/index.html?autorun=1`): PASS
 
 ## What we consider “done” for v0.1
@@ -84,7 +89,7 @@ v0.1 is “done enough” when:
 2. Fixtures cover the baseline subject types (venue, device, creator) + one cross-system profile projection.
 3. The spec clearly documents TTL + caching + ID guidance and why it exists.
 
-The project currently satisfies (1) and (2) locally with runnable evidence. Remaining work is mainly production publishing proof and continued hardening of integrity/conformance edge cases.
+The project satisfies (1) and (2) with runnable evidence and now has production deployment proof. Remaining work is primarily interoperability hardening plus first-time adopter experience/tooling.
 
 For formal gate-level completion criteria and evidence requirements, use:
 
@@ -112,12 +117,18 @@ For formal gate-level completion criteria and evidence requirements, use:
 ### Milestone C — Distribution + stability (v0.2+)
 
 - Documented publishing + versioning plan: `docs/PUBLISHING-AND-VERSIONING.md`
-- Deployment skeletons exist:
-  - `deploy/universalmanifest.net/` (static publish build + headers + redirects)
-  - `services/myum-resolver/` (Cloudflare Worker + KV resolver skeleton)
-- Next: publish context/schema at stable URLs and document migration policy (v0.x → v1.0 path)
+- Production deployment is live:
+  - `https://universalmanifest.net` (Cloudflare Pages)
+  - `https://myum.net` (Cloudflare Worker + KV)
+- Next: harden v0.2 migration policy and resolver edge-case semantics
   - Cloudflare Pages runbook: `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
   - Resolver contract: `services/myum-resolver/CONTRACT.md`
+
+### Milestone D — Adopter onboarding + interactive tooling
+
+- CEO-priority first-time overview work is underway (`WO-0015`)
+- CEO-priority interactive manifest workbench is planned (`WO-0014`)
+- Next: ship first public version of the workbench and validate onboarding comprehension with external readers
 
 ## How other systems should adopt it today (v0.1)
 

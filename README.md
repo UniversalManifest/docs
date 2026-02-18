@@ -18,7 +18,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `docs/PROJECT-VISION.md` — What this standard aims to enable (and what’s out of scope)
 - `docs/DEPTH-AND-SCOPE.md` — High-level depth + scope map for this repo
 - `docs/STATE-OF-THE-PROJECT.md` — Current status, milestones, and next steps
-- `docs/reports/2026-02-17-current-status-and-decoupling.md` — Current status snapshot + decoupling report
+- `docs/reports/2026-02-18-live-status-and-next-critical-path.md` — Current live deployment status + next critical path
 - `docs/CRITICAL-PATH.md` — Minimal sequence for adoption + publishing + “world-ready” claims
 - `docs/DOMAIN-ARCHITECTURE.md` — Domain split: standards site vs UMID resolver
 - `docs/PUBLISHING-AND-VERSIONING.md` — How spec artifacts get hosted + versioned for adopters
@@ -32,6 +32,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md` — Required evidence template for done-done sign-off
 - `docs/TS-HELPER-PACKAGE.md` — What the TS helper is, how it’s used, distribution policy
 - `docs/journeys/README.md` — Canonical user journeys mapped to an executable proof suite
+- `docs/diagrams/README.md` — Diagram source + export workflow (Excalidraw → SVG)
 - `docs/STUB-MANIFESTS.md` — Near-real example manifests (fixtures) + section drivers
 - `docs/WORKLOG-2026-02-11.md` — Initial repo bootstrap worklog
 - `docs/WORKLOG-2026-02-12.md` — Stub fixtures + validation worklog
@@ -40,6 +41,8 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `integrations/lan.md` — LAN integration contract (implementation-grade, non-normative)
 - `integrations/lan-profile.md` — LAN conventions (non-normative)
 - `integrations/social.md` — Social/profile adoption notes (draft)
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md` — CEO-priority interactive manifest workbench
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — CEO-priority first-time overview + visual onboarding
 
 ## Packages
 

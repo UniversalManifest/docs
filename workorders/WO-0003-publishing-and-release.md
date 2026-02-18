@@ -1,6 +1,6 @@
 # WO-0003 — Publish spec artifacts + release process
 
-**Status:** BLOCKED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -25,25 +25,29 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] URLs resolve over HTTPS and return correct content types (requires actual deployment + DNS)
-- [ ] Post-deploy smoke is executable and passes (docs + resolver contract)
+- [x] URLs resolve over HTTPS and return correct content types (deployment + DNS completed)
+- [x] Post-deploy smoke is executable and passes (docs + resolver contract)
 - [x] CORS enabled for browser tooling (configured via `_headers`)
 - [x] Immutable caching for versioned paths (configured via `_headers`)
 - [x] Release checklist documented (see `docs/RELEASING.md` + `docs/PUBLISHING-AND-VERSIONING.md`)
 - [x] Cloudflare Pages deployment runbook exists (deployment-ready)
 - [x] Compatibility aliases for previously published `localartist.network` namespace URLs are documented (do not break old references)
 
-## Blockers (external actions required)
+## Completion record (2026-02-18)
 
-This WO is blocked on actions that require Cloudflare account + DNS control:
+Completed external deployment actions:
 
-1. Deploy `universalmanifest.net` (Cloudflare Pages)
-   - Runbook: `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-2. Deploy `myum.net` resolver (Cloudflare Worker + KV)
-   - Runbook: `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
-3. Validate both domains with the combined smoke (required for claiming “published”)
-   - Runbook: `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
-   - Command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+1. `universalmanifest.net` deployed on Cloudflare Pages
+2. `myum.net` resolver deployed on Cloudflare Workers + KV
+3. Production smoke validated with:
+   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+   - Result: **PASS**
+
+Validation notes:
+
+- Versioned schema/context endpoints resolve with expected content types and headers.
+- `latest/` alias behavior is redirect-based with non-immutable caching.
+- Resolver contract endpoints (`/health`, `/.well-known`, UMID resolution) are reachable in production.
 
 ## References
 

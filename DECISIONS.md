@@ -159,7 +159,7 @@
 ### Decision
 
 - Relocate Universal Manifest from:
-  - `/Users/grig/work/repo/universalmanifest`
+  - `/Users/grig/work/lan/universal-manifest`
 - To:
   - `/Users/grig/work/repo/universalmanifest`
 - Align agent onboarding to the GAS split model:
@@ -177,3 +177,49 @@
 
 - All new path references should use `/Users/grig/work/repo/universalmanifest`.
 - Legacy path references are historical only and should be updated when touched.
+
+## 2026-02-18 — CEO priority: interactive Manifest Workbench on universalmanifest.net
+
+### Decision
+
+- Treat an interactive **Manifest Workbench** as a priority deliverable for adopter trust and usability.
+- The workbench must support:
+  - import existing manifest
+  - structured explore/edit flow
+  - create from scratch
+  - validate against UM rules
+  - export updated/new manifest
+- Track implementation as:
+  - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+
+### Rationale
+
+- Standards adoption is blocked if implementers cannot quickly test, edit, and validate manifests in a real tool.
+- This is a direct demonstration surface that the contract is practical, not just documented.
+
+### Policy impact
+
+- Workbench is now part of the critical delivery agenda for docs/tooling on `universalmanifest.net`.
+- Validation behavior in the workbench must align with spec/conformance docs and not create a second contract.
+
+## 2026-02-18 — CEO priority: first-time \"What is Universal Manifest\" overview
+
+### Decision
+
+- Add and maintain a first-time reader overview that explains:
+  - what Universal Manifest is
+  - who it is for
+  - how to start using it
+- Include visual onboarding (diagram-first support) with maintainable source assets.
+- Track implementation as:
+  - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+
+### Rationale
+
+- Existing docs are strong for deep implementers but do not yet provide a clear, standalone orientation entry point.
+- First-contact clarity is required for external adoption and executive/share-out contexts.
+
+### Policy impact
+
+- Overview content is now a required onboarding artifact, not optional editorial polish.
+- Diagram assets must be maintained with source files so visuals stay versionable and auditable.

@@ -61,3 +61,13 @@ Must-have:
 - at least one non-LAN adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
+## Phase 6 — Onboarding clarity + interactive adopter tooling
+
+Goal: first-time adopters can understand UM quickly and validate real manifests without writing custom tooling first.
+
+Must-have:
+
+- clear “What is Universal Manifest?” overview for first-contact readers
+- visual onboarding diagrams maintained with source assets
+- interactive manifest workbench (import, create, validate, export)
+- explicit boundaries between reference tooling and normative spec contract
