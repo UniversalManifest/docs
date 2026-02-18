@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "STUB-MANIFESTS.md",
+                "file": "AGENT-OBSERVED-GAPS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "STUB-MANIFESTS"
+              "title": "AGENT-OBSERVED-GAPS"
             }
           }
         ]
@@ -183,8 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "e149b95447d526aa",
+  "active": "3b23fddc378fa808",
   "lastOpenFiles": [
+    "workorders/WO-0002-signature-profiles-v0-2.md",
+    "workorders/WO-0003-publishing-and-release.md",
+    "workorders/WO-0001-commit-and-push.md",
+    "workorders/WO-0011-linux-foundation-project-docs-benchmark.md",
+    "AGENT-OBSERVED-GAPS.md",
+    "WORKLOG-2026-02-11.md",
+    "STUB-MANIFESTS.md",
     "DONE-DONE-UNIVERSALIZATION-REPORT-FOR-GAS.md",
     "STATE-OF-THE-PROJECT.md",
     "DONE-DONE-EVIDENCE-PACK-TEMPLATE.md",
@@ -194,9 +201,6 @@
     "DEPTH-AND-SCOPE.md",
     "CRUCIAL-DETAILS.md",
     "DECISIONS.md",
-    "AGENT-OBSERVED-GAPS.md",
-    "STUB-MANIFESTS.md",
-    "WORKLOG-2026-02-11.md",
     "RELEASING.md",
     "PUBLISHING-AND-VERSIONING.md",
     "PROJECT-VISION.md"

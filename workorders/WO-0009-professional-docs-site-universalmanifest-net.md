@@ -1,6 +1,6 @@
 # WO-0009 — Professional standards documentation site for `universalmanifest.net`
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -41,16 +41,15 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Site has complete top-level navigation for standards consumers
-- [ ] Content is chunked by audience (maintainers, implementers, evaluators)
-- [ ] Versioned docs are discoverable and linked to concrete artifacts
-- [ ] Conformance and adoption paths are first-class pages
-- [ ] Build and deploy steps are reproducible from repository docs
-- [ ] `universalmanifest.net` publishing path matches domain architecture policy
+- [x] Site has complete top-level navigation for standards consumers
+- [x] Content is chunked by audience (maintainers, implementers, evaluators)
+- [x] Versioned docs are discoverable and linked to concrete artifacts
+- [x] Conformance and adoption paths are first-class pages
+- [x] Build and deploy steps are reproducible from repository docs
+- [x] `universalmanifest.net` publishing path matches domain architecture policy
 
 ## Dependencies
 
 - `docs/DOMAIN-ARCHITECTURE.md`
 - `docs/PUBLISHING-AND-VERSIONING.md`
 - `docs/RELEASING.md`
-

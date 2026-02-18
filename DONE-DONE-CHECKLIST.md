@@ -40,6 +40,7 @@ Evidence paths:
 
 - [ ] `spec/v*/CONFORMANCE.md`
 - [ ] `examples/v*/`
+- [ ] `packages/universal-manifest/` (fixture validator + proof runner)
 - [ ] test output attached in evidence pack
 
 ## 4) Gate G3 — Integrity and trust profile
@@ -65,6 +66,8 @@ Evidence paths:
 
 - [ ] `integrations/lan.md`
 - [ ] `integrations/social.md`
+- [ ] `docs/journeys/` (canonical journey definitions)
+- [ ] `packages/universal-manifest/scripts/run-journeys.mjs` (executable proof suite)
 - [ ] integration test or walkthrough evidence in pack
 
 ## 6) Gate G5 — Publishing and discoverability
@@ -79,6 +82,7 @@ Evidence paths:
 - [ ] `docs/PUBLISHING-AND-VERSIONING.md`
 - [ ] `docs/RELEASING.md`
 - [ ] `docs/README.md`
+- [ ] `.github/workflows/verify.yml` (repeatable CI verification)
 
 ## 7) Gate G6 — Governance and change control
 

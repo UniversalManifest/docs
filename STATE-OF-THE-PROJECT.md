@@ -1,9 +1,14 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-12  
-**Status:** Draft v0.1 spec + fixtures (early-adopter friendly, not yet “interop hardened”)
+**Date:** 2026-02-17  
+**Status:** v0.1 draft spec + fixtures + proof surfaces are working locally; v0.2 signature interop remains draft; production publishing is blocked only on external deploy actions.
+**Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
+**Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
 This repo is a **spec + fixtures + minimal tooling** project. It is not a running service.
+
+For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
+For the latest condensed status summary, see: `docs/reports/2026-02-17-current-status-and-decoupling.md`.
 
 ## Current snapshot
 
@@ -33,18 +38,43 @@ This repo is a **spec + fixtures + minimal tooling** project. It is not a runnin
 - **Tooling**
   - TypeScript types + runtime assertion for v0.1: `packages/universal-manifest/`
   - Fixture validation run via `npm test` (build + validate valid + invalid fixtures)
-- **v0.2 draft direction**
-  - Proposed signature profile: `spec/v0.2/SIGNATURE-PROFILE.md`
+- **Proof surfaces (executable + visual)**
+  - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`)
+  - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
+  - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- **Public docs IA + editorial polish**
+  - Explicit sidebar labels/order and adopter-first navigation in the docs site
+  - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
+  - Integration pages now include clear implementation checklists + fixture links + non-normative boundaries
+- **v0.2 draft signature profile (artifacts exist)**
+  - Signature profile: `spec/v0.2/SIGNATURE-PROFILE.md`
+  - Draft schema + context: `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
+  - Draft conformance: `spec/v0.2/CONFORMANCE.md`
+  - Fixtures: `examples/v0.2/`
 - **Background research (non-normative)**
   - Imported docs under `research/` with an index at `research/README.md`
 
 ### What is *not* finalized yet (by design)
 
-- A canonical, interoperable **signature format** (v0.1 signature is a permissive envelope)
-- Canonicalization rules for signing/verifying (e.g., JSON-LD/RDF normalization profile)
+- v0.1 signature is still a permissive envelope; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
+- Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
-- Stable hosting guarantees for the context/schema URLs (planned; see publishing plan)
+- Stable hosting guarantees for the context/schema URLs (planned; see publishing plan and WO-0003)
+
+## Work-order status (2026-02-17)
+
+- Completed: `WO-0001`, `WO-0002`, `WO-0004` through `WO-0013`
+- Blocked: `WO-0003` (`docs/workorders/WO-0003-publishing-and-release.md`)
+  - Requires external Cloudflare + DNS deployment actions and production smoke validation.
+
+## Local verification status (latest runs)
+
+- `site` build (`npm run build:clean`): PASS
+- `packages/universal-manifest` tests (`npm test`): PASS
+- Journeys proof (`npm run journeys`): PASS
+- Endpoint smoke dev (`npm run smoke:endpoints:dev`): PASS
+- Harness autorun (`/harness/index.html?autorun=1`): PASS
 
 ## What we consider “done” for v0.1
 
@@ -54,7 +84,7 @@ v0.1 is “done enough” when:
 2. Fixtures cover the baseline subject types (venue, device, creator) + one cross-system profile projection.
 3. The spec clearly documents TTL + caching + ID guidance and why it exists.
 
-We are close on (1) and (2). Remaining work is primarily around making (3) sharper and expanding conformance + signature guarantees.
+The project currently satisfies (1) and (2) locally with runnable evidence. Remaining work is mainly production publishing proof and continued hardening of integrity/conformance edge cases.
 
 For formal gate-level completion criteria and evidence requirements, use:
 
@@ -68,17 +98,26 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Added `spec/v0.1/CONFORMANCE.md` checklist (“what a consumer MUST do to claim v0.1 support”)
 - ✅ Added initial invalid fixtures (missing required fields, wrong `@type`, bad shards)
 - ✅ Updated `packages/universal-manifest` validator to assert invalid fixtures fail
-- Next: add TTL edge-case fixtures (expired, issuedAfterExpires, far-future timestamps), and signature-related fixtures once v0.2 profile is chosen
+- Next: add deeper TTL and misuse/adversarial fixtures for v0.1.x and v0.2.x as the suite hardens
 
 ### Milestone B — Signature profile (v0.2)
 
-- Drafted an initial signature direction: `spec/v0.2/SIGNATURE-PROFILE.md`
-- Next: decide final v0.2 profile and update schema/context/types accordingly
+- ✅ Chose a v0.2 baseline profile (JCS + Ed25519) and added draft artifacts + fixtures:
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `examples/v0.2/`
+- Next: publish v0.2 artifacts at stable URLs and expand fixtures for verification edge-cases
 
 ### Milestone C — Distribution + stability (v0.2+)
 
 - Documented publishing + versioning plan: `docs/PUBLISHING-AND-VERSIONING.md`
+- Deployment skeletons exist:
+  - `deploy/universalmanifest.net/` (static publish build + headers + redirects)
+  - `services/myum-resolver/` (Cloudflare Worker + KV resolver skeleton)
 - Next: publish context/schema at stable URLs and document migration policy (v0.x → v1.0 path)
+  - Cloudflare Pages runbook: `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+  - Resolver contract: `services/myum-resolver/CONTRACT.md`
 
 ## How other systems should adopt it today (v0.1)
 
@@ -88,6 +127,7 @@ Recommended adoption tier for external systems *right now*:
 - Enforce TTL for caching decisions
 - Use `pointers` and known `shards` for projection
 - Treat `signature` as optional and/or “best effort” until the signature profile is finalized
+- For v0.2 drafts: verify signatures when present and required by that profile
 
 ## Notes on LAN relationship
 
@@ -97,3 +137,11 @@ LAN is a primary design driver, but the project goal is broader:
 - Future “social profile” surfaces should treat the manifest as an envelope that drives projections (web profile pages, ActivityPub actor pointers, etc.).
 
 This is why “LAN specifics” live in `integrations/` and `research/`, not in `spec/`.
+
+## Agent onboarding status
+
+Universal Manifest has been aligned to the GAS split model for onboarding consistency:
+
+- `AGENTS.md` contains the global immutable rules copy.
+- `PROJECT-RULES.md` contains Universal Manifest-specific instructions and operational context.
+- `.dev` now includes GAS-style directory scaffolding for handoffs, workorders, reports, and inbox capture.

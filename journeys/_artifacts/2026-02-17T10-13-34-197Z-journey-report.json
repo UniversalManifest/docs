@@ -1,0 +1,102 @@
+{
+  "runId": "2026-02-17T10-13-34-197Z",
+  "createdAt": "2026-02-17T10:13:42.611Z",
+  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "journeys": [
+    {
+      "id": "J01",
+      "name": "Fixture conformance (v0.1 + v0.2)",
+      "status": "pass",
+      "startedAt": "2026-02-17T10:13:34.199Z",
+      "endedAt": "2026-02-17T10:13:35.253Z",
+      "details": {
+        "type": "command",
+        "startedAt": "2026-02-17T10:13:34.199Z",
+        "endedAt": "2026-02-17T10:13:35.253Z",
+        "exitCode": 0,
+        "stdout": "\n> @localartistnetwork/universal-manifest@0.1.0 test\n> npm run build && npm run validate:examples\n\n\n> @localartistnetwork/universal-manifest@0.1.0 build\n> tsc -p tsconfig.json\n\n\n> @localartistnetwork/universal-manifest@0.1.0 validate:examples\n> node scripts/validate-examples.mjs\n\nOK   examples/v0.1/invalid/empty-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/expired-for-use.jsonld  (expected invalid: fresh)\nOK   examples/v0.1/invalid/invalid-expiresAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/invalid-issuedAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/issued-after-expires.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-context.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-subject.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shard-wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shards-not-array.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/manifest-with-shards.jsonld  (urn:uuid:9a1d6db7-0f2f-4f5a-b3b9-2c68c23f9c25)\nOK   examples/v0.1/minimal-manifest.jsonld  (urn:uuid:2b5f0d3c-3c4c-4b83-8f2a-6f3b2cbd5c7d)\nOK   examples/v0.1/stubs/creator-public-capsule-manifest.jsonld  (urn:uuid:250acd0e-0709-4430-bc31-6b6bf41b72cb)\nOK   examples/v0.1/stubs/display-device-manifest.jsonld  (urn:uuid:b95f0be3-70fa-405a-af25-543b89530fd1)\nOK   examples/v0.1/stubs/lan-platform-display-manifest.jsonld  (urn:uuid:045f1f58-bcab-40c5-936b-b84d4e55144a)\nOK   examples/v0.1/stubs/social-profile-manifest.jsonld  (urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14)\nOK   examples/v0.1/stubs/venue-edge-manifest.jsonld  (urn:uuid:dfbd3b8a-ec7c-40c4-a3e4-114ec972d41a)\nOK   examples/v0.1/type-array-manifest.jsonld  (urn:uuid:974fac2e-6233-41b4-9f17-55fe75c4c346)\nOK   examples/v0.1/unknown-fields-manifest.jsonld  (urn:uuid:050a0626-7a2d-41ce-96ed-b733a4725fd8)\nOK   examples/v0.2/invalid/invalid-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/invalid/missing-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/minimal-signed-manifest.jsonld  (urn:uuid:11111111-1111-4111-8111-111111111111)\n\nSummary: 10 valid ok, 0 failed, 13 invalid ok, 0 invalid unexpected-pass\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "J02",
+      "name": "universalmanifest.net build output",
+      "status": "pass",
+      "startedAt": "2026-02-17T10:13:35.253Z",
+      "endedAt": "2026-02-17T10:13:35.346Z",
+      "details": {
+        "type": "command",
+        "startedAt": "2026-02-17T10:13:35.253Z",
+        "endedAt": "2026-02-17T10:13:35.346Z",
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": "",
+        "details": {
+          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+        }
+      }
+    },
+    {
+      "id": "J03",
+      "name": "myum resolver E2E (wrangler dev + KV)",
+      "status": "pass",
+      "startedAt": "2026-02-17T10:13:35.346Z",
+      "endedAt": "2026-02-17T10:13:38.495Z",
+      "details": {
+        "type": "e2e",
+        "startedAt": "2026-02-17T10:13:35.347Z",
+        "endedAt": "2026-02-17T10:13:38.485Z",
+        "baseUrl": "http://localhost:8791",
+        "stdout": "\n ⛅️ wrangler 3.114.17 (update available 4.65.0)\n-----------------------------------------------\n\nYour Worker and resources are simulated locally via Miniflare. For more information, see: https://developers.cloudflare.com/workers/testing/local-development.\n\nYour worker has access to the following bindings:\n- KV Namespaces:\n  - UMID_KV: 00000000000000000000000000000000 [simulated locally]\n⎔ Starting local server...\n[wrangler-UserWorker:wrn] The latest compatibility date supported by the installed Cloudflare Workers Runtime is \"2025-07-18\",\nbut you've requested \"2026-02-17\". Falling back to \"2025-07-18\"...\nFeatures enabled by your requested compatibility date may not be available.\nUpgrade to `wrangler@4.65.0` to remove this warning.\n[wrangler:inf] Ready on http://localhost:8791\n[wrangler:inf] GET /health 200 OK (3ms)\n[wrangler:inf] GET /urn:uuid:does-not-exist 404 Not Found (4ms)\n[wrangler:inf] GET /.well-known/myum-resolver.json 200 OK (1ms)\n[wrangler:inf] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (3ms)\n[wrangler:inf] GET /b64u:dXJuOnV1aWQ6YWFhYWFhYWEtYWFhYS00YWFhLThhYWEtYWFhYWFhYWFhYWFh 200 OK (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (2ms)\n",
+        "stderr": "\u001b[33m▲ \u001b[43;33m[\u001b[43;30mWARNING\u001b[43;33m]\u001b[0m \u001b[1mThe version of Wrangler you are using is now out-of-date.\u001b[0m\n\n  Please update to the latest version to prevent critical errors.\n  Run `npm install --save-dev wrangler@4` to update to the latest version.\n  After installation, run Wrangler with `npx wrangler`.\n\n\n"
+      }
+    },
+    {
+      "id": "J04",
+      "name": "Public profile projection (non-LAN)",
+      "status": "pass",
+      "startedAt": "2026-02-17T10:13:38.495Z",
+      "endedAt": "2026-02-17T10:13:38.495Z",
+      "details": {
+        "type": "projection",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
+        "projection": {
+          "umid": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
+          "subject": "did:key:z6MkiJulesChenExampleDid",
+          "name": "Jules Chen",
+          "description": "Generative visuals + ambient synth performances for small rooms and late-night galleries.",
+          "image": "https://media.localartist.network/avatars/jules-chen.jpg",
+          "activityPubActor": "https://localartist.network/@jules",
+          "sameAs": [
+            "https://localartist.network/@jules",
+            "https://matrix.to/#/@jules:localartist.network"
+          ],
+          "knowsAbout": [
+            "generative art",
+            "synth",
+            "projection mapping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J05",
+      "name": "LAN smoke (optional)",
+      "status": "pass",
+      "startedAt": "2026-02-17T10:13:38.495Z",
+      "endedAt": "2026-02-17T10:13:42.611Z",
+      "details": {
+        "type": "command",
+        "startedAt": "2026-02-17T10:13:38.496Z",
+        "endedAt": "2026-02-17T10:13:42.610Z",
+        "exitCode": 0,
+        "stdout": "[03:13:40.328] \u001b[32mINFO\u001b[39m (24258): \u001b[36mLocal Artist Network Backend started\u001b[39m\n    \u001b[35mport\u001b[39m: \"3121\"\n\n[smoke] universal manifest OK\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "summary": {
+    "pass": 5,
+    "fail": 0
+  }
+}

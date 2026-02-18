@@ -39,6 +39,12 @@ Research direction:
 
 - Capture these as repeatable architectural patterns and benchmark public implementations/protocols to refine the model before locking normative spec behavior.
 
+Validation direction:
+
+- Build a suite of **user journeys** that represent real adopter flows (issuer → exchange → consumer behavior).
+- Map each journey to one or more executable tests and run them as a single test suite to prove the Universal Manifest concept works end-to-end (not just schema validation).
+- Treat this journey-driven test suite as required evidence toward “done done” for production-candidate and world-ready claims.
+
 Note:
 
 - This section is **vision direction**, not yet normative contract text. Normative requirements must be added through versioned spec docs and decision records.

@@ -1,6 +1,6 @@
 # WO-0005 — TS helper package distribution + usage guidance
 
-**Status:** Proposed  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -24,6 +24,5 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Decision recorded in `docs/DECISIONS.md`
-- [ ] Documentation added (where to import, what functions do, what they do NOT do)
-
+- [x] Decision recorded in `docs/DECISIONS.md`
+- [x] Documentation added (where to import, what functions do, what they do NOT do)

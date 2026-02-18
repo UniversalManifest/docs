@@ -1,6 +1,6 @@
 # WO-0002 — Signature profiles (v0.2) + Data Integrity path
 
-**Status:** Proposed  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -28,13 +28,12 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] v0.2 profile decision recorded in `docs/DECISIONS.md`
-- [ ] `spec/v0.2/schema.jsonld` + `spec/v0.2/schema.json` added
-- [ ] `packages/universal-manifest` updated to represent v0.2 signature fields
-- [ ] Conformance fixtures exist for “valid signature” and “invalid signature” (post-decision)
+- [x] v0.2 profile decision recorded in `docs/DECISIONS.md`
+- [x] `spec/v0.2/schema.jsonld` + `spec/v0.2/schema.json` added
+- [x] `packages/universal-manifest` updated to represent v0.2 signature fields
+- [x] Conformance fixtures exist for “valid signature” and “invalid signature” (post-decision)
 
 ## References
 
 - `spec/v0.2/SIGNATURE-PROFILE.md`
 - `docs/PUBLISHING-AND-VERSIONING.md`
-

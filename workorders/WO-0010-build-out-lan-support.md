@@ -1,6 +1,6 @@
 # WO-0010 — Build out Universal Manifest support for LAN
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -29,7 +29,7 @@ Out of scope:
 - Integration contract update:
   - `integrations/lan.md` (expanded, implementation-grade)
 - LAN profile:
-  - `integrations/lan-profile.md` (normative-ish LAN conventions)
+  - `integrations/lan-profile.md` (LAN conventions; non-normative)
 - LAN fixture mapping:
   - `docs/reports/2026-02-12-lan-manifest-support-map.md`
 - Reference code stubs (if placed in this repo):
@@ -37,11 +37,11 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] LAN edge/display/admin responsibilities are explicit and testable
-- [ ] Manifest retrieval/update signaling contract is documented with examples
-- [ ] Caching and logging requirements align with existing decisions
-- [ ] Fixtures cover key LAN runtime scenarios
-- [ ] Reference stubs compile and pass tests (if code deliverables included)
+- [x] LAN edge/display/admin responsibilities are explicit and testable
+- [x] Manifest retrieval/update signaling contract is documented with examples
+- [x] Caching and logging requirements align with existing decisions
+- [x] Fixtures cover key LAN runtime scenarios
+- [x] Reference stubs compile and pass tests (no additional code stubs required in this WO)
 
 ## Dependencies
 
@@ -49,4 +49,3 @@ Out of scope:
 - `docs/DECISIONS.md`
 - `spec/v0.1/CONFORMANCE.md`
 - `docs/workorders/WO-0007-myum-resolver-and-um-static-publish.md`
-

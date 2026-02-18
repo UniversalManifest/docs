@@ -46,6 +46,9 @@ Use this template for any release claim that asserts done-done status.
 
 - Artifact paths:
 - Independent test notes:
+- Journey-to-test evidence (recommended):
+  - `docs/journeys/README.md`
+  - `docs/journeys/_artifacts/*-journey-report.json` (from `packages/universal-manifest` → `npm run journeys`)
 - Residual risk:
 
 ### G5 Publishing and discoverability evidence

@@ -23,6 +23,7 @@ Current repository history includes `localartist.network` namespace references i
 Compatibility requirement:
 
 - Keep legacy `localartist.network/ns/universal-manifest/...` URLs resolvable once published.
+  - Implementation note: `docs/LEGACY-LOCALARTIST-NETWORK-COMPATIBILITY.md`
 
 ## 2) URL layout (recommended)
 
@@ -47,6 +48,12 @@ Any static hosting that supports correct headers is fine. Examples:
 - GitHub Pages (with custom domain + correct MIME types)
 
 The only hard requirement is that the URLs above resolve over HTTPS consistently.
+
+Deployment-ready skeleton (in this repo):
+
+- Static publishing config + build output layout:
+  - `deploy/universalmanifest.net/README.md`
+  - `deploy/universalmanifest.net/build.mjs` (writes `deploy/universalmanifest.net/dist/`)
 
 Resolver note:
 

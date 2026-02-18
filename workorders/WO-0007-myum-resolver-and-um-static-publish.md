@@ -1,6 +1,6 @@
 # WO-0007 — `myum.net` resolver skeleton + `universalmanifest.net` static publish config
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -34,23 +34,25 @@ Out of scope:
 
 ## Deliverables
 
-- Worker skeleton and config (expected examples):
-  - `infra/myum-worker/` (or equivalent)
-  - `wrangler.toml` with KV bindings
+- Worker skeleton and config:
+  - `services/myum-resolver/`
+  - `services/myum-resolver/wrangler.toml` (KV binding contract)
 - Resolver contract doc:
-  - request/response examples for `200`, redirect, `404`, `410`
+  - `services/myum-resolver/README.md` (request/response examples for `200`, redirect, `404`, `410`)
 - Static publish config for `universalmanifest.net`:
-  - headers/routing config file(s)
-  - deployment instructions
+  - `deploy/universalmanifest.net/_headers`
+  - `deploy/universalmanifest.net/_redirects`
+  - `deploy/universalmanifest.net/build.mjs` (builds `deploy/universalmanifest.net/dist/`)
+  - `deploy/universalmanifest.net/README.md` (deployment instructions)
 
 ## Acceptance criteria
 
-- [ ] `myum.net/{UMID}` resolver skeleton runs locally via Wrangler
-- [ ] KV schema is documented with required keys and value shape
-- [ ] Endpoint contract documented with deterministic status semantics
-- [ ] Static hosting config serves spec artifacts with correct content-type + CORS + cache headers
-- [ ] `latest/` behavior (if enabled) is redirect-only to concrete versions
-- [ ] Documentation includes production deployment checklist
+- [x] `myum.net/{UMID}` resolver skeleton runs locally via Wrangler
+- [x] KV schema is documented with required keys and value shape
+- [x] Endpoint contract documented with deterministic status semantics
+- [x] Static hosting config serves spec artifacts with correct content-type + CORS + cache headers
+- [x] `latest/` behavior (if enabled) is redirect-only to concrete versions
+- [x] Documentation includes production deployment checklist
 
 ## Dependencies
 
@@ -59,4 +61,3 @@ Out of scope:
 - Publishing/versioning policy:
   - `docs/PUBLISHING-AND-VERSIONING.md`
   - `docs/RELEASING.md`
-

@@ -1,6 +1,6 @@
 # WO-0011 — Linux Foundation project documentation benchmark (10 projects)
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -45,14 +45,22 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Exactly 10 project reports are present (5 recent + 5 top)
-- [ ] Each report includes all required dimensions (depth, voice, layout, chunking, sitemap)
-- [ ] Sources are listed for each project report
-- [ ] Synthesis provides specific actionable standards for `universalmanifest.net`
-- [ ] Output directory is self-contained and easy to navigate
+- [x] Exactly 10 project reports are present (5 recent + 5 top)
+- [x] Each report includes all required dimensions (depth, voice, layout, chunking, sitemap)
+- [x] Sources are listed for each project report
+- [x] Synthesis provides specific actionable standards for `universalmanifest.net`
+- [x] Output directory is self-contained and easy to navigate
 
 ## Dependencies
 
 - `docs/workorders/WO-0009-professional-docs-site-universalmanifest-net.md`
 - Public Linux Foundation project documentation sites
 
+## Completion record (2026-02-17)
+
+- Output directory:
+  - `research/linux-foundation-projects/2026-02/`
+- Contents:
+  - `INDEX.md`
+  - `SYNTHESIS.md`
+  - `project-01-*` through `project-10-*`

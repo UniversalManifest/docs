@@ -14,3 +14,6 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0008-spec-status-scope-and-foundations-audit.md` — Define scope/done-done/progress and audit against foundational references
 - `docs/workorders/WO-0009-professional-docs-site-universalmanifest-net.md` — Build Linux Foundation-grade docs/publishing experience for `universalmanifest.net`
 - `docs/workorders/WO-0010-build-out-lan-support.md` — Build implementation-grade LAN integration support
+- `docs/workorders/WO-0011-linux-foundation-project-docs-benchmark.md` — Benchmark LF project docs (10 projects) to inform `universalmanifest.net`
+- `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md` — Define UM user journeys and ship an executable E2E proof suite
+- `docs/workorders/WO-0013-harness-endpoint-test-surface.md` — Interactive /harness page for endpoint + fixture debugging (complements journeys)

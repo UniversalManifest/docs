@@ -34,6 +34,8 @@ If changes are purely additive (new optional fields/fixtures/docs), you may stay
    - add/adjust fixtures under `examples/vX.Y/`
 5. Run tests:
    - from `packages/universal-manifest/`: `npm test`
+   - proof suite: `npm run journeys`
+   - (optional, local dev servers) endpoint smoke: `npm run smoke:endpoints:dev`
 6. Commit and push:
    - `git status` clean
    - `git commit` with a clear message
@@ -83,9 +85,25 @@ Minimum validation:
 2. Unknown UMID returns deterministic `404`.
 3. Resolver does not require spec-site deployment coupling.
 
+## 3.2 Combined production smoke (recommended)
+
+After `universalmanifest.net` and `myum.net` are both deployed, run the combined endpoint smoke:
+
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run smoke:endpoints:prod`
+
+Runbook:
+
+- `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
+
 ## 4) Post-release hygiene
 
 - Add/update a worklog entry (e.g., `docs/WORKLOG-YYYY-MM-DD.md`).
 - Update `docs/STATE-OF-THE-PROJECT.md` milestones and links.
 - If you added new well-known names, update:
   - `spec/v0.1/REGISTRY.md` (or the versioned equivalent)
+
+## CI verification
+
+This repo includes a GitHub Actions workflow that runs the same core proof steps on every PR:
+
+- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`

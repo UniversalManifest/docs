@@ -59,6 +59,7 @@ Current repo history contains `localartist.network` namespace references in v0.1
 Migration policy:
 
 - Keep `localartist.network/ns/universal-manifest/...` resolvable as compatibility aliases.
+- Implementation note: `docs/LEGACY-LOCALARTIST-NETWORK-COMPATIBILITY.md`
 - Publish new canonical artifacts on `universalmanifest.net/ns/universal-manifest/...`.
 - Do not break old references once published.
 
@@ -69,3 +70,7 @@ Migration policy:
 3. Add operational runbook for resolver ingestion, caching, and revocation handling.
 4. Add conformance fixtures that exercise `myum.net` pointer patterns.
 
+Repo-local deployment skeletons (implementation-ready starting points):
+
+- `deploy/universalmanifest.net/` (static publish build + headers + redirects)
+- `services/myum-resolver/` (Cloudflare Worker + KV resolver skeleton)

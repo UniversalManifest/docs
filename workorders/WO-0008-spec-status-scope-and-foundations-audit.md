@@ -1,6 +1,6 @@
 # WO-0008 — Universal Manifest spec status, scope, done-done, and foundations audit
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
@@ -39,12 +39,12 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Scope definition is explicit and consistent with current decisions
-- [ ] "Done Done" checklist includes objective, testable exit criteria
-- [ ] Completion estimate is evidence-backed and reproducible
-- [ ] Foundational references reviewed and cited by path
-- [ ] External indexed references reviewed and mapped to current spec posture
-- [ ] Gap list is prioritized with next-step recommendations
+- [x] Scope definition is explicit and consistent with current decisions
+- [x] "Done Done" checklist includes objective, testable exit criteria
+- [x] Completion estimate is evidence-backed and reproducible
+- [x] Foundational references reviewed and cited by path
+- [x] External indexed references reviewed and mapped to current spec posture
+- [x] Gap list is prioritized with next-step recommendations
 
 ## Dependencies
 
@@ -53,4 +53,3 @@ Out of scope:
 - `docs/DECISIONS.md`
 - `docs/PUBLISHING-AND-VERSIONING.md`
 - `docs/RELEASING.md`
-
