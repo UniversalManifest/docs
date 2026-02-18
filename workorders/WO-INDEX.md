@@ -20,3 +20,4 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md` — Build interactive import/edit/validate/export workbench for manifests on `universalmanifest.net`
 - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — Add first-time \"what is UM\" overview and visual onboarding flow
 - `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md` — Maintain a living source-to-artifact knowledge integration ledger from GAS indexes and external corpus
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md` — Convert full selected corpus into concrete IA, onboarding, and journey execution deltas

@@ -69,9 +69,10 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 ## Work-order status (2026-02-18)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
+- Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Open: `WO-0014` interactive workbench
 - In progress: `WO-0015` first-time overview and visual onboarding
-- In progress: `WO-0016` GAS index scan and knowledge integration ledger
+- Open: `WO-0017` full-corpus to IA/journey synthesis execution
 
 ## Local verification status (latest runs)
 
@@ -130,6 +131,14 @@ For formal gate-level completion criteria and evidence requirements, use:
 - CEO-priority first-time overview work is underway (`WO-0015`)
 - CEO-priority interactive manifest workbench is planned (`WO-0014`)
 - Next: ship first public version of the workbench and validate onboarding comprehension with external readers
+
+### Milestone E — Full-corpus IA and journey execution
+
+- Deferred-source reconciliation is complete for the current batch (`WO-0016` completed)
+- Conflict decisions are recorded with action targets:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- Next: execute corpus-derived IA/journey/workbench deltas under:
+  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ## How other systems should adopt it today (v0.1)
 

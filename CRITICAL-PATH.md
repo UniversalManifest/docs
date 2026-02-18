@@ -61,7 +61,18 @@ Must-have:
 - at least one non-LAN adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
-## Phase 6 — Onboarding clarity + interactive adopter tooling
+## Phase 6 — Full-corpus synthesis before IA and journey expansion
+
+Goal: ensure IA, onboarding, and journey planning are derived from the full source corpus with explicit conflict decisions.
+
+Must-have:
+
+- no deferred sources in active corpus batch (all selected sources dispositioned)
+- explicit cross-source conflict register with decisions and action targets
+- synthesis output that maps source signals into IA/journey/workbench directives
+- follow-on implementation WO for corpus-to-artifact execution
+
+## Phase 7 — Onboarding clarity + interactive adopter tooling
 
 Goal: first-time adopters can understand UM quickly and validate real manifests without writing custom tooling first.
 

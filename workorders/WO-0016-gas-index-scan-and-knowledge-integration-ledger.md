@@ -1,6 +1,6 @@
 # WO-0016 — GAS index scan and knowledge integration ledger
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETED
 **Created:** 2026-02-18
 
 ## Objective
@@ -30,6 +30,8 @@ Out of scope:
 
 - Scan + integration log report:
   - `docs/reports/2026-02-18-gas-index-scan-and-knowledge-integration-log.md`
+- Stage 1 deferred-corpus reconciliation report:
+  - `docs/reports/2026-02-18-stage1-deferred-corpus-reconciliation.md`
 - Updated work order index entry.
 - Follow-on work items for uncovered high-priority gaps.
 
@@ -38,8 +40,16 @@ Out of scope:
 - [x] Existing scan/integration evidence is inventoried and linked.
 - [x] Current coverage gap is stated with measurable evidence.
 - [x] External corpus integration status is explicitly logged.
-- [ ] Per-source triage status exists for each indexed external document (integrated/deferred/rejected).
-- [ ] High-priority integration deltas are converted to scoped implementation work orders.
+- [x] Per-source triage status exists for each indexed external document (integrated/deferred/rejected).
+- [x] High-priority integration deltas are converted to scoped implementation work orders.
+
+## Completion notes
+
+- All previously deferred sources in the current batch were promoted and integrated.
+- Conflict IDs and reconciliation decisions are recorded in:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- Follow-on execution scope is explicitly captured in:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ## Dependencies
 

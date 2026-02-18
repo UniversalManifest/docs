@@ -3,6 +3,10 @@
 **Date:** 2026-02-18  
 **Purpose:** Determine whether indexed knowledge has been integrated into Universal Manifest artifacts, and log the current state with actionable next steps.
 
+Update (later on 2026-02-18):
+- Deferred-source reconciliation was completed in a follow-on pass.
+- See: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-18-stage1-deferred-corpus-reconciliation.md`
+
 ## 1) Direct answer
 
 Yes, a substantial scan and integration pass has already happened.

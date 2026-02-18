@@ -246,3 +246,25 @@
 
 - Future phase transitions should include a knowledge-integration checkpoint.
 - Major indexed-source updates should produce a report update under `docs/reports/`.
+
+## 2026-02-18 — Resolve deferred corpus conflicts before IA/journey expansion
+
+### Decision
+
+- Promote all deferred sources in the current external corpus batch into active integration.
+- Resolve conflicts before implementation planning, with explicit conflict IDs and decisions.
+- Treat conflict decisions as mandatory planning inputs for IA, journeys, and workbench requirements.
+
+Primary conflict register:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+
+### Rationale
+
+- Building IA and user journeys from a partial corpus introduces preventable rework and weakens provenance.
+- Conflict resolution must happen before concrete planning so project direction is explicit and auditable.
+
+### Policy impact
+
+- Current batch has no deferred sources remaining.
+- Follow-on implementation planning is tracked as:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
