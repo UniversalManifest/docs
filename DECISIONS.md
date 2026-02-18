@@ -223,3 +223,26 @@
 
 - Overview content is now a required onboarding artifact, not optional editorial polish.
 - Diagram assets must be maintained with source files so visuals stay versionable and auditable.
+
+## 2026-02-18 — Knowledge integration must be tracked via a living ledger
+
+### Decision
+
+- Treat indexed knowledge ingestion as an explicit, ongoing workstream.
+- Maintain a living source-to-artifact integration ledger that records:
+  - source scanned
+  - integration status (`integrated`, `deferred`, `rejected`)
+  - evidence path(s)
+  - follow-on work order(s), if needed
+- Track the workstream as:
+  - `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`
+
+### Rationale
+
+- Prior audits and crosswalks exist, but they are point-in-time snapshots.
+- A maintained ledger is required to ensure high-value indexed sources are systematically applied or explicitly deferred.
+
+### Policy impact
+
+- Future phase transitions should include a knowledge-integration checkpoint.
+- Major indexed-source updates should produce a report update under `docs/reports/`.

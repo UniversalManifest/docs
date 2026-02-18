@@ -19,3 +19,4 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0013-harness-endpoint-test-surface.md` — Interactive /harness page for endpoint + fixture debugging (complements journeys)
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md` — Build interactive import/edit/validate/export workbench for manifests on `universalmanifest.net`
 - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — Add first-time \"what is UM\" overview and visual onboarding flow
+- `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md` — Maintain a living source-to-artifact knowledge integration ledger from GAS indexes and external corpus

@@ -71,6 +71,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Open: `WO-0014` interactive workbench
 - In progress: `WO-0015` first-time overview and visual onboarding
+- In progress: `WO-0016` GAS index scan and knowledge integration ledger
 
 ## Local verification status (latest runs)
 
