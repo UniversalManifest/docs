@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-18  
-**Status:** v0.1/v0.2 artifacts, docs site, and resolver are now live in production (`universalmanifest.net` + `myum.net`); next critical work is onboarding clarity and interactive adopter tooling.
+**Date:** 2026-02-19  
+**Status:** v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`); next critical work is external onboarding validation and resolver stability hardening.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
@@ -63,16 +63,37 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
-- Interactive manifest workbench for import/create/validate/export (`WO-0014`)
+- Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with external reader testing (`WO-0015`)
 
-## Work-order status (2026-02-18)
+## Work-order status (2026-02-19)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
-- Open: `WO-0014` interactive workbench
+- Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
 - In progress: `WO-0015` first-time overview and visual onboarding
-- Open: `WO-0017` full-corpus to IA/journey synthesis execution
+- Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
+
+## WO-0017 execution pass update (2026-02-19)
+
+Concrete deltas completed this run:
+- IA delta artifact created:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- Journey planning materialization updated:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- Workbench requirement hardening updated:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- WO progress/evidence updates:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+
+Gap movement from latest provenance audit:
+- `GAP-K2B-001`: closed.
+- `GAP-K2B-002`: closed for planning-materialization scope.
+- `GAP-K2B-003`: closed (workbench requirements materialized and implemented).
+- `GAP-K2B-004`: unchanged.
+- `GAP-K2B-005`: unchanged.
 
 ## Local verification status (latest runs)
 
@@ -128,17 +149,20 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ### Milestone D — Adopter onboarding + interactive tooling
 
-- CEO-priority first-time overview work is underway (`WO-0015`)
-- CEO-priority interactive manifest workbench is planned (`WO-0014`)
-- Next: ship first public version of the workbench and validate onboarding comprehension with external readers
+- ✅ CEO-priority first-time overview content and visual onboarding are shipped (`WO-0015` partial; external validation pending)
+- ✅ CEO-priority interactive manifest workbench is shipped and verified (`WO-0014` completed)
+- Next: execute external reader-testing protocol and log completion evidence to close `WO-0015`
+  - Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - Results template: `/Users/grig/work/repo/universalmanifest/docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`
 
 ### Milestone E — Full-corpus IA and journey execution
 
 - Deferred-source reconciliation is complete for the current batch (`WO-0016` completed)
 - Conflict decisions are recorded with action targets:
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
-- Next: execute corpus-derived IA/journey/workbench deltas under:
-  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- ✅ Corpus-derived IA/journey/workbench deltas were executed and closed in:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- Next: run drift checks for newly ingested sources and open follow-on WOs when corpus deltas affect adopter-facing IA or proof flows
 
 ## How other systems should adopt it today (v0.1)
 

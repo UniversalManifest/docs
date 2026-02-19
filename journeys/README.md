@@ -24,6 +24,35 @@ Outputs:
 5. `journey-05-lan-edge-to-display-smoke.md`
 6. `journey-06-public-profile-projection.md`
 
+## Cross-Domain Overlay Lanes (WO-0017)
+
+Planning authority:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+
+Required overlay lanes for journey expansion:
+- Venue/local-first display lane (baseline operational lane).
+- Creator/public profile projection lane (adopter-facing lane).
+- Metaverse portability lane as non-normative exemplar (not scope anchor).
+
+## Identity-Method Variant Lanes (CON-UM-003)
+
+Journey assertions must pass with the same core manifest envelope while varying identity/anchor methods.
+
+Variant minimums:
+- `variant-a`: detached key material path.
+- `variant-b`: resolver-anchored identity pointer path.
+
+Core rule:
+- Core journey pass/fail criteria remain method-agnostic; variant-specific checks are additive.
+
+## Sequencing Rubric (CON-UM-004)
+
+Prioritize journey implementation order by:
+1. interoperability evidence quality,
+2. conformance test leverage,
+3. adopter utility across more than one domain.
+
 ## Why this exists
 
 The Universal Manifest project does not consider “docs exist” as proof.

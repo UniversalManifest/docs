@@ -1,6 +1,6 @@
 # WO-0017 — Full-corpus to IA and journey synthesis execution
 
-**Status:** OPEN
+**Status:** COMPLETED
 **Created:** 2026-02-18
 
 ## Objective
@@ -33,7 +33,7 @@ Out of scope:
 ## Deliverables
 
 - IA delta artifact:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-18-ia-delta-from-full-corpus.md`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
 - Journey expansion plan update:
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
@@ -43,11 +43,52 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] All conflict IDs `CON-UM-001` through `CON-UM-006` are reflected in at least one concrete artifact change.
-- [ ] IA documents include explicit first-time reader path and standards-neutral framing boundaries.
-- [ ] Journey plan includes cross-domain coverage and identity-method variants.
-- [ ] Workbench requirements explicitly include import/edit/validate/export behavior tied to conformance expectations.
-- [ ] Evidence links are present for every changed artifact.
+- [x] All conflict IDs `CON-UM-001` through `CON-UM-006` are reflected in at least one concrete artifact change.
+- [x] IA documents include explicit first-time reader path and standards-neutral framing boundaries.
+- [x] Journey plan includes cross-domain coverage and identity-method variants.
+- [x] Workbench requirements explicitly include import/edit/validate/export behavior tied to conformance expectations.
+- [x] Evidence links are present for every changed artifact.
+
+## Execution Progress (2026-02-19T04:52:00Z)
+
+Gap status movement from `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`:
+- `GAP-K2B-001`: moved to CLOSED by creation of `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`.
+- `GAP-K2B-002`: moved to CLOSED for planning-materialization by updates in:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- `GAP-K2B-003`: moved to IN PROGRESS by corpus-derived requirement deltas in:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+
+Criterion-level evidence:
+- Conflict coverage (`CON-UM-001`..`CON-UM-006`) evidence:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- IA first-time path + standards-neutral boundaries evidence:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+- Journey expansion (cross-domain + identity variants) evidence:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- Workbench requirement tie to conformance evidence:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+
+## Completion Evidence (2026-02-19T21:16:00Z)
+
+Artifact evidence links:
+- IA delta artifact:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- journey planning materialization:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- onboarding alignment:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+- workbench backlog hardening and implementation closure:
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- decisions and state synchronization:
+  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- execution reports:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-19-wo-0017-execution-progress.md`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-19-workbench-functional-checks.md`
 
 ## Dependencies
 

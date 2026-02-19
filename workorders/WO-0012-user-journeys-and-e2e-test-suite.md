@@ -78,3 +78,17 @@ Out of scope:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
 - LAN implementation stubs (context only):
   - `/Users/grig/work/lan/lan-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-lan-platform-universal-manifest-stubs.md`
+
+## Post-Completion Corpus Delta Addendum (2026-02-19T04:57:00Z)
+
+Source linkage:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+
+New planning deltas to execute under WO-0017:
+- add cross-domain overlay coverage to journey planning (venue, creator/profile, metaverse exemplar),
+- add identity-method variant lanes while preserving method-agnostic core assertions,
+- apply sequencing rubric driven by interoperability evidence quality.
+
+Primary execution artifact:
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`

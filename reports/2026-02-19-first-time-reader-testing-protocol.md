@@ -1,0 +1,47 @@
+# First-Time Reader Testing Protocol (WO-0015)
+
+Date: 2026-02-19
+Project root: `/Users/grig/work/repo/universalmanifest`
+Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+
+## Goal
+
+Validate that a new implementer can answer, after reading only the first-time path:
+1. What is Universal Manifest?
+2. How do I start?
+
+## Pages under test
+
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
+
+## Test script for human readers
+
+1. Open:
+- `http://127.0.0.1:4301/getting-started/universal-manifest-overview/`
+
+2. Read only the linked first-time path:
+- overview -> quick-start -> workbench
+
+3. Answer in your own words:
+- Q1: What is Universal Manifest?
+- Q2: What are the first three implementation steps?
+
+4. Pass criteria:
+- Q1 answer includes portable state capsule + interoperability framing.
+- Q2 answer includes core contract review, conformance/fixtures validation, and proof or workbench usage.
+
+## Pilot run notes (internal)
+
+- Pilot result: PASS for content sufficiency in current docs text.
+- Reason:
+  - overview explicitly defines UM and target audience,
+  - quick-start gives sequential implementation steps,
+  - workbench page provides practical import/edit/validate/export path.
+
+## Remaining blocker
+
+- External participant evidence is still required to close WO-0015 acceptance criterion.
+- Required next artifact:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-XX-first-time-reader-test-results.md`

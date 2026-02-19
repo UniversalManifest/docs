@@ -268,3 +268,34 @@ Primary conflict register:
 - Current batch has no deferred sources remaining.
 - Follow-on implementation planning is tracked as:
   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+
+## 2026-02-19 — WO-0017 corpus decisions materialized into IA/journey/workbench planning
+
+### Decision
+
+- Execute first concrete WO-0017 materialization pass from the full-corpus synthesis into:
+  - IA delta artifact
+  - journey planning overlays and identity-method variants
+  - workbench requirement hardening tied to conformance outcomes
+
+### Evidence
+
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+
+### Conflict linkage
+
+- `CON-UM-001`: convergence framing over novelty.
+- `CON-UM-002`: composable envelope over monolith.
+- `CON-UM-003`: identity-method neutrality in core.
+- `CON-UM-004`: implementation and publication sequencing split.
+- `CON-UM-005`: metaverse as exemplar, not scope anchor.
+- `CON-UM-006`: standards-neutral framing boundaries.
+
+### Policy impact
+
+- `GAP-K2B-001` is closed by IA artifact creation.
+- `GAP-K2B-002` is closed for planning-materialization scope.
+- `GAP-K2B-003` is now implementation-tracked in WO-0014.
