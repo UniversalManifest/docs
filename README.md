@@ -41,8 +41,12 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `integrations/lan.md` — LAN integration contract (implementation-grade, non-normative)
 - `integrations/lan-profile.md` — LAN conventions (non-normative)
 - `integrations/social.md` — Social/profile adoption notes (draft)
+- `integrations/metaverse.md` — Metaverse integration lane with MUM lineage context (non-normative)
+- `integrations/rp1-spatial-fabric.md` — RP1 spatial-fabric integration lane (non-normative, source ingestion pending)
+- `integrations/smart-glasses-ar.md` — Smart-glasses AR social-layer integration lane (non-normative)
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md` — CEO-priority interactive manifest workbench
 - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — CEO-priority first-time overview + visual onboarding
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md` — CEO-priority lineage + metaverse/RP1/smart-glasses integration codification
 
 ## Packages
 

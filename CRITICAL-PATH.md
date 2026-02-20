@@ -82,3 +82,15 @@ Must-have:
 - visual onboarding diagrams maintained with source assets
 - interactive manifest workbench (import, create, validate, export)
 - explicit boundaries between reference tooling and normative spec contract
+
+## Phase 8 — Lineage-grounded expansion lanes
+
+Goal: scale beyond baseline adoption while preserving origin context and non-normative integration boundaries.
+
+Must-have:
+
+- explicit lineage reference to the MUM origin document in source-of-truth docs
+- metaverse integration lane documentation (non-normative)
+- RP1 spatial-fabric integration lane documentation with source-ingestion plan
+- smart-glasses AR social-layer integration lane documentation with consent-first behavior
+- clear rule that normative contract changes still require versioned spec/conformance updates

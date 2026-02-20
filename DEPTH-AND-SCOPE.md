@@ -89,6 +89,9 @@ Index:
 
 - LAN edge/display/admin and Shield storage/transport (`integrations/lan.md`)
 - Social/profile surfaces and interoperability pointers (`integrations/social.md`)
+- Metaverse portability lane with lineage context (`integrations/metaverse.md`)
+- RP1 spatial-fabric lane (`integrations/rp1-spatial-fabric.md`)
+- Smart-glasses AR social-layer lane (`integrations/smart-glasses-ar.md`)
 
 ### Layer D — Tooling (`packages/`)
 

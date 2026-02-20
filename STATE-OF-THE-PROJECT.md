@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-19  
-**Status:** v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`); next critical work is external onboarding validation and resolver stability hardening.
+**Date:** 2026-02-20  
+**Status:** v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`); immediate `J03` + deployment drift blockers are cleared, and next critical work is external onboarding validation plus RP1/smart-glasses/metaverse evidence implementation.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
@@ -28,6 +28,9 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - **Integration notes (non-normative)**
   - LAN/Shield caching + transport: `integrations/lan.md`
   - Social/profile adoption: `integrations/social.md`
+  - Metaverse lane + lineage context: `integrations/metaverse.md`
+  - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
+  - Smart-glasses AR social layer lane: `integrations/smart-glasses-ar.md`
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
@@ -66,13 +69,54 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with external reader testing (`WO-0015`)
 
-## Work-order status (2026-02-19)
+## Work-order status (2026-02-20)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
 - In progress: `WO-0015` first-time overview and visual onboarding
 - Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
+- Completed: `WO-0018` MUM lineage + metaverse/RP1/smart-glasses integration codification (2026-02-20)
+- Completed: `WO-0019` resolver `J03` reliability + production routing hardening (2026-02-20)
+
+## Critical-path execution update (2026-02-20)
+
+Completed in this run:
+- fixed local resolver E2E instability (`J03`) by seeding preview KV in journey setup and waiting for status transitions before assertions.
+- deployed latest Pages artifact for `universalmanifest.net`; workbench routes are live.
+- bound resolver worker to both apex and `www` host variants for `myum.net`.
+- re-ran production smoke and strict K2B validator with explicit artifact root.
+
+Evidence:
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
+- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+
+Production route verification:
+- `https://universalmanifest.net/getting-started/workbench/` -> `200`
+- `https://universalmanifest.net/workbench/index.html` -> `308` redirect to `/workbench/` (live target)
+- `https://universalmanifest.net/workbench/` -> `200`
+- `https://www.myum.net/health` -> `200`
+
+## CEO lineage and integration codification update (2026-02-20)
+
+Completed this run:
+- codified MUM origin lineage in source-of-truth vision and decision records
+- added explicit integration lanes for metaverse, RP1 spatial fabric, and smart-glasses AR social-layer controls
+- added corresponding docs-site integration pages and updated first-time overview context
+
+Evidence:
+- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
+- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
+- `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
 
 ## WO-0017 execution pass update (2026-02-19)
 
@@ -163,6 +207,14 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Corpus-derived IA/journey/workbench deltas were executed and closed in:
   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 - Next: run drift checks for newly ingested sources and open follow-on WOs when corpus deltas affect adopter-facing IA or proof flows
+
+### Milestone F — Metaverse lineage and emerging integration lanes
+
+- ✅ MUM origin and strategic lineage are codified in source-of-truth docs.
+- ✅ Metaverse integration lane is documented.
+- ✅ RP1 spatial-fabric integration lane is documented (with source ingestion marked pending).
+- ✅ Smart-glasses AR social-layer integration lane is documented.
+- Next: ingest RP1 source artifacts into the corpus and add fixture/journey evidence for RP1 + smart-glasses lanes.
 
 ## How other systems should adopt it today (v0.1)
 

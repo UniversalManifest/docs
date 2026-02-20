@@ -48,3 +48,24 @@ Validation direction:
 Note:
 
 - This section is **vision direction**, not yet normative contract text. Normative requirements must be added through versioned spec docs and decision records.
+
+## CEO lineage and expansion direction (2026-02-20)
+
+Lineage source:
+
+- Universal Manifest is explicitly descended from the earlier **Metaverse Universal Manifest (MUM)** concept document:
+  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+
+Strategic direction:
+
+- Keep metaverse portability as a first-class integration lane while positioning Universal Manifest as a broader cross-domain standard.
+- Add an explicit integration lane for **RP1 spatial fabric** use cases (spatial context, place anchoring, and cross-world portability).
+- Add an explicit integration lane for **smart-glasses AR social layer** use cases, including:
+  - face-visibility permissions for recordings
+  - automatic public social-profile disclosure controls
+  - context-sensitive disclosure and consent for real-world + AR interactions
+
+Boundary policy:
+
+- These are source-of-truth vision directives and integration targets.
+- They do **not** become normative spec requirements until implemented via versioned spec/conformance changes and decision records.

@@ -28,3 +28,8 @@ This document is the local pointer to the global GAS shared project index for Un
 ## Maintenance rule
 
 When Universal Manifest gains a major structural change (new spec version, fixture expansion, governance/release model changes), refresh the GAS shared index and update the timestamped index path above.
+
+## Lineage source pointer
+
+- Metaverse Universal Manifest (MUM) source document:
+  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`

@@ -299,3 +299,48 @@ Primary conflict register:
 - `GAP-K2B-001` is closed by IA artifact creation.
 - `GAP-K2B-002` is closed for planning-materialization scope.
 - `GAP-K2B-003` is now implementation-tracked in WO-0014.
+
+## 2026-02-20 — CEO directive: codify MUM lineage + metaverse/RP1/smart-glasses integration lanes
+
+### Decision
+
+- Record Universal Manifest lineage to the original **Metaverse Universal Manifest (MUM)** source document:
+  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+- Codify three explicit non-normative integration lanes:
+  - metaverse applications (cross-world identity, assets, social graph, and preferences)
+  - RP1 spatial fabric
+  - smart-glasses AR social layer with granular consent and disclosure controls
+
+### Rationale
+
+- Preserve provenance to the originating concept as part of project source-of-truth documentation.
+- Make metaverse scope explicit without collapsing Universal Manifest into a metaverse-only specification.
+- Capture CEO-priority integration directions early so user journeys, IA, and conformance planning can evolve from a stable strategic baseline.
+
+### Policy impact
+
+- Vision and onboarding docs must include the MUM lineage statement and metaverse/RP1/smart-glasses integration targets.
+- Integration guidance for these lanes is non-normative and belongs under `integrations/` and site `integrations` pages.
+- Any normative requirements derived from these lanes require explicit versioned spec and conformance changes.
+
+## 2026-02-20 — Resolver reliability and production route parity hardening
+
+### Decision
+
+- Treat local resolver journey seeding as a preview-KV requirement for deterministic `wrangler dev --local` behavior.
+- Bind resolver triggers for both host variants:
+  - `myum.net/*`
+  - `www.myum.net/*`
+- Treat `/workbench/index.html` redirect-to-canonical (`308` -> `/workbench/`) as a valid live route outcome when target resolves `200`.
+
+### Rationale
+
+- `J03` failures were caused by local KV writes being made to non-preview storage while local dev served preview bindings.
+- Production resolver availability on `www.myum.net` is required to prevent host-variant breakage (`522` observed before trigger update).
+- Static-host canonicalization redirects are normal behavior and should not be misclassified as deployment failure when terminal route is healthy.
+
+### Policy impact
+
+- Journey tooling must seed preview KV for local resolver E2E (`packages/universal-manifest/scripts/run-journeys.mjs`).
+- Resolver deployment config must carry both route patterns in source (`services/myum-resolver/wrangler.toml`).
+- Post-deploy checks should verify both canonical and redirected workbench paths plus `www.myum.net` health.
