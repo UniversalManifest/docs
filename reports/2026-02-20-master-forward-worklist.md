@@ -124,10 +124,10 @@ Highest-priority remaining blocker:
 1. Convert all loose ends into explicit WOs when >30 minutes or multi-step.
 2. Create new WOs for untracked but required work:
 3. Resolver `J03` fix and reliability. (completed as `WO-0019`)
-4. RP1 source ingestion and synthesis materialization.
-5. Smart-glasses fixture/journey implementation.
-6. Metaverse fixture/journey implementation hardening.
-7. Production deployment drift prevention automation.
+4. RP1 source ingestion and synthesis materialization. (tracked as `WO-0020`)
+5. Smart-glasses fixture/journey implementation. (tracked as `WO-0021`)
+6. Metaverse fixture/journey implementation hardening. (tracked as `WO-0022`)
+7. Production deployment drift prevention automation. (tracked as `WO-0023`)
 8. Keep WO index current and statuses accurate on every closure.
 
 ## 13) Current completion gate to claim “all planned work complete”

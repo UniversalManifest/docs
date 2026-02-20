@@ -78,6 +78,10 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
 - Completed: `WO-0018` MUM lineage + metaverse/RP1/smart-glasses integration codification (2026-02-20)
 - Completed: `WO-0019` resolver `J03` reliability + production routing hardening (2026-02-20)
+- Queued: `WO-0020` RP1 source ingestion + synthesis materialization
+- Queued: `WO-0021` smart-glasses consent fixtures + proof journeys
+- Queued: `WO-0022` metaverse lane fixtures + proof hardening
+- Queued: `WO-0023` deployment drift prevention automation
 
 ## Critical-path execution update (2026-02-20)
 

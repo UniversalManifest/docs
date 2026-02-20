@@ -23,3 +23,7 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md` — Convert full selected corpus into concrete IA, onboarding, and journey execution deltas
 - `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md` — Codify MUM lineage and CEO-directed metaverse/RP1/smart-glasses integration lanes in source-of-truth docs
 - `docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md` — Clear J03 reliability blocker, deploy latest workbench pages, and bind `www.myum.net` resolver routing
+- `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md` — Ingest RP1 sources into K2B pipeline and materialize fixture/journey outputs
+- `docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md` — Implement smart-glasses consent fixtures and proof journeys
+- `docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md` — Implement metaverse-lane fixtures and proof hardening
+- `docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md` — Add deploy drift prevention and post-deploy verification automation
