@@ -54,11 +54,11 @@ Highest-priority remaining blocker:
 5. Update source-selection/integration records whenever new external sources are added.
 6. Ensure every newly selected source has origin mapping and downstream artifact linkage.
 
-## 4) RP1 ingestion and evidence work (currently codified but not ingested)
+## 4) RP1 ingestion and evidence work (Stage -1/0 intake complete; materialization pending)
 
-1. Identify authoritative RP1 source documents and add them to K2B candidate inventory.
-2. Run Stage -1/0 ingestion triage for RP1 sources (selected/deferred/excluded with rationale).
-3. Localize selected RP1 sources into knowledge corpus imports with provenance mapping.
+1. Identify authoritative RP1 source documents and add them to K2B candidate inventory. (completed 2026-02-20)
+2. Run Stage -1/0 ingestion triage for RP1 sources (selected/deferred/excluded with rationale). (completed 2026-02-20)
+3. Localize selected RP1 sources into knowledge corpus imports with provenance mapping. (completed 2026-02-20)
 4. Reconcile RP1 conflicts with existing UM architecture and document decisions.
 5. Materialize RP1 synthesis into concrete artifacts:
 6. Integration doc updates.

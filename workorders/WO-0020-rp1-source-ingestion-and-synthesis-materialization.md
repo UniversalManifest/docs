@@ -1,6 +1,6 @@
 # WO-0020 — RP1 source ingestion and synthesis materialization
 
-**Status:** NOT_STARTED  
+**Status:** IN_PROGRESS  
 **Created:** 2026-02-20
 
 ## Objective
@@ -34,7 +34,7 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] RP1 sources are selected/deferred/excluded with rationale and provenance mappings.
+- [x] RP1 sources are selected/deferred/excluded with rationale and provenance mappings.
 - [ ] strict K2B validator remains PASS after RP1 ingestion updates.
 - [ ] at least one RP1 fixture is added and validated.
 - [ ] at least one RP1 proof/journey update is added.
@@ -46,3 +46,14 @@ Out of scope:
 - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
 
+## Progress update (2026-02-20)
+
+Completed in this batch:
+- Stage -1/0 RP1 source intake executed with three selected captures from official RP1 domains.
+- source selection, provenance map, and ingestion ledger updated for RP1 batch.
+- triage record added:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-20-rp1-stage0-triage.md`
+
+Remaining:
+- add RP1 fixture and journey/proof materialization.
+- reconcile any new RP1 conflict decisions against UM core boundaries.
