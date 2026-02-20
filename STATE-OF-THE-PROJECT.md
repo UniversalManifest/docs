@@ -218,7 +218,8 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Metaverse integration lane is documented.
 - ✅ RP1 spatial-fabric integration lane is documented (Stage -1/0 source intake complete; fixture/journey materialization pending).
 - ✅ Smart-glasses AR social-layer integration lane is documented.
-- Next: ingest RP1 source artifacts into the corpus and add fixture/journey evidence for RP1 + smart-glasses lanes.
+- ✅ RP1 initial fixture and journey-definition artifacts are now added (`WO-0020` in progress).
+- Next: reconcile RP1 conflict decisions and harden executable journey coverage for RP1 + smart-glasses lanes.
 
 ## How other systems should adopt it today (v0.1)
 

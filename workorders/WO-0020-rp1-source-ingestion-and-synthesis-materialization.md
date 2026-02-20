@@ -35,9 +35,9 @@ Out of scope:
 ## Acceptance criteria
 
 - [x] RP1 sources are selected/deferred/excluded with rationale and provenance mappings.
-- [ ] strict K2B validator remains PASS after RP1 ingestion updates.
-- [ ] at least one RP1 fixture is added and validated.
-- [ ] at least one RP1 proof/journey update is added.
+- [x] strict K2B validator remains PASS after RP1 ingestion updates.
+- [x] at least one RP1 fixture is added and validated.
+- [x] at least one RP1 proof/journey update is added.
 - [ ] any RP1 conflicts with UM architecture are explicitly resolved in ingestion records and decisions docs.
 
 ## Dependencies
@@ -53,7 +53,12 @@ Completed in this batch:
 - source selection, provenance map, and ingestion ledger updated for RP1 batch.
 - triage record added:
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-20-rp1-stage0-triage.md`
+- RP1 fixture added and validated:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- RP1 journey definition added:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+- Journey index updated:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
 
 Remaining:
-- add RP1 fixture and journey/proof materialization.
 - reconcile any new RP1 conflict decisions against UM core boundaries.

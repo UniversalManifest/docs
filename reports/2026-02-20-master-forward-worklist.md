@@ -61,9 +61,9 @@ Highest-priority remaining blocker:
 3. Localize selected RP1 sources into knowledge corpus imports with provenance mapping. (completed 2026-02-20)
 4. Reconcile RP1 conflicts with existing UM architecture and document decisions.
 5. Materialize RP1 synthesis into concrete artifacts:
-6. Integration doc updates.
-7. At least one fixture addition.
-8. At least one journey/proof scenario.
+6. Integration doc updates. (initial status sync completed 2026-02-20)
+7. At least one fixture addition. (completed 2026-02-20)
+8. At least one journey/proof scenario. (initial journey definition completed 2026-02-20; executable journey binding pending)
 9. Open and execute follow-on WO(s) for RP1 implementation if synthesis output exceeds direct edit scope.
 
 ## 5) Smart-glasses AR lane implementation evidence

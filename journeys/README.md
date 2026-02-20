@@ -23,6 +23,7 @@ Outputs:
 4. `journey-04-umid-resolution-myum.md`
 5. `journey-05-lan-edge-to-display-smoke.md`
 6. `journey-06-public-profile-projection.md`
+7. `journey-07-rp1-spatial-fabric-projection.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 
@@ -34,6 +35,7 @@ Required overlay lanes for journey expansion:
 - Venue/local-first display lane (baseline operational lane).
 - Creator/public profile projection lane (adopter-facing lane).
 - Metaverse portability lane as non-normative exemplar (not scope anchor).
+- RP1 spatial-fabric lane as non-normative interoperability overlay.
 
 ## Identity-Method Variant Lanes (CON-UM-003)
 
