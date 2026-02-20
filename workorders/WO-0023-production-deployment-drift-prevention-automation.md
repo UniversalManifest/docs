@@ -1,6 +1,6 @@
 # WO-0023 — Production deployment drift prevention automation
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-20
 
 ## Objective
@@ -32,10 +32,10 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] one command sequence performs route + contract verification after deploy.
-- [ ] verification includes both `universalmanifest.net` workbench paths and `myum.net`/`www.myum.net` resolver health.
-- [ ] results are saved to a timestamped report artifact path.
-- [ ] documented process is reproducible by a zero-context operator.
+- [x] one command sequence performs route + contract verification after deploy.
+- [x] verification includes both `universalmanifest.net` workbench paths and `myum.net`/`www.myum.net` resolver health.
+- [x] results are saved to a timestamped report artifact path.
+- [x] documented process is reproducible by a zero-context operator.
 
 ## Dependencies
 
@@ -43,3 +43,14 @@ Out of scope:
 - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
 - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
 
+## Completion evidence (2026-02-20)
+
+- Automation script:
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/post-deploy-verify.mjs`
+- npm command:
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
+- report artifact (PASS):
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-02-20T05-44-07-832Z-post-deploy-verification.md`
+- runbook updates:
+  - `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`

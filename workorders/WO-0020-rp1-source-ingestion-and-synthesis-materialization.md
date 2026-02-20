@@ -1,6 +1,6 @@
 # WO-0020 — RP1 source ingestion and synthesis materialization
 
-**Status:** IN_PROGRESS  
+**Status:** COMPLETED  
 **Created:** 2026-02-20
 
 ## Objective
@@ -38,7 +38,7 @@ Out of scope:
 - [x] strict K2B validator remains PASS after RP1 ingestion updates.
 - [x] at least one RP1 fixture is added and validated.
 - [x] at least one RP1 proof/journey update is added.
-- [ ] any RP1 conflicts with UM architecture are explicitly resolved in ingestion records and decisions docs.
+- [x] any RP1 conflicts with UM architecture are explicitly resolved in ingestion records and decisions docs.
 
 ## Dependencies
 
@@ -61,4 +61,7 @@ Completed in this batch:
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
 
 Remaining:
-- reconcile any new RP1 conflict decisions against UM core boundaries.
+- none for WO scope; follow-on enhancements continue under regular conformance/interoperability hardening tracks.
+
+Conflict reconciliation evidence:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md` (`CON-UM-007`)

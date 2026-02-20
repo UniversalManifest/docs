@@ -1,6 +1,6 @@
 # WO-0021 — Smart-glasses consent fixtures and proof journeys
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-02-20
 
 ## Objective
@@ -30,13 +30,25 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] at least two smart-glasses consent fixtures are added (allowed/blocked scenario coverage).
-- [ ] journey/proof execution includes smart-glasses consent behavior coverage.
-- [ ] baseline fixture validation and journeys remain PASS.
-- [ ] docs explicitly preserve non-normative boundary for smart-glasses lane.
+- [x] at least two smart-glasses consent fixtures are added (allowed/blocked scenario coverage).
+- [x] journey/proof execution includes smart-glasses consent behavior coverage.
+- [x] baseline fixture validation and journeys remain PASS.
+- [x] docs explicitly preserve non-normative boundary for smart-glasses lane.
 
 ## Dependencies
 
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
 - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
 
+## Completion evidence (2026-02-20)
+
+- Fixtures:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld`
+- Journey coverage:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-08-smart-glasses-consent-enforcement.md`
+  - executable journey check integrated in:
+    - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs` (`J04` overlay assertions)
+- Verification:
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -> PASS
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -> PASS

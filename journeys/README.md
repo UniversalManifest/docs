@@ -24,6 +24,8 @@ Outputs:
 5. `journey-05-lan-edge-to-display-smoke.md`
 6. `journey-06-public-profile-projection.md`
 7. `journey-07-rp1-spatial-fabric-projection.md`
+8. `journey-08-smart-glasses-consent-enforcement.md`
+9. `journey-09-metaverse-crossworld-projection.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 
@@ -36,6 +38,7 @@ Required overlay lanes for journey expansion:
 - Creator/public profile projection lane (adopter-facing lane).
 - Metaverse portability lane as non-normative exemplar (not scope anchor).
 - RP1 spatial-fabric lane as non-normative interoperability overlay.
+- Smart-glasses AR consent lane as non-normative policy overlay.
 
 ## Identity-Method Variant Lanes (CON-UM-003)
 

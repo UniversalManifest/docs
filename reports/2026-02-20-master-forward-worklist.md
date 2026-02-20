@@ -59,27 +59,27 @@ Highest-priority remaining blocker:
 1. Identify authoritative RP1 source documents and add them to K2B candidate inventory. (completed 2026-02-20)
 2. Run Stage -1/0 ingestion triage for RP1 sources (selected/deferred/excluded with rationale). (completed 2026-02-20)
 3. Localize selected RP1 sources into knowledge corpus imports with provenance mapping. (completed 2026-02-20)
-4. Reconcile RP1 conflicts with existing UM architecture and document decisions.
+4. Reconcile RP1 conflicts with existing UM architecture and document decisions. (completed 2026-02-20)
 5. Materialize RP1 synthesis into concrete artifacts:
 6. Integration doc updates. (initial status sync completed 2026-02-20)
 7. At least one fixture addition. (completed 2026-02-20)
-8. At least one journey/proof scenario. (initial journey definition completed 2026-02-20; executable journey binding pending)
+8. At least one journey/proof scenario. (completed 2026-02-20)
 9. Open and execute follow-on WO(s) for RP1 implementation if synthesis output exceeds direct edit scope.
 
 ## 5) Smart-glasses AR lane implementation evidence
 
 1. Convert current non-normative policy guidance into testable fixtures.
-2. Add consent-focused fixture cases for recording visibility and auto-profile disclosure.
-3. Add proof journey(s) that exercise context-based consent enforcement.
-4. Ensure unknown-field tolerance remains intact with AR-specific extensions.
-5. Record outcome in conformance/proof docs without leaking non-normative keys into mandatory core contract.
+2. Add consent-focused fixture cases for recording visibility and auto-profile disclosure. (completed 2026-02-20)
+3. Add proof journey(s) that exercise context-based consent enforcement. (completed 2026-02-20)
+4. Ensure unknown-field tolerance remains intact with AR-specific extensions. (validated 2026-02-20 via `npm test` + `npm run journeys`)
+5. Record outcome in conformance/proof docs without leaking non-normative keys into mandatory core contract. (completed 2026-02-20)
 
 ## 6) Metaverse lane implementation evidence
 
 1. Expand from documented lane to executable proof artifacts.
-2. Add metaverse-focused fixture(s) beyond existing exemplar template.
-3. Add journey coverage for cross-world identity/profile/asset pointer projection.
-4. Validate that metaverse additions remain optional overlays and do not scope-anchor the core spec.
+2. Add metaverse-focused fixture(s) beyond existing exemplar template. (completed 2026-02-20)
+3. Add journey coverage for cross-world identity/profile/asset pointer projection. (completed 2026-02-20)
+4. Validate that metaverse additions remain optional overlays and do not scope-anchor the core spec. (validated 2026-02-20)
 
 ## 7) Conformance and security hardening (v0.1.x + v0.2)
 
@@ -101,9 +101,9 @@ Highest-priority remaining blocker:
 ## 9) Deployment and production alignment
 
 1. Keep repo `main` and production deployments in sync with an auditable deploy cadence.
-2. Update/confirm Cloudflare Pages deployment path for latest site artifacts.
-3. Add post-deploy verification step that checks critical routes and contract endpoints.
-4. Archive deployment proof logs/screenshots in `.dev/ai/reports/` per release cycle.
+2. Update/confirm Cloudflare Pages deployment path for latest site artifacts. (completed 2026-02-20)
+3. Add post-deploy verification step that checks critical routes and contract endpoints. (completed 2026-02-20 via `WO-0023`)
+4. Archive deployment proof logs/screenshots in `.dev/ai/reports/` per release cycle. (automation/report path established 2026-02-20)
 
 ## 10) Docs and onboarding completion quality
 
@@ -124,10 +124,10 @@ Highest-priority remaining blocker:
 1. Convert all loose ends into explicit WOs when >30 minutes or multi-step.
 2. Create new WOs for untracked but required work:
 3. Resolver `J03` fix and reliability. (completed as `WO-0019`)
-4. RP1 source ingestion and synthesis materialization. (tracked as `WO-0020`)
-5. Smart-glasses fixture/journey implementation. (tracked as `WO-0021`)
-6. Metaverse fixture/journey implementation hardening. (tracked as `WO-0022`)
-7. Production deployment drift prevention automation. (tracked as `WO-0023`)
+4. RP1 source ingestion and synthesis materialization. (completed as `WO-0020`)
+5. Smart-glasses fixture/journey implementation. (completed as `WO-0021`)
+6. Metaverse fixture/journey implementation hardening. (completed as `WO-0022`)
+7. Production deployment drift prevention automation. (completed as `WO-0023`)
 8. Keep WO index current and statuses accurate on every closure.
 
 ## 13) Current completion gate to claim “all planned work complete”
@@ -135,7 +135,7 @@ Highest-priority remaining blocker:
 1. `WO-0015` is `COMPLETED` with external evidence committed.
 2. Journey suite passes without failures (`5/5`).
 3. Workbench docs/tool routes are live in production (`200`).
-4. RP1 ingestion is either completed with traceable artifacts or explicitly deferred with dated rationale and approved follow-on WO.
+4. RP1 ingestion is either completed with traceable artifacts or explicitly deferred with dated rationale and approved follow-on WO. (completed 2026-02-20)
 5. Strict K2B validator remains green after all above updates.
 6. State/decisions/work-order docs all reflect the same truth snapshot.
 
