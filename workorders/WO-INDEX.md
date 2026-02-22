@@ -32,3 +32,8 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0026-workbench-and-harness-redesign.md` — [COMPLETED] Redesign Workbench and Harness as visual, single-screen web apps
 - `docs/workorders/WO-0027-omatrust-integration-lane-execution.md` — [COMPLETED] Execute OMA Trust integration lane with concrete docs, fixtures, and journey proof (`J11`)
 - `docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md` — [COMPLETED] Eliminate Astro duplicate-id warning drift via clean-build hardening
+- `docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md` — [COMPLETED] Reorder/retitle Integrations, create sidebar Tools section, and improve Overview first-read clarity
+- `docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md` — [COMPLETED] Build deeply grounded animated SVG prompt pack and production pipeline for UM adoption explainers
+- `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` — [COMPLETED] Restore one-to-one journey proof traceability and remove hardcoded LAN path coupling in journey runner
+- `docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md` — [COMPLETED] Remove stale in-progress language from published docs and deploy corrected site content
+- `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` — [COMPLETED] Convert publish-facing file/route path references to label-first clickable links across docs

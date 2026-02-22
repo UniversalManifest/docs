@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-20  
-**Status:** All 24 work orders completed. v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`). Multi-provider personhood, social DID, and Chia VC integration lanes are delivered with fixture and journey evidence. Remaining work is conformance hardening and future-scope expansion.
+**Date:** 2026-02-22  
+**Status:** All 33 work orders completed. v0.1/v0.2 artifacts, docs site, resolver, docs IA polish, animated SVG explainer pipeline, journey parity hardening, and published-docs link normalization are complete in-repo (`universalmanifest.net` + `myum.net`). Remaining work is future-scope hardening and ongoing adoption refinement.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
@@ -71,7 +71,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing (CLI-agent test completed via `WO-0015`; human participant run recommended)
 
-## Work-order status (2026-02-20)
+## Work-order status (2026-02-22)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
@@ -85,6 +85,15 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0022` metaverse lane fixtures + proof hardening (2026-02-20)
 - Completed: `WO-0023` deployment drift prevention automation (2026-02-20)
 - Completed: `WO-0024` multi-provider proof-of-personhood, social identity, DID, and Chia integration (2026-02-20)
+- Completed: `WO-0025` documentation readability and links polish (2026-02-21)
+- Completed: `WO-0026` workbench and harness redesign (2026-02-21)
+- Completed: `WO-0027` OMA Trust integration lane execution (2026-02-21)
+- Completed: `WO-0028` Astro content-cache clean-build hardening (2026-02-21)
+- Completed: `WO-0029` docs nav order + overview clarity pass (2026-02-22)
+- Completed: `WO-0030` animated SVG explainer prompt pack + production pipeline (2026-02-22)
+- Completed: `WO-0031` journey proof parity + decoupling hardening (2026-02-22)
+- Completed: `WO-0032` published docs stale-status scan and fixes (2026-02-22)
+- Completed: `WO-0033` published docs label-first link normalization (2026-02-22)
 
 ## Critical-path execution update (2026-02-20)
 

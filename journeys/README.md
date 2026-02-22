@@ -5,15 +5,36 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable test step (see `packages/universal-manifest/`)
+- a corresponding executable row in the journey report (`J01` through `J11`)
 
 Run the proof suite:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- Optional LAN smoke (J05) with explicit config:
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && UM_LAN_SMOKE=on UM_LAN_REPO_PATH=/absolute/path/to/lan-platform npm run journeys`
 
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
+- The report includes explicit rows for every documented journey ID (`J01` through `J11`).
+
+## Executable mapping (J01-J11)
+
+- `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
+- `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
+- `J03` Signature verification (v0.2) -> `journeySignatureVerificationV02` (shared `npm test` conformance run)
+- `J04` UMID resolution -> `journeyMyumResolver`
+- `J05` LAN edge to display smoke (optional) -> `journeyLanSmokeOptional`
+- `J06` Public profile projection -> `journeyPublicProfileProjection`
+- `J07` RP1 spatial fabric projection -> `journeyRp1SpatialFabricProjection`
+- `J08` Smart-glasses consent enforcement -> `journeySmartGlassesConsentEnforcement`
+- `J09` Metaverse cross-world projection -> `journeyMetaverseCrossworldProjection`
+- `J10` Multi-provider personhood coexistence -> `journeyMultiProviderPersonhood`
+- `J11` OMA Trust attestation interoperability -> `journeyOmaTrustInteroperability`
+
+Execution source:
+
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
 
 ## Journey list
 
