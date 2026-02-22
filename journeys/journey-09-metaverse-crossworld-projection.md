@@ -1,4 +1,4 @@
-# Journey 09 — Metaverse cross-world projection (non-normative lane)
+# Journey 09 — Metaverse cross-world projection (lane)
 
 ## Goal
 

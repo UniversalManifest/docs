@@ -23,7 +23,7 @@ In-scope normative surfaces:
 - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
 - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
 
-In-scope non-normative but required-to-adopt surfaces:
+In-scope but required-to-adopt surfaces:
 
 - `/Users/grig/work/repo/universalmanifest/examples/v0.1/`
 - `/Users/grig/work/repo/universalmanifest/integrations/lan.md`

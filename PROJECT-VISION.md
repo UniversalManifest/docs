@@ -65,6 +65,11 @@ Strategic direction:
   - automatic public social-profile disclosure controls
   - context-sensitive disclosure and consent for real-world + AR interactions
 
+Additional integration lanes (2026-02-20):
+
+- Add an explicit integration lane for **multi-provider proof-of-personhood** credential binding, targeting World ID, Gitcoin Passport, and BrightID as initial providers with complementary verification approaches (biometric, composite-score, and social-graph).
+- Add an explicit integration lane for **Chia blockchain DID/VC credential attestation**, supporting `did:chia` as a self-sovereign identity anchor and on-chain Verifiable Credentials as provenance-verifiable claim extensions.
+
 Boundary policy:
 
 - These are source-of-truth vision directives and integration targets.

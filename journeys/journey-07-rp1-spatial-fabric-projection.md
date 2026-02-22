@@ -1,4 +1,4 @@
-# Journey 07 — RP1 spatial fabric projection (non-normative lane)
+# Journey 07 — RP1 spatial fabric projection (lane)
 
 ## Goal
 
@@ -37,6 +37,6 @@ Demonstrate that RP1-style spatial-fabric data can be represented as optional po
 
 ## Normative boundary reminder
 
-This journey is non-normative integration evidence. Core normative requirements remain in:
+This journey is integration evidence. Core normative requirements remain in:
 - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
 - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`

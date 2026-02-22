@@ -81,7 +81,7 @@ This crosswalk maps foundational references to the current spec scope and comple
 
 - `/Users/grig/Downloads/INBOX-markdown/universal-manifest/`
   - Contains deep background research and candidate protocol analyses.
-  - Treated as non-normative design inputs; selected documents are already reflected in synthesis references.
+  - Treated as design inputs; selected documents are already reflected in synthesis references.
 
 ## D) Crosswalk Findings
 

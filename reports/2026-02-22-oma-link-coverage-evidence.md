@@ -1,0 +1,301 @@
+# OMA Link Coverage Evidence
+
+Generated: 2026-02-22T00:15:28Z
+
+## Root Site Outbound Links (https://www.omatrust.org/)
+
+- http://www.w3.org/2000/svg | HTTP 200
+- https://attest.org/ | HTTP 200
+- https://docs.omatrust.org | HTTP 200
+- https://github.com/erc-8004/erc-8004-contracts | HTTP 200
+- https://github.com/oma3dao | HTTP 200
+- https://json-schema.org/ | HTTP 200
+- https://linkedin.com/company/oma3 | HTTP 999
+- https://oma3.org | HTTP 200
+- https://oma3.org/ | HTTP 200
+- https://oma3.org/join | HTTP 200
+- https://registry.omatrust.org | HTTP 200
+- https://reputation.omatrust.org | HTTP 200
+- https://twitter.com/oma3dao | HTTP 200
+- https://www.w3.org/TR/did-core/ | HTTP 200
+- https://www.x402.org/ | HTTP 200
+
+## Docs Sitemap Coverage (https://docs.omatrust.org/sitemap.xml)
+
+Total pages listed: 43
+
+- URL: https://docs.oma3.org/
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/
+  - Title: Overview | OMA3 Developer Docs
+  - H1: OMATrust Developer Documentation
+  - Description: OMATrust is an EAS-based reputation layer for services and agents. Verify audits, compliance certifications, endorsements, and signed receipts using machine-verifiable attestations.
+- URL: https://docs.oma3.org/api/controller-witness
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/api/controller-witness
+  - Title: Controller Witness API | OMA3 Developer Docs
+  - H1: Controller Witness API
+  - Description: The Controller Witness API creates an immutable on-chain record that a trusted witness observed a controller assertion at a specific point in time. This solves the mutable evidence problem: when a subject removes or changes their DNS TXT or did.json, verifiers can no longer confirm that a key was authorized at the time of a Key Binding attestation. The witness attestation preserves that proof permanently.
+- URL: https://docs.oma3.org/api/delegated-attestation
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/api/delegated-attestation
+  - Title: Delegated Attestation API | OMA3 Developer Docs
+  - H1: Delegated Attestation API
+  - Description: The Delegated Attestation API enables gas-subsidized attestations on EAS. The attester signs an EIP-712 typed message in their wallet, then the server submits the transaction on their behalf, paying gas from a server-side delegate wallet.
+- URL: https://docs.oma3.org/app-registry/cloudinary-guide
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cloudinary-guide
+  - Title: Cloudinary Image Hosting Guide | OMA3 Developer Docs
+  - H1: Hosting Images on Cloudinary
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/cookbooks/register-a2a-agent
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cookbooks/register-a2a-agent
+  - Title: Register A2A Agent | OMA3 Developer Docs
+  - H1: Cookbook: Register A2A Agent
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/cookbooks/register-api
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cookbooks/register-api
+  - Title: Register an API | OMA3 Developer Docs
+  - H1: Cookbook: Register an API
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/cookbooks/register-mcp-server
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cookbooks/register-mcp-server
+  - Title: Register MCP Server | OMA3 Developer Docs
+  - H1: Cookbook: Register MCP Server
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/cookbooks/register-smart-contract
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cookbooks/register-smart-contract
+  - Title: Register Smart Contract | OMA3 Developer Docs
+  - H1: Cookbook: Register a Smart Contract
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/cookbooks/register-website
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/cookbooks/register-website
+  - Title: Register a Website | OMA3 Developer Docs
+  - H1: Cookbook: Register a Website
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/deduplication-model
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/deduplication-model
+  - Title: Deduplication Model | OMA3 Developer Docs
+  - H1: Deduplication Model
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/erc8004-compatibility
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/erc8004-compatibility
+  - Title: What is a Tokenized Service? | OMA3 Developer Docs
+  - H1: What is a Tokenized Service?
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/integration-examples
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/integration-examples
+  - Title: Integration Code Examples | OMA3 Developer Docs
+  - H1: Integration Code Examples
+  - Description: This App Registry documentation is in preview and is not production-ready. Code examples are provided as-is and may require adaptation for your specific use case. Contract ABIs and addresses are for testnet only. Verify all code before production deployment.
+- URL: https://docs.oma3.org/app-registry/migration-path
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/migration-path
+  - Title: Migration Path | OMA3 Developer Docs
+  - H1: Migration Path
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/overview
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/overview
+  - Title: App Registry Overview | OMA3 Developer Docs
+  - H1: App Registry Overview
+  - Description: The App Registry is in preview and is not yet production-ready. APIs and data structures may change.
+- URL: https://docs.oma3.org/app-registry/registration-guide
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/registration-guide
+  - Title: Registration Guide | OMA3 Developer Docs
+  - H1: Service Registration Guide
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/registry-concepts
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/registry-concepts
+  - Title: Technical Architecture | OMA3 Developer Docs
+  - H1: App Registry Technical Architecture
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/registry-sdk-reference
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/registry-sdk-reference
+  - Title: registry-sdk-reference | OMA3 Developer Docs
+  - H1: App Registry SDK Reference
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/app-registry/status
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/app-registry/status
+  - Title: Status | OMA3 Developer Docs
+  - H1: Status
+  - Description: This App Registry documentation is in preview and is not production-ready.
+- URL: https://docs.oma3.org/chain-architecture/omachain
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/chain-architecture/omachain
+  - Title: Infrastructure &amp; Deployment | OMA3 Developer Docs
+  - H1: Infrastructure &amp; Deployment
+  - Description: Infrastructure details are subject to change. Contract addresses are for testnet only. Mainnet deployment plans may evolve. Check GitHub for latest contract addresses.
+- URL: https://docs.oma3.org/chain-architecture/other-chains
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/chain-architecture/other-chains
+  - Title: Other Chains | OMA3 Developer Docs
+  - H1: Other Chains
+  - Description: N/A
+- URL: https://docs.oma3.org/faq
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/faq
+  - Title: Frequently Asked Questions | OMA3 Developer Docs
+  - H1: Frequently Asked Questions
+  - Description: FAQs are based on current understanding and may not reflect final implementation. For the most current information, visit registry.omatrust.org.
+- URL: https://docs.oma3.org/integrations/erc8004-integration
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/integrations/erc8004-integration
+  - Title: ERC-8004 Integration | OMA3 Developer Docs
+  - H1: ERC-8004 Integration
+  - Description: ERC-8004 is an Ethereum standard for tokenizing AI agents as ERC-721 NFTs. Each token represents a verifiable identity for an agent or agent API.
+- URL: https://docs.oma3.org/integrations/x402-integration
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/integrations/x402-integration
+  - Title: X402 Integration | OMA3 Developer Docs
+  - H1: X402 Integration
+  - Description: x402 is an open protocol for HTTP-native payments. It uses the HTTP 402 Payment Required status code to enable machine-readable payment negotiation directly in the request/response cycle — no API keys, no subscriptions, no out-of-band billing.
+- URL: https://docs.oma3.org/operations/changelog
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/operations/changelog
+  - Title: Changelog | OMA3 Developer Docs
+  - H1: Changelog
+  - Description: N/A
+- URL: https://docs.oma3.org/operations/governance-schema-control
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/operations/governance-schema-control
+  - Title: Governance &amp; Schema Control | OMA3 Developer Docs
+  - H1: Governance &amp; Schema Control
+  - Description: N/A
+- URL: https://docs.oma3.org/operations/running-an-issuer
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/operations/running-an-issuer
+  - Title: Running an Issuer | OMA3 Developer Docs
+  - H1: Running an Issuer
+  - Description: N/A
+- URL: https://docs.oma3.org/operations/versioning-policy
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/operations/versioning-policy
+  - Title: Versioning Policy | OMA3 Developer Docs
+  - H1: Versioning Policy
+  - Description: N/A
+- URL: https://docs.oma3.org/reputation/attestation-types
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/attestation-types
+  - Title: Attestation Types | OMA3 Developer Docs
+  - H1: Attestation Types
+  - Description: OMATrust defines structured schemas for different attestation purposes. Each schema uses JSON Schema Draft 2020-12 as the canonical definition and is published in the OMA3 schema repository.
+- URL: https://docs.oma3.org/reputation/consumer-workflow
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/consumer-workflow
+  - Title: Consumer Workflow | OMA3 Developer Docs
+  - H1: Consumer Workflow
+  - Description: This page covers how to query, interpret, and act on OMATrust attestations. Whether you&#x27;re building a frontend app, an AI agent, an indexer, or a smart contract — you&#x27;re a consumer of reputation data.
+- URL: https://docs.oma3.org/reputation/issuer-workflow
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/issuer-workflow
+  - Title: Issuer Workflow | OMA3 Developer Docs
+  - H1: Issuer Workflow
+  - Description: This page covers how to create and submit attestations in the OMATrust reputation system. Whether you&#x27;re a security auditor issuing assessments, a user writing a review, a witness server anchoring controller observations, or an organization issuing endorsements — the workflow follows the same core pattern.
+- URL: https://docs.oma3.org/reputation/reputation-model
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/reputation-model
+  - Title: Reputation Model | OMA3 Developer Docs
+  - H1: Reputation Model
+  - Description: OMATrust reputation is a system for publishing and verifying trust signals about services — applications, APIs, smart contracts, organizations, and other server-side actors. Unlike most decentralized reputation systems that evaluate users or client identities, OMATrust is explicitly concerned with the reputation of the services that users and machines depend on.
+- URL: https://docs.oma3.org/reputation/trust-scoring
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/trust-scoring
+  - Title: Trust Scoring | OMA3 Developer Docs
+  - H1: Trust Scoring
+  - Description: OMATrust defines attestations, proof formats, and verification rules. It does not define how to score, rank, or weight services. That&#x27;s intentional — different consumers have different trust requirements, and a one-size-fits-all score would be reductive.
+- URL: https://docs.oma3.org/reputation/verification-flow
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/reputation/verification-flow
+  - Title: Verification Flow | OMA3 Developer Docs
+  - H1: Verification Flow
+  - Description: This page explains how consumers verify attestations — from basic structural checks through cryptographic proof verification to trust model application.
+- URL: https://docs.oma3.org/sdk/api-reference/identity-sdk
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/api-reference/identity-sdk
+  - Title: Identity SDK Reference | OMA3 Developer Docs
+  - H1: Identity SDK Reference
+  - Description: Canonical function reference for:
+- URL: https://docs.oma3.org/sdk/api-reference/reputation-sdk
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/api-reference/reputation-sdk
+  - Title: Reputation SDK Reference | OMA3 Developer Docs
+  - H1: Reputation SDK Reference
+  - Description: Canonical function reference for:
+- URL: https://docs.oma3.org/sdk/data-model-overview
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/data-model-overview
+  - Title: Data Model Overview | OMA3 Developer Docs
+  - H1: Data Model Overview
+  - Description: N/A
+- URL: https://docs.oma3.org/sdk/getting-started
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/getting-started
+  - Title: SDK Getting Started | OMA3 Developer Docs
+  - H1: SDK Getting Started
+  - Description: This guide is for the npm package:
+- URL: https://docs.oma3.org/sdk/guides
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/guides
+  - Title: Reputation SDK | OMA3 Developer Docs
+  - H1: Reputation SDK
+  - Description: The Reputation SDK is the primary OMATrust developer surface.
+- URL: https://docs.oma3.org/sdk/schemas/eas-schema-definitions
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/schemas/eas-schema-definitions
+  - Title: EAS Schema Definitions | OMA3 Developer Docs
+  - H1: EAS Schema Definitions
+  - Description: These are the on-chain EAS (Ethereum Attestation Service) schema strings for each OMATrust attestation type. They are generated from the canonical JSON Schemas using the generate-eas-object Hardhat task in the rep-attestation-tools-evm-solidity repository.
+- URL: https://docs.oma3.org/sdk/schemas/json-schemas
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/sdk/schemas/json-schemas
+  - Title: JSON Schemas (Canonical) | OMA3 Developer Docs
+  - H1: JSON Schemas (Canonical)
+  - Description: All OMATrust attestation types are defined as JSON Schema (Draft 2020-12) files. These are the canonical, source-of-truth definitions from which EAS schema strings, form UIs, and SDK types are all derived.
+- URL: https://docs.oma3.org/start-here/definitions
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/start-here/definitions
+  - Title: Definitions | OMA3 Developer Docs
+  - H1: Definitions
+  - Description: This page defines the key terms used throughout the OMATrust developer documentation. Terms are grouped by category — start with the common terms, then refer to the technical sections as needed.
+- URL: https://docs.oma3.org/start-here/quickstart-publish
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/start-here/quickstart-publish
+  - Title: Quickstart: Publish Attestation | OMA3 Developer Docs
+  - H1: Quickstart: Publish Attestation
+  - Description: Submit a verifiable attestation to EAS.
+- URL: https://docs.oma3.org/start-here/quickstart-verify
+  - HTTP: 200
+  - Canonical: https://docs.oma3.org/start-here/quickstart-verify
+  - Title: Quickstart: Verify Reputation | OMA3 Developer Docs
+  - H1: Quickstart: Verify Reputation
+  - Description: Look up and verify an on-chain attestation.
+
+## Preview Portals
+
+- https://preview.reputation.omatrust.org/ | HTTP 200 | Title: OMA3 Attestation Portal
+- https://preview.registry.omatrust.org/ | HTTP 200 | Title: OMATrust Registry Developer Portal
+- https://reputation.omatrust.org/ | HTTP 200 | Title: OMA3 Attestation Portal
+- https://registry.omatrust.org/ | HTTP 200 | Title: OMATrust Registry Developer Portal
+
+## Linked Repositories from Root Site
+
+- https://github.com/oma3dao | HTTP 200
+- https://github.com/erc-8004/erc-8004-contracts | HTTP 200
+
+## Notes
+
+- docs.omatrust.org sitemap currently enumerates docs.oma3.org pages.
+- This artifact captures coverage and availability; semantic analysis is documented in the OMA integration assessment report.

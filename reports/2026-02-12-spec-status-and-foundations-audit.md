@@ -30,7 +30,7 @@ Normative-ish surfaces (source of truth):
 - `spec/v0.1/CONFORMANCE.md`
 - `spec/v0.1/REGISTRY.md`
 
-Required-to-adopt but non-normative surfaces:
+Required-to-adopt but surfaces:
 
 - Fixtures: `examples/v0.1/` and `examples/v0.1/stubs/`
 - Integration guides: `integrations/lan.md`, `integrations/social.md`
@@ -180,7 +180,7 @@ For “World-ready standard”, the project is **not eligible to claim readiness
 - `spec/v0.1/*` and `examples/v0.1/*`
 - `packages/universal-manifest/*`
 
-### LAN implementation references reviewed (contextual; non-normative)
+### LAN implementation references reviewed (contextual; )
 
 Copied into this repo for traceable evidence:
 
@@ -195,7 +195,7 @@ Primary original locations:
 
 - GAS project index:
   - `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-13_10-03_universal-manifest_master-index.md`
-- External UM research archive (non-normative inputs):
+- External UM research archive (inputs):
   - `/Users/grig/Downloads/INBOX-markdown/universal-manifest/`
 
 ## 6) Prioritized gap list (recommended next-step sequence)

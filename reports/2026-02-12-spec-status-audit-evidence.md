@@ -94,7 +94,7 @@ GAS shared master index for Universal Manifest (maps where sources live on devic
 
 - `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-13_10-03_universal-manifest_master-index.md`
 
-External UM research archive (non-normative background inputs):
+External UM research archive (background inputs):
 
 - `/Users/grig/Downloads/INBOX-markdown/universal-manifest/`
 

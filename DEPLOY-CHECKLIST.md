@@ -25,7 +25,7 @@ Outcome:
 - Spec artifacts resolve:
   - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
   - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
-- Harness is available (non-normative):
+- Harness is available:
   - `https://universalmanifest.net/harness/`
 
 ## 2) Deploy the resolver (`myum.net`)

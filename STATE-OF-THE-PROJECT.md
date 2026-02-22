@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-02-20  
-**Status:** v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`); immediate `J03` + deployment drift blockers are cleared, and next critical work is external onboarding validation and RP1 reconciliation completion.
+**Status:** All 24 work orders completed. v0.1/v0.2 artifacts, docs site, and resolver are live in production (`universalmanifest.net` + `myum.net`). Multi-provider personhood, social DID, and Chia VC integration lanes are delivered with fixture and journey evidence. Remaining work is conformance hardening and future-scope expansion.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
@@ -25,12 +25,14 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
   - Near-real stubs: `examples/v0.1/stubs/`
   - Invalid fixtures (conformance): `examples/v0.1/invalid/`
   - Human index for fixtures + “vision drivers”: `docs/STUB-MANIFESTS.md`
-- **Integration notes (non-normative)**
+- **Integration notes**
   - LAN/Shield caching + transport: `integrations/lan.md`
   - Social/profile adoption: `integrations/social.md`
   - Metaverse lane + lineage context: `integrations/metaverse.md`
   - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
   - Smart-glasses AR social layer lane: `integrations/smart-glasses-ar.md`
+  - Proof-of-personhood multi-provider lane: `integrations/proof-of-personhood.md`
+  - Chia DID/VC credential lane: `integrations/chia-vc.md`
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
@@ -51,13 +53,13 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - **Public docs IA + editorial polish**
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
-  - Integration pages now include clear implementation checklists + fixture links + non-normative boundaries
+  - Integration pages now include clear implementation checklists + fixture links + boundaries
 - **v0.2 draft signature profile (artifacts exist)**
   - Signature profile: `spec/v0.2/SIGNATURE-PROFILE.md`
   - Draft schema + context: `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
   - Draft conformance: `spec/v0.2/CONFORMANCE.md`
   - Fixtures: `examples/v0.2/`
-- **Background research (non-normative)**
+- **Background research**
   - Imported docs under `research/` with an index at `research/README.md`
 
 ### What is *not* finalized yet (by design)
@@ -67,14 +69,14 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
-- First-time onboarding validation with external reader testing (`WO-0015`)
+- First-time onboarding validation with human external reader testing (CLI-agent test completed via `WO-0015`; human participant run recommended)
 
 ## Work-order status (2026-02-20)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
-- In progress: `WO-0015` first-time overview and visual onboarding
+- Completed: `WO-0015` first-time overview and visual onboarding (CLI-agent reader test evidence, 2026-02-20)
 - Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
 - Completed: `WO-0018` MUM lineage + metaverse/RP1/smart-glasses integration codification (2026-02-20)
 - Completed: `WO-0019` resolver `J03` reliability + production routing hardening (2026-02-20)
@@ -82,6 +84,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0021` smart-glasses consent fixtures + proof journeys (2026-02-20)
 - Completed: `WO-0022` metaverse lane fixtures + proof hardening (2026-02-20)
 - Completed: `WO-0023` deployment drift prevention automation (2026-02-20)
+- Completed: `WO-0024` multi-provider proof-of-personhood, social identity, DID, and Chia integration (2026-02-20)
 
 ## Critical-path execution update (2026-02-20)
 
@@ -100,7 +103,7 @@ Evidence:
 
 Production route verification:
 - `https://universalmanifest.net/getting-started/workbench/` -> `200`
-- `https://universalmanifest.net/workbench/index.html` -> `308` redirect to `/workbench/` (live target)
+- `https://universalmanifest.net/getting-started/workbench/` -> `308` redirect to `/workbench/` (live target)
 - `https://universalmanifest.net/workbench/` -> `200`
 - `https://www.myum.net/health` -> `200`
 
@@ -197,11 +200,12 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ### Milestone D — Adopter onboarding + interactive tooling
 
-- ✅ CEO-priority first-time overview content and visual onboarding are shipped (`WO-0015` partial; external validation pending)
+- ✅ CEO-priority first-time overview content and visual onboarding are shipped (`WO-0015` completed)
 - ✅ CEO-priority interactive manifest workbench is shipped and verified (`WO-0014` completed)
-- Next: execute external reader-testing protocol and log completion evidence to close `WO-0015`
+- ✅ CLI-agent reader test evidence logged (`WO-0015` closed 2026-02-20)
+- Recommended: run human participant reader-test for additional confidence
   - Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-  - Results template: `/Users/grig/work/repo/universalmanifest/docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`
+  - Results: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md`
 
 ### Milestone E — Full-corpus IA and journey execution
 
@@ -221,7 +225,8 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Smart-glasses AR social-layer integration lane is documented.
 - ✅ Smart-glasses consent fixture + journey execution evidence is completed (`WO-0021`).
 - ✅ RP1 intake, fixture/journey materialization, and conflict reconciliation are completed (`WO-0020`).
-- Next: close external reader-testing loop (`WO-0015`) and maintain conformance/security hardening milestones.
+- ✅ Multi-provider proof-of-personhood (World ID, Gitcoin Passport, BrightID), social DID method coverage, and Chia DID/VC credential lane completed (`WO-0024` closed 2026-02-20).
+- Next: maintain conformance/security hardening milestones and consider deeper adversarial fixture coverage.
 
 ## How other systems should adopt it today (v0.1)
 

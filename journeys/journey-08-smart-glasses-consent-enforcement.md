@@ -1,4 +1,4 @@
-# Journey 08 — Smart-glasses consent enforcement (non-normative lane)
+# Journey 08 — Smart-glasses consent enforcement (lane)
 
 ## Goal
 

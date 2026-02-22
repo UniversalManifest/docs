@@ -78,7 +78,7 @@ External corpus listed in GAS index:
 | :--- | :--- | :--- | :--- |
 | UM normative + governance docs | Integrated | `spec/`, `docs/DONE-DONE-*`, `docs/DECISIONS.md` | Keep synchronized with v0.2 hardening |
 | LAN contextual sources (imported reports) | Partially integrated | `docs/reports/inputs/lan-platform-universal-manifest/` | Need explicit trace mapping from each input to resulting artifact deltas |
-| Internal research imports (`research/`) | Integrated as non-normative drivers | `research/README.md` + imported subfolders | Need periodic refresh cadence |
+| Internal research imports (`research/`) | Integrated as drivers | `research/README.md` + imported subfolders | Need periodic refresh cadence |
 | External corpus (`INBOX-markdown/universal-manifest`) | Partially triaged | Referenced by path in prior reports | Per-file integration/defer/reject ledger not yet complete |
 
 ## 6) Decisions from this log

@@ -32,7 +32,7 @@ Use versioned, immutable paths:
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
 
-Optional convenience aliases (non-normative):
+Optional convenience aliases:
 
 - `https://universalmanifest.net/ns/universal-manifest/latest/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/latest/schema.json`

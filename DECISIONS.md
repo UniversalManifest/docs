@@ -306,7 +306,7 @@ Primary conflict register:
 
 - Record Universal Manifest lineage to the original **Metaverse Universal Manifest (MUM)** source document:
   - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
-- Codify three explicit non-normative integration lanes:
+- Codify three explicit integration lanes:
   - metaverse applications (cross-world identity, assets, social graph, and preferences)
   - RP1 spatial fabric
   - smart-glasses AR social layer with granular consent and disclosure controls
@@ -320,7 +320,7 @@ Primary conflict register:
 ### Policy impact
 
 - Vision and onboarding docs must include the MUM lineage statement and metaverse/RP1/smart-glasses integration targets.
-- Integration guidance for these lanes is non-normative and belongs under `integrations/` and site `integrations` pages.
+- Integration guidance for these lanes is and belongs under `integrations/` and site `integrations` pages.
 - Any normative requirements derived from these lanes require explicit versioned spec and conformance changes.
 
 ## 2026-02-20 — Resolver reliability and production route parity hardening
@@ -331,7 +331,7 @@ Primary conflict register:
 - Bind resolver triggers for both host variants:
   - `myum.net/*`
   - `www.myum.net/*`
-- Treat `/workbench/index.html` redirect-to-canonical (`308` -> `/workbench/`) as a valid live route outcome when target resolves `200`.
+- Treat `/getting-started/workbench/` redirect-to-canonical (`308` -> `/workbench/`) as a valid live route outcome when target resolves `200`.
 
 ### Rationale
 
@@ -344,3 +344,48 @@ Primary conflict register:
 - Journey tooling must seed preview KV for local resolver E2E (`packages/universal-manifest/scripts/run-journeys.mjs`).
 - Resolver deployment config must carry both route patterns in source (`services/myum-resolver/wrangler.toml`).
 - Post-deploy checks should verify both canonical and redirected workbench paths plus `www.myum.net` health.
+
+## 2026-02-20 — DID method selection for initial coverage
+
+### Decision
+
+- Support `did:plc`, `did:web`, and `did:key` as initial DID method coverage for Universal Manifest identity references.
+
+### Rationale
+
+- `did:plc` for AT Protocol / Bluesky ecosystem compatibility.
+- `did:web` for web-based DID resolution using existing domain infrastructure.
+- `did:key` for self-sovereign, key-based identifiers that work offline without external resolution infrastructure.
+
+### Status
+
+- Active
+
+### Policy impact
+
+- These methods are integration targets; core spec remains identity-method-neutral per CON-UM-003.
+- Additional DID methods (e.g., `did:chia`) are supported as extension lanes.
+
+## 2026-02-20 — Proof-of-personhood provider selection
+
+### Decision
+
+- Target World ID, Gitcoin Passport, and BrightID as initial proof-of-personhood providers for the personhood integration lane.
+
+### Rationale
+
+- API-backed, widely recognized, and complementary verification approaches:
+  - World ID: biometric (iris-scan) proof of unique personhood.
+  - Gitcoin Passport: composite Sybil-resistance score from multiple identity stamps.
+  - BrightID: social-graph-based unique-human verification.
+- Multi-provider coexistence allows consumers to select trust models appropriate to their context.
+
+### Status
+
+- Active
+
+### Policy impact
+
+- Provider-specific claims, pointer names, and consent keys are explicitly .
+- Integration guidance lives under `integrations/proof-of-personhood.md` and corresponding site pages.
+- Tracked as part of WO-0024.

@@ -57,7 +57,7 @@ Goal: demonstrate the spec is not “just for LAN” while still letting LAN be 
 
 Must-have:
 
-- LAN integration recipe (non-normative)
+- LAN integration recipe
 - at least one non-LAN adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
@@ -85,12 +85,12 @@ Must-have:
 
 ## Phase 8 — Lineage-grounded expansion lanes
 
-Goal: scale beyond baseline adoption while preserving origin context and non-normative integration boundaries.
+Goal: scale beyond baseline adoption while preserving origin context and integration boundaries.
 
 Must-have:
 
 - explicit lineage reference to the MUM origin document in source-of-truth docs
-- metaverse integration lane documentation (non-normative)
+- metaverse integration lane documentation
 - RP1 spatial-fabric integration lane documentation with source-ingestion plan
 - smart-glasses AR social-layer integration lane documentation with consent-first behavior
 - clear rule that normative contract changes still require versioned spec/conformance updates

@@ -25,6 +25,17 @@ Richer “near-real” stubs:
 - `examples/v0.1/stubs/social-profile-manifest.jsonld`
 - `examples/v0.1/stubs/lan-platform-display-manifest.jsonld`
 
+Integration-lane stubs:
+
+- `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- `examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld`
+- `examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld`
+- `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+- `examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld`
+- `examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld`
+- `examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld`
+- `examples/v0.1/stubs/chia-credential-lane-manifest.jsonld`
+
 ## Vision drivers (by section)
 
 Use these links to understand **why a section exists** and what direction it’s meant to support.

@@ -34,7 +34,7 @@ Highest-priority remaining blocker:
 2. Fix journey `J03` (`myum resolver E2E`) so `npm run journeys` passes 5/5. (completed 2026-02-20)
 3. Deploy latest site build to Cloudflare Pages so workbench routes return 200. (completed 2026-02-20)
 4. Verify `/getting-started/workbench/` is live. (completed 2026-02-20)
-5. Verify `/workbench/index.html` is live. (completed 2026-02-20; canonical redirect `308` -> `/workbench/` with `200` target)
+5. Verify `/getting-started/workbench/` is live. (completed 2026-02-20; canonical redirect `308` -> `/workbench/` with `200` target)
 6. Re-run prod smoke after deploy and attach evidence artifact. (completed 2026-02-20)
 
 ## 2) Open work order closure requirements
@@ -68,11 +68,11 @@ Highest-priority remaining blocker:
 
 ## 5) Smart-glasses AR lane implementation evidence
 
-1. Convert current non-normative policy guidance into testable fixtures.
+1. Convert current policy guidance into testable fixtures.
 2. Add consent-focused fixture cases for recording visibility and auto-profile disclosure. (completed 2026-02-20)
 3. Add proof journey(s) that exercise context-based consent enforcement. (completed 2026-02-20)
 4. Ensure unknown-field tolerance remains intact with AR-specific extensions. (validated 2026-02-20 via `npm test` + `npm run journeys`)
-5. Record outcome in conformance/proof docs without leaking non-normative keys into mandatory core contract. (completed 2026-02-20)
+5. Record outcome in conformance/proof docs without leaking keys into mandatory core contract. (completed 2026-02-20)
 
 ## 6) Metaverse lane implementation evidence
 

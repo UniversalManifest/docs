@@ -17,7 +17,7 @@ Top-level navigation for `universalmanifest.net` docs experience:
 Rationale:
 
 - lead with orientation before deep specification details
-- keep normative and non-normative boundaries explicit
+- keep normative and boundaries explicit
 - ensure implementers can quickly find entry points for build decisions
 
 ## 2) Editorial Style Rules (Linux Foundation-grade target)
@@ -37,7 +37,7 @@ Content chunking:
 Normative conventions:
 
 - “MUST/MUST NOT/SHOULD/MAY” only in spec/conformance pages
-- non-normative guidance labeled as “integration guidance” or “roadmap”
+- guidance labeled as “integration guidance” or “roadmap”
 - keep policy, architecture, and operational runbooks in separate documents
 
 ## 3) Implemented Site Surfaces
