@@ -13,7 +13,7 @@ In scope:
 - add consent-focused fixture cases for recording visibility and auto-profile disclosure behavior.
 - add journey/proof coverage for context-based consent enforcement.
 - verify unknown-field tolerance remains intact with smart-glasses extension data.
-- document outcomes in integration/proof docs as non-normative overlays.
+- document outcomes in integration/proof docs as overlays.
 
 Out of scope:
 - introducing smart-glasses-specific required core fields in v0.1/v0.2 without versioned spec updates.
@@ -33,7 +33,7 @@ Out of scope:
 - [x] at least two smart-glasses consent fixtures are added (allowed/blocked scenario coverage).
 - [x] journey/proof execution includes smart-glasses consent behavior coverage.
 - [x] baseline fixture validation and journeys remain PASS.
-- [x] docs explicitly preserve non-normative boundary for smart-glasses lane.
+- [x] docs explicitly preserve boundary for smart-glasses lane.
 
 ## Dependencies
 

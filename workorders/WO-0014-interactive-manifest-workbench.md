@@ -51,7 +51,7 @@ Requirements added from full-corpus synthesis:
 - Profile mode handling MUST remain identity-method neutral in core fields (`CON-UM-003`).
 - Presets MUST include:
   - one cross-domain baseline manifest template
-  - one metaverse exemplar template marked non-normative (`CON-UM-005`)
+  - one metaverse exemplar template marked (`CON-UM-005`)
 - Validation UX MUST map errors to current conformance surfaces (required fields/TTL/signature profile) and avoid creating a second contract (`CON-UM-002`, `CON-UM-004`).
 - Workbench copy MUST preserve standards-neutral framing and place ecosystem-specific narrative in integration context (`CON-UM-006`).
 
@@ -64,12 +64,12 @@ Requirements added from full-corpus synthesis:
 - [x] Export produces valid JSON/JSON-LD that round-trips through validation.
 - [x] Tool is documented with clear limits (what it validates vs does not validate).
 - [x] Tool exposes profile-mode behavior while keeping core identity method neutral.
-- [x] Starter templates include cross-domain baseline + metaverse exemplar (non-normative).
+- [x] Starter templates include cross-domain baseline + metaverse exemplar.
 
 ## Completion Evidence (2026-02-19T21:14:00Z)
 
 Implementation artifacts:
-- `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
+- `/Users/grig/work/repo/universalmanifest/site/public/getting-started/workbench/`
 - `/Users/grig/work/repo/universalmanifest/site/public/workbench/workbench.js`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`

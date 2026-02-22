@@ -36,7 +36,7 @@ Out of scope:
 
 - [x] `npm run journeys` passes `5/5` with no failures.
 - [x] `https://universalmanifest.net/getting-started/workbench/` resolves `200`.
-- [x] `https://universalmanifest.net/workbench/index.html` resolves to live content (`308` redirect to `/workbench/`, then `200`).
+- [x] `https://universalmanifest.net/getting-started/workbench/` resolves to live content (`308` redirect to `/workbench/`, then `200`).
 - [x] `https://www.myum.net/health` resolves `200`.
 - [x] `npm run smoke:endpoints:prod` passes after deployment/routing updates.
 
@@ -55,7 +55,7 @@ Out of scope:
     - `www.myum.net/*`
 - Production checks:
   - `https://universalmanifest.net/getting-started/workbench/` -> `200`
-  - `https://universalmanifest.net/workbench/index.html` -> `308` (`Location: /workbench/`)
+  - `https://universalmanifest.net/getting-started/workbench/` -> `308` (`Location: /workbench/`)
   - `https://universalmanifest.net/workbench/` -> `200`
   - `https://www.myum.net/health` -> `200`
   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod` -> `PASS`

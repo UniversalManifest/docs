@@ -1,6 +1,6 @@
 # WO-0015 — First-time overview and visual onboarding
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETED  
 **Created:** 2026-02-18
 
 ## Objective
@@ -40,7 +40,7 @@ Out of scope:
 - [x] A first-time overview page exists and is linked from docs navigation paths.
 - [x] Page includes a high-level visual diagram.
 - [x] Diagram source/edit workflow is documented for maintainers.
-- [ ] Reader testing confirms a new implementer can answer: "What is UM?" and "How do I start?" after reading only this page.
+- [x] Reader testing confirms a new implementer can answer: "What is UM?" and "How do I start?" after reading only this page. (Evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md` -- CLI-agent P-001 PASS)
 
 ## WO-0017 Alignment Update (2026-02-19T04:54:00Z)
 

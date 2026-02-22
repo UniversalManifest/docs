@@ -17,7 +17,7 @@ Codify CEO-directed source-of-truth updates for:
 In scope:
 
 - Update source-of-truth docs (`PROJECT-VISION`, `DECISIONS`, `STATE-OF-THE-PROJECT`).
-- Add non-normative integration documents under `integrations/`.
+- Add integration documents under `integrations/`.
 - Add matching docs-site integration pages under `site/src/content/docs/integrations/`.
 - Add lineage note in first-time overview page.
 
@@ -42,7 +42,7 @@ Out of scope:
 ## Acceptance criteria
 
 - [x] MUM lineage is cited in source-of-truth docs.
-- [x] Metaverse lane is documented as non-normative integration guidance.
+- [x] Metaverse lane is documented as integration guidance.
 - [x] RP1 spatial-fabric lane is documented with explicit source-ingestion status.
 - [x] Smart-glasses AR lane is documented with consent and policy guidance.
 - [x] Docs site contains publicly readable pages for all three lanes.

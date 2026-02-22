@@ -29,7 +29,7 @@ Out of scope:
 - Integration contract update:
   - `integrations/lan.md` (expanded, implementation-grade)
 - LAN profile:
-  - `integrations/lan-profile.md` (LAN conventions; non-normative)
+  - `integrations/lan-profile.md` (LAN conventions; )
 - LAN fixture mapping:
   - `docs/reports/2026-02-12-lan-manifest-support-map.md`
 - Reference code stubs (if placed in this repo):

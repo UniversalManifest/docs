@@ -24,7 +24,7 @@ In scope:
 Out of scope:
 
 - One-shot ingestion of every external file into normative spec text.
-- Treating non-normative background research as authoritative contract.
+- Treating background research as authoritative contract.
 
 ## Deliverables
 
