@@ -27,3 +27,6 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md` — Implement smart-glasses consent fixtures and proof journeys
 - `docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md` — Implement metaverse-lane fixtures and proof hardening
 - `docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md` — Add deploy drift prevention and post-deploy verification automation
+- `docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md` — Integrate 3 proof-of-personhood providers with Mastodon/Bluesky-linked manifests, multi-DID support, and Chia lane proof
+- `docs/workorders/WO-0025-documentation-human-readability-and-links.md` — [COMPLETED] Improve documentation readability, fix raw paths, and move tool links to header icons
+- `docs/workorders/WO-0026-workbench-and-harness-redesign.md` — Redesign Workbench and Harness as visual, single-screen web apps
