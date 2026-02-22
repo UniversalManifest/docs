@@ -1,17 +1,37 @@
-# Work Order: WO-0026 - Workbench and Validation Harness Web App Redesign
+# WO-0026 — Workbench and Validation Harness web app redesign
+
+**Status:** COMPLETED
+**Created:** 2026-02-21
+**Completed:** 2026-02-22
 
 ## Goal
-Redesign the Manifest Workbench and Verification Harness to function and feel like modern, visual web applications, moving away from the difficult-to-understand layout of disjointed pages.
 
-## Tasks
-1. **Visual App-Like UI/UX Overhaul**:
-   - Transition the Workbench and Harness interfaces from basic data-entry pages with changing numbers into highly visual, industry-leading web applications.
-   - Ensure the interface is immediately intuitive, even for new users who are not deeply familiar with the architecture behind the tools.
+Redesign the Manifest Workbench and Verification Harness as visual, app-like surfaces with immediate feedback and clear state reporting.
 
-2. **Split-Screen or Unified Views (No Scrolling)**:
-   - Redesign the layout so that adjusting inputs or editing a manifest immediately reflects changes without requiring the user to scroll down the page.
-   - Implement side-by-side panels, split panes, or comparable UI patterns so cause and effect are always synchronously visible on screen.
+## Deliverables
 
-3. **Simplify and Clarify**:
-   - Revamp the visual representation of data within the tools. Information should be clean, clear, and actionable. 
-   - Remove messy, text-heavy outputs in favor of visual state indicators.
+- `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
+- `/Users/grig/work/repo/universalmanifest/site/public/workbench/workbench.js`
+- `/Users/grig/work/repo/universalmanifest/site/public/harness/index.html`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
+
+## Acceptance criteria
+
+- [x] Workbench and Harness are app-like with visual hierarchy, clear status zones, and consistent controls.
+- [x] Split/unified panel layouts keep primary inputs and outcomes visible in a single interaction surface.
+- [x] Validation and resolver states are represented with explicit status indicators and summaries.
+- [x] Tool pages remain publicly routable and build successfully.
+
+## Execution summary
+
+Completed implementation includes:
+- visual redesign with card-based layout, themed palette, and persistent header context.
+- side-by-side panel structure for explorer/validation and fixture/resolver workflows.
+- direct state feedback for validation, signature checks, resolver checks, and summary pass/fail indicators.
+- integrated fixture libraries (including cross-domain and OMA lane fixtures) for rapid proof workflow.
+
+## Validation evidence
+
+- `cd /Users/grig/work/repo/universalmanifest/site && npm run build` (pass)
+- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (pass)

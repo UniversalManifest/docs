@@ -27,6 +27,7 @@ Outputs:
 8. `journey-08-smart-glasses-consent-enforcement.md`
 9. `journey-09-metaverse-crossworld-projection.md`
 10. `J10-multi-provider-personhood-coexistence.md`
+11. `J11-omatrust-attestation-interoperability.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 
