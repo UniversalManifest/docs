@@ -1,14 +1,14 @@
-# LAN Manifest Support Map (UM ↔ LAN integration contract)
+# reference implementation Manifest Support Map (UM ↔ reference implementation integration contract)
 
 Date: 2026-02-17  
-Work Order: `docs/workorders/WO-0010-build-out-lan-support.md`
+Work Order: `docs/workorders/WO-0010-build-out-reference-implementation-support.md`
 
 This report maps:
 
 - Universal Manifest fixtures and conformance expectations
-- to LAN integration responsibilities and endpoint contracts
+- to reference implementation integration responsibilities and endpoint contracts
 
-## 1) Core responsibilities by LAN role
+## 1) Core responsibilities by reference implementation role
 
 Edge (issuer):
 
@@ -37,19 +37,19 @@ v0.1 near-real fixtures:
   - role: display device enrollment / trust stub
 - `examples/v0.1/stubs/creator-public-capsule-manifest.jsonld`
   - role: creator capsule pointer / projection driver
-- `examples/v0.1/stubs/lan-platform-display-manifest.jsonld`
-  - role: LAN display manifest used in smoke tests and contract alignment
+- `examples/v0.1/stubs/display-envelope-manifest.jsonld`
+  - role: reference implementation display manifest used in smoke tests and contract alignment
 
 v0.2 integrity fixture (draft profile):
 
 - `examples/v0.2/minimal-signed-manifest.jsonld`
   - role: signature verification baseline (JCS + Ed25519)
 
-## 3) Endpoint mapping (LAN reference implementation)
+## 3) Endpoint mapping (reference implementation)
 
 Descriptor:
 
-- `GET /.well-known/lan/edge.json`
+- `GET /.well-known/um/edge.json`
 
 Manifest retrieval:
 
@@ -62,7 +62,7 @@ Manifest issuance:
 
 Resolver alignment:
 
-- LAN local: `POST /api/v1/universal-manifests/resolve`
+- reference implementation local: `POST /api/v1/universal-manifests/resolve`
 - Canonical: `GET https://myum.net/{UMID}` (skeleton in `services/myum-resolver/`)
 
 Logging:
@@ -76,15 +76,14 @@ UM proof suite (UM-first):
 
 - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run journeys`
 
-LAN smoke test (LAN repo; validates issuance, retrieval, socket, logging semantics):
+reference implementation smoke test (reference implementation repo; validates issuance, retrieval, socket, logging semantics):
 
-- `/Users/grig/work/lan/lan-platform` → `SMOKE_PORT=3119 npm run smoke:universal-manifest`
+- `/Users/grig/work/repo/reference-platform` → `SMOKE_PORT=3119 npm run smoke:universal-manifest`
 
-## 5) Boundary enforcement (prevent LAN pollution)
+## 5) Boundary enforcement (prevent reference implementation pollution)
 
 Rules:
 
-- LAN-specific endpoints belong in `integrations/` docs, not in `spec/`.
-- The UM spec must remain adopter-neutral; LAN is a consumer with guidance.
-- If LAN introduces a reusable standardized shard name, register it in `spec/v0.1/REGISTRY.md`.
-
+- implementation-specific endpoints belong in `integrations/` docs, not in `spec/`.
+- The UM spec must remain adopter-neutral; reference implementation is a consumer with guidance.
+- If reference implementation introduces a reusable standardized shard name, register it in `spec/v0.1/REGISTRY.md`.

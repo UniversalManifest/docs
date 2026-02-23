@@ -10,8 +10,7 @@ Each journey has:
 Run the proof suite:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- Optional LAN smoke (J05) with explicit config:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && UM_LAN_SMOKE=on UM_LAN_REPO_PATH=/absolute/path/to/lan-platform npm run journeys`
+- Optional reference-implementation smoke (J05) can be enabled in journey-runner config.
 
 Outputs:
 
@@ -24,7 +23,7 @@ Outputs:
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
 - `J03` Signature verification (v0.2) -> `journeySignatureVerificationV02` (shared `npm test` conformance run)
 - `J04` UMID resolution -> `journeyMyumResolver`
-- `J05` LAN edge to display smoke (optional) -> `journeyLanSmokeOptional`
+- `J05` UM edge to display smoke (optional) -> optional reference-implementation smoke journey
 - `J06` Public profile projection -> `journeyPublicProfileProjection`
 - `J07` RP1 spatial fabric projection -> `journeyRp1SpatialFabricProjection`
 - `J08` Smart-glasses consent enforcement -> `journeySmartGlassesConsentEnforcement`
@@ -42,7 +41,7 @@ Execution source:
 2. `journey-02-ttl-and-freshness.md`
 3. `journey-03-signature-verification-v0-2.md`
 4. `journey-04-umid-resolution-myum.md`
-5. `journey-05-lan-edge-to-display-smoke.md`
+5. `journey-05-um-edge-to-display-smoke.md`
 6. `journey-06-public-profile-projection.md`
 7. `journey-07-rp1-spatial-fabric-projection.md`
 8. `journey-08-smart-glasses-consent-enforcement.md`

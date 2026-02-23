@@ -73,20 +73,20 @@ Integrity draft:
 
 - `spec/v0.2/SIGNATURE-PROFILE.md`
 
-## 4) LAN contextual evidence (copied in-repo for traceability)
+## 4) reference implementation contextual evidence (copied in-repo for traceability)
 
-These documents were produced earlier in the LAN repo and copied here verbatim as inputs:
+These documents were produced earlier in the reference implementation repo and copied here verbatim as inputs:
 
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-spec-readiness-scorecard.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-publishing-runbook-universalmanifest-net.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-docs-site-ia-and-style.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-lan-support-integration.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-spec-readiness-scorecard.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-publishing-runbook-universalmanifest-net.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-docs-site-ia-and-style.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-reference-implementation-support-integration.md`
 
 Original locations:
 
-- `/Users/grig/work/lan/lan-platform/.dev/ai/reports/universal-manifest/`
+- `/Users/grig/work/repo/reference-platform/.dev/ai/reports/universal-manifest/`
 
 ## 5) External indexed references reviewed
 

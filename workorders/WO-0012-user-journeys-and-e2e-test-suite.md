@@ -13,7 +13,7 @@ This WO exists to turn the concept from “docs + fixtures” into **proof by ru
 
 - “Done done” must be evidenced by runnable outputs, not prose.
 - The Universal Manifest aims to be adopted by other systems; those adopters need a clear, testable path.
-- LAN is a primary driver, but this proof suite must remain **UM-first** (LAN integration is one consumer).
+- reference implementation is a primary driver, but this proof suite must remain **UM-first** (reference implementation integration is one consumer).
 
 ## Scope
 
@@ -43,7 +43,7 @@ Out of scope:
 3. **Resolver lookup** (`myum.net/{UMID}` semantics): unknown → 404; known → 200 or redirect.
 4. **Device caching + logging**: cache full manifest “while in use”, persist only manifest `@id` references.
 5. **Signature verification** (v0.2, after WO-0002): valid → accept; invalid → reject.
-6. **Public profile projection (non-LAN adopter)**: derive a safe public view from a manifest (future social media profile surface).
+6. **Public profile projection (cross-implementation adopter)**: derive a safe public view from a manifest (future social media profile surface).
 7. **Revocation/removal semantics**: removed/revoked → 410 (or documented policy).
 
 ## Deliverables
@@ -63,7 +63,7 @@ Out of scope:
 - [x] Each journey has a single source of truth doc with steps + expected outcomes.
 - [x] One command runs the complete journey suite locally and exits non-zero on failure.
 - [x] Evidence artifacts are produced (at minimum: structured JSON report + logs).
-- [x] The suite is UM-first and does not require LAN to be present, except for any explicit LAN-journey subset.
+- [x] The suite is UM-first and does not require reference implementation to be present, except for any explicit implementation-specific journey subset.
 - [x] Documentation links “journeys → tests” into the done-done evidence framework.
 
 ## References
@@ -76,8 +76,8 @@ Out of scope:
   - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
 - Conformance:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- LAN implementation stubs (context only):
-  - `/Users/grig/work/lan/lan-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-lan-platform-universal-manifest-stubs.md`
+- reference implementation stubs (context only):
+  - `/Users/grig/work/repo/reference-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-reference-platform-universal-manifest-stubs.md`
 
 ## Post-Completion Corpus Delta Addendum (2026-02-19T04:57:00Z)
 

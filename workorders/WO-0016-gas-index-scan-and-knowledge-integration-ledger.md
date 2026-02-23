@@ -56,4 +56,4 @@ Out of scope:
 - `/Users/grig/.agents/knowledge-sources/INDEX.md`
 - `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-17_19-37_universal-manifest_master-index.md`
 - `docs/reports/2026-02-12-spec-status-and-foundations-audit.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`

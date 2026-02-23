@@ -1,15 +1,15 @@
-# LAN Support Integration Report — Universal Manifest
+# reference implementation Support Integration Report — Universal Manifest
 
 Date: 2026-02-13  
-Work Order: `WO-lan-universal-manifest-lan-support-integration`  
+Work Order: `WO-reference implementation-universal-manifest-reference implementation-support-integration`  
 Status: COMPLETE
 
 ## 1) What was implemented
 
 Backend contract expanded in:
 
-- `/Users/grig/work/lan/lan-platform/packages/backend/src/index.ts`
-- `/Users/grig/work/lan/lan-platform/packages/backend/src/universalManifest.ts`
+- `/Users/grig/work/repo/reference-platform/packages/backend/src/index.ts`
+- `/Users/grig/work/repo/reference-platform/packages/backend/src/universalManifest.ts`
 
 New/expanded endpoints:
 
@@ -23,7 +23,7 @@ New/expanded endpoints:
 
 Edge discovery descriptor now advertises all of the above via:
 
-- `GET /.well-known/lan/edge.json`
+- `GET /.well-known/um/edge.json`
 
 ## 2) Storage + Logging Model
 
@@ -50,7 +50,7 @@ This preserves the agreed behavior:
 
 Player updates in:
 
-- `/Users/grig/work/lan/lan-platform/packages/player-client/src/hooks/useSocket.ts`
+- `/Users/grig/work/repo/reference-platform/packages/player-client/src/hooks/useSocket.ts`
 
 Behavior:
 
@@ -59,7 +59,7 @@ Behavior:
 
 Admin updates in:
 
-- `/Users/grig/work/lan/lan-platform/packages/admin-client/src/pages/DisplaysPage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/admin-client/src/pages/DisplaysPage.tsx`
 
 Behavior:
 
@@ -70,7 +70,7 @@ Behavior:
 
 Smoke test expanded in:
 
-- `/Users/grig/work/lan/lan-platform/scripts/smoke-universal-manifest.mjs`
+- `/Users/grig/work/repo/reference-platform/scripts/smoke-universal-manifest.mjs`
 
 New checks:
 
@@ -80,13 +80,13 @@ New checks:
 
 ## 5) Future myum.net contract alignment
 
-Current LAN resolver behavior stays local and interface-compatible with future external resolver:
+Current reference implementation resolver behavior stays local and interface-compatible with future external resolver:
 
 - local resolve entry point: `POST /api/v1/universal-manifests/resolve`
 - future canonical resolver pattern: `GET https://myum.net/{UMID}`
 
 Migration path:
 
-1. keep LAN local resolver as first-hop cache/edge
+1. keep reference implementation local resolver as first-hop cache/edge
 2. add optional upstream fallback to `myum.net` when local miss occurs
 3. preserve ID-first logging model regardless of resolver source

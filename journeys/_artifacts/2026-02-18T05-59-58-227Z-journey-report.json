@@ -14,7 +14,7 @@
         "startedAt": "2026-02-18T05:59:58.228Z",
         "endedAt": "2026-02-18T05:59:59.325Z",
         "exitCode": 0,
-        "stdout": "\n> @localartistnetwork/universal-manifest@0.1.0 test\n> npm run build && npm run validate:examples\n\n\n> @localartistnetwork/universal-manifest@0.1.0 build\n> tsc -p tsconfig.json\n\n\n> @localartistnetwork/universal-manifest@0.1.0 validate:examples\n> node scripts/validate-examples.mjs\n\nOK   examples/v0.1/invalid/empty-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/expired-for-use.jsonld  (expected invalid: fresh)\nOK   examples/v0.1/invalid/invalid-expiresAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/invalid-issuedAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/issued-after-expires.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-context.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-subject.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shard-wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shards-not-array.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/manifest-with-shards.jsonld  (urn:uuid:9a1d6db7-0f2f-4f5a-b3b9-2c68c23f9c25)\nOK   examples/v0.1/minimal-manifest.jsonld  (urn:uuid:2b5f0d3c-3c4c-4b83-8f2a-6f3b2cbd5c7d)\nOK   examples/v0.1/stubs/creator-public-capsule-manifest.jsonld  (urn:uuid:250acd0e-0709-4430-bc31-6b6bf41b72cb)\nOK   examples/v0.1/stubs/display-device-manifest.jsonld  (urn:uuid:b95f0be3-70fa-405a-af25-543b89530fd1)\nOK   examples/v0.1/stubs/lan-platform-display-manifest.jsonld  (urn:uuid:045f1f58-bcab-40c5-936b-b84d4e55144a)\nOK   examples/v0.1/stubs/social-profile-manifest.jsonld  (urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14)\nOK   examples/v0.1/stubs/venue-edge-manifest.jsonld  (urn:uuid:dfbd3b8a-ec7c-40c4-a3e4-114ec972d41a)\nOK   examples/v0.1/type-array-manifest.jsonld  (urn:uuid:974fac2e-6233-41b4-9f17-55fe75c4c346)\nOK   examples/v0.1/unknown-fields-manifest.jsonld  (urn:uuid:050a0626-7a2d-41ce-96ed-b733a4725fd8)\nOK   examples/v0.2/invalid/invalid-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/invalid/missing-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/minimal-signed-manifest.jsonld  (urn:uuid:11111111-1111-4111-8111-111111111111)\n\nSummary: 10 valid ok, 0 failed, 13 invalid ok, 0 invalid unexpected-pass\n",
+        "stdout": "\n> @localartistnetwork/universal-manifest@0.1.0 test\n> npm run build && npm run validate:examples\n\n\n> @localartistnetwork/universal-manifest@0.1.0 build\n> tsc -p tsconfig.json\n\n\n> @localartistnetwork/universal-manifest@0.1.0 validate:examples\n> node scripts/validate-examples.mjs\n\nOK   examples/v0.1/invalid/empty-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/expired-for-use.jsonld  (expected invalid: fresh)\nOK   examples/v0.1/invalid/invalid-expiresAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/invalid-issuedAt-format.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/issued-after-expires.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-context.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-id.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/missing-subject.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shard-wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/shards-not-array.jsonld  (expected invalid: structural)\nOK   examples/v0.1/invalid/wrong-type.jsonld  (expected invalid: structural)\nOK   examples/v0.1/manifest-with-shards.jsonld  (urn:uuid:9a1d6db7-0f2f-4f5a-b3b9-2c68c23f9c25)\nOK   examples/v0.1/minimal-manifest.jsonld  (urn:uuid:2b5f0d3c-3c4c-4b83-8f2a-6f3b2cbd5c7d)\nOK   examples/v0.1/stubs/creator-public-capsule-manifest.jsonld  (urn:uuid:250acd0e-0709-4430-bc31-6b6bf41b72cb)\nOK   examples/v0.1/stubs/display-device-manifest.jsonld  (urn:uuid:b95f0be3-70fa-405a-af25-543b89530fd1)\nOK   examples/v0.1/stubs/display-envelope-manifest.jsonld  (urn:uuid:045f1f58-bcab-40c5-936b-b84d4e55144a)\nOK   examples/v0.1/stubs/social-profile-manifest.jsonld  (urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14)\nOK   examples/v0.1/stubs/venue-edge-manifest.jsonld  (urn:uuid:dfbd3b8a-ec7c-40c4-a3e4-114ec972d41a)\nOK   examples/v0.1/type-array-manifest.jsonld  (urn:uuid:974fac2e-6233-41b4-9f17-55fe75c4c346)\nOK   examples/v0.1/unknown-fields-manifest.jsonld  (urn:uuid:050a0626-7a2d-41ce-96ed-b733a4725fd8)\nOK   examples/v0.2/invalid/invalid-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/invalid/missing-signature.jsonld  (expected invalid: structural)\nOK   examples/v0.2/minimal-signed-manifest.jsonld  (urn:uuid:11111111-1111-4111-8111-111111111111)\n\nSummary: 10 valid ok, 0 failed, 13 invalid ok, 0 invalid unexpected-pass\n",
         "stderr": ""
       }
     },
@@ -46,7 +46,7 @@
     },
     {
       "id": "J04",
-      "name": "Public profile projection (non-LAN)",
+      "name": "Public profile projection (cross-implementation)",
       "status": "pass",
       "startedAt": "2026-02-18T06:00:02.567Z",
       "endedAt": "2026-02-18T06:00:02.568Z",
@@ -74,7 +74,7 @@
     },
     {
       "id": "J05",
-      "name": "LAN smoke (optional)",
+      "name": "reference implementation smoke (optional)",
       "status": "pass",
       "startedAt": "2026-02-18T06:00:02.568Z",
       "endedAt": "2026-02-18T06:00:07.029Z",
@@ -83,7 +83,7 @@
         "startedAt": "2026-02-18T06:00:02.568Z",
         "endedAt": "2026-02-18T06:00:07.029Z",
         "exitCode": 0,
-        "stdout": "[23:00:04.776] \u001b[32mINFO\u001b[39m (62947): \u001b[36mLocal Artist Network Backend started\u001b[39m\n    \u001b[35mport\u001b[39m: \"3121\"\n\n[smoke] universal manifest OK\n",
+        "stdout": "[23:00:04.776] \u001b[32mINFO\u001b[39m (62947): \u001b[36mReference backend started\u001b[39m\n    \u001b[35mport\u001b[39m: \"3121\"\n\n[smoke] universal manifest OK\n",
         "stderr": ""
       }
     }

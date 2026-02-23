@@ -45,7 +45,7 @@ Journeys proof suite:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
   - Evidence written under: `docs/journeys/_artifacts/`
-  - Includes a non-LAN adopter proof (public profile projection)
+  - Includes a cross-implementation adopter proof (public profile projection)
 
 Endpoint smoke (docs + resolver contract; local dev):
 
@@ -87,7 +87,7 @@ Integrity vs adaptability:
 - This is **additive**, not an either/or decision.
 - Baseline interop profile exists in v0.2 (JCS + Ed25519 + base64url), while future Data Integrity paths remain possible.
 
-LAN/Shield storage/logging:
+reference implementation/Shield storage/logging:
 
 - Cache full manifest payloads only while “in use”.
 - Persist only `@id` references in logs for now (future restore remains optional).
@@ -111,7 +111,7 @@ The next execution-critical items (in order):
 1. Decide what it means to “publish” v0.2 as a stable profile (URLs + immutability + versioning guarantees).
 2. Expand conformance fixtures to cover TTL misuse/adversarial cases (v0.1.x and v0.2.x).
 3. Make the resolver contract concrete for real adopters (error codes, caching headers, privacy posture, example requests/responses).
-4. Add at least one non-LAN adopter journey (profile projection) as proof that UM is not LAN-only.
+4. Add at least one cross-implementation adopter journey (profile projection) as proof that UM is not single-implementation-only.
 5. Create governance/public-facing docs required for serious external adoption (contrib/security/release discipline).
 
 ## 6) “World-ready” disclaimer

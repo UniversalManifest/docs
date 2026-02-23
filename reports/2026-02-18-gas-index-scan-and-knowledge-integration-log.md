@@ -26,8 +26,8 @@ UM prior scan/audit evidence:
 
 - `docs/reports/2026-02-12-spec-status-and-foundations-audit.md`
 - `docs/reports/2026-02-12-spec-status-audit-evidence.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
-- `docs/reports/inputs/lan-platform-universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
+- `docs/reports/inputs/reference-platform-universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
 
 Project knowledge surfaces:
 
@@ -44,13 +44,13 @@ External corpus listed in GAS index:
 - Evidence: `docs/reports/2026-02-12-spec-status-and-foundations-audit.md`
 - Applied artifacts: `spec/v0.1/*`, `docs/DONE-DONE-*`, `docs/DECISIONS.md`, `docs/DEPTH-AND-SCOPE.md`
 
-2. LAN contextual integration inputs were captured and imported:
-- Evidence folder: `docs/reports/inputs/lan-platform-universal-manifest/` (6 input docs)
-- Applied surfaces: `integrations/lan.md`, `docs/DOMAIN-ARCHITECTURE.md`, work-order set WO-0010..WO-0013
+2. reference implementation contextual integration inputs were captured and imported:
+- Evidence folder: `docs/reports/inputs/reference-platform-universal-manifest/` (6 input docs)
+- Applied surfaces: `integrations/reference-runtime.md`, `docs/DOMAIN-ARCHITECTURE.md`, work-order set WO-0010..WO-0013
 
 3. Research driver import and indexing:
 - Evidence: `research/README.md`
-- Applied surfaces: `research/federation/`, `research/lan-platform/`, `research/linux-foundation-projects/`
+- Applied surfaces: `research/federation/`, `research/reference-platform/`, `research/linux-foundation-projects/`
 
 4. Publishing, resolver, and proof-surface execution:
 - Applied surfaces: `deploy/universalmanifest.net/`, `services/myum-resolver/`, `docs/journeys/`, `site/public/harness/`
@@ -77,7 +77,7 @@ External corpus listed in GAS index:
 | Source set | Status | Evidence | Gap |
 | :--- | :--- | :--- | :--- |
 | UM normative + governance docs | Integrated | `spec/`, `docs/DONE-DONE-*`, `docs/DECISIONS.md` | Keep synchronized with v0.2 hardening |
-| LAN contextual sources (imported reports) | Partially integrated | `docs/reports/inputs/lan-platform-universal-manifest/` | Need explicit trace mapping from each input to resulting artifact deltas |
+| reference implementation contextual sources (imported reports) | Partially integrated | `docs/reports/inputs/reference-platform-universal-manifest/` | Need explicit trace mapping from each input to resulting artifact deltas |
 | Internal research imports (`research/`) | Integrated as drivers | `research/README.md` + imported subfolders | Need periodic refresh cadence |
 | External corpus (`INBOX-markdown/universal-manifest`) | Partially triaged | Referenced by path in prior reports | Per-file integration/defer/reject ledger not yet complete |
 

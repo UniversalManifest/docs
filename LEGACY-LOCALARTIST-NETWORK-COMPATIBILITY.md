@@ -5,7 +5,7 @@ This repo’s early v0.1 artifacts contain **namespace references** rooted at `h
 - `spec/v0.1/schema.json` uses:
   - `$id: https://localartist.network/ns/universal-manifest/v0.1/schema.json`
 - `spec/v0.1/schema.jsonld` uses:
-  - `lan: https://localartist.network/ns/universal-manifest/v0.1#`
+  - `um: https://localartist.network/ns/universal-manifest/v0.1#`
 
 Canonical publishing direction is now:
 

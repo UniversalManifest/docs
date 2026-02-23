@@ -22,7 +22,7 @@ Local route sequence:
 
 ## What the participant is supposed to see
 
-1. Clear definition of Universal Manifest as a portable state capsule (not LAN-only product copy).
+1. Clear definition of Universal Manifest as a portable state capsule (not single-implementation-only product copy).
 2. Clear statement of interoperability purpose (shared envelope across systems; no forced single identity/provider stack).
 3. A practical start path:
    - understand contract,

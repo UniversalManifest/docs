@@ -23,7 +23,7 @@ Richer “near-real” stubs:
 - `examples/v0.1/stubs/display-device-manifest.jsonld`
 - `examples/v0.1/stubs/creator-public-capsule-manifest.jsonld`
 - `examples/v0.1/stubs/social-profile-manifest.jsonld`
-- `examples/v0.1/stubs/lan-platform-display-manifest.jsonld`
+- `examples/v0.1/stubs/display-envelope-manifest.jsonld`
 
 Integration-lane stubs:
 
@@ -43,18 +43,18 @@ Use these links to understand **why a section exists** and what direction it’s
 | Manifest section | What it’s for | Primary drivers |
 |---|---|---|
 | `@id` (Manifest ID) | Stable reference for caching + telemetry/logging | `docs/DECISIONS.md` (Manifest ID generation), `spec/v0.1/README.md` |
-| `issuedAt` / `expiresAt` (TTL) | Prevent stale cache + bound trust window | `spec/v0.1/README.md` (ID + caching guidance), `integrations/lan.md`, `docs/CRUCIAL-DETAILS.md` |
+| `issuedAt` / `expiresAt` (TTL) | Prevent stale cache + bound trust window | `spec/v0.1/README.md` (ID + caching guidance), `integrations/reference-runtime.md`, `docs/CRUCIAL-DETAILS.md` |
 | `subject` | Who the manifest is “about” (user/device/venue) | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
-| `shards` | Composable sub-documents (embed or reference) | `spec/v0.1/README.md` (Shard), `examples/v0.1/manifest-with-shards.jsonld`, `research/lan-platform/lan-profile-architecture.md` |
+| `shards` | Composable sub-documents (embed or reference) | `spec/v0.1/README.md` (Shard), `examples/v0.1/manifest-with-shards.jsonld`, `research/reference-platform/profile-architecture.md` |
 | `claims` | Roles/permissions/verification/policy assertions | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
 | `consents` | Privacy + surface permissions (public display, analytics) | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
-| `devices` | Device registrations + trust levels | `integrations/lan.md`, `research/lan-platform/lan-operational-runbooks.md` |
-| `pointers` | Canonical sources + interoperability links (Pod/Matrix/etc.) | `docs/PROJECT-VISION.md`, `research/lan-platform/lan-interoperability-sync.md`, `research/lan-platform/lan-appendices-and-standards-mapping.md` |
-| `signature` | Integrity envelope (format intentionally permissive in v0.1) | `docs/DECISIONS.md` (security scope), `spec/v0.1/README.md`, `research/lan-platform/lan-appendices-and-standards-mapping.md` |
+| `devices` | Device registrations + trust levels | `integrations/reference-runtime.md`, `research/reference-platform/operational-runbooks.md` |
+| `pointers` | Canonical sources + interoperability links (Pod/Matrix/etc.) | `docs/PROJECT-VISION.md`, `research/reference-platform/interoperability-sync.md`, `research/reference-platform/appendices-and-standards-mapping.md` |
+| `signature` | Integrity envelope (format intentionally permissive in v0.1) | `docs/DECISIONS.md` (security scope), `spec/v0.1/README.md`, `research/reference-platform/appendices-and-standards-mapping.md` |
 
 ## How these fixtures connect (conceptual)
 
-At a high level, these fixtures are meant to represent the **minimum useful “state capsule”** LAN surfaces can move around:
+At a high level, these fixtures are meant to represent the **minimum useful “state capsule”** reference implementation surfaces can move around:
 
 ```mermaid
 flowchart LR
@@ -76,7 +76,7 @@ flowchart LR
 
 Purpose:
 
-- Bare-minimum valid `lan:Manifest` shape.
+- Bare-minimum valid `um:Manifest` shape.
 - Useful as a schema/assertion sanity check.
 
 Driver docs:
@@ -90,7 +90,7 @@ Driver docs:
 {
   "@context": "../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:2b5f0d3c-3c4c-4b83-8f2a-6f3b2cbd5c7d",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:key:z6MkpExampleSubjectDid",
   "issuedAt": "2026-02-11T20:45:58Z",
@@ -121,7 +121,7 @@ Driver docs:
 {
   "@context": "../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:974fac2e-6233-41b4-9f17-55fe75c4c346",
-  "@type": ["lan:Manifest", "lan:Example"],
+  "@type": ["um:Manifest", "um:Example"],
   "manifestVersion": "0.1",
   "subject": "did:key:z6MkpExampleSubjectDid",
   "issuedAt": "2026-02-12T02:00:00Z",
@@ -144,7 +144,7 @@ Purpose:
 Driver docs:
 
 - `spec/v0.1/README.md` (Shard definition)
-- `research/lan-platform/lan-profile-architecture.md` (“canonical vs projected” state; capsule concept)
+- `research/reference-platform/profile-architecture.md` (“canonical vs projected” state; capsule concept)
 
 <details>
 <summary>Show JSON</summary>
@@ -153,28 +153,28 @@ Driver docs:
 {
   "@context": "../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:9a1d6db7-0f2f-4f5a-b3b9-2c68c23f9c25",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:web:venue.localartist.network",
   "issuedAt": "2026-02-11T20:45:58Z",
   "expiresAt": "2026-02-12T20:45:58Z",
   "shards": [
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "canonicalProfilePointer",
       "ref": "https://example.pod.provider/profile.jsonld",
       "entity": {
         "@id": "did:key:z6MkpExampleSubjectDid",
-        "@type": "lan:Entity",
+        "@type": "um:Entity",
         "name": "Example Creator"
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "deviceRegistration",
       "entity": {
         "@id": "urn:uuid:36cf6d1c-e119-44b0-b0a6-5e1da0fbfe16",
-        "@type": "lan:Entity",
+        "@type": "um:Entity",
         "name": "NVIDIA Shield TV Pro",
         "description": "Public display device enrolled to a venue edge."
       }
@@ -196,14 +196,14 @@ Driver docs:
 
 Purpose:
 
-- Venue “anchor” document: who the venue is, the **policy envelope**, and the edge node’s LAN endpoints.
+- Venue “anchor” document: who the venue is, the **policy envelope**, and the edge node’s reference implementation endpoints.
 - Includes enrolled device metadata for the **NVIDIA Shield TV Pro** test hardware.
 
 Driver docs:
 
-- `integrations/lan.md` (roles; transport; device caching/logging)
-- `research/lan-platform/lan-operational-runbooks.md` (venue onboarding; device enrollment)
-- `research/lan-platform/lan-appendices-and-standards-mapping.md` (DID + Solid + Matrix + Ed25519 mapping)
+- `integrations/reference-runtime.md` (roles; transport; device caching/logging)
+- `research/reference-platform/operational-runbooks.md` (venue onboarding; device enrollment)
+- `research/reference-platform/appendices-and-standards-mapping.md` (DID + Solid + Matrix + Ed25519 mapping)
 
 <details>
 <summary>Show JSON</summary>
@@ -212,30 +212,30 @@ Driver docs:
 {
   "@context": "../../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:dfbd3b8a-ec7c-40c4-a3e4-114ec972d41a",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:web:ember-cafe.localartist.network",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
   "shards": [
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "venueIdentity",
       "entity": {
         "@id": "did:web:ember-cafe.localartist.network",
-        "@type": ["lan:Entity", "lan:Venue"],
+        "@type": ["um:Entity", "um:Venue"],
         "name": "Ember Cafe (Demo Venue)",
-        "description": "Example venue used for LAN + Universal Manifest v0.1 fixture data.",
+        "description": "Example venue used for reference implementation + Universal Manifest v0.1 fixture data.",
         "timezone": "America/New_York",
         "locale": "en-US"
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "venuePolicy",
       "entity": {
         "@id": "urn:uuid:a873eefb-4811-4bba-887d-dfa8c7cfe3ac",
-        "@type": ["lan:Entity", "lan:VenuePolicy"],
+        "@type": ["um:Entity", "um:VenuePolicy"],
         "safeMode": "PG-13",
         "contentRules": {
           "allowNudity": false,
@@ -251,29 +251,29 @@ Driver docs:
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "edgeNode",
       "entity": {
         "@id": "did:key:z6MkiEdgeNodeExampleDid",
-        "@type": ["lan:Entity", "lan:EdgeNode"],
+        "@type": ["um:Entity", "um:EdgeNode"],
         "name": "Ember Edge Node",
-        "edgeBaseUrl": "http://lan-edge-ember.local:3002",
+        "edgeBaseUrl": "http://um-edge-ember.local:3002",
         "discovery": {
-          "mdnsService": "_lan-edge._tcp.local",
-          "edgeDescriptorUrl": "http://lan-edge-ember.local:3002/.well-known/lan/edge.json"
+          "mdnsService": "_um-edge._tcp.local",
+          "edgeDescriptorUrl": "http://um-edge-ember.local:3002/.well-known/um/edge.json"
         }
       }
     }
   ],
   "claims": [
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "role",
       "value": "venue",
       "issuer": "did:web:ember-cafe.localartist.network"
     },
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "policy.safeMode",
       "value": "PG-13",
       "issuer": "did:web:ember-cafe.localartist.network"
@@ -295,15 +295,15 @@ Driver docs:
   "pointers": [
     {
       "name": "edgeDescriptor",
-      "url": "http://lan-edge-ember.local:3002/.well-known/lan/edge.json"
+      "url": "http://um-edge-ember.local:3002/.well-known/um/edge.json"
     },
     {
       "name": "matrixRoom.updates",
-      "url": "https://matrix.to/#/#lan-updates:localartist.network"
+      "url": "https://matrix.to/#/#um-updates:localartist.network"
     },
     {
       "name": "matrixRoom.revocations",
-      "url": "https://matrix.to/#/#lan-global-revocations:localartist.network"
+      "url": "https://matrix.to/#/#um-global-revocations:localartist.network"
     },
     {
       "name": "solidPod.venueCanonical",
@@ -331,9 +331,9 @@ Purpose:
 
 Driver docs:
 
-- `integrations/lan.md` (Shield caching/logging; update signaling)
-- `research/lan-platform/lan-operational-runbooks.md` (screen enrollment + credentials)
-- `research/lan-platform/lan-interoperability-sync.md` (push signal → fetch flow)
+- `integrations/reference-runtime.md` (Shield caching/logging; update signaling)
+- `research/reference-platform/operational-runbooks.md` (screen enrollment + credentials)
+- `research/reference-platform/interoperability-sync.md` (push signal → fetch flow)
 
 <details>
 <summary>Show JSON</summary>
@@ -342,18 +342,18 @@ Driver docs:
 {
   "@context": "../../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:b95f0be3-70fa-405a-af25-543b89530fd1",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:key:z6MkiShieldTvProExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-12T03:00:00Z",
   "shards": [
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "deviceIdentity",
       "entity": {
         "@id": "did:key:z6MkiShieldTvProExampleDid",
-        "@type": ["lan:Entity", "lan:DisplayDevice"],
+        "@type": ["um:Entity", "um:DisplayDevice"],
         "name": "NVIDIA Shield TV Pro (Test Device)",
         "modelNumber": "945-12897-2500-101",
         "capabilities": {
@@ -364,25 +364,25 @@ Driver docs:
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "venueAssociation",
       "ref": "did:web:ember-cafe.localartist.network",
       "entity": {
         "@id": "did:web:ember-cafe.localartist.network",
-        "@type": ["lan:Entity", "lan:Venue"],
+        "@type": ["um:Entity", "um:Venue"],
         "name": "Ember Cafe (Demo Venue)"
       }
     }
   ],
   "claims": [
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "role",
       "value": "display",
       "issuer": "did:web:ember-cafe.localartist.network"
     },
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "policy.safeMode",
       "value": "PG-13",
       "issuer": "did:web:ember-cafe.localartist.network"
@@ -390,7 +390,7 @@ Driver docs:
   ],
   "consents": [
     {
-      "@type": "lan:Consent",
+      "@type": "um:Consent",
       "name": "telemetry.proofOfPlay",
       "value": "allowed",
       "notes": "Logs should store manifest @id references, not full content payloads."
@@ -410,19 +410,19 @@ Driver docs:
   "pointers": [
     {
       "name": "edgeBaseUrl",
-      "url": "http://lan-edge-ember.local:3002"
+      "url": "http://um-edge-ember.local:3002"
     },
     {
       "name": "edgeDescriptor",
-      "url": "http://lan-edge-ember.local:3002/.well-known/lan/edge.json"
+      "url": "http://um-edge-ember.local:3002/.well-known/um/edge.json"
     },
     {
       "name": "universalManifest.current",
-      "url": "http://lan-edge-ember.local:3002/api/v1/universal-manifests/current?displayId=shield-tv-pro-001"
+      "url": "http://um-edge-ember.local:3002/api/v1/universal-manifests/current?displayId=shield-tv-pro-001"
     },
     {
       "name": "consumerExperience",
-      "url": "http://lan-edge-ember.local:5175/"
+      "url": "http://um-edge-ember.local:5175/"
     }
   ],
   "signature": {
@@ -446,9 +446,9 @@ Purpose:
 
 Driver docs:
 
-- `research/lan-platform/lan-profile-architecture.md` (public capsule; canonical vs projected)
-- `research/lan-platform/lan-interoperability-sync.md` (capsule update signaling)
-- `research/lan-platform/lan-appendices-and-standards-mapping.md` (Solid/Matrix/ActivityPub mapping)
+- `research/reference-platform/profile-architecture.md` (public capsule; canonical vs projected)
+- `research/reference-platform/interoperability-sync.md` (capsule update signaling)
+- `research/reference-platform/appendices-and-standards-mapping.md` (Solid/Matrix/ActivityPub mapping)
 
 <details>
 <summary>Show JSON</summary>
@@ -457,30 +457,30 @@ Driver docs:
 {
   "@context": "../../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:250acd0e-0709-4430-bc31-6b6bf41b72cb",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:key:z6MkiAliceRiveraExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
   "shards": [
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "canonicalProfilePointer",
       "ref": "https://pods.localartist.network/creators/alice-rivera/profile.jsonld",
       "entity": {
         "@id": "did:key:z6MkiAliceRiveraExampleDid",
-        "@type": ["lan:Entity", "lan:Creator"],
+        "@type": ["um:Entity", "um:Creator"],
         "name": "Alice Rivera",
         "handle": "@alice",
         "homeCity": "Providence, RI"
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "publicCapsule",
       "entity": {
         "@id": "urn:uuid:8ea146e2-743a-4f0b-8f99-a53be2d5b614",
-        "@type": ["lan:Entity", "lan:PublicCapsule"],
+        "@type": ["um:Entity", "um:PublicCapsule"],
         "profile": {
           "displayName": "Alice Rivera",
           "bio": "Street photography + mixed media collage exploring memory and neighborhood ritual.",
@@ -507,13 +507,13 @@ Driver docs:
   ],
   "claims": [
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "role",
       "value": "creator",
       "issuer": "did:key:z6MkiAliceRiveraExampleDid"
     },
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "verification.status",
       "value": "unverified",
       "issuer": "did:key:z6MkiAliceRiveraExampleDid"
@@ -521,13 +521,13 @@ Driver docs:
   ],
   "consents": [
     {
-      "@type": "lan:Consent",
+      "@type": "um:Consent",
       "name": "publicDisplay",
       "value": "allowed",
       "notes": "Allows venues to render the Public Capsule on screens."
     },
     {
-      "@type": "lan:Consent",
+      "@type": "um:Consent",
       "name": "analytics.proofOfPlay",
       "value": "allowed",
       "notes": "Allows venues to emit proof-of-play events keyed by manifestId."
@@ -563,14 +563,14 @@ Driver docs:
 
 Purpose:
 
-- A person/creator-scoped manifest that can drive a **public profile** in any compatible system (LAN web views, future social profile views, or other DC properties).
+- A person/creator-scoped manifest that can drive a **public profile** in any compatible system (reference implementation web views, future social profile views, or other DC properties).
 - Demonstrates how `shards` can embed a schema-aligned profile (`schema:Person`) while still pointing to canonical sources (Pod / ActivityPub).
 
 Driver docs:
 
 - `docs/PROJECT-VISION.md` (portable state capsule; pointers instead of big payloads)
-- `research/lan-platform/lan-interoperability-sync.md` (federated surfaces; update signaling)
-- `research/lan-platform/lan-appendices-and-standards-mapping.md` (Solid/Matrix/DID/crypto mapping)
+- `research/reference-platform/interoperability-sync.md` (federated surfaces; update signaling)
+- `research/reference-platform/appendices-and-standards-mapping.md` (Solid/Matrix/DID/crypto mapping)
 
 <details>
 <summary>Show JSON</summary>
@@ -579,30 +579,30 @@ Driver docs:
 {
   "@context": "../../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
   "subject": "did:key:z6MkiJulesChenExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
   "shards": [
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "canonicalProfilePointer",
       "ref": "https://pods.localartist.network/creators/jules-chen/profile.jsonld",
       "entity": {
         "@id": "did:key:z6MkiJulesChenExampleDid",
-        "@type": ["lan:Entity", "lan:Creator"],
+        "@type": ["um:Entity", "um:Creator"],
         "name": "Jules Chen",
         "handle": "@jules",
         "homeCity": "Boston, MA"
       }
     },
     {
-      "@type": "lan:Shard",
+      "@type": "um:Shard",
       "name": "publicProfile",
       "entity": {
         "@id": "https://localartist.network/@jules",
-        "@type": ["lan:Entity", "schema:Person", "lan:PublicProfile"],
+        "@type": ["um:Entity", "schema:Person", "um:PublicProfile"],
         "name": "Jules Chen",
         "description": "Generative visuals + ambient synth performances for small rooms and late-night galleries.",
         "schema:image": "https://media.localartist.network/avatars/jules-chen.jpg",
@@ -616,13 +616,13 @@ Driver docs:
   ],
   "claims": [
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "role",
       "value": "creator",
       "issuer": "did:key:z6MkiJulesChenExampleDid"
     },
     {
-      "@type": "lan:Claim",
+      "@type": "um:Claim",
       "name": "verification.status",
       "value": "unverified",
       "issuer": "did:key:z6MkiJulesChenExampleDid"
@@ -630,13 +630,13 @@ Driver docs:
   ],
   "consents": [
     {
-      "@type": "lan:Consent",
+      "@type": "um:Consent",
       "name": "social.profilePublic",
       "value": "allowed",
       "notes": "Allows publishing a public profile view (web + ActivityPub) derived from this manifest."
     },
     {
-      "@type": "lan:Consent",
+      "@type": "um:Consent",
       "name": "publicDisplay",
       "value": "allowed",
       "notes": "Allows venues to render safe public profile fields on screens."
@@ -668,17 +668,17 @@ Driver docs:
 
 ---
 
-### `lan-platform-display-manifest.jsonld` (near-real: minimal display-local capsule)
+### `display-envelope-manifest.jsonld` (near-real: minimal display-local capsule)
 
 Purpose:
 
-- Smallest “LAN-adjacent” fixture: a manifest about a display when you **don’t have DID** (yet).
+- Smallest “reference implementation-adjacent” fixture: a manifest about a display when you **don’t have DID** (yet).
 - Intended to illustrate the spec non-goal: *must function without DID*.
 
 Driver docs:
 
 - `docs/PROJECT-VISION.md` (DID not required)
-- `integrations/lan.md` (display role; minimal caching/logging)
+- `integrations/reference-runtime.md` (display role; minimal caching/logging)
 
 <details>
 <summary>Show JSON</summary>
@@ -687,9 +687,9 @@ Driver docs:
 {
   "@context": "../../../spec/v0.1/schema.jsonld",
   "@id": "urn:uuid:045f1f58-bcab-40c5-936b-b84d4e55144a",
-  "@type": "lan:Manifest",
+  "@type": "um:Manifest",
   "manifestVersion": "0.1",
-  "subject": "urn:lan:display:shield-tv-pro-001",
+  "subject": "urn:um:display:shield-tv-pro-001",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-12T03:00:00Z",
   "devices": [

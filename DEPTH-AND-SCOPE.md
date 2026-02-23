@@ -3,7 +3,7 @@
 This document maps the **breadth (scope)** and **depth (layers)** of the Universal Manifest project so we can:
 
 - avoid accidental “overbuild”
-- keep v0.1 adoptable by multiple systems (LAN, future social/profile, third parties)
+- keep v0.1 adoptable by multiple systems (reference implementation, future social/profile, third parties)
 - clearly separate **normative spec** from **examples**, **integrations**, and **research**
 
 If you only read one thing first:
@@ -87,7 +87,7 @@ Index:
 
 **Goal:** adoption recipes for concrete surfaces (without changing the core contract):
 
-- LAN edge/display/admin and Shield storage/transport (`integrations/lan.md`)
+- reference implementation edge/display/admin and Shield storage/transport (`integrations/reference-runtime.md`)
 - Social/profile surfaces and interoperability pointers (`integrations/social.md`)
 - Metaverse portability lane with lineage context (`integrations/metaverse.md`)
 - RP1 spatial-fabric lane (`integrations/rp1-spatial-fabric.md`)
@@ -119,7 +119,7 @@ Index:
 
 ### In scope (v0.1 and near-term)
 
-- A stable **document shape** (`lan:Manifest`) and composition primitive (`lan:Shard`)
+- A stable **document shape** (`um:Manifest`) and composition primitive (`um:Shard`)
 - A minimal set of sections: `claims`, `consents`, `devices`, `pointers`, `signature` (permissive)
 - Guidance for caching, TTL, and logging by `@id`
 - Examples + stubs that exercise realistic scenarios:
@@ -199,24 +199,24 @@ Track gaps in:
 
 ## 8) Research depth (what’s currently imported)
 
-There is substantially more background material in the LAN design library and prior archives; this repo currently imports a **focused subset** as design drivers:
+There is substantially more background material in the reference implementation design library and prior archives; this repo currently imports a **focused subset** as design drivers:
 
 ### Federation / cross-property driver
 
 - `research/federation/universal-manifest-workstream.md`
   - defines the “state capsule” framing and the minimum section set (claims/consents/devices/pointers/signature)
 
-### LAN platform drivers (local-first reality)
+### standard drivers (local-first reality)
 
-- `research/lan-platform/lan-profile-architecture.md`
+- `research/reference-platform/profile-architecture.md`
   - canonical vs projected state (Solid → Capsule), shards mapping, and why “profile” is a projection
-- `research/lan-platform/lan-interoperability-sync.md`
+- `research/reference-platform/interoperability-sync.md`
   - update signaling and sync flows (push signal → fetch), offline behavior
-- `research/lan-platform/lan-operational-runbooks.md`
+- `research/reference-platform/operational-runbooks.md`
   - enrollment, trust establishment, and operational procedures (venue/edge/display)
-- `research/lan-platform/lan-appendices-and-standards-mapping.md`
+- `research/reference-platform/appendices-and-standards-mapping.md`
   - standards mapping for adoption (DID, Solid, Matrix, Ed25519, canonicalization ideas)
-- `research/lan-platform/lan-external-research-synthesis.md`
+- `research/reference-platform/external-research-synthesis.md`
   - external synthesis and additional motivation context
 
 These docs are **not normative**. When they imply a contract change, capture it in:

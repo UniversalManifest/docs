@@ -59,12 +59,12 @@ Evidence paths:
 
 - [ ] At least one end-to-end integration path is verified
 - [ ] Cross-system projection/pointer behavior is documented
-- [ ] Guidance is understandable for non-LAN adopters
-- [ ] No LAN-only assumptions appear in normative contract text
+- [ ] Guidance is understandable for cross-runtime adopters
+- [ ] No origin-runtime-only assumptions appear in normative contract text
 
 Evidence paths:
 
-- [ ] `integrations/lan.md`
+- [ ] `integrations/reference-runtime.md`
 - [ ] `integrations/social.md`
 - [ ] `docs/journeys/` (canonical journey definitions)
 - [ ] `packages/universal-manifest/scripts/run-journeys.mjs` (executable proof suite)
@@ -107,7 +107,7 @@ Evidence paths:
 
 - [ ] `docs/STATE-OF-THE-PROJECT.md`
 - [ ] `docs/DEPTH-AND-SCOPE.md`
-- [ ] `integrations/lan.md`
+- [ ] `integrations/reference-runtime.md`
 
 ## 9) Additional checks for World-ready claims
 

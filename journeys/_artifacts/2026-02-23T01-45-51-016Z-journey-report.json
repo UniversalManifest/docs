@@ -1,6 +1,6 @@
 {
-  "runId": "2026-02-22T22-55-37-227Z",
-  "createdAt": "2026-02-22T22:55:42.516Z",
+  "runId": "2026-02-23T01-45-51-016Z",
+  "createdAt": "2026-02-23T01:45:55.402Z",
   "repoRoot": "/Users/grig/work/repo/universalmanifest",
   "runtimeConfig": {
     "lanSmokeMode": "auto",
@@ -11,12 +11,12 @@
       "id": "P01",
       "name": "universalmanifest.net build output",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:37.228Z",
-      "endedAt": "2026-02-22T22:55:37.329Z",
+      "startedAt": "2026-02-23T01:45:51.017Z",
+      "endedAt": "2026-02-23T01:45:51.092Z",
       "details": {
         "type": "command",
-        "startedAt": "2026-02-22T22:55:37.228Z",
-        "endedAt": "2026-02-22T22:55:37.329Z",
+        "startedAt": "2026-02-23T01:45:51.017Z",
+        "endedAt": "2026-02-23T01:45:51.092Z",
         "exitCode": 0,
         "stdout": "",
         "stderr": "",
@@ -30,60 +30,39 @@
     {
       "id": "J01",
       "name": "Parse and ignore unknown fields",
-      "status": "pass",
-      "startedAt": "2026-02-22T22:55:37.329Z",
-      "endedAt": "2026-02-22T22:55:38.278Z",
-      "details": {
-        "type": "shared-command",
-        "sharedCommand": "npm test",
-        "mappedCoverage": "J01 parse-and-ignore-unknown-fields",
-        "evidence": "v0.1 unknown-fields fixture is validated in the core conformance suite",
-        "startedAt": "2026-02-22T22:55:37.329Z",
-        "endedAt": "2026-02-22T22:55:38.278Z"
-      }
+      "status": "fail",
+      "startedAt": "2026-02-23T01:45:51.092Z",
+      "endedAt": "2026-02-23T01:45:51.904Z",
+      "error": "Core conformance suite failed"
     },
     {
       "id": "J02",
       "name": "TTL and freshness",
-      "status": "pass",
-      "startedAt": "2026-02-22T22:55:38.278Z",
-      "endedAt": "2026-02-22T22:55:38.278Z",
-      "details": {
-        "type": "shared-command",
-        "sharedCommand": "npm test",
-        "mappedCoverage": "J02 ttl-and-freshness",
-        "evidence": "issuedAt/expiresAt validity checks run in the core conformance suite",
-        "startedAt": "2026-02-22T22:55:37.329Z",
-        "endedAt": "2026-02-22T22:55:38.278Z"
-      }
+      "status": "fail",
+      "startedAt": "2026-02-23T01:45:51.904Z",
+      "endedAt": "2026-02-23T01:45:51.904Z",
+      "error": "Core conformance suite failed"
     },
     {
       "id": "J03",
       "name": "Signature verification (v0.2)",
-      "status": "pass",
-      "startedAt": "2026-02-22T22:55:38.278Z",
-      "endedAt": "2026-02-22T22:55:38.278Z",
-      "details": {
-        "type": "shared-command",
-        "sharedCommand": "npm test",
-        "mappedCoverage": "J03 signature-verification-v0.2",
-        "evidence": "v0.2 fixtures and invalid-signature cases run in the core conformance suite",
-        "startedAt": "2026-02-22T22:55:37.329Z",
-        "endedAt": "2026-02-22T22:55:38.278Z"
-      }
+      "status": "fail",
+      "startedAt": "2026-02-23T01:45:51.904Z",
+      "endedAt": "2026-02-23T01:45:51.904Z",
+      "error": "Core conformance suite failed"
     },
     {
       "id": "J04",
       "name": "UMID resolution (myum resolver E2E)",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:38.278Z",
-      "endedAt": "2026-02-22T22:55:42.510Z",
+      "startedAt": "2026-02-23T01:45:51.904Z",
+      "endedAt": "2026-02-23T01:45:55.399Z",
       "details": {
         "type": "e2e",
-        "startedAt": "2026-02-22T22:55:38.280Z",
-        "endedAt": "2026-02-22T22:55:42.501Z",
+        "startedAt": "2026-02-23T01:45:51.905Z",
+        "endedAt": "2026-02-23T01:45:55.392Z",
         "baseUrl": "http://localhost:8791",
-        "stdout": "\n ⛅️ wrangler 3.114.17 (update available 4.67.0)\n-----------------------------------------------\n\nYour Worker and resources are simulated locally via Miniflare. For more information, see: https://developers.cloudflare.com/workers/testing/local-development.\n\nYour worker has access to the following bindings:\n- KV Namespaces:\n  - UMID_KV: 83f581c0ca164d6bad52e4e63b708050 [simulated locally]\n⎔ Starting local server...\n[wrangler-UserWorker:wrn] The latest compatibility date supported by the installed Cloudflare Workers Runtime is \"2025-07-18\",\nbut you've requested \"2026-02-17\". Falling back to \"2025-07-18\"...\nFeatures enabled by your requested compatibility date may not be available.\nUpgrade to `wrangler@4.67.0` to remove this warning.\n[wrangler:inf] Ready on http://localhost:8791\n[wrangler:inf] GET /health 200 OK (4ms)\n[wrangler:inf] GET /urn:uuid:does-not-exist 404 Not Found (9ms)\n[wrangler:inf] GET /.well-known/myum-resolver.json 200 OK (1ms)\n[wrangler:inf] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (3ms)\n[wrangler:inf] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (1ms)\n[wrangler:inf] GET /b64u:dXJuOnV1aWQ6YWFhYWFhYWEtYWFhYS00YWFhLThhYWEtYWFhYWFhYWFhYWFh 200 OK (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Acccccccc-cccc-4ccc-8ccc-cccccccccccc 410 Gone (2ms)\n",
+        "stdout": "\n ⛅️ wrangler 3.114.17 (update available 4.67.0)\n-----------------------------------------------\n\nYour Worker and resources are simulated locally via Miniflare. For more information, see: https://developers.cloudflare.com/workers/testing/local-development.\n\nYour worker has access to the following bindings:\n- KV Namespaces:\n  - UMID_KV: 83f581c0ca164d6bad52e4e63b708050 [simulated locally]\n⎔ Starting local server...\n[wrangler-UserWorker:wrn] The latest compatibility date supported by the installed Cloudflare Workers Runtime is \"2025-07-18\",\nbut you've requested \"2026-02-17\". Falling back to \"2025-07-18\"...\nFeatures enabled by your requested compatibility date may not be available.\nUpgrade to `wrangler@4.67.0` to remove this warning.\n[wrangler:inf] Ready on http://localhost:8791\n[wrangler:inf] GET /health 200 OK (3ms)\n[wrangler:inf] GET /urn:uuid:does-not-exist 404 Not Found (4ms)\n[wrangler:inf] GET /.well-known/myum-resolver.json 200 OK (0ms)\n[wrangler:inf] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (2ms)\n[wrangler:inf] GET /b64u:dXJuOnV1aWQ6YWFhYWFhYWEtYWFhYS00YWFhLThhYWEtYWFhYWFhYWFhYWFh 200 OK (1ms)\n[wrangler:inf] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (2ms)\n[wrangler:inf] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (1ms)\n[wrangler:inf] GET /urn%3Auuid%3Acccccccc-cccc-4ccc-8ccc-cccccccccccc 410 Gone (1ms)\n",
         "stderr": "\u001b[33m▲ \u001b[43;33m[\u001b[43;30mWARNING\u001b[43;33m]\u001b[0m \u001b[1mThe version of Wrangler you are using is now out-of-date.\u001b[0m\n\n  Please update to the latest version to prevent critical errors.\n  Run `npm install --save-dev wrangler@4` to update to the latest version.\n  After installation, run Wrangler with `npx wrangler`.\n\n\n"
       }
     },
@@ -91,8 +70,8 @@
       "id": "J05",
       "name": "UM edge to display smoke (optional)",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.510Z",
-      "endedAt": "2026-02-22T22:55:42.510Z",
+      "startedAt": "2026-02-23T01:45:55.399Z",
+      "endedAt": "2026-02-23T01:45:55.399Z",
       "details": {
         "type": "skip",
         "reason": "reference implementation repo path not configured (set optional smoke path or --optional-smoke-path to enable)"
@@ -102,8 +81,8 @@
       "id": "J06",
       "name": "Public profile projection (cross-implementation adopter proof)",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.510Z",
-      "endedAt": "2026-02-22T22:55:42.511Z",
+      "startedAt": "2026-02-23T01:45:55.399Z",
+      "endedAt": "2026-02-23T01:45:55.400Z",
       "details": {
         "type": "projection",
         "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
@@ -130,8 +109,8 @@
       "id": "J07",
       "name": "RP1 spatial fabric projection lane",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.511Z",
-      "endedAt": "2026-02-22T22:55:42.511Z",
+      "startedAt": "2026-02-23T01:45:55.400Z",
+      "endedAt": "2026-02-23T01:45:55.400Z",
       "details": {
         "type": "projection",
         "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
@@ -152,8 +131,8 @@
       "id": "J08",
       "name": "Smart-glasses consent enforcement lane",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.511Z",
-      "endedAt": "2026-02-22T22:55:42.512Z",
+      "startedAt": "2026-02-23T01:45:55.400Z",
+      "endedAt": "2026-02-23T01:45:55.400Z",
       "details": {
         "type": "consent-enforcement",
         "fixtures": [
@@ -173,8 +152,8 @@
       "id": "J09",
       "name": "Metaverse cross-world projection lane",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.512Z",
-      "endedAt": "2026-02-22T22:55:42.512Z",
+      "startedAt": "2026-02-23T01:45:55.400Z",
+      "endedAt": "2026-02-23T01:45:55.401Z",
       "details": {
         "type": "projection",
         "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
@@ -196,8 +175,8 @@
       "id": "J10",
       "name": "Multi-provider personhood coexistence",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.512Z",
-      "endedAt": "2026-02-22T22:55:42.515Z",
+      "startedAt": "2026-02-23T01:45:55.401Z",
+      "endedAt": "2026-02-23T01:45:55.401Z",
       "details": {
         "type": "fixture-validation",
         "fixtures": [
@@ -223,8 +202,8 @@
       "id": "J11",
       "name": "OMATrust attestation interoperability",
       "status": "pass",
-      "startedAt": "2026-02-22T22:55:42.515Z",
-      "endedAt": "2026-02-22T22:55:42.516Z",
+      "startedAt": "2026-02-23T01:45:55.401Z",
+      "endedAt": "2026-02-23T01:45:55.402Z",
       "details": {
         "type": "fixture-validation",
         "fixtures": [
@@ -252,7 +231,7 @@
   "summary": {
     "preflightPass": 1,
     "preflightFail": 0,
-    "pass": 11,
-    "fail": 0
+    "pass": 8,
+    "fail": 3
   }
 }

@@ -51,14 +51,14 @@ Must-have:
 - minimum privacy posture (what is public vs not, and why)
 - tests that exercise resolution end-to-end
 
-## Phase 5 — Prove it across surfaces (LAN + non-LAN)
+## Phase 5 — Prove it across surfaces (reference implementation + cross-runtime)
 
-Goal: demonstrate the spec is not “just for LAN” while still letting LAN be a primary design driver.
+Goal: demonstrate the spec is not “just for reference implementation” while still letting reference implementation be a primary design driver.
 
 Must-have:
 
-- LAN integration recipe
-- at least one non-LAN adopter journey (e.g., profile projection)
+- reference implementation integration recipe
+- at least one cross-runtime adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
 ## Phase 6 — Full-corpus synthesis before IA and journey expansion

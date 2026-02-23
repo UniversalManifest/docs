@@ -3,7 +3,7 @@
 **Date:** 2026-02-17  
 **Project:** Universal Manifest  
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`  
-**Previous path (legacy):** `/Users/grig/work/lan/universal-manifest`
+**Previous path (legacy):** `/Users/grig/work/repo/universalmanifest (legacy path archived)`
 
 ## Executive status
 
@@ -36,9 +36,9 @@ Latest journey artifact:
 
 ## Decoupling status
 
-Decoupling from LAN is now explicit and operational:
+Decoupling from reference implementation is now explicit and operational:
 
-- Repo moved out of `/Users/grig/work/lan/` into `/Users/grig/work/repo/universalmanifest`.
+- Repo moved out of `/Users/grig/work/repo/` into `/Users/grig/work/repo/universalmanifest`.
 - Agent infrastructure aligned to GAS split model:
   - `AGENTS.md` = immutable global rules copy
   - `PROJECT-RULES.md` = Universal Manifest-specific onboarding and project rules

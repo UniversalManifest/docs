@@ -3,7 +3,7 @@
 **Date:** 2026-02-23  
 **Status:** Core implementation wave (`WO-0001` through `WO-0033`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0034`, `WO-0036`, `WO-0037`, `WO-0038`) is complete. Final closure-grade posture is currently gated by mandatory human onboarding evidence (`WO-0035`, Policy A) and active onboarding language/system-propagation rewrite planning (`WO-0039`).
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
-**Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
+**Legacy path:** archived (historical only)
 
 This repo is a **spec + fixtures + minimal tooling** project. It is not a running service.
 
@@ -26,7 +26,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
   - Invalid fixtures (conformance): `examples/v0.1/invalid/`
   - Human index for fixtures + “vision drivers”: `docs/STUB-MANIFESTS.md`
 - **Integration notes**
-  - LAN/Shield caching + transport: `integrations/lan.md`
+  - reference implementation + Shield caching + transport: `integrations/reference-runtime.md`
   - Social/profile adoption: `integrations/social.md`
   - Metaverse lane + lineage context: `integrations/metaverse.md`
   - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
@@ -253,14 +253,14 @@ Recommended adoption tier for external systems *right now*:
 - Treat `signature` as optional and/or “best effort” until the signature profile is finalized
 - For v0.2 drafts: verify signatures when present and required by that profile
 
-## Notes on LAN relationship
+## Notes on origin-runtime relationship
 
-LAN is a primary design driver, but the project goal is broader:
+the reference implementation is a primary design driver, but the project goal is broader:
 
-- LAN uses the manifest as a local-first capsule (edge ↔ display ↔ admin).
+- a reference implementation uses the manifest as a local-first capsule (edge ↔ display ↔ admin).
 - Future “social profile” surfaces should treat the manifest as an envelope that drives projections (web profile pages, ActivityPub actor pointers, etc.).
 
-This is why “LAN specifics” live in `integrations/` and `research/`, not in `spec/`.
+This is why “reference implementation specifics” live in `integrations/` and `research/`, not in `spec/`.
 
 ## Historical priority note
 

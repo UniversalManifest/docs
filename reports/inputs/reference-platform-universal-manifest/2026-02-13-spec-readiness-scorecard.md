@@ -1,7 +1,7 @@
 # Universal Manifest Spec Readiness Scorecard
 
 Date: 2026-02-13  
-Work Order: `WO-lan-universal-manifest-spec-scope-and-done-definition`
+Work Order: `WO-reference implementation-universal-manifest-spec-scope-and-done-definition`
 
 Scoring scale:
 
@@ -35,8 +35,8 @@ Scoring scale:
 - Score: 2/4
 - Evidence:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/lan/lan-platform/packages/backend/src/universalManifest.ts`
-  - `/Users/grig/work/lan/lan-platform/packages/player-client/src/universalManifest/verifySignature.ts`
+  - `/Users/grig/work/repo/reference-platform/packages/backend/src/universalManifest.ts`
+  - `/Users/grig/work/repo/reference-platform/packages/player-client/src/universalManifest/verifySignature.ts`
 - Notes: direction and stubs exist; cross-ecosystem profile and trust distribution are not final.
 
 ### Gate 4: Publish/distribution readiness
@@ -45,23 +45,23 @@ Scoring scale:
 - Evidence:
   - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
   - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
-- Notes: architecture and policy exist; operational publishing rails now being formalized in LAN workstream.
+- Notes: architecture and policy exist; operational publishing rails now being formalized in reference implementation workstream.
 
 ### Gate 5: Integration viability (real system)
 
 - Score: 3/4
 - Evidence:
-  - `/Users/grig/work/lan/lan-platform/packages/backend/src/index.ts`
-  - `/Users/grig/work/lan/lan-platform/packages/player-client/src/hooks/useSocket.ts`
-  - `/Users/grig/work/lan/lan-platform/packages/admin-client/src/hooks/useAdminSocket.ts`
-  - `/Users/grig/work/lan/lan-platform/scripts/smoke-universal-manifest.mjs`
+  - `/Users/grig/work/repo/reference-platform/packages/backend/src/index.ts`
+  - `/Users/grig/work/repo/reference-platform/packages/player-client/src/hooks/useSocket.ts`
+  - `/Users/grig/work/repo/reference-platform/packages/admin-client/src/hooks/useAdminSocket.ts`
+  - `/Users/grig/work/repo/reference-platform/scripts/smoke-universal-manifest.mjs`
 - Notes: strong stub-level viability with smoke coverage; not yet a full resolver-backed ecosystem.
 
 ### Gate 6: Traceability to foundational docs
 
 - Score: 3/4
 - Evidence:
-  - `/Users/grig/work/lan/lan-platform/.dev/ai/reports/universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
+  - `/Users/grig/work/repo/reference-platform/.dev/ai/reports/universal-manifest/2026-02-13-foundational-reference-crosswalk.md`
   - `/Users/grig/.agents/knowledge-sources/INDEX.md`
 - Notes: local foundational references are mapped; periodic refresh should continue as docs evolve.
 

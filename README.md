@@ -8,8 +8,8 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 
 - `spec/` — Versioned spec artifacts (JSON-LD context, schemas, normative text)
 - `examples/` — Example manifests (valid + invalid fixtures as the spec stabilizes)
-- `integrations/` — Practical guidance for consuming/producing manifests in LAN surfaces
-- `research/` — Imported background docs and synthesis from LAN’s design library
+- `integrations/` — Practical guidance for consuming/producing manifests across adopter surfaces
+- `research/` — Imported background docs and synthesis from supporting design libraries
 - `packages/` — Reusable code (types/validators) for producers/consumers (added later)
 - `docs/workorders/` — Work orders for scoped project tasks
 
@@ -38,11 +38,11 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `docs/WORKLOG-2026-02-12.md` — Stub fixtures + validation worklog
 - `docs/AGENT-OBSERVED-GAPS.md` — Append-only list of missing/unclear items
 - `PROJECT-RULES.md` — Project-specific onboarding and operational rules (with global GAS `AGENTS.md`)
-- `integrations/lan.md` — LAN integration contract (implementation-grade, )
-- `integrations/lan-profile.md` — LAN conventions
+- `integrations/reference-runtime.md` — Reference implementation integration contract (implementation-grade, non-normative)
+- `integrations/runtime-profile.md` — reference implementation conventions
 - `integrations/social.md` — Social/profile adoption notes (draft)
 - `integrations/metaverse.md` — Metaverse integration lane with MUM lineage context
-- `integrations/rp1-spatial-fabric.md` — RP1 spatial-fabric integration lane (, Stage -1/0 source intake complete)
+- `integrations/rp1-spatial-fabric.md` — RP1 spatial-fabric integration lane (Stage -1/0 source intake complete)
 - `integrations/smart-glasses-ar.md` — Smart-glasses AR social-layer integration lane
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md` — CEO-priority interactive manifest workbench
 - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — CEO-priority first-time overview + visual onboarding

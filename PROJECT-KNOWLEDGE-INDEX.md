@@ -14,7 +14,7 @@ This document is the local pointer to the global GAS shared project index for Un
 
 - single-file map of normative spec, fixtures, governance, integrations, tooling, and external corpus
 - fast onboarding reading order
-- traceability between spec repo and LAN implementation evidence
+- traceability between spec repo and reference implementation evidence
 
 ## Local-first quick start
 

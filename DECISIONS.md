@@ -5,7 +5,7 @@
 ### Separate spec repo
 
 - The Universal Manifest lives as a **fully separate repo** at `/Users/grig/work/repo/universalmanifest/`.
-- LAN consumes it, but it is versioned and maintained independently.
+- reference implementation consumes it, but it is versioned and maintained independently.
 
 ### Manifest ID generation (`@id`)
 
@@ -91,7 +91,7 @@
 
 - Prevent “done by documentation” without runnable proof.
 - Provide a clear, adoptable path for external implementers (Linux Foundation-grade expectations).
-- Keep LAN as an important consumer without making UM “about LAN”.
+- Keep reference implementation as an important consumer without making UM “about reference implementation”.
 
 ### Policy impact
 
@@ -159,7 +159,7 @@
 ### Decision
 
 - Relocate Universal Manifest from:
-  - `/Users/grig/work/lan/universal-manifest`
+  - legacy archived location (historical only)
 - To:
   - `/Users/grig/work/repo/universalmanifest`
 - Align agent onboarding to the GAS split model:
@@ -169,7 +169,7 @@
 
 ### Rationale
 
-- Reduce ongoing LAN/UM context bleed from shared parent path.
+- Reduce ongoing reference implementation/UM context bleed from shared parent path.
 - Make project identity, onboarding, and handoffs clearer for future agents.
 - Match current GAS guidance and tooling assumptions.
 

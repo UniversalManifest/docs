@@ -11,7 +11,7 @@ Close high-severity audit drift in the proof system by making journey evidence t
 
 ## Why this matters
 
-Current proof reporting claims success but does not emit per-journey execution for all documented journey IDs (`J01` through `J11`). It also hardcodes a LAN repository path, which weakens the decoupled-project claim and reproducibility for external adopters.
+Current proof reporting claims success but does not emit per-journey execution for all documented journey IDs (`J01` through `J11`). It also hardcodes a reference implementation repository path, which weakens the decoupled-project claim and reproducibility for external adopters.
 
 ## Findings addressed
 
@@ -21,8 +21,8 @@ Current proof reporting claims success but does not emit per-journey execution f
    - Latest artifact confirms 7-pass summary, not explicit per-step records for `J06`-`J09`.
 
 2. **High: Decoupling drift**
-   - `packages/universal-manifest/scripts/run-journeys.mjs` hardcodes LAN path:
-     - `/Users/grig/work/lan/lan-platform`
+   - `packages/universal-manifest/scripts/run-journeys.mjs` hardcodes reference implementation path:
+     - `/Users/grig/work/repo/reference-platform`
    - This is non-portable and ties proof execution to a local machine path outside this repo.
 
 ## Scope
@@ -30,8 +30,8 @@ Current proof reporting claims success but does not emit per-journey execution f
 In scope:
 - align journey docs and journey runner output contract.
 - ensure each documented journey ID is represented in executable output.
-- remove hardcoded absolute LAN path dependency from journey runner.
-- preserve optional LAN smoke semantics while making path configurable.
+- remove hardcoded absolute reference implementation path dependency from journey runner.
+- preserve optional reference implementation smoke semantics while making path configurable.
 
 Out of scope:
 - redesigning journey semantics beyond parity and portability hardening.
@@ -50,8 +50,8 @@ Out of scope:
 
 - [x] Runner emits explicit records for all documented IDs (`J01`..`J11`) or docs are updated to exactly match emitted IDs and mapping rationale.
 - [x] If multiple docs journeys are covered by one shared implementation function, the output still contains explicit per-ID pass/fail rows with deterministic evidence fields.
-- [x] `J05` LAN smoke path is configurable (env var or CLI arg) and defaults to portable behavior when LAN repo is unavailable.
-- [x] No hardcoded machine-specific LAN path remains in journey runner source.
+- [x] `J05` reference implementation smoke path is configurable (env var or CLI arg) and defaults to portable behavior when reference implementation repo is unavailable.
+- [x] No hardcoded machine-specific reference implementation path remains in journey runner source.
 - [x] `npm run journeys` passes and writes a report showing aligned journey coverage.
 - [x] `docs/journeys/README.md` clearly states execution mapping and optional prerequisites.
 
@@ -70,11 +70,11 @@ Any deliberate aggregation of journey logic is acceptable only if evidence remai
 - Runner hardening completed in:
   - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
     - explicit `J01`..`J11` journey rows now emitted
-    - `J05` LAN smoke is configurable via `UM_LAN_SMOKE` and `UM_LAN_REPO_PATH` (or CLI args `--lan-smoke`, `--lan-repo-path`)
-    - hardcoded LAN absolute path removed
+    - `J05` reference implementation smoke is configurable via `optional smoke flag` and `optional smoke path` (or CLI args `--optional-smoke`, `--optional-smoke-path`)
+    - hardcoded reference implementation absolute path removed
 - Journey documentation alignment completed in:
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-05-lan-edge-to-display-smoke.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-05-um-edge-to-display-smoke.md`
 - Evidence artifact:
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`
 - Validation results:

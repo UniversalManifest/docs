@@ -141,7 +141,7 @@ Pass criteria:
 
 - at least one independent integration path demonstrates end-to-end consumption
 - cross-system examples are available for projection/pointer use
-- compatibility guidance is explicit for non-LAN adopters
+- compatibility guidance is explicit for cross-runtime adopters
 
 Required evidence:
 
@@ -151,7 +151,7 @@ Required evidence:
 
 Failure examples:
 
-- LAN-only assumptions hardcoded into normative text
+- origin-runtime-only assumptions hardcoded into normative text
 - no evidence of cross-system projection behavior
 
 ## Gate G5: Publishing and discoverability
@@ -236,7 +236,7 @@ Required gates: G1 through G7 passed, plus:
 The standard is not world-ready until all conditions below are true:
 
 - at least three independent organizations implement the spec successfully
-- at least two implementations are outside the originating LAN ecosystem
+- at least two implementations are outside the originating origin-runtime ecosystem
 - no critical unresolved ambiguity remains in normative requirements
 - compatibility guarantees and migration procedures are repeatedly demonstrated
 - conformance suite covers baseline, edge, and adversarial misuse cases

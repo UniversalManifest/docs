@@ -1,7 +1,7 @@
 # UniversalManifest.net Documentation IA + Editorial Style
 
 Date: 2026-02-13  
-Work Order: `WO-lan-universal-manifest-professional-docs-site-and-publishing`  
+Work Order: `WO-reference implementation-universal-manifest-professional-docs-site-and-publishing`  
 Status: COMPLETE
 
 ## 1) Information Architecture
@@ -10,7 +10,7 @@ Top-level navigation for `universalmanifest.net` docs experience:
 
 - `/universal-manifest` — orientation, scope, maturity, key references
 - `/universal-manifest/spec` — normative contract and stub manifest catalog
-- `/universal-manifest/integrations` — implementation paths (LAN + future systems)
+- `/universal-manifest/integrations` — implementation paths (reference implementation + future systems)
 - `/universal-manifest/governance` — decision process, release discipline, compatibility policy
 - `/universal-manifest/roadmap` — done-done criteria, active milestones, closure path
 
@@ -42,22 +42,22 @@ Normative conventions:
 
 ## 3) Implemented Site Surfaces
 
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/UmDocsHomePage.tsx`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/UmDocsSpecPage.tsx`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/UmDocsIntegrationsPage.tsx`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/UmDocsGovernancePage.tsx`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/UmDocsRoadmapPage.tsx`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/src/pages/universalManifest/content.ts`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/UmDocsHomePage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/UmDocsSpecPage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/UmDocsIntegrationsPage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/UmDocsGovernancePage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/UmDocsRoadmapPage.tsx`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/src/pages/universalManifest/content.ts`
 
 ## 4) Source-of-Truth Inputs
 
 - `/Users/grig/work/repo/universalmanifest/spec/`
 - `/Users/grig/work/repo/universalmanifest/docs/`
 - `/Users/grig/work/repo/universalmanifest/integrations/`
-- `/Users/grig/work/lan/lan-platform/UNIVERSAL-MANIFEST.md`
-- `/Users/grig/work/lan/lan-platform/.dev/ai/reports/universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
+- `/Users/grig/work/repo/reference-platform/UNIVERSAL-MANIFEST.md`
+- `/Users/grig/work/repo/reference-platform/.dev/ai/reports/universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
 
 ## 5) Immediate Follow-up
 
-- Split docs-only domain theming from LAN demo styling if this site becomes standalone.
+- Split docs-only domain theming from reference implementation demo styling if this site becomes standalone.
 - Add automated “broken reference” and “content freshness” checks in CI.

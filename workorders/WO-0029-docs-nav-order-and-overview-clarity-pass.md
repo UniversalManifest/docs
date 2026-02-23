@@ -8,7 +8,7 @@
 Apply a focused docs UX/IA pass to improve discoverability and first-read comprehension:
 
 - reorder and relabel the Integrations section for strategic priority and readability.
-- remove LAN from the Integrations sidebar set.
+- remove reference implementation from the Integrations sidebar set.
 - add a dedicated top-level Tools section in the left sidebar.
 - remove "Highlighted Tools" from Overview.
 - rewrite Overview framing so fresh readers can quickly understand what Universal Manifest is and why it matters.
@@ -28,7 +28,7 @@ Implement this left-nav order under Integrations:
 7. Chia DID/VC (bottom)
 
 Rules:
-- remove LAN from Integrations nav (page may remain in repo/history but should not appear in current integrations navigation).
+- remove reference implementation from Integrations nav (page may remain in repo/history but should not appear in current integrations navigation).
 - remove the word "Integration" from labels/titles where it appears in integration page titles.
 - rename "Smart Glasses AR Integration" label to "Smart Glasses".
 - keep Smart Glasses framing as current AI/HUD usage now; AR is future-facing. Do not include "siloed hardware" phrasing.
@@ -66,7 +66,7 @@ In `/` Overview page:
 ## Acceptance criteria
 
 - [x] Integrations nav order matches the specified sequence exactly.
-- [x] LAN is not displayed in Integrations nav.
+- [x] reference implementation is not displayed in Integrations nav.
 - [x] Integration labels no longer include "Integration"; "Smart Glasses AR Integration" becomes "Smart Glasses".
 - [x] Tools appears as a top-level sidebar section at the bottom with Workbench + Verification Harness links.
 - [x] Overview no longer contains "Highlighted Tools".
@@ -88,7 +88,7 @@ In `/` Overview page:
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/chia-vc.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/lan.md`
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
 - Tools docs visibility adjustments:
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`

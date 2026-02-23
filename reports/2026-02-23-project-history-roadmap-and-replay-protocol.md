@@ -36,7 +36,7 @@ Command to verify:
 Major outcomes:
 - New dedicated UM repo established.
 - Initial v0.1 artifacts created (`schema`, `context`, `README`, baseline examples).
-- Initial LAN integration note and TS helper skeleton created.
+- Initial reference implementation integration note and TS helper skeleton created.
 
 Primary evidence:
 - `/Users/grig/work/repo/universalmanifest/docs/WORKLOG-2026-02-11.md`

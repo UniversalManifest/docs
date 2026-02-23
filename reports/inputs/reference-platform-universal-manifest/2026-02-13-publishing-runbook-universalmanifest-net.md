@@ -1,34 +1,34 @@
 # Publishing Runbook: universalmanifest.net (Static Site)
 
 Date: 2026-02-13  
-Work Order: `WO-lan-universal-manifest-professional-docs-site-and-publishing`  
+Work Order: `WO-reference implementation-universal-manifest-professional-docs-site-and-publishing`  
 Status: COMPLETE
 
 ## 1) Build Artifact
 
 Source app:
 
-- `/Users/grig/work/lan/lan-platform/packages/site-client/`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/`
 
 Build command:
 
 ```bash
-cd /Users/grig/work/lan/lan-platform
+cd /Users/grig/work/repo/reference-platform
 npm run build -w site-client
 ```
 
 Output directory:
 
-- `/Users/grig/work/lan/lan-platform/packages/site-client/dist/`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/dist/`
 
 ## 2) Static Hosting Contract
 
 Files included for deployment behavior:
 
-- `/Users/grig/work/lan/lan-platform/packages/site-client/public/_headers`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/public/_redirects`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/public/robots.txt`
-- `/Users/grig/work/lan/lan-platform/packages/site-client/public/sitemap.xml`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/public/_headers`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/public/_redirects`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/public/robots.txt`
+- `/Users/grig/work/repo/reference-platform/packages/site-client/public/sitemap.xml`
 
 Behavior:
 

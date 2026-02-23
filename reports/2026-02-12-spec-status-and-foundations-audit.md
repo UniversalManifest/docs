@@ -33,7 +33,7 @@ Normative-ish surfaces (source of truth):
 Required-to-adopt but surfaces:
 
 - Fixtures: `examples/v0.1/` and `examples/v0.1/stubs/`
-- Integration guides: `integrations/lan.md`, `integrations/social.md`
+- Integration guides: `integrations/reference-runtime.md`, `integrations/social.md`
 - Publishing/governance guidance: `docs/PUBLISHING-AND-VERSIONING.md`, `docs/RELEASING.md`, `docs/DECISIONS.md`
 
 Explicitly out of scope for v0.1 / current maturity:
@@ -71,7 +71,7 @@ Primary fixture index: `docs/STUB-MANIFESTS.md`
 
 ### D) Integration guidance
 
-- `integrations/lan.md` (local-first caching/logging guidance)
+- `integrations/reference-runtime.md` (local-first caching/logging guidance)
 - `integrations/social.md` (projection/adoption notes)
 
 ### E) Governance + completion framework
@@ -117,7 +117,7 @@ Work orders:
 
 Why:
 - The repo has multi-subject near-real fixtures (venue, display, creator, social profile).
-- LAN integration guidance exists and explicitly avoids polluting the spec (LAN details belong in `integrations/`).
+- reference implementation integration guidance exists and explicitly avoids polluting the spec (reference implementation details belong in `integrations/`).
 
 What’s missing:
 - A formal “journeys → executable tests” proof suite that can be run end-to-end as a concept demonstration.
@@ -162,7 +162,7 @@ For “Production-candidate standard”, the project is **not close** because it
 - a locked integrity profile (G3)
 - deeper conformance suite
 - deployment-proven publishing guarantees
-- independent interoperability evidence outside LAN
+- independent interoperability evidence outside reference implementation
 
 For “World-ready standard”, the project is **not eligible to claim readiness** yet (see `docs/DONE-DONE-DEFINITION.md`, Maturity C requirements).
 
@@ -180,16 +180,16 @@ For “World-ready standard”, the project is **not eligible to claim readiness
 - `spec/v0.1/*` and `examples/v0.1/*`
 - `packages/universal-manifest/*`
 
-### LAN implementation references reviewed (contextual; )
+### Reference implementation references reviewed (contextual)
 
 Copied into this repo for traceable evidence:
 
-- `docs/reports/inputs/lan-platform-universal-manifest/`
+- `docs/reports/inputs/reference-platform-universal-manifest/`
 
 Primary original locations:
 
-- `/Users/grig/work/lan/lan-platform/UNIVERSAL-MANIFEST.md`
-- `/Users/grig/work/lan/lan-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-lan-platform-universal-manifest-stubs.md`
+- `/Users/grig/work/repo/reference-platform/UNIVERSAL-MANIFEST.md`
+- `/Users/grig/work/repo/reference-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-reference-platform-universal-manifest-stubs.md`
 
 ### Indexed external references reviewed (GAS)
 
@@ -210,8 +210,8 @@ Primary original locations:
      - `docs/workorders/WO-0009-professional-docs-site-universalmanifest-net.md`
 4. **Make “the concept works” provable with journeys → tests**
    - Work order: `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
-5. **LAN integration support (implementation-grade)**
-   - Work order: `docs/workorders/WO-0010-build-out-lan-support.md`
+5. **reference implementation integration support (implementation-grade)**
+   - Work order: `docs/workorders/WO-0010-build-out-reference-implementation-support.md`
 
 ## 7) What this audit does NOT claim
 
@@ -220,4 +220,3 @@ Primary original locations:
 - This audit does not claim signature verification interoperability is finalized.
 
 Those claims require passing the relevant gates with evidence packs.
-

@@ -36,7 +36,7 @@ This is the **standards/docs** site. Runtime UMID resolution is separate (`myum.
   - Releasing process
   - Artifact immutability policy
 - **Integrations**
-  - LAN integration
+  - reference implementation integration
   - Social/profile adoption notes
 - **Proof**
   - User journeys

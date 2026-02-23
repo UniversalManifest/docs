@@ -16,7 +16,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0007-myum-resolver-and-um-static-publish.md` — Build `myum.net` resolver skeleton + `universalmanifest.net` static publish config
 - `docs/workorders/WO-0008-spec-status-scope-and-foundations-audit.md` — Define scope/done-done/progress and audit against foundational references
 - `docs/workorders/WO-0009-professional-docs-site-universalmanifest-net.md` — Build Linux Foundation-grade docs/publishing experience for `universalmanifest.net`
-- `docs/workorders/WO-0010-build-out-lan-support.md` — Build implementation-grade LAN integration support
+- `docs/workorders/WO-0010-build-out-reference-implementation-support.md` — Build implementation-grade reference implementation integration support
 - `docs/workorders/WO-0011-linux-foundation-project-docs-benchmark.md` — Benchmark LF project docs (10 projects) to inform `universalmanifest.net`
 - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md` — Define UM user journeys and ship an executable E2E proof suite
 - `docs/workorders/WO-0013-harness-endpoint-test-surface.md` — Interactive /harness page for endpoint + fixture debugging (complements journeys)
@@ -37,7 +37,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md` — [COMPLETED] Eliminate Astro duplicate-id warning drift via clean-build hardening
 - `docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md` — [COMPLETED] Reorder/retitle Integrations, create sidebar Tools section, and improve Overview first-read clarity
 - `docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md` — [COMPLETED] Build deeply grounded animated SVG prompt pack and production pipeline for UM adoption explainers
-- `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` — [COMPLETED] Restore one-to-one journey proof traceability and remove hardcoded LAN path coupling in journey runner
+- `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` — [COMPLETED] Restore one-to-one journey proof traceability and remove hardcoded reference implementation path coupling in journey runner
 - `docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md` — [COMPLETED] Remove stale in-progress language from published docs and deploy corrected site content
 - `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` — [COMPLETED] Convert publish-facing file/route path references to label-first clickable links across docs
 - `docs/workorders/WO-0034-documentation-status-coherence-and-stale-reference-reconciliation.md` — [COMPLETED] Reconcile status-document drift and stale evidence references after WO closure wave

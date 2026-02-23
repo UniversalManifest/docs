@@ -89,18 +89,18 @@
     },
     {
       "id": "J05",
-      "name": "LAN edge to display smoke (optional)",
+      "name": "UM edge to display smoke (optional)",
       "status": "pass",
       "startedAt": "2026-02-23T01:05:40.355Z",
       "endedAt": "2026-02-23T01:05:40.355Z",
       "details": {
         "type": "skip",
-        "reason": "LAN repo path not configured (set UM_LAN_REPO_PATH or --lan-repo-path to enable)"
+        "reason": "reference implementation repo path not configured (set optional smoke path or --optional-smoke-path to enable)"
       }
     },
     {
       "id": "J06",
-      "name": "Public profile projection (non-LAN adopter proof)",
+      "name": "Public profile projection (cross-implementation adopter proof)",
       "status": "pass",
       "startedAt": "2026-02-23T01:05:40.355Z",
       "endedAt": "2026-02-23T01:05:40.356Z",

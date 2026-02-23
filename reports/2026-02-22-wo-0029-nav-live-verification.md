@@ -32,7 +32,7 @@ Validated on `https://universalmanifest.net/`:
   5. Smart Glasses
   6. Metaverse
   7. Chia DID/VC
-- LAN page is not present in Integrations sidebar.
+- reference implementation page is not present in Integrations sidebar.
 - Tools section contains:
   - Manifest Workbench
   - Verification Harness

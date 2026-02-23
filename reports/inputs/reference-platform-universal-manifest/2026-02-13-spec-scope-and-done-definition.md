@@ -1,7 +1,7 @@
 # Universal Manifest Spec Scope + Done Definition
 
 Date: 2026-02-13  
-Work Order: `WO-lan-universal-manifest-spec-scope-and-done-definition`  
+Work Order: `WO-reference implementation-universal-manifest-spec-scope-and-done-definition`  
 Status: COMPLETE
 
 ## 1) Scope Definition (What the spec is responsible for)
@@ -26,7 +26,7 @@ In-scope normative surfaces:
 In-scope but required-to-adopt surfaces:
 
 - `/Users/grig/work/repo/universalmanifest/examples/v0.1/`
-- `/Users/grig/work/repo/universalmanifest/integrations/lan.md`
+- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
 - `/Users/grig/work/repo/universalmanifest/integrations/social.md`
 - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
 - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
@@ -76,7 +76,7 @@ Current status (evidence in scorecard and crosswalk reports):
 - D2 Conformance readiness: partially complete (baseline strong; deeper edge/security cases pending)
 - D3 Integrity profile clarity: partially complete (v0.2 direction exists; not finalized)
 - D4 Publishability: partially complete (docs and domain architecture defined; production hosting flow not yet fully operationalized in this repo)
-- D5 Integration viability: complete for stub-level LAN integration
+- D5 Integration viability: complete for stub-level reference implementation integration
 
 Overall completion estimate for “spec + adoption-ready documentation package”: **~72%**.
 
@@ -95,11 +95,11 @@ It is not yet “foundation-grade finalized” until signature profile hardening
 
 ## 5) Foundational Inputs Used
 
-- `/Users/grig/work/lan/lan-platform/UNIVERSAL-MANIFEST.md`
-- `/Users/grig/work/lan/lan-platform/docs/decisions/2026-02-11-universal-manifest-integration-decisions.md`
-- `/Users/grig/work/lan/lan-platform/docs/decisions/2026-02-12-universal-manifest-queue-decisions.md`
-- `/Users/grig/work/lan/lan-platform/.dev/ai/handoffs/2026-02-11-20-45-58Z-universal-manifest-handoff.md`
-- `/Users/grig/work/lan/lan-platform/.dev/ai/reports/2026-02-12-universal-manifest-status-report.md`
+- `/Users/grig/work/repo/reference-platform/UNIVERSAL-MANIFEST.md`
+- `/Users/grig/work/repo/reference-platform/docs/decisions/2026-02-11-universal-manifest-integration-decisions.md`
+- `/Users/grig/work/repo/reference-platform/docs/decisions/2026-02-12-universal-manifest-queue-decisions.md`
+- `/Users/grig/work/repo/reference-platform/.dev/ai/handoffs/2026-02-11-20-45-58Z-universal-manifest-handoff.md`
+- `/Users/grig/work/repo/reference-platform/.dev/ai/reports/2026-02-12-universal-manifest-status-report.md`
 - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
 - `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
 - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
