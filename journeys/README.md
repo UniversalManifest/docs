@@ -30,7 +30,7 @@ Outputs:
 - `J08` Smart-glasses consent enforcement -> `journeySmartGlassesConsentEnforcement`
 - `J09` Metaverse cross-world projection -> `journeyMetaverseCrossworldProjection`
 - `J10` Multi-provider personhood coexistence -> `journeyMultiProviderPersonhood`
-- `J11` OMA Trust attestation interoperability -> `journeyOmaTrustInteroperability`
+- `J11` OMATrust attestation interoperability -> `journeyOmaTrustInteroperability`
 
 Execution source:
 

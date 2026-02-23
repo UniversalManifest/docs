@@ -29,7 +29,7 @@ Completed implementation includes:
 - visual redesign with card-based layout, themed palette, and persistent header context.
 - side-by-side panel structure for explorer/validation and fixture/resolver workflows.
 - direct state feedback for validation, signature checks, resolver checks, and summary pass/fail indicators.
-- integrated fixture libraries (including cross-domain and OMA lane fixtures) for rapid proof workflow.
+- integrated fixture libraries (including cross-domain and OMATrust lane fixtures) for rapid proof workflow.
 
 ## Validation evidence
 

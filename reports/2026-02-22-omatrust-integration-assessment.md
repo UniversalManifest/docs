@@ -1,8 +1,8 @@
-# OMA Trust Integration Assessment for Universal Manifest
+# OMATrust Integration Assessment for Universal Manifest
 
 Date: 2026-02-22 UTC  
 Project root: `/Users/grig/work/repo/universalmanifest`  
-Prepared for: Universal Manifest status check + OMA/OMA3 integration decision support
+Prepared for: Universal Manifest status check + OMATrust product and OMA3 standards-body integration decision support
 
 ## 1) Executive status summary
 
@@ -21,12 +21,12 @@ Prepared for: Universal Manifest status check + OMA/OMA3 integration decision su
 
 Interpretation: the project is operational and feature-rich, but release hygiene is currently gated by uncommitted local state.
 
-## 2) OMA research scope and coverage
+## 2) OMATrust research scope and coverage
 
-I covered OMA Trust sources in two layers:
+I covered OMATrust sources in two layers:
 
 - Layer A: semantic deep-read of the key protocol/product pages (reputation model, attestation taxonomy, verification flow, SDK/API, app-registry architecture, chain architecture, x402, ERC-8004).
-- Layer B: link-coverage crawl across OMA root site links plus the full docs sitemap.
+- Layer B: link-coverage crawl across OMATrust root site links plus the full docs sitemap.
 
 Coverage artifact created:
 
@@ -38,7 +38,7 @@ Coverage highlights from the artifact:
 - `docs.omatrust.org/sitemap.xml` entries: 43 pages (all resolved `200`). [32]
 - Preview portals reachable (`200`) and explicitly labeled preview/pre-alpha/testnet oriented. [27] [28]
 
-## 3) What OMA Trust currently is (source-backed)
+## 3) What OMATrust currently is (source-backed)
 
 ### 3.1 Platform positioning
 
@@ -95,7 +95,7 @@ Coverage highlights from the artifact:
 
 Risk implication:
 
-- Integration docs in UM should track both domains until OMA settles on one stable canonical structure.
+- Integration docs in UM should track both domains until OMATrust settles on one stable canonical structure.
 
 ### 4.2 Placeholder documentation risk
 
@@ -113,15 +113,15 @@ Risk implication:
 
 Risk implication:
 
-- Integration should be and feature-flagged until OMA production posture is explicit.
+- Integration should be and feature-flagged until OMATrust production posture is explicit.
 
-## 5) Universal Manifest <-> OMA Trust fit assessment
+## 5) Universal Manifest <-> OMATrust fit assessment
 
 ### 5.1 Strong fit areas
 
-- Identity model fit: OMA uses DID-heavy identity (`did:web`, `did:pkh`), which maps cleanly into UM identity-neutral subject handling. [5] [13] [18] [20]
-- Attestation model fit: OMA attestation envelopes/proofs are portable data objects that UM can carry as claims/pointers without forcing protocol lock-in. [6] [12] [14]
-- Trust-policy fit: OMA explicitly separates validation from scoring, aligning with UM’s policy-layer concept. [7]
+- Identity model fit: OMATrust uses DID-heavy identity (`did:web`, `did:pkh`), which maps cleanly into UM identity-neutral subject handling. [5] [13] [18] [20]
+- Attestation model fit: OMATrust attestation envelopes/proofs are portable data objects that UM can carry as claims/pointers without forcing protocol lock-in. [6] [12] [14]
+- Trust-policy fit: OMATrust explicitly separates validation from scoring, aligning with UM’s policy-layer concept. [7]
 
 ### 5.2 Medium-fit areas needing careful design
 
@@ -134,7 +134,7 @@ Risk implication:
 
 ## 6) Recommended UM integration architecture (inference from sources)
 
-Inference: build a deep integration lane, but keep it until OMA production maturity signals improve.
+Inference: build a deep integration lane, but keep it until OMATrust production maturity signals improve.
 
 ### 6.1 Proposed UM integration lane
 
@@ -159,34 +159,34 @@ Inference: build a deep integration lane, but keep it until OMA production matur
 
 ### 6.3 Resolver/consumer behavior
 
-- Keep OMA overlays optional and freshness-scoped; do not let stale trust overlays outlive manifest cache windows by accident.
-- Require explicit provenance fields when score-like outputs are derived from OMA signals (because OMA leaves scoring open to consumers). [7]
+- Keep OMATrust overlays optional and freshness-scoped; do not let stale trust overlays outlive manifest cache windows by accident.
+- Require explicit provenance fields when score-like outputs are derived from OMATrust signals (because OMATrust leaves scoring open to consumers). [7]
 
 ## 7) Implementation plan to integrate “to fullest potential”
 
 ### Phase 0: Governance and source control
 
-- Create a new work order for OMA integration (recommended ID: `WO-0025`).
-- Materialize OMA corpus into K2B ingestion ledger with selected/deferred/conflict decisions.
+- Create a new work order for OMATrust integration (recommended ID: `WO-0025`).
+- Materialize OMATrust corpus into K2B ingestion ledger with selected/deferred/conflict decisions.
 - Lock source-map entries to exact docs URLs + spec repo paths.
 
 ### Phase 1: Docs + fixtures
 
-- Add OMA integration docs and constraints.
+- Add OMATrust integration docs and constraints.
 - Add fixture set (valid/invalid + lifecycle edge cases).
 - Add docs-site pages linking integration to workbench/harness flows.
 
 ### Phase 2: Journey and verifier expansion
 
-- Add journey lane (suggested `J11`) for OMA:
-  - parse/validate OMA overlays
+- Add journey lane (suggested `J11`) for OMATrust:
+  - parse/validate OMATrust overlays
   - verify proof wrapper semantics
   - assert supersession/revocation behavior
   - assert trust-mode switching behavior
 
 ### Phase 3: Workbench and harness integration
 
-- Add OMA preset manifests to Workbench fixture loader.
+- Add OMATrust preset manifests to Workbench fixture loader.
 - Add Harness quick assertions for:
   - proofType coverage
   - attestation-type coverage
@@ -194,8 +194,8 @@ Inference: build a deep integration lane, but keep it until OMA production matur
 
 ### Phase 4: Production hardening
 
-- Extend production smoke checks to include OMA integration docs pages and fixture availability.
-- Add post-deploy drift checks for OMA integration routes/assets.
+- Extend production smoke checks to include OMATrust integration docs pages and fixture availability.
+- Add post-deploy drift checks for OMATrust integration routes/assets.
 
 ## 8) Decision recommendation
 
@@ -209,8 +209,8 @@ Why:
 
 ## 9) Immediate next actions
 
-1. Open and execute `WO-0025` (OMA integration lane).
-2. Add OMA source-set into K2B ingestion and conflict tracking.
+1. Open and execute `WO-0025` (OMATrust integration lane).
+2. Add OMATrust source-set into K2B ingestion and conflict tracking.
 3. Implement Phase 1 docs+fixtures and Phase 2 journey proofs in one bounded execution batch.
 4. Defer any “universal trust score” semantics to explicit local policy modules.
 

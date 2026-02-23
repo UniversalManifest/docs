@@ -16,7 +16,7 @@ Current docs have strong technical depth but insufficient visual narrative for f
 - what UM is as a portable object/system.
 - how data moves through resolve/verify/project flows.
 - how user journeys map to implementation behavior.
-- how overlay lanes (social, personhood, OMA, RP1, smart glasses, metaverse, Chia) connect to the same core envelope.
+- how overlay lanes (social, personhood, OMATrust, RP1, smart glasses, metaverse, Chia) connect to the same core envelope.
 
 ## Mandatory context grounding (source-of-truth corpus)
 
@@ -94,7 +94,7 @@ Minimum scenarios required:
 - Resolve/verify/project runtime flow (UMID -> resolver -> verification -> projection).
 - Consent and policy flow (what is shared, when, and why).
 - User journey explainer (from issuer to consumer to display/service).
-- Overlay lanes map (social, personhood, OMA, RP1, smart glasses, metaverse, Chia) anchored to one core envelope.
+- Overlay lanes map (social, personhood, OMATrust, RP1, smart glasses, metaverse, Chia) anchored to one core envelope.
 - Motion tutorial sequence showing unique iconography, object relationships, and timed text reveals.
 
 ### 3) Technical output spec

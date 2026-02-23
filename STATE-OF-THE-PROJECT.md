@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-22  
-**Status:** Core implementation wave (`WO-0001` through `WO-0033`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0034`, `WO-0036`, `WO-0037`, `WO-0038`) is complete. Final closure-grade posture is currently gated by mandatory human onboarding evidence (`WO-0035`, Policy A).
+**Date:** 2026-02-23  
+**Status:** Core implementation wave (`WO-0001` through `WO-0033`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0034`, `WO-0036`, `WO-0037`, `WO-0038`) is complete. Final closure-grade posture is currently gated by mandatory human onboarding evidence (`WO-0035`, Policy A) and active onboarding language/system-propagation rewrite planning (`WO-0039`).
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path (for historical references):** `/Users/grig/work/lan/universal-manifest`
 
@@ -87,7 +87,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0024` multi-provider proof-of-personhood, social identity, DID, and Chia integration (2026-02-20)
 - Completed: `WO-0025` documentation readability and links polish (2026-02-21)
 - Completed: `WO-0026` workbench and harness redesign (2026-02-21)
-- Completed: `WO-0027` OMA Trust integration lane execution (2026-02-21)
+- Completed: `WO-0027` OMATrust integration lane execution (2026-02-21)
 - Completed: `WO-0028` Astro content-cache clean-build hardening (2026-02-21)
 - Completed: `WO-0029` docs nav order + overview clarity pass (2026-02-22)
 - Completed: `WO-0030` animated SVG explainer prompt pack + production pipeline (2026-02-22)
@@ -99,6 +99,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0036` v0.2 publication and verification edge-case expansion (2026-02-22)
 - Completed: `WO-0037` integrity profile, revocation, and adversarial conformance hardening (2026-02-22)
 - Completed: `WO-0038` corpus drift governance and follow-on WO cycle (2026-02-22)
+- Active (not started): `WO-0039` onboarding plain-language rewrite and source-propagation hardening (2026-02-23)
 
 ## Critical-path execution update (2026-02-20)
 

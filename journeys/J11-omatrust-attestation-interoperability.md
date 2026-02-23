@@ -1,7 +1,7 @@
-# Journey 11 -- OMA Trust attestation interoperability lane
+# Journey 11 -- OMATrust attestation interoperability lane
 
 ## Goal
-Prove that Universal Manifest fixtures can represent OMA Trust signals across proof-based, trusted-attester, and lifecycle-edge cases without breaking core manifest validation behavior.
+Prove that Universal Manifest fixtures can represent OMATrust signals across proof-based, trusted-attester, and lifecycle-edge cases without breaking core manifest validation behavior.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Prove that Universal Manifest fixtures can represent OMA Trust signals across pr
 - All three fixtures pass structural checks.
 - Trust mode switching is explicit and deterministic.
 - Lifecycle transitions are machine-readable.
-- OMA lane data coexists with UM core envelope requirements.
+- OMATrust lane data coexists with UM core envelope requirements.
 
 ## Evidence
 

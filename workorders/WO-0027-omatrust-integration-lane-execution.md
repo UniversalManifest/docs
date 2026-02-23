@@ -1,25 +1,25 @@
-# WO-0027 — OMA Trust integration lane execution
+# WO-0027 — OMATrust integration lane execution
 
 **Status:** COMPLETED
 **Created:** 2026-02-22
 
 ## Objective
 
-Execute the OMA Trust integration lane end-to-end for Universal Manifest by turning the completed assessment into concrete implementation artifacts, executable proof coverage, and deployment-ready docs-site surfaces.
+Execute the OMATrust integration lane end-to-end for Universal Manifest by turning the completed assessment into concrete implementation artifacts, executable proof coverage, and deployment-ready docs-site surfaces.
 
 ## Scope
 
 In scope:
-- add OMA Trust implementation guidance under `integrations/` and docs site `integrations/`.
-- add OMA-focused stub fixtures that cover proof-based, trusted-attester, and lifecycle edge-case flows.
-- add a new executable journey (`J11`) validating OMA lane interoperability behavior.
-- expose OMA fixtures through Harness fixture sync/public paths.
-- update work-order and journey indexes to include OMA lane execution evidence.
+- add OMATrust implementation guidance under `integrations/` and docs site `integrations/`.
+- add OMATrust-focused stub fixtures that cover proof-based, trusted-attester, and lifecycle edge-case flows.
+- add a new executable journey (`J11`) validating OMATrust lane interoperability behavior.
+- expose OMATrust fixtures through Harness fixture sync/public paths.
+- update work-order and journey indexes to include OMATrust lane execution evidence.
 
 Out of scope:
 - changing normative v0.1/v0.2 core schema requirements.
-- production credentials or live write operations against OMA APIs.
-- chain-level deployment of OMA schemas/contracts.
+- production credentials or live write operations against OMATrust APIs.
+- chain-level deployment of OMATrust schemas/contracts.
 
 ## Deliverables
 
@@ -44,13 +44,13 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [x] OMA integration guidance page exists in repo docs and docs site.
-- [x] At least 3 OMA fixtures exist: proof-based, trusted-attester, lifecycle-edge.
-- [x] Harness can load the OMA fixtures from public fixture paths.
-- [x] Journey runner includes `J11` with deterministic OMA fixture checks.
-- [x] `npm test` passes in `packages/universal-manifest` after OMA fixture additions.
+- [x] OMATrust integration guidance page exists in repo docs and docs site.
+- [x] At least 3 OMATrust fixtures exist: proof-based, trusted-attester, lifecycle-edge.
+- [x] Harness can load the OMATrust fixtures from public fixture paths.
+- [x] Journey runner includes `J11` with deterministic OMATrust fixture checks.
+- [x] `npm test` passes in `packages/universal-manifest` after OMATrust fixture additions.
 - [x] `npm run journeys` passes with `J11` included.
-- [x] docs site build remains green with OMA docs page included.
+- [x] docs site build remains green with OMATrust docs page included.
 - [x] Work-order indexes include WO-0027.
 
 ## Dependencies
@@ -66,10 +66,10 @@ Out of scope:
 
 Completed:
 1. Formalized WO-0027 and updated both work-order indexes.
-2. Added OMA integration docs in repo and site docs.
-3. Added three OMA fixtures (proof-based, trusted-attester, lifecycle-edge) and synced public harness fixture copies.
+2. Added OMATrust integration docs in repo and site docs.
+3. Added three OMATrust fixtures (proof-based, trusted-attester, lifecycle-edge) and synced public harness fixture copies.
 4. Added `J11` journey doc and executable `J11` checks in the journey runner.
-5. Exposed OMA fixtures in Harness and Workbench fixture pickers.
+5. Exposed OMATrust fixtures in Harness and Workbench fixture pickers.
 6. Ran validation commands successfully.
 
 Validation commands:

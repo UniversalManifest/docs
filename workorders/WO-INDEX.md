@@ -33,7 +33,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md` — Integrate 3 proof-of-personhood providers with Mastodon/Bluesky-linked manifests, multi-DID support, and Chia lane proof
 - `docs/workorders/WO-0025-documentation-human-readability-and-links.md` — [COMPLETED] Improve documentation readability, fix raw paths, and move tool links to header icons
 - `docs/workorders/WO-0026-workbench-and-harness-redesign.md` — [COMPLETED] Redesign Workbench and Harness as visual, single-screen web apps
-- `docs/workorders/WO-0027-omatrust-integration-lane-execution.md` — [COMPLETED] Execute OMA Trust integration lane with concrete docs, fixtures, and journey proof (`J11`)
+- `docs/workorders/WO-0027-omatrust-integration-lane-execution.md` — [COMPLETED] Execute OMATrust integration lane with concrete docs, fixtures, and journey proof (`J11`)
 - `docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md` — [COMPLETED] Eliminate Astro duplicate-id warning drift via clean-build hardening
 - `docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md` — [COMPLETED] Reorder/retitle Integrations, create sidebar Tools section, and improve Overview first-read clarity
 - `docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md` — [COMPLETED] Build deeply grounded animated SVG prompt pack and production pipeline for UM adoption explainers
@@ -45,3 +45,4 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md` — [COMPLETED] Publish/verify v0.2 publication targets and expand verification edge-case fixture coverage
 - `docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md` — [COMPLETED] Define integrity/revocation hardening direction and add adversarial conformance coverage
 - `docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md` — [COMPLETED] Operationalize recurring corpus drift checks and follow-on WO trigger criteria
+- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` — [NOT STARTED] Rewrite onboarding language for first-read clarity and harden docs/backend wording source propagation paths

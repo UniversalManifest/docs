@@ -1,4 +1,4 @@
-# OMA Link Coverage Evidence
+# OMATrust Link Coverage Evidence
 
 Generated: 2026-02-22T00:15:28Z
 
@@ -298,4 +298,4 @@ Total pages listed: 43
 ## Notes
 
 - docs.omatrust.org sitemap currently enumerates docs.oma3.org pages.
-- This artifact captures coverage and availability; semantic analysis is documented in the OMA integration assessment report.
+- This artifact captures coverage and availability; semantic analysis is documented in the OMATrust integration assessment report.

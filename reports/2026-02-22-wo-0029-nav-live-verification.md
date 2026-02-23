@@ -27,7 +27,7 @@ Validated on `https://universalmanifest.net/`:
 - Integrations sidebar order:
   1. Social/Profile
   2. Proof-of-Personhood
-  3. OMA Trust
+  3. OMATrust
   4. RP1 Spatial Fabric
   5. Smart Glasses
   6. Metaverse
