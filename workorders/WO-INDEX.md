@@ -37,3 +37,8 @@ This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 - `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` — [COMPLETED] Restore one-to-one journey proof traceability and remove hardcoded LAN path coupling in journey runner
 - `docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md` — [COMPLETED] Remove stale in-progress language from published docs and deploy corrected site content
 - `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` — [COMPLETED] Convert publish-facing file/route path references to label-first clickable links across docs
+- `docs/workorders/WO-0034-documentation-status-coherence-and-stale-reference-reconciliation.md` — Reconcile status-document drift and stale evidence references after WO closure wave
+- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md` — Resolve human-reader evidence policy and align WO-0015/protocol/state language
+- `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md` — Publish v0.2 artifacts at stable URLs and expand verification edge-case fixture coverage
+- `docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md` — Define integrity/revocation hardening direction and add adversarial conformance coverage
+- `docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md` — Operationalize recurring corpus drift checks and follow-on WO trigger criteria
