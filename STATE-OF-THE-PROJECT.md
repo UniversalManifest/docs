@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-02-23  
-**Status:** Core implementation wave (`WO-0001` through `WO-0033`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0034`, `WO-0036`, `WO-0037`, `WO-0038`) is complete. Final closure-grade posture is currently gated by mandatory human onboarding evidence (`WO-0035`, Policy A) and active onboarding language/system-propagation rewrite planning (`WO-0039`).
+**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0036` through `WO-0038`) and the v0.2 signature verification investigation (`WO-0040`) are complete. Final closure-grade posture remains gated by two open items: mandatory human onboarding evidence (`WO-0035`, BLOCKED on human-participant reader test) and onboarding plain-language rewrite (`WO-0039`, NOT_STARTED). `WO-0015` is also BLOCKED pending resolution of both `WO-0035` and `WO-0039`.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -69,14 +69,14 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
-- First-time onboarding validation with human external reader testing is required for closure-grade onboarding claims (CLI-agent pass exists but is not sufficient under current policy gate)
+- First-time onboarding validation with human external reader testing is required for closure-grade onboarding claims (CLI-agent pass exists but is not sufficient under current policy gate; `WO-0035` BLOCKED, `WO-0039` NOT_STARTED)
 
-## Work-order status (2026-02-22)
+## Work-order status (2026-02-23)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
-- Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
-- Reopened/gated: `WO-0015` first-time overview and visual onboarding is policy-gated pending human participant evidence (`WO-0035`, Policy A)
+- BLOCKED: `WO-0015` first-time overview and visual onboarding — policy-gated pending human participant evidence (`WO-0035`) and onboarding rewrite (`WO-0039`)
+- Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
 - Completed: `WO-0018` MUM lineage + metaverse/RP1/smart-glasses integration codification (2026-02-20)
 - Completed: `WO-0019` resolver `J03` reliability + production routing hardening (2026-02-20)
@@ -95,11 +95,13 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0032` published docs stale-status scan and fixes (2026-02-22)
 - Completed: `WO-0033` published docs label-first link normalization (2026-02-22)
 - Completed: `WO-0034` documentation status coherence and stale-reference reconciliation (2026-02-22)
-- Active (blocked on human evidence capture): `WO-0035` human-reader policy and onboarding evidence alignment (Policy A, 2026-02-22)
+- BLOCKED: `WO-0035` human-reader policy and onboarding evidence alignment — awaiting dated human-participant result artifact (Policy A, 2026-02-22)
 - Completed: `WO-0036` v0.2 publication and verification edge-case expansion (2026-02-22)
 - Completed: `WO-0037` integrity profile, revocation, and adversarial conformance hardening (2026-02-22)
 - Completed: `WO-0038` corpus drift governance and follow-on WO cycle (2026-02-22)
-- Active (not started): `WO-0039` onboarding plain-language rewrite and source-propagation hardening (2026-02-23)
+- NOT_STARTED: `WO-0039` onboarding plain-language rewrite and source-propagation hardening
+- Completed: `WO-0040` v0.2 signature verification investigation — confirmed working (2026-02-23)
+- Completed: `WO-0041` status document drift reconciliation (2026-02-23)
 
 ## Critical-path execution update (2026-02-20)
 
@@ -122,7 +124,7 @@ Production route verification:
 - `https://universalmanifest.net/workbench/` -> `200`
 - `https://www.myum.net/health` -> `200`
 
-## CEO lineage and integration codification update (2026-02-20)
+## Lineage and integration codification update (2026-02-20)
 
 Completed this run:
 - codified MUM origin lineage in source-of-truth vision and decision records
@@ -161,14 +163,14 @@ Gap movement from latest provenance audit:
 - `GAP-K2B-004`: unchanged.
 - `GAP-K2B-005`: unchanged.
 
-## Local verification status (latest runs)
+## Local verification status (2026-02-23)
 
-- `site` build (`npm run build:clean`): PASS
-- `packages/universal-manifest` tests (`npm test`): PASS
-- Journeys proof (`npm run journeys`): PASS
-- Endpoint smoke dev (`npm run smoke:endpoints:dev`): PASS
-- Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS
-- Harness autorun (`/harness/index.html?autorun=1`): PASS
+- `site` build (`npm run build:clean`): PASS (0 warnings, exit code 0)
+- `packages/universal-manifest` tests (`npm test`): PASS (40/40 fixtures, exit code 0)
+- Journeys proof (`npm run journeys`): PASS (11/11, exit code 0)
+- Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS (9/9 endpoints)
+- Endpoint smoke dev (`npm run smoke:endpoints:dev`): N/A (dev servers not running; expected, not a failure)
+- v0.2 signature verification: WORKING
 
 ## What we consider “done” for v0.1
 
@@ -215,8 +217,8 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ### Milestone D — Adopter onboarding + interactive tooling
 
-- ✅ CEO-priority first-time overview content and visual onboarding are shipped
-- ✅ CEO-priority interactive manifest workbench is shipped and verified (`WO-0014` completed)
+- ✅ First-time overview content and visual onboarding are shipped
+- ✅ Interactive manifest workbench is shipped and verified (`WO-0014` completed)
 - ✅ CLI-agent reader test evidence logged
 - Required gate: run and log at least one human participant reader-test before closure-grade onboarding completion claims (`WO-0035`, Policy A)
   - Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`

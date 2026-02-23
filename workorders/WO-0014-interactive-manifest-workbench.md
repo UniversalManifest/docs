@@ -13,7 +13,7 @@ Ship a first-class interactive workbench page on `universalmanifest.net` where i
 - validate conformance for the selected target version
 - export the updated/new manifest
 
-This is a CEO-priority proof surface for real adopter usability.
+This is a priority proof surface for real adopter usability.
 
 ## Scope
 

@@ -21,7 +21,7 @@ Define a **portable manifest** format that can be handed between compatible apps
 
 - v0.1 is a draft target (structure + semantics + examples).
 
-## CEO architectural direction (vision input)
+## Architectural direction (vision input)
 
 The Universal Manifest should treat a **Record** as the core primitive:
 
@@ -49,7 +49,7 @@ Note:
 
 - This section is **vision direction**, not yet normative contract text. Normative requirements must be added through versioned spec docs and decision records.
 
-## CEO lineage and expansion direction (2026-02-20)
+## Lineage and expansion direction (2026-02-20)
 
 Lineage source:
 

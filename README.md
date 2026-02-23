@@ -44,9 +44,9 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `integrations/metaverse.md` — Metaverse integration lane with MUM lineage context
 - `integrations/rp1-spatial-fabric.md` — RP1 spatial-fabric integration lane (Stage -1/0 source intake complete)
 - `integrations/smart-glasses-ar.md` — Smart-glasses AR social-layer integration lane
-- `docs/workorders/WO-0014-interactive-manifest-workbench.md` — CEO-priority interactive manifest workbench
-- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — CEO-priority first-time overview + visual onboarding
-- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md` — CEO-priority lineage + metaverse/RP1/smart-glasses integration codification
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md` — Interactive manifest workbench
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — First-time overview + visual onboarding
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md` — Lineage + metaverse/RP1/smart-glasses integration codification
 
 ## Packages
 

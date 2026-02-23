@@ -5,7 +5,7 @@
 
 ## Objective
 
-Codify CEO-directed source-of-truth updates for:
+Codify source-of-truth updates for:
 
 1. origin citation to Metaverse Universal Manifest (MUM),
 2. metaverse integration lane,

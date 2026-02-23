@@ -65,7 +65,7 @@
 
 ### Decision
 
-- Capture CEO direction that Universal Manifest composition should center on a **Record** primitive:
+- Capture vision direction that Universal Manifest composition should center on a **Record** primitive:
   - records can be leaf or nested/container
   - records can be exchanged via push and pull/request
   - records may declare their own schema/standards context
@@ -178,7 +178,7 @@
 - All new path references should use `/Users/grig/work/repo/universalmanifest`.
 - Legacy path references are historical only and should be updated when touched.
 
-## 2026-02-18 — CEO priority: interactive Manifest Workbench on universalmanifest.net
+## 2026-02-18 — Priority: interactive Manifest Workbench on universalmanifest.net
 
 ### Decision
 
@@ -202,7 +202,7 @@
 - Workbench is now part of the critical delivery agenda for docs/tooling on `universalmanifest.net`.
 - Validation behavior in the workbench must align with spec/conformance docs and not create a second contract.
 
-## 2026-02-18 — CEO priority: first-time \"What is Universal Manifest\" overview
+## 2026-02-18 — Priority: first-time \"What is Universal Manifest\" overview
 
 ### Decision
 
@@ -300,7 +300,7 @@ Primary conflict register:
 - `GAP-K2B-002` is closed for planning-materialization scope.
 - `GAP-K2B-003` is now implementation-tracked in WO-0014.
 
-## 2026-02-20 — CEO directive: codify MUM lineage + metaverse/RP1/smart-glasses integration lanes
+## 2026-02-20 — Directive: codify MUM lineage + metaverse/RP1/smart-glasses integration lanes
 
 ### Decision
 
@@ -315,7 +315,7 @@ Primary conflict register:
 
 - Preserve provenance to the originating concept as part of project source-of-truth documentation.
 - Make metaverse scope explicit without collapsing Universal Manifest into a metaverse-only specification.
-- Capture CEO-priority integration directions early so user journeys, IA, and conformance planning can evolve from a stable strategic baseline.
+- Capture high-priority integration directions early so user journeys, IA, and conformance planning can evolve from a stable strategic baseline.
 
 ### Policy impact
 
