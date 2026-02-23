@@ -1,6 +1,6 @@
 # WO-0037 — Integrity profile, revocation, and adversarial conformance hardening
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** MEDIUM
 **Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
@@ -47,10 +47,10 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Integrity-profile extension direction is explicitly documented and does not contradict existing v0.2 baseline.
-- [ ] Revocation cursor/event direction is documented with scope boundary.
-- [ ] Adversarial fixture set is expanded and validated in test workflow.
-- [ ] State and decision docs remain mutually consistent after updates.
+- [x] Integrity-profile extension direction is explicitly documented and does not contradict existing v0.2 baseline.
+- [x] Revocation cursor/event direction is documented with scope boundary.
+- [x] Adversarial fixture set is expanded and validated in test workflow.
+- [x] State and decision docs remain mutually consistent after updates.
 
 ## Validation commands
 
@@ -58,3 +58,13 @@ Out of scope:
 - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
 - `rg -n 'integrity|revocation|cursor|adversarial|misuse' /Users/grig/work/repo/universalmanifest/docs/DECISIONS.md /Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md /Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
 
+## Completion evidence (2026-02-22)
+
+- Report:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0037-integrity-revocation-adversarial-hardening-report.md`
+- Updated decision/spec artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- Adversarial fixture evidence:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/`

@@ -1,6 +1,6 @@
 # WO-0036 — v0.2 publication and verification edge-case expansion
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** MEDIUM
 **Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
@@ -40,10 +40,10 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] v0.2 artifact URLs used in docs resolve and match published files.
-- [ ] v0.2 fixtures include additional verification edge-case coverage beyond current baseline.
-- [ ] Package test/journey baseline remains green after fixture expansion.
-- [ ] Publishing/releasing docs clearly communicate v0.2 status and required adopter validation posture.
+- [x] v0.2 artifact URLs used in docs resolve and match published files.
+- [x] v0.2 fixtures include additional verification edge-case coverage beyond current baseline.
+- [x] Package test/journey baseline remains green after fixture expansion.
+- [x] Publishing/releasing docs clearly communicate v0.2 status and required adopter validation posture.
 
 ## Validation commands
 
@@ -52,3 +52,19 @@ Out of scope:
 - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
 - `rg -n 'v0.2|stable URL|schema.jsonld|schema.json|SIGNATURE-PROFILE' /Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md /Users/grig/work/repo/universalmanifest/docs/RELEASING.md /Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
 
+## Completion evidence (2026-02-22)
+
+- Report:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0036-v0.2-publication-and-edge-case-expansion-report.md`
+- Updated docs/spec:
+  - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md`
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
+- Added fixtures:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-algorithm.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-canonicalization.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-created-format.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/missing-signature-key-material.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-public-key.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/issued-after-expires-signed.jsonld`

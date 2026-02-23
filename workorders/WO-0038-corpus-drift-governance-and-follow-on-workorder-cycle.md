@@ -1,6 +1,6 @@
 # WO-0038 — Corpus drift governance and follow-on work-order cycle
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** LOW
 **Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
@@ -43,11 +43,11 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Drift-check cadence and owner are documented.
-- [ ] Recurring regression-verification checklist is documented with required commands.
-- [ ] One baseline drift-check report is published with date, input set, and outcome.
-- [ ] Clear threshold exists for when detected drift must become new WOs.
-- [ ] If baseline run finds actionable drift, follow-on WOs are created and indexed.
+- [x] Drift-check cadence and owner are documented.
+- [x] Recurring regression-verification checklist is documented with required commands.
+- [x] One baseline drift-check report is published with date, input set, and outcome.
+- [x] Clear threshold exists for when detected drift must become new WOs.
+- [x] If baseline run finds actionable drift, follow-on WOs are created and indexed. (No new actionable failures found in baseline run.)
 
 ## Validation commands
 
@@ -56,3 +56,11 @@ Out of scope:
 - `curl -I https://universalmanifest.net/ && curl -I https://universalmanifest.net/getting-started/workbench/ && curl -I https://universalmanifest.net/proof/harness/`
 - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' /Users/grig/work/repo/universalmanifest/site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
 - `rg -n 'drift|follow-on|work order|threshold|cadence' /Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md /Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md /Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/GATES.md`
+
+## Completion evidence (2026-02-22)
+
+- Baseline run report:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0038-drift-governance-baseline-report.md`
+- Runbook and index updates:
+  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (Phase 9)
+  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md` (trigger criteria reference)

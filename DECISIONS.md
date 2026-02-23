@@ -386,6 +386,47 @@ Primary conflict register:
 
 ### Policy impact
 
-- Provider-specific claims, pointer names, and consent keys are explicitly .
+- Provider-specific claims, pointer names, and consent keys are explicitly non-normative integration guidance.
 - Integration guidance lives under `integrations/proof-of-personhood.md` and corresponding site pages.
 - Tracked as part of WO-0024.
+
+## 2026-02-22 — Onboarding closure gate policy (WO-0035)
+
+### Decision
+
+- Adopt **Policy A** for onboarding completion claims:
+  - human participant evidence is mandatory for closure-grade completion of `WO-0015`.
+  - CLI-agent reader-test evidence is useful as pilot signal but is not sufficient for final closure.
+
+### Rationale
+
+- First-time onboarding is a trust gate for external adoption.
+- Human-reader comprehension catches failures that synthetic/agent-only runs may miss.
+- The project explicitly wants to avoid late-stage discovery that onboarding is not actually understandable to humans.
+
+### Policy impact
+
+- `WO-0015` remains blocked until at least one dated human-participant result is committed.
+- `docs/reports/2026-02-19-first-time-reader-testing-protocol.md` and `docs/STATE-OF-THE-PROJECT.md` must reflect mandatory-human evidence language.
+- Placeholder date artifact names (`2026-02-XX-...`) are disallowed in active closure guidance.
+
+## 2026-02-22 — Integrity and revocation hardening posture (WO-0037)
+
+### Decision
+
+- Execute an aggressive documentation hardening pass for v0.2 contract language:
+  - add explicit normative direction for revocation cursor/events as a profile extension lane,
+  - codify multi-profile verification behavior (`algorithm` + `canonicalization` pair as profile identifier),
+  - expand adversarial fixture expectations in conformance documentation.
+
+### Rationale
+
+- Remaining ambiguity around revocation/integrity extension semantics is a practical source of interop drift.
+- Early explicitness in normative language reduces interpretation variance before broader adoption.
+- Adversarial fixture coverage is required to turn policy statements into executable safeguards.
+
+### Policy impact
+
+- `spec/v0.2/SIGNATURE-PROFILE.md` and `spec/v0.2/CONFORMANCE.md` must be updated in lockstep.
+- Adversarial v0.2 fixture matrix expansion is required in `examples/v0.2/invalid/`.
+- Follow-on implementation work may be needed where helper/runtime behavior lags new normative direction.

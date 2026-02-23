@@ -3,6 +3,7 @@
 Date: 2026-02-19
 Project root: `/Users/grig/work/repo/universalmanifest`
 Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+Gate checklist: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Goal
 
@@ -42,6 +43,6 @@ Validate that a new implementer can answer, after reading only the first-time pa
 
 ## Remaining blocker
 
-- External participant evidence is still required to close WO-0015 acceptance criterion.
+- Human participant evidence is required to close WO-0015 acceptance criterion (Policy A).
 - Required next artifact:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-XX-first-time-reader-test-results.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`

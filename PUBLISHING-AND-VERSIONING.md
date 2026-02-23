@@ -12,13 +12,17 @@ For broad adoption, these artifacts need stable, HTTPS-hosted URLs:
 
 - JSON-LD context (per spec version)
   - `spec/v0.1/schema.jsonld`
+  - `spec/v0.2/schema.jsonld`
 - JSON Schema (per spec version)
   - `spec/v0.1/schema.json`
+  - `spec/v0.2/schema.json`
 
 Current repository history includes `localartist.network` namespace references in v0.1 files. Canonical hosting direction is now:
 
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.json`
 
 Compatibility requirement:
 
@@ -31,6 +35,8 @@ Use versioned, immutable paths:
 
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.json`
 
 Optional convenience aliases:
 
@@ -137,3 +143,9 @@ Before calling a version “adoptable”:
 - [ ] Conformance fixtures (valid + invalid) exist and are referenced
 - [ ] A signature profile exists (v0.1 may defer; v0.2+ should specify)
 - [ ] `myum.net/{UMID}` resolver behavior is documented and reachable for runtime usage
+
+v0.2 publication verification commands:
+
+- `curl -I https://universalmanifest.net/ns/universal-manifest/v0.2/schema.jsonld`
+- `curl -I https://universalmanifest.net/ns/universal-manifest/v0.2/schema.json`
+- `curl -I https://universalmanifest.net/spec/v02/`

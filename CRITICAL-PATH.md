@@ -94,3 +94,31 @@ Must-have:
 - RP1 spatial-fabric integration lane documentation with source-ingestion plan
 - smart-glasses AR social-layer integration lane documentation with consent-first behavior
 - clear rule that normative contract changes still require versioned spec/conformance updates
+
+## Phase 9 — Drift governance and closure-regression checks
+
+Goal: keep completion claims true over time by running recurring drift and regression checks with explicit WO trigger thresholds.
+
+Cadence and owner:
+
+- weekly drift/governance run by active maintainer or delegated agent
+- required before new completion claims or milestone closure statements
+
+Mandatory command set:
+
+1. strict K2B gate validation:
+   - `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh /Users/grig/work/repo/universalmanifest --artifact-root /Users/grig/work/repo/universalmanifest/.dev/ai --strict`
+2. journey parity check:
+   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+3. production route checks:
+   - `curl -I https://universalmanifest.net/`
+   - `curl -I https://universalmanifest.net/getting-started/workbench/`
+   - `curl -I https://universalmanifest.net/proof/harness/`
+4. docs link-hygiene scan:
+   - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' /Users/grig/work/repo/universalmanifest/site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
+
+Follow-on WO trigger thresholds:
+
+- open a new WO immediately if any mandatory command fails
+- open a new WO if status docs contradict active WO status or production reality
+- open a new WO if newly ingested corpus signals require IA/spec/proof deltas beyond trivial wording edits

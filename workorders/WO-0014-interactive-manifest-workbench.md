@@ -69,7 +69,7 @@ Requirements added from full-corpus synthesis:
 ## Completion Evidence (2026-02-19T21:14:00Z)
 
 Implementation artifacts:
-- `/Users/grig/work/repo/universalmanifest/site/public/getting-started/workbench/`
+- `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
 - `/Users/grig/work/repo/universalmanifest/site/public/workbench/workbench.js`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`

@@ -21,10 +21,9 @@ This creates ambiguity in completion claims and onboarding-readiness messaging.
 
 ## Decision gate (blocking)
 
-A user decision is required before implementation:
+Decision resolved (2026-02-22):
 
-1. Policy A: Human participant evidence is mandatory for closure-grade completion.
-2. Policy B: CLI-agent evidence is sufficient for current maturity; human participant evidence is recommended follow-up.
+1. Policy A selected: Human participant evidence is mandatory for closure-grade completion.
 
 ## Scope
 
@@ -53,12 +52,14 @@ Out of scope:
 2. Aligned wording updates in the three core files listed above.
 3. If policy requires human evidence, a dated results report in:
    - `/Users/grig/work/repo/universalmanifest/docs/reports/`
+4. Human gate checklist artifact defining expected observations/questions:
+   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Acceptance criteria
 
-- [ ] One explicit policy statement exists and is traceable in `docs/DECISIONS.md`.
-- [ ] `WO-0015`, protocol, and state docs no longer contradict each other on required evidence.
-- [ ] Placeholder `2026-02-XX-first-time-reader-test-results.md` is removed from active instructions.
+- [x] One explicit policy statement exists and is traceable in `docs/DECISIONS.md`.
+- [x] `WO-0015`, protocol, and state docs no longer contradict each other on required evidence.
+- [x] Placeholder `2026-02-XX-first-time-reader-test-results.md` is removed from active instructions.
 - [ ] If policy is mandatory-human, at least one dated human-participant report exists.
 
 ## Validation commands
@@ -68,5 +69,12 @@ Out of scope:
 
 ## Blocker
 
-- User policy selection required (Policy A vs Policy B).
+- Human-participant run artifact still required:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
 
+## Progress evidence (2026-02-22)
+
+- Policy and alignment report:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0035-policy-a-gate-alignment-report.md`
+- Human gate checklist:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`

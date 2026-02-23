@@ -5,6 +5,16 @@ Project root: `/Users/grig/work/repo/universalmanifest`
 Purpose: single source list of all remaining known work from this checkpoint forward.
 Scope rule: includes product, docs, proof, deployment, K2B, and governance work still required to reach completion claims.
 
+## Status note (2026-02-22)
+
+This document is a historical checkpoint snapshot for 2026-02-20 execution context.
+
+It is superseded as an operational source of truth by:
+
+- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
+
 ## Execution update (2026-02-20)
 
 Completed in this cycle:

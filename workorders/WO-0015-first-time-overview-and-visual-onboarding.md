@@ -1,6 +1,6 @@
 # WO-0015 — First-time overview and visual onboarding
 
-**Status:** COMPLETED  
+**Status:** BLOCKED  
 **Created:** 2026-02-18
 
 ## Objective
@@ -40,7 +40,7 @@ Out of scope:
 - [x] A first-time overview page exists and is linked from docs navigation paths.
 - [x] Page includes a high-level visual diagram.
 - [x] Diagram source/edit workflow is documented for maintainers.
-- [x] Reader testing confirms a new implementer can answer: "What is UM?" and "How do I start?" after reading only this page. (Evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md` -- CLI-agent P-001 PASS)
+- [ ] Reader testing confirms a new implementer can answer: "What is UM?" and "How do I start?" after reading only this page with at least one dated human-participant result artifact. (CLI-agent evidence exists but is not closure-grade under Policy A.)
 
 ## WO-0017 Alignment Update (2026-02-19T04:54:00Z)
 
@@ -54,8 +54,8 @@ Evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
-Remaining for acceptance closure:
-- Execute and log external reader test runs with results summary in a report artifact (pending).
+Remaining for acceptance closure (Policy A mandatory gate):
+- Execute and log at least one human-participant reader test run with a dated results artifact.
 
 Reader-testing protocol and pilot evidence:
 - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
@@ -65,10 +65,10 @@ Closure command sequence (next agent/operator):
 1. `cd /Users/grig/work/repo/universalmanifest/site && npm run dev`
 2. Run the protocol with at least one implementer who has not worked on this repository.
 3. Save evidence as:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-XX-first-time-reader-test-results.md`
+   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
 4. Update this work order:
    - check final acceptance criterion
-   - set status to `COMPLETED`
+   - set status to `COMPLETED` only after human-participant evidence is committed
 
 ## Dependencies
 

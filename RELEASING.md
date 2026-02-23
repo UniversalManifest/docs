@@ -51,6 +51,13 @@ Goal: make these resolve over HTTPS with correct headers:
 - `https://universalmanifest.net/ns/universal-manifest/vX.Y/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/vX.Y/schema.json`
 
+For current v0.2 draft publication checks:
+
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.jsonld`
+- `https://universalmanifest.net/ns/universal-manifest/v0.2/schema.json`
+- `https://universalmanifest.net/spec/v02/`
+- `https://universalmanifest.net/conformance/v02/`
+
 Required headers are described in:
 
 - `docs/PUBLISHING-AND-VERSIONING.md`
@@ -65,6 +72,9 @@ Minimum verification checklist:
    - `Access-Control-Allow-Origin: *` (or an allowlist that includes your tooling origins)
 4. Confirm caching headers on versioned paths:
    - long-lived immutable caching is OK because versioned paths must not change
+5. Confirm human-facing spec/conformance routes resolve:
+   - `/spec/v02/`
+   - `/conformance/v02/`
 
 If `latest/` aliases exist, they should redirect to a concrete version and should not be cached long-term.
 
