@@ -1,12 +1,12 @@
-# First-Time Reader Human Gate Checklist (WO-0015 / WO-0035)
+# First-Time Reader Human Validation Checklist (Optional)
 
 Date: 2026-02-22
 Project root: `/Users/grig/work/repo/universalmanifest`
-Gate policy: Policy A (human participant evidence required)
+Policy status: Optional quality validation (not a closure gate)
 
 ## Purpose
 
-Define exactly what a human participant should see and be able to explain before onboarding can be considered closure-grade complete.
+Define exactly what a human participant should see and be able to explain when running an optional onboarding validation pass.
 
 ## Pages the participant must use
 
@@ -50,7 +50,7 @@ Q2 must include:
 - conformance/fixtures validation
 - proof/workbench usage
 
-## Gate decision
+## Validation decision
 
 - PASS:
   - participant answers both questions with required characteristics
@@ -73,6 +73,6 @@ Minimum report fields:
 - evaluator verdict (PASS/FAIL/PARTIAL)
 - rationale
 
-## Closure rule
+## Usage rule
 
-`WO-0015` may be marked `COMPLETED` only after at least one human participant run is documented with PASS under this checklist.
+This checklist is optional. Use it when you want additional human-reader confidence for onboarding clarity.

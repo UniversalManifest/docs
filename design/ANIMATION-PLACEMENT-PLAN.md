@@ -24,13 +24,13 @@ Map animated SVG explainers to high-impact pages that improve first-read compreh
 
 - Page: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
 - Planned scenario: editor lifecycle (import -> edit -> validate -> export).
-- Status: prompt-only in this phase.
+- Status: **integrated**.
 
 ## 4) Harness page (next iteration)
 
 - Page: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
 - Planned scenario: fixture load -> quick checks -> resolver probe -> evidence capture.
-- Status: prompt-only in this phase.
+- Status: **integrated**.
 
 ## 5) Integration lane pages (next iteration)
 
@@ -47,6 +47,8 @@ Planned page group:
 Planned scenario:
 
 - lane-specific overlays branching from one UM core object.
+
+Status: **integrated**.
 
 ## Selection rationale
 

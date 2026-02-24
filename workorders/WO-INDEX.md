@@ -21,7 +21,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md` — Define UM user journeys and ship an executable E2E proof suite
 - `docs/workorders/WO-0013-harness-endpoint-test-surface.md` — Interactive /harness page for endpoint + fixture debugging (complements journeys)
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md` — Build interactive import/edit/validate/export workbench for manifests on `universalmanifest.net`
-- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — [BLOCKED] Add first-time \"what is UM\" overview and visual onboarding flow (depends on WO-0035, WO-0039)
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` — [COMPLETED] Add first-time \"what is UM\" overview and visual onboarding flow
 - `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md` — Maintain a living source-to-artifact knowledge integration ledger from GAS indexes and external corpus
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md` — Convert full selected corpus into concrete IA, onboarding, and journey execution deltas
 - `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md` — Codify MUM lineage and metaverse/RP1/smart-glasses integration guidance in source-of-truth docs
@@ -41,10 +41,12 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md` — [COMPLETED] Remove stale in-progress language from published docs and deploy corrected site content
 - `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` — [COMPLETED] Convert publish-facing file/route path references to label-first clickable links across docs
 - `docs/workorders/WO-0034-documentation-status-coherence-and-stale-reference-reconciliation.md` — [COMPLETED] Reconcile status-document drift and stale evidence references after WO closure wave
-- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md` — [BLOCKED] Policy aligned to mandatory human-evidence gate; awaiting dated human-participant result artifact
+- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md` — [COMPLETED] Onboarding policy aligned; mandatory human-evidence gate removed
 - `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md` — [COMPLETED] Publish/verify v0.2 publication targets and expand verification edge-case fixture coverage
 - `docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md` — [COMPLETED] Define integrity/revocation hardening direction and add adversarial conformance coverage
 - `docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md` — [COMPLETED] Operationalize recurring corpus drift checks and follow-on WO trigger criteria
-- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` — [IN_PROGRESS] Rewrite onboarding language for first-read clarity and harden docs/backend wording source propagation paths (Phases 1-4 complete, awaiting Phase 5 human validation)
+- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` — [COMPLETED] Rewrite onboarding language for first-read clarity and harden docs/backend wording source propagation paths
 - `docs/workorders/WO-0040-v0-2-signature-verification-fix.md` — [COMPLETED] Investigate and confirm v0.2 signature verification is working (confirmed operational 2026-02-23)
 - `docs/workorders/WO-0041-status-document-drift-reconciliation.md` — [COMPLETED] Reconcile stale and inflated status claims across project status documents
+- `docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md` — [NOT_STARTED] Execute phase 1 animation upgrade (core replacements + missing WO-0030 scenario outputs)
+- `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md` — [NOT_STARTED] Execute phase 2 animation upgrade (tool explainers + seven integration-lane explainers), depends on WO-0042

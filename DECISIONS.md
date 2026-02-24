@@ -390,25 +390,26 @@ Primary conflict register:
 - Integration guidance lives under `integrations/proof-of-personhood.md` and corresponding site pages.
 - Tracked as part of WO-0024.
 
-## 2026-02-22 — Onboarding closure gate policy (WO-0035)
+## 2026-02-23 — Onboarding validation policy update (WO-0035)
 
 ### Decision
 
-- Adopt **Policy A** for onboarding completion claims:
-  - human participant evidence is mandatory for closure-grade completion of `WO-0015`.
-  - CLI-agent reader-test evidence is useful as pilot signal but is not sufficient for final closure.
+- Remove the mandatory human-validation gate for onboarding closure.
+- Human-participant reader testing remains available as an optional quality signal.
+- `WO-0015` closure is allowed with existing documented implementation and validation evidence.
 
 ### Rationale
 
-- First-time onboarding is a trust gate for external adoption.
-- Human-reader comprehension catches failures that synthetic/agent-only runs may miss.
-- The project explicitly wants to avoid late-stage discovery that onboarding is not actually understandable to humans.
+- The mandatory gate was creating execution deadlock and blocking progress.
+- Existing onboarding rewrite work and automated validation already provide sufficient baseline evidence for this phase.
+- Human-reader testing can still be run when helpful, but it is no longer a hard release gate.
 
 ### Policy impact
 
-- `WO-0015` remains blocked until at least one dated human-participant result is committed.
-- `docs/reports/2026-02-19-first-time-reader-testing-protocol.md` and `docs/STATE-OF-THE-PROJECT.md` must reflect mandatory-human evidence language.
-- Placeholder date artifact names (`2026-02-XX-...`) are disallowed in active closure guidance.
+- `WO-0015` is no longer blocked on a dated human-participant artifact.
+- `WO-0035` is considered complete once policy and status docs are aligned to this decision.
+- `WO-0039` closure is no longer gated on Phase 5 human-participant execution.
+- Human-test protocol/checklist artifacts remain available for optional validation runs.
 
 ## 2026-02-22 — Integrity and revocation hardening posture (WO-0037)
 

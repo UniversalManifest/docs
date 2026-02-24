@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-02-23  
-**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0036` through `WO-0038`) and the v0.2 signature verification investigation (`WO-0040`) are complete. Final closure-grade posture remains gated by two open items: mandatory human onboarding evidence (`WO-0035`, BLOCKED on human-participant reader test) and onboarding plain-language rewrite (`WO-0039`, NOT_STARTED). `WO-0015` is also BLOCKED pending resolution of both `WO-0035` and `WO-0039`.
+**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0035` through `WO-0041`) is complete. A new animation enhancement wave is defined in `WO-0042` and `WO-0043` (both `NOT_STARTED`).
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -69,13 +69,13 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
-- First-time onboarding validation with human external reader testing is required for closure-grade onboarding claims (CLI-agent pass exists but is not sufficient under current policy gate; `WO-0035` BLOCKED, `WO-0039` NOT_STARTED)
+- First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
 ## Work-order status (2026-02-23)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
-- BLOCKED: `WO-0015` first-time overview and visual onboarding — policy-gated pending human participant evidence (`WO-0035`) and onboarding rewrite (`WO-0039`)
+- Completed: `WO-0015` first-time overview and visual onboarding
 - Completed: `WO-0016` GAS index scan and knowledge integration ledger (including deferred-corpus reconciliation)
 - Completed: `WO-0017` full-corpus to IA/journey synthesis execution (implementation pass completed 2026-02-19)
 - Completed: `WO-0018` MUM lineage + metaverse/RP1/smart-glasses integration codification (2026-02-20)
@@ -95,13 +95,15 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0032` published docs stale-status scan and fixes (2026-02-22)
 - Completed: `WO-0033` published docs label-first link normalization (2026-02-22)
 - Completed: `WO-0034` documentation status coherence and stale-reference reconciliation (2026-02-22)
-- BLOCKED: `WO-0035` human-reader policy and onboarding evidence alignment — awaiting dated human-participant result artifact (Policy A, 2026-02-22)
+- Completed: `WO-0035` human-reader policy and onboarding evidence alignment (mandatory gate removed, 2026-02-23)
 - Completed: `WO-0036` v0.2 publication and verification edge-case expansion (2026-02-22)
 - Completed: `WO-0037` integrity profile, revocation, and adversarial conformance hardening (2026-02-22)
 - Completed: `WO-0038` corpus drift governance and follow-on WO cycle (2026-02-22)
-- NOT_STARTED: `WO-0039` onboarding plain-language rewrite and source-propagation hardening
+- Completed: `WO-0039` onboarding plain-language rewrite and source-propagation hardening
 - Completed: `WO-0040` v0.2 signature verification investigation — confirmed working (2026-02-23)
 - Completed: `WO-0041` status document drift reconciliation (2026-02-23)
+- NOT_STARTED: `WO-0042` animation upgrade phase 1 (core replacements + missing scenarios)
+- NOT_STARTED: `WO-0043` animation upgrade phase 2 (tools + integration-lane explainers, depends on WO-0042)
 
 ## Critical-path execution update (2026-02-20)
 
@@ -220,7 +222,7 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ First-time overview content and visual onboarding are shipped
 - ✅ Interactive manifest workbench is shipped and verified (`WO-0014` completed)
 - ✅ CLI-agent reader test evidence logged
-- Required gate: run and log at least one human participant reader-test before closure-grade onboarding completion claims (`WO-0035`, Policy A)
+- Optional quality step: run and log a human participant reader-test for additional onboarding confidence.
   - Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
   - Results: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md`
 

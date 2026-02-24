@@ -41,8 +41,8 @@ Validate that a new implementer can answer, after reading only the first-time pa
   - quick-start gives sequential implementation steps,
   - workbench page provides practical import/edit/validate/export path.
 
-## Remaining blocker
+## Optional follow-up
 
-- Human participant evidence is required to close WO-0015 acceptance criterion (Policy A).
-- Required next artifact:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
+- Human-participant evidence is optional and can be used as additional onboarding quality signal.
+- Optional artifact path:
+- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`

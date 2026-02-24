@@ -41,3 +41,26 @@ Completed changes:
 Validation commands:
 - `cd /Users/grig/work/repo/universalmanifest/site && npm run build` (pass)
 - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (pass)
+
+## Post-Completion Notes
+
+### Regression Investigation (2026-02-23)
+
+**Context:** An independent audit (step2-technical-validation.md) run on 2026-02-22 at 18:45:37 reported 10 duplicate-ID warnings including references to `integrations/lan.md`. This occurred AFTER WO-0028 was marked COMPLETED, suggesting a potential regression.
+
+**Resolution:** No regression occurred. The warnings were valid at the time of the audit, but were subsequently resolved by commit 7f827a1 ("Normalize OMATrust/OMA3 terminology and remove LAN from documentation") at 19:05:58 on the same day. This commit removed the problematic `lan.md` file that was causing one of the duplicate-ID warnings.
+
+**Current Status (verified 2026-02-23):**
+- Build output: 0 warnings (verified via `npm run build 2>&1 | grep -ci "warn"`)
+- Clean build: 0 duplicate-ID warnings (verified via full `.astro` + `node_modules/.vite` removal)
+- Exit code: 0 (build succeeds)
+- Pages built: 32
+- Pagefind indexed: 31 pages, 1508 words
+
+The original WO-0028 fix (cache cleanup script + build process hardening) remains effective. The temporary warnings seen in the audit were content-related, not cache-related, and were resolved through content cleanup rather than additional cache fixes.
+
+**Verification command:**
+```bash
+cd /Users/grig/work/repo/universalmanifest/site && rm -rf .astro dist node_modules/.vite && npm run build 2>&1 | grep -ci "warn"
+# Output: 0
+```

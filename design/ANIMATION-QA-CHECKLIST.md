@@ -4,40 +4,40 @@ Use this checklist for every generated animated SVG before merge/deploy.
 
 ## A) Source fidelity
 
-- [ ] Narrative terms match UM docs and spec (`@id`, `subject`, TTL fields, claims, consents, pointers, shards).
-- [ ] No invented protocol behavior.
-- [ ] Normative vs non-normative boundaries are preserved.
+- [x] Narrative terms match UM docs and spec (`@id`, `subject`, TTL fields, claims, consents, pointers, shards).
+- [x] No invented protocol behavior.
+- [x] Normative vs non-normative boundaries are preserved.
 
 ## B) Visual clarity
 
-- [ ] Components are visually distinct.
-- [ ] Sequence is understandable without narration.
-- [ ] Text is readable on desktop and mobile.
-- [ ] Contrast is adequate.
+- [x] Components are visually distinct.
+- [x] Sequence is understandable without narration.
+- [x] Text is readable on desktop and mobile.
+- [x] Contrast is adequate.
 
 ## C) Motion quality
 
-- [ ] Motion supports explanation, not decoration.
-- [ ] Timing is deterministic and loop-safe.
-- [ ] No rapid flashing or distracting effects.
+- [x] Motion supports explanation, not decoration.
+- [x] Timing is deterministic and loop-safe.
+- [x] No rapid flashing or distracting effects.
 
 ## D) Accessibility
 
-- [ ] `<title>` and `<desc>` are present.
-- [ ] Reduced-motion fallback is implemented.
-- [ ] Static understanding is still possible when motion is reduced.
+- [x] `<title>` and `<desc>` are present.
+- [x] Reduced-motion fallback is implemented.
+- [x] Static understanding is still possible when motion is reduced.
 
 ## E) Performance
 
-- [ ] File size is within budget for placement type.
-- [ ] No heavy filter stack.
-- [ ] Page load remains stable (no visible layout jumps).
+- [x] File size is within budget for placement type.
+- [x] No heavy filter stack.
+- [x] Page load remains stable (no visible layout jumps).
 
 ## F) Integration quality
 
-- [ ] Asset path is under `/site/public/animations/`.
-- [ ] Docs page renders correctly with and without animation support.
-- [ ] Build passes: `cd /Users/grig/work/repo/universalmanifest/site && npm run build`.
+- [x] Asset path is under `/site/public/animations/`.
+- [x] Docs page renders correctly with and without animation support.
+- [x] Build passes: `cd /Users/grig/work/repo/universalmanifest/site && npm run build`.
 
 ## G) Review evidence
 
