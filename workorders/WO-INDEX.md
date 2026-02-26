@@ -50,3 +50,4 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0041-status-document-drift-reconciliation.md` — [COMPLETED] Reconcile stale and inflated status claims across project status documents
 - `docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md` — [NOT_STARTED] Execute phase 1 animation upgrade (core replacements + missing WO-0030 scenario outputs)
 - `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md` — [NOT_STARTED] Execute phase 2 animation upgrade (tool explainers + seven integration-lane explainers), depends on WO-0042
+- `docs/workorders/WO-0044-public-open-source-examples-work-stream.md` — [NOT_STARTED] Public open-source examples and demos work stream: runnable code examples, integration demos, end-to-end walkthroughs, and SDK usage examples
