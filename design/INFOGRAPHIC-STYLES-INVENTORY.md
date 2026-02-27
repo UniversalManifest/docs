@@ -3,7 +3,7 @@
 > **Purpose:** Complete inventory of every infographic, diagram, animated SVG, and visual asset needed across the project. Use this as the briefing document for the infographics generation agent.
 >
 > **Date:** 2026-02-26
-> **Total assets:** 65 (10 exist, 43 need creation, 12 described but not yet created)
+> **Total assets:** 56 (32 exist, 24 need creation)
 
 ---
 
@@ -636,19 +636,18 @@ Existing animations that need regeneration or are missing entirely.
 
 | Metric | Count |
 |--------|-------|
-| **Total assets** | 65 |
-| Exist (no work needed) | 10 |
-| Need creation | 43 |
-| Described, not created | 12 |
+| **Total assets** | 56 |
+| Exist (no work needed) | 32 |
+| Need creation | 24 |
 
 **By priority:**
 
 | Priority | Count |
 |----------|-------|
-| Critical | 7 |
-| High | 22 |
-| Medium | 30 |
-| Low | 6 |
+| Critical | 6 |
+| High | 23 |
+| Medium | 23 |
+| Low | 4 |
 
 **By style:**
 
