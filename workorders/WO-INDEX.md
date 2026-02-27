@@ -48,6 +48,14 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` — [COMPLETED] Rewrite onboarding language for first-read clarity and harden docs/backend wording source propagation paths
 - `docs/workorders/WO-0040-v0-2-signature-verification-fix.md` — [COMPLETED] Investigate and confirm v0.2 signature verification is working (confirmed operational 2026-02-23)
 - `docs/workorders/WO-0041-status-document-drift-reconciliation.md` — [COMPLETED] Reconcile stale and inflated status claims across project status documents
-- `docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md` — [NOT_STARTED] Execute phase 1 animation upgrade (core replacements + missing WO-0030 scenario outputs)
-- `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md` — [NOT_STARTED] Execute phase 2 animation upgrade (tool explainers + seven integration-lane explainers), depends on WO-0042
-- `docs/workorders/WO-0044-public-open-source-examples-work-stream.md` — [NOT_STARTED] Public open-source examples and demos work stream: runnable code examples, integration demos, end-to-end walkthroughs, and SDK usage examples
+- `docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md` — [COMPLETED] Execute phase 1 animation upgrade: 7 SVGs (replaced pilots, upgraded overview, 4 new scenarios)
+- `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md` — [COMPLETED] Execute phase 2 animation upgrade: 9 SVGs (2 tool explainers, 7 integration-lane explainers)
+- `docs/workorders/WO-0044-public-open-source-examples-work-stream.md` — [COMPLETED] Public open-source examples and demos work stream
+- `docs/workorders/WO-0045-commercial-explainer-ecosystem-and-integration-expansion.md` — [COMPLETED] Commercial explainer ecosystem and integration expansion
+- `.dev/ai/workorders/WO-0046-infographic-styles-viewer.md` — [COMPLETED] Infographic styles inventory and viewer
+- WO-0047 (no formal WO file; from audit report) — [COMPLETED] Security documentation and threat model (`docs/security/THREAT-MODEL.md`)
+- WO-0048 (no formal WO file; from audit report) — [COMPLETED] Conformance suite expansion: 6 new fixtures (3 valid, 3 invalid)
+- WO-0049 (no formal WO file; from audit report) — [COMPLETED] CI/CD hardening: 5-job GitHub Actions pipeline (`.github/workflows/ci.yml`)
+- WO-0050 (no formal WO file; from audit report) — [COMPLETED] API reference, JSDoc, Lan→Um rename, package.json update
+- WO-0051 (no formal WO file; from audit report) — [COMPLETED] Governance framework, RFC template, GitHub issue templates (`docs/governance/`)
+- WO-0052 (no formal WO file; from audit report) — [COMPLETED] JSON audit: docs already clean, no changes needed
