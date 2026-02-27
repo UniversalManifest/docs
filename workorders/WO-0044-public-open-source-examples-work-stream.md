@@ -1,6 +1,6 @@
 # WO-0044 — Public open-source examples and demos work stream
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-25
 **Priority:** HIGH
 **Type:** Work stream (multi-phase)
@@ -390,3 +390,51 @@ cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean
 - All examples use `.mjs` (ES modules) for consistency and to avoid TypeScript compilation steps in the examples themselves.
 - The TS helper package import path in examples should use a relative path to the built package (e.g., `../../../packages/universal-manifest/dist/index.js`) rather than requiring npm publication.
 - Examples should not contain placeholder signatures (`BASE64URL_SIGNATURE_PLACEHOLDER`). Either generate real signatures (v0.2 examples) or use v0.1 (where signature is optional).
+
+## Execution Evidence
+
+### Phase 1 (Beginner) — COMPLETED 2026-02-26
+
+All 4 examples created and verified:
+
+- `examples/code/01-hello-world/` — create-manifest.mjs, validate-manifest.mjs, README.md
+- `examples/code/02-validate-and-check-ttl/` — validate-with-ttl.mjs, README.md
+- `examples/code/04-shards-and-pointers/` — compose-manifest-with-shards.mjs, read-specific-shards.mjs, README.md
+- `examples/code/09-unknown-field-tolerance/` — forward-compatible-consumer.mjs, README.md
+
+### Phase 2 (Intermediate) — COMPLETED 2026-02-26
+
+All 4 examples created and verified:
+
+- `examples/code/03-create-signed-manifest-v02/` — sign-manifest.mjs, verify-manifest.mjs, README.md
+- `examples/code/05-resolve-from-myum/` — fetch-by-umid.mjs, README.md
+- `examples/code/08-consent-enforcement/` — create-consent-manifest.mjs, enforce-consent-rules.mjs, README.md
+- `examples/code/10-multi-manifest-aggregation/` — aggregate-manifests.mjs, README.md
+
+### Phase 3 (Integration) — COMPLETED 2026-02-26
+
+All 3 deliverables created and verified:
+
+- `examples/code/06-social-profile-projection/` — create-social-manifest.mjs, project-to-web-profile.mjs, README.md
+- `examples/code/07-device-registration/` — register-device.mjs, check-device-enrollment.mjs, README.md
+- `examples/demo-app/` — Full lifecycle demo (server.mjs + lib/, package.json, README.md)
+
+### Phase 4 (Breadth) — COMPLETED 2026-02-26
+
+- `examples/code/python-validate/` — Python 3.8+ validation (stdlib only)
+- `examples/code/browser-validate/` — Browser-native validation (single HTML file)
+- `examples/code/CONTRIBUTING.md` — Contribution guide for new examples
+
+### Verification sweep
+
+- All 10 numbered examples: PASS (exit code 0)
+- Piped workflows: PASS
+- Existing test suite: PASS (21 valid, 19 invalid, 0 failures)
+- Demo app: PASS (lifecycle completes, dashboard renders)
+
+### Integration
+
+- examples/code/README.md — Index of all examples
+- packages/universal-manifest/README.md — Updated with example links
+- README.md (project root) — Updated with code examples section
+- Quick-start guide — Updated with example links
