@@ -59,3 +59,29 @@ Drift governance and follow-on WO trigger criteria:
 - WO-0050 (no formal WO file; from audit report) — [COMPLETED] API reference, JSDoc, Lan→Um rename, package.json update
 - WO-0051 (no formal WO file; from audit report) — [COMPLETED] Governance framework, RFC template, GitHub issue templates (`docs/governance/`)
 - WO-0052 (no formal WO file; from audit report) — [COMPLETED] JSON audit: docs already clean, no changes needed
+
+### External Adopter Verification Wave (WO-0053 through WO-0059)
+
+- `docs/workorders/WO-0053-standalone-conformance-test-suite.md` — [NOT_STARTED] Extract conformance tests into standalone public suite with CLI runner, expected-results manifest, and badge mechanism (CRITICAL, blocks Gate G4)
+- `docs/workorders/WO-0054-reference-implementation-repository-typescript.md` — [NOT_STARTED] Create separate public TypeScript reference implementation repo demonstrating full UM adoption (CRITICAL, blocks Gate G4; depends on WO-0053)
+- `docs/workorders/WO-0055-adopter-onboarding-document-package.md` — [NOT_STARTED] Create implementation guide, decision tree, FAQ, and agent-handoff document for external adopters (CRITICAL, blocks Gate G4; depends on WO-0053, WO-0054)
+- `docs/workorders/WO-0056-adopter-feedback-loop-and-contract-system.md` — [NOT_STARTED] Establish structured feedback loop with SLA, adopter progress tracking, spec improvement queue, and regression prevention (HIGH, blocks Gate G4 + G6; depends on WO-0053, WO-0055)
+- `docs/workorders/WO-0057-spec-vs-implementation-documentation-clarity.md` — [NOT_STARTED] Audit and update all docs to clearly distinguish spec from implementation, add calls-to-action for external implementations (HIGH, blocks Gate G4; depends on WO-0054)
+- `docs/workorders/WO-0058-v01-to-v02-migration-guide.md` — [NOT_STARTED] Document v0.1-to-v0.2 migration path with breaking changes, compatibility matrix, code examples, and deprecation timeline (HIGH, blocks Gate G6; depends on WO-0053, WO-0057)
+- `docs/workorders/WO-0059-governance-completion-breaking-change-deprecation-incident.md` — [NOT_STARTED] Complete governance: breaking-change policy, deprecation policy, incident/rollback procedures, simulated incident with evidence (CRITICAL, blocks Gate G6 + World-ready; depends on WO-0058)
+
+### Interactive Implementation Sandbox Wave (WO-0060 through WO-0068)
+
+**Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
+**Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
+**Priority:** HIGHEST (per CEO mandate -- comes before WO-0053 through WO-0059)
+
+- `docs/workorders/WO-0060-sandbox-foundation-and-browser-validator.md` — [NOT_STARTED] Extract validation logic for browser use with Web Crypto API adapter; scaffold sandbox pages and fixture pipeline (HIGHEST, foundational; no dependencies)
+- `docs/workorders/WO-0061-sandbox-three-panel-layout-and-step-engine.md` — [NOT_STARTED] Build three-panel layout shell, step-through engine, step controls, bubble annotations, and manifest viewer/editor (HIGHEST; depends on WO-0060)
+- `docs/workorders/WO-0062-sandbox-scenario-modal-and-navigation.md` — [NOT_STARTED] Build scenario selection modal with card grid, search/filter, and navigation between modal and sandbox (HIGHEST; depends on WO-0061)
+- `docs/workorders/WO-0063-sandbox-getting-started-scenarios.md` — [NOT_STARTED] Implement 4 Getting Started scenarios (GS-01 through GS-04): first manifest, shards, forward compatibility, resolver (HIGHEST; depends on WO-0062)
+- `docs/workorders/WO-0064-sandbox-trust-verification-scenarios.md` — [NOT_STARTED] Implement 5 Trust & Verification scenarios (TV-01 through TV-05): signed manifest, tamper detection, expired, missing fields, invalid algorithm (HIGHEST; depends on WO-0063)
+- `docs/workorders/WO-0065-sandbox-integration-lane-scenarios.md` — [NOT_STARTED] Implement 8 Integration Lane scenarios (IL-01 through IL-08): social, smart glasses, metaverse, RP1, OMATrust, Chia, personhood, venue (HIGHEST; depends on WO-0063)
+- `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [NOT_STARTED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, shard type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
+- `docs/workorders/WO-0067-sandbox-visual-polish-and-illustrations.md` — [NOT_STARTED] Create 25 SVG illustrations, refine animations, category colors, dark mode, responsive polish (HIGH; depends on WO-0063, WO-0064, WO-0065, WO-0066)
+- `docs/workorders/WO-0068-sandbox-ci-parity-testing-and-qa.md` — [NOT_STARTED] CI parity testing (Node vs browser validator), scenario smoke tests, accessibility audit, performance audit (HIGH; depends on WO-0060, WO-0063, WO-0064, WO-0065, WO-0066)
