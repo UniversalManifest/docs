@@ -24,7 +24,7 @@ The **Universal Manifest** is a **portable state capsule**: a single document th
 - **what devices** are in scope (devices + trust levels)
 - **where canonical data lives** (pointers)
 - **how it composes** (shards)
-- **how integrity is asserted** (signature envelope + short TTL)
+- **how integrity is asserted** (signature + short TTL)
 
 This is a **spec repo**, not an application.
 
@@ -43,7 +43,7 @@ These constraints appear repeatedly across the vision + research:
 4. **Patches over payloads**
    - Prefer `pointers` + small `shards` over embedding large data blobs.
 5. **Security as an incremental profile**
-   - v0.1 has a permissive signature envelope; canonical signing format is a later milestone.
+   - v0.1 has a permissive signature placeholder; canonical signing format is a later milestone.
 
 Primary references:
 
@@ -181,7 +181,7 @@ Concrete stub:
 These are the “depth” items that turn v0.1 into something broadly adoptable:
 
 1. **Signature profile**
-   - choose the first real signing envelope (and verification rules)
+   - choose the first real signing profile (and verification rules)
 2. **Canonicalization**
    - define JSON-LD/RDF canonicalization expectations for signing
 3. **Conformance suite**

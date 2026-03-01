@@ -13,7 +13,7 @@ Document the complete migration path from v0.1 consumer/issuer to v0.2 signed ma
 
 ## Why this work matters
 
-v0.2 introduces mandatory cryptographic signatures (JCS + Ed25519), which is a significant change from v0.1's permissive signature envelope. Existing v0.1 adopters need a clear, actionable migration path. Without this:
+v0.2 introduces mandatory cryptographic signatures (JCS + Ed25519), which is a significant change from v0.1's permissive signature placeholder. Existing v0.1 adopters need a clear, actionable migration path. Without this:
 
 1. Adopters cannot plan their upgrade timeline.
 2. Breaking changes are discovered at runtime instead of during planning.
@@ -86,7 +86,7 @@ Out of scope:
      Step 1: Generate or obtain Ed25519 signing key pair
      Step 2: Add JCS canonicalization dependency
      Step 3: Implement signing logic
-     Step 4: Update manifest creation to include signature envelope
+     Step 4: Update manifest creation to include signature
      Step 5: Update conformance tests
   4. Handle Mixed Environments
      - Dual-version consumer strategy

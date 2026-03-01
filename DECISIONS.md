@@ -20,7 +20,7 @@
 
 ### Security scope (v0.1)
 
-- `signature` is present only as a permissive placeholder envelope.
+- `signature` is present only as a permissive placeholder.
 - Cryptographic signing/verification formats are intentionally deferred until canonicalization rules and integration needs are confirmed.
 
 ## 2026-02-12 — Public domain split for standards vs resolver

@@ -67,7 +67,7 @@ Out of scope:
   5. Step 3: Sign a Manifest (v0.2)
      - JCS canonicalization
      - Ed25519 signing
-     - Signature envelope structure
+     - Signature structure
      - Code examples
   6. Step 4: Verify a Manifest (v0.2)
      - Verification algorithm step-by-step

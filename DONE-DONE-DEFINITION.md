@@ -120,7 +120,7 @@ Failure examples:
 
 Pass criteria:
 
-- integrity envelope behavior is explicitly defined for target maturity
+- integrity signature behavior is explicitly defined for target maturity
 - canonicalization assumptions are explicit for any normative signature behavior
 - verification behavior for failure states is explicit
 

@@ -12,7 +12,7 @@ Universal Manifest is a portable state-capsule specification. It is responsible 
 - subject binding (`subject`)
 - composable state slices (`shards`)
 - machine-actionable state sections (`claims`, `consents`, `devices`, `pointers`)
-- optional integrity envelope (`signature`, profile-versioned)
+- optional signature (`signature`, profile-versioned)
 - compatibility semantics (unknown-field tolerance, extension points, version policy)
 
 In-scope normative surfaces:

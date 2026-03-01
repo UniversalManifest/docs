@@ -50,7 +50,7 @@ Use these links to understand **why a section exists** and what direction it’s
 | `consents` | Privacy + surface permissions (public display, analytics) | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
 | `devices` | Device registrations + trust levels | `integrations/reference-runtime.md`, `research/reference-platform/operational-runbooks.md` |
 | `pointers` | Canonical sources + interoperability links (Pod/Matrix/etc.) | `docs/PROJECT-VISION.md`, `research/reference-platform/interoperability-sync.md`, `research/reference-platform/appendices-and-standards-mapping.md` |
-| `signature` | Integrity envelope (format intentionally permissive in v0.1) | `docs/DECISIONS.md` (security scope), `spec/v0.1/README.md`, `research/reference-platform/appendices-and-standards-mapping.md` |
+| `signature` | Signature (format intentionally permissive in v0.1) | `docs/DECISIONS.md` (security scope), `spec/v0.1/README.md`, `research/reference-platform/appendices-and-standards-mapping.md` |
 
 ## How these fixtures connect (conceptual)
 

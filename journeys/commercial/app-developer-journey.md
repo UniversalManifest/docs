@@ -52,7 +52,7 @@ I sit back and think about what I did not have to build. I did not build a profi
 
 **Consent checking:** The app checks the `consents` array for specific consent names (`social.profilePublic`, analytics toggles). Each consent entry has a `name` and `value` (`allowed` or `denied`). If a consent name is absent from the array, the app treats it as denied (default-deny). This five-line check replaces an entire consent management subsystem.
 
-**Signature verification (v0.2):** When a v0.2 manifest arrives, the app calls `assertUniversalManifestV02`, which validates the Ed25519 signature. The function strips the `signature` field, canonicalizes the remaining document with JCS (RFC 8785), and verifies the signature using the `publicKeySpkiB64` from the signature envelope. A valid signature proves the manifest has not been modified since signing.
+**Signature verification (v0.2):** When a v0.2 manifest arrives, the app calls `assertUniversalManifestV02`, which validates the Ed25519 signature. The function strips the `signature` field, canonicalizes the remaining document with JCS (RFC 8785), and verifies the signature using the `publicKeySpkiB64` from the signature. A valid signature proves the manifest has not been modified since signing.
 
 **TTL re-validation:** The app checks `expiresAt` on every access using `assertUniversalManifestV01Fresh`. Expired manifests are rejected. Periodic re-fetching before TTL expiry ensures the app always has current consent and profile data. When a user revokes consent, the change is picked up on the next fetch cycle.
 

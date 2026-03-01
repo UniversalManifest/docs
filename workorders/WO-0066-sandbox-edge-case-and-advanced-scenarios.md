@@ -66,7 +66,7 @@ Implement 8 scenario definition files. This includes creating one new composite 
 ### AD-04: v0.2 Full Integration (8 steps)
 
 - **Fixture:** `examples/v0.2/manifest-with-shards-signed.jsonld`
-- **Key point:** Four-layer validation (structure + shards + signature envelope + Ed25519 verify)
+- **Key point:** Four-layer validation (structure + shards + signature + Ed25519 verify)
 - **Demonstrates:** The full power of v0.2
 
 ## Execution tasks

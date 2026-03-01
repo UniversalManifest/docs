@@ -20,7 +20,7 @@ Universal Manifest is a **portable state capsule** specification. The spec progr
 - Composition primitives: `shards`, `pointers`
 - Machine-actionable sections: `claims`, `consents`, `devices`
 - Compatibility semantics: unknown-field tolerance, extension points, version policy
-- Integrity envelope semantics by profile: `signature` (v0.1 permissive; v0.2 profile drafted)
+- Integrity signature semantics by profile: `signature` (v0.1 permissive; v0.2 profile drafted)
 
 Normative-ish surfaces (source of truth):
 
@@ -107,7 +107,7 @@ Risks/notes:
 ### Gate G3: Integrity and trust profile — **STAGED (v0.1) / NOT PASSED (v0.2)**
 
 Why:
-- v0.1 signature envelope is explicitly permissive and non-interoperable.
+- v0.1 signature is explicitly permissive and non-interoperable.
 - v0.2 signature profile draft exists (JCS + Ed25519 path), but it is not yet locked into schema/context/fixtures.
 
 Work orders:

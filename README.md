@@ -26,6 +26,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - `docs/DEPLOY-CHECKLIST.md` — One linear checklist for first real deploy (`universalmanifest.net` + `myum.net`)
 - `docs/CRUCIAL-DETAILS.md` — Non-obvious decisions and “gotchas”
 - `docs/DECISIONS.md` — Decisions made while drafting the standard
+- `docs/ENVELOPE-TOPOLOGY.md` — Structural topology analysis: what "envelope" means, how manifest layers relate, terminology guide
 - `docs/PROJECT-KNOWLEDGE-INDEX.md` — Pointer to GAS shared Universal Manifest master index
 - `docs/DONE-DONE-DEFINITION.md` — Official completion criteria (“done done”) for releases
 - `docs/DONE-DONE-CHECKLIST.md` — Gate-by-gate checklist for release readiness

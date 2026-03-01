@@ -26,7 +26,7 @@ Implement 5 scenario definition files. TV-01 is the most complex (8 steps with f
 ### TV-01: Signed Manifest (Ed25519 Verification) (8 steps)
 
 - **Fixture:** `examples/v0.2/minimal-signed-manifest.jsonld`
-- **Steps:** Show manifest -> read version 0.2 -> validate signature envelope -> extract public key -> remove signature + create signing input -> JCS canonicalization -> Ed25519 verify -> accepted
+- **Steps:** Show manifest -> read version 0.2 -> validate signature -> extract public key -> remove signature + create signing input -> JCS canonicalization -> Ed25519 verify -> accepted
 - **Actions:** Steps 3-7 call the individual parts of `assertUniversalManifestV02`; step 7 calls Web Crypto `verify()`
 - **Key visual:** Lock icon transitions from open to closed on success
 - **Modifiable:** Yes -- changing ANY field causes step 7 to fail ("Signature verification failed")
@@ -34,7 +34,7 @@ Implement 5 scenario definition files. TV-01 is the most complex (8 steps with f
 ### TV-02: Tampered Manifest Detection (7 steps)
 
 - **Fixture:** `examples/v0.2/invalid/tampering-modified-after-signing.jsonld`
-- **Steps:** Show tampered manifest -> structural validation passes -> signature envelope OK -> public key extraction -> canonicalize modified data -> Ed25519 verify FAILS -> rejected
+- **Steps:** Show tampered manifest -> structural validation passes -> signature OK -> public key extraction -> canonicalize modified data -> Ed25519 verify FAILS -> rejected
 - **Actions:** Steps 2-6 proceed normally; step 6 calls Web Crypto `verify()` which returns false
 - **Key visual:** Shield icon transitions to red X on failure
 - **Modifiable:** Yes -- but this fixture is constructed to always fail regardless of edits

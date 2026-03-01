@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-02-23  
-**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0035` through `WO-0041`) is complete. A new animation enhancement wave is defined in `WO-0042` and `WO-0043` (both `NOT_STARTED`).
+**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0035` through `WO-0041`) is complete. Animation enhancement wave (`WO-0042` and `WO-0043`) is complete -- 16 production animated SVGs are live on universalmanifest.net.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -47,9 +47,13 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
   - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`)
   - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
-- **Visual onboarding assets (new)**
-  - Excalidraw source-of-truth scaffold: `docs/diagrams/`
-  - Published diagram assets path: `site/public/diagrams/`
+- **Animated SVG explainer pipeline (established, proven)**
+  - 16 production animated SVGs live on universalmanifest.net (WO-0042, WO-0043)
+  - Prompt pack system: `.dev/ai/prompts/animation/`
+  - Workflow documentation: `docs/design/ANIMATED-SVG-WORKFLOW.md`
+  - QA checklist: `docs/design/ANIMATION-QA-CHECKLIST.md`
+  - Production assets: `site/public/animations/`
+  - Overview diagram: `site/public/diagrams/universal-manifest-overview-template.svg`
 - **Public docs IA + editorial polish**
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
@@ -64,7 +68,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 
 ### What is *not* finalized yet (by design)
 
-- v0.1 signature is still a permissive envelope; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
+- v0.1 signature is still a permissive placeholder; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
@@ -102,8 +106,8 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0039` onboarding plain-language rewrite and source-propagation hardening
 - Completed: `WO-0040` v0.2 signature verification investigation — confirmed working (2026-02-23)
 - Completed: `WO-0041` status document drift reconciliation (2026-02-23)
-- NOT_STARTED: `WO-0042` animation upgrade phase 1 (core replacements + missing scenarios)
-- NOT_STARTED: `WO-0043` animation upgrade phase 2 (tools + integration-lane explainers, depends on WO-0042)
+- Completed: `WO-0042` animation upgrade phase 1 -- 7 SVGs (replaced pilots, upgraded overview, 4 new scenarios) (2026-02-27)
+- Completed: `WO-0043` animation upgrade phase 2 -- 9 SVGs (2 tool explainers, 7 integration lane explainers) (2026-02-27)
 
 ## Critical-path execution update (2026-02-20)
 

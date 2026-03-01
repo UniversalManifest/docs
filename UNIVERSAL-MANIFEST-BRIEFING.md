@@ -49,7 +49,7 @@ A Universal Manifest is a JSON-LD object with a predictable shape. Here is what 
 | `consents` | Privacy and disclosure controls |
 | `devices` | Registered device endpoints and trust levels |
 | `pointers` | URL references to canonical external data sources |
-| `signature` | Cryptographic integrity envelope (permissive in v0.1, profiled in v0.2) |
+| `signature` | Cryptographic signature (permissive in v0.1, profiled in v0.2) |
 
 ### Shards
 
@@ -82,7 +82,7 @@ Versions use immutable, numbered paths. Once published, a version's artifacts ne
 
 ## 3. What v0.2 Adds -- Cryptographic Verification
 
-v0.1 is a permissive envelope: the `signature` field exists but has no interoperable verification profile. v0.2 locks that down with a production-grade signature system:
+v0.1 is a permissive placeholder: the `signature` field exists but has no interoperable verification profile. v0.2 locks that down with a production-grade signature system:
 
 ### Signature Profile: JCS + Ed25519
 
@@ -97,7 +97,7 @@ v0.1 is a permissive envelope: the `signature` field exists but has no interoper
 2. Remove the `signature` property entirely
 3. Canonicalize the remaining object using JCS (RFC 8785) to produce deterministic UTF-8 bytes
 4. Compute Ed25519 signature over those bytes
-5. Attach the signature envelope back to the manifest
+5. Attach the signature back to the manifest
 
 ### How Verification Works
 
