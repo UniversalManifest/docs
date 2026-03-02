@@ -7,6 +7,10 @@ This repo contains two related deployment skeletons:
 - Resolver host: `myum.net/{UMID}`
   - Runtime resolution skeleton (separate; see `services/myum-resolver/`)
 
+Staging + promotion runbook:
+
+- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+
 ## 1) Publish spec artifacts (`/ns/...`)
 
 Build:

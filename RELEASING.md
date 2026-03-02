@@ -101,6 +101,16 @@ After `universalmanifest.net` and `myum.net` are both deployed, run the combined
 
 - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run smoke:endpoints:prod`
 
+Staging-first promotion is the default operating model:
+
+- run staging checks first (`npm run smoke:endpoints:staging` and `npm run verify:postdeploy:staging`)
+- promote to production only after staging gates pass
+- run production checks after promotion
+
+Runbook:
+
+- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+
 Runbook:
 
 - `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`

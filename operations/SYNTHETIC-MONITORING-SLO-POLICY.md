@@ -1,0 +1,154 @@
+# Synthetic Monitoring, Alerting, and SLO Policy
+
+Status: Active  
+Owner: Platform / Operations  
+Work Order: WO-0117  
+Last updated: 2026-03-02
+
+## 1) Scope
+
+This policy defines reliability objectives and incident handling for production adopter-visible surfaces:
+
+- `https://universalmanifest.net` (standards/spec/docs)
+- `https://myum.net` (resolver contract)
+
+## 2) Synthetic Monitoring Execution
+
+Monitoring is executed by:
+
+- Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+- Triggers:
+  - scheduled every 15 minutes
+  - manual via `workflow_dispatch`
+
+The workflow uses existing production verification scripts:
+
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
+
+Generated monitoring artifacts:
+
+- `packages/universal-manifest/artifacts/smoke-endpoints-prod.log`
+- `packages/universal-manifest/artifacts/post-deploy-verify.log`
+- `packages/universal-manifest/artifacts/latency-probes.txt`
+- `.dev/ai/reports/deploy-checks/*-post-deploy-verification.md`
+
+Optional check configuration:
+
+- `UM_SYNTHETIC_SMOKE_UMID` (secret) for production UMID override
+- `workflow_dispatch` input `umid` (manual one-off override)
+
+## 3) SLI Definitions
+
+SLIs are calculated from synthetic runs and retained artifacts:
+
+- `docs_availability_sli`
+  - Definition: successful docs endpoint checks / total docs endpoint checks
+  - Source: `smoke-endpoints-prod.log`
+- `resolver_availability_sli`
+  - Definition: successful resolver endpoint checks / total resolver endpoint checks
+  - Source: `smoke-endpoints-prod.log` + post-deploy checks
+- `revalidation_sli`
+  - Definition: successful resolver `ETag` revalidate (`304`) checks / total revalidate checks
+  - Source: `smoke-endpoints-prod.log`
+- `synthetic_latency_sli`
+  - Definition: endpoint response time sampled each synthetic run
+  - Source: `latency-probes.txt`
+
+## 4) SLO Targets (Rolling 30-Day Window)
+
+Availability targets:
+
+- Docs availability (`docs_availability_sli`): `>= 99.9%`
+- Resolver availability (`resolver_availability_sli`): `>= 99.9%`
+- Resolver revalidation (`revalidation_sli`): `>= 99.5%`
+
+Latency guardrails (synthetic probe thresholds):
+
+- `https://universalmanifest.net/` <= `1.5s`
+- `https://universalmanifest.net/resolver/` <= `2.0s`
+- `https://myum.net/health` <= `0.8s`
+- `https://myum.net/.well-known/myum-resolver.json` <= `1.0s`
+- `https://myum.net/{UMID}` <= `1.2s`
+
+Error budget reference:
+
+- 99.9% objective allows up to 43m 49s unavailability per 30-day window.
+
+## 5) Synthetic Check Inventory
+
+### 5.1 Docs checks
+
+From `smoke-endpoints.mjs` in production mode:
+
+- `/`
+- `/conformance/resolver/`
+- `/harness/index.html`
+- `/sandbox/`
+- `/resolver/`
+- `/ns/universal-manifest/v0.1/schema.jsonld`
+- `/404.html`
+
+### 5.2 Resolver checks
+
+From `smoke-endpoints.mjs` and `post-deploy-verify.mjs`:
+
+- `/health`
+- `/.well-known/myum-resolver.json`
+- `/{UMID}` (direct)
+- `/b64u:{UMID}` (base64url format)
+- `ETag` + `If-None-Match` revalidate path (`304`)
+- `x-um-resolver-contract` and exposed header checks
+
+## 6) Alert and Escalation Policy
+
+Alert trigger conditions:
+
+1. Sustained availability failure:
+   - two consecutive failed scheduled synthetic runs
+2. SLO threshold failure:
+   - any latency probe above defined threshold in a synthetic run
+3. Rolling-window breach:
+   - weekly/monthly review indicates SLO objective below target
+
+Alert delivery:
+
+- Optional webhook secret: `UM_SYNTHETIC_ALERT_WEBHOOK`
+- If secret is configured and sustained failure is detected, workflow posts an alert payload with run metadata and status details.
+- If secret is not configured, workflow still fails and stores artifacts for manual triage.
+
+Escalation timeline:
+
+1. Initial response target: acknowledge within 15 minutes
+2. If unresolved after 30 minutes: escalate to platform maintainer
+3. If unresolved after 60 minutes: declare SEV incident and start incident log
+
+## 7) Incident Runbooks and Templates
+
+Runbooks:
+
+- `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
+- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+
+Templates:
+
+- Incident report: `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`
+- Reliability summary: `/Users/grig/work/repo/universalmanifest/docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
+
+## 8) Weekly/Monthly Reliability Review
+
+Review cadence:
+
+- Weekly: availability and latency trend review
+- Monthly: SLO compliance and error-budget consumption review
+
+Minimum review inputs:
+
+- synthetic workflow run history (`synthetic-monitoring.yml`)
+- artifact logs (`smoke-endpoints-prod.log`, `post-deploy-verify.log`, `latency-probes.txt`)
+- post-deploy markdown reports in `.dev/ai/reports/deploy-checks/`
+
+Summary outputs should be captured using:
+
+- `/Users/grig/work/repo/universalmanifest/docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`

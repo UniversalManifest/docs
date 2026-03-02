@@ -7,6 +7,11 @@ This runbook is the fastest way to validate that the two-domain architecture is 
 
 It uses the repo’s endpoint smoke script so verification is **repeatable and automatable**.
 
+Continuous production synthetic monitoring and alerting policy:
+
+- `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+- Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+
 ## Prereqs
 
 - `universalmanifest.net` is deployed (Cloudflare Pages):
@@ -19,6 +24,10 @@ It uses the repo’s endpoint smoke script so verification is **repeatable and a
 From the TS helper package:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+
+Staging equivalent (for pre-production gates):
+
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:staging`
 
 This checks:
 
@@ -50,3 +59,6 @@ If the smoke fails:
 3. Confirm resolver headers:
    - `curl -fsSI "https://myum.net/urn%3Auuid%3A11111111-1111-4111-8111-111111111111" | rg -i 'etag:|cache-control:|x-um-resolver-contract|access-control-expose-headers'`
 
+If repeated failures continue, open an incident using:
+
+- `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`

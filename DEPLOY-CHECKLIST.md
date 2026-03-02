@@ -7,6 +7,10 @@ This checklist is for a first “real” deployment of the Universal Manifest pu
 
 It’s intentionally linear and action-first.
 
+Staging + promotion policy:
+
+- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+
 ## 0) Prereqs
 
 - Cloudflare account with domain control for:
@@ -63,3 +67,13 @@ Capture these as evidence for publishing readiness / future “done-done” pack
 - A harness screenshot (autorun):
   - `https://universalmanifest.net/harness/?autorun=1`
 
+## 5) Continuous monitoring handoff (required)
+
+Confirm synthetic monitoring and alert policy are in place after deploy:
+
+- Policy: `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+- Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+- Optional alert webhook secret:
+  - `UM_SYNTHETIC_ALERT_WEBHOOK`
+- Incident template:
+  - `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`

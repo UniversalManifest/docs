@@ -74,3 +74,21 @@ Repo-local deployment skeletons (implementation-ready starting points):
 
 - `deploy/universalmanifest.net/` (static publish build + headers + redirects)
 - `services/myum-resolver/` (Cloudflare Worker + KV resolver skeleton)
+
+## 6) Staging/production topology
+
+Recommended environment matrix:
+
+- Production docs: `https://universalmanifest.net`
+- Production resolver: `https://myum.net`
+- Staging docs: `https://staging.universalmanifest.net`
+- Staging resolver: `https://staging.myum.net`
+
+Operational policy:
+
+- staging and production resolver environments must use separate KV namespace IDs
+- staging gates must pass before production promotion
+
+Runbook:
+
+- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
