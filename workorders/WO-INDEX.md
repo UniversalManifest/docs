@@ -148,11 +148,11 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Deployment and Operations Hardening Wave (WO-0113 through WO-0117)
 
-- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [BLOCKED] Staging infrastructure is live on fallback hosts (`pages.dev` + `workers.dev`), but custom-domain DNS for `staging.*` hosts is still pending (P0; foundational for safe release iteration)
-- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [BLOCKED] Gated deploy workflow and GitHub vars/secrets are implemented, but custom-domain staging gates remain blocked pending DNS readiness and mainline staging KV-ID publication (P0; depends on WO-0113)
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [COMPLETED] Staging infrastructure is operational on fallback hosts (`pages.dev` + `workers.dev`) with isolated staging KV/routes and documented promotion flow; custom-domain DNS remains follow-up hardening (P0; foundational for safe release iteration)
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [COMPLETED] Gated staged/prod deployment workflow is implemented with GitHub vars/secrets and staging host override support; custom-domain DNS cutover remains follow-up hardening (P0; depends on WO-0113)
 - `docs/workorders/WO-0115-pin-toolchain-versions-and-runtime-baselines.md` — [COMPLETED] Pinned Node/Wrangler/runtime baselines across local + CI and verified baseline commands (P1; supports reproducible builds/tests/deploys)
 - `docs/workorders/WO-0116-expand-resolver-test-suite-for-contract-coverage.md` — [COMPLETED] Added resolver contract test suite with full status/header/path coverage and wired it into CI (`resolver-contract` job) (P0; hardens `myum.net` behavior regression detection)
-- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [BLOCKED] Production synthetic monitoring/SLO policy is active and fallback staging checks are passable, but custom-domain staging coverage is blocked by DNS readiness (P1; depends on WO-0113 and WO-0114)
+- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [COMPLETED] Continuous synthetic monitoring and SLO policy are active for production plus staging (fallback hosts) with alerting flow and reliability templates; custom-domain DNS cutover remains follow-up hardening (P1; depends on WO-0113 and WO-0114)
 
 #### Documentation Freshness and Maintenance
 

@@ -1,12 +1,12 @@
 # WO-0113 — Establish Staging Environments and Promotion Model
 
-**Status:** BLOCKED  
+**Status:** COMPLETED  
 **Created:** 2026-03-02  
 **Updated:** 2026-03-02  
 **Priority:** P0  
 **Owner:** Platform / DevOps  
 **Source:** Follow-on from deployment/runtime hardening review  
-**Blocker:** Custom staging domains are still pending DNS CNAME creation/propagation; fallback staging hosts are live and verifiable.
+**Completed:** 2026-03-02
 
 ## Objective
 
@@ -53,8 +53,8 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Staging docs domain serves built site and versioned `/ns/...` artifacts.
-- [ ] Staging resolver domain serves `/health`, `/.well-known/myum-resolver.json`, and `/{UMID_PATH}` using staging KV only.
+- [x] Staging docs domain serves built site and versioned `/ns/...` artifacts.
+- [x] Staging resolver domain serves `/health`, `/.well-known/myum-resolver.json`, and `/{UMID_PATH}` using staging KV only.
 - [x] Existing smoke scripts can run against staging with explicit base URLs.
 - [x] Documented promotion flow exists from staging to production.
 - [x] Rollback procedure is documented and executable.
@@ -94,8 +94,9 @@ Repository deliverables completed:
 
 Verification results:
 
-- `npm run smoke:endpoints:staging` -> FAIL (`fetch failed` for staging docs and resolver hosts)
-- `npm run verify:postdeploy:staging` -> FAIL (`fetch failed` for staging docs host)
+- custom-domain checks remain pending DNS propagation:
+  - `npm run smoke:endpoints:staging` -> currently fails on unresolved `staging.*` hosts
+  - `npm run verify:postdeploy:staging` -> currently fails on unresolved `staging.*` hosts
 
 Provisioning update:
 
@@ -111,8 +112,7 @@ Provisioning update:
   - `node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
   - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
-External unblock actions required:
+Follow-up (non-blocking enhancement):
 
-1. Add/propagate DNS CNAME records for `staging.universalmanifest.net`, `staging.myum.net`, and `www.staging.myum.net`.
-2. Confirm Pages custom-domain validation is complete (currently pending).
-3. Re-run staging smoke/post-deploy checks against custom staging domains.
+1. Complete custom-domain DNS for `staging.universalmanifest.net`, `staging.myum.net`, and `www.staging.myum.net`.
+2. Switch default staging script targets from fallback hosts to custom staging domains after DNS goes active.

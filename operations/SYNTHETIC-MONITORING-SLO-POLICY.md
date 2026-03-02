@@ -7,29 +7,36 @@ Last updated: 2026-03-02
 
 ## 1) Scope
 
-This policy defines reliability objectives and incident handling for production adopter-visible surfaces:
+This policy defines reliability objectives and incident handling for production and staging surfaces:
 
 - `https://universalmanifest.net` (standards/spec/docs)
 - `https://myum.net` (resolver contract)
+- `https://universalmanifest-net-staging.pages.dev` (staging docs fallback host)
+- `https://myum-resolver-staging.grig-624.workers.dev` (staging resolver fallback host)
 
 ## 2) Synthetic Monitoring Execution
 
 Monitoring is executed by:
 
-- Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+- Production workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+- Staging workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
 - Triggers:
   - scheduled every 15 minutes
   - manual via `workflow_dispatch`
 
-The workflow uses existing production verification scripts:
+The workflows use existing verification scripts:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev`
 
 Generated monitoring artifacts:
 
 - `packages/universal-manifest/artifacts/smoke-endpoints-prod.log`
+- `packages/universal-manifest/artifacts/smoke-endpoints-staging.log`
 - `packages/universal-manifest/artifacts/post-deploy-verify.log`
+- `packages/universal-manifest/artifacts/post-deploy-verify-staging.log`
 - `packages/universal-manifest/artifacts/latency-probes.txt`
 - `.dev/ai/reports/deploy-checks/*-post-deploy-verification.md`
 
@@ -145,8 +152,8 @@ Review cadence:
 
 Minimum review inputs:
 
-- synthetic workflow run history (`synthetic-monitoring.yml`)
-- artifact logs (`smoke-endpoints-prod.log`, `post-deploy-verify.log`, `latency-probes.txt`)
+- synthetic workflow run history (`synthetic-monitoring.yml`, `synthetic-monitoring-staging.yml`)
+- artifact logs (`smoke-endpoints-prod.log`, `smoke-endpoints-staging.log`, `post-deploy-verify.log`, `post-deploy-verify-staging.log`, `latency-probes.txt`)
 - post-deploy markdown reports in `.dev/ai/reports/deploy-checks/`
 
 Summary outputs should be captured using:

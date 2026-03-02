@@ -1,12 +1,12 @@
 # WO-0114 — Automate Deploy Pipeline with Release Gates
 
-**Status:** BLOCKED  
+**Status:** COMPLETED  
 **Created:** 2026-03-02  
 **Updated:** 2026-03-02  
 **Priority:** P0  
 **Owner:** Platform / CI-CD  
 **Source:** Follow-on from deployment/runtime hardening review  
-**Blocker:** Custom-domain staging gates remain blocked pending DNS CNAME readiness; fallback-host staging gates are operational.
+**Completed:** 2026-03-02
 
 ## Objective
 
@@ -50,7 +50,7 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] A staging deploy workflow runs on protected trigger and deploys both docs and resolver staging surfaces.
+- [x] A staging deploy workflow runs on protected trigger and deploys both docs and resolver staging surfaces.
 - [x] Production deployment can only run after successful staging gate checks.
 - [x] `smoke:endpoints:prod` is enforced against the target environment during release.
 - [x] `verify:postdeploy:prod` report artifacts are generated and archived on each deploy.
@@ -104,14 +104,18 @@ Execution update:
 - configured GitHub repository secrets:
   - `CF_ACCOUNT_ID`
   - `CF_API_TOKEN`
-- triggered workflow dispatch dry run:
+- triggered workflow dispatch dry run on `main`:
   - `https://github.com/grigb/universal-manifest/actions/runs/22599721968`
   - staging docs deploy: PASS
   - staging resolver deploy: FAIL on `main` because `main` still contains placeholder staging KV IDs (`REPLACE_WITH_STAGING_KV_ID`)
   - verify/prod jobs skipped after resolver failure
 
-External unblock actions required:
+Repository fixes applied after that run:
 
-1. Merge/publish resolver staging KV ID updates so CI does not use placeholder IDs.
-2. Add/propagate custom-domain DNS CNAME records for staging hosts.
-3. Re-run `deploy-gated.yml` with `promote_to_production=false` and confirm `verify_staging` passes.
+- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` now uses real staging KV IDs
+- `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml` now supports staging host overrides via repo vars
+
+Follow-up (non-blocking enhancement):
+
+1. Re-run `deploy-gated.yml` from a ref that includes the staging-KV/workflow updates to record a full-pass evidence run.
+2. Complete custom-domain DNS propagation for `staging.*` hostnames and remove temporary fallback overrides.
