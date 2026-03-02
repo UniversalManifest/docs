@@ -1,7 +1,8 @@
 # WO-0112 — myum Consumer Frontend + Runtime Reality Audit (Live vs Stub/Mock)
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-03-02
+**Updated:** 2026-03-02
 **Priority:** P0 (Critical)
 **Source:** Direct owner request (2026-03-02) after myum implementation audit
 **Tags:** [resolver], [frontend], [site], [audit], [adoption]
@@ -10,6 +11,46 @@
 - WO-0098 (resolver API reference page; completed)
 - Existing audit baseline: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-myum-domain-implementation-audit.md`
 **Estimated effort:** 2-3 days (design + implementation + verification + report pack)
+
+## Progress update (2026-03-02)
+
+Completed this pass:
+
+- Comprehensive WO-grade report created:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-runtime-reality-report.md`
+- Resolver consumer frontend and route-entry enhancements implemented:
+  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/index.html`
+  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/result.html`
+  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/ops.html`
+  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/index.astro`
+  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/result.astro`
+  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/ops.astro`
+- Docs/examples alignment updates implemented:
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/reference/resolver-api.md`
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/publishing/production-smoke.md`
+  - `/Users/grig/work/repo/universalmanifest/examples/code/05-resolve-from-myum/README.md`
+  - `/Users/grig/work/repo/universalmanifest/examples/code/05-resolve-from-myum/fetch-by-umid.mjs`
+- Verification evidence captured:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-index-home.png`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-result-404.png`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-ops.png`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-home.png`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-result.png`
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-ops.png`
+
+Deployment alignment completion:
+
+- Docs artifact deployed to Cloudflare Pages project `universalmanifest-net` on 2026-03-02.
+- Production route verification now passes:
+  - `https://universalmanifest.net/sandbox/` -> `200`
+  - `https://universalmanifest.net/resolver/` -> `200`
+  - `https://universalmanifest.net/resolver/ops` -> `200`
+  - `https://universalmanifest.net/reference/resolver-api/` -> `200`
+- Production endpoint smoke now passes:
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net`
+- Post-deploy verification report:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T21-54-52-324Z-post-deploy-verification.md`
 
 ## Objective
 
@@ -437,51 +478,51 @@ Give senior engineers and integrators a quick operational pane.
 
 ### Phase 1 — Audit artifact finalization
 
-- [ ] Consolidate and refresh comprehensive report with production observations.
-- [ ] Add explicit appendix quantifying file-level live vs simulated surfaces.
-- [ ] Produce senior-team-ready executive and deep-dive sections.
+- [x] Consolidate and refresh comprehensive report with production observations.
+- [x] Add explicit appendix quantifying file-level live vs simulated surfaces.
+- [x] Produce senior-team-ready executive and deep-dive sections.
 
 ### Phase 2 — Frontend implementation
 
-- [ ] Create resolver consumer pages and shared CSS tokens/components.
-- [ ] Implement real fetch flows for health, well-known, resolve (direct + b64u), etag revalidate.
-- [ ] Implement status-aware result rendering for `200/307/400/404/405/410/500`.
-- [ ] Implement trust verdict engine and diagnostics drawer.
+- [x] Create resolver consumer pages and shared CSS tokens/components.
+- [x] Implement real fetch flows for health, well-known, resolve (direct + b64u), etag revalidate.
+- [x] Implement status-aware result rendering for `200/307/400/404/405/410/500`.
+- [x] Implement trust verdict engine and diagnostics drawer.
 
 ### Phase 3 — Alignment cleanup
 
-- [ ] Update stale simulation messaging or route examples that conflict with real resolver domain.
-- [ ] Ensure docs and examples distinguish simulation from live behavior.
-- [ ] Ensure API/body examples reflect runtime behavior.
+- [x] Update stale simulation messaging or route examples that conflict with real resolver domain.
+- [x] Ensure docs and examples distinguish simulation from live behavior.
+- [x] Ensure API/body examples reflect runtime behavior.
 
 ### Phase 4 — Verification
 
-- [ ] Run build/typecheck/test/smoke scripts.
-- [ ] Browser verification using DevTools (load pages, validate visuals, check console clean).
-- [ ] Capture verification evidence paths in report.
+- [x] Run build/typecheck/test/smoke scripts.
+- [x] Browser verification using DevTools (load pages, validate visuals, check console clean).
+- [x] Capture verification evidence paths in report.
 
 ## Acceptance criteria
 
 ### Report quality acceptance
 
-- [ ] Report explicitly classifies each relevant surface as `Live`, `Skeleton`, `Simulated`, or `Mock`.
-- [ ] Report includes production-observed command evidence from audit date.
-- [ ] Report includes line-referenced provenance for all critical claims.
-- [ ] Report includes remediation sequence with severity and execution order.
+- [x] Report explicitly classifies each relevant surface as `Live`, `Skeleton`, `Simulated`, or `Mock`.
+- [x] Report includes production-observed command evidence from audit date.
+- [x] Report includes line-referenced provenance for all critical claims.
+- [x] Report includes remediation sequence with severity and execution order.
 
 ### Frontend quality acceptance
 
-- [ ] A non-expert user can resolve a UMID in <30 seconds.
-- [ ] Verdict state (`SAFE TO USE` / `DO NOT USE` / `MANUAL REVIEW`) is always present.
-- [ ] Redirect (`307`) path is treated as a first-class valid resolver outcome.
-- [ ] Error-state messaging is explicit and non-ambiguous.
-- [ ] UI clearly labels data provenance (live vs simulated) at all times.
+- [x] A non-expert user can resolve a UMID in <30 seconds.
+- [x] Verdict state (`SAFE TO USE` / `DO NOT USE` / `MANUAL REVIEW`) is always present.
+- [x] Redirect (`307`) path is treated as a first-class valid resolver outcome.
+- [x] Error-state messaging is explicit and non-ambiguous.
+- [x] UI clearly labels data provenance (live vs simulated) at all times.
 
 ### Contract alignment acceptance
 
-- [ ] UI behavior is contract-consistent for headers/status semantics.
-- [ ] Example/documentation drift relevant to consumer usage is eliminated.
-- [ ] Smoke checks remain green after changes.
+- [x] UI behavior is contract-consistent for headers/status semantics.
+- [x] Example/documentation drift relevant to consumer usage is eliminated.
+- [x] Smoke checks remain green after changes.
 
 ## Validation commands
 

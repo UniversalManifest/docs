@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-01
-**Status:** 80 work orders defined. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) NOT_STARTED. Spec boundary audit wave (WO-0081 through WO-0089) NOT_STARTED.
+**Date:** 2026-03-02
+**Status:** 105 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) NOT_STARTED.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -69,7 +69,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - SandboxLayoutV2 (CSS Grid), SandboxEngineV2 (two-entity state management)
   - Scenario detail page rewrite, full scenario migration (GS, TV, IL, EC, AD)
   - Responsive polish, animations, accessibility audit
-  - Build verified: 94 pages, 0 errors. Awaiting browser testing and production deployment.
+  - Build and browser verification completed.
 - **Public docs IA + editorial polish**
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
@@ -152,7 +152,7 @@ Per CEO mandate ([`docs/MANDATE-interactive-implementation-sandbox.md`](MANDATE-
 
 #### Sandbox V2 Redesign (WO-0069 through WO-0080) — COMPLETED
 
-All 12 work orders completed (2026-03-01). Build verified (94 pages, 0 errors). Awaiting browser testing and production deployment.
+All 12 work orders completed (2026-03-01). Build and browser verification completed.
 
 - Completed: `WO-0069` HierarchyExplorer (reusable collapsible JSON tree-view) (2026-03-01)
 - Completed: `WO-0070` DetailsCard (dual-mode hierarchy/JSON toggle) (2026-03-01)
@@ -177,21 +177,19 @@ All 12 work orders completed (2026-03-01). Build verified (94 pages, 0 errors). 
 - `WO-0058` v0.1-to-v0.2 migration guide (HIGH, blocks Gate G6)
 - `WO-0059` governance completion: breaking-change, deprecation, incident policies (CRITICAL, blocks Gate G6 + World-ready)
 
-#### Spec Boundary Audit Wave (WO-0081 through WO-0089) — NOT_STARTED
+#### Audit-Driven Content and Documentation Waves (WO-0081 through WO-0111) — COMPLETED
 
-- `WO-0081` add specification identity banner to entry points
-- `WO-0082` remove implementation references from spec documents
-- `WO-0083` restructure root README quick start
-- `WO-0084` restructure site sidebar spec vs implementation
-- `WO-0085` create build-your-own-implementation page
-- `WO-0086` add spec-implementation language guidelines
-- `WO-0087` reposition TypeScript in agent briefing and explainers
-- `WO-0088` qualify TypeScript references in integration docs
-- `WO-0089` fix legacy naming and branding leaks
+- Completed: `WO-0081` through `WO-0090` (spec-vs-implementation boundary fixes)
+- Completed: `WO-0091` through `WO-0102` (external-facing content and site publishing)
+- Completed: `WO-0103` through `WO-0111` (documentation freshness, change records, and animated SVG gallery organization)
 
-## Priority context (2026-03-01)
+#### myum Resolver Consumer Frontend + Runtime Reality (WO-0112) — COMPLETED
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068) and Sandbox V2 Redesign (WO-0069 through WO-0080) are completed. The External Adopter Wave (WO-0053 through WO-0059) and Spec Boundary Audit Wave (WO-0081 through WO-0089) are the next execution priorities.
+- `WO-0112` implementation, deployment alignment, and production verification are complete (`/sandbox/`, `/resolver/`, and `/reference/resolver-api/` are live and production smoke passes)
+
+## Priority context (2026-03-02)
+
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), and audit-driven waves (WO-0081 through WO-0112) are completed. The next execution priority is advancing the External Adopter Wave (WO-0053 through WO-0059).
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 
