@@ -36,6 +36,16 @@ Excalidraw is not approved for production visuals but may be used in the future 
 
 See `docs/design/ANIMATED-SVG-WORKFLOW.md` for the complete process.
 
+## Workflow and Deprecation Clarity
+
+For canonical status of active workflow vs deprecated/historical tracks, see:
+
+- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`
+
+Summary:
+- Active production workflow: WO-0030 prompt-pack pipeline.
+- Deprecated for production: Excalidraw exports and archived pre-upgrade asset tracks.
+
 ## Naming
 
 Use stable, descriptive names:

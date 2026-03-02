@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-03-02
-**Status:** 105 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) NOT_STARTED.
+**Status:** 105 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) IN_PROGRESS (`WO-0053` and `WO-0054` completed; `WO-0055` through `WO-0059` not started).
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -41,7 +41,8 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Release checklist: `docs/DONE-DONE-CHECKLIST.md`
   - Evidence pack template: `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
 - **Tooling**
-  - TypeScript types + runtime assertion for v0.1: `packages/universal-manifest/`
+  - TypeScript types + runtime assertion in spec repo: `packages/universal-manifest/`
+  - Standalone TypeScript reference implementation repository: `https://github.com/grigb/um-typescript`
   - Fixture validation run via `npm test` (build + validate valid + invalid fixtures)
 - **Proof surfaces (executable + visual)**
   - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`)
@@ -167,10 +168,10 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Completed: `WO-0079` Remaining scenario migration: TV, IL, EC, AD (2026-03-01)
 - Completed: `WO-0080` Responsive polish, animations, accessibility audit (2026-03-01)
 
-#### External Adopter Wave (WO-0053 through WO-0059) — NOT_STARTED
+#### External Adopter Wave (WO-0053 through WO-0059) — IN_PROGRESS
 
-- `WO-0053` standalone conformance test suite (CRITICAL, blocks Gate G4)
-- `WO-0054` reference implementation repository (CRITICAL, blocks Gate G4)
+- Completed: `WO-0053` standalone conformance test suite (2026-03-02)
+- Completed: `WO-0054` reference implementation repository (2026-03-02)
 - `WO-0055` adopter onboarding document package (CRITICAL, blocks Gate G4)
 - `WO-0056` adopter feedback loop and contract system (HIGH, blocks Gate G4 + G6)
 - `WO-0057` spec vs. implementation documentation clarity (HIGH, blocks Gate G4)
@@ -189,7 +190,7 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 
 ## Priority context (2026-03-02)
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), and audit-driven waves (WO-0081 through WO-0112) are completed. The next execution priority is advancing the External Adopter Wave (WO-0053 through WO-0059).
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), and audit-driven waves (WO-0081 through WO-0112) are completed. The next execution priority is WO-0055, followed by WO-0056 through WO-0059.
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 

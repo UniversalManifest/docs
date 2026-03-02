@@ -1,5 +1,28 @@
 # Decisions (Universal Manifest)
 
+## 2026-03-02 — Gate G6 governance completion baseline adopted
+
+### Decision
+
+- Adopt explicit governance operational policies required for Gate G6 closure:
+  - `docs/governance/BREAKING-CHANGE-POLICY.md`
+  - `docs/governance/DEPRECATION-POLICY.md`
+  - `docs/governance/INCIDENT-RESPONSE.md`
+  - `docs/governance/RELEASE-CADENCE.md`
+- Adopt `docs/guides/MIGRATION-V01-V02.md` as the canonical v0.1-to-v0.2 migration playbook.
+
+### Rationale
+
+- Gate G6 requires explicit breaking-change and deprecation policy evidence.
+- World-ready checks require documented and tested incident/rollback procedures.
+- External adopters need predictable lifecycle and migration contracts before multi-party interoperability claims are credible.
+
+### Policy impact
+
+- Breaking normative changes now require explicit migration and rollback artifacts before merge.
+- Version lifecycle states (`draft`, `stable`, `deprecated`, `end-of-life`) are now formal governance vocabulary.
+- Incident simulation evidence is now part of release readiness evidence for major governance milestones.
+
 ## 2026-02-11 — v0.1 bootstrap decisions
 
 ### Separate spec repo

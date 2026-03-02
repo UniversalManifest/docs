@@ -1,7 +1,8 @@
 # WO-0053 — Standalone Conformance Test Suite
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
+**Completed:** 2026-03-02
 **Priority:** CRITICAL
 **Blocks:** Gate G4 (Interoperability proof), Gate G2 (Conformance testability)
 **Dependencies:** None (foundational work order; other WOs in this wave depend on this)
@@ -40,11 +41,22 @@ Out of scope:
 - Hosting a conformance certification service (post-1.0).
 - Changing normative spec semantics.
 
+## Completion summary (2026-03-02)
+
+- Verified standalone conformance package under `/Users/grig/work/repo/universalmanifest/conformance/` with fixture packaging, expected manifests, runner CLI, schemas, TypeScript reference adapter, and badges.
+- Applied runner/schema alignment fix so generated reports validate cleanly against `conformance-report.schema.json`:
+  - Added optional `adapterReason` field to report schema.
+  - Added `none` conformance level for failing-report compatibility.
+  - Updated runner conformance-level derivation to return `v0.2-extended` when extended fixtures are present and passing.
+- Ran end-to-end conformance execution against the TypeScript adapter and validated report JSON against schema.
+- Verification evidence recorded at:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0053-conformance-suite-verification.md`
+
 ## Execution phases
 
 ### Phase 1 — Test fixture packaging and expected-results manifest
 
-- [ ] Create a `conformance/` directory structure (or standalone repo scaffold):
+- [x] Create a `conformance/` directory structure (or standalone repo scaffold):
   ```
   conformance/
     v0.1/
@@ -59,7 +71,7 @@ Out of scope:
     schema/
       conformance-report.schema.json  # report format schema
   ```
-- [ ] Define `expected.json` format: for each fixture file, specify:
+- [x] Define `expected.json` format: for each fixture file, specify:
   - `filename`: relative path
   - `expectedResult`: `"accept"` or `"reject"`
   - `reason`: human-readable explanation of what is being tested
@@ -69,13 +81,13 @@ Out of scope:
 
 ### Phase 2 — CLI conformance runner (reference)
 
-- [ ] Build a CLI tool that:
+- [x] Build a CLI tool that:
   - Takes a path to an implementation's "adapter" (stdin/stdout protocol or HTTP endpoint).
   - Feeds each fixture to the adapter.
   - Collects accept/reject results.
   - Compares against `expected.json`.
   - Produces a conformance report.
-- [ ] Adapter protocol specification:
+- [x] Adapter protocol specification:
   - Input: JSON fixture on stdin (or HTTP POST body).
   - Output: JSON result on stdout (or HTTP response):
     ```json
@@ -85,11 +97,11 @@ Out of scope:
       "reason": "missing @context field"
     }
     ```
-- [ ] Reference adapter wrapping the existing `packages/universal-manifest` validator.
+- [x] Reference adapter wrapping the existing `packages/universal-manifest` validator.
 
 ### Phase 3 — Machine-readable conformance report format
 
-- [ ] Define `conformance-report.schema.json`:
+- [x] Define `conformance-report.schema.json`:
   ```json
   {
     "implementation": {
@@ -115,16 +127,16 @@ Out of scope:
     "pass": true
   }
   ```
-- [ ] Validate the report schema against the runner output.
+- [x] Validate the report schema against the runner output.
 
 ### Phase 4 — Badge and status mechanism
 
-- [ ] Define conformance levels:
+- [x] Define conformance levels:
   - `v0.1-baseline`: passes all v0.1 valid + invalid fixtures
   - `v0.2-baseline`: passes all v0.2 valid + invalid fixtures (includes signature verification)
   - `v0.2-extended`: passes v0.2 baseline + revocation-aware fixtures
-- [ ] Create badge SVG templates for each level.
-- [ ] Define a `conformance-status.json` file format implementations can host:
+- [x] Create badge SVG templates for each level.
+- [x] Define a `conformance-status.json` file format implementations can host:
   ```json
   {
     "implementation": "my-um-validator",
@@ -134,16 +146,16 @@ Out of scope:
     "reportUrl": "https://..."
   }
   ```
-- [ ] Document how to generate and display badges.
+- [x] Document how to generate and display badges.
 
 ### Phase 5 — Documentation and adopter instructions
 
-- [ ] Write adopter-facing README for the conformance suite.
-- [ ] Include step-by-step instructions for:
+- [x] Write adopter-facing README for the conformance suite.
+- [x] Include step-by-step instructions for:
   - Running the suite against a new implementation.
   - Building a custom adapter for any language.
   - Generating and submitting a conformance report.
-- [ ] Add a "Getting Started with Conformance Testing" section to the main UM docs site.
+- [x] Add a "Getting Started with Conformance Testing" section to the main UM docs site.
 
 ## Key file paths (created/modified)
 
@@ -163,14 +175,14 @@ Modified files:
 
 ## Acceptance criteria
 
-- [ ] All existing v0.1 fixtures (valid + invalid) are packaged with machine-readable expected results in `expected.json`.
-- [ ] All existing v0.2 fixtures (valid + invalid) are packaged with machine-readable expected results in `expected.json`.
-- [ ] CLI conformance runner can execute against the reference TypeScript adapter and produce a passing report.
-- [ ] Conformance report JSON validates against `conformance-report.schema.json`.
-- [ ] An adopter can clone the conformance suite, build a simple adapter in a non-TypeScript language, and run the suite without reading spec repo internals.
-- [ ] Badge SVGs exist for each conformance level.
-- [ ] Adopter-facing documentation is clear enough for an AI agent or developer to follow without additional context.
-- [ ] Suite version is tracked and can be bumped independently of spec versions.
+- [x] All existing v0.1 fixtures (valid + invalid) are packaged with machine-readable expected results in `expected.json`.
+- [x] All existing v0.2 fixtures (valid + invalid) are packaged with machine-readable expected results in `expected.json`.
+- [x] CLI conformance runner can execute against the reference TypeScript adapter and produce a passing report.
+- [x] Conformance report JSON validates against `conformance-report.schema.json`.
+- [x] An adopter can clone the conformance suite, build a simple adapter in a non-TypeScript language, and run the suite without reading spec repo internals.
+- [x] Badge SVGs exist for each conformance level.
+- [x] Adopter-facing documentation is clear enough for an AI agent or developer to follow without additional context.
+- [x] Suite version is tracked and can be bumped independently of spec versions.
 
 ## Validation commands
 

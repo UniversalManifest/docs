@@ -62,8 +62,8 @@ Drift governance and follow-on WO trigger criteria:
 
 ### External Adopter Verification Wave (WO-0053 through WO-0059)
 
-- `docs/workorders/WO-0053-standalone-conformance-test-suite.md` — [NOT_STARTED] Extract conformance tests into standalone public suite with CLI runner, expected-results manifest, and badge mechanism (CRITICAL, blocks Gate G4)
-- `docs/workorders/WO-0054-reference-implementation-repository-typescript.md` — [NOT_STARTED] Create separate public TypeScript reference implementation repo demonstrating full UM adoption (CRITICAL, blocks Gate G4; depends on WO-0053)
+- `docs/workorders/WO-0053-standalone-conformance-test-suite.md` — [COMPLETED] Extract conformance tests into standalone public suite with CLI runner, expected-results manifest, and badge mechanism (CRITICAL, blocks Gate G4)
+- `docs/workorders/WO-0054-reference-implementation-repository-typescript.md` — [COMPLETED] Create separate public TypeScript reference implementation repo demonstrating full UM adoption (CRITICAL, blocks Gate G4; depends on WO-0053)
 - `docs/workorders/WO-0055-adopter-onboarding-document-package.md` — [NOT_STARTED] Create implementation guide, decision tree, FAQ, and agent-handoff document for external adopters (CRITICAL, blocks Gate G4; depends on WO-0053, WO-0054)
 - `docs/workorders/WO-0056-adopter-feedback-loop-and-contract-system.md` — [NOT_STARTED] Establish structured feedback loop with SLA, adopter progress tracking, spec improvement queue, and regression prevention (HIGH, blocks Gate G4 + G6; depends on WO-0053, WO-0055)
 - `docs/workorders/WO-0057-spec-vs-implementation-documentation-clarity.md` — [NOT_STARTED] Audit and update all docs to clearly distinguish spec from implementation, add calls-to-action for external implementations (HIGH, blocks Gate G4; depends on WO-0054)
@@ -148,11 +148,11 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Deployment and Operations Hardening Wave (WO-0113 through WO-0117)
 
-- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [NOT_STARTED] Create staging topology for docs + resolver, formalize promotion/rollback rules, and enforce environment isolation (P0; foundational for safe release iteration)
-- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [NOT_STARTED] Implement staged/prod deployment workflows with required smoke and post-deploy gate checks before production promotion (P0; depends on WO-0113)
-- `docs/workorders/WO-0115-pin-toolchain-versions-and-runtime-baselines.md` — [NOT_STARTED] Pin Node/Wrangler/runtime baselines across local + CI to eliminate environment drift (P1; supports reproducible builds/tests/deploys)
-- `docs/workorders/WO-0116-expand-resolver-test-suite-for-contract-coverage.md` — [NOT_STARTED] Add dedicated resolver contract tests for full status/header/path matrix and integrate into CI (P0; hardens `myum.net` behavior regression detection)
-- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [NOT_STARTED] Add continuous synthetic monitoring, alerts, and SLO policy for staging and production surfaces (P1; depends on WO-0113 and WO-0114)
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [BLOCKED] Repository-side staging architecture/promotion model is implemented, but staging hosts are not yet reachable so staging verification cannot pass (P0; foundational for safe release iteration)
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [BLOCKED] Gated deploy workflow is implemented, but end-to-end staging execution is blocked pending staging host reachability and CI secret/variable provisioning (P0; depends on WO-0113)
+- `docs/workorders/WO-0115-pin-toolchain-versions-and-runtime-baselines.md` — [COMPLETED] Pinned Node/Wrangler/runtime baselines across local + CI and verified baseline commands (P1; supports reproducible builds/tests/deploys)
+- `docs/workorders/WO-0116-expand-resolver-test-suite-for-contract-coverage.md` — [COMPLETED] Added resolver contract test suite with full status/header/path coverage and wired it into CI (`resolver-contract` job) (P0; hardens `myum.net` behavior regression detection)
+- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [BLOCKED] Production synthetic monitoring/SLO policy is active, but staging synthetic coverage is blocked until staging surfaces are live (P1; depends on WO-0113 and WO-0114)
 
 #### Documentation Freshness and Maintenance
 

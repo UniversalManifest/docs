@@ -84,6 +84,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - [`docs/design/ANIMATED-SVG-SPEC.md`](design/ANIMATED-SVG-SPEC.md) — Animated SVG specification
 - [`docs/design/ANIMATION-PLACEMENT-PLAN.md`](design/ANIMATION-PLACEMENT-PLAN.md) — Animation placement plan
 - [`docs/design/ANIMATION-QA-CHECKLIST.md`](design/ANIMATION-QA-CHECKLIST.md) — Animation QA checklist
+- [`docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`](design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md) — Canonical active/deprecated workflow and version status for animation assets
 - [`docs/design/INFOGRAPHIC-STYLES-INVENTORY.md`](design/INFOGRAPHIC-STYLES-INVENTORY.md) — Complete infographic styles inventory
 - [`docs/design/CAPSULE-POD-DESIGN.md`](design/CAPSULE-POD-DESIGN.md) — Capsule-Pod iconic representation design spec
 - [`docs/design/PERMISSIONS-FIREWALL-DESIGN.md`](design/PERMISSIONS-FIREWALL-DESIGN.md) — Permissions firewall design

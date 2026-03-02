@@ -1,7 +1,9 @@
 # WO-0116 — Expand Resolver Test Suite for Contract Coverage
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-03-02  
+**Updated:** 2026-03-02  
+**Completed:** 2026-03-02  
 **Priority:** P0  
 **Owner:** Resolver / Quality  
 **Source:** Follow-on from deployment/runtime hardening review
@@ -39,11 +41,11 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Test suite asserts full status matrix and required response headers.
-- [ ] Test suite validates ETag generation + conditional revalidation (`304`).
-- [ ] Test suite validates redirect semantics (`307` + `Location`).
-- [ ] Test suite validates malformed path handling and method gating (`405`).
-- [ ] CI runs resolver contract tests and fails on regression.
+- [x] Test suite asserts full status matrix and required response headers.
+- [x] Test suite validates ETag generation + conditional revalidation (`304`).
+- [x] Test suite validates redirect semantics (`307` + `Location`).
+- [x] Test suite validates malformed path handling and method gating (`405`).
+- [x] CI runs resolver contract tests and fails on regression.
 
 ## Dependencies
 
@@ -62,3 +64,22 @@ npm run test
 cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
 npm run smoke:endpoints:dev
 ```
+
+## Completion Evidence (2026-03-02)
+
+Delivered artifacts:
+
+- Contract-grade resolver test suite:
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/scripts/contract-tests.mjs`
+- Resolver test command wiring:
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/package.json`
+- Resolver contract/test docs:
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/README.md`
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CONTRACT.md`
+- CI integration for resolver contract tests:
+  - `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml` (`resolver-contract` job)
+
+Verification results:
+
+- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run test:contract` -> PASS
+- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck` -> PASS

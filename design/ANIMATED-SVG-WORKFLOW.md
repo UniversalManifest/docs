@@ -2,6 +2,9 @@
 
 A standalone, portable guide for producing high-quality animated SVG explainers using a structured AI prompt-pack pipeline. This workflow was developed and proven on the Universal Manifest project (WO-0030), where it produced 29 production-quality animated SVGs that are currently live on universalmanifest.net (33 total including 2 test files and 2 pilot iterations). Any agent on any project can adapt this workflow.
 
+For active/deprecated workflow status and asset lineage clarity, see:
+`/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`.
+
 ---
 
 ## 1. Overview

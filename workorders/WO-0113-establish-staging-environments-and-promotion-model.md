@@ -1,10 +1,12 @@
 # WO-0113 — Establish Staging Environments and Promotion Model
 
-**Status:** NOT_STARTED  
+**Status:** BLOCKED  
 **Created:** 2026-03-02  
+**Updated:** 2026-03-02  
 **Priority:** P0  
 **Owner:** Platform / DevOps  
-**Source:** Follow-on from deployment/runtime hardening review
+**Source:** Follow-on from deployment/runtime hardening review  
+**Blocker:** Staging domains are not yet resolving (`staging.universalmanifest.net`, `staging.myum.net`), so staging verification gates cannot pass.
 
 ## Objective
 
@@ -54,8 +56,8 @@ Out of scope:
 - [ ] Staging docs domain serves built site and versioned `/ns/...` artifacts.
 - [ ] Staging resolver domain serves `/health`, `/.well-known/myum-resolver.json`, and `/{UMID_PATH}` using staging KV only.
 - [ ] Existing smoke scripts can run against staging with explicit base URLs.
-- [ ] Documented promotion flow exists from staging to production.
-- [ ] Rollback procedure is documented and executable.
+- [x] Documented promotion flow exists from staging to production.
+- [x] Rollback procedure is documented and executable.
 
 ## Dependencies
 
@@ -74,3 +76,29 @@ node scripts/smoke-endpoints.mjs --mode prod --docs-base https://staging.univers
 cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
 node scripts/post-deploy-verify.mjs --mode prod --docs-base https://staging.universalmanifest.net --resolver-base https://staging.myum.net --resolver-www-base https://www.staging.myum.net
 ```
+
+## Progress Update (2026-03-02)
+
+Repository deliverables completed:
+
+- Added staging/production promotion and rollback runbook:
+  - `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+- Added resolver staging environment configuration:
+  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` (`[env.staging]`)
+- Added staging verification scripts:
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json` (`smoke:endpoints:staging`, `verify:postdeploy:staging`)
+- Updated architecture/deployment docs to include staging/promotion model:
+  - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/DEPLOY-CHECKLIST.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/site/DEPLOYMENT.md`
+
+Verification results:
+
+- `npm run smoke:endpoints:staging` -> FAIL (`fetch failed` for staging docs and resolver hosts)
+- `npm run verify:postdeploy:staging` -> FAIL (`fetch failed` for staging docs host)
+
+External unblock actions required:
+
+1. Provision and route staging domains in Cloudflare DNS/Pages/Workers.
+2. Confirm staging docs and resolver deployments are live.
+3. Rerun staging smoke and post-deploy verification commands.

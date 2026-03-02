@@ -44,6 +44,36 @@ If changes are purely additive (new optional fields/fixtures/docs), you may stay
    - `git tag vX.Y.Z`
    - `git push --tags`
 
+## 2.1) Release steps (conformance suite)
+
+Use this flow when releasing fixture/runner changes under `conformance/`.
+
+1. Determine version bump type:
+   - major: breaking expected-result changes
+   - minor: additive fixtures
+   - patch: bugfixes preserving conformant behavior
+2. Update suite metadata:
+   - `conformance/package.json` version
+   - `conformance/v0.1/expected.json` and/or `conformance/v0.2/expected.json` `suiteVersion`
+3. Validate runner and adapter path:
+   - `cd conformance/runner && npm test`
+   - `cd conformance/runner && node ./cli.mjs --mode command --adapter-command \"node ../adapters/typescript/adapter.mjs\" --versions 0.1,0.2 --report ./conformance-report.json`
+4. Confirm no unintended regressions against reference implementation.
+5. Commit with explicit suite-version rationale.
+6. Tag conformance release (or include in coordinated repo release notes).
+
+## 2.2) Release authority and approvals
+
+1. Patch release:
+   - releaser: any maintainer
+   - approval: at least one maintainer review
+2. Minor release:
+   - releaser: maintainer after TSC consensus
+   - approval: consensus recorded in review thread / decision log
+3. Major release (breaking):
+   - releaser: maintainer delegated by TSC
+   - approval: TSC consensus, RFC approved, migration and deprecation artifacts published
+
 ## 3) Release steps (publishing to `universalmanifest.net`)
 
 Goal: make these resolve over HTTPS with correct headers:

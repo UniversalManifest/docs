@@ -178,6 +178,15 @@ Submit feedback via:
 - RFC proposals (specification changes)
 - Mailing list discussions (planned)
 
+### Adopter Feedback Operations
+
+Adopter feedback is handled with structured issue intake, explicit response timelines, and a spec-improvement routing process.
+
+- SLA commitments and triage workflow: [ADOPTER-SLA.md](./ADOPTER-SLA.md)
+- Spec-change routing queue: [SPEC-IMPROVEMENT-QUEUE.md](./SPEC-IMPROVEMENT-QUEUE.md)
+- Backward-compatibility and fixture stability policy: [REGRESSION-PREVENTION.md](./REGRESSION-PREVENTION.md)
+- Adopter registration and progress tracking: [adopters/README.md](../../adopters/README.md)
+
 ## Code of Conduct
 
 All participants must follow the [Code of Conduct](../../CODE_OF_CONDUCT.md). Violations should be reported to conduct@universalmanifest.net.
@@ -204,6 +213,10 @@ This governance document can be amended by:
 - [RFC Template](./RFC-TEMPLATE.md)
 - [Done-Done Framework](../../site/src/content/docs/governance/done-done.md)
 - [Decision Log](../../site/src/content/docs/governance/decisions.md)
+- [Adopter Feedback SLA](./ADOPTER-SLA.md)
+- [Spec Improvement Queue](./SPEC-IMPROVEMENT-QUEUE.md)
+- [Regression Prevention Policy](./REGRESSION-PREVENTION.md)
+- [Adopter Registry Guide](../../adopters/README.md)
 
 ---
 

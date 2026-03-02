@@ -94,6 +94,11 @@ Evidence paths:
 Evidence paths:
 
 - [ ] `docs/DECISIONS.md`
+- [ ] `docs/governance/BREAKING-CHANGE-POLICY.md`
+- [ ] `docs/governance/DEPRECATION-POLICY.md`
+- [ ] `docs/governance/INCIDENT-RESPONSE.md`
+- [ ] `docs/governance/RELEASE-CADENCE.md`
+- [ ] `docs/guides/MIGRATION-V01-V02.md`
 - [ ] release notes / migration docs in evidence pack
 
 ## 8) Gate G7 — Operational realism
@@ -116,6 +121,11 @@ Evidence paths:
 - [ ] Conformance suite includes adversarial and misuse cases
 - [ ] Long-term governance and release cadence are demonstrated
 - [ ] Incident/rollback procedures are documented and tested
+
+Evidence paths:
+
+- [ ] `docs/governance/INCIDENT-RESPONSE.md`
+- [ ] `docs/reports/2026-03-02-incident-simulation-evidence.md`
 
 ## 10) Final sign-off
 
