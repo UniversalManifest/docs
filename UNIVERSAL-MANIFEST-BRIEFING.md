@@ -230,7 +230,7 @@ This separation keeps the specification neutral and governance-clean, while runt
         "@id": "urn:uuid:device-tv-001",
         "@type": "um:Entity",
         "name": "Display Device TV-001",
-        "description": "NVIDIA Shield TV Pro enrolled to venue edge"
+        "description": "Public display device enrolled to venue edge"
       }
     }
   ],
@@ -343,7 +343,7 @@ Universal Manifest has active integration guidance for nine distinct lanes. Each
 
 ### 6.8 IoT/Edge Devices (Venue Beacons, Sensors, Displays)
 
-**Scenario**: A cafe enrolls an NVIDIA Shield TV Pro as a public display. The venue edge issues a device-scoped manifest that encodes the device identity, capabilities (rendering support, max resolution), venue association, content policy (safe mode rating, allowed/blocked content tags), and operational pointers (edge base URL, discovery descriptor). The display receives manifest-changed signals, fetches by ID, caches while in use, and enforces TTL. Telemetry logs reference manifest IDs, not full payloads. The display operates in local-first mode -- no cloud dependency required.
+**Scenario**: A cafe enrolls a public display device (e.g., an Android TV). The venue edge issues a device-scoped manifest that encodes the device identity, capabilities (rendering support, max resolution), venue association, content policy (safe mode rating, allowed/blocked content tags), and operational pointers (edge base URL, discovery descriptor). The display receives manifest-changed signals, fetches by ID, caches while in use, and enforces TTL. Telemetry logs reference manifest IDs, not full payloads. The display operates in local-first mode -- no cloud dependency required.
 
 **Key fields used**: `devices` (enrolled hardware), `claims` (role, policy.safeMode), `consents` (telemetry.proofOfPlay), `pointers` (edgeBaseUrl, edgeDescriptor, universalManifest.current).
 
@@ -453,7 +453,7 @@ The repository includes a rich set of example manifests that demonstrate the sta
 
 **Domain-specific stubs:**
 - `venue-edge-manifest.jsonld` -- venue identity, policy, edge node, enrolled devices
-- `display-device-manifest.jsonld` -- constrained consumer (NVIDIA Shield) with capabilities
+- `display-device-manifest.jsonld` -- constrained consumer (public display device) with capabilities
 - `creator-public-capsule-manifest.jsonld` -- creator profile with public capsule projection
 - `social-profile-manifest.jsonld` -- portable public profile for social surfaces
 - `display-envelope-manifest.jsonld` -- minimal display without DID dependency

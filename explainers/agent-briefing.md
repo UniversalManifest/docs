@@ -16,10 +16,9 @@ Imagine a Swiss Army Knife for your personal data -- one compact document that c
 - **Current version:** v0.1 (stable, production infrastructure live), v0.2 (draft, adds Ed25519 signature profile)
 - **Spec site:** [universalmanifest.net](https://universalmanifest.net)
 - **Resolver:** `myum.net/{UMID}` -- look up any manifest by its Universal Manifest Identifier
-- **GitHub:** `github.com/nicholasgrigoriadis/universalmanifest`
-- **npm package:** `@nicholasgrigoriadis/universal-manifest` (TypeScript validation and helpers)
+- **GitHub:** `github.com/grigb/universal-manifest`
 - **License:** Apache-2.0
-- **Status:** Production infrastructure live (resolver, docs site, validation library, published schemas)
+- **Status:** Production infrastructure live (resolver, docs site, published schemas, JSON Schema validation artifacts)
 - **Manifest size:** Minimal ~300 bytes; typical with shards 1-3 KB
 - **Subject identifier:** Any URI; DIDs recommended but not required
 - **Signature algorithm (v0.2):** JCS (RFC 8785) canonicalization + Ed25519
@@ -48,7 +47,7 @@ Imagine a Swiss Army Knife for your personal data -- one compact document that c
 
 ### For Developers
 
-Universal Manifest gives you a single, well-specified document format for exchanging identity, credentials, and preferences between systems. Instead of building custom integrations for every pair of services, you parse one JSON document. The TypeScript helper library handles validation. JSON Schema files are published for both spec versions. Runnable code examples cover every core concept from "hello world" to signed manifests. Adoption is progressive: start by parsing JSON, add validation when you're ready, issue your own manifests when it makes sense.
+Universal Manifest gives you a single, well-specified document format for exchanging identity, credentials, and preferences between systems. Instead of building custom integrations for every pair of services, you parse one JSON document. JSON Schema files are published for both spec versions, so you can validate manifests in any language. Runnable code examples cover every core concept from "hello world" to signed manifests. Adoption is progressive: start by parsing JSON, add schema validation when you're ready, issue your own manifests when it makes sense.
 
 ### For Business Decision-Makers
 
@@ -82,7 +81,7 @@ A: Default-deny consent model. Consents are embedded in the manifest and travel 
 A: Forward-compatibility rule: consumers MUST safely ignore fields they don't recognize. New features never break existing implementations.
 
 **Q: Is it production-ready?**
-A: v0.1 is stable with production infrastructure (resolver at myum.net, published schemas, TypeScript validation library). v0.2 (adding signatures) is in draft.
+A: v0.1 is stable with production infrastructure (resolver at myum.net, published JSON Schemas, conformance fixtures, and a TypeScript reference implementation). v0.2 (adding signatures) is in draft.
 
 **Q: How big are manifests?**
 A: Minimal: ~300 bytes. Typical with shards: 1-3 KB. Small enough for QR codes and Bluetooth.
@@ -106,13 +105,13 @@ A manifest carries a subject identifier (typically a DID), a validity window (is
 
 The format is offline-tolerant by design. Every manifest expires automatically. No revocation check needed. This makes it work for edge devices, public displays, and field operations with intermittent connectivity.
 
-v0.1 is stable with production infrastructure: a resolver service at myum.net, a TypeScript validation library on npm, published JSON Schema and JSON-LD context files, and a full suite of code examples. v0.2 adds a cryptographic signature profile using JCS canonicalization and Ed25519.
+v0.1 is stable with production infrastructure: a resolver service at myum.net, published JSON Schema and JSON-LD context files, conformance fixtures, a full suite of code examples, and a TypeScript reference implementation on npm. v0.2 adds a cryptographic signature profile using JCS canonicalization and Ed25519.
 
 Adoption is progressive. Level one: parse the JSON. Level two: validate against the schema. Level three: consume well-known shards. Level four: issue your own manifests. Level five: sign and verify. You can start at any level."
 
 ### Partnership Proposal Opening
 
-"We're building Universal Manifest, an open-source portable document format for identity, credentials, and preferences. The core idea is simple: instead of every pair of systems inventing a custom integration for user data exchange, there should be one well-specified, consent-aware, offline-tolerant document they all understand. We've shipped production infrastructure -- a resolver service, a validation library, published schemas, and a documentation site. We're looking for partners who are experiencing the fragmentation problem firsthand and want to adopt or co-develop the standard."
+"We're building Universal Manifest, an open-source portable document format for identity, credentials, and preferences. The core idea is simple: instead of every pair of systems inventing a custom integration for user data exchange, there should be one well-specified, consent-aware, offline-tolerant document they all understand. We've shipped production infrastructure -- a resolver service, published schemas and conformance fixtures, a documentation site, and a TypeScript reference implementation. We're looking for partners who are experiencing the fragmentation problem firsthand and want to adopt or co-develop the standard."
 
 ---
 
@@ -134,6 +133,12 @@ Adoption is progressive. Level one: parse the JSON. Level two: validate against 
 
 ---
 
+## Reference Implementation
+
+A TypeScript reference implementation is available as the `universal-manifest` npm package. It provides validation helpers and conformance test runners for developers who want a ready-made tool. However, it is one reference implementation, not a requirement. Any language that can parse JSON and validate against the published JSON Schema can implement UM conformance independently.
+
+---
+
 ## Links and Resources
 
 | Resource | URL |
@@ -144,7 +149,7 @@ Adoption is progressive. Level one: parse the JSON. Level two: validate against 
 | Spec v0.2 (draft) | `spec/v0.2/README.md` |
 | Code examples | `examples/code/README.md` |
 | Example manifests | `examples/v0.1/` |
-| npm package | `@nicholasgrigoriadis/universal-manifest` |
+| TypeScript reference implementation (npm) | `universal-manifest` |
 | License | Apache-2.0 |
 
 ---

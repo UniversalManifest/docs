@@ -85,3 +85,69 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [NOT_STARTED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, shard type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
 - `docs/workorders/WO-0067-sandbox-visual-polish-and-illustrations.md` — [NOT_STARTED] Create 25 SVG illustrations, refine animations, category colors, dark mode, responsive polish (HIGH; depends on WO-0063, WO-0064, WO-0065, WO-0066)
 - `docs/workorders/WO-0068-sandbox-ci-parity-testing-and-qa.md` — [NOT_STARTED] CI parity testing (Node vs browser validator), scenario smoke tests, accessibility audit, performance audit (HIGH; depends on WO-0060, WO-0063, WO-0064, WO-0065, WO-0066)
+
+### Interactive Sandbox V2 Redesign Wave (WO-0069 through WO-0080)
+
+**Proposal:** [Sandbox V2 UI Redesign Proposal](/.dev/ai/proposals/2026-03-01-02-39-39Z-universalmanifest-sandbox-ui-redesign-proposal.md)
+**Handoff:** [V2 Handoff](/.dev/ai/handoffs/2026-03-01-03-55-34Z-handoff-universalmanifest.md)
+**Priority:** HIGH (CEO-directed redesign of sandbox detail page to symmetrical two-entity protocol lens layout)
+
+- `docs/workorders/WO-0069-sandbox-v2-hierarchy-explorer-component.md` — [COMPLETED] HierarchyExplorer: reusable collapsible JSON tree-view component (Phase 1 foundation; no dependencies)
+- `docs/workorders/WO-0070-sandbox-v2-details-card-component.md` — [COMPLETED] DetailsCard: dual-mode detail card with hierarchy/JSON toggle (Phase 1 foundation; depends on WO-0069)
+- `docs/workorders/WO-0071-sandbox-v2-session-state-and-types.md` — [COMPLETED] SessionStateIndicator + ScenarioDefinitionV2 types (Phase 1 foundation; no dependencies)
+- `docs/workorders/WO-0072-sandbox-v2-entity-column-component.md` — [COMPLETED] EntityColumn: symmetrical entity panel with session state and manifest explorer (Phase 2 panels; depends on WO-0070, WO-0071)
+- `docs/workorders/WO-0073-sandbox-v2-protocol-lens-component.md` — [COMPLETED] ProtocolLens: step-by-step protocol interaction viewer (Phase 2 panels; depends on WO-0071)
+- `docs/workorders/WO-0074-sandbox-v2-subject-panel-component.md` — [COMPLETED] SubjectPanel: exchanged object display with dual-mode rendering (Phase 2 panels; depends on WO-0070)
+- `docs/workorders/WO-0075-sandbox-v2-layout.md` — [COMPLETED] SandboxLayoutV2: new CSS Grid layout with header transport controls (Phase 3 layout; depends on WO-0072, WO-0073, WO-0074)
+- `docs/workorders/WO-0076-sandbox-v2-engine.md` — [COMPLETED] SandboxEngineV2: two-entity state management with subject and protocol lens (Phase 3 engine; depends on WO-0071)
+- `docs/workorders/WO-0077-sandbox-v2-scenario-detail-page-rewrite.md` — [COMPLETED] Scenario detail page rewrite: wire V2 layout, components, and engine (Phase 4 integration; depends on WO-0075, WO-0076)
+- `docs/workorders/WO-0078-sandbox-v2-getting-started-scenario-migration.md` — [COMPLETED] Getting Started scenario migration to V2 format, GS-01 through GS-04 (Phase 4 integration; depends on WO-0076)
+- `docs/workorders/WO-0079-sandbox-v2-remaining-scenario-migration.md` — [COMPLETED] Remaining scenario migration to V2 format: TV, IL, EC, AD -- 21 scenarios (Phase 5 polish; depends on WO-0077, WO-0078)
+- `docs/workorders/WO-0080-sandbox-v2-responsive-polish-animations-a11y.md` — [COMPLETED] Responsive polish, animations, and accessibility audit (Phase 5 polish; depends on WO-0077)
+
+### Audit-Driven Work Orders (WO-0081 through WO-0111)
+
+**Source:** Three audit reports from 2026-03-01:
+- Spec-vs-Implementation Boundary Audit
+- Project Completeness and Vision Audit
+- Documentation Freshness Audit
+
+#### Spec-vs-Implementation Boundary Fixes
+
+- `docs/workorders/WO-0081-add-specification-identity-banner-to-entry-points.md` — [NOT_STARTED] Add "UM is a specification" banner to root README, site landing page, and spec READMEs (P0; no dependencies)
+- `docs/workorders/WO-0082-remove-implementation-references-from-spec-documents.md` — [NOT_STARTED] Remove or qualify implementation-specific references (Shield, TS file paths, Solid Pod) from spec documents (P0; no dependencies)
+- `docs/workorders/WO-0083-restructure-root-readme-quick-start.md` — [NOT_STARTED] Restructure root README Quick Start to lead with the specification, not npm commands (P0; depends on WO-0081)
+- `docs/workorders/WO-0084-restructure-site-sidebar-spec-vs-implementation.md` — [NOT_STARTED] Restructure docs site sidebar to separate spec from implementation; also fix 3 missing integration lanes in sidebar (P1; no dependencies)
+- `docs/workorders/WO-0085-create-build-your-own-implementation-page.md` — [COMPLETED] Create "Build Your Own Implementation" language-neutral page for the docs site (P1; coordinates with WO-0084)
+- `docs/workorders/WO-0086-add-spec-implementation-language-guidelines.md` — [NOT_STARTED] Add spec-vs-implementation language guidelines and agent boundary awareness to PROJECT-RULES.md and Quick Start (P1; no dependencies)
+- `docs/workorders/WO-0087-reposition-typescript-in-agent-briefing-and-explainers.md` — [NOT_STARTED] Reposition TypeScript helper in agent briefing and explainer docs — move from Key Facts to Reference Implementation section (P1; no dependencies)
+- `docs/workorders/WO-0088-qualify-typescript-references-in-integration-docs.md` — [NOT_STARTED] Qualify TypeScript-specific references in integration template, social.md, and rp1-spatial-fabric.md (P1; no dependencies)
+- `docs/workorders/WO-0089-fix-legacy-naming-and-branding-leaks.md` — [COMPLETED] Fix legacy @localartistnetwork package name, Shield device references in governance, NVIDIA references in briefing (P2; no dependencies)
+- `docs/workorders/WO-0090-add-governance-boundary-awareness-section.md` — [COMPLETED] Add normative-vs-supplementary hierarchy to GOVERNANCE.md project scope (P2; no dependencies)
+
+#### Project Completeness and External-Facing Content
+
+- `docs/workorders/WO-0091-publish-explainer-documents-on-site.md` — [NOT_STARTED] Publish one-pager, full briefing, and agent briefing as pages on universalmanifest.net under "About" section (P0; no dependencies)
+- `docs/workorders/WO-0092-create-standalone-adoption-guide.md` — [NOT_STARTED] Create "How to Adopt UM" guide consolidating adoption tiers and adoption path for third parties (P0; coordinates with WO-0055)
+- `docs/workorders/WO-0093-create-standards-positioning-document.md` — [NOT_STARTED] Create standards positioning document covering W3C, IETF, MSF, OMA3, LF relationship and standardization intent (P0; no dependencies)
+- `docs/workorders/WO-0094-fix-github-repository-url-inconsistencies.md` — [COMPLETED] Resolve 4 conflicting GitHub URLs (LocalArtistNetwork, WebOfTrustInfo, nicholasgrigoriadis, universalmanifest) across all files (P0; no dependencies)
+- `docs/workorders/WO-0095-create-outreach-and-adoption-strategy-document.md` — [NOT_STARTED] Create outreach strategy with target audiences, channels, launch checklist, and timeline (P1; no dependencies)
+- `docs/workorders/WO-0096-create-why-um-page-on-site.md` — [NOT_STARTED] Create "Why UM?" non-technical landing page leading with the fragmentation problem (P1; depends on WO-0091)
+- `docs/workorders/WO-0097-publish-commercial-journeys-on-site.md` — [NOT_STARTED] Publish 5 commercial journeys (creator, venue, app dev, privacy, enterprise) as site pages under Use Cases (P1; no dependencies)
+- `docs/workorders/WO-0098-create-resolver-api-reference-page.md` — [NOT_STARTED] Consolidate resolver documentation into single API reference page on the site (P1; no dependencies)
+- `docs/workorders/WO-0099-create-standards-landscape-comparison-page.md` — [NOT_STARTED] Publish standards comparison page (UM vs VCs, DIDComm, Solid, OIDC) on the site (P1; depends on WO-0093)
+- `docs/workorders/WO-0100-create-how-we-build-this-contributor-page.md` — [NOT_STARTED] Create contributor-facing methodology page explaining journeys, done-done, and work orders (P1; no dependencies)
+- `docs/workorders/WO-0101-add-changelog-and-release-notes-page-to-site.md` — [NOT_STARTED] Add changelog/release notes page to the public site (P1; no dependencies)
+- `docs/workorders/WO-0102-create-integration-authoring-guide.md` — [NOT_STARTED] Publish existing integration authoring guide on the site and fix broken catalog link (P1; no dependencies)
+- `docs/workorders/WO-0110-create-msf-relationship-document.md` — [NOT_STARTED] Document Metaverse Standards Forum lineage, current relationship, and future plans (P2; coordinates with WO-0093)
+- `docs/workorders/WO-0111-organize-animated-svgs-into-browsable-gallery.md` — [NOT_STARTED] Organize 29 production animated SVGs into browsable gallery page on the site (P2; depends on WO-0105)
+
+#### Documentation Freshness and Maintenance
+
+- `docs/workorders/WO-0103-update-docs-readme-with-missing-references.md` — [NOT_STARTED] Update docs/README.md to reference ~20 new document categories created this week (P0; no dependencies)
+- `docs/workorders/WO-0104-update-critical-path-with-current-work-streams.md` — [NOT_STARTED] Update CRITICAL-PATH.md with sandbox wave, external adopter wave, teaching scripts, and code examples phases (P0; no dependencies)
+- `docs/workorders/WO-0105-fix-animated-svg-count-across-documents.md` — [COMPLETED] Fix animated SVG count from "16" to actual count (29 production, 33 total) across STATE-OF-THE-PROJECT, diagrams/README, and ANIMATED-SVG-WORKFLOW (P1; no dependencies)
+- `docs/workorders/WO-0106-update-state-of-the-project-with-current-status.md` — [NOT_STARTED] Fix stale status pointers, update WO-0060-0068 status to COMPLETED, correct SVG and fixture counts (P0; depends on WO-0107)
+- `docs/workorders/WO-0107-commit-interactive-sandbox-and-design-artifacts.md` — [NOT_STARTED] Commit all uncommitted sandbox code (V1+V2), design docs, and configuration changes (P0; no dependencies)
+- `docs/workorders/WO-0108-create-formal-wo-files-for-sandbox-v2.md` — [COMPLETED] Create formal WO files for WO-0069 through WO-0080 (Sandbox V2 redesign) and add to index (P1; depends on WO-0107)
+- `docs/workorders/WO-0109-add-ci-workflow-decision-record.md` — [NOT_STARTED] Add decision record for expanded CI workflow (ci.yml, WO-0049) to DECISIONS.md (P2; no dependencies)

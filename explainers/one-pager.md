@@ -18,7 +18,7 @@ Every manifest has a built-in expiry date. Systems that receive a manifest must 
 
 ## Who it's for
 
-UM is designed for three audiences. **Developers** get a well-specified format with JSON Schema validation, a TypeScript helper library, and runnable code examples. **Businesses** get a standard that reduces integration cost and carries privacy consent natively. **Individuals** get a format that puts them in control -- their manifest, their permissions, their data.
+UM is designed for three audiences. **Developers** get a well-specified format with JSON Schema validation, conformance fixtures, runnable code examples, and a TypeScript reference implementation. **Businesses** get a standard that reduces integration cost and carries privacy consent natively. **Individuals** get a format that puts them in control -- their manifest, their permissions, their data.
 
 ## What it enables
 

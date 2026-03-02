@@ -18,13 +18,29 @@ This document defines the governance structure, decision-making processes, roles
 
 ## Project Scope
 
-Universal Manifest is a standards-track specification for agent-to-agent and agent-to-human communication using structured manifest documents. The project includes:
+Universal Manifest is a standards-track specification for agent-to-agent and agent-to-human communication using structured manifest documents. The project includes components at two levels of authority:
 
-- Normative specification documents
-- JSON schemas and validation rules
-- Conformance test suites
-- Reference implementations and integration guides
-- Documentation and adoption resources
+### Normative scope (defines the standard)
+
+These components have normative authority. Changes to them require the RFC process and TSC approval.
+
+- **Specification documents** -- the versioned spec text that defines the Universal Manifest format, required fields, and behavioral contracts (`spec/`)
+- **JSON schemas and validation rules** -- the machine-readable structural contracts that implementations validate against (`spec/v0.1/schema.json`, `spec/v0.2/schema.json`)
+- **JSON-LD context files** -- the semantic vocabulary definitions (`spec/v0.1/schema.jsonld`)
+- **Conformance test suites** -- the fixture sets (valid and invalid examples) and behavioral requirements that determine whether an implementation is conformant (`spec/*/CONFORMANCE.md`, `examples/`)
+
+### Supplementary scope (supports adoption)
+
+These components help implementers adopt the standard but do not themselves have normative authority. They illustrate, explain, and accelerate -- but the specification and conformance suites are the source of truth.
+
+- **Reference implementations** -- working code (such as the TypeScript helper) that demonstrates one way to implement the spec; not the only way (`packages/`)
+- **Integration guides** -- domain-specific adoption recipes for concrete surfaces like social profiles, smart glasses, and metaverse systems (`integrations/`)
+- **Documentation and site content** -- the published documentation site, onboarding guides, explainers, and tutorials (`site/`, `docs/`)
+- **Tooling** -- browser-based tools like the Manifest Workbench, Interactive Sandbox, and Verification Harness
+
+A new contributor reading this governance document should understand: if you want to know what Universal Manifest *is*, read the normative components. If you want to know how to *use* it, read the supplementary components. When the two diverge, the normative specification is authoritative.
+
+This hierarchy is consistent with the project's depth map (see `docs/DEPTH-AND-SCOPE.md`), where Layers A (normative spec) and B (fixtures) define the standard, and Layers C (integrations), D (tooling), and E (research) support adoption.
 
 ## Roles and Responsibilities
 

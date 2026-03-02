@@ -75,7 +75,7 @@ The TSC consists of all active maintainers. Current TSC members:
 ## Contact
 
 - **Maintainer Email**: maintainers@universalmanifest.net
-- **GitHub Discussions**: [Universal Manifest Discussions](https://github.com/WebOfTrustInfo/universal-manifest/discussions)
+- **GitHub Discussions**: [Universal Manifest Discussions](https://github.com/grigb/universal-manifest/discussions)
 - **Security Reports**: security@universalmanifest.net
 
 ## Governance

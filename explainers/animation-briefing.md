@@ -106,7 +106,7 @@ These characters appear across all animation scripts. They represent different p
 - **Role:** Building a social platform, wants portable user profiles
 - **Visual:** Developer aesthetic -- hoodie, laptop, coffee. Surrounded by floating code snippets and API endpoints. Often shown at a desk with multiple screens.
 - **Personality:** Curious, efficiency-driven, hates building custom integrations. They're the "just give me one format" archetype.
-- **Use case focus:** Parsing manifests, consuming shards, progressive adoption, TypeScript library usage
+- **Use case focus:** Parsing manifests, consuming shards, progressive adoption, reference implementation usage
 
 ### Riley (The Privacy Guardian)
 

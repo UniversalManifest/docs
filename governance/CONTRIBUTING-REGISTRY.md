@@ -66,7 +66,7 @@ At least one of:
 ### Step 1: Fork and Branch
 
 ```bash
-git clone https://github.com/WebOfTrustInfo/universal-manifest.git
+git clone https://github.com/grigb/universal-manifest.git
 cd universal-manifest
 git checkout -b registry/your-entry-name
 ```
@@ -260,9 +260,9 @@ Valid implementations MUST:
 
 Questions about registry contributions?
 
-- **GitHub Discussions**: [Universal Manifest Discussions](https://github.com/WebOfTrustInfo/universal-manifest/discussions)
+- **GitHub Discussions**: [Universal Manifest Discussions](https://github.com/grigb/universal-manifest/discussions)
 - **Email**: registry@universalmanifest.net
-- **Issue Tracker**: [Registry Issues](https://github.com/WebOfTrustInfo/universal-manifest/issues?q=label%3Aregistry)
+- **Issue Tracker**: [Registry Issues](https://github.com/grigb/universal-manifest/issues?q=label%3Aregistry)
 
 ---
 

@@ -78,7 +78,7 @@ The lifecycle of a Universal Manifest follows five stages:
 
 **3. Resolve.** A consumer (another system, device, or app) receives or looks up the manifest. If they have a UMID, they can resolve it through `myum.net/{UMID}`. If they received the manifest directly (via QR code, API call, file transfer), they already have it.
 
-**4. Validate.** The consumer checks the manifest against the spec. Is the structure valid? Is the validity window current (not expired, not issued in the future)? If a signature is present, does it verify? Are the required fields present? The TypeScript helper library provides validation functions for all of these checks.
+**4. Validate.** The consumer checks the manifest against the spec. Is the structure valid? Is the validity window current (not expired, not issued in the future)? If a signature is present, does it verify? Are the required fields present? Validation can be performed using the published JSON Schema in any language, or using the TypeScript reference implementation which provides ready-made validation functions.
 
 **5. Consume.** The consumer reads the shards, pointers, claims, and consents it understands, ignoring any it doesn't recognize (forward compatibility). It respects the consent flags, follows pointers to canonical data sources if needed, and uses the manifest data for its purpose -- rendering a profile, authorizing access, enrolling a device, or anything else.
 
@@ -128,7 +128,7 @@ UM is designed for progressive adoption. You don't have to buy into the entire e
 
 **Level 1 -- Parse it.** Your system can read a manifest using any JSON parser. Extract the fields you care about, ignore the rest. This requires zero dependencies beyond your language's JSON library.
 
-**Level 2 -- Validate it.** Use the published JSON Schema or the TypeScript helper library (`@nicholasgrigoriadis/universal-manifest`) to validate manifest structure, check validity windows, and enforce required fields.
+**Level 2 -- Validate it.** Use the published JSON Schema to validate manifest structure, check validity windows, and enforce required fields. The TypeScript reference implementation (`universal-manifest` on npm) is one option, but any JSON Schema validator works.
 
 **Level 3 -- Consume shards.** Read well-known shard names from the registry and use the data they carry. This is where UM starts replacing custom integrations.
 
@@ -165,7 +165,7 @@ Consumers must reject expired manifests. The issuer creates a new manifest with 
 Yes. Every manifest is valid JSON. The `@context`, `@id`, and `@type` fields use JSON-LD conventions, but you can parse and use the document with a plain JSON parser. JSON-LD awareness is optional and additive.
 
 **Q: Is UM a finished standard?**
-v0.1 is stable and has production infrastructure live (resolver, documentation site, validation library). v0.2, which adds the signature profile, is in draft. The project follows an incremental approach: ship what works, add capabilities in future versions.
+v0.1 is stable and has production infrastructure live (resolver, documentation site, published schemas, and a TypeScript reference implementation). v0.2, which adds the signature profile, is in draft. The project follows an incremental approach: ship what works, add capabilities in future versions.
 
 **Q: Who controls the spec?**
 The spec is open source under the Apache-2.0 license. Development happens in the public GitHub repository, and contributions are welcome per the project's contributing guidelines.
@@ -178,6 +178,6 @@ The spec is open source under the Apache-2.0 license. Development happens in the
 - **Example manifests:** [examples/v0.1/](../../examples/v0.1/)
 - **Documentation site:** [universalmanifest.net](https://universalmanifest.net)
 - **Resolver service:** [myum.net](https://myum.net)
-- **GitHub repository:** [github.com/nicholasgrigoriadis/universalmanifest](https://github.com/nicholasgrigoriadis/universalmanifest)
-- **TypeScript library:** `@nicholasgrigoriadis/universal-manifest` on npm
+- **GitHub repository:** [github.com/grigb/universal-manifest](https://github.com/grigb/universal-manifest)
+- **TypeScript reference implementation:** `universal-manifest` on npm
 - **License:** Apache-2.0

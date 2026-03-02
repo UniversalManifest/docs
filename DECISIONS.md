@@ -12,7 +12,7 @@
 - v0.1 recommendation: issuers generate `@id` as `urn:uuid:<uuidv4>`.
 - Rationale: globally unique, offline-safe, and avoids premature content-addressing commitments.
 
-### Device caching + logging (NVIDIA Shield / public display)
+### Device caching + logging (constrained device / public display)
 
 - Cache the **full manifest JSON** while actively in use.
 - Persist only **manifest ID references** (`@id`) in logs/telemetry.
@@ -123,7 +123,7 @@
 ### Decision
 
 - Keep the TypeScript helper package **private/internal** for now:
-  - `packages/universal-manifest/` (`@localartistnetwork/universal-manifest`)
+  - `packages/universal-manifest/` (now `universal-manifest`; formerly `@localartistnetwork/universal-manifest`)
 
 ### Rationale
 
@@ -411,6 +411,27 @@ Primary conflict register:
 - `WO-0039` closure is no longer gated on Phase 5 human-participant execution.
 - Human-test protocol/checklist artifacts remain available for optional validation runs.
 
+## 2026-02-28 — Static diagrams/Excalidraw: ON HOLD
+
+### Decision
+
+- Static diagram work in this repo is placed ON HOLD.
+- Infographics creation has been offloaded to the global agent system's infographics kit.
+- Excalidraw is not approved for production visuals (previously established).
+- Work will be revisited when the user returns with:
+  - completed infographics work ready to integrate into the project, or
+  - a request to identify knowledge gaps to share with other agents (where Excalidraw may assist).
+
+### Rationale
+
+- Avoiding duplicated effort between this project and the global agent system's infographics tooling.
+- Excalidraw retains a potential future role for communicating complex logic flows and infographic layouts, but this is not a current priority.
+
+### Policy impact
+
+- Agents should not start static diagram or Excalidraw work in this repo without explicit instruction from the user.
+- The prompt pack pipeline (`docs/design/ANIMATED-SVG-WORKFLOW.md`) remains the default for animated explainer content.
+
 ## 2026-02-22 — Integrity and revocation hardening posture (WO-0037)
 
 ### Decision
@@ -431,3 +452,65 @@ Primary conflict register:
 - `spec/v0.2/SIGNATURE-PROFILE.md` and `spec/v0.2/CONFORMANCE.md` must be updated in lockstep.
 - Adversarial v0.2 fixture matrix expansion is required in `examples/v0.2/invalid/`.
 - Follow-on implementation work may be needed where helper/runtime behavior lags new normative direction.
+
+## 2026-02-28 — Capsule-Pod approved as UM iconic representation
+
+### Decision
+
+- Approve the **Capsule-Pod** (Concept 11 from [01-ICONIC-REPRESENTATION.md](teaching-scripts/01-ICONIC-REPRESENTATION.md)) as the official iconic visual character for Universal Manifest.
+- Approve the **variant concept**: each user or entity may have their own personal-style variant while preserving the core shell-gap-payload structure and state color mapping.
+
+### Rationale
+
+- Capsule-Pod scored joint-highest (32/40) across simplicity, distinctiveness, metaphor strength, and animation-friendliness.
+- The shell-gap-payload structure directly maps to the manifest's envelope-integrity-data architecture.
+- The gap-illumination gesture (green = verified, red = rejected) is the single most teachable animation beat.
+- The variant concept enables personalization and community identity without fragmenting visual recognition.
+
+### Evidence
+
+- Design spec: [CAPSULE-POD-DESIGN.md](design/CAPSULE-POD-DESIGN.md)
+- Cinematic reference renders: [capsule-pod-reference/](design/capsule-pod-reference/)
+- Variant exploration: [Grok render gallery](https://grok.com/imagine/post/06d18c9d-9316-427b-baa6-115d5a5543a8)
+
+### Policy impact
+
+- All future teaching scripts, animations, and visual assets should use the Capsule-Pod as the primary manifest character.
+- The visual system vocabulary (Pod = manifest, Shield = verification, Prism = projection) is canonical.
+- State color mapping from the design spec must be applied consistently across all render and animation outputs.
+
+## 2026-03-01 — Expanded CI pipeline adopted (ci.yml)
+
+### Decision
+
+- Adopt an expanded CI/CD pipeline ([`.github/workflows/ci.yml`](../.github/workflows/ci.yml)) as the primary CI workflow, replacing the original [`verify.yml`](../.github/workflows/verify.yml) as the authoritative continuous integration configuration.
+
+### Relationship to verify.yml
+
+- The original `verify.yml` workflow provided a single-job pipeline (checkout, install, test) for the TypeScript reference implementation.
+- The new `ci.yml` workflow expands this to a multi-job pipeline with the following jobs:
+  1. **test** -- runs the TypeScript reference implementation test suite (`packages/universal-manifest`)
+  2. **terminology** -- checks terminology consistency across the codebase (`npm run check:terminology`)
+  3. **build-site** -- builds the Astro/Starlight documentation site (`site/`) and uploads the built artifact
+  4. **link-check** -- checks all internal and external links in the built site (depends on build-site)
+  5. **parity-test** -- validates that the Node.js and browser validators produce identical results (depends on test + build-site)
+  6. **scenario-smoke-test** -- runs structural smoke tests for sandbox scenarios (depends on build-site)
+  7. **smoke-endpoints-prod** -- smoke-tests production endpoints on `universalmanifest.net` and `myum.net` (runs only on main branch merges or manual dispatch; depends on test + terminology + build-site)
+- `verify.yml` is retained for backward compatibility but `ci.yml` is now the authoritative CI workflow that covers the full project scope (spec validation, site build, link integrity, cross-runtime parity, and production endpoint health).
+
+### Date and reference
+
+- Date: 2026-02-28
+- Work order: [WO-0049](workorders/WO-0049-add-ci-workflow.md)
+
+### Rationale
+
+- The single-job `verify.yml` pipeline only validated the TypeScript reference implementation. It did not cover the documentation site build, link integrity, terminology consistency, cross-runtime parity, or production endpoint health.
+- The expanded `ci.yml` pipeline provides comprehensive pre-merge and post-merge validation that covers the full project scope: spec artifacts, documentation, tooling, and live infrastructure.
+- Multi-job parallelism improves CI throughput: independent jobs (test, terminology, build-site) run concurrently, while dependent jobs (link-check, parity-test, scenario-smoke-test) wait only for their prerequisites.
+
+### Policy impact
+
+- `ci.yml` is the CI configuration that contributors should reference for understanding what checks run on pull requests and merges.
+- `verify.yml` remains in the repository as a simpler, backward-compatible check but is not the primary CI workflow.
+- Future CI additions (new test jobs, deployment gates) should be added to `ci.yml`.

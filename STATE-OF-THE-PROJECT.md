@@ -1,14 +1,14 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-02-23  
-**Status:** Core implementation wave (`WO-0001` through `WO-0034`) is delivered in-repo (`universalmanifest.net` + `myum.net`). Follow-on hardening/governance work (`WO-0035` through `WO-0041`) is complete. Animation enhancement wave (`WO-0042` and `WO-0043`) is complete -- 16 production animated SVGs are live on universalmanifest.net.
+**Date:** 2026-03-01
+**Status:** 80 work orders defined. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) NOT_STARTED. Spec boundary audit wave (WO-0081 through WO-0089) NOT_STARTED.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
 This repo is a **spec + fixtures + minimal tooling** project. It is not a running service.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
-For the latest condensed status summary, see: `docs/reports/2026-02-18-live-status-and-next-critical-path.md`.
+For recent audit reports, see the [`docs/reports/`](reports/) directory (includes freshness audits, completeness audits, and status summaries).
 
 ## Current snapshot
 
@@ -26,7 +26,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
   - Invalid fixtures (conformance): `examples/v0.1/invalid/`
   - Human index for fixtures + “vision drivers”: `docs/STUB-MANIFESTS.md`
 - **Integration notes**
-  - reference implementation + Shield caching + transport: `integrations/reference-runtime.md`
+  - reference implementation + device caching + transport: `integrations/reference-runtime.md`
   - Social/profile adoption: `integrations/social.md`
   - Metaverse lane + lineage context: `integrations/metaverse.md`
   - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
@@ -48,12 +48,28 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
   - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
 - **Animated SVG explainer pipeline (established, proven)**
-  - 16 production animated SVGs live on universalmanifest.net (WO-0042, WO-0043)
+  - 29 production animated SVGs live on universalmanifest.net (plus 2 test files and 2 pilot iterations; 33 total) (WO-0042, WO-0043)
   - Prompt pack system: `.dev/ai/prompts/animation/`
   - Workflow documentation: `docs/design/ANIMATED-SVG-WORKFLOW.md`
   - QA checklist: `docs/design/ANIMATION-QA-CHECKLIST.md`
   - Production assets: `site/public/animations/`
   - Overview diagram: `site/public/diagrams/universal-manifest-overview-template.svg`
+- **Teaching scripts system**
+  - Staged explanation scripts for 30-second, 3-minute, and 15-minute audiences: `docs/teaching-scripts/`
+  - Capsule-Pod iconic representation (approved): `docs/teaching-scripts/01-ICONIC-REPRESENTATION.md`
+- **Interactive sandbox (COMPLETED, WO-0060 through WO-0068)**
+  - CEO mandate: `docs/MANDATE-interactive-implementation-sandbox.md`
+  - Proposal and scenario list: `.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md`
+  - 25 interactive scenarios across 5 categories (Getting Started, Trust and Verification, Integration Lanes, Edge Cases, Advanced)
+  - Browser-based Ed25519 validator with 54/54 Node parity
+  - Three-panel layout with step engine, scenario modal with search and filters
+  - 25 SVG illustrations, CI parity testing (54/54), scenario smoke testing (183/183)
+- **Sandbox V2 Redesign (COMPLETED, WO-0069 through WO-0080)**
+  - HierarchyExplorer, DetailsCard, EntityColumn, ProtocolLens, SubjectPanel components
+  - SandboxLayoutV2 (CSS Grid), SandboxEngineV2 (two-entity state management)
+  - Scenario detail page rewrite, full scenario migration (GS, TV, IL, EC, AD)
+  - Responsive polish, animations, accessibility audit
+  - Build verified: 94 pages, 0 errors. Awaiting browser testing and production deployment.
 - **Public docs IA + editorial polish**
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
@@ -75,7 +91,7 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
-## Work-order status (2026-02-23)
+## Work-order status (2026-03-01)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
@@ -108,6 +124,76 @@ For the latest condensed status summary, see: `docs/reports/2026-02-18-live-stat
 - Completed: `WO-0041` status document drift reconciliation (2026-02-23)
 - Completed: `WO-0042` animation upgrade phase 1 -- 7 SVGs (replaced pilots, upgraded overview, 4 new scenarios) (2026-02-27)
 - Completed: `WO-0043` animation upgrade phase 2 -- 9 SVGs (2 tool explainers, 7 integration lane explainers) (2026-02-27)
+- Completed: `WO-0044` public open-source examples and demos work stream (2026-02-27)
+- Completed: `WO-0045` commercial explainer ecosystem and integration expansion (2026-02-27)
+- Completed: `WO-0046` infographic styles inventory viewer (2026-02-26)
+- Completed: `WO-0047` security documentation and threat model (`docs/security/THREAT-MODEL.md`) (2026-02-27)
+- Completed: `WO-0048` conformance suite expansion: 6 new fixtures (3 valid, 3 invalid) (2026-02-27)
+- Completed: `WO-0049` CI/CD hardening: 5-job GitHub Actions pipeline (`.github/workflows/ci.yml`) (2026-02-27)
+- Completed: `WO-0050` API reference, JSDoc, Lan→Um rename, package.json update (2026-02-27)
+- Completed: `WO-0051` governance framework, RFC template, GitHub issue templates (`docs/governance/`) (2026-02-27)
+- Completed: `WO-0052` JSON audit: docs already clean, no changes needed (2026-02-27)
+
+### New work order waves
+
+#### Interactive Sandbox Wave (WO-0060 through WO-0068) — COMPLETED
+
+Per CEO mandate ([`docs/MANDATE-interactive-implementation-sandbox.md`](MANDATE-interactive-implementation-sandbox.md)), this wave superseded the External Adopter Wave in execution order. All 9 work orders completed and verified (2026-02-28).
+
+- Completed: `WO-0060` sandbox foundation and browser validator (2026-02-28)
+- Completed: `WO-0061` three-panel layout and step engine (2026-02-28)
+- Completed: `WO-0062` scenario modal and navigation (2026-02-28)
+- Completed: `WO-0063` Getting Started scenarios GS-01 through GS-04 (2026-02-28)
+- Completed: `WO-0064` Trust and Verification scenarios TV-01 through TV-05 (2026-02-28)
+- Completed: `WO-0065` Integration Lane scenarios IL-01 through IL-08 (2026-02-28)
+- Completed: `WO-0066` Edge Case and Advanced scenarios (2026-02-28)
+- Completed: `WO-0067` visual polish and SVG illustrations (2026-02-28)
+- Completed: `WO-0068` CI parity testing and QA (2026-02-28)
+
+#### Sandbox V2 Redesign (WO-0069 through WO-0080) — COMPLETED
+
+All 12 work orders completed (2026-03-01). Build verified (94 pages, 0 errors). Awaiting browser testing and production deployment.
+
+- Completed: `WO-0069` HierarchyExplorer (reusable collapsible JSON tree-view) (2026-03-01)
+- Completed: `WO-0070` DetailsCard (dual-mode hierarchy/JSON toggle) (2026-03-01)
+- Completed: `WO-0071` SessionStateIndicator + V2 types (2026-03-01)
+- Completed: `WO-0072` EntityColumn (symmetrical entity panel) (2026-03-01)
+- Completed: `WO-0073` ProtocolLens (step-by-step interaction viewer) (2026-03-01)
+- Completed: `WO-0074` SubjectPanel (exchanged object display) (2026-03-01)
+- Completed: `WO-0075` SandboxLayoutV2 (new CSS Grid layout) (2026-03-01)
+- Completed: `WO-0076` SandboxEngineV2 (two-entity state management) (2026-03-01)
+- Completed: `WO-0077` Scenario detail page rewrite (2026-03-01)
+- Completed: `WO-0078` Getting Started scenario migration GS-01 through GS-04 (2026-03-01)
+- Completed: `WO-0079` Remaining scenario migration: TV, IL, EC, AD (2026-03-01)
+- Completed: `WO-0080` Responsive polish, animations, accessibility audit (2026-03-01)
+
+#### External Adopter Wave (WO-0053 through WO-0059) — NOT_STARTED
+
+- `WO-0053` standalone conformance test suite (CRITICAL, blocks Gate G4)
+- `WO-0054` reference implementation repository (CRITICAL, blocks Gate G4)
+- `WO-0055` adopter onboarding document package (CRITICAL, blocks Gate G4)
+- `WO-0056` adopter feedback loop and contract system (HIGH, blocks Gate G4 + G6)
+- `WO-0057` spec vs. implementation documentation clarity (HIGH, blocks Gate G4)
+- `WO-0058` v0.1-to-v0.2 migration guide (HIGH, blocks Gate G6)
+- `WO-0059` governance completion: breaking-change, deprecation, incident policies (CRITICAL, blocks Gate G6 + World-ready)
+
+#### Spec Boundary Audit Wave (WO-0081 through WO-0089) — NOT_STARTED
+
+- `WO-0081` add specification identity banner to entry points
+- `WO-0082` remove implementation references from spec documents
+- `WO-0083` restructure root README quick start
+- `WO-0084` restructure site sidebar spec vs implementation
+- `WO-0085` create build-your-own-implementation page
+- `WO-0086` add spec-implementation language guidelines
+- `WO-0087` reposition TypeScript in agent briefing and explainers
+- `WO-0088` qualify TypeScript references in integration docs
+- `WO-0089` fix legacy naming and branding leaks
+
+## Priority context (2026-03-01)
+
+The Interactive Sandbox Wave (WO-0060 through WO-0068) and Sandbox V2 Redesign (WO-0069 through WO-0080) are completed. The External Adopter Wave (WO-0053 through WO-0059) and Spec Boundary Audit Wave (WO-0081 through WO-0089) are the next execution priorities.
+
+No work order may be executed outside the explicitly approved sequence without user confirmation.
 
 ## Critical-path execution update (2026-02-20)
 
@@ -169,14 +255,17 @@ Gap movement from latest provenance audit:
 - `GAP-K2B-004`: unchanged.
 - `GAP-K2B-005`: unchanged.
 
-## Local verification status (2026-02-23)
+## Local verification status (2026-02-28)
 
 - `site` build (`npm run build:clean`): PASS (0 warnings, exit code 0)
-- `packages/universal-manifest` tests (`npm test`): PASS (40/40 fixtures, exit code 0)
+- `packages/universal-manifest` tests (`npm test`): PASS (46/46 fixtures, exit code 0)
 - Journeys proof (`npm run journeys`): PASS (11/11, exit code 0)
 - Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS (9/9 endpoints)
 - Endpoint smoke dev (`npm run smoke:endpoints:dev`): N/A (dev servers not running; expected, not a failure)
 - v0.2 signature verification: WORKING
+- Nomenclature cleanup: 31 files updated (50 changes), "signature envelope" → "signature" throughout
+
+Note: 46 committed fixtures (31 v0.1 + 15 v0.2) after WO-0048 conformance suite expansion. 1 additional uncommitted stub (`cross-system-projection-manifest.jsonld`) exists on disk, totaling 47.
 
 ## What we consider “done” for v0.1
 

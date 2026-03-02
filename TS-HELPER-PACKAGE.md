@@ -9,9 +9,10 @@ Package location:
 
 - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/`
 
-Current package name (internal):
+Current package name:
 
-- `@localartistnetwork/universal-manifest`
+- `universal-manifest`
+- Legacy name (historical): `@localartistnetwork/universal-manifest`
 
 ## What it provides (and what it does not)
 

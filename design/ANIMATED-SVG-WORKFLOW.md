@@ -1,6 +1,6 @@
 # Animated SVG Explainer Workflow
 
-A standalone, portable guide for producing high-quality animated SVG explainers using a structured AI prompt-pack pipeline. This workflow was developed and proven on the Universal Manifest project (WO-0030), where it produced 16 production-quality animated SVGs that are currently live on universalmanifest.net. Any agent on any project can adapt this workflow.
+A standalone, portable guide for producing high-quality animated SVG explainers using a structured AI prompt-pack pipeline. This workflow was developed and proven on the Universal Manifest project (WO-0030), where it produced 29 production-quality animated SVGs that are currently live on universalmanifest.net (33 total including 2 test files and 2 pilot iterations). Any agent on any project can adapt this workflow.
 
 ---
 
@@ -22,7 +22,7 @@ This layered approach ensures consistency across dozens of animations while allo
 
 ### Production track record
 
-- 16 production SVGs generated and deployed in a single work session
+- 29 production SVGs generated and deployed across multiple work sessions
 - All assets pass accessibility, performance, and visual clarity checks
 - Total pipeline from concept to deployed asset: minutes per SVG, not hours
 - Zero external dependencies in any output file
@@ -717,7 +717,7 @@ These elements should be adapted:
 - Overview diagram: `site/public/diagrams/universal-manifest-overview-template.svg`
 - Archived early attempts: `site/public/animations/archive_bad_svgs/`
 
-### Production asset inventory (16 SVGs)
+### Production asset inventory (29 production SVGs; 33 total)
 
 | File | Type | Description |
 |------|------|-------------|

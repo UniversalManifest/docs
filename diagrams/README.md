@@ -2,15 +2,22 @@
 
 This folder stores editable source-of-truth diagram assets for Universal Manifest docs.
 
-## DECISION PENDING — Check with project owner before producing diagrams
+## DECISION: Static diagrams ON HOLD
 
-There are two diagram production methods in this project. **Do NOT start diagram work without confirming which method to use:**
+There are two diagram production methods in this project:
 
-1. **WO-0030 Prompt Pack Pipeline** (proven) — AI-generated animated SVGs via structured prompts. Produced all 16 currently-live production assets on universalmanifest.net. See `docs/design/ANIMATED-SVG-WORKFLOW.md` for the full workflow.
+1. **WO-0030 Prompt Pack Pipeline** (proven) — AI-generated animated SVGs via structured prompts. Produced all 29 currently-live production assets on universalmanifest.net (33 total including 2 test files and 2 pilot iterations). See `docs/design/ANIMATED-SVG-WORKFLOW.md` for the full workflow.
 
-2. **Excalidraw** (set up but largely unused) — Manual/interactive diagram editing with `.excalidraw` source files. Only one template file exists. May be appropriate for static architecture diagrams but this has not been validated.
+2. **Excalidraw** (set up but largely unused) — Manual/interactive diagram editing with `.excalidraw` source files. Only one template file exists.
 
-**Before creating any new diagrams or animations, ask the project owner which method to use for your specific use case.** The prompt pack pipeline is the default for animated explainers. The role of Excalidraw for static diagrams is undecided.
+### Static diagram status: ON HOLD
+
+Infographics creation has been offloaded to the global agent system's infographics kit (outside this project). Static diagram work in this repo is paused until:
+
+- the user returns with completed infographics work ready to integrate, or
+- a knowledge gap analysis is needed and Excalidraw is useful for communicating those gaps to other agents.
+
+Excalidraw is not approved for production visuals but may be used in the future for communicating complex logic flows or accurate infographic layouts when the above conditions are met. The prompt pack pipeline remains the default for animated explainers.
 
 ## Layout
 
