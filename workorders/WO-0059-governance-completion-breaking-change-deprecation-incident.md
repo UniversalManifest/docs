@@ -1,6 +1,6 @@
 # WO-0059 — Governance Completion (Breaking-Change, Deprecation, Incident)
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** CRITICAL
 **Blocks:** Gate G6 (Governance and change control), World-ready additional checks (incident/rollback procedures)
@@ -43,7 +43,7 @@ Out of scope:
 
 ### Phase 1 — Breaking-change handling policy
 
-- [ ] Create `docs/governance/BREAKING-CHANGE-POLICY.md`:
+- [x] Create `docs/governance/BREAKING-CHANGE-POLICY.md`:
   ```
   1. Definition of a Breaking Change
      - Any change to normative spec text that causes a previously-conformant
@@ -80,7 +80,7 @@ Out of scope:
 
 ### Phase 2 — Deprecation and migration policy (general)
 
-- [ ] Create `docs/governance/DEPRECATION-POLICY.md` (if not already created by WO-0058, expand it):
+- [x] Create `docs/governance/DEPRECATION-POLICY.md` (if not already created by WO-0058, expand it):
   - General deprecation rules for any spec version:
     - Minimum support period after successor version reaches stable: 6 months.
     - Deprecation notice: published in spec docs, announced via GitHub.
@@ -88,11 +88,11 @@ Out of scope:
     - After end-of-life: conformance fixtures remain for historical testing, marked as legacy.
   - Version lifecycle states: `draft` -> `stable` -> `deprecated` -> `end-of-life`.
   - Specific timeline for v0.1 deprecation (coordinated with WO-0058).
-- [ ] Link deprecation policy to breaking-change policy and to the v0.1-to-v0.2 migration guide.
+- [x] Link deprecation policy to breaking-change policy and to the v0.1-to-v0.2 migration guide.
 
 ### Phase 3 — Incident/rollback procedures
 
-- [ ] Create `docs/governance/INCIDENT-RESPONSE.md`:
+- [x] Create `docs/governance/INCIDENT-RESPONSE.md`:
   ```
   1. Incident Categories
      a. Spec Defect: normative text is incorrect or ambiguous in a way
@@ -144,7 +144,7 @@ Out of scope:
 
 ### Phase 4 — Simulated incident/rollback cycle
 
-- [ ] Execute one full incident simulation with evidence capture:
+- [x] Execute one full incident simulation with evidence capture:
   - **Scenario**: Simulate a "conformance suite bug" incident:
     1. Introduce a deliberate error in one conformance fixture expected result.
     2. Detect: CI pipeline flags the failure.
@@ -160,30 +160,30 @@ Out of scope:
     - Suite version bump commit.
     - Conformance suite pass after fix.
     - Retrospective report.
-- [ ] Publish simulation evidence at:
+- [x] Publish simulation evidence at:
   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
 
 ### Phase 5 — Release cadence documentation
 
-- [ ] Document in `docs/governance/RELEASE-CADENCE.md`:
+- [x] Document in `docs/governance/RELEASE-CADENCE.md`:
   - Spec release cadence: new minor/major versions as needed, not on a fixed schedule.
   - Conformance suite release cadence: patch releases for bug fixes, minor for new fixtures.
   - Minimum review period for spec changes: 2 weeks for non-breaking, 3 months for breaking.
   - Release checklist reference: `docs/DONE-DONE-CHECKLIST.md`.
-- [ ] Document in `docs/RELEASING.md` (if it does not exist, or update if it does):
+- [x] Document in `docs/RELEASING.md` (if it does not exist, or update if it does):
   - Step-by-step release process for spec versions.
   - Step-by-step release process for conformance suite versions.
   - Who can release, approval requirements.
 
 ### Phase 6 — Gate G6 evidence and checklist update
 
-- [ ] Update `docs/DONE-DONE-CHECKLIST.md` Gate G6 section with evidence paths:
+- [x] Update `docs/DONE-DONE-CHECKLIST.md` Gate G6 section with evidence paths:
   - `docs/governance/BREAKING-CHANGE-POLICY.md`
   - `docs/governance/DEPRECATION-POLICY.md`
   - `docs/governance/INCIDENT-RESPONSE.md`
   - `docs/governance/RELEASE-CADENCE.md`
   - `docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
-- [ ] Update `docs/STATE-OF-THE-PROJECT.md` to reflect G6 closure.
+- [x] Update `docs/STATE-OF-THE-PROJECT.md` to reflect G6 closure.
 
 ## Key file paths (created/modified)
 
@@ -203,15 +203,15 @@ Modified files:
 
 ## Acceptance criteria
 
-- [ ] Breaking-change handling policy exists with clear definition, process, emergency process, and change log requirement.
-- [ ] Deprecation policy exists with version lifecycle states, minimum support periods, and specific v0.1 timeline.
-- [ ] Incident/rollback procedures exist with categories, response process, rollback procedures, and report template.
-- [ ] One incident/rollback simulation has been executed with captured evidence (CI failure, fix, verify, retrospective).
-- [ ] Release cadence is documented for both spec and conformance suite.
-- [ ] `docs/RELEASING.md` exists with step-by-step release process.
-- [ ] Done-Done Checklist Gate G6 evidence paths are updated.
-- [ ] All governance docs are cross-linked from `docs/governance/GOVERNANCE.md`.
-- [ ] No unresolved policy contradictions across governance docs (verified by manual review).
+- [x] Breaking-change handling policy exists with clear definition, process, emergency process, and change log requirement.
+- [x] Deprecation policy exists with version lifecycle states, minimum support periods, and specific v0.1 timeline.
+- [x] Incident/rollback procedures exist with categories, response process, rollback procedures, and report template.
+- [x] One incident/rollback simulation has been executed with captured evidence (CI failure, fix, verify, retrospective).
+- [x] Release cadence is documented for both spec and conformance suite.
+- [x] `docs/RELEASING.md` exists with step-by-step release process.
+- [x] Done-Done Checklist Gate G6 evidence paths are updated.
+- [x] All governance docs are cross-linked from `docs/governance/GOVERNANCE.md`.
+- [x] No unresolved policy contradictions across governance docs (verified by manual review).
 
 ## Validation commands
 
@@ -227,3 +227,20 @@ Modified files:
 - Coordinate with WO-0056 (adopter feedback loop) to ensure incident procedures align with adopter SLA commitments.
 - This is the final work order required for Gate G6 closure. Once complete, Gate G6 evidence can be compiled.
 - Existing governance framework from WO-0051 (`docs/governance/GOVERNANCE.md`, `docs/governance/RFC-TEMPLATE.md`) provides the foundation; this WO fills the remaining gaps.
+
+## Execution summary (2026-03-02)
+
+Completed with governance policy set and incident simulation evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/governance/BREAKING-CHANGE-POLICY.md`
+- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md`
+- `/Users/grig/work/repo/universalmanifest/docs/governance/INCIDENT-RESPONSE.md`
+- `/Users/grig/work/repo/universalmanifest/docs/governance/RELEASE-CADENCE.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-02-incident-simulation-evidence.md`
+- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md` updated with Gate G6 evidence paths
+- `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md` expanded with conformance-suite release process and approval rules
+
+Evidence:
+
+- Incident simulation logs + reports in runner artifacts and report document.
+- Agent Task ID preserved: `e0a7fe60_1772165606`

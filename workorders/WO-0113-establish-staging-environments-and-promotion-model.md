@@ -6,7 +6,7 @@
 **Priority:** P0  
 **Owner:** Platform / DevOps  
 **Source:** Follow-on from deployment/runtime hardening review  
-**Blocker:** Staging domains are not yet resolving (`staging.universalmanifest.net`, `staging.myum.net`), so staging verification gates cannot pass.
+**Blocker:** Custom staging domains are still pending DNS CNAME creation/propagation; fallback staging hosts are live and verifiable.
 
 ## Objective
 
@@ -55,7 +55,7 @@ Out of scope:
 
 - [ ] Staging docs domain serves built site and versioned `/ns/...` artifacts.
 - [ ] Staging resolver domain serves `/health`, `/.well-known/myum-resolver.json`, and `/{UMID_PATH}` using staging KV only.
-- [ ] Existing smoke scripts can run against staging with explicit base URLs.
+- [x] Existing smoke scripts can run against staging with explicit base URLs.
 - [x] Documented promotion flow exists from staging to production.
 - [x] Rollback procedure is documented and executable.
 
@@ -97,8 +97,22 @@ Verification results:
 - `npm run smoke:endpoints:staging` -> FAIL (`fetch failed` for staging docs and resolver hosts)
 - `npm run verify:postdeploy:staging` -> FAIL (`fetch failed` for staging docs host)
 
+Provisioning update:
+
+- created Cloudflare Pages staging project:
+  - `universalmanifest-net-staging` (`https://universalmanifest-net-staging.pages.dev`)
+- created staging resolver KV namespaces:
+  - primary: `bafa21a750e74b09b353509ed97098ac`
+  - preview: `a169ea948d7b45c49ef4a87b685c5858`
+- deployed staging resolver:
+  - `https://myum-resolver-staging.grig-624.workers.dev`
+- fallback staging verification now passes with explicit base URLs:
+  - `node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
+  - `node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
+  - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
+
 External unblock actions required:
 
-1. Provision and route staging domains in Cloudflare DNS/Pages/Workers.
-2. Confirm staging docs and resolver deployments are live.
-3. Rerun staging smoke and post-deploy verification commands.
+1. Add/propagate DNS CNAME records for `staging.universalmanifest.net`, `staging.myum.net`, and `www.staging.myum.net`.
+2. Confirm Pages custom-domain validation is complete (currently pending).
+3. Re-run staging smoke/post-deploy checks against custom staging domains.

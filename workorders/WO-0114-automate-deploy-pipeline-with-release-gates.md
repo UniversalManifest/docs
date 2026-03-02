@@ -6,7 +6,7 @@
 **Priority:** P0  
 **Owner:** Platform / CI-CD  
 **Source:** Follow-on from deployment/runtime hardening review  
-**Blocker:** Staging deployment gates cannot be executed end-to-end until staging hosts resolve and environment secrets/variables are provisioned.
+**Blocker:** Custom-domain staging gates remain blocked pending DNS CNAME readiness; fallback-host staging gates are operational.
 
 ## Objective
 
@@ -91,9 +91,27 @@ Verification results:
 - `npm run verify:postdeploy:prod` -> PASS
 - `npm run smoke:endpoints:staging` -> FAIL (staging hosts unresolved)
 - `npm run verify:postdeploy:staging` -> FAIL (staging hosts unresolved)
+- fallback-host verification commands -> PASS (pages.dev + workers.dev override)
+
+Execution update:
+
+- configured GitHub repository variables:
+  - `CF_PAGES_PROJECT_STAGING=universalmanifest-net-staging`
+  - `CF_PAGES_PROJECT_PROD=universalmanifest-net`
+  - `STAGING_DOCS_BASE=https://universalmanifest-net-staging.pages.dev`
+  - `STAGING_RESOLVER_BASE=https://myum-resolver-staging.grig-624.workers.dev`
+  - `STAGING_RESOLVER_WWW_BASE=https://myum-resolver-staging.grig-624.workers.dev`
+- configured GitHub repository secrets:
+  - `CF_ACCOUNT_ID`
+  - `CF_API_TOKEN`
+- triggered workflow dispatch dry run:
+  - `https://github.com/grigb/universal-manifest/actions/runs/22599721968`
+  - staging docs deploy: PASS
+  - staging resolver deploy: FAIL on `main` because `main` still contains placeholder staging KV IDs (`REPLACE_WITH_STAGING_KV_ID`)
+  - verify/prod jobs skipped after resolver failure
 
 External unblock actions required:
 
-1. Configure `CF_ACCOUNT_ID` and `CF_API_TOKEN` secrets in GitHub.
-2. Configure `CF_PAGES_PROJECT_STAGING` and `CF_PAGES_PROJECT_PROD` repository variables.
-3. Provision/activate staging hosts and run a `workflow_dispatch` dry run (`promote_to_production=false`).
+1. Merge/publish resolver staging KV ID updates so CI does not use placeholder IDs.
+2. Add/propagate custom-domain DNS CNAME records for staging hosts.
+3. Re-run `deploy-gated.yml` with `promote_to_production=false` and confirm `verify_staging` passes.

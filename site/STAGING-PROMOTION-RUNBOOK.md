@@ -21,6 +21,11 @@ Staging:
 - resolver: `https://staging.myum.net`
 - resolver host variant: `https://www.staging.myum.net`
 
+Current operational staging hosts (while custom-domain DNS is pending):
+
+- docs fallback: `https://universalmanifest-net-staging.pages.dev`
+- resolver fallback: `https://myum-resolver-staging.grig-624.workers.dev`
+
 ## Isolation Requirements
 
 - Staging and production resolver MUST use different KV namespace IDs.
@@ -66,6 +71,9 @@ Repository variables:
 
 - `CF_PAGES_PROJECT_STAGING`
 - `CF_PAGES_PROJECT_PROD`
+- `STAGING_DOCS_BASE` (optional override for staging verification job)
+- `STAGING_RESOLVER_BASE` (optional override for staging verification job)
+- `STAGING_RESOLVER_WWW_BASE` (optional override for staging verification job)
 
 ## Command References
 
@@ -76,11 +84,25 @@ cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
 npm run smoke:endpoints:staging
 ```
 
+Staging smoke (fallback hosts, explicit override):
+
+```bash
+cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev
+```
+
 Staging post-deploy verify:
 
 ```bash
 cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
 npm run verify:postdeploy:staging
+```
+
+Staging post-deploy verify (fallback hosts, explicit override):
+
+```bash
+cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev
 ```
 
 Production smoke:

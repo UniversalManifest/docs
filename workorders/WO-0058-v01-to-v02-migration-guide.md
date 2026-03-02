@@ -1,6 +1,6 @@
 # WO-0058 — v0.1-to-v0.2 Migration Guide
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** HIGH
 **Blocks:** Gate G6 (Governance and change control — migration policy required)
@@ -41,7 +41,7 @@ Out of scope:
 
 ### Phase 1 — Breaking changes catalog
 
-- [ ] Document all differences between v0.1 and v0.2:
+- [x] Document all differences between v0.1 and v0.2:
   - **Breaking**: `signature` field goes from optional/permissive to required/profiled.
   - **Breaking**: `manifestVersion` changes from `"0.1"` to `"0.2"`.
   - **Breaking**: v0.2 consumers MUST verify signatures (cannot just ignore them).
@@ -50,12 +50,12 @@ Out of scope:
   - **Non-breaking**: TTL enforcement rules are unchanged.
   - **Additive**: `signature.algorithm`, `signature.canonicalization`, `signature.publicKeySpkiB64`, `signature.keyRef`, `signature.created` are new required signature fields.
   - **Additive**: Revocation metadata (`signature.statusRef`, `signature.revocationCursor`) are optional extensions.
-- [ ] Classify each change as: breaking-consumer, breaking-issuer, additive, unchanged.
-- [ ] Assess impact: what breaks if an adopter does nothing.
+- [x] Classify each change as: breaking-consumer, breaking-issuer, additive, unchanged.
+- [x] Assess impact: what breaks if an adopter does nothing.
 
 ### Phase 2 — Compatibility matrix
 
-- [ ] Create a compatibility matrix table:
+- [x] Create a compatibility matrix table:
 
   | Scenario | Behavior | Action Required |
   |---|---|---|
@@ -65,13 +65,13 @@ Out of scope:
   | v0.2 issuer sends to v0.1 consumer | Accepted: v0.1 consumer ignores signature. | No action needed (graceful degradation). |
   | Mixed v0.1/v0.2 environment | Depends on consumer strictness policy. | Document dual-version support strategy. |
 
-- [ ] Document recommended dual-version support strategy:
+- [x] Document recommended dual-version support strategy:
   - Consumer checks `manifestVersion` and applies appropriate validation.
   - Define sunset timeline for v0.1 acceptance.
 
 ### Phase 3 — Step-by-step migration walkthrough
 
-- [ ] Create `docs/guides/MIGRATION-V01-V02.md`:
+- [x] Create `docs/guides/MIGRATION-V01-V02.md`:
   ```
   1. Understand What Changed
      - Summary of breaking vs. non-breaking changes
@@ -101,30 +101,30 @@ Out of scope:
 
 ### Phase 4 — Code examples
 
-- [ ] Provide migration code examples for:
+- [x] Provide migration code examples for:
   - **TypeScript**: Before (v0.1 validation) -> After (v0.2 validation with signature verification).
   - **Python pseudocode**: Key generation, signing, verification steps.
   - **Go pseudocode**: Key generation, signing, verification steps.
-- [ ] Each example should be self-contained and runnable (TypeScript) or clearly annotated (pseudocode).
-- [ ] Include key generation guidance:
+- [x] Each example should be self-contained and runnable (TypeScript) or clearly annotated (pseudocode).
+- [x] Include key generation guidance:
   - How to generate Ed25519 key pairs.
   - How to publish public keys at stable URLs (`signature.keyRef`).
   - Key rotation recommendations.
 
 ### Phase 5 — Deprecation timeline and support policy
 
-- [ ] Document in `docs/governance/DEPRECATION-POLICY.md`:
+- [x] Document in `docs/governance/DEPRECATION-POLICY.md`:
   - v0.1 remains supported for [N months] after v0.2 reaches stable status.
   - During the overlap period, the conformance suite includes both v0.1 and v0.2 fixtures.
   - After deprecation, v0.1 fixtures remain in the suite for historical testing but are marked as "legacy."
   - New features and security fixes apply only to v0.2+.
-- [ ] Define what "supported" means: conformance suite includes it, issues are triaged, docs are maintained.
-- [ ] Define what "deprecated" means: no new features, security-critical fixes only, docs marked as legacy.
+- [x] Define what "supported" means: conformance suite includes it, issues are triaged, docs are maintained.
+- [x] Define what "deprecated" means: no new features, security-critical fixes only, docs marked as legacy.
 
 ### Phase 6 — Publish to docs site
 
-- [ ] Add migration guide to the Starlight docs site.
-- [ ] Cross-link from:
+- [x] Add migration guide to the Starlight docs site.
+- [x] Cross-link from:
   - v0.1 spec page (with "upgrade to v0.2" callout).
   - v0.2 spec page (with "migrating from v0.1?" link).
   - Getting started pages.
@@ -145,15 +145,15 @@ Modified files:
 
 ## Acceptance criteria
 
-- [ ] Breaking changes catalog is complete and accurate (verified against spec diffs).
-- [ ] Compatibility matrix covers all consumer/issuer version combinations.
-- [ ] Step-by-step migration walkthrough exists for both consumer and issuer roles.
-- [ ] Code examples are provided for TypeScript (runnable) and at least one pseudocode language.
-- [ ] Deprecation timeline is defined with specific support durations.
-- [ ] Deprecation policy document exists in governance docs.
-- [ ] Migration guide is published on the docs site with cross-links from spec pages.
-- [ ] A v0.1 adopter reading the guide can produce a migration plan without additional context.
-- [ ] Guide explicitly states that v0.1 consumers can gracefully degrade when receiving v0.2 manifests (unknown-field tolerance).
+- [x] Breaking changes catalog is complete and accurate (verified against spec diffs).
+- [x] Compatibility matrix covers all consumer/issuer version combinations.
+- [x] Step-by-step migration walkthrough exists for both consumer and issuer roles.
+- [x] Code examples are provided for TypeScript (runnable) and at least one pseudocode language.
+- [x] Deprecation timeline is defined with specific support durations.
+- [x] Deprecation policy document exists in governance docs.
+- [x] Migration guide is published on the docs site with cross-links from spec pages.
+- [x] A v0.1 adopter reading the guide can produce a migration plan without additional context.
+- [x] Guide explicitly states that v0.1 consumers can gracefully degrade when receiving v0.2 manifests (unknown-field tolerance).
 
 ## Validation commands
 
@@ -167,3 +167,17 @@ Modified files:
 - Depends on WO-0057 (spec-vs-implementation clarity) to ensure migration guide is spec-level, not TypeScript-specific.
 - Contributes directly to Gate G6 (governance and change control) closure.
 - The deprecation policy from Phase 5 should be coordinated with WO-0059 (governance completion).
+
+## Execution summary (2026-03-02)
+
+Completed with migration documentation and publishing links:
+
+- `/Users/grig/work/repo/universalmanifest/docs/guides/MIGRATION-V01-V02.md`
+- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/migration-v01-v02.md`
+- Cross-links in spec and getting-started pages
+
+Evidence:
+
+- Site build success including migration route generation.
+- Agent Task ID preserved: `e0a7fe60_1772165606`

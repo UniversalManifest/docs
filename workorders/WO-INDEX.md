@@ -64,11 +64,11 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0053-standalone-conformance-test-suite.md` — [COMPLETED] Extract conformance tests into standalone public suite with CLI runner, expected-results manifest, and badge mechanism (CRITICAL, blocks Gate G4)
 - `docs/workorders/WO-0054-reference-implementation-repository-typescript.md` — [COMPLETED] Create separate public TypeScript reference implementation repo demonstrating full UM adoption (CRITICAL, blocks Gate G4; depends on WO-0053)
-- `docs/workorders/WO-0055-adopter-onboarding-document-package.md` — [NOT_STARTED] Create implementation guide, decision tree, FAQ, and agent-handoff document for external adopters (CRITICAL, blocks Gate G4; depends on WO-0053, WO-0054)
-- `docs/workorders/WO-0056-adopter-feedback-loop-and-contract-system.md` — [NOT_STARTED] Establish structured feedback loop with SLA, adopter progress tracking, spec improvement queue, and regression prevention (HIGH, blocks Gate G4 + G6; depends on WO-0053, WO-0055)
-- `docs/workorders/WO-0057-spec-vs-implementation-documentation-clarity.md` — [NOT_STARTED] Audit and update all docs to clearly distinguish spec from implementation, add calls-to-action for external implementations (HIGH, blocks Gate G4; depends on WO-0054)
-- `docs/workorders/WO-0058-v01-to-v02-migration-guide.md` — [NOT_STARTED] Document v0.1-to-v0.2 migration path with breaking changes, compatibility matrix, code examples, and deprecation timeline (HIGH, blocks Gate G6; depends on WO-0053, WO-0057)
-- `docs/workorders/WO-0059-governance-completion-breaking-change-deprecation-incident.md` — [NOT_STARTED] Complete governance: breaking-change policy, deprecation policy, incident/rollback procedures, simulated incident with evidence (CRITICAL, blocks Gate G6 + World-ready; depends on WO-0058)
+- `docs/workorders/WO-0055-adopter-onboarding-document-package.md` — [COMPLETED] Implementation guide, decision tree, FAQ, and agent-handoff document for external adopters delivered and published (CRITICAL, Gate G4 support; depends on WO-0053, WO-0054)
+- `docs/workorders/WO-0056-adopter-feedback-loop-and-contract-system.md` — [COMPLETED] Structured feedback loop, SLA, adopter registry, spec improvement queue, regression prevention policy, runner baseline mode, and CI regression gate implemented (HIGH, Gate G4 + G6 support; depends on WO-0053, WO-0055)
+- `docs/workorders/WO-0057-spec-vs-implementation-documentation-clarity.md` — [COMPLETED] Spec-vs-implementation audit and messaging updates completed with external implementation CTAs and evidence report (HIGH, Gate G4 support; depends on WO-0054)
+- `docs/workorders/WO-0058-v01-to-v02-migration-guide.md` — [COMPLETED] v0.1-to-v0.2 migration guide, compatibility matrix, code examples, and deprecation policy linkage published (HIGH, Gate G6 support; depends on WO-0053, WO-0057)
+- `docs/workorders/WO-0059-governance-completion-breaking-change-deprecation-incident.md` — [COMPLETED] Breaking-change/deprecation/incident/release cadence policies plus incident simulation evidence completed (CRITICAL, Gate G6 + World-ready support; depends on WO-0058)
 
 ### Interactive Implementation Sandbox Wave (WO-0060 through WO-0068)
 
@@ -148,11 +148,11 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Deployment and Operations Hardening Wave (WO-0113 through WO-0117)
 
-- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [BLOCKED] Repository-side staging architecture/promotion model is implemented, but staging hosts are not yet reachable so staging verification cannot pass (P0; foundational for safe release iteration)
-- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [BLOCKED] Gated deploy workflow is implemented, but end-to-end staging execution is blocked pending staging host reachability and CI secret/variable provisioning (P0; depends on WO-0113)
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [BLOCKED] Staging infrastructure is live on fallback hosts (`pages.dev` + `workers.dev`), but custom-domain DNS for `staging.*` hosts is still pending (P0; foundational for safe release iteration)
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [BLOCKED] Gated deploy workflow and GitHub vars/secrets are implemented, but custom-domain staging gates remain blocked pending DNS readiness and mainline staging KV-ID publication (P0; depends on WO-0113)
 - `docs/workorders/WO-0115-pin-toolchain-versions-and-runtime-baselines.md` — [COMPLETED] Pinned Node/Wrangler/runtime baselines across local + CI and verified baseline commands (P1; supports reproducible builds/tests/deploys)
 - `docs/workorders/WO-0116-expand-resolver-test-suite-for-contract-coverage.md` — [COMPLETED] Added resolver contract test suite with full status/header/path coverage and wired it into CI (`resolver-contract` job) (P0; hardens `myum.net` behavior regression detection)
-- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [BLOCKED] Production synthetic monitoring/SLO policy is active, but staging synthetic coverage is blocked until staging surfaces are live (P1; depends on WO-0113 and WO-0114)
+- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [BLOCKED] Production synthetic monitoring/SLO policy is active and fallback staging checks are passable, but custom-domain staging coverage is blocked by DNS readiness (P1; depends on WO-0113 and WO-0114)
 
 #### Documentation Freshness and Maintenance
 

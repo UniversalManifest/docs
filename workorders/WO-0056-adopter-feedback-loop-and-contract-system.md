@@ -1,6 +1,6 @@
 # WO-0056 — Adopter Feedback Loop and Contract System
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** HIGH
 **Blocks:** Gate G4 (Interoperability proof — sustains adopter relationships), Gate G6 (Governance and change control)
@@ -43,7 +43,7 @@ Out of scope:
 
 ### Phase 1 — Feedback submission mechanism (GitHub Issues templates)
 
-- [ ] Create structured GitHub Issues templates:
+- [x] Create structured GitHub Issues templates:
   - **Conformance Question**: "I am implementing UM and the spec is unclear about X."
     - Fields: spec version, conformance level, section reference, question.
   - **Spec Ambiguity Report**: "The spec says X but could be interpreted as Y."
@@ -52,30 +52,30 @@ Out of scope:
     - Fields: suite version, fixture, expected vs. actual, reproduction steps.
   - **Feature Request**: "My use case requires X which is not in the current spec."
     - Fields: use case description, proposed addition, conformance impact.
-- [ ] Each template includes structured labels for triage automation.
+- [x] Each template includes structured labels for triage automation.
 
 ### Phase 2 — Feedback triage and response SLA
 
-- [ ] Document SLA commitments in `docs/governance/ADOPTER-SLA.md`:
+- [x] Document SLA commitments in `docs/governance/ADOPTER-SLA.md`:
   - **Conformance questions**: Acknowledged within 48 hours, answered within 1 week.
   - **Spec ambiguity reports**: Acknowledged within 48 hours, resolution (clarification or "wontfix" with rationale) within 2 weeks.
   - **Implementation bug reports**: Acknowledged within 24 hours, fix or workaround within 1 week.
   - **Feature requests**: Acknowledged within 1 week, disposition (accepted/deferred/rejected with rationale) within 1 month.
-- [ ] Define triage labels:
+- [x] Define triage labels:
   - `adopter-feedback`, `conformance-question`, `spec-ambiguity`, `implementation-bug`, `feature-request`
   - Priority: `p0-blocker`, `p1-high`, `p2-medium`, `p3-low`
   - Status: `triage`, `acknowledged`, `in-progress`, `resolved`, `wontfix`
-- [ ] Document the triage process (who triages, when, escalation path).
+- [x] Document the triage process (who triages, when, escalation path).
 
 ### Phase 3 — Adopter progress tracking
 
-- [ ] Define `adopters/` directory structure in spec repo:
+- [x] Define `adopters/` directory structure in spec repo:
   ```
   adopters/
     registry.json       # machine-readable adopter registry
     README.md           # how to register as an adopter
   ```
-- [ ] Define `registry.json` schema:
+- [x] Define `registry.json` schema:
   ```json
   {
     "adopters": [
@@ -94,32 +94,32 @@ Out of scope:
     ]
   }
   ```
-- [ ] Document how adopters register (pull request to add themselves to `registry.json`).
-- [ ] Document how adopters update their status (pull request with updated conformance report URL).
+- [x] Document how adopters register (pull request to add themselves to `registry.json`).
+- [x] Document how adopters update their status (pull request with updated conformance report URL).
 
 ### Phase 4 — Spec improvement queue from adopter feedback
 
-- [ ] Define the process for routing adopter feedback into spec changes:
+- [x] Define the process for routing adopter feedback into spec changes:
   1. Adopter files issue using template.
   2. Maintainer triages and labels.
   3. If spec change needed: create RFC (per `docs/governance/RFC-TEMPLATE.md`).
   4. RFC is reviewed with backward-compatibility impact assessment.
   5. If approved: implement spec change, update conformance fixtures, bump suite version.
   6. Notify affected adopters.
-- [ ] Create a `docs/governance/SPEC-IMPROVEMENT-QUEUE.md` tracking active RFCs from adopter feedback.
-- [ ] Link this process to the existing governance framework in `docs/governance/GOVERNANCE.md`.
+- [x] Create a `docs/governance/SPEC-IMPROVEMENT-QUEUE.md` tracking active RFCs from adopter feedback.
+- [x] Link this process to the existing governance framework in `docs/governance/GOVERNANCE.md`.
 
 ### Phase 5 — Regression prevention gates
 
-- [ ] Define backward-compatibility rules for conformance suite changes:
+- [x] Define backward-compatibility rules for conformance suite changes:
   - New fixtures may be ADDED without breaking existing adopters.
   - Existing fixture expected results may NOT change without a major version bump.
   - Suite version follows semver: major = breaking, minor = new fixtures, patch = bug fixes.
-- [ ] Add a CI check to the spec repo that:
+- [x] Add a CI check to the spec repo that:
   - Runs the conformance suite against the reference implementation on every PR.
   - Flags if any previously-passing fixture now fails.
-- [ ] Document the regression prevention policy in `docs/governance/REGRESSION-PREVENTION.md`.
-- [ ] Include in the conformance runner a `--baseline` flag that tests only the fixtures from a specified suite version (allowing adopters to pin to a known-good version while upgrading).
+- [x] Document the regression prevention policy in `docs/governance/REGRESSION-PREVENTION.md`.
+- [x] Include in the conformance runner a `--baseline` flag that tests only the fixtures from a specified suite version (allowing adopters to pin to a known-good version while upgrading).
 
 ## Key file paths (created/modified)
 
@@ -141,13 +141,13 @@ Modified files:
 
 ## Acceptance criteria
 
-- [ ] All four GitHub Issues templates are functional and produce structured, labeled issues.
-- [ ] SLA document exists with specific timelines for each feedback type.
-- [ ] Adopter registry schema is defined and an example entry (reference implementation) is populated.
-- [ ] Spec improvement queue process is documented and linked to existing RFC template.
-- [ ] Regression prevention policy is documented with clear rules for suite versioning.
-- [ ] CI check runs conformance suite on spec repo PRs and flags regressions.
-- [ ] An external adopter can:
+- [x] All four GitHub Issues templates are functional and produce structured, labeled issues.
+- [x] SLA document exists with specific timelines for each feedback type.
+- [x] Adopter registry schema is defined and an example entry (reference implementation) is populated.
+- [x] Spec improvement queue process is documented and linked to existing RFC template.
+- [x] Regression prevention policy is documented with clear rules for suite versioning.
+- [x] CI check runs conformance suite on spec repo PRs and flags regressions.
+- [x] An external adopter can:
   - Register their implementation in the adopter registry via PR.
   - File a conformance question and receive acknowledgment within SLA.
   - See the status of their feedback in the issue tracker.
@@ -166,3 +166,26 @@ Modified files:
 - Depends on WO-0055 (adopter onboarding package defines the first-contact experience; this WO handles ongoing relationship).
 - Coordinate with WO-0059 (governance completion) to ensure SLA and regression policies are consistent with broader governance framework.
 - Existing GitHub Issues templates in `.github/ISSUE_TEMPLATE/` may need to be reconciled with the new adopter-specific templates.
+
+## Execution summary (2026-03-02)
+
+Completed with deliverables:
+
+- Structured GitHub templates under `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/`
+- Governance docs:
+  - `/Users/grig/work/repo/universalmanifest/docs/governance/ADOPTER-SLA.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/governance/SPEC-IMPROVEMENT-QUEUE.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/governance/REGRESSION-PREVENTION.md`
+- Adopter registry:
+  - `/Users/grig/work/repo/universalmanifest/adopters/registry.json`
+  - `/Users/grig/work/repo/universalmanifest/adopters/README.md`
+- Conformance runner baseline support (`--baseline`) in:
+  - `/Users/grig/work/repo/universalmanifest/conformance/runner/src/cli.mjs`
+  - `/Users/grig/work/repo/universalmanifest/conformance/runner/src/core.mjs`
+- CI regression gate in:
+  - `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
+
+Evidence:
+
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0056-execution-report.md`
+- Agent Task ID preserved: `e0a7fe60_1772165606`

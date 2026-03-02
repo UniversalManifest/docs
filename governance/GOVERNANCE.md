@@ -216,6 +216,10 @@ This governance document can be amended by:
 - [Adopter Feedback SLA](./ADOPTER-SLA.md)
 - [Spec Improvement Queue](./SPEC-IMPROVEMENT-QUEUE.md)
 - [Regression Prevention Policy](./REGRESSION-PREVENTION.md)
+- [Breaking-Change Policy](./BREAKING-CHANGE-POLICY.md)
+- [Deprecation Policy](./DEPRECATION-POLICY.md)
+- [Incident Response and Rollback](./INCIDENT-RESPONSE.md)
+- [Release Cadence](./RELEASE-CADENCE.md)
 - [Adopter Registry Guide](../../adopters/README.md)
 
 ---

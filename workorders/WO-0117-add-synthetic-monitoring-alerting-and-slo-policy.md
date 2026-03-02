@@ -6,7 +6,7 @@
 **Priority:** P1  
 **Owner:** Platform / Operations  
 **Source:** Follow-on from deployment/runtime hardening review  
-**Blocker:** Staging surface is not yet reachable, so staging synthetic checks cannot run continuously.
+**Blocker:** Custom-domain staging hosts are still pending DNS readiness; production synthetic is active and fallback staging hosts are reachable.
 
 ## Objective
 
@@ -88,8 +88,12 @@ Verification results:
 - staging checks currently fail due unreachable hosts:
   - `npm run smoke:endpoints:staging` -> FAIL (`fetch failed`)
   - `npm run verify:postdeploy:staging` -> FAIL (`fetch failed`)
+- fallback-host staging checks:
+  - smoke -> PASS
+  - post-deploy verify -> PASS
+  - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
 External unblock actions required:
 
-1. Bring `staging.universalmanifest.net` and `staging.myum.net` online.
+1. Complete custom-domain DNS propagation for staging hosts so standard staging commands succeed.
 2. Validate escalation channel end-to-end by configuring `UM_SYNTHETIC_ALERT_WEBHOOK` and forcing a controlled alert test.

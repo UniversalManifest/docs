@@ -52,8 +52,8 @@ Decision tree text fallback:
 
 - Spec v0.1: `https://universalmanifest.net/spec/v01/`
 - Spec v0.2: `https://universalmanifest.net/spec/v02/`
-- Conformance v0.1: `https://universalmanifest.net/conformance/v0.1/`
-- Conformance v0.2: `https://universalmanifest.net/conformance/v0.2/`
+- Conformance v0.1: `https://universalmanifest.net/conformance/v01/`
+- Conformance v0.2: `https://universalmanifest.net/conformance/v02/`
 - Standalone suite guide: `https://universalmanifest.net/conformance/standalone-suite/`
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`
 - This implementation guide: `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`

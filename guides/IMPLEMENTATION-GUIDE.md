@@ -42,6 +42,8 @@ Universal Manifest is a portable JSON-LD envelope for identity/state exchange. A
 
 ![Conformance decision tree](../../site/public/diagrams/conformance-decision-tree.svg)
 
+Diagram source: `/Users/grig/work/repo/universalmanifest/docs/diagrams/conformance-decision-tree.excalidraw`
+
 Text fallback (non-visual):
 
 1. If you only consume manifests, start with `v0.1-baseline` consumer.
@@ -414,5 +416,6 @@ Recommended submission path:
 
 - Site guide: `https://universalmanifest.net/guides/implementation-guide/`
 - Quick reference card: `https://universalmanifest.net/guides/quick-reference/`
+- Migration guide: `https://universalmanifest.net/guides/migration-v01-v02/`
 - Agent handoff companion: `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`

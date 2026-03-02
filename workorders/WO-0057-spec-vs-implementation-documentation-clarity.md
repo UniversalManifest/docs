@@ -1,6 +1,6 @@
 # WO-0057 — Spec-vs-Implementation Documentation Clarity
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** HIGH
 **Blocks:** Gate G4 (Interoperability proof — prevents "UM = TypeScript" perception)
@@ -42,14 +42,14 @@ Out of scope:
 
 ### Phase 1 — Documentation audit
 
-- [ ] Scan all documentation for spec-vs-implementation confusion patterns:
+- [x] Scan all documentation for spec-vs-implementation confusion patterns:
   - References to `packages/universal-manifest/` as if it were the spec.
   - Language like "UM uses Ed25519" (spec says; implementation demonstrates).
   - Missing "this is one implementation" qualifiers on code examples.
   - Absence of "you can implement this in any language" messaging.
   - Integration docs that assume TypeScript/Node.js.
-- [ ] Produce an audit report listing every instance with file path, line number, and proposed fix.
-- [ ] Key files to audit:
+- [x] Produce an audit report listing every instance with file path, line number, and proposed fix.
+- [x] Key files to audit:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
@@ -63,43 +63,43 @@ Out of scope:
 
 ### Phase 2 — Key entry-point messaging updates
 
-- [ ] Add "UM is a specification" banner or callout to:
+- [x] Add "UM is a specification" banner or callout to:
   - Docs site landing page (`site/src/content/docs/index.md`)
   - Spec README files (`spec/v0.1/README.md`, `spec/v0.2/README.md`)
   - Root `README.md`
-- [ ] Standard language template:
+- [x] Standard language template:
   ```
   Universal Manifest is an open specification for portable state capsules.
   It is not tied to any particular programming language, framework, or runtime.
   The TypeScript helper in this repository is a reference implementation;
   you can build a conformant implementation in any language.
   ```
-- [ ] Add "Build Your Own Implementation" call-to-action:
+- [x] Add "Build Your Own Implementation" call-to-action:
   - Link to implementation guide (WO-0055).
   - Link to conformance suite (WO-0053).
   - Link to reference implementation (WO-0054) as a starting template.
 
 ### Phase 3 — Code example qualification
 
-- [ ] Add headers/notes to all code examples in docs:
+- [x] Add headers/notes to all code examples in docs:
   - "This example uses the TypeScript reference implementation. The same operations can be performed in any language that implements the UM spec."
-- [ ] Where possible, add pseudocode or multi-language examples alongside TypeScript.
-- [ ] Ensure conformance docs reference the conformance suite (language-agnostic) rather than the TypeScript validator directly.
+- [x] Where possible, add pseudocode or multi-language examples alongside TypeScript.
+- [x] Ensure conformance docs reference the conformance suite (language-agnostic) rather than the TypeScript validator directly.
 
 ### Phase 4 — Navigation and information architecture updates
 
-- [ ] Review docs site sidebar for spec-vs-implementation separation:
+- [x] Review docs site sidebar for spec-vs-implementation separation:
   - "Specification" section: spec versions, conformance, signature profile.
   - "Implementations" section: reference implementation, adopter registry, conformance suite.
   - "Guides" section: implementation guide, quick-start, migration.
-- [ ] Ensure the TypeScript helper page (`getting-started/typescript-helper.md`) clearly states it is ONE implementation.
-- [ ] Add a "Known Implementations" page linking to:
+- [x] Ensure the TypeScript helper page (`getting-started/typescript-helper.md`) clearly states it is ONE implementation.
+- [x] Add a "Known Implementations" page linking to:
   - Reference implementation (WO-0054).
   - Adopter registry (WO-0056).
 
 ### Phase 5 — Integration docs updates
 
-- [ ] Review each integration page in `integrations/` and `site/src/content/docs/integrations/`:
+- [x] Review each integration page in `integrations/` and `site/src/content/docs/integrations/`:
   - Ensure guidance is spec-level (what any implementation should do), not TypeScript-specific.
   - Add notes when TypeScript-specific examples are used.
   - Include language like "Any conformant UM implementation can be used for this integration."
@@ -124,14 +124,14 @@ New files:
 
 ## Acceptance criteria
 
-- [ ] Audit report exists listing all spec-vs-implementation confusion instances found and fixed.
-- [ ] Every key entry point (docs landing, spec READMEs, root README) includes "UM is a specification" messaging.
-- [ ] The TypeScript helper is described as "a reference implementation" (not "the implementation") in every context where it appears.
-- [ ] At least 3 calls-to-action for external implementations exist in prominent documentation locations.
-- [ ] Code examples in docs include qualification notes about being reference-implementation examples.
-- [ ] Integration docs do not assume TypeScript/Node.js as the only option.
-- [ ] A new reader encountering UM for the first time would understand within the first 30 seconds that UM is a specification they can implement in any language.
-- [ ] `rg -i "the implementation" /Users/grig/work/repo/universalmanifest/site/src/content/docs/ /Users/grig/work/repo/universalmanifest/spec/` returns zero results that position the TS helper as "the" (only) implementation.
+- [x] Audit report exists listing all spec-vs-implementation confusion instances found and fixed.
+- [x] Every key entry point (docs landing, spec READMEs, root README) includes "UM is a specification" messaging.
+- [x] The TypeScript helper is described as "a reference implementation" (not "the implementation") in every context where it appears.
+- [x] At least 3 calls-to-action for external implementations exist in prominent documentation locations.
+- [x] Code examples in docs include qualification notes about being reference-implementation examples.
+- [x] Integration docs do not assume TypeScript/Node.js as the only option.
+- [x] A new reader encountering UM for the first time would understand within the first 30 seconds that UM is a specification they can implement in any language.
+- [x] `rg -i "the implementation" /Users/grig/work/repo/universalmanifest/site/src/content/docs/ /Users/grig/work/repo/universalmanifest/spec/` returns zero results that position the TS helper as "the" (only) implementation.
 
 ## Validation commands
 
@@ -146,3 +146,12 @@ New files:
 - Can begin Phase 1 (audit) in parallel with WO-0054 development.
 - Coordinate with WO-0055 (implementation guide) to ensure consistent messaging.
 - Coordinate with WO-0058 (migration guide) to ensure migration docs are spec-level, not implementation-level.
+
+## Execution summary (2026-03-02)
+
+Completed with audit + messaging updates across root README, spec READMEs, site landing, getting-started docs, and integration references.
+
+Evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-02-wo-0057-spec-impl-audit-report.md`
+- Agent Task ID preserved: `e0a7fe60_1772165606`

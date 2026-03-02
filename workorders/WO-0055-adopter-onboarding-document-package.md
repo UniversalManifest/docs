@@ -1,6 +1,6 @@
 # WO-0055 — Adopter Onboarding Document Package
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** CRITICAL
 **Blocks:** Gate G4 (Interoperability proof — enables external adopters to start)
@@ -43,7 +43,7 @@ Out of scope:
 
 ### Phase 1 — Implementation guide structure and core content
 
-- [ ] Create the implementation guide at `docs/guides/IMPLEMENTATION-GUIDE.md`:
+- [x] Create the implementation guide at `docs/guides/IMPLEMENTATION-GUIDE.md`:
   ```
   1. Introduction
      - What is Universal Manifest (one paragraph)
@@ -83,16 +83,16 @@ Out of scope:
 
 ### Phase 2 — Decision tree for conformance levels
 
-- [ ] Create a visual decision tree (Excalidraw source + published SVG):
+- [x] Create a visual decision tree (Excalidraw source + published SVG):
   - "Do you only consume manifests?" -> v0.1-baseline consumer
   - "Do you produce manifests?" -> v0.1-baseline issuer
   - "Do you need tamper protection?" -> v0.2-baseline
   - "Do you need revocation checking?" -> v0.2-extended
-- [ ] Include text-based fallback in the guide for non-visual consumption.
+- [x] Include text-based fallback in the guide for non-visual consumption.
 
 ### Phase 3 — FAQ and common implementation questions
 
-- [ ] Compile and answer questions including:
+- [x] Compile and answer questions including:
   - "What JSON-LD processing do I need?" (Answer: none for basic conformance)
   - "Can I use a different signature algorithm?" (Answer: not for v0.2 conformance)
   - "How do I handle manifests with unknown fields?" (Answer: ignore them safely)
@@ -105,7 +105,7 @@ Out of scope:
 
 ### Phase 4 — Quick-reference card
 
-- [ ] Single-page reference card (`docs/guides/QUICK-REFERENCE.md`):
+- [x] Single-page reference card (`docs/guides/QUICK-REFERENCE.md`):
   - Required fields table (field presenta, type, description).
   - Validation rules summary.
   - Signature verification algorithm in 5 numbered steps.
@@ -114,20 +114,20 @@ Out of scope:
 
 ### Phase 5 — Handoff format and agent-optimized packaging
 
-- [ ] Structure the guide with clear machine-readable sections:
+- [x] Structure the guide with clear machine-readable sections:
   - Use consistent heading hierarchy.
   - Include structured metadata block at top (spec versions covered, last updated, suite version).
   - Mark normative vs. informative sections explicitly.
   - Include "copy-paste ready" code blocks with language tags.
-- [ ] Create a `docs/guides/AGENT-HANDOFF.md` that is a condensed, structured version optimized for agent-to-agent transfer:
+- [x] Create a `docs/guides/AGENT-HANDOFF.md` that is a condensed, structured version optimized for agent-to-agent transfer:
   - Spec version, conformance levels, required fields, validation rules, signing algorithm.
   - All in a single document that can be included in an agent's context window.
 
 ### Phase 6 — Publish to docs site
 
-- [ ] Add implementation guide to the Starlight docs site navigation.
-- [ ] Add quick-reference card to the docs site.
-- [ ] Cross-link from existing getting-started and conformance pages.
+- [x] Add implementation guide to the Starlight docs site navigation.
+- [x] Add quick-reference card to the docs site.
+- [x] Cross-link from existing getting-started and conformance pages.
 
 ## Key file paths (created/modified)
 
@@ -146,14 +146,14 @@ Modified files:
 
 ## Acceptance criteria
 
-- [ ] Implementation guide covers the complete path from "I have never seen UM" to "my implementation passes conformance."
-- [ ] Decision tree helps adopters choose the right conformance level in under 2 minutes.
-- [ ] Code examples are provided for at least TypeScript and one pseudocode language (Python or Go).
-- [ ] FAQ covers at least 8 common implementation questions with clear answers.
-- [ ] Quick-reference card fits on one printed page and includes all critical information.
-- [ ] Agent-handoff document can be consumed by an AI agent to produce a working implementation plan without additional context.
-- [ ] All documents are published to the docs site and cross-linked from existing navigation.
-- [ ] A test: give the agent-handoff document to a fresh AI agent and verify it can outline a correct implementation plan.
+- [x] Implementation guide covers the complete path from "I have never seen UM" to "my implementation passes conformance."
+- [x] Decision tree helps adopters choose the right conformance level in under 2 minutes.
+- [x] Code examples are provided for at least TypeScript and one pseudocode language (Python or Go).
+- [x] FAQ covers at least 8 common implementation questions with clear answers.
+- [x] Quick-reference card fits on one printed page and includes all critical information.
+- [x] Agent-handoff document can be consumed by an AI agent to produce a working implementation plan without additional context.
+- [x] All documents are published to the docs site and cross-linked from existing navigation.
+- [x] A test: give the agent-handoff document to a fresh AI agent and verify it can outline a correct implementation plan.
 
 ## Validation commands
 
@@ -167,3 +167,20 @@ Modified files:
 - Depends on WO-0054 (reference implementation) for code examples and as the primary "look at this for reference" link.
 - WO-0057 (spec-vs-implementation clarity) should inform the guide's messaging about spec vs. implementation boundaries.
 - WO-0058 (migration guide) is a companion document; the implementation guide should link to it for v0.1-to-v0.2 migration.
+
+## Execution summary (2026-03-02)
+
+Completed with deliverables:
+
+- `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`
+- `/Users/grig/work/repo/universalmanifest/docs/guides/QUICK-REFERENCE.md`
+- `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
+- `/Users/grig/work/repo/universalmanifest/docs/diagrams/conformance-decision-tree.excalidraw`
+- `/Users/grig/work/repo/universalmanifest/site/public/diagrams/conformance-decision-tree.svg`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/implementation-guide.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/quick-reference.md`
+
+Evidence:
+
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0055-execution-report.md`
+- Agent Task ID preserved: `e0a7fe60_1772165606`
