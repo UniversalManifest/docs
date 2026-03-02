@@ -1,6 +1,6 @@
 # WO-0107 — Commit Interactive Sandbox Work and Uncommitted Design Artifacts
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-03-01
 **Priority:** P0 (Critical)
 **Source:** Documentation Freshness Audit (2026-03-01), Section 6 Priority 1 (items 1-4)
@@ -64,12 +64,12 @@ Organize into logical commits:
 
 ## Acceptance criteria
 
-- [ ] All uncommitted sandbox code is committed.
-- [ ] All uncommitted design documents are committed.
-- [ ] All uncommitted documentation diffs are committed.
-- [ ] New fixture is committed.
-- [ ] `git status` shows a clean working tree (or only intentionally-deferred items).
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds after commit.
+- [x] All uncommitted sandbox code is committed.
+- [x] All uncommitted design documents are committed.
+- [x] All uncommitted documentation diffs are committed.
+- [x] New fixture is committed.
+- [x] `git status` shows a clean working tree (or only intentionally-deferred items).
+- [x] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds after commit.
 
 ## Validation commands
 
