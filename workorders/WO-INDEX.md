@@ -146,6 +146,14 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0112-myum-consumer-frontend-and-runtime-reality-audit.md` — [COMPLETED] Deliver a senior-team-grade live-vs-stub/mocks comprehensive report and implement a friendly consumer resolver frontend with detailed page specs and HTML wireframes (P0; depends on WO-0098 and current myum audit baseline)
 
+### Deployment and Operations Hardening Wave (WO-0113 through WO-0117)
+
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md` — [NOT_STARTED] Create staging topology for docs + resolver, formalize promotion/rollback rules, and enforce environment isolation (P0; foundational for safe release iteration)
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md` — [NOT_STARTED] Implement staged/prod deployment workflows with required smoke and post-deploy gate checks before production promotion (P0; depends on WO-0113)
+- `docs/workorders/WO-0115-pin-toolchain-versions-and-runtime-baselines.md` — [NOT_STARTED] Pin Node/Wrangler/runtime baselines across local + CI to eliminate environment drift (P1; supports reproducible builds/tests/deploys)
+- `docs/workorders/WO-0116-expand-resolver-test-suite-for-contract-coverage.md` — [NOT_STARTED] Add dedicated resolver contract tests for full status/header/path matrix and integrate into CI (P0; hardens `myum.net` behavior regression detection)
+- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [NOT_STARTED] Add continuous synthetic monitoring, alerts, and SLO policy for staging and production surfaces (P1; depends on WO-0113 and WO-0114)
+
 #### Documentation Freshness and Maintenance
 
 - `docs/workorders/WO-0103-update-docs-readme-with-missing-references.md` — [COMPLETED] Update docs/README.md to reference ~20 new document categories created this week (P0; no dependencies)
