@@ -1,6 +1,6 @@
 # WO-0068 -- Sandbox CI Parity Testing and QA
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** HIGH
 **Blocks:** None (final quality gate)
@@ -34,7 +34,7 @@ Out of scope:
 
 ### Phase 1 -- Parity test script
 
-- [ ] Create `site/scripts/test-validator-parity.mjs`:
+- [x] Create `site/scripts/test-validator-parity.mjs`:
   - Load all fixtures from `examples/v0.1/`, `examples/v0.1/invalid/`, `examples/v0.2/`, `examples/v0.2/invalid/`
   - Run each through the Node validator (`packages/universal-manifest/src/index.ts`)
   - Run each through the browser validator (`site/src/scripts/sandbox/validator-browser.ts`, loaded via a Node-compatible entry point or bundled for Playwright)
@@ -44,16 +44,16 @@ Out of scope:
 
 ### Phase 2 -- CI integration
 
-- [ ] Add a `parity-test` job to `.github/workflows/ci.yml`:
+- [x] Add a `parity-test` job to `.github/workflows/ci.yml`:
   - Runs after the existing `test` job
   - Depends on `build` job (site must build first)
   - Executes `site/scripts/test-validator-parity.mjs`
   - Fails the pipeline if any mismatch is detected
-- [ ] Verify the CI pipeline passes with current code
+- [x] Verify the CI pipeline passes with current code
 
 ### Phase 3 -- Scenario smoke tests
 
-- [ ] Create `site/scripts/test-scenarios-smoke.mjs` (or use Playwright):
+- [x] Create `site/scripts/test-scenarios-smoke.mjs` (or use Playwright):
   - For each of the 25 scenarios:
     - Navigate to `/sandbox/{scenario-id}/`
     - Verify the page loads without errors
@@ -65,28 +65,28 @@ Out of scope:
     - Modify a value
     - Click "Run"
     - Verify the outcome changes
-- [ ] Add to CI as a `smoke-test` job (runs after `build`)
+- [x] Add to CI as a `smoke-test` job (runs after `build`)
 
 ### Phase 4 -- Accessibility audit
 
-- [ ] Keyboard navigation: verify all controls are reachable with Tab, usable with Enter/Space
-- [ ] Arrow key navigation: verify step prev/next, card selection
-- [ ] Screen reader: verify all panels have ARIA labels, bubbles are announced
-- [ ] Focus management: verify focus moves correctly when:
+- [x] Keyboard navigation: verify all controls are reachable with Tab, usable with Enter/Space
+- [x] Arrow key navigation: verify step prev/next, card selection
+- [x] Screen reader: verify all panels have ARIA labels, bubbles are announced
+- [x] Focus management: verify focus moves correctly when:
   - Opening/closing modal
   - Navigating between steps
   - Opening/closing the JSON editor
-- [ ] Color contrast: verify all text meets WCAG 2.1 AA contrast ratios
-- [ ] Document accessibility findings and fix critical issues
+- [x] Color contrast: verify all text meets WCAG 2.1 AA contrast ratios
+- [x] Document accessibility findings and fix critical issues
 
 ### Phase 5 -- Performance audit
 
-- [ ] Measure and document:
+- [x] Measure and document:
   - Total JS bundle size for sandbox (target: <50KB gzipped for engine + validator + one scenario)
   - Time to interactive for `/sandbox/` (target: <2 seconds on 4G)
   - Step transition latency (target: <100ms perceived)
   - Ed25519 verification latency in browser (target: <500ms)
-- [ ] Identify and fix any performance issues:
+- [x] Identify and fix any performance issues:
   - Lazy loading: verify scenario definitions are not all loaded upfront
   - Code splitting: verify Vite splits per scenario category
   - Fixture caching: verify fixtures are fetched once per scenario, not per step
@@ -99,14 +99,14 @@ Out of scope:
 
 ## Acceptance criteria
 
-- [ ] Parity test passes: Node and browser validators produce identical results for all fixtures (v0.1 valid, v0.1 invalid, v0.2 valid, v0.2 invalid)
-- [ ] CI pipeline includes parity test and it passes
-- [ ] Scenario smoke tests pass: all 25 scenarios load and complete without errors
-- [ ] Modification smoke tests pass: editing JSON in GS-01, TV-01, TV-02 changes the outcome
-- [ ] No WCAG 2.1 AA accessibility violations in critical paths
-- [ ] JS bundle size is <50KB gzipped (engine + validator + one scenario)
-- [ ] Time to interactive is <2 seconds on simulated 4G
-- [ ] Ed25519 verification completes in <500ms in browser
+- [x] Parity test passes: Node and browser validators produce identical results for all fixtures (v0.1 valid, v0.1 invalid, v0.2 valid, v0.2 invalid)
+- [x] CI pipeline includes parity test and it passes
+- [x] Scenario smoke tests pass: all 25 scenarios load and complete without errors
+- [x] Modification smoke tests pass: editing JSON in GS-01, TV-01, TV-02 changes the outcome
+- [x] No WCAG 2.1 AA accessibility violations in critical paths
+- [x] JS bundle size is <50KB gzipped (engine + validator + one scenario)
+- [x] Time to interactive is <2 seconds on simulated 4G
+- [x] Ed25519 verification completes in <500ms in browser
 
 ## Validation commands
 

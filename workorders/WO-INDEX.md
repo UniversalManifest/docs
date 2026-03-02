@@ -76,15 +76,15 @@ Drift governance and follow-on WO trigger criteria:
 **Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
 **Priority:** HIGHEST (per CEO mandate -- comes before WO-0053 through WO-0059)
 
-- `docs/workorders/WO-0060-sandbox-foundation-and-browser-validator.md` — [NOT_STARTED] Extract validation logic for browser use with Web Crypto API adapter; scaffold sandbox pages and fixture pipeline (HIGHEST, foundational; no dependencies)
-- `docs/workorders/WO-0061-sandbox-three-panel-layout-and-step-engine.md` — [NOT_STARTED] Build three-panel layout shell, step-through engine, step controls, bubble annotations, and manifest viewer/editor (HIGHEST; depends on WO-0060)
-- `docs/workorders/WO-0062-sandbox-scenario-modal-and-navigation.md` — [NOT_STARTED] Build scenario selection modal with card grid, search/filter, and navigation between modal and sandbox (HIGHEST; depends on WO-0061)
-- `docs/workorders/WO-0063-sandbox-getting-started-scenarios.md` — [NOT_STARTED] Implement 4 Getting Started scenarios (GS-01 through GS-04): first manifest, shards, forward compatibility, resolver (HIGHEST; depends on WO-0062)
-- `docs/workorders/WO-0064-sandbox-trust-verification-scenarios.md` — [NOT_STARTED] Implement 5 Trust & Verification scenarios (TV-01 through TV-05): signed manifest, tamper detection, expired, missing fields, invalid algorithm (HIGHEST; depends on WO-0063)
-- `docs/workorders/WO-0065-sandbox-integration-lane-scenarios.md` — [NOT_STARTED] Implement 8 Integration Lane scenarios (IL-01 through IL-08): social, smart glasses, metaverse, RP1, OMATrust, Chia, personhood, venue (HIGHEST; depends on WO-0063)
-- `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [NOT_STARTED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, shard type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
-- `docs/workorders/WO-0067-sandbox-visual-polish-and-illustrations.md` — [NOT_STARTED] Create 25 SVG illustrations, refine animations, category colors, dark mode, responsive polish (HIGH; depends on WO-0063, WO-0064, WO-0065, WO-0066)
-- `docs/workorders/WO-0068-sandbox-ci-parity-testing-and-qa.md` — [NOT_STARTED] CI parity testing (Node vs browser validator), scenario smoke tests, accessibility audit, performance audit (HIGH; depends on WO-0060, WO-0063, WO-0064, WO-0065, WO-0066)
+- `docs/workorders/WO-0060-sandbox-foundation-and-browser-validator.md` — [COMPLETED] Extract validation logic for browser use with Web Crypto API adapter; scaffold sandbox pages and fixture pipeline (HIGHEST, foundational; no dependencies)
+- `docs/workorders/WO-0061-sandbox-three-panel-layout-and-step-engine.md` — [COMPLETED] Build three-panel layout shell, step-through engine, step controls, bubble annotations, and manifest viewer/editor (HIGHEST; depends on WO-0060)
+- `docs/workorders/WO-0062-sandbox-scenario-modal-and-navigation.md` — [COMPLETED] Build scenario selection modal with card grid, search/filter, and navigation between modal and sandbox (HIGHEST; depends on WO-0061)
+- `docs/workorders/WO-0063-sandbox-getting-started-scenarios.md` — [COMPLETED] Implement 4 Getting Started scenarios (GS-01 through GS-04): first manifest, shards, forward compatibility, resolver (HIGHEST; depends on WO-0062)
+- `docs/workorders/WO-0064-sandbox-trust-verification-scenarios.md` — [COMPLETED] Implement 5 Trust & Verification scenarios (TV-01 through TV-05): signed manifest, tamper detection, expired, missing fields, invalid algorithm (HIGHEST; depends on WO-0063)
+- `docs/workorders/WO-0065-sandbox-integration-lane-scenarios.md` — [COMPLETED] Implement 8 Integration Lane scenarios (IL-01 through IL-08): social, smart glasses, metaverse, RP1, OMATrust, Chia, personhood, venue (HIGHEST; depends on WO-0063)
+- `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [COMPLETED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, shard type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
+- `docs/workorders/WO-0067-sandbox-visual-polish-and-illustrations.md` — [COMPLETED] Create 25 SVG illustrations, refine animations, category colors, dark mode, responsive polish (HIGH; depends on WO-0063, WO-0064, WO-0065, WO-0066)
+- `docs/workorders/WO-0068-sandbox-ci-parity-testing-and-qa.md` — [COMPLETED] CI parity testing (Node vs browser validator), scenario smoke tests, accessibility audit, performance audit (HIGH; depends on WO-0060, WO-0063, WO-0064, WO-0065, WO-0066)
 
 ### Interactive Sandbox V2 Redesign Wave (WO-0069 through WO-0080)
 
@@ -141,6 +141,10 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0102-create-integration-authoring-guide.md` — [NOT_STARTED] Publish existing integration authoring guide on the site and fix broken catalog link (P1; no dependencies)
 - `docs/workorders/WO-0110-create-msf-relationship-document.md` — [NOT_STARTED] Document Metaverse Standards Forum lineage, current relationship, and future plans (P2; coordinates with WO-0093)
 - `docs/workorders/WO-0111-organize-animated-svgs-into-browsable-gallery.md` — [NOT_STARTED] Organize 29 production animated SVGs into browsable gallery page on the site (P2; depends on WO-0105)
+
+### myum Resolver Consumer Frontend + Runtime Reality (WO-0112)
+
+- `docs/workorders/WO-0112-myum-consumer-frontend-and-runtime-reality-audit.md` — [NOT_STARTED] Deliver a senior-team-grade live-vs-stub/mocks comprehensive report and implement a friendly consumer resolver frontend with detailed page specs and HTML wireframes (P0; depends on WO-0098 and current myum audit baseline)
 
 #### Documentation Freshness and Maintenance
 
