@@ -94,6 +94,12 @@ Current replay artifacts:
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-01-object-model-replay-new-content-2026-03-03.svg`
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-08-harness-explainer-replay-2026-03-02.svg`
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-08-harness-explainer-replay-2026-03-03.svg`
+- Plus 14 strict scripted primary-track replays generated on 2026-03-03:
+  - scenario series: `scenario-01-um`, `scenario-03`, `scenario-04`, `scenario-06`, `scenario-07`, `scenario-09` through `scenario-15`
+  - pilot series: `um-core-flow-pilot`, `um-overlay-lanes-pilot`
+
+Strict scripted replay scope note:
+- Numbered legacy alternates (`1.3`, `5.x`, `6.x`, `7.x`, `8.x`) are not part of this strict replay lane because they do not consistently satisfy the modern accessibility marker baseline enforced by replay validation.
 
 Related evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-animation-diagram-forensics-report.md`
