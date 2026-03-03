@@ -1,6 +1,6 @@
 # WO-0066 -- Sandbox Edge Case and Advanced Scenarios
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Created:** 2026-02-27
 **Priority:** HIGHEST
 **Blocks:** WO-0067 (visual polish)

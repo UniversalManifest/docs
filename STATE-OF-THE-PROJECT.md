@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-02
-**Status:** 105 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02).
+**Date:** 2026-03-03
+**Status:** 106 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED with automated staging target cutover logic.
 **Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
 **Legacy path:** archived (historical only)
 
@@ -187,6 +187,15 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 #### myum Resolver Consumer Frontend + Runtime Reality (WO-0112) — COMPLETED
 
 - `WO-0112` implementation, deployment alignment, and production verification are complete (`/sandbox/`, `/resolver/`, and `/reference/resolver-api/` are live and production smoke passes)
+
+#### Deployment and Operations Hardening (WO-0113 through WO-0118) — COMPLETED
+
+- Completed: `WO-0113` staging environments and promotion model (custom staging domains active with fallback resilience and staging KV split)
+- Completed: `WO-0114` gated staged-to-production deployment workflow
+- Completed: `WO-0115` toolchain/runtime baseline pinning
+- Completed: `WO-0116` resolver contract coverage expansion in CI
+- Completed: `WO-0117` synthetic monitoring + SLO policy
+- Completed: `WO-0118` automated staging target selection (explicit override -> custom-domain auto -> fallback auto) across deploy gates and synthetic monitoring
 
 ## Priority context (2026-03-02)
 

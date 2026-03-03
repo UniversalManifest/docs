@@ -1,6 +1,6 @@
 # Work Order: WO-0025 - Documentation Readability and Navigation Improvements
 
-## Status: **COMPLETED**
+**Status:** COMPLETED
 
 ## Goal
 Improve the human-readability of the Universal Manifest documentation website, streamline the integration of tool links, and clean up formatting issues.

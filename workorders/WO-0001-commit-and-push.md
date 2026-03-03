@@ -1,6 +1,6 @@
 # WO-0001 — Commit + push current repo changes
 
-**Status:** Done  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective

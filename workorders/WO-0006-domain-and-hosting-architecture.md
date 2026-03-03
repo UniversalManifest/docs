@@ -1,6 +1,6 @@
 # WO-0006 — Domain + hosting architecture (`universalmanifest.net` + `myum.net`)
 
-**Status:** Done  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective

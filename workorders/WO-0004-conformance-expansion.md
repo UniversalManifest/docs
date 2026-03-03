@@ -1,6 +1,6 @@
 # WO-0004 — Expand conformance fixtures (TTL + unknown fields)
 
-**Status:** Done  
+**Status:** COMPLETED  
 **Created:** 2026-02-12
 
 ## Objective
