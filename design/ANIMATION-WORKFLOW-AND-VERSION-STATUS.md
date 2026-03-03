@@ -35,6 +35,35 @@ The following are historical/deprecated for production animation output:
 
 These directories are retained for provenance and comparison only.
 
+## Version Lineage and Website-Visible Tracks
+
+The website currently exposes multiple animation naming tracks, but they map to one active generation system (prompt-pack animated SVG workflow):
+
+- Scenario-prefixed dark-theme assets (primary production track):
+  - Example references in docs pages:
+    - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/about/visual-explainers.md`
+    - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
+  - Key files:
+    - `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
+    - `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-08-harness-explainer.svg`
+
+- Numbered transparent-background alternates (legacy-compatible presentation track, not default):
+  - `/Users/grig/work/repo/universalmanifest/site/public/animations/6.2-harness-explainer.svg`
+  - These are still visible on the gallery page as alternate versions, but scenario-prefixed assets are preferred for primary docs contexts.
+
+Commit provenance for the investigated files:
+- `scenario-08-harness-explainer.svg`
+  - Introduced: commit `1b4a49f` on 2026-02-25 (`feat: add new SVG infographics and a style guide...`)
+  - Refreshed: commit `a631e41` on 2026-02-27 (`feat: refresh visual assets`)
+- `scenario-01-object-model.svg`
+  - Added in current filename form: commit `a631e41` on 2026-02-27 (`feat: refresh visual assets`)
+- `6.2-harness-explainer.svg` (numbered alternate)
+  - Added: commit `263675b` on 2026-02-26 (`feat: add animation assets`)
+
+Operational interpretation:
+- The active system for currently visible website animations is the WO-0030 prompt-pack generation approach and its upgrade waves (WO-0042, WO-0043).
+- Legacy tracks remain for compatibility/provenance, but are not the canonical source for new production animation creation.
+
 ## Reproduction Protocol (Safe)
 
 When testing reproducibility:
@@ -72,8 +101,12 @@ git rev-parse origin/main
 git rev-list --left-right --count HEAD...origin/main
 ```
 
-Interpretation for this run (2026-03-02):
-- `git rev-list --left-right --count HEAD...origin/main` returned `1 0`
-- This means local `main` is one commit behind `origin/main`.
+Interpretation guidance:
+- Output format is `<left> <right>`.
+- `left` = commits only on local `HEAD`.
+- `right` = commits only on `origin/main`.
 
-Because this repository is actively being modified by other agents, do not force-sync blindly. Coordinate update timing before fast-forwarding local branch state.
+Observed in this session (2026-03-02), due concurrent edits:
+- `1 0` -> `3 0` -> `0 0` -> `1 0` -> `0 0`
+
+Because this repository is actively being modified by other agents, this status is intentionally treated as a live snapshot. Re-run the check commands immediately before synchronization actions.
