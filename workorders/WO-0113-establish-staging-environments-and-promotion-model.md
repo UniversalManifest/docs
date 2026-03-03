@@ -2,7 +2,7 @@
 
 **Status:** COMPLETED  
 **Created:** 2026-03-02  
-**Updated:** 2026-03-02  
+**Updated:** 2026-03-03  
 **Priority:** P0  
 **Owner:** Platform / DevOps  
 **Source:** Follow-on from deployment/runtime hardening review  
@@ -112,7 +112,19 @@ Provisioning update:
   - `node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
   - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
-Follow-up (non-blocking enhancement):
+Completion addendum (2026-03-03):
 
-1. Complete custom-domain DNS for `staging.universalmanifest.net`, `staging.myum.net`, and `www.staging.myum.net`.
-2. Switch default staging script targets from fallback hosts to custom staging domains after DNS goes active.
+- Staging custom domains are now active for both surfaces:
+  - docs: `https://staging.universalmanifest.net` (served via `um-docs-staging-proxy` custom-domain Worker in front of staging Pages content)
+  - resolver: `https://staging.myum.net` and `https://www.staging.myum.net` (served via `myum-resolver-staging` custom domains)
+- Staging vars now target custom domains by default:
+  - `STAGING_DOCS_BASE=https://staging.universalmanifest.net`
+  - `STAGING_RESOLVER_BASE=https://staging.myum.net`
+  - `STAGING_RESOLVER_WWW_BASE=https://www.staging.myum.net`
+- Cloud verification evidence:
+  - Synthetic staging monitoring SUCCESS:
+    - `https://github.com/grigb/universal-manifest/actions/runs/22602225159`
+  - Gated deploy (staging verification) SUCCESS:
+    - `https://github.com/grigb/universal-manifest/actions/runs/22602253533`
+  - Staging custom-domain provisioning workflow SUCCESS:
+    - `https://github.com/grigb/universal-manifest/actions/runs/22602353923`

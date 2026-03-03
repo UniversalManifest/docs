@@ -2,7 +2,7 @@
 
 **Status:** COMPLETED  
 **Created:** 2026-03-02  
-**Updated:** 2026-03-02  
+**Updated:** 2026-03-03  
 **Priority:** P0  
 **Owner:** Platform / CI-CD  
 **Source:** Follow-on from deployment/runtime hardening review  
@@ -115,7 +115,13 @@ Repository fixes applied after that run:
 - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` now uses real staging KV IDs
 - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml` now supports staging host overrides via repo vars
 
-Follow-up (non-blocking enhancement):
+Completion addendum (2026-03-03):
 
-1. Re-run `deploy-gated.yml` from a ref that includes the staging-KV/workflow updates to record a full-pass evidence run.
-2. Complete custom-domain DNS propagation for `staging.*` hostnames and remove temporary fallback overrides.
+- `deploy-gated.yml` full staging path is now green on custom staging domains:
+  - run: `https://github.com/grigb/universal-manifest/actions/runs/22602253533`
+  - results:
+    - `Deploy staging docs`: PASS
+    - `Deploy staging resolver`: PASS
+    - `Verify staging gates`: PASS
+- `verify_staging` now resolves target bases through shared selector logic and successfully validates custom-domain staging.
+- No additional DNS cutover follow-up remains in this work order; WO-0118 is complete and staging custom domains are active.

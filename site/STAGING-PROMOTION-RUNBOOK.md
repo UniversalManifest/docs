@@ -21,7 +21,13 @@ Staging:
 - resolver: `https://staging.myum.net`
 - resolver host variant: `https://www.staging.myum.net`
 
-Current operational staging hosts (while custom-domain DNS is pending):
+Custom-domain staging status:
+
+- active as of 2026-03-03 and validated in CI:
+  - `https://github.com/grigb/universal-manifest/actions/runs/22602253533`
+  - `https://github.com/grigb/universal-manifest/actions/runs/22602225159`
+
+Fallback staging hosts (used automatically when custom domains are unreachable):
 
 - docs fallback: `https://universalmanifest-net-staging.pages.dev`
 - resolver fallback: `https://myum-resolver-staging.grig-624.workers.dev`
@@ -54,6 +60,7 @@ Production deploy is blocked if any staging gate fails.
 Workflow:
 
 - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+- `/Users/grig/work/repo/universalmanifest/.github/workflows/provision-staging-domains.yml` (re-applies staging custom-domain deployment for docs proxy + resolver)
 
 Manual trigger inputs:
 
@@ -71,9 +78,38 @@ Repository variables:
 
 - `CF_PAGES_PROJECT_STAGING`
 - `CF_PAGES_PROJECT_PROD`
-- `STAGING_DOCS_BASE` (optional override for staging verification job)
-- `STAGING_RESOLVER_BASE` (optional override for staging verification job)
-- `STAGING_RESOLVER_WWW_BASE` (optional override for staging verification job)
+- `STAGING_DOCS_BASE` (optional explicit override for staging verification target)
+- `STAGING_RESOLVER_BASE` (optional explicit override for staging verification target)
+- `STAGING_RESOLVER_WWW_BASE` (optional explicit override for staging verification target)
+
+### Automatic staging target selection
+
+Both staging verification and staging synthetic monitoring use:
+
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/select-staging-bases.mjs`
+
+Selection precedence:
+
+1. Explicit override mode if `STAGING_DOCS_BASE` and `STAGING_RESOLVER_BASE` are set
+2. Custom-domain auto mode if all custom-domain probes pass:
+   - `https://staging.universalmanifest.net/`
+   - `https://staging.universalmanifest.net/resolver/`
+   - `https://staging.myum.net/health`
+   - `https://staging.myum.net/.well-known/myum-resolver.json`
+   - `https://www.staging.myum.net/health`
+3. Fallback auto mode (`pages.dev` + `workers.dev`) when custom-domain probes fail
+
+Local dry-run examples:
+
+```bash
+cd /Users/grig/work/repo/universalmanifest
+node packages/universal-manifest/scripts/select-staging-bases.mjs --format json
+```
+
+```bash
+cd /Users/grig/work/repo/universalmanifest
+STAGING_DOCS_BASE=https://example.com STAGING_RESOLVER_BASE=https://example.org node packages/universal-manifest/scripts/select-staging-bases.mjs --format shell
+```
 
 ## Command References
 

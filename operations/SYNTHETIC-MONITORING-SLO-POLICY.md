@@ -3,7 +3,7 @@
 Status: Active  
 Owner: Platform / Operations  
 Work Order: WO-0117  
-Last updated: 2026-03-02
+Last updated: 2026-03-03
 
 ## 1) Scope
 
@@ -11,6 +11,9 @@ This policy defines reliability objectives and incident handling for production 
 
 - `https://universalmanifest.net` (standards/spec/docs)
 - `https://myum.net` (resolver contract)
+- `https://staging.universalmanifest.net` (staging docs custom domain)
+- `https://staging.myum.net` (staging resolver custom domain)
+- `https://www.staging.myum.net` (staging resolver host variant)
 - `https://universalmanifest-net-staging.pages.dev` (staging docs fallback host)
 - `https://myum-resolver-staging.grig-624.workers.dev` (staging resolver fallback host)
 
@@ -20,16 +23,29 @@ Monitoring is executed by:
 
 - Production workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
 - Staging workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
+- Shared staging target selector: `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/select-staging-bases.mjs`
 - Triggers:
   - scheduled every 15 minutes
   - manual via `workflow_dispatch`
+
+Staging target precedence in monitoring workflow:
+
+1. explicit override variables (`STAGING_DOCS_BASE`, `STAGING_RESOLVER_BASE`, optional `STAGING_RESOLVER_WWW_BASE`)
+2. custom staging domains (`staging.universalmanifest.net`, `staging.myum.net`, `www.staging.myum.net`) when all probes are reachable
+3. fallback hosts (`pages.dev` + `workers.dev`) when custom-domain probes fail
+
+Current operational mode (2026-03-03):
+
+- custom-domain staging probes are passing in cloud execution:
+  - `https://github.com/grigb/universal-manifest/actions/runs/22602225159`
 
 The workflows use existing verification scripts:
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/select-staging-bases.mjs --format json`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base>`
+- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/post-deploy-verify.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base> --resolver-www-base <selected-resolver-www-base>`
 
 Generated monitoring artifacts:
 
@@ -44,6 +60,7 @@ Optional check configuration:
 
 - `UM_SYNTHETIC_SMOKE_UMID` (secret) for production UMID override
 - `workflow_dispatch` input `umid` (manual one-off override)
+- `STAGING_DOCS_BASE` / `STAGING_RESOLVER_BASE` / `STAGING_RESOLVER_WWW_BASE` repository variables for explicit staging target override
 
 ## 3) SLI Definitions
 

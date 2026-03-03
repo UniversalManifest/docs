@@ -2,7 +2,7 @@
 
 **Status:** COMPLETED  
 **Created:** 2026-03-02  
-**Updated:** 2026-03-02  
+**Updated:** 2026-03-03  
 **Priority:** P1  
 **Owner:** Platform / Operations  
 **Source:** Follow-on from deployment/runtime hardening review  
@@ -95,7 +95,20 @@ Verification results:
   - post-deploy verify -> PASS
   - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
-Follow-up (non-blocking enhancement):
+Completion addendum (2026-03-03):
 
-1. Complete custom-domain DNS propagation for staging hosts so standard staging scripts work without overrides.
-2. Configure `UM_SYNTHETIC_ALERT_WEBHOOK` if external alert delivery is desired beyond workflow failure signals.
+- Staging synthetic monitoring is now passing on custom domains:
+  - run: `https://github.com/grigb/universal-manifest/actions/runs/22602225159` -> SUCCESS
+- Staging target variables now point to:
+  - `https://staging.universalmanifest.net`
+  - `https://staging.myum.net`
+  - `https://www.staging.myum.net`
+- DNS/cutover follow-on is complete through WO-0118 execution and Worker custom-domain provisioning.
+
+Remaining optional enhancement:
+
+1. Configure `UM_SYNTHETIC_ALERT_WEBHOOK` if external alert delivery is desired beyond workflow failure signals.
+
+Reliability summary artifact (latest):
+
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-03-reliability-summary.md`
