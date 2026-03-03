@@ -87,11 +87,13 @@ When testing reproducibility:
 4. Keep evidence in:
    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/`
 
-## Repro Outputs from 2026-03-02
+## Repro Outputs from 2026-03-02 to 2026-03-03
 
 Current replay artifacts:
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-01-object-model-replay-new-content-2026-03-02.svg`
+- `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-01-object-model-replay-new-content-2026-03-03.svg`
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-08-harness-explainer-replay-2026-03-02.svg`
+- `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/scenario-08-harness-explainer-replay-2026-03-03.svg`
 
 Related evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-animation-diagram-forensics-report.md`
