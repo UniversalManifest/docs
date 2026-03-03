@@ -71,6 +71,14 @@ When testing reproducibility:
 1. Never overwrite files in `/site/public/animations/` or `/site/public/diagrams/`.
 2. Write replay outputs to:
    - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`
+   - Preferred command path (single SVG replay, non-destructive):
+     ```bash
+     cd /Users/grig/work/repo/universalmanifest/site
+     npm run animation:replay -- \
+       --source scenario-08-harness-explainer.svg \
+       --name scenario-08-harness-explainer-replay-YYYY-MM-DD.svg \
+       --desc "Replay variant for Scenario 08 harness explainer."
+     ```
 3. Validate each replay:
    - XML validity (`xmllint`)
    - accessibility markers (`role=\"img\"`, `aria-labelledby`, `<title>`, `<desc>`)
