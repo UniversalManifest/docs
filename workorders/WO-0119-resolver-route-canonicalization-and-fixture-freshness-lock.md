@@ -1,6 +1,6 @@
 # WO-0119 — Resolver Route Canonicalization and Fixture Freshness Lock
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Created:** 2026-03-04
 **Updated:** 2026-03-04
 **Priority:** P0
@@ -46,8 +46,8 @@ Out of scope:
 - [x] Resolver contract suite passes locally.
 - [x] Site build passes locally.
 - [x] Production smoke + post-deploy verify pass (current production baseline).
-- [ ] Updated resolver runtime is deployed to staging and production.
-- [ ] Post-deploy probe confirms refreshed fixture validity in live resolver responses.
+- [x] Updated resolver runtime is deployed to staging and production.
+- [x] Post-deploy probe confirms refreshed fixture validity in live resolver responses.
 
 ## Dependencies
 
@@ -101,6 +101,12 @@ Local verification evidence:
 - `npm run verify:postdeploy:prod` -> PASS
   - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-27-20-209Z-post-deploy-verification.md`
 
-Remaining deployment action:
+Deployment completion evidence:
 
-- Promote updated code through gated deploy workflow so production resolver payload freshness reflects updated fixture timestamps.
+- Gated staged-to-prod deployment run succeeded:
+  - `https://github.com/grigb/universal-manifest/actions/runs/22655111376`
+- Manual production deploy reconciliation executed to ensure live domain content parity:
+  - docs deploy artifact: `https://bf844b03.universalmanifest-net.pages.dev`
+  - resolver deploy version: `7608b4e0-6e7e-44b9-84a7-06bc816f3d02`
+- Live runtime truth probe:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-40-35Z-resolver-runtime-truth-check.md`
