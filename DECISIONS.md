@@ -537,3 +537,26 @@ Primary conflict register:
 - `ci.yml` is the CI configuration that contributors should reference for understanding what checks run on pull requests and merges.
 - `verify.yml` remains in the repository as a simpler, backward-compatible check but is not the primary CI workflow.
 - Future CI additions (new test jobs, deployment gates) should be added to `ci.yml`.
+
+## 2026-03-03 — Permissions firewall model adopted as direction for consent evolution (v0.3+)
+
+### Decision
+
+- Adopt the permissions firewall model in [`docs/design/PERMISSIONS-FIREWALL-DESIGN.md`](design/PERMISSIONS-FIREWALL-DESIGN.md) as the architecture direction for consent and permissions evolution for v0.3 and later.
+- Keep this direction non-normative until promoted into versioned spec artifacts (`spec/v0.3/`).
+- Start immediate backward-compatible groundwork in non-normative surfaces:
+  - registry consent-name expansion in `spec/v0.1/REGISTRY.md`
+  - integration-lane examples and UX guidance in `integrations/`
+  - stub fixture examples under `examples/v0.1/stubs/`
+
+### Rationale
+
+- The current consent model is sufficient for baseline interoperability but not expressive enough for audience-scoped and context-scoped permissions.
+- A firewall model preserves the existing "default deny when missing consent" posture while offering clearer rule composition for real integrations.
+- Keeping this work non-normative first allows implementation experimentation without destabilizing v0.1 or v0.2 contracts.
+
+### Policy impact
+
+- No normative schema or conformance requirement changes are introduced by this decision.
+- Any future normative adoption must be versioned and paired with conformance updates.
+- Integration examples may include firewall-style consent metadata as optional, forward-compatible fields.

@@ -109,6 +109,9 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 ## Reports
 
 - [`docs/reports/`](reports/) — Project reports directory (audits, status summaries, evidence packs, and verification reports)
+- [`docs/reports/2026-03-01-spec-vs-implementation-boundary-audit.md`](reports/2026-03-01-spec-vs-implementation-boundary-audit.md) — Spec vs implementation boundary audit
+- [`docs/reports/2026-03-01-project-completeness-and-vision-audit.md`](reports/2026-03-01-project-completeness-and-vision-audit.md) — Project completeness and vision audit
+- [`docs/reports/2026-03-01-documentation-freshness-audit.md`](reports/2026-03-01-documentation-freshness-audit.md) — Documentation freshness audit
 
 ## Integration lanes
 
@@ -124,6 +127,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - [`integrations/education-credentials.md`](../integrations/education-credentials.md) — Education credentials integration lane
 - [`integrations/healthcare-patient-consent.md`](../integrations/healthcare-patient-consent.md) — Healthcare patient consent integration lane
 - [`integrations/smart-home.md`](../integrations/smart-home.md) — Smart home integration lane
+- [`integrations/data-firewall-ux.md`](../integrations/data-firewall-ux.md) — Firewall-style consent UX guidance
 - [`integrations/TEMPLATE.md`](../integrations/TEMPLATE.md) — Integration lane template
 
 ## Packages
