@@ -162,6 +162,10 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0121-synthetic-alert-delivery-and-escalation-drill.md` — [COMPLETED] External webhook alerting configured and sustained-failure drill executed with delivered payload and incident evidence (P1; follows WO-0117)
 - `docs/workorders/WO-0122-runtime-status-messaging-reconciliation.md` — [COMPLETED] Runtime-facing docs and resolver metadata reconciled to active deployed-service language, with residual historical references inventoried (P2; follows WO-0112/WO-0113)
 
+### Credential Stabilization Follow-on (WO-0123)
+
+- `docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md` — [IN_PROGRESS] Complete one-time Cloudflare staging/production credential isolation and validate two consecutive green gated production promotions; current blocker is persistent Cloudflare API auth/rate-limit failures in production resolver deploy job (P0; follows WO-0113 through WO-0118 and post-hardening validations)
+
 #### Documentation Freshness and Maintenance
 
 - `docs/workorders/WO-0103-update-docs-readme-with-missing-references.md` — [COMPLETED] Update docs/README.md to reference ~20 new document categories created this week (P0; no dependencies)
