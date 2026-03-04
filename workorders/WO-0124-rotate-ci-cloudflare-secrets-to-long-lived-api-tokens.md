@@ -1,6 +1,6 @@
 # WO-0124 — Rotate CI Cloudflare Secrets to Long-Lived API Tokens
 
-**Status:** NOT_STARTED
+**Status:** IN_PROGRESS
 **Created:** 2026-03-04
 **Updated:** 2026-03-04
 **Priority:** P0
@@ -45,3 +45,21 @@ Out of scope:
 - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
+
+## Execution Progress (2026-03-04)
+
+Completed in this pass:
+- Added Cloudflare auth preflight checks to all deploy jobs in gated workflow:
+  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+- Validated preflight-enabled workflow on production promotion path:
+  - Run: https://github.com/grigb/universal-manifest/actions/runs/22659009192 (`success`)
+  - All staging + production jobs passed.
+
+Evidence:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run.log`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-log-extract.txt`
+
+Current blocker for completion:
+- Long-lived API token issuance could not be completed programmatically from current Wrangler OAuth scopes (no token-management scope available).
+- Dashboard automation path is blocked by repeated Cloudflare security challenge in automation context.

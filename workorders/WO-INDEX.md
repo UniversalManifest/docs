@@ -168,7 +168,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Credential Durability Hardening (WO-0124)
 
-- `docs/workorders/WO-0124-rotate-ci-cloudflare-secrets-to-long-lived-api-tokens.md` — [NOT_STARTED] Replace time-bound OAuth-derived CI secret material with long-lived Cloudflare API deploy tokens, then revalidate gated production + synthetic monitors to prevent token-expiry regressions (P0; follows WO-0123)
+- `docs/workorders/WO-0124-rotate-ci-cloudflare-secrets-to-long-lived-api-tokens.md` — [IN_PROGRESS] Added deploy preflight auth checks and validated green production promotion path (`22659009192`), with remaining blocker on issuing long-lived Cloudflare API tokens (token-management capability in current automation context) (P0; follows WO-0123)
 
 #### Documentation Freshness and Maintenance
 
