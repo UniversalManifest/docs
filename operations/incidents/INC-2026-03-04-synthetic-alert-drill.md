@@ -53,6 +53,7 @@ Incident commander: Platform/Ops owner
 
 - [x] Preventive action 1: Keep UM_SYNTHETIC_ALERT_WEBHOOK_PROD (or shared fallback UM_SYNTHETIC_ALERT_WEBHOOK) configured.
 - [x] Preventive action 2: Document drill evidence and runbook references.
+- [x] Preventive action 3: Validate post-hardening behavior on production synthetic runs (status-only webhook logging and artifact inclusion).
 - [x] Documentation update
 - [x] Test and monitoring update
 
