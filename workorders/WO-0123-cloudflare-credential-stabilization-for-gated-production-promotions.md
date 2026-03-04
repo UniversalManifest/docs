@@ -80,3 +80,7 @@ Run artifacts:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1.log`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2-meta.json`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2.log`
+
+Post-closeout synthetic confirmation:
+- https://github.com/grigb/universal-manifest/actions/runs/22658785827 (`success`)
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-post-wo0123-synthetic-prod-green-run-meta.json`
