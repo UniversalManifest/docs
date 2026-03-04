@@ -166,6 +166,10 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md` — [COMPLETED] Cloudflare staging/production credential isolation applied and validated by two consecutive green gated production promotions (`22658547313`, `22658652963`) with production resolver/docs/verify gates all passing (P0; follows WO-0113 through WO-0118 and post-hardening validations)
 
+### Credential Durability Hardening (WO-0124)
+
+- `docs/workorders/WO-0124-rotate-ci-cloudflare-secrets-to-long-lived-api-tokens.md` — [NOT_STARTED] Replace time-bound OAuth-derived CI secret material with long-lived Cloudflare API deploy tokens, then revalidate gated production + synthetic monitors to prevent token-expiry regressions (P0; follows WO-0123)
+
 #### Documentation Freshness and Maintenance
 
 - `docs/workorders/WO-0103-update-docs-readme-with-missing-references.md` — [COMPLETED] Update docs/README.md to reference ~20 new document categories created this week (P0; no dependencies)
