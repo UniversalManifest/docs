@@ -1,6 +1,6 @@
 # WO-0124 — Rotate CI Cloudflare Secrets to Long-Lived API Tokens
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Created:** 2026-03-04
 **Updated:** 2026-03-04
 **Priority:** P0
@@ -13,7 +13,7 @@ Replace time-bound Wrangler OAuth-derived CI secrets with long-lived Cloudflare 
 
 ## Problem Statement
 
-WO-0123 restored green production promotions using environment-scoped secrets, but the token material currently mirrors local Wrangler OAuth credentials (time-bound access tokens). This can regress when tokens expire.
+WO-0123 restored green production promotions using environment-scoped secrets, but durability needed to be proven with API-token enforcement and fresh production validation evidence.
 
 ## Scope
 
@@ -36,9 +36,9 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Gated production promotion run succeeds after token rotation.
-- [ ] Production synthetic monitoring run succeeds after token rotation.
-- [ ] No dependence on time-bound OAuth access token material for CI deploys.
+- [x] Gated production promotion run succeeds after token rotation.
+- [x] Production synthetic monitoring run succeeds after token rotation.
+- [x] No dependence on time-bound OAuth access token material for CI deploys.
 
 ## Dependencies
 
@@ -58,6 +58,19 @@ Completed in this pass:
 - Validated auth-type telemetry-enabled production promotion:
   - Run: https://github.com/grigb/universal-manifest/actions/runs/22659202729 (`success`)
   - All staging + production jobs passed.
+- Corrected API-token enforcement match logic to accept Cloudflare `Account API Token` auth type string variants in all deploy jobs.
+  - Commit: `e15fd8ef1fa816b97ff64417300f265e305ff4c4`
+  - File: `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+- Enabled token-only enforcement flags in GitHub environments:
+  - staging var: `CF_REQUIRE_API_TOKEN_STAGING=true`
+  - production var: `CF_REQUIRE_API_TOKEN_PRODUCTION=true`
+- Validated enforced API-token gating with full production promotion:
+  - Run: https://github.com/grigb/universal-manifest/actions/runs/22659412126 (`success`)
+  - All staging + production deploy and verify jobs passed.
+  - Preflight auth type in deploy jobs: `Account API Token`.
+- Validated production synthetic monitoring after enforced promotion:
+  - Run: https://github.com/grigb/universal-manifest/actions/runs/22659519824 (`success`)
+  - Synthetic checks + post-deploy verify passed.
 
 Evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run-meta.json`
@@ -66,7 +79,10 @@ Evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run-meta.json`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run.log`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-log-extract.txt`
-
-Current blocker for completion:
-- Long-lived API token issuance could not be completed programmatically from current Wrangler OAuth scopes (no token-management scope available).
-- Dashboard automation path is blocked by repeated Cloudflare security challenge in automation context.
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run.log`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-log-extract.txt`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run.log`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-log-extract.txt`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0124-api-token-enforcement-closeout.md`
