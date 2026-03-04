@@ -1,6 +1,6 @@
 # WO-0123 — Cloudflare Credential Stabilization for Gated Production Promotions
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Created:** 2026-03-04
 **Updated:** 2026-03-04
 **Priority:** P0
@@ -43,11 +43,11 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] `Deploy (Gated)` production promotion run completes with production resolver job `success`.
-- [ ] Production docs job `success` in same run.
-- [ ] Production verify gates job `success` in same run.
-- [ ] Second consecutive production promotion run also green.
-- [ ] Evidence paths and run URLs appended to operations report and WO-INDEX status updated to COMPLETED.
+- [x] `Deploy (Gated)` production promotion run completes with production resolver job `success`.
+- [x] Production docs job `success` in same run.
+- [x] Production verify gates job `success` in same run.
+- [x] Second consecutive production promotion run also green.
+- [x] Evidence paths and run URLs appended to operations report and WO-INDEX status updated to COMPLETED.
 
 ## Dependencies
 
@@ -65,3 +65,18 @@ Out of scope:
 - Manual production recovery and runtime health evidence:
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-production-promotion-failure-and-manual-recovery-summary.md`
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-post-hardening-final-post-deploy-verification.md`
+
+## Completion Evidence (2026-03-04)
+
+Credential setup + two consecutive green production promotions:
+- Run 1 (green): https://github.com/grigb/universal-manifest/actions/runs/22658547313
+- Run 2 (green): https://github.com/grigb/universal-manifest/actions/runs/22658652963
+
+Closeout report:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
+
+Run artifacts:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1.log`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2.log`

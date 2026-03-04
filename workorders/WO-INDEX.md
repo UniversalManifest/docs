@@ -164,7 +164,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Credential Stabilization Follow-on (WO-0123)
 
-- `docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md` — [IN_PROGRESS] Complete one-time Cloudflare staging/production credential isolation and validate two consecutive green gated production promotions; current blocker is persistent Cloudflare API auth/rate-limit failures in production resolver deploy job (P0; follows WO-0113 through WO-0118 and post-hardening validations)
+- `docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md` — [COMPLETED] Cloudflare staging/production credential isolation applied and validated by two consecutive green gated production promotions (`22658547313`, `22658652963`) with production resolver/docs/verify gates all passing (P0; follows WO-0113 through WO-0118 and post-hardening validations)
 
 #### Documentation Freshness and Maintenance
 
