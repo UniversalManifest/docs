@@ -155,6 +155,13 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md` — [COMPLETED] Continuous synthetic monitoring and SLO policy are active for production plus custom-domain staging, with fallback-host resilience and alerting templates (P1; depends on WO-0113 and WO-0114)
 - `docs/workorders/WO-0118-staging-custom-domain-dns-cutover-automation.md` — [COMPLETED] Automated staging target selection now prefers custom domains when reachable and falls back to staging hosts with shared logic across deploy gates and synthetic monitoring (P1; depends on WO-0113, WO-0114, and WO-0117)
 
+### Runtime Reality and Post-Deploy Follow-on Wave (WO-0119 through WO-0122)
+
+- `docs/workorders/WO-0119-resolver-route-canonicalization-and-fixture-freshness-lock.md` — [IN_PROGRESS] Remove resolver route canonicalization loop risk and refresh default resolver fixture validity window; pending staged/prod promotion and live fixture freshness proof (P0; follows WO-0112/WO-0114)
+- `docs/workorders/WO-0120-harness-307-contract-parity-and-trust-matrix.md` — [IN_PROGRESS] Align harness resolver flows to treat contract-valid `307` redirects as pass when `Location` is present; pending deployed browser evidence (P1; follows WO-0112/WO-0116)
+- `docs/workorders/WO-0121-synthetic-alert-delivery-and-escalation-drill.md` — [NOT_STARTED] Configure external webhook alerting and run sustained-failure escalation drill to close synthetic-alert operational gap (P1; follows WO-0117)
+- `docs/workorders/WO-0122-runtime-status-messaging-reconciliation.md` — [IN_PROGRESS] Reconcile docs messaging to reflect active deployed services while preserving spec-first positioning (P2; follows WO-0112/WO-0113)
+
 #### Documentation Freshness and Maintenance
 
 - `docs/workorders/WO-0103-update-docs-readme-with-missing-references.md` — [COMPLETED] Update docs/README.md to reference ~20 new document categories created this week (P0; no dependencies)
