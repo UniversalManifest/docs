@@ -1,10 +1,10 @@
-# Journey 04 — UMID resolution (myum.net skeleton)
+# Journey 04 — UMID resolution (myum.net runtime)
 
 Goal: prove resolver semantics (404/200/307/410) and deterministic retrieval.
 
 ## Steps
 
-1. Start the `myum.net` resolver skeleton locally.
+1. Start the `myum.net` resolver runtime locally.
 2. Verify:
    - `GET /health` returns `200`
    - unknown UMID returns `404`
@@ -14,9 +14,8 @@ Goal: prove resolver semantics (404/200/307/410) and deterministic retrieval.
 
 ## Expected outcome
 
-- Resolver behavior matches `docs/DOMAIN-ARCHITECTURE.md` and the skeleton contract doc.
+- Resolver behavior matches `docs/DOMAIN-ARCHITECTURE.md` and the resolver contract doc.
 
 ## Executable proof
 
 - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-

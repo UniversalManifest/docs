@@ -70,10 +70,10 @@ Migration policy:
 3. Add operational runbook for resolver ingestion, caching, and revocation handling.
 4. Add conformance fixtures that exercise `myum.net` pointer patterns.
 
-Repo-local deployment skeletons (implementation-ready starting points):
+Repo-local deployment baselines (implementation-ready starting points):
 
 - `deploy/universalmanifest.net/` (static publish build + headers + redirects)
-- `services/myum-resolver/` (Cloudflare Worker + KV resolver skeleton)
+- `services/myum-resolver/` (Cloudflare Worker + KV resolver runtime)
 
 ## 6) Staging/production topology
 

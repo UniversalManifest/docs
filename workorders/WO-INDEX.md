@@ -158,9 +158,9 @@ Drift governance and follow-on WO trigger criteria:
 ### Runtime Reality and Post-Deploy Follow-on Wave (WO-0119 through WO-0122)
 
 - `docs/workorders/WO-0119-resolver-route-canonicalization-and-fixture-freshness-lock.md` — [COMPLETED] Removed resolver route canonicalization loop risk and refreshed default resolver fixture validity window with staged/prod deployment plus live freshness verification (P0; follows WO-0112/WO-0114)
-- `docs/workorders/WO-0120-harness-307-contract-parity-and-trust-matrix.md` — [IN_PROGRESS] Align harness resolver flows to treat contract-valid `307` redirects as pass when `Location` is present; pending deployed browser evidence (P1; follows WO-0112/WO-0116)
+- `docs/workorders/WO-0120-harness-307-contract-parity-and-trust-matrix.md` — [COMPLETED] Harness resolver flows now treat contract-valid `307` redirects as pass with deployed browser verification evidence and production smoke/post-deploy checks (P1; follows WO-0112/WO-0116)
 - `docs/workorders/WO-0121-synthetic-alert-delivery-and-escalation-drill.md` — [NOT_STARTED] Configure external webhook alerting and run sustained-failure escalation drill to close synthetic-alert operational gap (P1; follows WO-0117)
-- `docs/workorders/WO-0122-runtime-status-messaging-reconciliation.md` — [IN_PROGRESS] Reconcile docs messaging to reflect active deployed services while preserving spec-first positioning (P2; follows WO-0112/WO-0113)
+- `docs/workorders/WO-0122-runtime-status-messaging-reconciliation.md` — [COMPLETED] Runtime-facing docs and resolver metadata reconciled to active deployed-service language, with residual historical references inventoried (P2; follows WO-0112/WO-0113)
 
 #### Documentation Freshness and Maintenance
 

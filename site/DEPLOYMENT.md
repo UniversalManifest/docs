@@ -1,11 +1,11 @@
 # universalmanifest.net — Deployment Notes (static)
 
-This repo contains two related deployment skeletons:
+This repo contains two related deployment runtimes:
 
 - Standards/docs host: `universalmanifest.net`
   - Spec artifacts and docs site
 - Resolver host: `myum.net/{UMID}`
-  - Runtime resolution skeleton (separate; see `services/myum-resolver/`)
+  - Runtime resolution service (separate; see `services/myum-resolver/`)
 
 Staging + promotion runbook:
 

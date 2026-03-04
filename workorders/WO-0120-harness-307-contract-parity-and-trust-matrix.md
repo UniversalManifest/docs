@@ -1,6 +1,6 @@
 # WO-0120 — Harness 307 Contract Parity and Trust-Matrix Coverage
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Created:** 2026-03-04
 **Updated:** 2026-03-04
 **Priority:** P1
@@ -41,7 +41,7 @@ Out of scope:
 - [x] `resolverResolveB64uAction()` accepts `307` with `Location` as pass.
 - [x] Missing `Location` on `307` remains fail.
 - [x] Existing payload validation/signature checks remain for `200` branch.
-- [ ] Browser-level screenshot/console evidence captured on deployed harness route.
+- [x] Browser-level screenshot/console evidence captured on deployed harness route.
 
 ## Dependencies
 
@@ -76,6 +76,14 @@ Verification completed:
 - Site build passes after harness logic change.
 - Production endpoint smoke remains passing.
 
-Remaining:
+Browser evidence:
 
-- Capture browser-level evidence after next production deploy to validate redirect branch UX in live harness.
+- Harness live verification (post-deploy) confirms redirect branch pass on deployed `/harness/` route:
+  - screenshot: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04-harness-opaque-redirect-pass.png`
+  - tested UMID: `urn:uuid:22222222-2222-4222-8222-222222222222` (redirect record in production KV)
+  - smoke + post-deploy reports:
+    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-52-22-400Z-post-deploy-verification.md`
+
+Completion note:
+
+- WO-0120 is complete as of 2026-03-04 with deployed verification evidence.
