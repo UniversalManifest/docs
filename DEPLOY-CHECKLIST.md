@@ -73,7 +73,9 @@ Confirm synthetic monitoring and alert policy are in place after deploy:
 
 - Policy: `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
 - Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
-- Optional alert webhook secret:
-  - `UM_SYNTHETIC_ALERT_WEBHOOK`
+- Optional alert webhook secrets (environment-specific preferred):
+  - `UM_SYNTHETIC_ALERT_WEBHOOK_PROD` (production)
+  - `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING` (staging)
+  - `UM_SYNTHETIC_ALERT_WEBHOOK` (shared fallback)
 - Incident template:
   - `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`

@@ -51,7 +51,7 @@ Incident commander: Platform/Ops owner
 
 ## 6) Follow-Up Actions
 
-- [x] Preventive action 1: Keep UM_SYNTHETIC_ALERT_WEBHOOK configured.
+- [x] Preventive action 1: Keep UM_SYNTHETIC_ALERT_WEBHOOK_PROD (or shared fallback UM_SYNTHETIC_ALERT_WEBHOOK) configured.
 - [x] Preventive action 2: Document drill evidence and runbook references.
 - [x] Documentation update
 - [x] Test and monitoring update

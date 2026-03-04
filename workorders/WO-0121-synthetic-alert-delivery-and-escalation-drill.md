@@ -54,6 +54,9 @@ Repository secret configuration:
 
 - `gh secret list --repo grigb/universal-manifest` shows:
   - `UM_SYNTHETIC_ALERT_WEBHOOK` (updated 2026-03-04T04:55:18Z)
+  - workflows now support environment-specific secrets with shared fallback:
+    - production: `UM_SYNTHETIC_ALERT_WEBHOOK_PROD` -> `UM_SYNTHETIC_ALERT_WEBHOOK`
+    - staging: `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING` -> `UM_SYNTHETIC_ALERT_WEBHOOK`
 
 Controlled sustained-failure drill:
 

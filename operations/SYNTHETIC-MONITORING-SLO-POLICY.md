@@ -3,7 +3,7 @@
 Status: Active  
 Owner: Platform / Operations  
 Work Order: WO-0117  
-Last updated: 2026-03-03
+Last updated: 2026-03-04
 
 ## 1) Scope
 
@@ -61,6 +61,10 @@ Optional check configuration:
 - `UM_SYNTHETIC_SMOKE_UMID` (secret) for production UMID override
 - `workflow_dispatch` input `umid` (manual one-off override)
 - `STAGING_DOCS_BASE` / `STAGING_RESOLVER_BASE` / `STAGING_RESOLVER_WWW_BASE` repository variables for explicit staging target override
+- Alert webhook secrets (environment-specific preferred):
+  - production: `UM_SYNTHETIC_ALERT_WEBHOOK_PROD`
+  - staging: `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING`
+  - shared fallback: `UM_SYNTHETIC_ALERT_WEBHOOK`
 
 ## 3) SLI Definitions
 
@@ -137,8 +141,12 @@ Alert trigger conditions:
 
 Alert delivery:
 
-- Optional webhook secret: `UM_SYNTHETIC_ALERT_WEBHOOK`
-- If secret is configured and sustained failure is detected, workflow posts an alert payload with run metadata and status details.
+- Optional webhook secret precedence:
+  - production workflow: `UM_SYNTHETIC_ALERT_WEBHOOK_PROD` -> fallback `UM_SYNTHETIC_ALERT_WEBHOOK`
+  - staging workflow: `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING` -> fallback `UM_SYNTHETIC_ALERT_WEBHOOK`
+- If a webhook secret is configured and sustained failure is detected, workflow posts an alert payload with run metadata and status details.
+- Webhook response bodies are not logged; only HTTP status is logged to reduce secret/token leakage risk.
+- Alert payload JSON is persisted in workflow artifacts (`packages/universal-manifest/artifacts/webhook-alert-*.json`) for auditability.
 - If secret is not configured, workflow still fails and stores artifacts for manual triage.
 
 Escalation timeline:
