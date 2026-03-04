@@ -54,11 +54,18 @@ Completed in this pass:
 - Validated preflight-enabled workflow on production promotion path:
   - Run: https://github.com/grigb/universal-manifest/actions/runs/22659009192 (`success`)
   - All staging + production jobs passed.
+- Added Cloudflare auth type telemetry and optional API-token enforcement switch (`CF_REQUIRE_API_TOKEN*`) in deploy preflight.
+- Validated auth-type telemetry-enabled production promotion:
+  - Run: https://github.com/grigb/universal-manifest/actions/runs/22659202729 (`success`)
+  - All staging + production jobs passed.
 
 Evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run-meta.json`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run.log`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-log-extract.txt`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run-meta.json`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run.log`
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-log-extract.txt`
 
 Current blocker for completion:
 - Long-lived API token issuance could not be completed programmatically from current Wrangler OAuth scopes (no token-management scope available).
