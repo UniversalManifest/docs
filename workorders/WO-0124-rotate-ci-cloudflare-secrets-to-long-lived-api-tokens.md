@@ -2,7 +2,7 @@
 
 **Status:** COMPLETED
 **Created:** 2026-03-04
-**Updated:** 2026-03-04
+**Updated:** 2026-03-05
 **Priority:** P0
 **Owner:** Platform / DevOps
 **Source:** Post-WO-0123 durability hardening
@@ -86,3 +86,22 @@ Evidence:
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run.log`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-log-extract.txt`
 - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0124-api-token-enforcement-closeout.md`
+
+## Post-Closeout Addendum (2026-03-05)
+
+Follow-up incident and remediation completed in this pass:
+- Production promotion failed on run `22702105155` after token replacement due to missing zone route deploy permission:
+  - failure path: Cloudflare API `/zones/.../workers/routes`
+  - error: `Authentication error [code: 10000]`
+  - production preflight still showed `authType: Account API Token`
+- Root cause: production token had valid account auth but insufficient zone route deploy scope.
+- User updated Cloudflare token scope to include zone route edit capability, then promotion rerun completed green.
+
+Validation evidence:
+- Failed gated run (permission gap): https://github.com/grigb/universal-manifest/actions/runs/22702105155
+- Green gated rerun after permission fix: https://github.com/grigb/universal-manifest/actions/runs/22702756070
+- Failure meta: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run-meta.json`
+- Failure log: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run.log`
+- Failure extract: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-log-extract.txt`
+- Success meta: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-remediation-success-run-meta.json`
+- Session report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-wo-0124-cloudflare-token-permission-remediation.md`

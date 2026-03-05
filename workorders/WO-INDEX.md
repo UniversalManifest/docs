@@ -168,7 +168,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Credential Durability Hardening (WO-0124)
 
-- `docs/workorders/WO-0124-rotate-ci-cloudflare-secrets-to-long-lived-api-tokens.md` — [COMPLETED] Enforced API-token-only deploy auth (`CF_REQUIRE_API_TOKEN_STAGING/PRODUCTION=true`), fixed auth-type matching for Cloudflare `Account API Token`, and validated full gated production promotion + synthetic production monitor green (`22659412126`, `22659519824`) (P0; follows WO-0123)
+- `docs/workorders/WO-0124-rotate-ci-cloudflare-secrets-to-long-lived-api-tokens.md` — [COMPLETED] Enforced API-token-only deploy auth (`CF_REQUIRE_API_TOKEN_STAGING/PRODUCTION=true`), fixed auth-type matching for Cloudflare `Account API Token`, and validated full gated production promotion + synthetic production monitor green (`22659412126`, `22659519824`); post-closeout permission-gap remediation reconfirmed production promotion green after zone route scope correction (`22702756070`) (P0; follows WO-0123)
 
 #### Documentation Freshness and Maintenance
 
