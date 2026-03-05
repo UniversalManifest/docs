@@ -2,7 +2,7 @@
 
 This is the entry point for the Universal Manifest spec repo.
 
-Canonical repo path: `/Users/grig/work/repo/universalmanifest`
+Canonical repo path: `<repo-root>`
 
 ## Repo map
 
@@ -120,7 +120,7 @@ Canonical repo path: `/Users/grig/work/repo/universalmanifest`
 - [`integrations/social.md`](../integrations/social.md) — Social/profile adoption notes (draft)
 - [`integrations/metaverse.md`](../integrations/metaverse.md) — Metaverse integration lane with MUM lineage context
 - [`integrations/rp1-spatial-fabric.md`](../integrations/rp1-spatial-fabric.md) — RP1 spatial-fabric integration lane
-- [`integrations/smart-glasses-ar.md`](../integrations/smart-glasses-ar.md) — Smart-glasses AR social-layer integration lane
+- [`integrations/smart-glasses.md`](../integrations/smart-glasses.md) — Smart-glasses social-layer integration lane
 - [`integrations/oma-trust.md`](../integrations/oma-trust.md) — OMATrust integration lane
 - [`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md) — Proof-of-personhood multi-provider lane
 - [`integrations/chia-vc.md`](../integrations/chia-vc.md) — Chia DID/VC credential lane

@@ -58,15 +58,15 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 
 **Entry point:** The Chia VC integration lane ([`integrations/chia-vc.md`](../integrations/chia-vc.md)), the OMATrust integration lane ([`integrations/oma-trust.md`](../integrations/oma-trust.md)), and the proof-of-personhood integration lane ([`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md)).
 
-### Profile 6: Spatial Computing / AR Developer
+### Profile 6: Spatial Computing / Smart Glasses Developer
 
-**Who:** Developers building AR glasses applications, spatial computing platforms, and mixed-reality experiences.
+**Who:** Developers building smart glasses applications, spatial computing platforms, and mixed-reality experiences.
 
-**Pain point:** Consent for face recording, voice capture, and location sharing has no portable standard. Each AR platform implements its own ad-hoc consent mechanism. Users cannot express consent preferences that travel with them across devices and platforms.
+**Pain point:** Consent for face recording, voice capture, and location sharing has no portable standard. Each smart-glasses platform implements its own ad-hoc consent mechanism. Users cannot express consent preferences that travel with them across devices and platforms.
 
-**What UM gives them:** Consent keys for AR-specific scenarios (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`, `ar.profile.autoSharePublic`) that are machine-readable and enforceable in real time. The manifest travels with the user and declares their preferences to any UM-aware AR runtime.
+**What UM gives them:** Consent keys for smart glasses-specific scenarios (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`, `ar.profile.autoSharePublic`) that are machine-readable and enforceable in real time. The manifest travels with the user and declares their preferences to any UM-aware smart glasses runtime.
 
-**Entry point:** The smart glasses AR integration lane ([`integrations/smart-glasses-ar.md`](../integrations/smart-glasses-ar.md)) and the RP1 spatial fabric lane ([`integrations/rp1-spatial-fabric.md`](../integrations/rp1-spatial-fabric.md)).
+**Entry point:** The smart glasses integration lane ([`integrations/smart-glasses.md`](../integrations/smart-glasses.md)) and the RP1 spatial fabric lane ([`integrations/rp1-spatial-fabric.md`](../integrations/rp1-spatial-fabric.md)).
 
 ### Profile 7: Open-Source Contributor / Community Developer
 
@@ -103,7 +103,7 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 | OpenWallet Foundation | Wallet-based credential portability | General |
 | W3C Credentials Community Group | VC + DID intersection | General |
 | NVIDIA (edge/display) | Reference runtime uses NVIDIA Shield as exemplar | IoT / Edge |
-| Smart glasses manufacturers (Meta, Snap, Xreal) | AR consent model | Smart Glasses AR |
+| Smart glasses manufacturers (Meta, Snap, Xreal) | smart glasses consent model | Smart Glasses |
 | Spatial computing platforms | RP1 spatial fabric integration | RP1 |
 | Linux Foundation Europe projects | Governance model alignment, potential hosting | General |
 
@@ -189,7 +189,7 @@ The following items must be ready before presenting UM publicly to external audi
 - [ ] **One-pager and full briefing available** — [`docs/explainers/one-pager.md`](explainers/one-pager.md) and [`docs/explainers/full-briefing.md`](explainers/full-briefing.md)
 - [ ] **Agent briefing with pitch templates available** — [`docs/explainers/agent-briefing.md`](explainers/agent-briefing.md)
 - [ ] **Open-source infrastructure complete** — LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md
-- [ ] **README cleaned of local paths** — No `/Users/grig/...` references visible to external readers
+- [ ] **README cleaned of local paths** — No `/Users/<username>/...` references visible to external readers
 - [ ] **Resolver operational** — `myum.net` returns healthy responses for known UMIDs
 - [ ] **Workbench operational** — Interactive manifest exploration works on the live site
 - [ ] **v0.1 JSON Schema `$id` corrected** — Points to `universalmanifest.net`, not legacy domain
@@ -336,7 +336,7 @@ The agent briefing ([`docs/explainers/agent-briefing.md`](explainers/agent-brief
 | Rebooting the Web of Trust (RWoT) | Decentralized identity | Design workshop format, deep technical engagement | ~2 months before event |
 | Decentralized Web Summit | Decentralized systems | Broad decentralized tech community | ~3 months before event |
 | GDC (Game Developers Conference) | Gaming | Cross-game identity portability use case | ~6 months before event |
-| AWE (Augmented World Expo) | AR / Spatial computing | Smart glasses consent model, spatial fabric | ~4 months before event |
+| AWE (Augmented World Expo) | Smart glasses /  Spatial computing | Smart glasses consent model, spatial fabric | ~4 months before event |
 | Metaverse Standards Forum meetings | Metaverse / interoperability | MSF lineage, metaverse integration lane | Ongoing (working group schedule) |
 | OMA3 events | Web3 / interoperability | OMATrust integration lane | Varies |
 | FOSDEM | Open source | Open-source standards community | ~3 months before event |
@@ -350,7 +350,7 @@ The agent briefing ([`docs/explainers/agent-briefing.md`](explainers/agent-brief
 
 Universal Manifest is an open-source JSON-LD document format that replaces this proliferation with one portable state capsule. A single manifest carries identity references, verified claims, privacy consents, device registrations, and pointers to authoritative data sources. It works offline (every manifest expires automatically). It works at the edge (no phone-home required). It works with existing standards (JSON-LD, DIDs, Verifiable Credentials, Ed25519). And it carries consent natively -- nothing is shared without explicit permission.
 
-This talk introduces UM's architecture, demonstrates real-world integration scenarios (social profile portability, AR consent enforcement, IoT device enrollment), and shows how to go from parsing your first manifest to issuing signed documents in minutes. The specification is open source (Apache-2.0), production infrastructure is live, and adoption is progressive -- start by parsing JSON, add capabilities at your own pace.
+This talk introduces UM's architecture, demonstrates real-world integration scenarios (social profile portability, smart glasses consent enforcement, IoT device enrollment), and shows how to go from parsing your first manifest to issuing signed documents in minutes. The specification is open source (Apache-2.0), production infrastructure is live, and adoption is progressive -- start by parsing JSON, add capabilities at your own pace.
 
 ---
 

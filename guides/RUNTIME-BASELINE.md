@@ -9,11 +9,11 @@ This document defines the canonical local/CI runtime baseline for Universal Mani
 
 Repository pinning:
 
-- `/Users/grig/work/repo/universalmanifest/.nvmrc` -> `22`
+- `.nvmrc` -> `22`
 - package engine fields:
-  - `/Users/grig/work/repo/universalmanifest/site/package.json`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/package.json`
+  - `site/package.json`
+  - `packages/universal-manifest/package.json`
+  - `services/myum-resolver/package.json`
 
 ## Why this policy exists
 
@@ -24,7 +24,7 @@ Repository pinning:
 ## Local Setup
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest
+cd <repo-root>
 nvm use
 node --version
 ```
@@ -37,15 +37,15 @@ GitHub Actions workflows should use Node `22` unless an explicit exception is do
 
 Primary workflow files:
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
+- `.github/workflows/ci.yml`
+- `.github/workflows/verify.yml`
 
 ## Validation Commands
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean
-cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test && npm run journeys && npm run smoke:endpoints:dev
+cd site && npm run build:clean
+cd services/myum-resolver && npm run typecheck
+cd packages/universal-manifest && npm test && npm run journeys && npm run smoke:endpoints:dev
 ```
 
 ## Change Management

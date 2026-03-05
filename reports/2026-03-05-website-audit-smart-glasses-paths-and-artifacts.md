@@ -91,10 +91,10 @@ Requested rule interpreted:
 
 9) File: `/Users/grig/work/repo/universalmanifest/site/astro.config.mjs`
 Problem:
-- Sidebar route uses `/integrations/smart-glasses-ar/`.
+- Sidebar route uses `/integrations/smart-glasses/`.
 Suggested edit:
 - Rename canonical route to `/integrations/smart-glasses/`.
-- Keep backward-compatible redirect from `/integrations/smart-glasses-ar/` to `/integrations/smart-glasses/`.
+- Keep backward-compatible redirect from `/integrations/smart-glasses/` to `/integrations/smart-glasses/`.
 
 10) File: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
 Problem:
@@ -114,7 +114,7 @@ Suggested edit:
 
 12) File: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/social.md`
 Problem:
-- Links to old route `/integrations/smart-glasses-ar/`.
+- Links to old route `/integrations/smart-glasses/`.
 Suggested edit:
 - Update link to `/integrations/smart-glasses/`.
 
@@ -144,7 +144,7 @@ Suggested edit:
 
 17) File: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/about/visual-explainers.md`
 Problem:
-- Uses "Smart Glasses AR" heading/description and anchor reference `#smart-glasses-ar`.
+- Uses "Smart Glasses AR" heading/description and anchor reference `#smart-glasses`.
 Suggested edit:
 - Rename section/anchor to smart-glasses-only wording.
 - Update any internal jump links to the new anchor.

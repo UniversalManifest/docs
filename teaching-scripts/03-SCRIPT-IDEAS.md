@@ -224,7 +224,7 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ### TS-018: Smart Glasses -- Consent in Real Time
 
-**Pitch**: Alex walks into a conference wearing smart glasses. Other attendees' glasses detect Alex and fetch Alex's manifest. Alex's consent keys say: face recording denied, professional profile public, voice capture denied. The glasses respond in real time: Alex's face is blurred in the recording feed, their professional badge appears in the AR overlay, and voice capture is muted. The viewer sees consent enforcement as a live, visual process.
+**Pitch**: Alex walks into a conference wearing smart glasses. Other attendees' glasses detect Alex and fetch Alex's manifest. Alex's consent keys say: face recording denied, professional profile public, voice capture denied. The glasses respond in real time: Alex's face is blurred in the recording feed, their professional badge appears in the smart-glasses overlay, and voice capture is muted. The viewer sees consent enforcement as a live, visual process.
 
 **Pod journey**: Alex's pod floats beside the character. Other glasses (represented as small scanner icons) approach. They fetch the pod. They read the consent keys. Three visual outcomes play simultaneously: face blurred (red overlay on face area), badge appears (green nameplate materializes), voice muted (red X on microphone icon). The pod is never modified -- it just controls what others can do.
 

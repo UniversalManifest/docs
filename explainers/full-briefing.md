@@ -88,9 +88,9 @@ The lifecycle of a Universal Manifest follows five stages:
 
 Alex is a digital artist showing work at Jordan's gallery. Alex's manifest carries a public profile shard (display name, bio, avatar), a `canonicalProfilePointer` to their Solid Pod, a `publicDisplay` consent set to "allowed," and a validity window of 24 hours. Jordan's gallery system scans Alex's manifest, validates it, renders Alex's profile on a public display, and automatically stops showing it when the manifest expires.
 
-### Privacy-Conscious AR Glasses User
+### Privacy-Conscious Smart Glasses User
 
-Riley wears smart glasses in a public space. Riley's manifest carries a consent section with `faceVisibility.recording` set to "denied." Other devices in the space that support UM can read Riley's manifest and know not to include Riley's face in recordings or AR overlays -- without Riley having to configure anything in each device separately.
+Riley wears smart glasses in a public space. Riley's manifest carries a consent section with `faceVisibility.recording` set to "denied." Other devices in the space that support UM can read Riley's manifest and know not to include Riley's face in recordings or smart glasses overlays -- without Riley having to configure anything in each device separately.
 
 ### Cross-Platform Gaming Profile
 

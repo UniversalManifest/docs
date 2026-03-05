@@ -91,7 +91,7 @@ Index:
 - Social/profile surfaces and interoperability pointers (`integrations/social.md`)
 - Metaverse portability lane with lineage context (`integrations/metaverse.md`)
 - RP1 spatial-fabric lane (`integrations/rp1-spatial-fabric.md`)
-- Smart-glasses AR social-layer lane (`integrations/smart-glasses-ar.md`)
+- Smart-glasses social-layer lane (`integrations/smart-glasses.md`)
 
 ### Layer D — Tooling (`packages/`)
 

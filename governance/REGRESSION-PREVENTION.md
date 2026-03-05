@@ -57,7 +57,7 @@ If CI wiring is incomplete, maintainers must run equivalent checks manually befo
 
 When a merged change can affect adopter behavior:
 
-1. Identify impacted adopters via `/Users/grig/work/repo/universalmanifest/adopters/registry.json`.
+1. Identify impacted adopters via `adopters/registry.json`.
 2. Post release notes with:
    - changed fixtures and spec versions
    - migration guidance

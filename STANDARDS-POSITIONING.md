@@ -111,7 +111,7 @@ W3C Data Integrity provides a framework for signing linked data at the RDF graph
 
 Universal Manifest is explicitly descended from the **Metaverse Universal Manifest (MUM)** concept document, which was created within an MSF working group repository. The original MUM v1.0 concept document is the intellectual lineage source for the entire project.
 
-**Current status:** UM has evolved beyond the original MUM scope. While MUM focused on metaverse cross-world identity portability, UM has been broadened into a cross-domain standard that treats metaverse as one of many integration lanes (alongside social, IoT/edge, smart glasses AR, spatial computing, proof of personhood, and others). The metaverse integration lane remains a first-class integration target with dedicated fixtures, journeys, and site documentation.
+**Current status:** UM has evolved beyond the original MUM scope. While MUM focused on metaverse cross-world identity portability, UM has been broadened into a cross-domain standard that treats metaverse as one of many integration lanes (alongside social, IoT/edge, smart glasses, spatial computing, proof of personhood, and others). The metaverse integration lane remains a first-class integration target with dedicated fixtures, journeys, and site documentation.
 
 **Current organizational relationship:** There is no active formal relationship between the UM project and the MSF as an organization. The lineage is historical. The MSF is acknowledged as the origin context for the concept that became Universal Manifest.
 

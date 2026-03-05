@@ -39,7 +39,7 @@ Use this checklist for every generated animated SVG before merge/deploy.
 
 - [x] Asset paths under `/site/public/animations/` (and `/site/public/diagrams/` for overview).
 - [x] Docs pages render correctly with and without animation support.
-- [x] Build passes: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`.
+- [x] Build passes: `cd site && npm run build:clean`.
 
 ## G) Color system compliance
 

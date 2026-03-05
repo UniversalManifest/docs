@@ -91,4 +91,4 @@ Operational policy:
 
 Runbook:
 
-- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+- `docs/site/STAGING-PROMOTION-RUNBOOK.md`

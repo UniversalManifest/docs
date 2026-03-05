@@ -1,0 +1,51 @@
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:17:- AR-oriented naming/copy that conflicts with requested smart-glasses-only language:
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:87:### C) Smart-glasses AR wording and route naming (P1)
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:90:- Replace user-facing "Smart Glasses AR"/"AR ..." wording with "Smart Glasses" wording.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:101:- File slug and page text are AR-branded.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:109:- Uses "Smart Glasses AR" lane name and AR wording in lane description/category prose.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:112:- Replace "AR social overlays" etc. with smart-glasses phrasing.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:123:- Contains "Smart-glasses AR ..." phrase.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:129:- Mentions "AR devices" in cross-domain list.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:135:- Uses "smart-glasses AR layer" wording.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:141:- Uses "Privacy-Conscious AR Glasses User" heading and AR-overlay language.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:147:- Uses "Smart Glasses AR" heading/description and anchor reference `#smart-glasses`.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:154:- User-facing narrative repeatedly uses "AR" terms.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:156:- Replace user-facing AR wording with smart-glasses wording.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:161:- Lists lane as "Smart Glasses AR".
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:165:### D) Smart-glasses AR wording in sandbox script UI strings (P1)
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:169:- Runtime descriptions/messages contain "AR" wording.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:176:- Same issue: AR wording in role descriptions, step descriptions, messages.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:178:- Replace AR wording in UI text.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:183:- Multiple user-facing strings describe "AR system/headset" projection.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:190:- Same issue as above (AR wording in V2 strings).
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:194:### E) Smart-glasses AR wording in public assets and fixtures (P1/P2)
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:198:- Visible title/description/text contain "Smart Glasses AR", "AR Device", etc.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:204:- Contains visible "AR Overlay" label.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:210:- Contains visible "AR recording consent" text.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:216:- Contains "AR Glasses" node label.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:222:- Contains "AR glasses ..." text.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:228:- Description mentions AR consent flow.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:240:- Filename and keys use AR namespace.
+./docs/reports/2026-03-05-website-audit-smart-glasses-paths-and-artifacts.md:340:2. Rename smart-glasses route/links and reword user-facing AR copy.
+./docs/reports/2026-02-20-master-forward-worklist.md:79:## 5) Smart-glasses AR lane implementation evidence
+./docs/reports/2026-02-20-master-forward-worklist.md:84:4. Ensure unknown-field tolerance remains intact with AR-specific extensions. (validated 2026-02-20 via `npm test` + `npm run journeys`)
+./docs/reports/2026-02-23-wo-0039-onboarding-language-source-map-and-rewrite-plan.md:72:| 43 | **"multiple ecosystems"** | `concepts.md:13` | UNDEFINED_JARGON | LOW | REPLACE_WITH specific examples: "across web apps, mobile apps, AR devices, and IoT systems" |
+./docs/reports/2026-03-01-project-completeness-and-vision-audit.md:156:**Repo-level (`integrations/`):** 13 files covering reference-runtime, social, metaverse, RP1 spatial fabric, smart-glasses AR, proof-of-personhood, Chia DID/VC, OMATrust, healthcare, education, smart-home, runtime-profile, and a TEMPLATE.md for new lanes.
+./docs/reports/2026-03-05-digital-you-gap-and-implementation-report.md:44:### 1) Cross-device, cross-app interoperability (PC, AR phone/eyewear, VR/MR headset, native, streamed, WebXR)
+./docs/reports/2026-03-05-digital-you-gap-and-implementation-report.md:59:  - A phone AR app only reads `ar.profile.public` pointer and `ar.overlay.presenceVisible` consent for lightweight overlay.
+./docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md:13:4. smart-glasses AR social-layer integration lane.
+./docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md:47:- [x] Smart-glasses AR lane is documented with consent and policy guidance.
+./spec/v0.1/REGISTRY.md:67:- `ar.recording.faceVisible` — permission to allow face visibility in AR capture contexts
+./spec/v0.1/REGISTRY.md:68:- `ar.recording.voiceAllowed` — permission to allow voice capture in AR contexts
+./spec/v0.1/REGISTRY.md:69:- `ar.overlay.presenceVisible` — permission to render presence overlays in AR consumers
+./docs/workorders/WO-0065-sandbox-integration-lane-scenarios.md:36:- **Consumer:** Smart glasses AR runtime
+./docs/workorders/WO-0044-public-open-source-examples-work-stream.md:15:4. Find integration examples for their platform of interest (social, IoT, AR/VR, identity).
+./docs/workorders/WO-0044-public-open-source-examples-work-stream.md:28:- 16 near-real stub manifests under `examples/v0.1/stubs/` (social, venue, device, OMATrust, metaverse, AR, Chia, personhood, etc.)
+./docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md:51:- **Key point:** Same manifest projected by 3 different consumers (social, AR, metaverse)
+./docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md:85:  - Contents: combine social profile shard + AR consent keys + metaverse cross-world shard + metaverse/AR/social pointers + multiple consent keys
+./docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md:29:  - Smart glasses AR
+./docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md:33:- rename "Smart Glasses AR Integration" label to "Smart Glasses".
+./docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md:34:- keep Smart Glasses framing as current AI/HUD usage now; AR is future-facing. Do not include "siloed hardware" phrasing.
+./docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md:70:- [x] Integration labels no longer include "Integration"; "Smart Glasses AR Integration" becomes "Smart Glasses".
+./docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md:8:Turn smart-glasses AR consent guidance into executable fixture and journey evidence while preserving UM core-contract neutrality.
+./docs/workorders/WO-0045-commercial-explainer-ecosystem-and-integration-expansion.md:88:- **Spatial & Immersive**: Metaverse, RP1, smart glasses AR, VR social, digital twins, location-based services

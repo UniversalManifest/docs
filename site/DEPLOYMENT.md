@@ -9,17 +9,17 @@ This repo contains two related deployment runtimes:
 
 Staging + promotion runbook:
 
-- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+- `docs/site/STAGING-PROMOTION-RUNBOOK.md`
 
 ## 1) Publish spec artifacts (`/ns/...`)
 
 Build:
 
-- `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
+- `node deploy/universalmanifest.net/build.mjs`
 
 Output:
 
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist/`
+- `deploy/universalmanifest.net/dist/`
 
 Deploy:
 
@@ -27,18 +27,18 @@ Deploy:
 
 Cloudflare Pages runbook (deployment-ready):
 
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
 
 ## 2) Build the documentation site (site/)
 
 Build:
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm install`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build`
+- `cd site && npm install`
+- `cd site && npm run build`
 
 Output:
 
-- `/Users/grig/work/repo/universalmanifest/site/dist/`
+- `site/dist/`
 
 ## 3) Combine site output with `/ns/...` artifacts (recommended final shape)
 

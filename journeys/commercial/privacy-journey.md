@@ -31,15 +31,15 @@ I decide this platform is trustworthy after a week of using it. I open my manife
 
 ---
 
-I attend a technology conference. The venue has smart glasses stations for attendees to try AR demos. The glasses run UM-compatible software. When I walk into the demo area, the glasses scan for nearby attendees' UMIDs via a local beacon. They find mine and fetch my manifest.
+I attend a technology conference. The venue has smart glasses stations for attendees to try smart glasses demos. The glasses run UM-compatible software. When I walk into the demo area, the glasses scan for nearby attendees' UMIDs via a local beacon. They find mine and fetch my manifest.
 
-The glasses check `ar.recording.faceVisible`. My manifest says denied. The AR system immediately applies a privacy filter: my face is blurred in real-time on the glasses' display. Other attendees wearing the glasses see a blurred shape where I am standing. My voice is not captured either -- `ar.recording.voiceAllowed: denied`. I am a ghost in the augmented layer, exactly as I chose to be.
+The glasses check `ar.recording.faceVisible`. My manifest says denied. The smart glasses system immediately applies a privacy filter: my face is blurred in real-time on the glasses' display. Other attendees wearing the glasses see a blurred shape where I am standing. My voice is not captured either -- `ar.recording.voiceAllowed: denied`. I am a ghost in the smart glasses layer, exactly as I chose to be.
 
-I notice a colleague, Dana, who is standing nearby and fully visible in the AR layer -- sharp face, name tag floating above her head, professional title displayed. She set her consents to allowed. We made different choices. The same system respects both.
+I notice a colleague, Dana, who is standing nearby and fully visible in the smart glasses layer -- sharp face, name tag floating above her head, professional title displayed. She set her consents to allowed. We made different choices. The same system respects both.
 
 ---
 
-After the conference, I pull up my manifest's activity log. The resolver tracks which systems fetched my manifest and when. I can see the professional networking app checking every 48 hours on the TTL cycle. I can see the conference venue's AR system making a single fetch during the demo session. I can see a third platform I forgot about -- a music streaming service I signed up for months ago -- still checking on its refresh cycle. Everything is transparent.
+After the conference, I pull up my manifest's activity log. The resolver tracks which systems fetched my manifest and when. I can see the professional networking app checking every 48 hours on the TTL cycle. I can see the conference venue's smart glasses system making a single fetch during the demo session. I can see a third platform I forgot about -- a music streaming service I signed up for months ago -- still checking on its refresh cycle. Everything is transparent.
 
 I examine the music service's access pattern and decide I no longer want them to have access at all. I could revoke their access specifically, but with UM's architecture, I do not need a per-platform revocation mechanism. I simply ensure my manifest continues to deny the consents that service would need. The next time they check, they get nothing useful. And when my manifest TTL expires in 48 hours, whatever they cached becomes invalid. The short TTL is my data retention policy, enforced by the protocol.
 
@@ -55,7 +55,7 @@ Months later, I look back at that spreadsheet I used to maintain. I have not upd
 
 **Consent entries as explicit toggles:** Each consent entry in the manifest has a `@type` of `um:Consent`, a `name` (e.g., `ar.recording.faceVisible`, `social.profilePublic`), and a `value` (`allowed`, `denied`, or `restricted`). Riley controls each toggle independently. Consumers read specific consent names relevant to their function.
 
-**Smart glasses consent enforcement:** AR-capable devices fetch nearby attendees' manifests via UMID resolution and check AR-specific consent entries (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`). When these are denied, the device applies privacy filters in real-time (face blurring, voice exclusion). The AR policy is modeled through an `arPolicyPack` shard with a default stance of `deny-if-missing-consent`.
+**Smart glasses consent enforcement:** smart glasses devices fetch nearby attendees' manifests via UMID resolution and check smart glasses-specific consent entries (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`). When these are denied, the device applies privacy filters in real-time (face blurring, voice exclusion). The smart glasses policy is modeled through an `arPolicyPack` shard with a default stance of `deny-if-missing-consent`.
 
 **TTL as a privacy guarantee:** Riley sets a 48-hour TTL (`expiresAt` = `issuedAt` + 48 hours). Consumers must re-fetch before expiry. Expired manifests must be rejected per the conformance spec -- no consumer may continue to use an expired manifest to grant permissions or render state. This ensures that no system retains valid permissions beyond the TTL window.
 
@@ -63,4 +63,4 @@ Months later, I look back at that spreadsheet I used to maintain. I have not upd
 
 **Consent revocation propagation:** When Riley changes a consent value (e.g., flipping `social.profilePublic` from `denied` to `allowed`), the updated manifest syncs to the resolver. Consumers pick up the change on their next TTL-driven refresh. No per-platform revocation API is needed; the manifest is the single source of truth.
 
-**UM capabilities demonstrated:** Default-deny consent enforcement, AR consent toggles, TTL as data retention control, UMID resolution for consent checking, consent change propagation via TTL refresh, audit transparency.
+**UM capabilities demonstrated:** Default-deny consent enforcement, smart glasses consent toggles, TTL as data retention control, UMID resolution for consent checking, consent change propagation via TTL refresh, audit transparency.

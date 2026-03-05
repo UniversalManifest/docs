@@ -40,7 +40,7 @@ Fallback staging hosts (used automatically when custom domains are unreachable):
 
 Resolver staging config entrypoint:
 
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` (`[env.staging]`)
+- `services/myum-resolver/wrangler.toml` (`[env.staging]`)
 
 ## Promotion Gate Policy
 
@@ -59,8 +59,8 @@ Production deploy is blocked if any staging gate fails.
 
 Workflow:
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/provision-staging-domains.yml` (re-applies staging custom-domain deployment for docs proxy + resolver)
+- `.github/workflows/deploy-gated.yml`
+- `.github/workflows/provision-staging-domains.yml` (re-applies staging custom-domain deployment for docs proxy + resolver)
 
 Manual trigger inputs:
 
@@ -86,7 +86,7 @@ Repository variables:
 
 Both staging verification and staging synthetic monitoring use:
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/select-staging-bases.mjs`
+- `packages/universal-manifest/scripts/select-staging-bases.mjs`
 
 Selection precedence:
 
@@ -102,12 +102,12 @@ Selection precedence:
 Local dry-run examples:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest
+cd <repo-root>
 node packages/universal-manifest/scripts/select-staging-bases.mjs --format json
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest
+cd <repo-root>
 STAGING_DOCS_BASE=https://example.com STAGING_RESOLVER_BASE=https://example.org node packages/universal-manifest/scripts/select-staging-bases.mjs --format shell
 ```
 
@@ -116,42 +116,42 @@ STAGING_DOCS_BASE=https://example.com STAGING_RESOLVER_BASE=https://example.org 
 Staging smoke:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:staging
 ```
 
 Staging smoke (fallback hosts, explicit override):
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev
 ```
 
 Staging post-deploy verify:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run verify:postdeploy:staging
 ```
 
 Staging post-deploy verify (fallback hosts, explicit override):
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev
 ```
 
 Production smoke:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 ```
 
 Production post-deploy verify:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run verify:postdeploy:prod
 ```
 
@@ -170,4 +170,4 @@ After rollback:
 1. rerun smoke for the affected environment
 2. rerun post-deploy verify for the affected environment
 3. record report artifact path under:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/`
+   - `.dev/ai/reports/deploy-checks/`

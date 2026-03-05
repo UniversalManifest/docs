@@ -35,9 +35,9 @@ Within seconds, three screens in the gallery light up with Alex's art. Alex look
 
 ### Scene 3: Vignette 2 -- The Smart Glasses (12s)
 
-**Visual:** A busy sidewalk. Someone wearing sleek AR smart glasses walks past Riley. The glasses' field of view is shown as a translucent overlay. As Riley enters the frame, the glasses' system sends a quick lookup -- a beam reaches out toward Riley's manifest UMID (broadcast via a proximity protocol or looked up through the resolver). The manifest arrives. The glasses check `ar.recording.faceVisible` -- **denied** (red). `ar.recording.voiceAllowed` -- **denied** (red).
+**Visual:** A busy sidewalk. Someone wearing sleek smart glasses walks past Riley. The glasses' field of view is shown as a translucent overlay. As Riley enters the frame, the glasses' system sends a quick lookup -- a beam reaches out toward Riley's manifest UMID (broadcast via a proximity protocol or looked up through the resolver). The manifest arrives. The glasses check `ar.recording.faceVisible` -- **denied** (red). `ar.recording.voiceAllowed` -- **denied** (red).
 
-Immediately, Riley's face in the glasses' view is replaced with a smooth, respectful blur. Their voice, if captured in ambient audio, is filtered out. A small shield icon appears beside Riley's silhouette in the AR overlay. Riley walks on, unbothered and unrecorded.
+Immediately, Riley's face in the glasses' view is replaced with a smooth, respectful blur. Their voice, if captured in ambient audio, is filtered out. A small shield icon appears beside Riley's silhouette in the smart glasses overlay. Riley walks on, unbothered and unrecorded.
 
 **Narration:** "Someone wearing smart glasses walks past Riley. The glasses check Riley's manifest. Recording consent: denied. Automatically, Riley's face is blurred and their voice is filtered. Privacy, enforced by default."
 

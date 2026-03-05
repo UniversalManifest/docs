@@ -51,7 +51,7 @@ Incident commander:
 
 ## 7) Links
 
-- Synthetic policy: `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
-- Production smoke runbook: `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
-- Resolver deploy runbook: `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
-- Docs deploy runbook: `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- Synthetic policy: `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+- Production smoke runbook: `docs/PRODUCTION-DEPLOY-SMOKE.md`
+- Resolver deploy runbook: `services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+- Docs deploy runbook: `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`

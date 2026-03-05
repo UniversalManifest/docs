@@ -54,16 +54,16 @@ Note:
 Lineage source:
 
 - Universal Manifest is explicitly descended from the earlier **Metaverse Universal Manifest (MUM)** concept document:
-  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+  - `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`
 
 Strategic direction:
 
 - Keep metaverse portability as a first-class integration lane while positioning Universal Manifest as a broader cross-domain standard.
 - Add an explicit integration lane for **RP1 spatial fabric** use cases (spatial context, place anchoring, and cross-world portability).
-- Add an explicit integration lane for **smart-glasses AR social layer** use cases, including:
+- Add an explicit integration lane for **smart-glasses social layer** use cases, including:
   - face-visibility permissions for recordings
   - automatic public social-profile disclosure controls
-  - context-sensitive disclosure and consent for real-world + AR interactions
+  - context-sensitive disclosure and consent for real-world + smart-glasses interactions
 
 Additional integration lanes (2026-02-20):
 

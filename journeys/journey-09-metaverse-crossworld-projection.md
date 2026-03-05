@@ -6,7 +6,7 @@ Show that metaverse identity/profile/avatar/social pointers can be projected fro
 
 ## Inputs
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+- `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 
 ## Steps
 
@@ -23,5 +23,5 @@ Show that metaverse identity/profile/avatar/social pointers can be projected fro
 
 ## Evidence
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run journeys`

@@ -43,7 +43,7 @@ Validated on `https://universalmanifest.net/getting-started/universal-manifest-o
 
 - Overlay pilot animation exists (`/animations/um-overlay-lanes-pilot.svg`).
 
-Validated on `https://universalmanifest.net/integrations/smart-glasses-ar/`:
+Validated on `https://universalmanifest.net/integrations/smart-glasses/`:
 
 - Page title renders as `Smart Glasses | Universal Manifest`.
 

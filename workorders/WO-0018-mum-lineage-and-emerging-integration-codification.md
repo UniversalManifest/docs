@@ -51,7 +51,7 @@ Out of scope:
 ## Completion evidence
 
 - MUM lineage source path recorded:
-  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+  - `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`
 - Source-of-truth updates:
   - `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
   - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`

@@ -5,9 +5,9 @@ Goal: prove the v0.2 baseline integrity profile is executable and fails safely.
 ## Steps
 
 1. Validate a v0.2 signed fixture:
-   - `/Users/grig/work/repo/universalmanifest/examples/v0.2/minimal-signed-manifest.jsonld`
+   - `examples/v0.2/minimal-signed-manifest.jsonld`
 2. Validate an invalid signature fixture:
-   - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature.jsonld`
+   - `examples/v0.2/invalid/invalid-signature.jsonld`
 
 ## Expected outcome
 
@@ -16,5 +16,5 @@ Goal: prove the v0.2 baseline integrity profile is executable and fails safely.
 
 ## Executable proof
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 

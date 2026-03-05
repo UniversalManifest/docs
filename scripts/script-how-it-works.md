@@ -98,7 +98,7 @@ All three gates show green checkmarks. The manifest passes through and arrives, 
 
 - **Gallery:** Alex's art appears on screens at Jordan's venue. The publicProfile shard and public capsule data are being read. The manifest glows softly in the corner of the display.
 - **Social app:** Sam, a developer, builds an app that reads the publicProfile shard to auto-fill a user's profile page. No duplicate forms.
-- **Smart glasses:** A person wearing AR glasses walks past Riley. The glasses check Riley's manifest -- `ar.recording.faceVisible: denied`. Riley's face is automatically blurred in the glasses' view.
+- **Smart glasses:** A person wearing smart glasses walks past Riley. The glasses check Riley's manifest -- `ar.recording.faceVisible: denied`. Riley's face is automatically blurred in the glasses' view.
 - **Virtual world:** A game character leaps between two virtual worlds. Their avatar, display name, and social connections carry over through the crossWorldProfile shard and metaverse pointers.
 
 All four scenes merge into a single flowing visual -- the manifest at the center, with light beams connecting to each context.

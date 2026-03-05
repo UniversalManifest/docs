@@ -16,9 +16,9 @@ This document is the condensed transfer package for agents implementing UM consu
 
 - UM is the specification; implementations are replaceable.
 - Normative sources:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
 - TypeScript references are informative examples:
   - `https://github.com/grigb/um-typescript`
 
@@ -76,12 +76,12 @@ Verification (consumer):
 
 Suite root:
 
-- `/Users/grig/work/repo/universalmanifest/conformance`
+- `conformance`
 - suite version: `0.1.0`
 
 Runner path:
 
-- `/Users/grig/work/repo/universalmanifest/conformance/runner`
+- `conformance/runner`
 
 Adapter response shape:
 
@@ -94,7 +94,7 @@ Adapter response shape:
 
 Expected report schema:
 
-- `/Users/grig/work/repo/universalmanifest/conformance/schema/conformance-report.schema.json`
+- `conformance/schema/conformance-report.schema.json`
 
 ## 6) Implementation Plan Template (Agent Ready)
 
@@ -115,6 +115,6 @@ Expected report schema:
 
 ## 8) Companion Docs
 
-- Full guide: `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`
-- Quick card: `/Users/grig/work/repo/universalmanifest/docs/guides/QUICK-REFERENCE.md`
+- Full guide: `docs/guides/IMPLEMENTATION-GUIDE.md`
+- Quick card: `docs/guides/QUICK-REFERENCE.md`
 - Site implementation guide: `https://universalmanifest.net/guides/implementation-guide/`

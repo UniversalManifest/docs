@@ -18,4 +18,4 @@ Goal: prove resolver semantics (404/200/307/410) and deterministic retrieval.
 
 ## Executable proof
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`

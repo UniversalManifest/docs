@@ -3,16 +3,16 @@
 A standalone, portable guide for producing high-quality animated SVG explainers using a structured AI prompt-pack pipeline. This workflow was developed and proven on the Universal Manifest project (WO-0030), where it produced 29 production-quality animated SVGs that are currently live on universalmanifest.net (33 total including 2 test files and 2 pilot iterations). Any agent on any project can adapt this workflow.
 
 For active/deprecated workflow status and asset lineage clarity, see:
-`/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`.
+`docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`.
 
 For canonical production-asset verification, use:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run animation:verify:canonical
 ```
 
-This checks the canonical source set in `/Users/grig/work/repo/universalmanifest/site/public/animations/` and fails if required accessibility markers or forbidden legacy references are found.
+This checks the canonical source set in `site/public/animations/` and fails if required accessibility markers or forbidden legacy references are found.
 
 ---
 
@@ -745,7 +745,7 @@ These elements should be adapted:
 | `scenario-10-pop-integration.svg` | Integration | Proof-of-personhood multi-provider flow |
 | `scenario-11-omatrust-integration.svg` | Integration | OMATrust attestation interoperability |
 | `scenario-12-rp1-integration.svg` | Integration | RP1 spatial fabric binding |
-| `scenario-13-smart-glasses-integration.svg` | Integration | Smart glasses AR social layer |
+| `scenario-13-smart-glasses-integration.svg` | Integration | Smart glasses smart glasses social layer |
 | `scenario-14-metaverse-integration.svg` | Integration | Metaverse identity and lineage |
 | `scenario-15-chia-vc-integration.svg` | Integration | Chia DID/VC credential bridge |
 | `universal-manifest-overview-template.svg` | Diagram | Complete system architecture (in `diagrams/`) |

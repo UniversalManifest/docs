@@ -28,8 +28,8 @@ Richer “near-real” stubs:
 Integration-lane stubs:
 
 - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
-- `examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld`
-- `examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld`
+- `examples/v0.1/stubs/smart-glasses-consent-allowed-manifest.jsonld`
+- `examples/v0.1/stubs/smart-glasses-consent-denied-manifest.jsonld`
 - `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - `examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld`
 - `examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld`

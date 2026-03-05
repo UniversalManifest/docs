@@ -701,21 +701,21 @@ This report was produced on 2026-02-27 by analyzing:
 
 Files contributing to this analysis:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.json`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/minimal-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/manifest-with-shards.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.2/minimal-signed-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.2/manifest-with-shards-signed.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.2/manifest-with-pointers-signed.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.2/manifest-with-revocation-metadata.jsonld`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`
-- `/Users/grig/work/repo/universalmanifest/docs/teaching-scripts/01-ICONIC-REPRESENTATION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
+- `spec/v0.1/README.md`
+- `spec/v0.1/schema.json`
+- `spec/v0.1/schema.jsonld`
+- `spec/v0.2/README.md`
+- `spec/v0.2/schema.json`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `packages/universal-manifest/src/index.ts`
+- `examples/v0.1/minimal-manifest.jsonld`
+- `examples/v0.1/manifest-with-shards.jsonld`
+- `examples/v0.2/minimal-signed-manifest.jsonld`
+- `examples/v0.2/manifest-with-shards-signed.jsonld`
+- `examples/v0.2/manifest-with-pointers-signed.jsonld`
+- `examples/v0.2/manifest-with-revocation-metadata.jsonld`
+- `integrations/reference-runtime.md`
+- `docs/DECISIONS.md`
+- `docs/UNIVERSAL-MANIFEST-BRIEFING.md`
+- `docs/teaching-scripts/01-ICONIC-REPRESENTATION.md`
+- `docs/reports/2026-02-23-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`

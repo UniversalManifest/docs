@@ -5,9 +5,9 @@ Prove that Universal Manifest fixtures can represent OMATrust signals across pro
 
 ## Inputs
 
-- Fixture: /Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld
-- Fixture: /Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld
-- Fixture: /Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld
+- Fixture: examples/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld
+- Fixture: examples/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld
+- Fixture: examples/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld
 
 ## Steps
 
@@ -26,6 +26,6 @@ Prove that Universal Manifest fixtures can represent OMATrust signals across pro
 
 ## Evidence
 
-- Command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- Runner implementation: `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- Command: `cd packages/universal-manifest && npm run journeys`
+- Runner implementation: `packages/universal-manifest/scripts/run-journeys.mjs`
 

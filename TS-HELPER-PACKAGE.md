@@ -7,7 +7,7 @@ This repo includes a small TypeScript helper package used for:
 
 Package location:
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/`
+- `packages/universal-manifest/`
 
 Current package name:
 
@@ -52,5 +52,5 @@ Publishing options (future):
 
 Decision record:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `docs/DECISIONS.md`
 

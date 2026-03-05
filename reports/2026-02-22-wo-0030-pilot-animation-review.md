@@ -29,7 +29,7 @@ Date: 2026-02-22
 - Browser checks (local):
   - `http://localhost:4321/`
   - `http://localhost:4321/getting-started/universal-manifest-overview/`
-  - `http://localhost:4321/integrations/smart-glasses-ar/`
+  - `http://localhost:4321/integrations/smart-glasses/`
   - `http://localhost:4321/getting-started/workbench/`
   - `http://localhost:4321/proof/harness/`
 - Browser checks (live):

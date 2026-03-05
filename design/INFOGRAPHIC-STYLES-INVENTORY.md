@@ -351,11 +351,11 @@ Existing animations that need regeneration or are missing entirely.
 - **Existing Asset:** `site/public/animations/7.4-rp1-integration.svg`
 - **Priority:** high
 
-### 7.5 Smart Glasses AR
+### 7.5 Smart Glasses
 
 - **ID:** `scenario-13-smart-glasses-integration`
 - **Style:** animated-svg
-- **Subject:** AR recording consent controls via manifest
+- **Subject:** smart glasses recording consent controls via manifest
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/7.5-smart-glasses-integration.svg`
 - **Priority:** high
@@ -453,7 +453,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `journey-privacy-user`
 - **Style:** journey-map, sequential-diagram
-- **Subject:** Riley controlling consent — manifest creation (all denied) → selective grants → platform checks → AR enforcement → activity log review → TTL expiry as retention policy
+- **Subject:** Riley controlling consent — manifest creation (all denied) → selective grants → platform checks → smart-glasses enforcement → activity log review → TTL expiry as retention policy
 - **Status:** exists
 - **Existing Asset:** `site/public/diagrams/9.4-privacy-user-journey.svg`
 - **Priority:** medium
@@ -603,11 +603,11 @@ Existing animations that need regeneration or are missing entirely.
 - **Priority:** medium
 - **Source:** `docs/explainers/full-briefing.md`, `docs/scripts/script-why-it-matters.md`
 
-### 13.2 AR Privacy Scenario
+### 13.2 Smart Glasses Privacy Scenario
 
 - **ID:** `scenario-ar-privacy`
 - **Style:** illustrated-scenario
-- **Subject:** Riley's face blurred in AR glasses due to consent denial, shield icon indicator
+- **Subject:** Riley's face blurred in smart glasses due to consent denial, shield icon indicator
 - **Status:** needs-creation
 - **Priority:** medium
 - **Source:** `docs/explainers/full-briefing.md`, `docs/scripts/script-why-it-matters.md`

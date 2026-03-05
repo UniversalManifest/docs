@@ -4,11 +4,11 @@ This document is the local pointer to the global GAS shared project index for Un
 
 ## Canonical shared index (GAS)
 
-- `/Users/grig/.agents/knowledge-sources/project-indexes/2026-02-17_19-37_universal-manifest_master-index.md`
+- `~/.agents/knowledge-sources/project-indexes/2026-02-17_19-37_universal-manifest_master-index.md`
 
 ## Registry entry
 
-- `/Users/grig/.agents/knowledge-sources/INDEX.md`
+- `~/.agents/knowledge-sources/INDEX.md`
 
 ## What this gives agents
 
@@ -18,12 +18,12 @@ This document is the local pointer to the global GAS shared project index for Un
 
 ## Local-first quick start
 
-1. `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-2. `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-3. `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-4. `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-5. `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-6. `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+1. `docs/STATE-OF-THE-PROJECT.md`
+2. `docs/PROJECT-VISION.md`
+3. `spec/v0.1/README.md`
+4. `spec/v0.1/CONFORMANCE.md`
+5. `docs/DONE-DONE-DEFINITION.md`
+6. `docs/DECISIONS.md`
 
 ## Maintenance rule
 
@@ -32,4 +32,4 @@ When Universal Manifest gains a major structural change (new spec version, fixtu
 ## Lineage source pointer
 
 - Metaverse Universal Manifest (MUM) source document:
-  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+  - `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`

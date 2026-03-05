@@ -3,7 +3,7 @@
 **Status**: Draft design proposal (2026-03-01)
 **Source**: `.dev/INBOX/permissions-system.md` (rough concept note)
 **Inspiration**: [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html) network firewall permission model
-**Relates to**: `spec/v0.1/REGISTRY.md` (consent names), `docs/PROJECT-VISION.md` (permission model direction), `integrations/smart-glasses-ar.md`, `integrations/healthcare-patient-consent.md`
+**Relates to**: `spec/v0.1/REGISTRY.md` (consent names), `docs/PROJECT-VISION.md` (permission model direction), `integrations/smart-glasses.md`, `integrations/healthcare-patient-consent.md`
 
 ---
 
@@ -47,7 +47,7 @@ The Universal Manifest v0.1 already has the **foundation** for this model. The `
 - Default-deny: if a consent name is absent, the consumer SHOULD treat it as denied
 - Simple vocabulary: `allowed`, `denied`, `restricted` as values
 - Domain-namespaced keys: `ar.*`, `health.*`, `social.*` etc.
-- Already integrated into journey proofs (journey-08: smart-glasses consent enforcement)
+- Already integrated into journey proofs (journey-08: smart glasses consent enforcement)
 
 **Current model gaps (what this design addresses):**
 - No concept of *who* is requesting access (consumer identity)
@@ -287,7 +287,7 @@ Implementations SHOULD provide a way for subjects to review and modify their con
 │  │ Allergy information          │ Healthcare  │ ● Allowed     ││
 │  │ Date of birth                │ Government  │ ◐ Restricted  ││
 │  │ Social graph sharing         │ Anyone      │ ○ Denied      ││
-│  │ Face visibility (AR)         │ Anyone      │ ○ Denied      ││
+│  │ Face visibility (smart glasses)         │ Anyone      │ ○ Denied      ││
 │  │ Location history             │ Anyone      │ ○ Denied      ││
 │  └─────────────────────────────────────────────────────────────┘│
 │                                                                 │
@@ -450,9 +450,9 @@ These states extend (not replace) the existing Capsule-Pod animation states from
 
 ## 8. Relationship to Existing Integration Lanes
 
-### Smart Glasses AR (`integrations/smart-glasses-ar.md`)
+### Smart Glasses (`integrations/smart-glasses.md`)
 
-The AR lane already defines consent keys like `ar.recording.faceVisible` and `ar.profile.autoSharePublic`. The firewall model enriches these with audience-scoped rules:
+The smart-glasses lane already defines consent keys like `ar.recording.faceVisible` and `ar.profile.autoSharePublic`. The firewall model enriches these with audience-scoped rules:
 
 ```json
 {
@@ -463,7 +463,7 @@ The AR lane already defines consent keys like `ar.recording.faceVisible` and `ar
 }
 ```
 
-*"My face is visible in AR recordings made by friends, but not by strangers, when I'm in public."*
+*"My face is visible in smart glasses recordings made by friends, but not by strangers, when I'm in public."*
 
 ### Healthcare (`integrations/healthcare-patient-consent.md`)
 
@@ -571,7 +571,7 @@ If a subject changes a consent from `"allowed"` to `"denied"`, does this affect 
 | Extended consent names | `spec/v0.1/REGISTRY.md` (add now, non-normative) | No |
 | Data firewall UX patterns | `integrations/data-firewall-ux.md` (new) | No |
 | Updated healthcare consent examples | `integrations/healthcare-patient-consent.md` (update) | No |
-| Updated AR consent examples | `integrations/smart-glasses-ar.md` (update) | No |
+| Updated smart glasses consent examples | `integrations/smart-glasses.md` (update) | No |
 | Updated metaverse consent examples | `integrations/metaverse.md` (update) | No |
 | Firewall visual mapping | `docs/design/CAPSULE-POD-DESIGN.md` (update) | No |
 | This design document | `docs/design/PERMISSIONS-FIREWALL-DESIGN.md` | No |
@@ -683,7 +683,7 @@ The design patterns from Little Snitch that directly inform this architecture:
       "@type": "um:Consent",
       "name": "ar.recording.faceVisible",
       "value": "denied",
-      "notes": "Strangers cannot capture my face in AR"
+      "notes": "Strangers cannot capture my face in smart glasses"
     },
     {
       "@type": "um:Consent",
@@ -729,5 +729,5 @@ In this example manifest, the consent rules form a coherent firewall:
 - **Public profile**: visible to anyone (allowed, no audience restriction)
 - **Allergy data**: visible only to healthcare providers in emergencies; denied by default
 - **Employment role**: visible only to employer domain, in professional context
-- **Face in AR**: visible to friends only; denied for strangers
+- **Face in smart glasses**: visible to friends only; denied for strangers
 - **Social graph**: denied to everyone, always

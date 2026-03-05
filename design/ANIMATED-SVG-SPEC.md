@@ -54,9 +54,9 @@ Animation text and labels must align with UM terminology:
 
 Do not introduce claims that contradict:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.json`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `spec/v0.1/schema.json`
+- `spec/v0.2/schema.json`
+- `docs/DECISIONS.md`
 
 ## 6. Cross-device behavior
 
@@ -66,7 +66,7 @@ Do not introduce claims that contradict:
 
 ## 7. Integration requirements
 
-- Place assets under `/Users/grig/work/repo/universalmanifest/site/public/animations/`.
+- Place assets under `site/public/animations/`.
 - Refer to assets using root-relative URLs in docs pages.
 - If animation fails to render, page must still be understandable from text + static fallback image.
 
@@ -74,7 +74,7 @@ Do not introduce claims that contradict:
 
 Before acceptance, confirm:
 
-1. `cd /Users/grig/work/repo/universalmanifest/site && npm run build` passes.
+1. `cd site && npm run build` passes.
 2. Reduced-motion fallback works in browser emulation.
 3. SVG output meets file-size budget.
 4. Labels and sequence match source-grounded narrative.

@@ -9,25 +9,25 @@ It uses the repo’s endpoint smoke script so verification is **repeatable and a
 
 Continuous production synthetic monitoring and alerting policy:
 
-- `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
-- Workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+- `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+- Workflow: `.github/workflows/synthetic-monitoring.yml`
 
 ## Prereqs
 
 - `universalmanifest.net` is deployed (Cloudflare Pages):
-  - Runbook: `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+  - Runbook: `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
 - `myum.net` resolver is deployed (Cloudflare Worker + KV):
-  - Runbook: `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+  - Runbook: `services/myum-resolver/CLOUDFLARE-DEPLOY.md`
 
 ## One command (recommended)
 
 From the TS helper package:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
 
 Staging equivalent (for pre-production gates):
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:staging`
+- `cd packages/universal-manifest && npm run smoke:endpoints:staging`
 
 This checks:
 
@@ -45,7 +45,7 @@ The smoke script defaults to:
 
 If your production resolver does not serve that UMID, pass a known UMID:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net --umid 'urn:uuid:YOUR-UMID-HERE'`
+- `cd packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net --umid 'urn:uuid:YOUR-UMID-HERE'`
 
 ## Troubleshooting
 
@@ -61,4 +61,4 @@ If the smoke fails:
 
 If repeated failures continue, open an incident using:
 
-- `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`
+- `docs/operations/INCIDENT-REPORT-TEMPLATE.md`

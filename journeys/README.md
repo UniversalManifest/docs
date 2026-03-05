@@ -9,7 +9,7 @@ Each journey has:
 
 Run the proof suite:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`
 - Optional reference-implementation smoke (J05) can be enabled in journey-runner config.
 
 Outputs:
@@ -33,7 +33,7 @@ Outputs:
 
 Execution source:
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
 
 ## Journey list
 
@@ -52,15 +52,15 @@ Execution source:
 ## Cross-Domain Overlay Lanes (WO-0017)
 
 Planning authority:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 Required overlay lanes for journey expansion:
 - Venue/local-first display lane (baseline operational lane).
 - Creator/public profile projection lane (adopter-facing lane).
 - Metaverse portability lane as exemplar (not scope anchor).
 - RP1 spatial-fabric lane as interoperability overlay.
-- Smart-glasses AR consent lane as policy overlay.
+- Smart-glasses consent lane as policy overlay.
 
 ## Identity-Method Variant Lanes (CON-UM-003)
 
@@ -86,6 +86,6 @@ The Universal Manifest project does not consider “docs exist” as proof.
 
 Maturity claims require runnable evidence (see):
 
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
+- `docs/DONE-DONE-DEFINITION.md`
+- `docs/DONE-DONE-CHECKLIST.md`
+- `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`

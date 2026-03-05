@@ -7,7 +7,7 @@ Demonstrate that RP1-style spatial-fabric data can be represented as optional po
 ## Inputs
 
 - Fixture:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 
 ## Steps
 
@@ -31,12 +31,12 @@ Demonstrate that RP1-style spatial-fabric data can be represented as optional po
 ## Evidence
 
 - validation output from:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+  - `cd packages/universal-manifest && npm test`
 - fixture path:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 
 ## Normative boundary reminder
 
 This journey is integration evidence. Core normative requirements remain in:
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+- `spec/v0.1/README.md`
+- `spec/v0.1/CONFORMANCE.md`

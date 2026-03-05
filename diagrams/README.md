@@ -40,7 +40,7 @@ See `docs/design/ANIMATED-SVG-WORKFLOW.md` for the complete process.
 
 For canonical status of active workflow vs deprecated/historical tracks, see:
 
-- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`
+- `docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`
 
 Summary:
 - Active production workflow: WO-0030 prompt-pack pipeline.

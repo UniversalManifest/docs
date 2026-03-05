@@ -24,4 +24,4 @@ An adopter should be able to take a manifest and derive a safe, public-facing pr
   - a renderable `name`
   - at least one interop pointer (e.g., ActivityPub actor URL)
 - The journey runs as part of `npm run journeys` in:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest`
+  - `packages/universal-manifest`

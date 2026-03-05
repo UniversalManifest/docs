@@ -27,7 +27,7 @@
 
 ### Separate spec repo
 
-- The Universal Manifest lives as a **fully separate repo** at `/Users/grig/work/repo/universalmanifest/`.
+- The Universal Manifest lives as a **fully separate repo** at ``.
 - reference implementation consumes it, but it is versioned and maintained independently.
 
 ### Manifest ID generation (`@id`)
@@ -164,8 +164,8 @@
 ### Decision
 
 - Add a repo-native CI verification workflow and a small endpoint smoke script.
-  - CI workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
-  - Endpoint smoke: `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
+  - CI workflow: `.github/workflows/verify.yml`
+  - Endpoint smoke: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
 
 ### Rationale
 
@@ -175,7 +175,7 @@
 ### Policy impact
 
 - Post-deploy checks for publishing should include endpoint smoke:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run smoke:endpoints:prod`
+  - `packages/universal-manifest` → `npm run smoke:endpoints:prod`
 
 ## 2026-02-17 — Repository relocation + GAS split onboarding model
 
@@ -184,7 +184,7 @@
 - Relocate Universal Manifest from:
   - legacy archived location (historical only)
 - To:
-  - `/Users/grig/work/repo/universalmanifest`
+  - `<repo-root>`
 - Align agent onboarding to the GAS split model:
   - `AGENTS.md` = immutable global rules copy
   - `PROJECT-RULES.md` = project-specific rules and onboarding
@@ -198,7 +198,7 @@
 
 ### Policy impact
 
-- All new path references should use `/Users/grig/work/repo/universalmanifest`.
+- All new path references should use `<repo-root>`.
 - Legacy path references are historical only and should be updated when touched.
 
 ## 2026-02-18 — Priority: interactive Manifest Workbench on universalmanifest.net
@@ -279,7 +279,7 @@
 - Treat conflict decisions as mandatory planning inputs for IA, journeys, and workbench requirements.
 
 Primary conflict register:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
 
 ### Rationale
 
@@ -290,7 +290,7 @@ Primary conflict register:
 
 - Current batch has no deferred sources remaining.
 - Follow-on implementation planning is tracked as:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ## 2026-02-19 — WO-0017 corpus decisions materialized into IA/journey/workbench planning
 
@@ -303,10 +303,10 @@ Primary conflict register:
 
 ### Evidence
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `docs/journeys/README.md`
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ### Conflict linkage
 
@@ -328,11 +328,11 @@ Primary conflict register:
 ### Decision
 
 - Record Universal Manifest lineage to the original **Metaverse Universal Manifest (MUM)** source document:
-  - `/Users/grig/work/MSF - Metaverse Standards Forum/repo/msf-wg-tool/geopose-talk/INBOX/Use Case_ Metaverse Universal Manifest - v1.0.md`
+  - `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`
 - Codify three explicit integration lanes:
   - metaverse applications (cross-world identity, assets, social graph, and preferences)
   - RP1 spatial fabric
-  - smart-glasses AR social layer with granular consent and disclosure controls
+  - smart-glasses social layer with granular consent and disclosure controls
 
 ### Rationale
 

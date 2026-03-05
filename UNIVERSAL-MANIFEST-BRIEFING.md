@@ -305,9 +305,9 @@ Universal Manifest has active integration guidance for nine distinct lanes. Each
 
 **Key fields used**: `shards` (publicProfile with `schema:Person`), `pointers` (activityPub.actor, solidPod, matrix.userId), `consents` (social.profilePublic, publicDisplay).
 
-### 6.2 Smart Glasses AR (Consent-First Overlay Controls)
+### 6.2 Smart Glasses (Consent-First Overlay Controls)
 
-**Scenario**: Alex walks into a conference wearing smart glasses. Their manifest declares: face recording is denied, public professional profile may be auto-shared, and voice capture is not permitted. When other attendees' glasses encounter Alex, the AR runtime fetches Alex's manifest, checks consent keys, and enforces the policy in real time -- blurring Alex's face in recordings, surfacing their professional badge in the overlay, and muting voice capture streams. The consent model is context-sensitive: the same person might allow face visibility at a family event but deny it at a public conference.
+**Scenario**: Alex walks into a conference wearing smart glasses. Their manifest declares: face recording is denied, public professional profile may be auto-shared, and voice capture is not permitted. When other attendees' glasses encounter Alex, the smart glasses runtime fetches Alex's manifest, checks consent keys, and enforces the policy in real time -- blurring Alex's face in recordings, surfacing their professional badge in the overlay, and muting voice capture streams. The consent model is context-sensitive: the same person might allow face visibility at a family event but deny it at a public conference.
 
 **Key consent keys**: `ar.recording.faceVisible`, `ar.recording.voiceAllowed`, `ar.profile.autoSharePublic`, `ar.profile.autoShareProfessional`, `ar.overlay.presenceVisible`.
 
@@ -319,7 +319,7 @@ Universal Manifest has active integration guidance for nine distinct lanes. Each
 
 ### 6.4 RP1 Spatial Fabric (Physical-Digital Spatial Anchoring)
 
-**Scenario**: A spatial computing platform anchors digital content to physical locations. A venue publishes a manifest with spatial anchor shards that define where digital experiences are attached to real-world coordinates. A visitor's AR device resolves the venue manifest, reads the spatial anchor data, and renders location-pinned content. Consent gates control whether the visitor's location is persisted, whether cross-world spatial linking is allowed, and whether session replay is permitted.
+**Scenario**: A spatial computing platform anchors digital content to physical locations. A venue publishes a manifest with spatial anchor shards that define where digital experiences are attached to real-world coordinates. A visitor's smart glasses device resolves the venue manifest, reads the spatial anchor data, and renders location-pinned content. Consent gates control whether the visitor's location is persisted, whether cross-world spatial linking is allowed, and whether session replay is permitted.
 
 **Key pointer names**: `rp1.fabric`, `rp1.anchorSet`, `rp1.placeGraph`, `rp1.sessionContext`. **Key consent keys**: `spatial.locationShare`, `spatial.anchorShare`, `spatial.crossWorldLinking`.
 
@@ -461,8 +461,8 @@ The repository includes a rich set of example manifests that demonstrate the sta
 **Integration lane stubs:**
 - `metaverse-crossworld-profile-manifest.jsonld` -- cross-world identity portability
 - `rp1-spatial-fabric-manifest.jsonld` -- spatial anchoring and place graph
-- `smart-glasses-ar-consent-allowed-manifest.jsonld` -- AR consent (allowed)
-- `smart-glasses-ar-consent-denied-manifest.jsonld` -- AR consent (denied)
+- `smart-glasses-consent-allowed-manifest.jsonld` -- smart glasses consent (allowed)
+- `smart-glasses-consent-denied-manifest.jsonld` -- smart glasses consent (denied)
 - `mastodon-personhood-multi-credential-manifest.jsonld` -- Mastodon + multi-provider personhood
 - `bluesky-personhood-multi-credential-manifest.jsonld` -- Bluesky + multi-provider personhood
 - `multi-did-method-coverage-manifest.jsonld` -- multiple DID method support

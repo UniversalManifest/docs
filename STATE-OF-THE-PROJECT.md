@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-03
 **Status:** 110 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED with automated staging target cutover logic. Runtime reality follow-on (WO-0119 through WO-0122) is now COMPLETED.
-**Canonical repository path:** `/Users/grig/work/repo/universalmanifest`
+**Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
 This repo remains a **spec-first project with fixtures and tooling**, and it now also includes active production operations for the docs surface (`universalmanifest.net`) and resolver surface (`myum.net`) via Cloudflare Pages/Workers.
@@ -30,7 +30,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Social/profile adoption: `integrations/social.md`
   - Metaverse lane + lineage context: `integrations/metaverse.md`
   - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
-  - Smart-glasses AR social layer lane: `integrations/smart-glasses-ar.md`
+  - Smart-glasses social layer lane: `integrations/smart-glasses.md`
   - Proof-of-personhood multi-provider lane: `integrations/proof-of-personhood.md`
   - Chia DID/VC credential lane: `integrations/chia-vc.md`
 - **Publishing + versioning plan**
@@ -212,11 +212,11 @@ Completed in this run:
 - re-ran production smoke and strict K2B validator with explicit artifact root.
 
 Evidence:
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
+- `services/myum-resolver/wrangler.toml`
+- `docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
+- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
 
 Production route verification:
 - `https://universalmanifest.net/getting-started/workbench/` -> `200`
@@ -228,33 +228,33 @@ Production route verification:
 
 Completed this run:
 - codified MUM origin lineage in source-of-truth vision and decision records
-- added explicit integration lanes for metaverse, RP1 spatial fabric, and smart-glasses AR social-layer controls
+- added explicit integration lanes for metaverse, RP1 spatial fabric, and smart-glasses social-layer controls
 - added corresponding docs-site integration pages and updated first-time overview context
 
 Evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `docs/PROJECT-VISION.md`
+- `docs/DECISIONS.md`
+- `integrations/metaverse.md`
+- `integrations/rp1-spatial-fabric.md`
+- `integrations/smart-glasses.md`
+- `site/src/content/docs/integrations/metaverse.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/smart-glasses.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
 
 ## WO-0017 execution pass update (2026-02-19)
 
 Concrete deltas completed this run:
 - IA delta artifact created:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
 - Journey planning materialization updated:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+  - `docs/journeys/README.md`
+  - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
 - Workbench requirement hardening updated:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+  - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
 - WO progress/evidence updates:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+  - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
 
 Gap movement from latest provenance audit:
 - `GAP-K2B-001`: closed.
@@ -324,16 +324,16 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Interactive manifest workbench is shipped and verified (`WO-0014` completed)
 - ✅ CLI-agent reader test evidence logged
 - Optional quality step: run and log a human participant reader-test for additional onboarding confidence.
-  - Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-  - Results: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md`
+  - Protocol: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - Results: `docs/reports/2026-02-20-first-time-reader-test-results.md`
 
 ### Milestone E — Full-corpus IA and journey execution
 
 - Deferred-source reconciliation is complete for the current batch (`WO-0016` completed)
 - Conflict decisions are recorded with action targets:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+  - `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
 - ✅ Corpus-derived IA/journey/workbench deltas were executed and closed in:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 - Next: run drift checks for newly ingested sources and open follow-on WOs when corpus deltas affect adopter-facing IA or proof flows
 
 ### Milestone F — Metaverse lineage and emerging integration lanes
@@ -342,7 +342,7 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Metaverse integration lane is documented.
 - ✅ Metaverse fixture + journey execution evidence is completed (`WO-0022`).
 - ✅ RP1 spatial-fabric integration lane is documented.
-- ✅ Smart-glasses AR social-layer integration lane is documented.
+- ✅ Smart-glasses social-layer integration lane is documented.
 - ✅ Smart-glasses consent fixture + journey execution evidence is completed (`WO-0021`).
 - ✅ RP1 intake, fixture/journey materialization, and conflict reconciliation are completed (`WO-0020`).
 - ✅ Multi-provider proof-of-personhood (World ID, Gitcoin Passport, BrightID), social DID method coverage, and Chia DID/VC credential lane completed (`WO-0024` closed 2026-02-20).

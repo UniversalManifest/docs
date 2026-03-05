@@ -9,8 +9,8 @@ This document defines the single approved animation process for Universal Manife
 
 There were two different Scenario 01 SVG files in production assets:
 
-- Canonical/current visual: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
-- Legacy variant: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-um-object-model.svg`
+- Canonical/current visual: `site/public/animations/scenario-01-object-model.svg`
+- Legacy variant: `site/public/animations/scenario-01-um-object-model.svg`
 
 Timeline:
 - 2026-02-25 (`1b4a49f`): `scenario-01-um-object-model.svg` added.
@@ -22,52 +22,52 @@ Timeline:
 ### Production generation
 
 Use the animation prompt pack as the generation source:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/`
+- `.dev/ai/prompts/animation/`
 
 Scenario 01 canonical prompt file:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-01-object-model.md`
+- `.dev/ai/prompts/animation/SCENARIO-01-object-model.md`
 
 ### Production output location
 
 Generated SVGs belong in:
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/`
+- `site/public/animations/`
 
 No separate replay lane is used.
 
 ### Verification (mandatory)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run animation:verify:canonical
 ```
 
 Script:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/verify-canonical-animations.mjs`
+- `site/scripts/verify-canonical-animations.mjs`
 
 Canonical source list used by verification:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/canonical-animation-sources.mjs`
+- `site/scripts/canonical-animation-sources.mjs`
 
 ## 3) Canonical Source Set
 
-1. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
-2. `/Users/grig/work/repo/universalmanifest/site/public/animations/um-overlay-lanes-pilot.svg`
-3. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-03-consent-policy-flow.svg`
-4. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-04-user-journey-sequence.svg`
-5. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-06-motion-tutorial.svg`
-6. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-07-workbench-explainer.svg`
-7. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-08-harness-explainer.svg`
-8. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-09-social-integration.svg`
-9. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-10-pop-integration.svg`
-10. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-11-omatrust-integration.svg`
-11. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-12-rp1-integration.svg`
-12. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-13-smart-glasses-integration.svg`
-13. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-14-metaverse-integration.svg`
-14. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-15-chia-vc-integration.svg`
-15. `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
+1. `site/public/animations/scenario-01-object-model.svg`
+2. `site/public/animations/um-overlay-lanes-pilot.svg`
+3. `site/public/animations/scenario-03-consent-policy-flow.svg`
+4. `site/public/animations/scenario-04-user-journey-sequence.svg`
+5. `site/public/animations/scenario-06-motion-tutorial.svg`
+6. `site/public/animations/scenario-07-workbench-explainer.svg`
+7. `site/public/animations/scenario-08-harness-explainer.svg`
+8. `site/public/animations/scenario-09-social-integration.svg`
+9. `site/public/animations/scenario-10-pop-integration.svg`
+10. `site/public/animations/scenario-11-omatrust-integration.svg`
+11. `site/public/animations/scenario-12-rp1-integration.svg`
+12. `site/public/animations/scenario-13-smart-glasses-integration.svg`
+13. `site/public/animations/scenario-14-metaverse-integration.svg`
+14. `site/public/animations/scenario-15-chia-vc-integration.svg`
+15. `site/public/animations/um-core-flow-pilot.svg`
 
 ## 4) Explicitly Forbidden for Canonical Output
 
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-um-object-model.svg` (legacy variant; not canonical)
+- `site/public/animations/scenario-01-um-object-model.svg` (legacy variant; not canonical)
 - Any docs reference to `/animations/repro/` (retired path)
 
 ## 5) Replay Retirement (2026-03-05)
@@ -75,17 +75,17 @@ Canonical source list used by verification:
 Replay scripts and replay artifact lane were removed from active workflow.
 
 Removed scripts:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/replay-animation.mjs`
-- `/Users/grig/work/repo/universalmanifest/site/scripts/replay-canonical-batch.mjs`
-- `/Users/grig/work/repo/universalmanifest/site/scripts/verify-canonical-replay.mjs`
+- `site/scripts/replay-animation.mjs`
+- `site/scripts/replay-canonical-batch.mjs`
+- `site/scripts/verify-canonical-replay.mjs`
 
 Removed artifact lane:
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`
+- `site/public/animations/repro/`
 
 ## 6) `um-core-flow-pilot.svg` Generation Map
 
 Target file:
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
+- `site/public/animations/um-core-flow-pilot.svg`
 
 Provenance (git):
 - First introduced: `52c1377` (2026-02-22)
@@ -94,11 +94,11 @@ Provenance (git):
 
 Source path for regeneration:
 - System prompt:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
+  - `.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
 - Scenario prompt:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
+  - `.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
 - Optional adaptation:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
+  - `.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
 
 Important:
 - This file has no exact hash match in infographics-kit deterministic outputs.
@@ -106,14 +106,14 @@ Important:
 - Save regenerated output directly to the canonical path above (overwrite is expected for canonical maintenance).
 
 Post-generation gate:
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run animation:verify:canonical`
+- `cd site && npm run animation:verify:canonical`
 
 ## 7) Relationship to Production Workflow Docs
 
 Primary generation workflow:
-- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-WORKFLOW.md`
+- `docs/design/ANIMATED-SVG-WORKFLOW.md`
 
 Foundational work orders:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md`
+- `docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md`
+- `docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md`
+- `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md`

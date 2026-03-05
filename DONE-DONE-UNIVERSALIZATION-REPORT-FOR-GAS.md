@@ -2,7 +2,7 @@
 
 Date: 2026-02-13  
 Audience: Agent building a universal "done done" process + skill in Global Agents System (GAS)  
-Source project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)
+Source project: Universal Manifest (`<repo-root>`)
 
 ## 1) Executive Summary
 
@@ -21,21 +21,21 @@ The design is intentionally domain-agnostic and can be extracted as a generic te
 
 Canonical definition:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
+- `docs/DONE-DONE-DEFINITION.md`
 
 Execution checklist:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
+- `docs/DONE-DONE-CHECKLIST.md`
 
 Evidence/sign-off template:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
+- `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
 
 Linked project context:
 
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/DEPTH-AND-SCOPE.md`
+- `docs/DECISIONS.md`
 
 ## 3) Process Model to Reuse in GAS
 

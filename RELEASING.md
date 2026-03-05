@@ -129,7 +129,7 @@ Minimum validation:
 
 After `universalmanifest.net` and `myum.net` are both deployed, run the combined endpoint smoke:
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run smoke:endpoints:prod`
+- `packages/universal-manifest` → `npm run smoke:endpoints:prod`
 
 Staging-first promotion is the default operating model:
 
@@ -139,11 +139,11 @@ Staging-first promotion is the default operating model:
 
 Runbook:
 
-- `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+- `docs/site/STAGING-PROMOTION-RUNBOOK.md`
 
 Runbook:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
+- `docs/PRODUCTION-DEPLOY-SMOKE.md`
 
 ## 4) Post-release hygiene
 
@@ -156,4 +156,4 @@ Runbook:
 
 This repo includes a GitHub Actions workflow that runs the same core proof steps on every PR:
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
+- `.github/workflows/verify.yml`

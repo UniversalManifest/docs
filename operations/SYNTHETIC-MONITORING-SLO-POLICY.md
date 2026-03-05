@@ -21,9 +21,9 @@ This policy defines reliability objectives and incident handling for production 
 
 Monitoring is executed by:
 
-- Production workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
-- Staging workflow: `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
-- Shared staging target selector: `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/select-staging-bases.mjs`
+- Production workflow: `.github/workflows/synthetic-monitoring.yml`
+- Staging workflow: `.github/workflows/synthetic-monitoring-staging.yml`
+- Shared staging target selector: `packages/universal-manifest/scripts/select-staging-bases.mjs`
 - Triggers:
   - scheduled every 15 minutes
   - manual via `workflow_dispatch`
@@ -41,11 +41,11 @@ Current operational mode (2026-03-03):
 
 The workflows use existing verification scripts:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/select-staging-bases.mjs --format json`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base>`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/post-deploy-verify.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base> --resolver-www-base <selected-resolver-www-base>`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd packages/universal-manifest && npm run verify:postdeploy:prod`
+- `cd packages/universal-manifest && node scripts/select-staging-bases.mjs --format json`
+- `cd packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base>`
+- `cd packages/universal-manifest && node scripts/post-deploy-verify.mjs --mode prod --docs-base <selected-docs-base> --resolver-base <selected-resolver-base> --resolver-www-base <selected-resolver-www-base>`
 
 Generated monitoring artifacts:
 
@@ -159,14 +159,14 @@ Escalation timeline:
 
 Runbooks:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+- `docs/PRODUCTION-DEPLOY-SMOKE.md`
+- `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- `services/myum-resolver/CLOUDFLARE-DEPLOY.md`
 
 Templates:
 
-- Incident report: `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`
-- Reliability summary: `/Users/grig/work/repo/universalmanifest/docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
+- Incident report: `docs/operations/INCIDENT-REPORT-TEMPLATE.md`
+- Reliability summary: `docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
 
 ## 8) Weekly/Monthly Reliability Review
 
@@ -183,4 +183,4 @@ Minimum review inputs:
 
 Summary outputs should be captured using:
 
-- `/Users/grig/work/repo/universalmanifest/docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
+- `docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`

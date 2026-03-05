@@ -18,4 +18,4 @@ This journey is optional in this repo's proof suite and is controlled by the jou
 
 ## Executable proof
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`

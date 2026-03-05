@@ -40,7 +40,7 @@ Acceptable fallback (may work in most tooling):
 If you control `localartist.network`, the simplest compatibility posture is:
 
 1. Deploy `universalmanifest.net` from:
-   - `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist/`
+   - `deploy/universalmanifest.net/dist/`
 2. Attach **both** custom domains to the same Pages project:
    - `universalmanifest.net` (canonical)
    - `localartist.network` (compatibility alias)
@@ -59,7 +59,7 @@ If `localartist.network` must remain a separate site/project, deploy a small sta
 
 This repo includes a deployment-ready skeleton for that:
 
-- `/Users/grig/work/repo/universalmanifest/deploy/localartist.network/`
+- `deploy/localartist.network/`
 
 ## Policy going forward
 

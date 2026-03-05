@@ -42,7 +42,7 @@ Universal Manifest is a portable JSON-LD envelope for identity/state exchange. A
 
 ![Conformance decision tree](../../site/public/diagrams/conformance-decision-tree.svg)
 
-Diagram source: `/Users/grig/work/repo/universalmanifest/docs/diagrams/conformance-decision-tree.excalidraw`
+Diagram source: `docs/diagrams/conformance-decision-tree.excalidraw`
 
 Text fallback (non-visual):
 
@@ -63,8 +63,8 @@ Conformance levels:
 
 Source of truth:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.2/CONFORMANCE.md`
 
 Minimum required fields (`v0.1` and `v0.2`):
 
@@ -159,8 +159,8 @@ func ValidateForUse(m map[string]any, now time.Time) error {
 
 Issuer responsibilities are defined in:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.2/CONFORMANCE.md`
 
 Required issuer decisions:
 
@@ -196,8 +196,8 @@ Example issuer payload (`v0.1`):
 
 v0.2 signature profile:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `spec/v0.2/CONFORMANCE.md`
 
 Required profile values:
 
@@ -260,8 +260,8 @@ manifest["signature"] = {
 
 Required verification flow is defined in:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+- `spec/v0.2/CONFORMANCE.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
 
 Verification algorithm:
 
@@ -322,8 +322,8 @@ if !ed25519.Verify(pubKey, canon, sigBytes) {
 
 Conformance requirements are versioned in:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.2/CONFORMANCE.md`
 
 ### INFORMATIVE GUIDANCE
 
@@ -350,14 +350,14 @@ Run command-mode conformance:
 node ./cli.mjs \
   --mode command \
   --adapter-command "python3 /path/to/adapter.py" \
-  --conformance-root /Users/grig/work/repo/universalmanifest/conformance \
+  --conformance-root conformance \
   --versions 0.1,0.2 \
   --report ./conformance-report.json
 ```
 
 Validate your report format against schema:
 
-- schema: `/Users/grig/work/repo/universalmanifest/conformance/schema/conformance-report.schema.json`
+- schema: `conformance/schema/conformance-report.schema.json`
 - suite version in current repository: `0.1.0`
 
 ## 8. Common Pitfalls and FAQ
@@ -417,5 +417,5 @@ Recommended submission path:
 - Site guide: `https://universalmanifest.net/guides/implementation-guide/`
 - Quick reference card: `https://universalmanifest.net/guides/quick-reference/`
 - Migration guide: `https://universalmanifest.net/guides/migration-v01-v02/`
-- Agent handoff companion: `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
+- Agent handoff companion: `docs/guides/AGENT-HANDOFF.md`
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`

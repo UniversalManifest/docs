@@ -23,7 +23,7 @@ UM is designed for three audiences. **Developers** get a well-specified format w
 ## What it enables
 
 - A freelance artist's portfolio, credentials, and display preferences traveling with them to any venue or gallery
-- A smart-glasses AR layer that respects bystanders' recording-consent preferences in real time
+- A smart glasses layer that respects bystanders' recording-consent preferences in real time
 - A proof-of-personhood credential that works across multiple verification providers
 - Portable user profiles that move between social platforms without re-entering data
 - Offline device enrollment at edge locations with no internet connectivity

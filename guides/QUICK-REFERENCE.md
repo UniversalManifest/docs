@@ -56,5 +56,5 @@ Decision tree text fallback:
 - Conformance v0.2: `https://universalmanifest.net/conformance/v02/`
 - Standalone suite guide: `https://universalmanifest.net/conformance/standalone-suite/`
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`
-- This implementation guide: `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`
-- Agent handoff companion: `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
+- This implementation guide: `docs/guides/IMPLEMENTATION-GUIDE.md`
+- Agent handoff companion: `docs/guides/AGENT-HANDOFF.md`

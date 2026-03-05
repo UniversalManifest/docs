@@ -108,7 +108,7 @@ Must-have:
 - explicit lineage reference to the MUM origin document in source-of-truth docs
 - metaverse integration lane documentation
 - RP1 spatial-fabric integration lane documentation with source-ingestion plan
-- smart-glasses AR social-layer integration lane documentation with consent-first behavior
+- smart-glasses social-layer integration lane documentation with consent-first behavior
 - clear rule that normative contract changes still require versioned spec/conformance updates
 
 Status: All integration lanes documented with fixtures and proof journeys (WO-0018 through WO-0024, WO-0027). 13 integration lanes total including OMATrust, proof-of-personhood, Chia VC, education, healthcare, and smart home.
@@ -125,15 +125,15 @@ Cadence and owner:
 Mandatory command set:
 
 1. strict K2B gate validation:
-   - `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh /Users/grig/work/repo/universalmanifest --artifact-root /Users/grig/work/repo/universalmanifest/.dev/ai --strict`
+   - `bash ~/.agents/scripts/validate-k2b-gates.sh <repo-root> --artifact-root .dev/ai --strict`
 2. journey parity check:
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+   - `cd packages/universal-manifest && npm run journeys`
 3. production route checks:
    - `curl -I https://universalmanifest.net/`
    - `curl -I https://universalmanifest.net/getting-started/workbench/`
    - `curl -I https://universalmanifest.net/proof/harness/`
 4. docs link-hygiene scan:
-   - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' /Users/grig/work/repo/universalmanifest/site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
+   - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
 
 Follow-on WO trigger thresholds:
 
@@ -155,7 +155,7 @@ Delivered:
 - 25 interactive scenarios across 5 categories:
   - Getting Started (GS-01 through GS-04): first-time user onboarding
   - Trust and Verification (TV-01 through TV-05): real Ed25519, tamper detection
-  - Integration Lanes (IL-01 through IL-08): social, AR, metaverse, spatial, and more
+  - Integration Lanes (IL-01 through IL-08): social, smart glasses, metaverse, spatial, and more
   - Edge Cases (EC-01 through EC-04): failure mode demonstrations
   - Advanced (AD-01 through AD-04): cross-system projection, revocation, full v0.2
 - 25 SVG illustrations (self-contained, accessible, dark theme)
