@@ -255,11 +255,11 @@ Existing animations that need regeneration or are missing entirely.
 
 ### 5.1 Object Model Structure
 
-- **ID:** `scenario-01-um-object-model`
+- **ID:** `scenario-01-object-model`
 - **Style:** static-diagram
 - **Subject:** Visual breakdown of manifest structure — @context, @id, @type, shards, claims, consents, pointers
 - **Status:** exists
-- **Existing Asset:** `site/public/diagrams/5.1-object-model.svg`
+- **Existing Asset:** `site/public/animations/scenario-01-object-model.svg`
 - **Priority:** high
 
 ### 5.2 Consent Policy Flow

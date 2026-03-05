@@ -3,63 +3,51 @@
 Date: 2026-03-05
 Agent Task ID: 58b6e17f_1772683277
 
-This is the canonical operating document for animation replay generation in this repository.
+This document defines the single approved animation process for Universal Manifest and records the root-cause of the Scenario 01 regression.
 
-## 1) Problem That Was Found
+## 1) What Went Wrong (Root Cause)
 
-Two similar Scenario 01 source files existed:
-- Correct visual source: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
-- Different variant: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-um-object-model.svg`
+There were two different Scenario 01 SVG files in production assets:
 
-Earlier replay runs used the different variant, which produced replay outputs that looked wrong compared to the expected Scenario 01 visual.
+- Canonical/current visual: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
+- Legacy variant: `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-um-object-model.svg`
 
-## 2) Only Approved Replay Process (Use This)
+Timeline:
+- 2026-02-25 (`1b4a49f`): `scenario-01-um-object-model.svg` added.
+- 2026-02-27 (`a631e41`): `scenario-01-object-model.svg` added in visual refresh wave.
+- Prompt-pack naming and some references continued to point at the `-um-` variant, creating inconsistent outputs and confusion.
 
-### A) Single-file replay
+## 2) Current Approved Process
+
+### Production generation
+
+Use the animation prompt pack as the generation source:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/`
+
+Scenario 01 canonical prompt file:
+- `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-01-object-model.md`
+
+### Production output location
+
+Generated SVGs belong in:
+- `/Users/grig/work/repo/universalmanifest/site/public/animations/`
+
+No separate replay lane is used.
+
+### Verification (mandatory)
 
 ```bash
 cd /Users/grig/work/repo/universalmanifest/site
-npm run animation:replay -- \
-  --source scenario-08-harness-explainer.svg \
-  --name scenario-08-harness-explainer-replay-correct-source-YYYY-MM-DD.svg \
-  --desc "Replay from expected canonical source scenario-08-harness-explainer.svg."
+npm run animation:verify:canonical
 ```
 
-### B) Canonical full-set replay (recommended)
+Script:
+- `/Users/grig/work/repo/universalmanifest/site/scripts/verify-canonical-animations.mjs`
 
-```bash
-cd /Users/grig/work/repo/universalmanifest/site
-npm run animation:replay:canonical -- --date YYYY-MM-DD
-```
-
-What this does:
-- Replays a fixed canonical source list (15 source files).
-- Writes outputs only to `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`.
-- Uses the naming pattern: `*-replay-correct-source-YYYY-MM-DD.svg`.
-
-Implementation:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/replay-canonical-batch.mjs`
+Canonical source list used by verification:
 - `/Users/grig/work/repo/universalmanifest/site/scripts/canonical-animation-sources.mjs`
 
-### C) Mandatory verification after replay
-
-```bash
-cd /Users/grig/work/repo/universalmanifest/site
-npm run animation:replay:verify -- --date YYYY-MM-DD
-```
-
-What verification checks:
-- Each expected replay file exists.
-- Replay matches source content, allowing only `<desc>` text differences.
-- XML validation via `xmllint` when available.
-
-Implementation:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/verify-canonical-replay.mjs`
-
-## 3) Canonical Source Set (15 Files)
-
-Authoritative source-of-truth list location:
-- `/Users/grig/work/repo/universalmanifest/site/scripts/canonical-animation-sources.mjs`
+## 3) Canonical Source Set
 
 1. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-object-model.svg`
 2. `/Users/grig/work/repo/universalmanifest/site/public/animations/um-overlay-lanes-pilot.svg`
@@ -77,54 +65,29 @@ Authoritative source-of-truth list location:
 14. `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-15-chia-vc-integration.svg`
 15. `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
 
-Scenario 01 rule:
-- For canonical replay, always use `scenario-01-object-model.svg`.
-- Do not use `scenario-01-um-object-model.svg` for canonical replay output.
+## 4) Explicitly Forbidden for Canonical Output
 
-## 4) Explicitly Deprecated Replay Process (Do Not Use)
+- `/Users/grig/work/repo/universalmanifest/site/public/animations/scenario-01-um-object-model.svg` (legacy variant; not canonical)
+- Any docs reference to `/animations/repro/` (retired path)
 
-Do not do any of the following:
+## 5) Replay Retirement (2026-03-05)
 
-- Do not pick source files by name similarity.
-- Do not generate replay files without the `-replay-correct-source-YYYY-MM-DD` suffix.
-- Do not keep mixed replay sets in `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`.
-- Do not use `scenario-01-um-object-model.svg` as the canonical source for Scenario 01 replay.
+Replay scripts and replay artifact lane were removed from active workflow.
 
-## 5) Replay Directory Hygiene Policy
+Removed scripts:
+- `/Users/grig/work/repo/universalmanifest/site/scripts/replay-animation.mjs`
+- `/Users/grig/work/repo/universalmanifest/site/scripts/replay-canonical-batch.mjs`
+- `/Users/grig/work/repo/universalmanifest/site/scripts/verify-canonical-replay.mjs`
 
-Replay directory:
+Removed artifact lane:
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`
 
-Policy:
-- Keep one dated canonical set only.
-- Remove older replay variants after a new canonical set is generated and verified.
+## 6) Relationship to Production Workflow Docs
 
-Cleanup command pattern:
-
-```bash
-find /Users/grig/work/repo/universalmanifest/site/public/animations/repro \
-  -maxdepth 1 -type f -name '*.svg' \
-  ! -name '*-replay-correct-source-YYYY-MM-DD.svg' -delete
-```
-
-## 6) 2026-03-05 Remediation Record
-
-Completed in this remediation:
-- Canonical replay set regenerated from correct sources.
-- Replay directory cleaned to keep only the corrected canonical set.
-- Public docs reference fixed to remove wrong Scenario 01 variant usage:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/about/visual-explainers.md`
-
-Current visual comparison artifacts (for human review):
-- `/tmp/um_svg_compare/all-fixed-compare-after-cleanup-2026-03-05.html`
-- `/tmp/um_svg_compare/all-fixed-compare-after-cleanup-2026-03-05.png`
-
-## 7) Relationship to Production Generation Workflow
-
-This file governs replay/reproducibility operations.
-
-Production animation generation remains the prompt-pack workflow described in:
+Primary generation workflow:
 - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-WORKFLOW.md`
+
+Foundational work orders:
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md`
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0042-animation-upgrade-phase-1-core-replacements-and-missing-scenarios.md`
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md`
