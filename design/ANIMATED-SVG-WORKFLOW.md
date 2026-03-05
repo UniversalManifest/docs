@@ -5,6 +5,16 @@ A standalone, portable guide for producing high-quality animated SVG explainers 
 For active/deprecated workflow status and asset lineage clarity, see:
 `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`.
 
+For replay/reproducibility operations, use only the canonical commands:
+
+```bash
+cd /Users/grig/work/repo/universalmanifest/site
+npm run animation:replay:canonical -- --date YYYY-MM-DD
+npm run animation:replay:verify -- --date YYYY-MM-DD
+```
+
+Do not run ad-hoc replay selection for canonical evidence.
+
 ---
 
 ## 1. Overview
