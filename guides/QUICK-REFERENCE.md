@@ -58,3 +58,5 @@ Decision tree text fallback:
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`
 - This implementation guide: `docs/guides/IMPLEMENTATION-GUIDE.md`
 - Agent handoff companion: `docs/guides/AGENT-HANDOFF.md`
+- Portable Identity Profile XR path: `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+- MUM sync guidance: `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`

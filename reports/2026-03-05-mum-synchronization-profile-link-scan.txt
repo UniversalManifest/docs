@@ -1,0 +1,31 @@
+MUM synchronization-profile link scan
+Date: 2026-03-05
+Repository: /Users/grig/work/repo/universalmanifest
+
+Matches:
+site/astro.config.mjs:80:            { label: 'MUM Synchronization Profile', link: '/guides/mum-synchronization-profile/' },
+docs/DECISIONS.md:12:  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+integrations/metaverse.md:113:- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md:71:- [MUM Synchronization Profile](/guides/mum-synchronization-profile/)
+site/src/content/docs/guides/implementation-guide.md:231:- [MUM Synchronization Profile](/guides/mum-synchronization-profile/)
+docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md:34:  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md:35:  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md:206:  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+site/src/content/docs/guides/quick-reference.md:55:- [MUM Synchronization Profile](/guides/mum-synchronization-profile/)
+docs/reports/2026-03-05-portable-identity-profile-implementation-path-link-scan.txt:9:site/src/content/docs/guides/mum-synchronization-profile.md:77:- [Portable Identity Profile XR Implementation Path](/guides/portable-identity-profile-xr-implementation-path/)
+site/src/content/docs/integrations/portable-identity-profile-xr.md:88:- [MUM synchronization profile](/guides/mum-synchronization-profile/)
+site/src/content/docs/integrations/metaverse.md:82:- [MUM synchronization profile](/guides/mum-synchronization-profile/)
+docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md:14:- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md:15:- Site mirror: `site/src/content/docs/guides/mum-synchronization-profile.md`
+docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md:37:  - `docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
+docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md:230:- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md:231:- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md:232:- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md:233:- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
+docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md:110:  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md:111:  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md:112:  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md:122:  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
+docs/guides/MUM-SYNCHRONIZATION-PROFILE.md:169:- `docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+docs/guides/QUICK-REFERENCE.md:62:- MUM sync guidance: `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+docs/guides/IMPLEMENTATION-GUIDE.md:420:- MUM synchronization profile: `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`

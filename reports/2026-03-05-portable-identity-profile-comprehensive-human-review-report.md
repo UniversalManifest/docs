@@ -58,7 +58,7 @@ Last program status refresh: 2026-03-05
 
 ## PIP-GN-01 — Portable Identity Profile XR Integration Lane
 
-Current status: `IN_PROGRESS`
+Current status: `DONE`
 Updated on: 2026-03-05
 Owner: Documentation + Spec Integration
 
@@ -82,11 +82,12 @@ Evidence to attach when complete:
 - updated site doc path,
 - build/link check output report path.
 
-In-progress evidence:
+Completion evidence:
 
 - `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
 
 ## PIP-GN-02 — Fixture Pack Expansion
 
@@ -197,7 +198,9 @@ Completion evidence:
 
 ## PIP-GN-05 — Implementation Guide Addendum
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -218,9 +221,18 @@ Evidence to attach when complete:
 - site mirror path,
 - link validation report path.
 
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-link-scan.txt`
+
 ## PIP-GN-06 — Governance and Status Synchronization
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -241,6 +253,13 @@ Evidence to attach when complete:
 
 - updated governance doc paths,
 - short change log entry path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
 
 ## 6) Track B — Research-First workstreams
 
@@ -416,4 +435,4 @@ What to watch most closely:
 
 ## 9) Immediate next operational move
 
-Start `PIP-GN-01`, `PIP-GN-02`, and `PIP-GN-06` first, while opening `PIP-RS-01` and `PIP-RS-02` research briefs in parallel.
+Track A (`PIP-GN-01` through `PIP-GN-06`) is complete. Start `PIP-RS-01` and `PIP-RS-02` research briefs as the next execution wave.

@@ -182,5 +182,5 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Go-Now Program Execution Wave (WO-0125 through WO-0126)
 
-- `docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md` — [IN_PROGRESS] Execute Portable Identity Profile Go-Now stream (`PIP-GN-01` through `PIP-GN-06`) with immediate integration-page delivery and status/evidence synchronization (P0)
-- `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md` — [IN_PROGRESS] Execute Metaverse Universal Manifest Go-Now stream (`MUM-GN-01` through `MUM-GN-06`) with immediate integration-page hardening and status/evidence synchronization (P0)
+- `docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md` — [COMPLETED] Portable Identity Profile Go-Now stream (`PIP-GN-01` through `PIP-GN-06`) executed with integration pages, implementation-path guidance, and governance synchronization evidence (P0)
+- `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md` — [COMPLETED] Metaverse Universal Manifest Go-Now stream (`MUM-GN-01` through `MUM-GN-06`) executed with integration hardening, synchronization-profile guidance, and governance synchronization evidence (P0)

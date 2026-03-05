@@ -1,5 +1,33 @@
 # Decisions (Universal Manifest)
 
+## 2026-03-05 — Complete Go-Now integration guidance wave for Portable Identity Profile and MUM
+
+### Decision
+
+- Complete and publish both Go-Now execution tracks as non-normative integration hardening outputs:
+  - Portable Identity Profile (`PIP-GN-01` through `PIP-GN-06`)
+  - Metaverse Universal Manifest (`MUM-GN-01` through `MUM-GN-06`)
+- Adopt two new guidance profiles for immediate external implementer use:
+  - `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- Publish site mirrors and sidebar discoverability for both guides under `/guides/`.
+
+### Rationale
+
+- Both tracks already had executable fixture/journey evidence, but external implementers still needed actionable consumer/issuer sequencing and synchronization conventions.
+- Completing GN-05/GN-06 closes documentation-to-governance drift and makes meeting-ready integration claims auditable.
+- Keeping these as non-normative profiles preserves core UM contract stability while improving immediate interoperability quality.
+
+### Policy impact
+
+- Integration lanes for Portable Identity Profile and Metaverse now require explicit cross-links to their corresponding implementation/synchronization guides.
+- Go-Now closure evidence must include:
+  - conformance run artifact,
+  - journey run artifact,
+  - docs-site build artifact,
+  - governance synchronization note.
+- Next execution focus shifts from Go-Now to Research-First tracks (`PIP-RS-*`, `MUM-RS-*`) under existing promotion gates.
+
 ## 2026-03-02 — Gate G6 governance completion baseline adopted
 
 ### Decision

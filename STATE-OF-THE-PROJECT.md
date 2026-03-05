@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-03
-**Status:** 110 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED with automated staging target cutover logic. Runtime reality follow-on (WO-0119 through WO-0122) is now COMPLETED.
+**Date:** 2026-03-05
+**Status:** 120 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -92,7 +92,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
-## Work-order status (2026-03-01)
+## Work-order status (2026-03-05)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
@@ -197,9 +197,23 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Completed: `WO-0117` synthetic monitoring + SLO policy
 - Completed: `WO-0118` automated staging target selection (explicit override -> custom-domain auto -> fallback auto) across deploy gates and synthetic monitoring
 
-## Priority context (2026-03-02)
+#### Runtime Reality and Credential Durability Follow-on (WO-0119 through WO-0124) — COMPLETED
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), and External Adopter Wave (WO-0053 through WO-0059) are completed. Priority now shifts to remaining approved work orders outside these completed waves.
+- Completed: `WO-0119` resolver route canonicalization and fixture freshness lock
+- Completed: `WO-0120` harness 307 contract parity and trust matrix
+- Completed: `WO-0121` synthetic alert delivery and escalation drill
+- Completed: `WO-0122` runtime status messaging reconciliation
+- Completed: `WO-0123` Cloudflare credential stabilization for gated production promotions
+- Completed: `WO-0124` CI Cloudflare secret rotation to long-lived API tokens with enforcement and remediation closeout
+
+#### Go-Now Program Execution Wave (WO-0125 through WO-0126) — COMPLETED
+
+- Completed: `WO-0125` Portable Identity Profile Go-Now execution and integration pages (`PIP-GN-01` through `PIP-GN-06`)
+- Completed: `WO-0126` Metaverse Universal Manifest Go-Now execution and integration pages (`MUM-GN-01` through `MUM-GN-06`)
+
+## Priority context (2026-03-05)
+
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), and Go-Now execution wave (WO-0125 through WO-0126) are completed. Priority now shifts to Research-First execution tracks and any newly approved follow-on work orders.
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 

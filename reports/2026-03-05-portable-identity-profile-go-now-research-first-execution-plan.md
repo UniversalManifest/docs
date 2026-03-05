@@ -17,7 +17,7 @@ This is not a concept note. It is a work-execution blueprint.
 
 ## 1.1) Execution status snapshot (2026-03-05)
 
-- `PIP-GN-01`: `IN_PROGRESS`
+- `PIP-GN-01`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
 - `PIP-GN-02`: `DONE`
@@ -29,7 +29,12 @@ This is not a concept note. It is a work-execution blueprint.
 - `PIP-GN-04`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
-- `PIP-GN-05` to `PIP-GN-06`: `NOT_STARTED`
+- `PIP-GN-05`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
+- `PIP-GN-06`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
 
 ## 2) Planning constraints and operating rules
 

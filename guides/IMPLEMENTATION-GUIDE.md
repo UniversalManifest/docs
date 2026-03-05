@@ -416,6 +416,8 @@ Recommended submission path:
 
 - Site guide: `https://universalmanifest.net/guides/implementation-guide/`
 - Quick reference card: `https://universalmanifest.net/guides/quick-reference/`
+- Portable Identity Profile XR path: `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+- MUM synchronization profile: `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 - Migration guide: `https://universalmanifest.net/guides/migration-v01-v02/`
 - Agent handoff companion: `docs/guides/AGENT-HANDOFF.md`
 - Reference implementation (TypeScript): `https://github.com/grigb/um-typescript`

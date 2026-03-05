@@ -226,3 +226,33 @@ Delivered:
 - full demo application with server and library ([`examples/demo-app/`](../examples/demo-app/))
 
 Status: Completed (WO-0044).
+
+## Phase 15 — Portable Identity Profile + Metaverse Go-Now Program Execution -- COMPLETE
+
+Goal: close both immediate execution tracks with adopter-ready guidance, synchronized evidence, and publication-ready docs/site updates without changing UM normative contract boundaries.
+
+Delivered:
+
+- Portable Identity Profile Go-Now completion (`PIP-GN-01` through `PIP-GN-06`):
+  - integration lane + site mirror,
+  - fixture and journey evidence packs,
+  - registry key-family expansion,
+  - implementation-path guide and site publication,
+  - governance synchronization updates.
+- Metaverse Universal Manifest Go-Now completion (`MUM-GN-01` through `MUM-GN-06`):
+  - integration hardening and scenario coverage,
+  - registry + fixtures + journey suite evidence,
+  - synchronization-profile guide and site publication,
+  - governance synchronization updates.
+
+Primary evidence:
+
+- `docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md`
+- `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md`
+- `docs/reports/2026-03-05-portable-identity-profile-comprehensive-human-review-report.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md`
+- `docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
+- `docs/reports/2026-03-05-gn06-journeys-run.txt`
+- `docs/reports/2026-03-05-gn06-site-build-clean.txt`
+
+Status: Completed (WO-0125, WO-0126). Next path is Research-First execution (`PIP-RS-*`, `MUM-RS-*`) under existing promotion gates.

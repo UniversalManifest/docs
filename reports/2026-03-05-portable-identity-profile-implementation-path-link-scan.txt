@@ -1,0 +1,22 @@
+Portable Identity Profile implementation-path link scan
+Date: 2026-03-05
+Repository: /Users/grig/work/repo/universalmanifest
+
+Matches:
+integrations/portable-identity-profile-xr.md:128:- `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/DECISIONS.md:11:  - `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+site/astro.config.mjs:79:            { label: 'Portable Identity Profile XR Path', link: '/guides/portable-identity-profile-xr-implementation-path/' },
+site/src/content/docs/guides/mum-synchronization-profile.md:77:- [Portable Identity Profile XR Implementation Path](/guides/portable-identity-profile-xr-implementation-path/)
+site/src/content/docs/guides/implementation-guide.md:230:- [Portable Identity Profile XR Implementation Path](/guides/portable-identity-profile-xr-implementation-path/)
+site/src/content/docs/guides/quick-reference.md:54:- [Portable Identity Profile XR Implementation Path](/guides/portable-identity-profile-xr-implementation-path/)
+site/src/content/docs/integrations/portable-identity-profile-xr.md:87:- [Portable Identity Profile XR implementation path](/guides/portable-identity-profile-xr-implementation-path/)
+docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md:33:  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md:218:  - `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md:14:- `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md:15:- Site mirror: `site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
+docs/guides/IMPLEMENTATION-GUIDE.md:419:- Portable Identity Profile XR path: `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/guides/QUICK-REFERENCE.md:61:- Portable Identity Profile XR path: `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/reports/2026-03-05-portable-identity-profile-comprehensive-human-review-report.md:226:- `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/reports/2026-03-05-portable-identity-profile-comprehensive-human-review-report.md:227:- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
+docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md:112:  - `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md:113:  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`

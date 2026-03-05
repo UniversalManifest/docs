@@ -1,6 +1,6 @@
 # WO-0126 — Metaverse Universal Manifest Go-Now Execution and Integration Pages
 
-**Status:** IN_PROGRESS  
+**Status:** COMPLETED  
 **Created:** 2026-03-05  
 **Updated:** 2026-03-05  
 **Priority:** P0  
@@ -44,10 +44,10 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] MUM integration pages reflect all core scenario families in implementation-safe language.
-- [ ] All six Go-Now workstreams have tracked execution progress.
-- [ ] Evidence links are added for every completed workstream.
-- [ ] Comprehensive human-review report reflects current status.
+- [x] MUM integration pages reflect all core scenario families in implementation-safe language.
+- [x] All six Go-Now workstreams have tracked execution progress.
+- [x] Evidence links are added for every completed workstream.
+- [x] Comprehensive human-review report reflects current status.
 
 ## Dependencies
 
@@ -106,7 +106,21 @@ Completed in this pass:
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
+- Completed `MUM-GN-05` synchronization profile guidance + publication:
+  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+- Completed `MUM-GN-06` governance/status synchronization:
+  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
+- Captured GN-06 validation artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-journeys-run.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
 
-Next active step:
+Closeout:
 
-- Start `MUM-GN-05` synchronization-profile guidance while keeping this WO status synchronized.
+- Go-Now track `MUM-GN-01` through `MUM-GN-06` completed with synchronized docs, evidence, and site publication readiness.

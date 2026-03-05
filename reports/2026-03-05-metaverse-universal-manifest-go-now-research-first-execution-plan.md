@@ -18,10 +18,10 @@ Outcomes required:
 
 ## 1.1) Execution status snapshot (2026-03-05)
 
-- `MUM-GN-01`: `IN_PROGRESS`
+- `MUM-GN-01`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-- `MUM-GN-02`: `IN_PROGRESS`
+- `MUM-GN-02`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
 - `MUM-GN-03`: `DONE`
@@ -30,7 +30,12 @@ Outcomes required:
 - `MUM-GN-04`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
-- `MUM-GN-05` to `MUM-GN-06`: `NOT_STARTED`
+- `MUM-GN-05`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+- `MUM-GN-06`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
 
 ## 2) Program constraints and operating rules
 

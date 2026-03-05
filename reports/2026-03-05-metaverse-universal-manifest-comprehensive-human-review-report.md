@@ -57,7 +57,7 @@ Last program status refresh: 2026-03-05
 
 ## MUM-GN-01 — MUM Integration Lane Hardening
 
-Current status: `IN_PROGRESS`
+Current status: `DONE`
 Updated on: 2026-03-05
 Owner: Documentation + Spec Integration
 
@@ -84,15 +84,16 @@ Evidence to attach when complete:
 - updated site doc path,
 - build/link verification artifact path.
 
-In-progress evidence:
+Completion evidence:
 
 - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
 - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
 
 ## MUM-GN-02 — MUM Registry Pack
 
-Current status: `IN_PROGRESS`
+Current status: `DONE`
 Updated on: 2026-03-05
 Owner: Documentation + Spec Integration
 
@@ -115,10 +116,11 @@ Evidence to attach when complete:
 - registry update path,
 - consistency check output path.
 
-In-progress evidence:
+Completion evidence:
 
 - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
 - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
 
 ## MUM-GN-03 — MUM Fixture Pack Expansion
 
@@ -199,7 +201,9 @@ Completion evidence:
 
 ## MUM-GN-05 — Synchronization Profile (Guidance-First)
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -221,9 +225,18 @@ Evidence to attach when complete:
 - site mirror path,
 - cross-link verification path.
 
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
+
 ## MUM-GN-06 — Governance and Publication Synchronization
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -242,6 +255,13 @@ Evidence to attach when complete:
 
 - updated governance doc paths,
 - summary change note path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
 
 ## 6) Track B — Research-First workstreams
 
@@ -415,4 +435,4 @@ What to watch most closely:
 
 ## 9) Immediate next operational move
 
-Start `MUM-GN-01`, `MUM-GN-02`, `MUM-GN-03`, and `MUM-GN-06` first, while launching `MUM-RS-01` and `MUM-RS-02` research briefs in parallel.
+Track A (`MUM-GN-01` through `MUM-GN-06`) is complete. Launch `MUM-RS-01` and `MUM-RS-02` research briefs as the next execution wave.

@@ -1,6 +1,6 @@
 # WO-0125 — Portable Identity Profile Go-Now Execution and Integration Pages
 
-**Status:** IN_PROGRESS  
+**Status:** COMPLETED  
 **Created:** 2026-03-05  
 **Updated:** 2026-03-05  
 **Priority:** P0  
@@ -44,10 +44,10 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Portable Identity Profile integration pages are published in repo docs and site docs.
-- [ ] All six Go-Now workstreams have tracked execution progress.
-- [ ] Evidence links are added for every completed workstream.
-- [ ] Comprehensive human-review report reflects current status.
+- [x] Portable Identity Profile integration pages are published in repo docs and site docs.
+- [x] All six Go-Now workstreams have tracked execution progress.
+- [x] Evidence links are added for every completed workstream.
+- [x] Comprehensive human-review report reflects current status.
 
 ## Dependencies
 
@@ -108,7 +108,21 @@ Completed in this pass:
 - Captured GN-04 command artifacts:
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
+- Completed `PIP-GN-05` implementation-guide addendum + publication:
+  - `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
+- Completed `PIP-GN-06` governance/status synchronization:
+  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
+- Captured GN-06 validation artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-journeys-run.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-link-scan.txt`
 
-Next active step:
+Closeout:
 
-- Start `PIP-GN-05` implementation-guide addendum while keeping this WO status synchronized.
+- Go-Now track `PIP-GN-01` through `PIP-GN-06` completed with synchronized docs, evidence, and site publication readiness.
