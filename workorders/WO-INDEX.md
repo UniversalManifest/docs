@@ -184,3 +184,7 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md` — [COMPLETED] Portable Identity Profile Go-Now stream (`PIP-GN-01` through `PIP-GN-06`) executed with integration pages, implementation-path guidance, and governance synchronization evidence (P0)
 - `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md` — [COMPLETED] Metaverse Universal Manifest Go-Now stream (`MUM-GN-01` through `MUM-GN-06`) executed with integration hardening, synchronization-profile guidance, and governance synchronization evidence (P0)
+
+### Privacy Signal Standards Review Wave (WO-0127)
+
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [IN_PROGRESS] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
