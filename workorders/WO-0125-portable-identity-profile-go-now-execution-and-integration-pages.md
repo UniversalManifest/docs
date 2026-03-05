@@ -73,7 +73,23 @@ Completed in this pass:
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
 - Validated docs build with new integration route:
   - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- Added `PIP-GN-02` fixture pack files:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld`
+- Updated fixture signing helper key material alignment for v0.2 fixture set:
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/sign-fixture.mjs`
+- Added fixture-to-requirement mapping note:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
+- Captured validator evidence artifact:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
+- Re-validated package fixtures and site publication after fixture/signing updates:
+  - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+  - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
 
 Next active step:
 
-- Start `PIP-GN-02` fixture-pack execution while keeping this WO status synchronized.
+- Start `PIP-GN-03` journey execution while keeping this WO status synchronized.

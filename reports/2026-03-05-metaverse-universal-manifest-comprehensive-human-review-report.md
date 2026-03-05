@@ -92,7 +92,9 @@ In-progress evidence:
 
 ## MUM-GN-02 — MUM Registry Pack
 
-Current status: `NOT_STARTED`
+Current status: `IN_PROGRESS`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -112,6 +114,11 @@ Evidence to attach when complete:
 
 - registry update path,
 - consistency check output path.
+
+In-progress evidence:
+
+- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
 
 ## MUM-GN-03 — MUM Fixture Pack Expansion
 

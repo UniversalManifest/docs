@@ -73,7 +73,14 @@ Completed in this pass:
   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
 - Validated docs build with hardened metaverse lane:
   - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- Started `MUM-GN-02` with registry pack additions for namespaced metaverse key families:
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- Added consistency-scan evidence artifact for registry/doc/fixture key reuse:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
+- Re-validated package fixtures and site publication after registry/signing helper updates:
+  - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+  - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
 
 Next active step:
 
-- Start `MUM-GN-02` registry-pack execution while keeping this WO status synchronized.
+- Start `MUM-GN-03` fixture-pack execution while keeping this WO status synchronized.

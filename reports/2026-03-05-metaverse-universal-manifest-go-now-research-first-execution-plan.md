@@ -16,6 +16,16 @@ Outcomes required:
 - produce adopter-ready documentation and executable evidence,
 - keep normative boundaries explicit while hardening integration quality.
 
+## 1.1) Execution status snapshot (2026-03-05)
+
+- `MUM-GN-01`: `IN_PROGRESS`
+  - evidence: `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+- `MUM-GN-02`: `IN_PROGRESS`
+  - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
+- `MUM-GN-03` to `MUM-GN-06`: `NOT_STARTED`
+
 ## 2) Program constraints and operating rules
 
 1. UM core remains method-agnostic and language-neutral.

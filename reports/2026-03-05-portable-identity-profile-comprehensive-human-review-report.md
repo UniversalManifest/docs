@@ -90,7 +90,9 @@ In-progress evidence:
 
 ## PIP-GN-02 — Fixture Pack Expansion
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -111,6 +113,19 @@ Evidence to attach when complete:
 - fixture file paths,
 - test run artifact path (`npm test`),
 - fixture-to-requirement mapping note.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
+- supporting signing-helper alignment for v0.2 fixture key material:
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/sign-fixture.mjs`
 
 ## PIP-GN-03 — Journey Expansion
 

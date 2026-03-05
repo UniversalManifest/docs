@@ -15,6 +15,16 @@ This plan converts the Portable Identity Profile gap analysis into an execution 
 
 This is not a concept note. It is a work-execution blueprint.
 
+## 1.1) Execution status snapshot (2026-03-05)
+
+- `PIP-GN-01`: `IN_PROGRESS`
+  - evidence: `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
+- `PIP-GN-02`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
+- `PIP-GN-03` to `PIP-GN-06`: `NOT_STARTED`
+
 ## 2) Planning constraints and operating rules
 
 1. Universal Manifest remains spec-first and language-neutral.
