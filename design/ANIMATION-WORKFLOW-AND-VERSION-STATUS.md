@@ -82,7 +82,33 @@ Removed scripts:
 Removed artifact lane:
 - `/Users/grig/work/repo/universalmanifest/site/public/animations/repro/`
 
-## 6) Relationship to Production Workflow Docs
+## 6) `um-core-flow-pilot.svg` Generation Map
+
+Target file:
+- `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
+
+Provenance (git):
+- First introduced: `52c1377` (2026-02-22)
+- Replaced in infographic/style wave: `1b4a49f` (2026-02-25)
+- Refreshed to current dark-theme version: `a631e41` (2026-02-27)
+
+Source path for regeneration:
+- System prompt:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
+- Scenario prompt:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
+- Optional adaptation:
+  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
+
+Important:
+- This file has no exact hash match in infographics-kit deterministic outputs.
+- Canonical stage labels for this file are `Resolve -> Validate -> Consume`.
+- Save regenerated output directly to the canonical path above (overwrite is expected for canonical maintenance).
+
+Post-generation gate:
+- `cd /Users/grig/work/repo/universalmanifest/site && npm run animation:verify:canonical`
+
+## 7) Relationship to Production Workflow Docs
 
 Primary generation workflow:
 - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-WORKFLOW.md`
