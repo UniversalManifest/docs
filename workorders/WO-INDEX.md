@@ -187,4 +187,4 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Privacy Signal Standards Review Wave (WO-0127)
 
-- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [IN_PROGRESS] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [COMPLETED] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
