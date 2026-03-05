@@ -122,7 +122,9 @@ In-progress evidence:
 
 ## MUM-GN-03 — MUM Fixture Pack Expansion
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -143,6 +145,17 @@ Evidence to attach when complete:
 - fixture list paths,
 - test output artifact path,
 - fixture-to-scenario mapping path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld`
+- `/Users/grig/work/repo/universalmanifest/examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
 
 ## MUM-GN-04 — Journey Suite Expansion
 

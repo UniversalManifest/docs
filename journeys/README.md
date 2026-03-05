@@ -5,7 +5,7 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable row in the journey report (`J01` through `J11`)
+- a corresponding executable row in the journey report (`J01` through `J14`)
 
 Run the proof suite:
 
@@ -15,9 +15,9 @@ Run the proof suite:
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
-- The report includes explicit rows for every documented journey ID (`J01` through `J11`).
+- The report includes explicit rows for every documented journey ID (`J01` through `J14`).
 
-## Executable mapping (J01-J11)
+## Executable mapping (J01-J14)
 
 - `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
@@ -30,6 +30,9 @@ Outputs:
 - `J09` Metaverse cross-world projection -> `journeyMetaverseCrossworldProjection`
 - `J10` Multi-provider personhood coexistence -> `journeyMultiProviderPersonhood`
 - `J11` OMATrust attestation interoperability -> `journeyOmaTrustInteroperability`
+- `J12` Portable Identity Profile XR projection and consent behavior -> `journeyPortableIdentityProfileProjection`
+- `J13` Portable Identity Profile pairwise subject privacy -> `journeyPortableIdentityPairwisePrivacy`
+- `J14` Portable Identity Profile revocation-aware policy checks -> `journeyPortableIdentityRevocationAwarePolicy`
 
 Execution source:
 
@@ -48,6 +51,9 @@ Execution source:
 9. `journey-09-metaverse-crossworld-projection.md`
 10. `J10-multi-provider-personhood-coexistence.md`
 11. `J11-omatrust-attestation-interoperability.md`
+12. `J12-portable-identity-profile-projection-and-consent.md`
+13. `J13-portable-identity-profile-pairwise-privacy.md`
+14. `J14-portable-identity-profile-revocation-aware-policy.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 

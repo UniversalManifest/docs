@@ -89,7 +89,19 @@ Completed in this pass:
 - Re-validated package fixtures and site publication after fixture/signing updates:
   - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
   - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- Completed `PIP-GN-03` journey expansion:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J12-portable-identity-profile-projection-and-consent.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J13-portable-identity-profile-pairwise-privacy.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J14-portable-identity-profile-revocation-aware-policy.md`
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- Added journey-to-requirement mapping evidence note:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
+- Captured GN-03 command artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
 
 Next active step:
 
-- Start `PIP-GN-03` journey execution while keeping this WO status synchronized.
+- Start `PIP-GN-04` registry expansion while keeping this WO status synchronized.

@@ -80,7 +80,19 @@ Completed in this pass:
 - Re-validated package fixtures and site publication after registry/signing helper updates:
   - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
   - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- Completed `MUM-GN-03` fixture pack expansion:
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld`
+  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld`
+- Added fixture-to-scenario mapping evidence note:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
+- Captured GN-03 command artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
 
 Next active step:
 
-- Start `MUM-GN-03` fixture-pack execution while keeping this WO status synchronized.
+- Start `MUM-GN-04` journey-suite expansion while keeping this WO status synchronized.

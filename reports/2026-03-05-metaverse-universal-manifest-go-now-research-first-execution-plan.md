@@ -24,7 +24,10 @@ Outcomes required:
 - `MUM-GN-02`: `IN_PROGRESS`
   - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
-- `MUM-GN-03` to `MUM-GN-06`: `NOT_STARTED`
+- `MUM-GN-03`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+- `MUM-GN-04` to `MUM-GN-06`: `NOT_STARTED`
 
 ## 2) Program constraints and operating rules
 

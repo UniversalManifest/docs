@@ -129,7 +129,9 @@ Completion evidence:
 
 ## PIP-GN-03 — Journey Expansion
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -150,6 +152,17 @@ Evidence to attach when complete:
 - journey file paths,
 - updated runner path,
 - journey report artifact path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J12-portable-identity-profile-projection-and-consent.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J13-portable-identity-profile-pairwise-privacy.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J14-portable-identity-profile-revocation-aware-policy.md`
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
 
 ## PIP-GN-04 — Registry Expansion
 
