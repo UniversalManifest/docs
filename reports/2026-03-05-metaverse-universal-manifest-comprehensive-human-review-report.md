@@ -159,7 +159,9 @@ Completion evidence:
 
 ## MUM-GN-04 — Journey Suite Expansion
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -180,6 +182,20 @@ Evidence to attach when complete:
 - journey file paths,
 - runner update path,
 - journey report artifact path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J15-mum-onboarding-projection-flow.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J16-mum-consent-propagation-flow.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J17-mum-compliance-transaction-flow.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J18-mum-social-reputation-portability-flow.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J19-mum-preferences-bundle-projection-flow.md`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/J20-mum-freshness-and-change-log-flow.md`
+- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
+- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
 
 ## MUM-GN-05 — Synchronization Profile (Guidance-First)
 

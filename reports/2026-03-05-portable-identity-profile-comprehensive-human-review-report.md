@@ -166,7 +166,9 @@ Completion evidence:
 
 ## PIP-GN-04 — Registry Expansion
 
-Current status: `NOT_STARTED`
+Current status: `DONE`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -186,6 +188,12 @@ Evidence to attach when complete:
 
 - registry diff path,
 - consistency scan output path.
+
+Completion evidence:
+
+- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
 
 ## PIP-GN-05 — Implementation Guide Addendum
 

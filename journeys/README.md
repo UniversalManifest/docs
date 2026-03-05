@@ -5,7 +5,7 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable row in the journey report (`J01` through `J14`)
+- a corresponding executable row in the journey report (`J01` through `J20`)
 
 Run the proof suite:
 
@@ -15,9 +15,9 @@ Run the proof suite:
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
-- The report includes explicit rows for every documented journey ID (`J01` through `J14`).
+- The report includes explicit rows for every documented journey ID (`J01` through `J20`).
 
-## Executable mapping (J01-J14)
+## Executable mapping (J01-J20)
 
 - `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
@@ -33,6 +33,12 @@ Outputs:
 - `J12` Portable Identity Profile XR projection and consent behavior -> `journeyPortableIdentityProfileProjection`
 - `J13` Portable Identity Profile pairwise subject privacy -> `journeyPortableIdentityPairwisePrivacy`
 - `J14` Portable Identity Profile revocation-aware policy checks -> `journeyPortableIdentityRevocationAwarePolicy`
+- `J15` MUM onboarding projection flow -> `journeyMumOnboardingProjection`
+- `J16` MUM consent propagation flow -> `journeyMumConsentPropagation`
+- `J17` MUM compliance transaction flow -> `journeyMumComplianceTransaction`
+- `J18` MUM social and reputation portability flow -> `journeyMumSocialReputationPortability`
+- `J19` MUM preferences bundle projection flow -> `journeyMumPreferencesBundle`
+- `J20` MUM freshness and change-log flow -> `journeyMumFreshnessChangeLog`
 
 Execution source:
 
@@ -54,6 +60,12 @@ Execution source:
 12. `J12-portable-identity-profile-projection-and-consent.md`
 13. `J13-portable-identity-profile-pairwise-privacy.md`
 14. `J14-portable-identity-profile-revocation-aware-policy.md`
+15. `J15-mum-onboarding-projection-flow.md`
+16. `J16-mum-consent-propagation-flow.md`
+17. `J17-mum-compliance-transaction-flow.md`
+18. `J18-mum-social-reputation-portability-flow.md`
+19. `J19-mum-preferences-bundle-projection-flow.md`
+20. `J20-mum-freshness-and-change-log-flow.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 

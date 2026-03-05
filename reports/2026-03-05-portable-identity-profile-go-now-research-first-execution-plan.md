@@ -26,7 +26,10 @@ This is not a concept note. It is a work-execution blueprint.
 - `PIP-GN-03`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
-- `PIP-GN-04` to `PIP-GN-06`: `NOT_STARTED`
+- `PIP-GN-04`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
+- `PIP-GN-05` to `PIP-GN-06`: `NOT_STARTED`
 
 ## 2) Planning constraints and operating rules
 

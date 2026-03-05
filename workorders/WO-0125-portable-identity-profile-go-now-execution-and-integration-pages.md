@@ -101,7 +101,14 @@ Completed in this pass:
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
+- Completed `PIP-GN-04` registry expansion:
+  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- Added Portable Identity key consistency evidence artifact:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
+- Captured GN-04 command artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
 
 Next active step:
 
-- Start `PIP-GN-04` registry expansion while keeping this WO status synchronized.
+- Start `PIP-GN-05` implementation-guide addendum while keeping this WO status synchronized.

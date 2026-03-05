@@ -92,7 +92,21 @@ Completed in this pass:
 - Captured GN-03 command artifacts:
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
+- Completed `MUM-GN-04` journey-suite expansion:
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J15-mum-onboarding-projection-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J16-mum-consent-propagation-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J17-mum-compliance-transaction-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J18-mum-social-reputation-portability-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J19-mum-preferences-bundle-projection-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J20-mum-freshness-and-change-log-flow.md`
+  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- Added journey-to-scenario mapping evidence note:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
+- Captured GN-04 command artifacts:
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
+  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
 
 Next active step:
 
-- Start `MUM-GN-04` journey-suite expansion while keeping this WO status synchronized.
+- Start `MUM-GN-05` synchronization-profile guidance while keeping this WO status synchronized.

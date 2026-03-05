@@ -1,0 +1,75 @@
+Portable Identity Profile Registry Consistency Scan
+Date: 2026-03-05
+Repository: /Users/grig/work/repo/universalmanifest
+
+Pattern:
+portableIdentity\.profile|portableIdentity\.avatar|portableIdentity\.wearables|portableIdentity\.translationProfile|portableIdentity\.proofBundle|portableIdentity\.verification\.status|portableIdentity\.policy\.tier|portableIdentity\.profilePublic|portableIdentity\.voiceCapture|portableIdentity\.translationEnabled|portableIdentity\.analyticsShare|portableIdentity\.recording\.faceVisible|portableIdentity\.profile\.|portableIdentity\.avatar\.|portableIdentity\.capability\.|portableIdentity\.deviceState\.|portableIdentity\.policy\.
+
+Matched files:
+- spec/v0.1/REGISTRY.md
+- integrations/portable-identity-profile-xr.md
+- site/src/content/docs/integrations/portable-identity-profile-xr.md
+- examples/v0.1/stubs/portable-identity-profile-xr-*.jsonld
+- examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld
+
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:12:      "name": "portableIdentity.profilePublic",
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:17:      "name": "portableIdentity.voiceCapture",
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:22:      "name": "portableIdentity.translationEnabled",
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:27:      "name": "portableIdentity.analyticsShare",
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:32:      "name": "portableIdentity.recording.faceVisible",
+examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld:39:      "name": "portableIdentity.policy.tier",
+examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld:11:      "name": "portableIdentity.avatar",
+examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld:15:      "name": "portableIdentity.wearables",
+examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld:19:      "name": "portableIdentity.translationProfile",
+examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld:12:      "name": "portableIdentity.verification.status",
+examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld:19:      "name": "portableIdentity.profilePublic",
+examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld:25:      "name": "portableIdentity.profile",
+integrations/portable-identity-profile-xr.md:36:- `portableIdentity.profile`
+integrations/portable-identity-profile-xr.md:37:- `portableIdentity.avatar`
+integrations/portable-identity-profile-xr.md:38:- `portableIdentity.wearables`
+integrations/portable-identity-profile-xr.md:39:- `portableIdentity.translationProfile`
+integrations/portable-identity-profile-xr.md:40:- `portableIdentity.proofBundle`
+integrations/portable-identity-profile-xr.md:44:- `portableIdentity.profilePublic`
+integrations/portable-identity-profile-xr.md:45:- `portableIdentity.voiceCapture`
+integrations/portable-identity-profile-xr.md:46:- `portableIdentity.translationEnabled`
+integrations/portable-identity-profile-xr.md:47:- `portableIdentity.analyticsShare`
+integrations/portable-identity-profile-xr.md:48:- `portableIdentity.recording.faceVisible`
+integrations/portable-identity-profile-xr.md:52:- `portableIdentity.verification.status`
+integrations/portable-identity-profile-xr.md:54:- `portableIdentity.policy.tier`
+integrations/portable-identity-profile-xr.md:104:    { "name": "portableIdentity.avatar", "url": "https://assets.example/avatar/123" }
+integrations/portable-identity-profile-xr.md:107:    { "@type": "um:Consent", "name": "portableIdentity.voiceCapture", "value": "denied" }
+integrations/portable-identity-profile-xr.md:110:    { "@type": "um:Claim", "name": "portableIdentity.verification.status", "value": "verified" }
+examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld:12:      "name": "portableIdentity.verification.status",
+examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld:18:      "name": "portableIdentity.profile",
+examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld:12:      "name": "portableIdentity.verification.status",
+examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld:19:      "name": "portableIdentity.profilePublic",
+examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld:25:      "name": "portableIdentity.proofBundle",
+examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld:12:      "name": "portableIdentity.verification.status",
+examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld:18:      "name": "portableIdentity.profile",
+site/src/content/docs/integrations/portable-identity-profile-xr.md:35:- `portableIdentity.profile`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:36:- `portableIdentity.avatar`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:37:- `portableIdentity.wearables`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:38:- `portableIdentity.translationProfile`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:39:- `portableIdentity.proofBundle`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:43:- `portableIdentity.profilePublic`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:44:- `portableIdentity.voiceCapture`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:45:- `portableIdentity.translationEnabled`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:46:- `portableIdentity.analyticsShare`
+site/src/content/docs/integrations/portable-identity-profile-xr.md:47:- `portableIdentity.recording.faceVisible`
+spec/v0.1/REGISTRY.md:62:- `portableIdentity.profile` — canonical portable profile reference
+spec/v0.1/REGISTRY.md:63:- `portableIdentity.avatar` — avatar asset reference for XR projection
+spec/v0.1/REGISTRY.md:64:- `portableIdentity.wearables` — wearable/inventory reference bundle
+spec/v0.1/REGISTRY.md:65:- `portableIdentity.translationProfile` — avatar translation profile reference
+spec/v0.1/REGISTRY.md:66:- `portableIdentity.proofBundle` — trust/compliance proof bundle reference
+spec/v0.1/REGISTRY.md:83:- `portableIdentity.verification.status` — portable verification status claim
+spec/v0.1/REGISTRY.md:85:- `portableIdentity.policy.tier` — policy/risk tier classification
+spec/v0.1/REGISTRY.md:112:- `portableIdentity.profilePublic` — permission to disclose portable public-profile projection
+spec/v0.1/REGISTRY.md:113:- `portableIdentity.voiceCapture` — permission to enable voice capture in XR sessions
+spec/v0.1/REGISTRY.md:114:- `portableIdentity.translationEnabled` — permission to enable translation overlays
+spec/v0.1/REGISTRY.md:115:- `portableIdentity.analyticsShare` — permission to share portable analytics signals
+spec/v0.1/REGISTRY.md:116:- `portableIdentity.recording.faceVisible` — permission to allow face visibility in recording
+spec/v0.1/REGISTRY.md:141:- `portableIdentity.profile.*` — portable profile projection metadata
+spec/v0.1/REGISTRY.md:142:- `portableIdentity.avatar.*` — avatar projection and adaptation metadata
+spec/v0.1/REGISTRY.md:143:- `portableIdentity.capability.*` — device/runtime capability projection metadata
+spec/v0.1/REGISTRY.md:144:- `portableIdentity.deviceState.*` — runtime state and posture metadata
+spec/v0.1/REGISTRY.md:145:- `portableIdentity.policy.*` — policy and enforcement metadata

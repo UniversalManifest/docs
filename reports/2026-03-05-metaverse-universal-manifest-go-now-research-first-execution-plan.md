@@ -27,7 +27,10 @@ Outcomes required:
 - `MUM-GN-03`: `DONE`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
   - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
-- `MUM-GN-04` to `MUM-GN-06`: `NOT_STARTED`
+- `MUM-GN-04`: `DONE`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
+  - evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
+- `MUM-GN-05` to `MUM-GN-06`: `NOT_STARTED`
 
 ## 2) Program constraints and operating rules
 

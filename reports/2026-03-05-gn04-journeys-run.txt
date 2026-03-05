@@ -1,0 +1,7 @@
+
+> universal-manifest@0.1.0 journeys
+> node scripts/run-journeys.mjs
+
+Preflight: 1 pass, 0 fail
+Journeys: 20 pass, 0 fail
+Report: /Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json
