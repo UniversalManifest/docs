@@ -1,0 +1,70 @@
+MUM Registry Pack Consistency Scan
+Date: 2026-03-05
+Repository: /Users/grig/work/repo/universalmanifest
+
+Pattern:
+metaverse\.profile|metaverse\.avatar|metaverse\.inventory|metaverse\.socialGraph|metaverse\.reputation|metaverse\.complianceProof|metaverse\.transaction\.complianceShare|metaverse\.inventoryShare|metaverse\.reputationShare|prefs\.language|prefs\.financial|prefs\.logistics|prefs\.security|prefs\.credentials
+
+Matched files:
+- spec/v0.1/REGISTRY.md
+- integrations/metaverse.md
+- site/src/content/docs/integrations/metaverse.md
+- examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld
+
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:19:      "name": "metaverse.profilePublic",
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:24:      "name": "metaverse.socialGraphShare",
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:35:      "name": "metaverse.profile",
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:39:      "name": "metaverse.avatar",
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:43:      "name": "metaverse.inventory",
+examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld:47:      "name": "metaverse.socialGraph",
+spec/v0.1/REGISTRY.md:51:- `metaverse.profile` — projected cross-world profile reference
+spec/v0.1/REGISTRY.md:52:- `metaverse.avatar` — canonical avatar asset or descriptor reference
+spec/v0.1/REGISTRY.md:53:- `metaverse.avatar.translationProfile` — avatar translation framework metadata profile
+spec/v0.1/REGISTRY.md:54:- `metaverse.inventory` — inventory/wearables reference bundle
+spec/v0.1/REGISTRY.md:55:- `metaverse.socialGraph` — social graph reference bundle
+spec/v0.1/REGISTRY.md:56:- `metaverse.reputation` — reputation and trust reference bundle
+spec/v0.1/REGISTRY.md:57:- `metaverse.complianceProof` — compliance evidence reference bundle
+spec/v0.1/REGISTRY.md:68:- `metaverse.reputation.level` — normalized reputation level or class
+spec/v0.1/REGISTRY.md:69:- `metaverse.reputation.score` — machine-readable reputation score
+spec/v0.1/REGISTRY.md:88:- `metaverse.profilePublic` — permission to project public profile views into metaverse consumers
+spec/v0.1/REGISTRY.md:89:- `metaverse.socialGraphShare` — permission to expose social-graph references to metaverse consumers
+spec/v0.1/REGISTRY.md:92:- `metaverse.inventoryShare` — permission to disclose inventory/wearables references
+spec/v0.1/REGISTRY.md:93:- `metaverse.reputationShare` — permission to disclose reputation references/claims
+spec/v0.1/REGISTRY.md:94:- `metaverse.transaction.complianceShare` — permission to disclose compliance proof references
+spec/v0.1/REGISTRY.md:106:- `prefs.language.*` — language and translation preferences
+spec/v0.1/REGISTRY.md:107:- `prefs.financial.*` — payment and settlement preferences
+spec/v0.1/REGISTRY.md:108:- `prefs.logistics.*` — delivery/fulfillment and location-routing preferences
+spec/v0.1/REGISTRY.md:109:- `prefs.security.*` — security posture and policy preferences
+spec/v0.1/REGISTRY.md:110:- `prefs.credentials.*` — credential usage and presentation preferences
+spec/v0.1/REGISTRY.md:114:- `metaverse.profile.*` — projected profile attributes and projection metadata
+spec/v0.1/REGISTRY.md:115:- `metaverse.avatar.*` — avatar projection and rendering metadata
+spec/v0.1/REGISTRY.md:116:- `metaverse.inventory.*` — inventory/wearables projection metadata
+spec/v0.1/REGISTRY.md:118:- `metaverse.reputation.*` — reputation portability metadata
+site/src/content/docs/integrations/metaverse.md:27:- `metaverse.profile`
+site/src/content/docs/integrations/metaverse.md:28:- `metaverse.avatar`
+site/src/content/docs/integrations/metaverse.md:29:- `metaverse.inventory`
+site/src/content/docs/integrations/metaverse.md:30:- `metaverse.socialGraph`
+site/src/content/docs/integrations/metaverse.md:31:- `metaverse.reputation`
+site/src/content/docs/integrations/metaverse.md:32:- `metaverse.complianceProof`
+site/src/content/docs/integrations/metaverse.md:36:- `metaverse.profilePublic`
+site/src/content/docs/integrations/metaverse.md:37:- `metaverse.socialGraphShare`
+site/src/content/docs/integrations/metaverse.md:40:- `metaverse.transaction.complianceShare`
+site/src/content/docs/integrations/metaverse.md:44:- `prefs.language.*`
+site/src/content/docs/integrations/metaverse.md:45:- `prefs.financial.*`
+site/src/content/docs/integrations/metaverse.md:46:- `prefs.logistics.*`
+site/src/content/docs/integrations/metaverse.md:47:- `prefs.security.*`
+site/src/content/docs/integrations/metaverse.md:48:- `prefs.credentials.*`
+integrations/metaverse.md:30:- `metaverse.profile`
+integrations/metaverse.md:31:- `metaverse.avatar`
+integrations/metaverse.md:32:- `metaverse.inventory`
+integrations/metaverse.md:33:- `metaverse.socialGraph`
+integrations/metaverse.md:34:- `metaverse.reputation`
+integrations/metaverse.md:35:- `metaverse.complianceProof`
+integrations/metaverse.md:39:- `metaverse.profilePublic`
+integrations/metaverse.md:40:- `metaverse.socialGraphShare`
+integrations/metaverse.md:43:- `metaverse.transaction.complianceShare`
+integrations/metaverse.md:47:- `prefs.language.*`
+integrations/metaverse.md:48:- `prefs.financial.*`
+integrations/metaverse.md:49:- `prefs.logistics.*`
+integrations/metaverse.md:50:- `prefs.security.*`
+integrations/metaverse.md:51:- `prefs.credentials.*`
