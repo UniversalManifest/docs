@@ -310,7 +310,7 @@ These ideas are noted for future development but do not yet have full pitches:
 - **TS-021**: Healthcare Consent Capsule -- patient consent traveling between hospitals
 - **TS-022**: Supply Chain Provenance -- a coffee bag's manifest tracing its origin
 - **TS-023**: AI Agent Authorization -- an AI agent presenting its capability manifest
-- **TS-024**: Chia DID/VC -- on-chain credential verification
+- **TS-024**: DID + VC -- on-chain credential verification
 - **TS-025**: OMATrust Attestation -- trust scoring and lifecycle management
 - **TS-026**: Proof of Personhood -- multi-provider verification coexisting in one manifest
 - **TS-027**: The Full Lifecycle -- creation, travel, verification, projection, expiration, reissuance

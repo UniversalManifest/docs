@@ -111,7 +111,7 @@ Must-have:
 - smart-glasses social-layer integration lane documentation with consent-first behavior
 - clear rule that normative contract changes still require versioned spec/conformance updates
 
-Status: All integration lanes documented with fixtures and proof journeys (WO-0018 through WO-0024, WO-0027). 13 integration lanes total including OMATrust, proof-of-personhood, Chia VC, education, healthcare, and smart home.
+Status: All integration lanes documented with fixtures and proof journeys (WO-0018 through WO-0024, WO-0027). 13 integration lanes total including OMATrust, proof-of-personhood, DID + VC, education, healthcare, and smart home.
 
 ## Phase 9 — Drift governance and closure-regression checks -- ACTIVE
 

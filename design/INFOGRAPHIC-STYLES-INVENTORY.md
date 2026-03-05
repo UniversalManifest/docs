@@ -369,13 +369,13 @@ Existing animations that need regeneration or are missing entirely.
 - **Existing Asset:** `site/public/animations/7.6-metaverse-integration.svg`
 - **Priority:** high
 
-### 7.7 Chia VC
+### 7.7 DID + VC
 
-- **ID:** `scenario-15-chia-vc-integration`
+- **ID:** `scenario-15-did-vc-integration`
 - **Style:** animated-svg
 - **Subject:** Blockchain-based verifiable credentials in UM manifests
 - **Status:** exists
-- **Existing Asset:** `site/public/animations/scenario-15-chia-vc-integration.svg`
+- **Existing Asset:** `site/public/animations/scenario-15-did-vc-integration.svg`
 - **Priority:** high
 
 ---

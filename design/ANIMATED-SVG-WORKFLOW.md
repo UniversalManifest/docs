@@ -747,5 +747,5 @@ These elements should be adapted:
 | `scenario-12-rp1-integration.svg` | Integration | RP1 spatial fabric binding |
 | `scenario-13-smart-glasses-integration.svg` | Integration | Smart glasses smart glasses social layer |
 | `scenario-14-metaverse-integration.svg` | Integration | Metaverse identity and lineage |
-| `scenario-15-chia-vc-integration.svg` | Integration | Chia DID/VC credential bridge |
+| `scenario-15-did-vc-integration.svg` | Integration | DID + VC credential bridge |
 | `universal-manifest-overview-template.svg` | Diagram | Complete system architecture (in `diagrams/`) |

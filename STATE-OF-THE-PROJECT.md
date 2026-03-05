@@ -32,7 +32,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - RP1 spatial-fabric lane: `integrations/rp1-spatial-fabric.md`
   - Smart-glasses social layer lane: `integrations/smart-glasses.md`
   - Proof-of-personhood multi-provider lane: `integrations/proof-of-personhood.md`
-  - Chia DID/VC credential lane: `integrations/chia-vc.md`
+  - DID + VC credential lane: `integrations/did-vc.md`
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
@@ -345,7 +345,7 @@ For formal gate-level completion criteria and evidence requirements, use:
 - ✅ Smart-glasses social-layer integration lane is documented.
 - ✅ Smart-glasses consent fixture + journey execution evidence is completed (`WO-0021`).
 - ✅ RP1 intake, fixture/journey materialization, and conflict reconciliation are completed (`WO-0020`).
-- ✅ Multi-provider proof-of-personhood (World ID, Gitcoin Passport, BrightID), social DID method coverage, and Chia DID/VC credential lane completed (`WO-0024` closed 2026-02-20).
+- ✅ Multi-provider proof-of-personhood (World ID, Gitcoin Passport, BrightID), social DID method coverage, and DID + VC credential lane completed (`WO-0024` closed 2026-02-20).
 - Next: maintain conformance/security hardening milestones and consider deeper adversarial fixture coverage.
 
 ## How other systems should adopt it today (v0.1)

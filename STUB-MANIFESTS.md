@@ -34,7 +34,7 @@ Integration-lane stubs:
 - `examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld`
 - `examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld`
 - `examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld`
-- `examples/v0.1/stubs/chia-credential-lane-manifest.jsonld`
+- `examples/v0.1/stubs/did-vc-credential-lane-manifest.jsonld`
 
 ## Vision drivers (by section)
 

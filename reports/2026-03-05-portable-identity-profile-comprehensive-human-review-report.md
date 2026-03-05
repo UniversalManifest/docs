@@ -58,7 +58,9 @@ Last program status refresh: 2026-03-05
 
 ## PIP-GN-01 — Portable Identity Profile XR Integration Lane
 
-Current status: `NOT_STARTED`
+Current status: `IN_PROGRESS`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -79,6 +81,12 @@ Evidence to attach when complete:
 - updated integration doc path,
 - updated site doc path,
 - build/link check output report path.
+
+In-progress evidence:
+
+- `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
 
 ## PIP-GN-02 — Fixture Pack Expansion
 

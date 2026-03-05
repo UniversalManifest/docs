@@ -55,7 +55,7 @@ The proposal must include a complete list of initial scenarios. These must cover
 - Manifest with shards and pointers
 - Signed manifest creation and verification (v0.2)
 - Resolver lookup (UMID to manifest)
-- Integration lanes: social profile, IoT device, metaverse identity, smart glasses consent, RP1 spatial fabric, OMATrust, Chia VC
+- Integration lanes: social profile, IoT device, metaverse identity, smart glasses consent, RP1 spatial fabric, OMATrust, DID + VC
 - Invalid manifest detection (missing fields, expired, tampered signature)
 - Unknown field tolerance (forward compatibility proof)
 - Cross-system projection (one manifest, multiple consumer views)

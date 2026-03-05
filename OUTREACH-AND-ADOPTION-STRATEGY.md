@@ -54,9 +54,9 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 
 **Pain point:** DIDs and VCs provide identity and credential primitives, but there is no standard portable document that composes them with consent, device state, and data pointers into a single handoff-ready envelope.
 
-**What UM gives them:** A manifest that uses their existing DID as the subject, carries their VCs as claims within shards, and adds consent, device registration, and pointer capabilities that DIDs and VCs alone do not provide. The OMATrust integration lane and the Chia DID/VC lane demonstrate concrete examples.
+**What UM gives them:** A manifest that uses their existing DID as the subject, carries their VCs as claims within shards, and adds consent, device registration, and pointer capabilities that DIDs and VCs alone do not provide. The OMATrust integration lane and the DID + VC lane demonstrate concrete examples.
 
-**Entry point:** The Chia VC integration lane ([`integrations/chia-vc.md`](../integrations/chia-vc.md)), the OMATrust integration lane ([`integrations/oma-trust.md`](../integrations/oma-trust.md)), and the proof-of-personhood integration lane ([`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md)).
+**Entry point:** The DID + VC integration lane ([`integrations/did-vc.md`](../integrations/did-vc.md)), the OMATrust integration lane ([`integrations/oma-trust.md`](../integrations/oma-trust.md)), and the proof-of-personhood integration lane ([`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md)).
 
 ### Profile 6: Spatial Computing / Smart Glasses Developer
 
@@ -93,7 +93,7 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 | World ID (Tools for Humanity) | Proof-of-personhood integration lane | Personhood |
 | Gitcoin Passport | Composite personhood score integration | Personhood |
 | BrightID | Social-graph personhood verification | Personhood |
-| Chia Network | `did:chia` DID method, on-chain VC integration | Chia DID/VC |
+| Chia Network | `did:chia` DID method, on-chain VC integration | DID + VC |
 
 ### Tier 2 — Ecosystem alignment targets
 

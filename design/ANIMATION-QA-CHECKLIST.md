@@ -77,7 +77,7 @@ Use this checklist for every generated animated SVG before merge/deploy.
 | `scenario-12-rp1-integration.svg` | Integration lane (upgraded) | PASS |
 | `scenario-13-smart-glasses-integration.svg` | Integration lane (upgraded) | PASS |
 | `scenario-14-metaverse-integration.svg` | Integration lane (upgraded) | PASS |
-| `scenario-15-chia-vc-integration.svg` | Integration lane (upgraded) | PASS |
+| `scenario-15-did-vc-integration.svg` | Integration lane (upgraded) | PASS |
 
 ## I) Review evidence
 

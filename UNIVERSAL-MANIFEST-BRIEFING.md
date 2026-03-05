@@ -329,7 +329,7 @@ Universal Manifest has active integration guidance for nine distinct lanes. Each
 
 **Key claims**: `omatrust.policy.trustMode`, `omatrust.proof.type`, `omatrust.attestation.endorsement`, `omatrust.attestation.securityAssessment.status`. **Key pointers**: `omatrust.reputation.attestation`, `omatrust.reputation.verify`, `omatrust.lifecycle.revocationLog`.
 
-### 6.6 Chia DID/VC (Decentralized Credential Verification)
+### 6.6 DID + VC (Decentralized Credential Verification)
 
 **Scenario**: A user anchors their identity to a Chia blockchain DID (`did:chia`) and carries on-chain Verifiable Credential attestations in their manifest. The manifest's `subject` is a `did:chia` identifier. Claims include VC proof hashes that can be verified against the Chia blockchain transaction history. Consumers that support Chia can verify attestation integrity on-chain; consumers that do not simply ignore the Chia-specific claims and use the rest of the manifest normally.
 
@@ -466,7 +466,7 @@ The repository includes a rich set of example manifests that demonstrate the sta
 - `mastodon-personhood-multi-credential-manifest.jsonld` -- Mastodon + multi-provider personhood
 - `bluesky-personhood-multi-credential-manifest.jsonld` -- Bluesky + multi-provider personhood
 - `multi-did-method-coverage-manifest.jsonld` -- multiple DID method support
-- `chia-credential-lane-manifest.jsonld` -- Chia blockchain DID/VC
+- `did-vc-credential-lane-manifest.jsonld` -- Chia blockchain DID/VC
 - `oma-trust-proof-based-service-manifest.jsonld` -- OMATrust proof-based attestation
 - `oma-trust-trusted-attester-service-manifest.jsonld` -- OMATrust trusted attester
 - `oma-trust-lifecycle-edge-service-manifest.jsonld` -- OMATrust lifecycle management

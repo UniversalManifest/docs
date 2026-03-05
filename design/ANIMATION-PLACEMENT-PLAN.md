@@ -54,7 +54,7 @@ All integration lane pages have embedded SVG explainers upgraded to production d
 | `integrations/rp1-spatial-fabric.md` | `scenario-12-rp1-integration.svg` | **integrated** |
 | `integrations/smart-glasses.md` | `scenario-13-smart-glasses-integration.svg` | **integrated** |
 | `integrations/metaverse.md` | `scenario-14-metaverse-integration.svg` | **integrated** |
-| `integrations/chia-vc.md` | `scenario-15-chia-vc-integration.svg` | **integrated** |
+| `integrations/did-vc.md` | `scenario-15-did-vc-integration.svg` | **integrated** |
 
 ## 7) Scenario animations (WO-0042)
 

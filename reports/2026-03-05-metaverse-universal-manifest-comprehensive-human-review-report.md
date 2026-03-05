@@ -57,7 +57,9 @@ Last program status refresh: 2026-03-05
 
 ## MUM-GN-01 — MUM Integration Lane Hardening
 
-Current status: `NOT_STARTED`
+Current status: `IN_PROGRESS`
+Updated on: 2026-03-05
+Owner: Documentation + Spec Integration
 
 Why this exists:
 
@@ -81,6 +83,12 @@ Evidence to attach when complete:
 - updated integration doc path,
 - updated site doc path,
 - build/link verification artifact path.
+
+In-progress evidence:
+
+- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
 
 ## MUM-GN-02 — MUM Registry Pack
 

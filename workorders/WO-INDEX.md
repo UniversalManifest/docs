@@ -179,3 +179,8 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0107-commit-interactive-sandbox-and-design-artifacts.md` — [COMPLETED] Commit all uncommitted sandbox code (V1+V2), design docs, and configuration changes (P0; no dependencies)
 - `docs/workorders/WO-0108-create-formal-wo-files-for-sandbox-v2.md` — [COMPLETED] Create formal WO files for WO-0069 through WO-0080 (Sandbox V2 redesign) and add to index (P1; depends on WO-0107)
 - `docs/workorders/WO-0109-add-ci-workflow-decision-record.md` — [COMPLETED] Add decision record for expanded CI workflow (ci.yml, WO-0049) to DECISIONS.md (P2; no dependencies)
+
+### Go-Now Program Execution Wave (WO-0125 through WO-0126)
+
+- `docs/workorders/WO-0125-portable-identity-profile-go-now-execution-and-integration-pages.md` — [IN_PROGRESS] Execute Portable Identity Profile Go-Now stream (`PIP-GN-01` through `PIP-GN-06`) with immediate integration-page delivery and status/evidence synchronization (P0)
+- `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md` — [IN_PROGRESS] Execute Metaverse Universal Manifest Go-Now stream (`MUM-GN-01` through `MUM-GN-06`) with immediate integration-page hardening and status/evidence synchronization (P0)

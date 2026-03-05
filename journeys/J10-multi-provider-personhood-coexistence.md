@@ -7,7 +7,7 @@ Prove that Universal Manifest fixtures can represent multiple proof-of-personhoo
 - Fixture: examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld
 - Fixture: examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld
 - Fixture: examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld
-- Fixture: examples/v0.1/stubs/chia-credential-lane-manifest.jsonld
+- Fixture: examples/v0.1/stubs/did-vc-credential-lane-manifest.jsonld
 
 ## Steps
 1. Load each fixture and validate required manifest fields.

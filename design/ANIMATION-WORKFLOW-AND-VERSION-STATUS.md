@@ -62,7 +62,7 @@ Canonical source list used by verification:
 11. `site/public/animations/scenario-12-rp1-integration.svg`
 12. `site/public/animations/scenario-13-smart-glasses-integration.svg`
 13. `site/public/animations/scenario-14-metaverse-integration.svg`
-14. `site/public/animations/scenario-15-chia-vc-integration.svg`
+14. `site/public/animations/scenario-15-did-vc-integration.svg`
 15. `site/public/animations/um-core-flow-pilot.svg`
 
 ## 4) Explicitly Forbidden for Canonical Output

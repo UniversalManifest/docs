@@ -123,7 +123,7 @@ Canonical repo path: `<repo-root>`
 - [`integrations/smart-glasses.md`](../integrations/smart-glasses.md) — Smart-glasses social-layer integration lane
 - [`integrations/oma-trust.md`](../integrations/oma-trust.md) — OMATrust integration lane
 - [`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md) — Proof-of-personhood multi-provider lane
-- [`integrations/chia-vc.md`](../integrations/chia-vc.md) — Chia DID/VC credential lane
+- [`integrations/did-vc.md`](../integrations/did-vc.md) — DID + VC credential lane
 - [`integrations/education-credentials.md`](../integrations/education-credentials.md) — Education credentials integration lane
 - [`integrations/healthcare-patient-consent.md`](../integrations/healthcare-patient-consent.md) — Healthcare patient consent integration lane
 - [`integrations/smart-home.md`](../integrations/smart-home.md) — Smart home integration lane
