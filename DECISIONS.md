@@ -1,5 +1,30 @@
 # Decisions (Universal Manifest)
 
+## 2026-03-06 — Execute GPC as runtime-authoritative with optional UM evidence projection
+
+### Decision
+
+- Implement GPC in the TypeScript reference implementation as a hybrid model:
+  - runtime observation (`Sec-GPC`, `navigator.globalPrivacyControl`) is authoritative,
+  - UM consent/pointer projection is optional descriptive evidence,
+  - `/.well-known/gpc.json` is parsed as support metadata, not per-request proof.
+- Add a non-normative GPC proof pack and journey row (`J21`) without promoting GPC semantics into v0.1 core conformance requirements.
+
+### Rationale
+
+- This matches the WO-0127 standards review outcome while keeping the base UM contract stable.
+- It makes the integration executable and testable immediately.
+- It preserves a clean boundary between request-time privacy signaling and transportable manifest evidence.
+
+### Policy impact
+
+- GPC remains non-normative in core UM v0.1/v0.2 spec terms unless promoted later through a separate standards decision.
+- Reference implementation proof now includes:
+  - runtime GPC normalization,
+  - support-resource parsing,
+  - evidence projection validation,
+  - journey proof for scope-limited supersession behavior.
+
 ## 2026-03-05 — Complete Go-Now integration guidance wave for Portable Identity Profile and MUM
 
 ### Decision

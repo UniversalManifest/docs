@@ -1,0 +1,11 @@
+
+> universal-manifest@0.1.0 journeys
+> npm run build && node scripts/run-journeys.mjs
+
+
+> universal-manifest@0.1.0 build
+> tsc -p tsconfig.json
+
+Preflight: 1 pass, 0 fail
+Journeys: 21 pass, 0 fail
+Report: /Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-06T07-50-34-715Z-journey-report.json

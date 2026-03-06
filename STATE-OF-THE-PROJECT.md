@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-05
-**Status:** 120 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED.
+**Date:** 2026-03-06
+**Status:** 121 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -33,6 +33,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Smart-glasses social layer lane: `integrations/smart-glasses.md`
   - Proof-of-personhood multi-provider lane: `integrations/proof-of-personhood.md`
   - DID + VC credential lane: `integrations/did-vc.md`
+  - Global Privacy Control (GPC) lane: `integrations/gpc-global-privacy-control.md`
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
@@ -43,9 +44,9 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - **Tooling**
   - TypeScript types + runtime assertion in spec repo: `packages/universal-manifest/`
   - Standalone TypeScript reference implementation repository: `https://github.com/grigb/um-typescript`
-  - Fixture validation run via `npm test` (build + validate valid + invalid fixtures)
+  - Fixture validation run via `npm test` (build + validate valid + invalid fixtures + GPC proof pack)
 - **Proof surfaces (executable + visual)**
-  - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`)
+  - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`; 21 executable journeys passing)
   - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
 - **Animated SVG explainer pipeline (established, proven)**
@@ -88,7 +89,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - v0.1 signature is still a permissive placeholder; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
-- A complete conformance suite (we have baseline valid/invalid fixtures; TTL/replay/security cases remain)
+- A complete conformance suite (we have baseline valid/invalid fixtures plus non-normative GPC proof coverage; broader TTL/replay/security cases remain)
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
@@ -211,9 +212,14 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Completed: `WO-0125` Portable Identity Profile Go-Now execution and integration pages (`PIP-GN-01` through `PIP-GN-06`)
 - Completed: `WO-0126` Metaverse Universal Manifest Go-Now execution and integration pages (`MUM-GN-01` through `MUM-GN-06`)
 
-## Priority context (2026-03-05)
+#### Privacy Signal Standards Review and Execution (WO-0127 through WO-0128) — COMPLETED
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), and Go-Now execution wave (WO-0125 through WO-0126) are completed. Priority now shifts to Research-First execution tracks and any newly approved follow-on work orders.
+- Completed: `WO-0127` GPC standards integration review and gap analysis
+- Completed: `WO-0128` GPC Go-Now runtime mapping, fixtures, and proof
+
+## Priority context (2026-03-06)
+
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), and GPC execution wave (WO-0127 through WO-0128) are completed. Priority now shifts to Research-First execution tracks and any newly approved follow-on work orders.
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 

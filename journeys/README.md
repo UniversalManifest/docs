@@ -5,7 +5,7 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable row in the journey report (`J01` through `J20`)
+- a corresponding executable row in the journey report (`J01` through `J21`)
 
 Run the proof suite:
 
@@ -15,9 +15,9 @@ Run the proof suite:
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
-- The report includes explicit rows for every documented journey ID (`J01` through `J20`).
+- The report includes explicit rows for every documented journey ID (`J01` through `J21`).
 
-## Executable mapping (J01-J20)
+## Executable mapping (J01-J21)
 
 - `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
@@ -39,6 +39,7 @@ Outputs:
 - `J18` MUM social and reputation portability flow -> `journeyMumSocialReputationPortability`
 - `J19` MUM preferences bundle projection flow -> `journeyMumPreferencesBundle`
 - `J20` MUM freshness and change-log flow -> `journeyMumFreshnessChangeLog`
+- `J21` GPC runtime signal and evidence projection flow -> `journeyGpcRuntimeSignalAndEvidenceProjection`
 
 Execution source:
 
@@ -66,6 +67,7 @@ Execution source:
 18. `J18-mum-social-reputation-portability-flow.md`
 19. `J19-mum-preferences-bundle-projection-flow.md`
 20. `J20-mum-freshness-and-change-log-flow.md`
+21. `J21-gpc-runtime-signal-and-evidence-projection.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 

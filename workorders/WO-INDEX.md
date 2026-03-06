@@ -188,3 +188,4 @@ Drift governance and follow-on WO trigger criteria:
 ### Privacy Signal Standards Review Wave (WO-0127)
 
 - `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [COMPLETED] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
+- `docs/workorders/WO-0128-gpc-go-now-runtime-mapping-fixtures-and-proof.md` — [COMPLETED] Execute GPC runtime mapping, support-resource parsing, fixture coverage, and journey proof in the TypeScript reference implementation (P0)

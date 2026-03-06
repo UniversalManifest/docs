@@ -71,7 +71,7 @@ Must-have:
 - at least one cross-runtime adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
-Status: 11 executable journeys passing. Multiple integration lanes documented with fixture-backed proof.
+Status: 21 executable journeys passing. Multiple integration lanes documented with fixture-backed proof, including GPC runtime-signal handling as a non-normative proof lane.
 
 ## Phase 6 — Full-corpus synthesis before IA and journey expansion -- COMPLETE
 
@@ -256,3 +256,30 @@ Primary evidence:
 - `docs/reports/2026-03-05-gn06-site-build-clean.txt`
 
 Status: Completed (WO-0125, WO-0126). Next path is Research-First execution (`PIP-RS-*`, `MUM-RS-*`) under existing promotion gates.
+
+## Phase 16 — Privacy Signal Standards Alignment (GPC) -- COMPLETE
+
+Goal: execute the GPC integration direction from standards review into reference proof without expanding the core UM contract prematurely.
+
+Delivered:
+
+- standards review and overlap/gap analysis closure (`WO-0127`)
+- published GPC integration lane docs for repo + site
+- runtime normalization helpers for `Sec-GPC` and `navigator.globalPrivacyControl`
+- `/.well-known/gpc.json` support-resource parsing helpers
+- optional UM evidence projection helpers for consent/pointer representation
+- dedicated GPC fixture pack under `examples/integrations/gpc/`
+- GPC evidence-projection manifest fixture
+- `J21` executable journey proof for runtime-authoritative behavior and scope-limited supersession
+
+Primary evidence:
+
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
+- `docs/workorders/WO-0128-gpc-go-now-runtime-mapping-fixtures-and-proof.md`
+- `integrations/gpc-global-privacy-control.md`
+- `packages/universal-manifest/src/index.ts`
+- `docs/reports/2026-03-06-gpc-go-now-npm-test.txt`
+- `docs/reports/2026-03-06-gpc-go-now-journeys.txt`
+- `docs/journeys/_artifacts/2026-03-06T07-50-34-715Z-journey-report.json`
+
+Status: Completed (WO-0127, WO-0128). Next path is broader privacy-signal research/promotion work only if explicitly approved.
