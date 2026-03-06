@@ -1,6 +1,6 @@
 # WO-0136 — OMB Wiki Spatial Fabric Source Refresh and Primary-Source Crosscheck
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-03-06  
 **Updated:** 2026-03-06  
 **Priority:** P1  
@@ -43,10 +43,10 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] The report explicitly states what `omb.wiki` adds beyond current UM RP1 material, if anything.
-- [ ] Wiki-discovered concepts are separated from primary-source-confirmed concepts.
-- [ ] The report gives a clear recommendation: no action, doc refresh, source refresh, or new follow-on work order.
-- [ ] The sequencing note is preserved: this audit should inform later spatial-fabric or federation decision work rather than arrive after it.
+- [x] The report explicitly states what `omb.wiki` adds beyond current UM RP1 material, if anything.
+- [x] Wiki-discovered concepts are separated from primary-source-confirmed concepts.
+- [x] The report gives a clear recommendation: no action, doc refresh, source refresh, or new follow-on work order.
+- [x] The sequencing note is preserved: this audit should inform later spatial-fabric or federation decision work rather than arrive after it.
 
 ## Dependencies
 
@@ -56,3 +56,12 @@ Out of scope:
 ## Sequencing Note
 
 - Queue this work after `WO-0134` and before `WO-0135` so it can inform the broader federation/bridge decision package without blocking the unrelated proximity assessment.
+
+## Execution Notes
+
+- Completed on 2026-03-06.
+- Delivered report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- Outcome:
+  - The current UM core boundary for RP1/MSF remains correct.
+  - `omb.wiki` is valuable as a discovery map, not as the source of record.
+  - The strongest resulting recommendation is a primary-source refresh and then an RP1/MSF documentation/proof refresh.

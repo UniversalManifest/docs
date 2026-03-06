@@ -284,7 +284,7 @@ Primary evidence:
 
 Status: Completed (WO-0127, WO-0128). Next path is broader privacy-signal research/promotion work only if explicitly approved.
 
-## Phase 17 — Localized Source Follow-on and Research-First Promotion Gates -- ACTIVE
+## Phase 17 — Localized Source Follow-on and Research-First Promotion Gates -- COMPLETED
 
 Goal: convert the newly localized architecture corpus into durable integration guidance where the path is already clear, and into explicit Research-First decision packages where protocol or runtime selection would otherwise be premature.
 
@@ -294,6 +294,11 @@ Delivered:
 - DID + VC and metaverse lane refresh with stronger volatility and non-lock-in boundaries (`WO-0131`)
 - Research-First decision package for protocol volatility, proximity credentials, and federation/bridge strategy (`WO-0132`)
 - protocol recommendation governance and standards-currency matrix (`WO-0133`)
+- proximity credential boundary assessment (`WO-0134`)
+- federation and bridge strategy decision package (`WO-0135`)
+- OMB/wiki spatial-fabric source crosscheck (`WO-0136`)
+- role-based runtime and synchronization guidance refresh (`WO-0137`)
+- RP1/MSF primary-source refresh and integration-depth pass (`WO-0138`)
 
 Primary evidence:
 
@@ -301,11 +306,16 @@ Primary evidence:
 - `docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md`
 - `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
 - `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
+- `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
+- `docs/workorders/WO-0136-omb-wiki-spatial-fabric-source-refresh-and-primary-source-crosscheck.md`
+- `docs/workorders/WO-0137-role-based-runtime-federation-and-bridge-guidance-refresh.md`
+- `docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
 - `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
 - `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/reports/2026-03-06-proximity-credential-and-presentation-profile-assessment.md`
+- `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+- `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- `docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
 
-Status: Active. Next path is the follow-on Research-First wave:
-
-- `WO-0134` proximity credential and presentation profile assessment
-- `WO-0136` OMB Wiki spatial-fabric source refresh and primary-source crosscheck
-- `WO-0135` federation and bridge strategy decision package
+Status: Completed. No queued follow-on work orders remain in the current approved sequence.

@@ -1,6 +1,6 @@
 # WO-0135 — Federation and Bridge Strategy Decision Package
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-03-06  
 **Updated:** 2026-03-06  
 **Priority:** P1  
@@ -36,11 +36,20 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] The decision package is role-based rather than vendor-based.
-- [ ] Source-of-truth, refresh, and failure-mode expectations are explicit.
-- [ ] Closed-surface behavior remains clearly non-normative.
-- [ ] The result states whether follow-on guidance work is justified and where it should land.
+- [x] The decision package is role-based rather than vendor-based.
+- [x] Source-of-truth, refresh, and failure-mode expectations are explicit.
+- [x] Closed-surface behavior remains clearly non-normative.
+- [x] The result states whether follow-on guidance work is justified and where it should land.
 
 ## Dependencies
 
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
+
+## Execution Notes
+
+- Completed on 2026-03-06.
+- Delivered report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+- Outcome:
+  - UM should keep a role-based federation and bridge strategy.
+  - No single external substrate should be normative for UM.
+  - Follow-on guidance work is justified first in shared runtime/synchronization docs, then in bounded substrate-specific docs.

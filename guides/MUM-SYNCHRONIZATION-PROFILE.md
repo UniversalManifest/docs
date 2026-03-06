@@ -30,6 +30,25 @@ This guide provides operational conventions only.
 - provide deterministic conflict behavior,
 - maintain auditable update history.
 
+### Role alignment
+
+This guide fits into the broader runtime/federation role model:
+
+- the **subject-controlled runtime** is the canonical private-state authority,
+- consumer caches, edges, and world nodes act as **edge availability custodians**,
+- update propagation behavior acts as the **relay/sync coordinator** role,
+- any public world, social, or scene output is a **public projection broker** role,
+- verifier or issuer trust metadata is a separate **trust federation gatekeeper** concern,
+- proprietary platform mappings remain **closed-surface bridge adapters**, not normative UM behavior.
+
+No single external substrate is required by this profile.
+
+### Source-of-truth rule
+
+- Treat `authoritativeSource` as the declared refresh target for the current state.
+- Treat any public projection, cache, or relay as secondary to the authoritative source.
+- If runtime-controlled state conflicts with a lagging public projection, the authoritative source wins.
+
 ## 3) Recommended synchronization pointers
 
 Use optional pointers to make sync sources explicit.
@@ -141,6 +160,13 @@ Recommended offline policy:
 - restrict sensitive operations when extended trust checks are unavailable,
 - queue local non-authoritative preferences separately and reconcile on reconnect,
 - never overwrite authoritative consent with unverified offline state.
+- never let a closed-surface bridge or public projection act as the private-state authority just because the source is unreachable.
+
+Failure-mode interpretation:
+
+- public or low-risk presentation may continue from an unexpired last-known-good cache if policy allows it,
+- privileged, trust-sensitive, or consent-sensitive actions should fail closed or move to restricted mode,
+- bridge adapters should stop pushing stale privileged state when freshness cannot be re-established.
 
 ## 9) Verification flow
 

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Demonstrate that RP1-style spatial-fabric data can be represented as optional pointers/shards in Universal Manifest without changing core v0.1 required fields.
+Demonstrate that RP1/MSF-style spatial-fabric data can be represented as optional pointers and compact shards in Universal Manifest without changing core v0.1 required fields.
 
 ## Inputs
 
@@ -11,27 +11,40 @@ Demonstrate that RP1-style spatial-fabric data can be represented as optional po
 
 ## Steps
 
-1. Validate fixture using the standard v0.1 validator path.
+1. Validate the fixture using the standard v0.1 validator path.
 2. Confirm required core fields are present and valid (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`).
-3. Confirm RP1 pointers are modeled as optional pointer entries:
+3. Confirm RP1/MSF pointers are modeled as optional pointer entries:
    - `rp1.fabric`
    - `rp1.anchorSet`
    - `rp1.placeGraph`
-4. Confirm consent keys gate spatial behaviors:
+   - `rp1.attachmentIndex`
+   - `rp1.assetProfile`
+4. Confirm consent keys gate portable spatial behavior:
    - `spatial.locationShare`
+   - `spatial.anchorShare`
    - `spatial.crossWorldLinking`
-5. Confirm unknown-field tolerance remains intact (RP1-specific keys do not break baseline validation).
+5. Confirm compact shards summarize only the portable subset of state:
+   - `spatialAnchors`
+   - `placeMembership`
+   - `spatialFabricAttachmentPolicy`
+   - `spatialAssetProfile`
+6. Confirm child-scope composition is summarized through attachment policy rather than embedding the live scope tree.
+7. Confirm asset delivery remains pointer-first and external (`gltf`/`glb` profile hints, no embedded 3D payloads).
+8. Confirm unknown-field tolerance remains intact (RP1/MSF-specific keys do not break baseline validation).
 
 ## Expected outcomes
 
 - Fixture passes baseline v0.1 validation.
-- RP1-specific fields are additive overlays, not required core contract fields.
-- Consumers that do not understand RP1 keys can still parse and validate manifest core.
+- RP1/MSF-specific fields remain additive overlays, not required core contract fields.
+- Attachment composition is represented as compact portable policy/evidence, not as the live runtime graph.
+- Asset profile guidance stays external-pointer-first.
+- Consumers that do not understand RP1/MSF keys can still parse and validate manifest core.
 
 ## Evidence
 
 - validation output from:
   - `cd packages/universal-manifest && npm test`
+  - `cd packages/universal-manifest && npm run journeys`
 - fixture path:
   - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 

@@ -688,3 +688,75 @@ Primary conflict register:
 
 - `docs/STANDARDS-POSITIONING.md` and its site mirror should point readers to the dated currency matrix for live status context.
 - Future protocol-family promotions or demotions should update the matrix first, then propagate only the approved wording into narrative docs.
+
+## 2026-03-06 — Federation and bridge strategy is role-based; no single substrate is normative for UM
+
+### Decision
+
+- Keep the subject-controlled runtime as the canonical private-state authority for current consent, pointer routing, freshness decisions, and disclosure mediation.
+- Evaluate external substrates by bounded role, not by brand alone:
+  - canonical private state substrate,
+  - public projection broker,
+  - trust federation gatekeeper,
+  - relay/sync coordinator,
+  - edge availability custodian,
+  - closed-surface bridge adapter.
+- Do not present Solid, DWN, AT Protocol, OpenID Federation, or any other single substrate as “the UM federation layer”.
+- Keep closed-surface bridge adapters non-normative implementation detail.
+
+### Rationale
+
+- The project’s architecture direction was already correct but lacked a final decision package that separated storage, projection, trust, sync, and bridge roles cleanly enough.
+- The current standards landscape is mixed: different substrates are strong in different roles, and forcing them into one winner would create premature lock-in.
+- A role-based frame preserves the composite-stack model while making source-of-truth, refresh, and failure behavior explicit.
+
+### Policy impact
+
+- Shared runtime and synchronization guidance should absorb the new role taxonomy first.
+- Substrate-specific docs may reference only the role they actually fill, with explicit scope limits.
+- No new conformance obligation is created by this decision.
+
+## 2026-03-06 — OMB Wiki is discovery-only for spatial-fabric detail; RP1/MSF requires primary-source refresh before stronger guidance
+
+### Decision
+
+- Treat `omb.wiki` as a discovery and synthesis map for spatial-fabric material, not as the source of record.
+- Keep the current UM RP1/MSF architectural boundary:
+  - no new required core fields,
+  - optional pointers and shards for ecosystem-specific semantics,
+  - consent-gated cross-world behavior,
+  - runtime-managed live spatial/presence state.
+- Require a primary-source refresh before promoting newly surfaced spatial-fabric details into stronger RP1/MSF guidance.
+
+### Rationale
+
+- The OMB audit surfaced useful topology, attachment, service-decomposition, tooling, and asset-profile detail that was not yet reflected in the repo’s localized RP1 source set.
+- That new detail reveals a source-completeness and integration-depth gap, not a core schema gap.
+- The wiki is visibly still mixed-purpose and incomplete, so promoting its content directly would weaken authority discipline.
+
+### Policy impact
+
+- Follow-on spatial-fabric work should localize additional primary sources first, then refresh RP1/MSF guidance and proof artifacts from those sources.
+- The existing RP1/MSF pointer/shard/consent overlay model remains valid.
+- No normative UM change is created by this decision.
+
+## 2026-03-06 — RP1/MSF scope composition and asset delivery remain non-normative integration guidance
+
+### Decision
+
+- Keep RP1/MSF scope composition represented through optional pointers and compact shards only.
+- Use parent/root scope, child scope, and attachment-point summaries as the portable model instead of promoting live scope-tree semantics into the UM core.
+- Keep 3D asset delivery external and pointer-first, with lightweight asset-profile hints only.
+- Treat runtime session/view/tool state as non-portable unless deliberately exposed through a revocable pointer.
+
+### Rationale
+
+- Primary/open-source Manifolder sources make scope composition concrete: linked MSF resources create child-scope mounts, with runtime-managed cycles, caches, and view state.
+- RP1 source captures already showed resource-driven linkage and internal primary/secondary object handling, but not a reason to encode that internal model into the standard.
+- Khronos glTF confirms that runtime 3D asset delivery is a separate concern from identity or consent envelopes.
+
+### Policy impact
+
+- The RP1/MSF lane may use non-normative examples such as `rp1.attachmentIndex`, `rp1.assetProfile`, `spatialFabricAttachmentPolicy`, and `spatialAssetProfile`.
+- Future hardening work should focus on adversarial attachment/freshness proof rather than schema expansion.
+- No normative UM change is created by this decision.
