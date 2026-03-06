@@ -87,6 +87,7 @@ Canonical repo path: `<repo-root>`
 - [`docs/design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md`](design/ANIMATION-WORKFLOW-AND-VERSION-STATUS.md) — Canonical active/deprecated workflow and version status for animation assets
 - [`docs/design/INFOGRAPHIC-STYLES-INVENTORY.md`](design/INFOGRAPHIC-STYLES-INVENTORY.md) — Complete infographic styles inventory
 - [`docs/design/CAPSULE-POD-DESIGN.md`](design/CAPSULE-POD-DESIGN.md) — Capsule-Pod iconic representation design spec
+- [`docs/design/LOGO-REFERENCE.md`](design/LOGO-REFERENCE.md) — Imported logo exploration asset reference pack
 - [`docs/design/PERMISSIONS-FIREWALL-DESIGN.md`](design/PERMISSIONS-FIREWALL-DESIGN.md) — Permissions firewall design
 
 ## Governance

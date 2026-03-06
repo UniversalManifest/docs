@@ -189,3 +189,7 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [COMPLETED] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
 - `docs/workorders/WO-0128-gpc-go-now-runtime-mapping-fixtures-and-proof.md` — [COMPLETED] Execute GPC runtime mapping, support-resource parsing, fixture coverage, and journey proof in the TypeScript reference implementation (P0)
+
+### Inbox Corpus Hygiene Wave (WO-0129)
+
+- `docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md` — [COMPLETED] Audited the Universal Manifest inbox corpus, localized missing research/design materials, and archived processed inbox sources into the imported-project lane (P1)
