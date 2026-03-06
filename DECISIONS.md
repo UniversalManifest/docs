@@ -613,3 +613,33 @@ Primary conflict register:
 - No normative schema or conformance requirement changes are introduced by this decision.
 - Any future normative adoption must be versioned and paired with conformance updates.
 - Integration examples may include firewall-style consent metadata as optional, forward-compatible fields.
+
+## 2026-03-06 — Composite-stack and active-runtime architecture direction clarified
+
+### Decision
+
+- Treat Universal Manifest architecture as a **composite stack** with distinct:
+  - trust layer,
+  - data layer,
+  - interaction layer.
+- Keep Universal Manifest pointer-first and storage-neutral:
+  - the manifest carries portable state and references,
+  - large or mutable artifacts stay outside the manifest behind pointers.
+- Recognize a **subject-controlled active runtime** (wallet, client, agent, or local-first sync service) as a valid non-normative implementation pattern for:
+  - maintaining current state,
+  - mediating consent,
+  - coordinating push/pull exchange,
+  - and operating bridge adapters for closed surfaces when needed.
+- Treat closed-surface adapters and automation bridges as integration detail, not normative UM behavior.
+
+### Rationale
+
+- The newly localized architecture corpus converges on the same practical pattern: one portable manifest envelope, multiple underlying trust/data/projection systems, and a subject-side runtime that coordinates exchange.
+- Current project docs implied this pattern but did not state it strongly enough at the source-of-truth level.
+- Making the architecture direction explicit improves consistency across vision docs and integration lanes without forcing a protocol lock-in.
+
+### Policy impact
+
+- `docs/PROJECT-VISION.md` and `integrations/reference-runtime.md` should explicitly use the composite-stack and active-runtime framing.
+- Integration lanes may reference this direction, but no new conformance obligation is created by this decision.
+- Follow-on lane-specific updates should handle protocol volatility and unresolved research gaps separately from this architecture clarification.

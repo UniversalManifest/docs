@@ -23,12 +23,57 @@ Define a **portable manifest** format that can be handed between compatible apps
 
 ## Architectural direction (vision input)
 
+### Composite stack direction
+
+The Universal Manifest should be treated as a **composite stack**, not as one giant all-knowing file format.
+
+The stack has three cooperating layers:
+
+- **Trust layer**: subject identifiers, issuer references, signatures, revocation/freshness signals, and other proof-bearing material.
+- **Data layer**: portable records plus pointer-first references to external systems, stores, or artifacts.
+- **Interaction layer**: consent, policy, audience/context rules, and relying-party exchange behavior.
+
+This direction keeps UM storage-neutral and provider-neutral:
+
+- the manifest carries portable state and references,
+- large or volatile data stays outside the manifest,
+- consumers can project the parts they understand without requiring one universal backend.
+
 The Universal Manifest should treat a **Record** as the core primitive:
 
 - A record can be a **leaf** (single unit of data) or a **container** with nested sub-records.
 - Records are intended to be manageable “packets/maps” of information (for example: public profile, proof-of-personhood evidence, game profile).
 - Records should support **push** and **request/pull** exchange between systems.
 - A record may declare its own standards/syntax/schema, enabling a multi-schema ecosystem instead of one global rigid schema.
+
+### Source-of-truth and active-runtime direction
+
+The manifest is not only a static document shape. Real deployments often require a **subject-controlled active runtime** (for example: wallet, client, agent, or local-first sync service) that does all of the following:
+
+- maintains the subject's current source of truth,
+- mediates consent and disclosure,
+- resolves or updates pointers to external systems,
+- coordinates **push** notifications and **pull/request** retrieval flows,
+- operates bridge adapters for open protocols or closed surfaces when needed.
+
+This runtime direction is non-normative architecture guidance, not a requirement that every conformant implementation ship the same client model.
+
+Common loop shape:
+
+1. observe local or external state change,
+2. signal or receive update intent,
+3. fetch or assemble the required manifest state,
+4. verify freshness and trust posture,
+5. project allowed data to the relying surface,
+6. revoke, refresh, or withdraw access when policy changes.
+
+### Pointer-first storage separation
+
+Universal Manifest should remain pointer-first:
+
+- the manifest defines **what** is being asserted or referenced,
+- external systems, pods, nodes, ledgers, or service endpoints hold **where** larger or mutable data lives,
+- the subject runtime governs how those references are refreshed, shared, or revoked over time.
 
 Permission model direction:
 
@@ -74,3 +119,12 @@ Boundary policy:
 
 - These are source-of-truth vision directives and integration targets.
 - They do **not** become normative spec requirements until implemented via versioned spec/conformance changes and decision records.
+
+## Follow-on direction from localized source wave (2026-03-06)
+
+The newly localized corpus reinforces four architecture boundaries that should remain explicit:
+
+- Universal Manifest is a portable pointer-and-policy envelope, not a monolithic database replacement.
+- Composite-stack framing (trust, data, interaction) is the preferred architecture language for future integrations.
+- Local-first or subject-controlled runtimes are valid implementation patterns for synchronizing state across open and closed surfaces.
+- Protocol recommendations in integration lanes must remain bounded and non-locking when upstream ecosystems are volatile.

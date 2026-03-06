@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-03-06
-**Status:** 122 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED.
+**Status:** 125 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0132) ACTIVE.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -221,9 +221,15 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 
 - Completed: `WO-0129` Universal Manifest inbox dedupe, import, and archive
 
+#### Localized Source Follow-on Wave (WO-0130 through WO-0132) — ACTIVE
+
+- Completed: `WO-0130` Composite architecture and active runtime alignment
+- In progress: `WO-0131` DID + VC and metaverse lane refresh from localized corpus
+- Not started: `WO-0132` Research-First protocol volatility, proximity, and federation gaps
+
 ## Priority context (2026-03-06)
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), and inbox corpus hygiene wave (WO-0129) are completed. Priority remains on Research-First execution tracks and approved follow-on work orders.
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), and WO-0130 are completed. WO-0131 is the active follow-on lane refresh work order, with WO-0132 queued behind it.
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 
