@@ -1,6 +1,6 @@
 # WO-0131 — DID + VC and Metaverse Lane Refresh from Localized Corpus
 
-**Status:** IN_PROGRESS  
+**Status:** COMPLETED  
 **Created:** 2026-03-06  
 **Updated:** 2026-03-06  
 **Priority:** P1  
@@ -39,11 +39,31 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] DID + VC lane includes bounded protocol examples and explicit volatility/non-lock-in caveats.
-- [ ] Metaverse lane explicitly references trust/data/interaction layering and local-first runtime assumptions.
-- [ ] Site mirrors remain synchronized with repo docs.
-- [ ] No new normative requirement is implied.
+- [x] DID + VC lane includes bounded protocol examples and explicit volatility/non-lock-in caveats.
+- [x] Metaverse lane explicitly references trust/data/interaction layering and local-first runtime assumptions.
+- [x] Site mirrors remain synchronized with repo docs.
+- [x] No new normative requirement is implied.
 
 ## Dependencies
 
 - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
+
+## Execution Progress (2026-03-06)
+
+Completed in this pass:
+
+- Updated `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md` and `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/did-vc.md` with:
+  - explicit landscape caveats,
+  - non-endorsement and volatility language,
+  - composite-stack positioning for DID + VC material.
+- Updated `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md` and `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md` with:
+  - explicit trust/data/interaction layer framing,
+  - cross-links to the active-runtime direction,
+  - guardrails for runtime authority, pointer-first assets, and non-mandatory proof stacks.
+- Verified the docs surface still builds:
+  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+
+## Completion notes
+
+- WO-0131 closes the lane-level documentation refresh prompted by the localized source corpus.
+- The unresolved topics from the same source wave were intentionally moved into the Research-First track under WO-0132.

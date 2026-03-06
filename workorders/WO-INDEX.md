@@ -194,8 +194,12 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md` — [COMPLETED] Audited the Universal Manifest inbox corpus, localized missing research/design materials, and archived processed inbox sources into the imported-project lane (P1)
 
-### Localized Source Follow-on Wave (WO-0130 through WO-0132)
+### Localized Source Follow-on Wave (WO-0130 through WO-0136)
 
 - `docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md` — [COMPLETED] Aligned source-of-truth architecture docs with the composite-stack model and local-first active-runtime behavior surfaced by the newly localized corpus (P0)
-- `docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md` — [IN_PROGRESS] Refresh DID + VC and metaverse integration lanes from the newly localized corpus with stronger volatility and non-lock-in boundaries (P1)
-- `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md` — [NOT_STARTED] Convert unresolved protocol-volatility, proximity-credential, and federation-bridge gaps into an explicit Research-First decision package with promotion gates (P1)
+- `docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md` — [COMPLETED] Refresh DID + VC and metaverse integration lanes from the newly localized corpus with stronger volatility and non-lock-in boundaries (P1)
+- `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md` — [COMPLETED] Convert unresolved protocol-volatility, proximity-credential, and federation-bridge gaps into an explicit Research-First decision package with promotion gates (P1)
+- `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md` — [COMPLETED] Create the governance and standards-currency mechanism that determines when volatile protocol families move from examples to recommended guidance (P1)
+- `docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md` — [NOT_STARTED] Define the boundary profile for proximity-triggered credential presentation without collapsing transport semantics into the UM core contract (P1)
+- `docs/workorders/WO-0136-omb-wiki-spatial-fabric-source-refresh-and-primary-source-crosscheck.md` — [NOT_STARTED] Audit `omb.wiki` for spatial-fabric details not yet reflected in the RP1 lane, while preserving primary repositories/specs as the source of record when the wiki lags or diverges (P1)
+- `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md` — [NOT_STARTED] Produce a standards-neutral decision package for federation, sync, and closed-surface bridge roles around subject-controlled runtimes (P1)

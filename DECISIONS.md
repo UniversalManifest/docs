@@ -643,3 +643,48 @@ Primary conflict register:
 - `docs/PROJECT-VISION.md` and `integrations/reference-runtime.md` should explicitly use the composite-stack and active-runtime framing.
 - Integration lanes may reference this direction, but no new conformance obligation is created by this decision.
 - Follow-on lane-specific updates should handle protocol volatility and unresolved research gaps separately from this architecture clarification.
+
+## 2026-03-06 — Volatile protocol selection, proximity presentation, and federation strategy remain Research-First topics
+
+### Decision
+
+- Keep current architecture guidance and lane caveats, but do not promote any single protocol family, proximity transport, or federation substrate into stronger UM guidance without explicit promotion evidence.
+- Treat the following as distinct Research-First work items:
+  - protocol recommendation governance and standards currency,
+  - proximity-triggered credential presentation boundaries,
+  - federation and bridge strategy criteria for open and closed surfaces.
+- Do not add new core-schema obligations for any of these topics at this stage.
+
+### Rationale
+
+- The localized source wave strengthened the architecture direction, but it did not produce a stable single answer for volatile credential stacks, proximity transport patterns, or federation substrate choice.
+- Current official standards checkpoints show a mixed landscape: some foundations are stable, while several transport, selective-disclosure, browser/OS mediation, and substrate choices remain active decision surfaces.
+- Moving these topics into explicit Research-First work prevents accidental lock-in through documentation drift.
+
+### Policy impact
+
+- Current integration lanes may continue to name protocol families only as bounded examples.
+- Follow-on work should land as separate decision packages before any stronger recommendations appear in UM guidance.
+- The next registered Research-First work orders are:
+  - `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+  - `docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
+  - `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
+
+## 2026-03-06 — Time-sensitive protocol-family status should live in a dated currency matrix
+
+### Decision
+
+- Keep narrative standards-positioning docs focused on relationship and scope.
+- Track volatile protocol-family maturity and recommendation strength in a dated currency matrix instead of freezing those judgments inline across multiple docs.
+- Allow only bounded examples in narrative or integration docs unless a protocol family has been promoted by the matrix process.
+
+### Rationale
+
+- The same protocol family can be stable enough to reference architecturally while still being too volatile to recommend operationally.
+- A dated matrix reduces drift, centralizes review cadence, and keeps adopter-facing docs from quietly becoming stale.
+- This model strengthens governance without changing UM conformance behavior.
+
+### Policy impact
+
+- `docs/STANDARDS-POSITIONING.md` and its site mirror should point readers to the dated currency matrix for live status context.
+- Future protocol-family promotions or demotions should update the matrix first, then propagate only the approved wording into narrative docs.

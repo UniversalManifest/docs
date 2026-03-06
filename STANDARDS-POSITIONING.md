@@ -2,6 +2,12 @@
 
 This document is the single authoritative reference for Universal Manifest's relationship to formal standards, adjacent specifications, and standards bodies. It covers what UM builds on, how UM relates to neighboring efforts, which standards organizations are relevant, and what the project's current standardization intent is.
 
+Current protocol-family currency and recommendation strength are tracked separately in the dated matrix:
+
+- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+
+This document explains relationship and positioning. The matrix above controls time-sensitive status language for volatile protocol families.
+
 ---
 
 ## 1. Standards UM Builds On
@@ -26,7 +32,7 @@ DIDs are the recommended format for the `subject` field in a manifest. UM suppor
 
 UM can carry W3C Verifiable Credentials as claims within shards. The UM manifest is the container; VCs are one type of payload it can hold. UM does not implement the VC issuance or verification protocol itself -- it provides a portable envelope that can transport VC-based claims alongside other data types.
 
-- **W3C specification:** Verifiable Credentials Data Model v2.0 (W3C Recommendation, 2024-10-24)
+- **W3C specification:** Verifiable Credentials Data Model v2.0 (W3C Recommendation, 2025-05-15)
 - **UM usage:** Claims within shards can be structured as VCs
 
 ### JSON Canonicalization Scheme / JCS (IETF RFC 8785)
@@ -77,7 +83,7 @@ UM does not replace the VC issuance/verification protocol. It provides a transpo
 
 DIDComm defines how DID-based systems exchange messages securely. A DIDComm message could carry a UM manifest as its payload. UM defines what the document looks like; DIDComm defines how it gets from A to B when DID-based messaging is the transport. They operate at different layers.
 
-### Solid Pods (W3C)
+### Solid Protocol / Solid Pods
 
 **Relationship:** Complementary. UM is a portable summary layer; Solid is canonical storage.
 

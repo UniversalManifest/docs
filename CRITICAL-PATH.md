@@ -283,3 +283,29 @@ Primary evidence:
 - `docs/journeys/_artifacts/2026-03-06T07-50-34-715Z-journey-report.json`
 
 Status: Completed (WO-0127, WO-0128). Next path is broader privacy-signal research/promotion work only if explicitly approved.
+
+## Phase 17 — Localized Source Follow-on and Research-First Promotion Gates -- ACTIVE
+
+Goal: convert the newly localized architecture corpus into durable integration guidance where the path is already clear, and into explicit Research-First decision packages where protocol or runtime selection would otherwise be premature.
+
+Delivered:
+
+- composite-stack and active-runtime architecture clarification (`WO-0130`)
+- DID + VC and metaverse lane refresh with stronger volatility and non-lock-in boundaries (`WO-0131`)
+- Research-First decision package for protocol volatility, proximity credentials, and federation/bridge strategy (`WO-0132`)
+- protocol recommendation governance and standards-currency matrix (`WO-0133`)
+
+Primary evidence:
+
+- `docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
+- `docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md`
+- `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
+- `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+- `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+
+Status: Active. Next path is the follow-on Research-First wave:
+
+- `WO-0134` proximity credential and presentation profile assessment
+- `WO-0136` OMB Wiki spatial-fabric source refresh and primary-source crosscheck
+- `WO-0135` federation and bridge strategy decision package
