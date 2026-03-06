@@ -760,3 +760,24 @@ Primary conflict register:
 - The RP1/MSF lane may use non-normative examples such as `rp1.attachmentIndex`, `rp1.assetProfile`, `spatialFabricAttachmentPolicy`, and `spatialAssetProfile`.
 - Future hardening work should focus on adversarial attachment/freshness proof rather than schema expansion.
 - No normative UM change is created by this decision.
+
+## 2026-03-06 — RP1/MSF stale attachment indexes and revoked session context must fail closed
+
+### Decision
+
+- Keep RP1/MSF freshness and revocation handling in non-normative integration guidance and executable proof, not in the v0.1 core contract.
+- Allow optional pointer-level freshness/status metadata such as `observedAt`, `expiresAt`, and `status` on RP1/MSF examples.
+- If `rp1.attachmentIndex` evidence is stale or uncertain, block child-scope traversal.
+- If `rp1.sessionContext` is expired or revoked, block replay/reuse.
+
+### Rationale
+
+- Pointer-first spatial integration is only safe if portable evidence cannot silently outlive the runtime authority that issued it.
+- The risk is not missing schema coverage; the risk is stale or replayed attachment/session state being treated as current.
+- Fail-closed runtime behavior preserves the existing UM boundary while giving adopters a concrete safety model they can implement immediately.
+
+### Policy impact
+
+- RP1/MSF guidance may include optional freshness/status metadata on pointers as portable audit evidence.
+- New adversarial fixtures and journeys should prove blocked traversal/replay behavior without promoting those fields into core conformance obligations.
+- No normative UM change is created by this decision.

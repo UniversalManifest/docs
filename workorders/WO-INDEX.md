@@ -208,3 +208,7 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0137-role-based-runtime-federation-and-bridge-guidance-refresh.md` — [COMPLETED] Refresh shared runtime and synchronization guidance with the new role-based federation and bridge taxonomy without making any substrate normative for UM (P1)
 - `docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md` — [COMPLETED] Refresh RP1/MSF primary sources, localize additional open-source/runtime asset-delivery sources, and deepen the spatial-fabric integration lane while preserving the current UM core boundary (P1)
+
+### RP1/MSF Adversarial Hardening Wave (WO-0139)
+
+- `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md` — [COMPLETED] Add fail-closed RP1/MSF proof for stale attachment traversal and expired/revoked session-context replay without expanding the UM core contract (P1)

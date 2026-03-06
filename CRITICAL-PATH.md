@@ -71,7 +71,7 @@ Must-have:
 - at least one cross-runtime adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
-Status: 21 executable journeys passing. Multiple integration lanes documented with fixture-backed proof, including GPC runtime-signal handling as a non-normative proof lane.
+Status: 22 executable journeys passing. Multiple integration lanes documented with fixture-backed proof, including GPC runtime-signal handling and RP1 fail-closed hardening as non-normative proof lanes.
 
 ## Phase 6 — Full-corpus synthesis before IA and journey expansion -- COMPLETE
 
@@ -317,5 +317,29 @@ Primary evidence:
 - `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
 - `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
 - `docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
+
+Status: Completed. No queued follow-on work orders remain in the current approved sequence.
+
+## Phase 18 — RP1/MSF Adversarial Hardening -- COMPLETED
+
+Goal: prove fail-closed behavior for stale attachment routing evidence and expired or revoked session-context pointers without expanding the UM core contract.
+
+Delivered:
+
+- positive-path RP1 fixture strengthened with attachment/session freshness metadata
+- adversarial RP1 fixtures for stale attachment traversal and revoked session-context replay
+- `J22` executable journey proof for fail-closed RP1/MSF behavior
+- RP1 integration repo/site pages refreshed with explicit freshness/revocation guidance
+- RP1 sandbox narratives refreshed to reflect attachment freshness and session-context safety
+- governance/state synchronization and decision records for the hardening model
+
+Primary evidence:
+
+- `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md`
+- `docs/reports/2026-03-06-rp1-msf-adversarial-attachment-and-session-hardening.md`
+- `examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld`
+- `examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld`
+- `docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
+- `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
 
 Status: Completed. No queued follow-on work orders remain in the current approved sequence.
