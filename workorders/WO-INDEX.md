@@ -212,3 +212,11 @@ Drift governance and follow-on WO trigger criteria:
 ### RP1/MSF Adversarial Hardening Wave (WO-0139)
 
 - `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md` — [COMPLETED] Add fail-closed RP1/MSF proof for stale attachment traversal and expired/revoked session-context replay without expanding the UM core contract (P1)
+
+### K2B Concept Integration Traceability (WO-0140)
+
+- `docs/workorders/WO-0140-k2b-concept-integration-transfer-map.md` — [COMPLETED] Create a consolidated transfer map showing how the recent concept-integration wave materialized from research and blueprint inputs into integration guidance, journeys, and proof surfaces (P1)
+
+### Metaverse Portaling Integration (WO-0141)
+
+- `docs/workorders/WO-0141-metaverse-portaling-integration-and-guidance-refresh.md` — [COMPLETED] Make portaling explicit as the cross-platform movement model for the metaverse lane, journey language, and teaching surfaces without changing the UM core contract (P1)

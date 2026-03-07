@@ -27,7 +27,7 @@ Outputs:
 - `J06` Public profile projection -> `journeyPublicProfileProjection`
 - `J07` RP1 spatial fabric projection -> `journeyRp1SpatialFabricProjection`
 - `J08` Smart-glasses consent enforcement -> `journeySmartGlassesConsentEnforcement`
-- `J09` Metaverse cross-world projection -> `journeyMetaverseCrossworldProjection`
+- `J09` Metaverse portaling and cross-world projection -> `journeyMetaverseCrossworldProjection`
 - `J10` Multi-provider personhood coexistence -> `journeyMultiProviderPersonhood`
 - `J11` OMATrust attestation interoperability -> `journeyOmaTrustInteroperability`
 - `J12` Portable Identity Profile XR projection and consent behavior -> `journeyPortableIdentityProfileProjection`

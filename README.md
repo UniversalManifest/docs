@@ -61,6 +61,7 @@ Canonical repo path: `<repo-root>`
   - [`paragraph.md`](explainers/paragraph.md) — One-paragraph explainer
   - [`one-pager.md`](explainers/one-pager.md) — One-page explainer
   - [`full-briefing.md`](explainers/full-briefing.md) — Full briefing document
+  - [`metaverse-portaling.md`](explainers/metaverse-portaling.md) — Explainer for cross-platform portaling with UM as the portable envelope
   - [`agent-briefing.md`](explainers/agent-briefing.md) — AI agent briefing
   - [`animation-briefing.md`](explainers/animation-briefing.md) — Animation briefing
 - [`docs/scripts/`](scripts/) — Animation scripts
@@ -110,6 +111,8 @@ Canonical repo path: `<repo-root>`
 ## Reports
 
 - [`docs/reports/`](reports/) — Project reports directory (audits, status summaries, evidence packs, and verification reports)
+- [`docs/reports/2026-03-06-k2b-concept-integration-transfer-map.md`](reports/2026-03-06-k2b-concept-integration-transfer-map.md) — Consolidated map of how the recent concept-integration wave moved from research and blueprint into integration guidance, journeys, and proof
+- [`docs/reports/2026-03-06-metaverse-portaling-integration-note.md`](reports/2026-03-06-metaverse-portaling-integration-note.md) — Clarifies portaling as the cross-platform movement model for the metaverse lane and shows where that concept landed in repo guidance
 - [`docs/reports/2026-03-01-spec-vs-implementation-boundary-audit.md`](reports/2026-03-01-spec-vs-implementation-boundary-audit.md) — Spec vs implementation boundary audit
 - [`docs/reports/2026-03-01-project-completeness-and-vision-audit.md`](reports/2026-03-01-project-completeness-and-vision-audit.md) — Project completeness and vision audit
 - [`docs/reports/2026-03-01-documentation-freshness-audit.md`](reports/2026-03-01-documentation-freshness-audit.md) — Documentation freshness audit

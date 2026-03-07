@@ -10,11 +10,11 @@ Universal Manifest is explicitly descended from the **Metaverse Universal Manife
 
 - **Source document:** `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`
 
-The MUM concept proposed a portable manifest format for metaverse cross-world identity, asset portability, and social graph exchange. It defined the foundational idea of a single document that could carry identity references, capability claims, and consent controls between virtual worlds.
+The MUM concept proposed a portable manifest format for metaverse cross-world identity, asset portability, and social graph exchange. It defined the foundational idea of a single document that could carry identity references, capability claims, and consent controls between virtual worlds. In practical terms, this is the **portaling** problem: moving between different platforms while bringing identity, content references, and policy state with you.
 
 Universal Manifest took the MUM concept and broadened it into a **cross-domain standard**. The key evolution:
 
-- **MUM** was scoped to metaverse applications: cross-world identity, avatar portability, inventory references, and social graph sharing.
+- **MUM** was scoped to metaverse applications: cross-world identity, avatar portability, inventory references, social graph sharing, and the portaling experience between distinct worlds.
 - **UM** generalizes the same document shape to work across any domain boundary: social platforms, IoT/edge devices, smart glasses, spatial computing, proof of personhood, healthcare, education, supply chain, and more.
 
 The lineage is recorded in three project source-of-truth documents:

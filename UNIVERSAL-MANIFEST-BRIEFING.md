@@ -459,7 +459,7 @@ The repository includes a rich set of example manifests that demonstrate the sta
 - `display-envelope-manifest.jsonld` -- minimal display without DID dependency
 
 **Integration lane stubs:**
-- `metaverse-crossworld-profile-manifest.jsonld` -- cross-world identity portability
+- `metaverse-crossworld-profile-manifest.jsonld` -- metaverse portaling and cross-world identity portability
 - `rp1-spatial-fabric-manifest.jsonld` -- spatial anchoring and place graph
 - `smart-glasses-consent-allowed-manifest.jsonld` -- smart glasses consent (allowed)
 - `smart-glasses-consent-denied-manifest.jsonld` -- smart glasses consent (denied)

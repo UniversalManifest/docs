@@ -104,6 +104,7 @@ Lineage source:
 Strategic direction:
 
 - Keep metaverse portability as a first-class integration lane while positioning Universal Manifest as a broader cross-domain standard.
+- Treat **portaling** as the concrete metaverse portability experience: a subject jumps between different worlds or platforms while the manifest carries the identity, content pointers, and policy state that the destination surface is allowed to project.
 - Add an explicit integration lane for **RP1 spatial fabric** use cases (spatial context, place anchoring, and cross-world portability).
 - Add an explicit integration lane for **smart-glasses social layer** use cases, including:
   - face-visibility permissions for recordings
