@@ -220,3 +220,8 @@ Drift governance and follow-on WO trigger criteria:
 ### Metaverse Portaling Integration (WO-0141)
 
 - `docs/workorders/WO-0141-metaverse-portaling-integration-and-guidance-refresh.md` — [COMPLETED] Make portaling explicit as the cross-platform movement model for the metaverse lane, journey language, and teaching surfaces without changing the UM core contract (P1)
+
+### Ecosystem Expansion & Architecture Research (WO-0142 through WO-0143)
+
+- `docs/workorders/WO-0142-payment-handles-and-fiat-crypto-gateway-integration.md` — [NOT_STARTED] Create explicit standard pointers/overlays for fiat (Stripe/PayPal) and crypto gateways, establishing universal payment handle integration without leaking financial data (P1)
+- `docs/workorders/WO-0143-private-encrypted-inline-shards-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline shards, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)

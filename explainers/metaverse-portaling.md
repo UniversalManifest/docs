@@ -1,9 +1,9 @@
-# Universal Manifest Explainer: Metaverse Portaling
+# Metaverse Universal Manifest (MUM) Explainer: Portaling
 
-## Video 1: "Jumping Worlds with Your Stuff" (The Metaverse Portaling Concept)
+## Video 1: "Jumping Worlds with Your Stuff" (The MUM Concept)
 
 **Target Audience:** Creators, players, and developers interested in interoperable virtual worlds.
-**Goal:** Explain Universal Manifest as the portable envelope that lets a person jump between different platforms while carrying allowed identity, avatar, inventory, and policy state.
+**Goal:** Explain the Metaverse Universal Manifest (MUM) as the specific portable envelope that lets a person jump between different platforms while carrying onboarding projection, consent propagation, compliance proofs, social reputation, and preference bundles.
 
 ---
 
@@ -13,33 +13,35 @@
 - **The Result:** The moment she arrives, she loses everything. She's downgraded to a default grey avatar. Her jacket is gone. Her sword is gone. Her friends list is empty.
 - **Narrative (Voiceover):** "We've all been there. You build your identity, collect your gear, and make friends in one virtual world... but the moment you jump to another platform, you start completely from scratch. The metaverse is broken into silos. You can't take *you* with you."
 
-### Scene 2: The Solution - Universal Manifest (0:30 - 1:15)
-- **Visuals:** Rewind time. Nova is back in Neon City. A glowing, floating "Capsule" (or envelope) appears next to her: The Universal Manifest.
-- **Action:** We peek inside the capsule. It contains simple, readable building blocks:
-  - **Identity (Subject):** Nova's universal ID.
-  - **Pointers:** Links to her custom Avatar, her Inventory, and her Social Graph.
-  - **Consents:** Clear privacy rules (e.g., "Allow public profile", "Deny voice capture").
-  - **Shards:** A "Cross-World Profile" showing her home world and trusted destinations.
-- **Narrative (Voiceover):** "Enter the Universal Manifest. It's not a new platform or a centralized database. It's a standard, portable digital envelope. It is a verifiable capsule that holds pointers to your avatar, your inventory, your profile, and your privacy settings."
+### Scene 2: The Solution - Metaverse Universal Manifest (MUM) (0:30 - 1:15)
+- **Visuals:** Rewind time. Nova is back in Neon City. A glowing, floating "Capsule" (or envelope) appears next to her: The Metaverse Universal Manifest, or MUM.
+- **Action:** We peek inside the capsule. It contains simple, readable building blocks covering the five core MUM scenarios:
+  - **Identity & Asset Projection:** Nova's global ID and Avatar/Inventory pointers.
+  - **Consent Propagation:** Clear privacy rules (e.g., "Allow public profile", "Deny voice capture").
+  - **Compliance Transactions:** Proof that she meets age or entry requirements.
+  - **Social & Reputation Portability:** Links to her friends list and gathered trust scores.
+  - **Preferences Bundle:** Her saved interface settings and accessibility needs.
+- **Narrative (Voiceover):** "Enter the Metaverse Universal Manifest, or MUM for short. It's not a new platform or a centralized database. It's a standard, portable digital envelope specifically designed for virtual worlds. It is a verifiable capsule that holds your identity projection, consent policies, compliance proofs, social reputation, and preference bundles."
 
 ### Scene 3: The Portaling Experience (1:15 - 2:00)
-- **Visuals:** Nova steps into the portal to "Fantasy Realm" again, but this time, her Universal Manifest capsule travels with her.
-- **Action:** As she arrives, Fantasy Realm instantly "reads" the envelope:
-  1. It reads the **Avatar Pointer** and loads her custom character model if the destination supports it.
-  2. It reads her **Inventory Pointer** and restores compatible items.
-  3. It checks her **Consents**. The platform asks to turn on her mic, but her UM says `voiceCapture = denied`, so the platform automatically mutes her.
-  4. If one cosmetic item is unsupported, the platform falls back gracefully instead of failing the whole transfer.
-- **Narrative (Voiceover):** "When you jump to a new world, the Universal Manifest acts as your digital passport. The new platform reads your manifest, resolves the pointers it understands, and applies your policy settings immediately. Best of all, it respects your boundaries the moment you arrive."
+- **Visuals:** Nova steps into the portal to "Fantasy Realm" again, but this time, her MUM capsule travels with her.
+- **Action:** As she arrives, Fantasy Realm instantly "reads" the envelope across all MUM parameters:
+  1. **Onboarding Projection**: It loads her custom character model and restores compatible inventory.
+  2. **Consent Propagation**: The platform asks to turn on her mic, but MUM says `voiceCapture = denied`, so it automatically mutes her.
+  3. **Social Portability**: Her friends list populates with familiar faces already in this realm.
+  4. **Compliance Checking**: It verifies her age gate requirements silently through the manifest.
+  5. If one cosmetic item is unsupported, the platform falls back gracefully instead of failing the whole jump.
+- **Narrative (Voiceover):** "When you jump to a new world, MUM acts as your digital passport. The new platform reads your manifest, projects your identity, propagates your consent choices, and maintains your social reputation seamlessly. Best of all, it respects your true boundaries the moment you arrive."
 
 ### Scene 4: How It Works Under the Hood (2:00 - 2:30)
-- **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code. We highlight a cryptographically secure signature locking the code.
-- **Action:** An animated lock snaps shut on the document. A stamp says "Verified by Cryptography. No Central Authority Required."
-- **Narrative (Voiceover):** "Under the hood, the Universal Manifest is a simple JSON document, signed with production-grade cryptography. That means the target world knows who arrived, what it is allowed to project, and that the envelope has not been tampered with, all without needing a central corporate server."
+- **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code, highlighting a `crossWorldProfile` shard. We show a cryptographically secure signature locking the code, plus freshness TTL timers.
+- **Action:** An animated lock snaps shut on the document. A stamp says "Verified by Cryptography. No Central Authority Required. Cache Freshness Enforced."
+- **Narrative (Voiceover):** "Under the hood, MUM is a simple JSON document, signed with production-grade cryptography. That means the target world knows exactly who arrived, what they are allowed to project, and that the envelope hasn't been tampered with. Built-in 'freshness' TTL timers ensure outdated policies are never accidentally applied."
 
 ### Scene 5: The Future of Portability (2:30 - 3:00)
-- **Visuals:** Montage of different scenarios. The same glowing envelope being scanned at a virtual concert, a smart-glasses AR overlay in a physical coffee shop, and a decentralized web forum.
-- **Action:** The text "Build Your Universal Manifest Today" appears on screen with a link to `universalmanifest.net`.
-- **Narrative (Voiceover):** "Whether you're portaling between virtual worlds, moving between social networks, or stepping into AR, the Universal Manifest helps ensure your digital life belongs to you. It carries pointers, policy, and portable identity state so compatible systems can meet you where you arrive."
+- **Visuals:** Montage of different scenarios. The same glowing MUM envelope being scanned at a virtual concert, maintaining social reputation in a competitive game, and proving compliance at a virtual storefront.
+- **Action:** The text "Build Your Metaverse Universal Manifest Today" appears on screen with a link to `universalmanifest.net`.
+- **Narrative (Voiceover):** "Whether you're portaling between gaming environments, moving through spatial web platforms, or shopping in virtual commerce zones, MUM guarantees your digital life belongs to you. It carries your complete identity, policy, and compliance state so any compatible world can meet you exactly where you arrive."
 
 ---
 
