@@ -15,7 +15,7 @@ Implement the 4 "Getting Started" scenarios (GS-01 through GS-04) that introduce
 
 ## Why this work matters
 
-Getting Started scenarios are the first demo-able milestone. When GS-01 through GS-04 are complete, the sandbox can be shown to stakeholders and potential adopters. These scenarios demonstrate core concepts (validation, shards, forward compatibility, resolution) without requiring cryptographic features.
+Getting Started scenarios are the first demo-able milestone. When GS-01 through GS-04 are complete, the sandbox can be shown to stakeholders and potential adopters. These scenarios demonstrate core concepts (validation, facets, forward compatibility, resolution) without requiring cryptographic features.
 
 ## Scope
 
@@ -30,12 +30,12 @@ Implement 4 scenario definition files with full step definitions, panel states, 
 - **Actions:** Steps 3-6 call `assertUniversalManifestV01` field-by-field logic; step 6 calls `assertUniversalManifestV01Fresh`
 - **Modifiable:** Yes -- user can remove fields or change dates to see validation fail
 
-### GS-02: Manifest with Shards (6 steps)
+### GS-02: Manifest with Facets (6 steps)
 
-- **Fixture:** `examples/v0.1/manifest-with-shards.jsonld`
-- **Steps:** Show manifest -> structural validation -> shard type checks -> read profile shard -> read device shard -> summary
-- **Actions:** Step 2 calls `assertUniversalManifestV01`; step 3 validates each shard's `@type`
-- **Modifiable:** Yes -- user can change shard types or change `shards` to non-array
+- **Fixture:** `examples/v0.1/manifest-with-facets.jsonld`
+- **Steps:** Show manifest -> structural validation -> facet type checks -> read profile facet -> read device facet -> summary
+- **Actions:** Step 2 calls `assertUniversalManifestV01`; step 3 validates each facet's `@type`
+- **Modifiable:** Yes -- user can change facet types or change `facets` to non-array
 
 ### GS-03: Forward Compatibility (5 steps)
 
@@ -54,7 +54,7 @@ Implement 4 scenario definition files with full step definitions, panel states, 
 ## Execution tasks
 
 - [ ] Create `site/src/scripts/sandbox/scenarios/getting-started/gs-01-first-manifest.ts`
-- [ ] Create `site/src/scripts/sandbox/scenarios/getting-started/gs-02-manifest-with-shards.ts`
+- [ ] Create `site/src/scripts/sandbox/scenarios/getting-started/gs-02-manifest-with-facets.ts`
 - [ ] Create `site/src/scripts/sandbox/scenarios/getting-started/gs-03-forward-compatibility.ts`
 - [ ] Create `site/src/scripts/sandbox/scenarios/getting-started/gs-04-resolver-lookup.ts`
 - [ ] Register all 4 in `site/src/scripts/sandbox/scenarios/index.ts`
@@ -69,7 +69,7 @@ Implement 4 scenario definition files with full step definitions, panel states, 
 ## Acceptance criteria
 
 - [ ] GS-01 runs end-to-end: 7 steps, validation passes, bubble text explains each step
-- [ ] GS-02 runs end-to-end: 6 steps, shard validation works, profile shard is rendered
+- [ ] GS-02 runs end-to-end: 6 steps, facet validation works, profile facet is rendered
 - [ ] GS-03 runs end-to-end: 5 steps, unknown fields are shown and ignored
 - [ ] GS-04 runs end-to-end: 6 steps, simulated resolver flow with real validation
 - [ ] Editing the manifest in GS-01 and removing `@context` produces "Missing @context" error at the correct step

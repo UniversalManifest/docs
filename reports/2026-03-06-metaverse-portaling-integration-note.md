@@ -76,7 +76,7 @@ The lane continues to rely on:
 - `metaverse.socialGraph`
 - `metaverse.reputation`
 - `metaverse.complianceProof`
-- `crossWorldProfile` shard content
+- `crossWorldProfile` facet content
 - metaverse consent keys
 
 ### C. Graceful degradation is part of the contract story

@@ -14,8 +14,8 @@
 
 The manifest's structure is visible as sections:
 
-- **Public profile** shard: display name ("Sam Torres"), bio, avatar thumbnail. A small edit icon beside it.
-- **Portfolio** shard: a grid of artwork thumbnails. Sam drags a new piece -- a photograph titled "Neon Alley" -- into the grid. It slots in with a satisfying snap.
+- **Public profile** facet: display name ("Sam Torres"), bio, avatar thumbnail. A small edit icon beside it.
+- **Portfolio** facet: a grid of artwork thumbnails. Sam drags a new piece -- a photograph titled "Neon Alley" -- into the grid. It slots in with a satisfying snap.
 - **Consents panel:** A column of toggle switches. Sam scans them:
   - `publicDisplay: allowed` (green) -- unchanged.
   - `analytics.proofOfPlay: allowed` (green) -- unchanged.
@@ -27,7 +27,7 @@ The manifest's structure is visible as sections:
 
 Finally, a small cloud icon pulses -- the manifest syncs to the resolver at `myum.net`. The UMID is visible at the top: `urn:uuid:4a7c...` with a QR code.
 
-**Narration:** "Morning. Sam opens their manifest dashboard. They add a new piece to their portfolio shard, grant display permission to a gallery they are visiting today, and double-check their smart-glasses consent -- face recording is set to friends only, voice recording is denied. They save. The manifest updates, the expiration refreshes, and the resolver syncs. Took about thirty seconds."
+**Narration:** "Morning. Sam opens their manifest dashboard. They add a new piece to their portfolio facet, grant display permission to a gallery they are visiting today, and double-check their smart-glasses consent -- face recording is set to friends only, voice recording is denied. They save. The manifest updates, the expiration refreshes, and the resolver syncs. Took about thirty seconds."
 
 **On-screen text:** `Update. Consent. Sync.`
 
@@ -50,9 +50,9 @@ The manifest arrives. The system opens it and runs through three checks, visuali
 
 1. **TTL check:** `expiresAt` is tomorrow. Green checkmark. `Fresh.`
 2. **Consent check:** `publicDisplay: allowed`. Green checkmark. `Permitted.`
-3. **Content policy match:** The gallery's venue manifest has `safeMode: PG-13`. Sam's portfolio shard lists `"contentRating": "PG-13"`. Green checkmark. `Compatible.`
+3. **Content policy match:** The gallery's venue manifest has `safeMode: PG-13`. Sam's portfolio facet lists `"contentRating": "PG-13"`. Green checkmark. `Compatible.`
 
-Cut back to the gallery. Three large screens on the walls light up, each showing a different piece from Sam's portfolio shard -- including "Neon Alley," the piece they added this morning. Sam looks up, sees their work, and smiles. Jordan gives a thumbs-up from across the room.
+Cut back to the gallery. Three large screens on the walls light up, each showing a different piece from Sam's portfolio facet -- including "Neon Alley," the piece they added this morning. Sam looks up, sees their work, and smiles. Jordan gives a thumbs-up from across the room.
 
 Sam did not fill out a form. Sam did not email files. Sam did not sign a release. It just worked.
 
@@ -70,7 +70,7 @@ Sam did not fill out a form. Sam did not email files. Sam did not sign a release
 
 Sam taps the button. A prompt appears: "Share your UMID?" Sam confirms. The UMID is sent.
 
-Cut to: the app's perspective. It fetches the manifest from the resolver. It opens the `publicProfile` shard and reads:
+Cut to: the app's perspective. It fetches the manifest from the resolver. It opens the `publicProfile` facet and reads:
 
 - `displayName: "Sam Torres"`
 - `bio: "Mixed-media artist and toolmaker. Street photography, generative visuals, neighborhood rituals."`
@@ -82,7 +82,7 @@ But the app also checks what it cannot access. It looks for analytics consent: `
 
 Sam reviews the pre-filled profile. Everything looks right. They tap "Confirm." Done.
 
-**Narration:** "At a cafe, Sam tries a new social platform. Instead of filling out another profile form, they share their UMID. The app fetches their manifest, reads the public profile shard, and pre-fills everything -- name, bio, avatar. The things Sam has not consented to -- analytics tracking, search indexing -- are not even requested. Sam reviews, confirms, and they are done."
+**Narration:** "At a cafe, Sam tries a new social platform. Instead of filling out another profile form, they share their UMID. The app fetches their manifest, reads the public profile facet, and pre-fills everything -- name, bio, avatar. The things Sam has not consented to -- analytics tracking, search indexing -- are not even requested. Sam reviews, confirms, and they are done."
 
 **On-screen text:** `No forms. No re-entry. Boundaries respected.`
 
@@ -125,7 +125,7 @@ Today's activity:
 - [auto-denied]         ar.recording.faceVisible           8:31 PM  (VR Recording System)
 ```
 
-Sam scans the list. Three systems accessed their profile today. One app read their public shard. Two consent requests were auto-denied because the permissions were not set or were explicitly restricted.
+Sam scans the list. Three systems accessed their profile today. One app read their public facet. Two consent requests were auto-denied because the permissions were not set or were explicitly restricted.
 
 Sam notices that Sunset Gallery is on the list -- they visited today, and it worked great. They think about tomorrow: they are visiting a different gallery. They open the consents panel and add a new entry: "Night Owl Gallery -- display permission: allowed." The toggle clicks green.
 
@@ -133,7 +133,7 @@ The manifest updates. The `issuedAt` refreshes. The resolver syncs. The countdow
 
 Sam closes the laptop.
 
-**Narration:** "Before bed, Sam checks their manifest's activity log. Three venues accessed their profile today. One app read their public shard. Two consent requests were auto-denied -- one for analytics tracking, one for face recording by someone outside their friend list. Sam adjusts a consent for tomorrow's gallery visit, and the manifest updates instantly across all systems."
+**Narration:** "Before bed, Sam checks their manifest's activity log. Three venues accessed their profile today. One app read their public facet. Two consent requests were auto-denied -- one for analytics tracking, one for face recording by someone outside their friend list. Sam adjusts a consent for tomorrow's gallery visit, and the manifest updates instantly across all systems."
 
 **On-screen text:** `See who accessed what. Adjust anytime.`
 
@@ -167,9 +167,9 @@ The Universal Manifest wordmark appears below. The tagline appears. The URL fade
 - Anonymous characters populate Scenes 4 (VR attendees) and 3 (cafe background).
 
 ### Technical accuracy
-- **Scene 1 (Morning):** The manifest structure shown matches the real spec: `shards` array with named shards, `consents` array with `@type: "um:Consent"`, `issuedAt`/`expiresAt` timestamps, UMID as `@id`, resolver sync to `myum.net`.
+- **Scene 1 (Morning):** The manifest structure shown matches the real spec: `facets` array with named facets, `consents` array with `@type: "um:Consent"`, `issuedAt`/`expiresAt` timestamps, UMID as `@id`, resolver sync to `myum.net`.
 - **Scene 2 (Gallery):** The gallery's system fetches by UMID, validates TTL (expiresAt), checks consent (`publicDisplay: allowed`), and matches content policy (`safeMode: PG-13`). This matches the venue-edge-manifest and creator-public-capsule-manifest fixtures.
-- **Scene 3 (App):** The app reads the `publicProfile` shard (name, bio, avatar). Absent consents are denied by default -- this is the consent-default-deny pattern proven in Journey 10.
+- **Scene 3 (App):** The app reads the `publicProfile` facet (name, bio, avatar). Absent consents are denied by default -- this is the consent-default-deny pattern proven in Journey 10.
 - **Scene 4 (Metaverse):** Avatar and social data come from pointers (`metaverse.avatar`, `metaverse.socialGraph`). Voice capture consent (`metaverse.voiceCapture`) and face visibility are from the metaverse and smart-glasses fixtures. The "friends only" granularity is modeled as a consent value -- real fixtures use `"allowed"`, `"denied"`, and `"restricted"`.
 - **Scene 5 (Night):** The activity log references manifests by UMID, not by content. Auto-denied entries reflect the consent-default-deny behavior. The resolver syncs when the manifest is updated.
 

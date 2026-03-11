@@ -124,7 +124,7 @@ Deliverables:
 
 Scope:
 - Required baseline fields and flow.
-- Suggested shard names for profile, avatar, capabilities, device-state, policy.
+- Suggested facet names for profile, avatar, capabilities, device-state, policy.
 - Suggested pointer names for avatar, wearables, policy, proof endpoints.
 - Suggested consent keys for capture, disclosure, voice, analytics.
 - Clear normative boundary statement.
@@ -197,7 +197,7 @@ Deliverables:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
 - Add keys for:
   - avatar and wearables pointers,
-  - translation/profile metadata shards,
+  - translation/profile metadata facets,
   - XR privacy/consent key families.
 
 Acceptance criteria:
@@ -262,7 +262,7 @@ Question:
 
 Research tasks:
 1. Evaluate payload packaging models:
-   - encrypted shard payload,
+   - encrypted facet payload,
    - encrypted pointer payload,
    - detached protected object with UM metadata references.
 2. Evaluate key-distribution patterns:
@@ -335,7 +335,7 @@ Question:
 
 Research tasks:
 1. Compare candidate format anchors (for example VRM/GLTF families and related metadata conventions).
-2. Define translation shard schema candidates:
+2. Define translation facet schema candidates:
    - skeleton profile id,
    - morph target set declarations,
    - scale and locomotion hints,
@@ -346,7 +346,7 @@ Output artifact:
 - `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-AVATAR-TRANSLATION-RESEARCH.md`
 
 Promotion gate:
-- Promote only if schema can be represented as optional shard extensions without core-field bloat.
+- Promote only if schema can be represented as optional facet extensions without core-field bloat.
 
 ## 7) Integrated timeline and sequencing
 
@@ -485,7 +485,7 @@ Use this exact sequence whenever new concept specifications are introduced:
    - `partial` (satisfiable with guidance/fixtures/journeys),
    - `gap` (requires new research/profile/spec work).
 4. For every requirement, attach one concrete application example in UM terms:
-   - manifest fields/shards/pointers,
+   - manifest fields/facets/pointers,
    - consent/policy behavior,
    - verification expectations.
 5. Route each requirement to a workstream:

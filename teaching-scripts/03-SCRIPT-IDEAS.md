@@ -24,13 +24,13 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ### TS-002: Inside the Pod
 
-**Pitch**: The pod from TS-001 returns, but now it opens up to reveal its internal structure. The viewer learns that a manifest has layers: a header (who it is, when it was made), an integrity layer (signatures), and a payload (shards, claims, consents, pointers). Each layer is shown as a colored band inside the pod. The viewer learns the word "envelope" without needing to know JSON-LD.
+**Pitch**: The pod from TS-001 returns, but now it opens up to reveal its internal structure. The viewer learns that a manifest has layers: a header (who it is, when it was made), an integrity layer (signatures), and a payload (facets, claims, consents, pointers). Each layer is shown as a colored band inside the pod. The viewer learns the word "envelope" without needing to know JSON-LD.
 
 **Pod journey**: Starts resting at center. The shell becomes semi-transparent. Layers are revealed from outside in: header (blue), integrity (amber), payload (green). Each layer gets a one-word label. The shell becomes opaque again -- the pod is a single unit, but now the viewer knows it has structure.
 
 **Duration**: 30s
 **Complexity**: Simple
-**Concepts**: `manifest-envelope`, `shards`, `claims`, `consents`, `pointers`
+**Concepts**: `manifest-envelope`, `facets`, `claims`, `consents`, `pointers`
 
 ---
 
@@ -86,13 +86,13 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ### TS-007: One Pod, Three Readers
 
-**Pitch**: A single pod arrives at a crossroads where three different systems wait: a social platform, a venue display, and a spatial computing engine. Each system picks up the pod, reads it, and sees something different -- the social platform sees the profile shard, the venue display sees the public capsule shard, the spatial engine sees the spatial anchors shard. But they all read the same pod. The viewer learns about projection: one manifest, many views.
+**Pitch**: A single pod arrives at a crossroads where three different systems wait: a social platform, a venue display, and a spatial computing engine. Each system picks up the pod, reads it, and sees something different -- the social platform sees the profile facet, the venue display sees the public capsule facet, the spatial engine sees the spatial anchors facet. But they all read the same pod. The viewer learns about projection: one manifest, many views.
 
-**Pod journey**: Arrives at center from the left. Three paths diverge to three systems. The pod is "projected" through a prism shape at the crossroads -- three colored beams emerge, each carrying a labeled shard to its destination system. The pod remains at the center, unchanged.
+**Pod journey**: Arrives at center from the left. Three paths diverge to three systems. The pod is "projected" through a prism shape at the crossroads -- three colored beams emerge, each carrying a labeled facet to its destination system. The pod remains at the center, unchanged.
 
 **Duration**: 45s
 **Complexity**: Medium
-**Concepts**: `projection`, `shards`, `shard-composition`
+**Concepts**: `projection`, `facets`, `facet-composition`
 
 ---
 
@@ -160,15 +160,15 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ## Category D: "It Is More Than It Looks" (Intermediate/Advanced -- Composition)
 
-### TS-013: Shards -- The Compartments Inside
+### TS-013: Facets -- The Compartments Inside
 
-**Pitch**: The pod opens to reveal multiple compartments (shards), each a different color and labeled with a name: "publicProfile," "deviceRegistration," "crossWorldProfile." Each shard is a self-contained package that can be read independently. The viewer learns that shards are the composition mechanism -- a single manifest can carry data for many different purposes without those purposes conflicting.
+**Pitch**: The pod opens to reveal multiple compartments (facets), each a different color and labeled with a name: "publicProfile," "deviceRegistration," "crossWorldProfile." Each facet is a self-contained package that can be read independently. The viewer learns that facets are the composition mechanism -- a single manifest can carry data for many different purposes without those purposes conflicting.
 
-**Pod journey**: Starts resting. Shell becomes transparent. Inside, multiple colored blocks (shards) are visible, neatly stacked. Each block rises and gets labeled. Then each block briefly expands to show its contents (a miniature data display). The blocks return to their stack. The shell becomes opaque again. The pod is a single document, but it contains multitudes.
+**Pod journey**: Starts resting. Shell becomes transparent. Inside, multiple colored blocks (facets) are visible, neatly stacked. Each block rises and gets labeled. Then each block briefly expands to show its contents (a miniature data display). The blocks return to their stack. The shell becomes opaque again. The pod is a single document, but it contains multitudes.
 
 **Duration**: 45s
 **Complexity**: Medium
-**Concepts**: `shards`, `shard-composition`
+**Concepts**: `facets`, `facet-composition`
 
 ---
 
@@ -212,13 +212,13 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ### TS-017: Social Profile -- One Manifest, Every Platform
 
-**Pitch**: A creator named Jules publishes a single manifest. That manifest is picked up by Mastodon (which reads the ActivityPub actor pointer), by a venue display screen (which reads the publicProfile shard), and by a web profile page (which reads the full profile shard and renders it as HTML). Three completely different systems, three completely different projections, one single manifest. The viewer understands multi-platform identity.
+**Pitch**: A creator named Jules publishes a single manifest. That manifest is picked up by Mastodon (which reads the ActivityPub actor pointer), by a venue display screen (which reads the publicProfile facet), and by a web profile page (which reads the full profile facet and renders it as HTML). Three completely different systems, three completely different projections, one single manifest. The viewer understands multi-platform identity.
 
-**Pod journey**: Jules creates the pod (being-created). The pod is published. Three systems approach: Mastodon (elephant icon), a venue display (screen icon), and a web browser (globe icon). Each system passes the pod through a prism. Each prism produces a different colored beam carrying a different shard/pointer. Each system renders its own view of Jules's identity.
+**Pod journey**: Jules creates the pod (being-created). The pod is published. Three systems approach: Mastodon (elephant icon), a venue display (screen icon), and a web browser (globe icon). Each system passes the pod through a prism. Each prism produces a different colored beam carrying a different facet/pointer. Each system renders its own view of Jules's identity.
 
 **Duration**: 60s
 **Complexity**: Complex
-**Concepts**: `projection`, `shards`, `pointers`, `cross-system-handoff`
+**Concepts**: `projection`, `facets`, `pointers`, `cross-system-handoff`
 
 ---
 
@@ -238,7 +238,7 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 **Pitch**: A cafe enrolls a display device (an NVIDIA Shield). The venue edge server issues a manifest for the device: its identity, capabilities, content policy, and operational pointers. The display receives the manifest, caches it, and uses it to determine what content to show and what to block. When the venue updates the manifest (new policy), a push signal triggers the display to fetch the new version. The old manifest expires via TTL.
 
-**Pod journey**: The venue server creates a device pod (being-created). The pod travels to the display device. The display caches the pod (a copy animation). The pod controls what the display shows (content cards appear/disappear based on policy shards). Time passes. The venue creates a new pod. A signal pushes to the display. The display fetches the new pod. The old pod's TTL expires (amber to red, dissolve). The new pod takes over.
+**Pod journey**: The venue server creates a device pod (being-created). The pod travels to the display device. The display caches the pod (a copy animation). The pod controls what the display shows (content cards appear/disappear based on policy facets). Time passes. The venue creates a new pod. A signal pushes to the display. The display fetches the new pod. The old pod's TTL expires (amber to red, dissolve). The new pod takes over.
 
 **Duration**: 90s
 **Complexity**: Complex
@@ -248,13 +248,13 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 
 ### TS-020: Metaverse -- Crossing Virtual Worlds
 
-**Pitch**: Nova exists in World A with an avatar, inventory, reputation, and social graph. Nova wants to move to World B. Their manifest carries a cross-world profile shard listing all supported worlds, plus pointers to avatar data, inventory, and social connections. World B resolves the manifest, verifies the signature, reads the cross-world profile shard, imports Nova's reputation, restores inventory references, and applies consent gates. Nova appears in World B with their identity intact.
+**Pitch**: Nova exists in World A with an avatar, inventory, reputation, and social graph. Nova wants to move to World B. Their manifest carries a cross-world profile facet listing all supported worlds, plus pointers to avatar data, inventory, and social connections. World B resolves the manifest, verifies the signature, reads the cross-world profile facet, imports Nova's reputation, restores inventory references, and applies consent gates. Nova appears in World B with their identity intact.
 
-**Pod journey**: Nova's pod is visible in World A (a blue-tinted environment with the character's avatar). Nova approaches the world boundary. The pod travels through a portal (a shimmering membrane between worlds). World B (green-tinted) receives the pod. Verification runs (green glow). The cross-world shard is read. The prism effect shows: avatar data flows to the rendering engine, inventory data flows to the item system, social graph flows to the friends list. Nova materializes in World B fully formed.
+**Pod journey**: Nova's pod is visible in World A (a blue-tinted environment with the character's avatar). Nova approaches the world boundary. The pod travels through a portal (a shimmering membrane between worlds). World B (green-tinted) receives the pod. Verification runs (green glow). The cross-world facet is read. The prism effect shows: avatar data flows to the rendering engine, inventory data flows to the item system, social graph flows to the friends list. Nova materializes in World B fully formed.
 
 **Duration**: 90s
 **Complexity**: Complex
-**Concepts**: `cross-system-handoff`, `shards`, `pointers`, `projection`, `signature-verification`, `consent-enforcement`
+**Concepts**: `cross-system-handoff`, `facets`, `pointers`, `projection`, `signature-verification`, `consent-enforcement`
 
 ---
 
@@ -263,25 +263,25 @@ Scripts build on each other. A viewer who watches the beginner scripts first wil
 | ID | Title | Category | Duration | Complexity | Key Concepts |
 |----|-------|----------|----------|------------|--------------|
 | TS-001 | What Is a Universal Manifest? | A | 30s | Simple | envelope, portability |
-| TS-002 | Inside the Pod | A | 30s | Simple | envelope, shards, claims |
+| TS-002 | Inside the Pod | A | 30s | Simple | envelope, facets, claims |
 | TS-003 | The Expiration Clock | A | 30s | Simple | TTL, expiry |
 | TS-004 | Who Issued This? | A | 30s | Simple | envelope, signatures |
 | TS-005 | Crossing the Boundary | B | 45s | Medium | portability, handoff, verification |
 | TS-006 | The Resolver | B | 30s | Simple | resolution |
-| TS-007 | One Pod, Three Readers | B | 45s | Medium | projection, shards |
+| TS-007 | One Pod, Three Readers | B | 45s | Medium | projection, facets |
 | TS-008 | Handing Off Between Worlds | B | 60s | Medium | portability, handoff, projection |
 | TS-009 | The Signature Check | C | 60s | Medium | verification, tamper, TTL |
 | TS-010 | Offline Verification | C | 45s | Medium | offline verification |
 | TS-011 | The Tampered Manifest | C | 45s | Medium | tamper detection |
 | TS-012 | Revocation | C | 60s | Complex | revocation, verification |
-| TS-013 | Shards -- The Compartments | D | 45s | Medium | shards, composition |
+| TS-013 | Facets -- The Compartments | D | 45s | Medium | facets, composition |
 | TS-014 | Pointers -- The References | D | 45s | Medium | pointers |
 | TS-015 | Consent Gates | D | 45s | Medium | consents, enforcement |
 | TS-016 | Forward Compatibility | D | 30s | Simple | forward compatibility |
-| TS-017 | Social Profile | E | 60s | Complex | projection, shards, pointers |
+| TS-017 | Social Profile | E | 60s | Complex | projection, facets, pointers |
 | TS-018 | Smart Glasses | E | 60s | Complex | consents, enforcement |
 | TS-019 | IoT Device | E | 90s | Complex | device enrollment, TTL, claims |
-| TS-020 | Metaverse Crossing | E | 90s | Complex | handoff, shards, projection |
+| TS-020 | Metaverse Crossing | E | 90s | Complex | handoff, facets, projection |
 
 ---
 

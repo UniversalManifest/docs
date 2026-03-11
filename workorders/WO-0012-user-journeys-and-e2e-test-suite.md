@@ -38,7 +38,7 @@ Out of scope:
 
 ## Suggested journey set (starting point)
 
-1. **Issuer creates a manifest** (v0.1) with TTL, subject, shards/pointers.
+1. **Issuer creates a manifest** (v0.1) with TTL, subject, facets/pointers.
 2. **Consumer validates + ignores unknown fields** (forward compat).
 3. **Resolver lookup** (`myum.net/{UMID}` semantics): unknown → 404; known → 200 or redirect.
 4. **Device caching + logging**: cache full manifest “while in use”, persist only manifest `@id` references.

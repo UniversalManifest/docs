@@ -186,7 +186,7 @@ Example issuer payload (`v0.1`):
   "subject": "did:key:z6Mki...",
   "issuedAt": "2026-03-02T00:00:00Z",
   "expiresAt": "2026-03-02T12:00:00Z",
-  "shards": []
+  "facets": []
 }
 ```
 

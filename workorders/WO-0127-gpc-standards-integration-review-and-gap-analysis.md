@@ -9,7 +9,7 @@
 
 ## Objective
 
-Produce an exceptionally detailed, implementation-oriented assessment of the W3C Global Privacy Control (GPC) standard and determine exactly how Universal Manifest should integrate it, including overlap analysis, gap analysis, replacement candidates, and direct embedding options (including whether GPC should be modeled as a shard vs consent/signal layer).
+Produce an exceptionally detailed, implementation-oriented assessment of the W3C Global Privacy Control (GPC) standard and determine exactly how Universal Manifest should integrate it, including overlap analysis, gap analysis, replacement candidates, and direct embedding options (including whether GPC should be modeled as a facet vs consent/signal layer).
 
 ## Problem Statement
 
@@ -24,7 +24,7 @@ In scope:
 - Evaluation of direct integration patterns:
   - HTTP/runtime signal handling alignment (`Sec-GPC`, `navigator.globalPrivacyControl` semantics).
   - UM document-layer representation options.
-  - Shard model option vs consent/claim/pointer model option.
+  - Facet model option vs consent/claim/pointer model option.
 - Explicit recommendation on what should replace or supersede existing UM concepts (if any).
 - Drafting a final third-version synthesis with gaps closed and additional research where needed.
 
@@ -66,7 +66,7 @@ Supporting deliverables:
    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
 5. UM artifact overlap index:
    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
-6. Integration options decision memo (including shard vs non-shard recommendation):
+6. Integration options decision memo (including facet vs non-facet recommendation):
    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 
 Optional implementation-ready outputs (if confidence is high):
@@ -83,8 +83,8 @@ Optional implementation-ready outputs (if confidence is high):
 - Where are UM gaps relative to GPC?
 - Where does GPC leave gaps that UM can fill?
 - Should any current UM concepts be replaced by GPC-aligned concepts?
-- Can GPC be directly integrated as a shard, and should it?
-- If not shard-first, what is the preferred UM representation and why?
+- Can GPC be directly integrated as a facet, and should it?
+- If not facet-first, what is the preferred UM representation and why?
 - What migration path minimizes disruption and avoids semantic drift?
 
 ## Key source set
@@ -122,7 +122,7 @@ Relevant UM context anchors:
 - [x] All three review drafts (V1, V2, V3) are completed and materially different where expected.
 - [x] V3 includes explicit closure of every identified V2 gap.
 - [x] Normative reference crosswalk is complete and includes implications for UM architecture.
-- [x] Explicit recommendation provided for shard vs non-shard GPC integration.
+- [x] Explicit recommendation provided for facet vs non-facet GPC integration.
 - [x] Replacement/supersession candidates in UM are listed with rationale and risk.
 - [x] Deliverables are fully contained in `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/`.
 
@@ -140,7 +140,7 @@ Relevant UM context anchors:
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
 - 2026-03-05: UM overlap/gap matrix completed.
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
-- 2026-03-05: Integration options memo completed (including shard vs non-shard decision path).
+- 2026-03-05: Integration options memo completed (including facet vs non-facet decision path).
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 - 2026-03-05: Draft V2 completed (independent challenge pass with explicit gap list).
   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v2-secondary.md`

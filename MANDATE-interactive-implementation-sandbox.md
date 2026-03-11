@@ -52,7 +52,7 @@ Each scenario must be a **real, functioning implementation** — not a diagram, 
 The proposal must include a complete list of initial scenarios. These must cover the breadth of what Universal Manifest can do:
 
 - Basic manifest creation and validation (v0.1)
-- Manifest with shards and pointers
+- Manifest with facets and pointers
 - Signed manifest creation and verification (v0.2)
 - Resolver lookup (UMID to manifest)
 - Integration lanes: social profile, IoT device, metaverse identity, smart glasses consent, RP1 spatial fabric, OMATrust, DID + VC

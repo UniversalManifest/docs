@@ -10,7 +10,7 @@ Universal Manifest is a portable state-capsule specification. It is responsible 
 
 - document identity and lifecycle (`@id`, `manifestVersion`, `issuedAt`, `expiresAt`)
 - subject binding (`subject`)
-- composable state slices (`shards`)
+- composable state slices (`facets`)
 - machine-actionable state sections (`claims`, `consents`, `devices`, `pointers`)
 - optional signature (`signature`, profile-versioned)
 - compatibility semantics (unknown-field tolerance, extension points, version policy)

@@ -73,7 +73,7 @@ Scripts reference concepts using these controlled terms:
 |------|---------|
 | `manifest-envelope` | The core manifest structure (required fields) |
 | `portable-state` | The idea that a manifest travels between systems |
-| `shards` | Composable named sub-documents |
+| `facets` | Composable named sub-documents |
 | `pointers` | URL references to external data |
 | `claims` | Roles, permissions, verification assertions |
 | `consents` | Per-surface privacy controls |
@@ -85,7 +85,7 @@ Scripts reference concepts using these controlled terms:
 | `tamper-detection` | Detecting modified manifests |
 | `revocation` | Checking if a manifest has been invalidated |
 | `offline-verification` | Verifying without network access |
-| `shard-composition` | Multiple shards coexisting in one manifest |
+| `facet-composition` | Multiple facets coexisting in one manifest |
 | `consent-enforcement` | Consumers honoring consent gates |
 | `device-enrollment` | IoT/edge device registration |
 | `cross-system-handoff` | Manifest moving from one platform to another |

@@ -55,7 +55,7 @@ These are evolvable gaps, not architectural blockers.
   - Build one issuer pipeline and multiple consumer projections.
   - Enforce baseline parse + TTL + unknown-field tolerance on every surface.
 - Applied example:
-  - A headset app reads `metaverse.avatar` pointer and `crossWorldProfile` shard for full immersive render.
+  - A headset app reads `metaverse.avatar` pointer and `crossWorldProfile` facet for full immersive render.
   - A phone AR app only reads `ar.profile.public` pointer and `ar.overlay.presenceVisible` consent for lightweight overlay.
 
 ### 2) User ownership/control of data and identity security
@@ -87,14 +87,14 @@ These are evolvable gaps, not architectural blockers.
   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
   - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
 - Gap:
-  - No standardized encrypted-fragment/shard profile in UM core today.
+  - No standardized encrypted-fragment/facet profile in UM core today.
 - Implementation now:
   - Keep private data out of manifest body; use protected pointers and wallet-mediated retrieval.
   - Treat manifest as minimal public control plane plus references.
 - Change recommended:
   - Add a non-normative "Encrypted Fragment Profile" first, then standardize if adopter convergence appears.
 - Applied example:
-  - Public shard: `publicProfile` with non-sensitive fields.
+  - Public facet: `publicProfile` with non-sensitive fields.
   - Private pointer: `wallet.privateBundle` -> encrypted object retrievable only after wallet authorization.
 
 ### 4) Pseudonymity and pairwise IDs to prevent cross-service correlation
@@ -263,18 +263,18 @@ These are evolvable gaps, not architectural blockers.
 
 - Status: `Partial`
 - Current UM support:
-  - Metaverse integration lane already models avatar/inventory/profile pointers and cross-world profile shards.
+  - Metaverse integration lane already models avatar/inventory/profile pointers and cross-world profile facets.
 - Evidence:
   - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
   - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Gap:
   - No standardized schema for avatar rig metadata and translation capability descriptors.
 - Implementation now:
-  - Carry translation metadata in optional shards and provide avatar asset pointers.
+  - Carry translation metadata in optional facets and provide avatar asset pointers.
 - Change recommended:
-  - Add an XR translation shard profile (bone map, morph target support, scale constraints, fallback rules).
+  - Add an XR translation facet profile (bone map, morph target support, scale constraints, fallback rules).
 - Applied example:
-  - Shard `avatarTranslationProfile` contains:
+  - Facet `avatarTranslationProfile` contains:
     - source format (`vrm`/`gltf`),
     - skeleton profile version,
     - supported blendshape set,

@@ -372,7 +372,7 @@ Role fit:
 
 UM implication:
 
-- Spatial-fabric surfaces should continue to receive pointer/shard-based treatment.
+- Spatial-fabric surfaces should continue to receive pointer/facet-based treatment.
 - Stronger RP1/MSF bridge guidance should wait for the recommended primary-source refresh.
 
 ## 5.6 Closed-surface adapters
@@ -463,7 +463,7 @@ What should not be replaced:
 - pointer-first manifest contract,
 - consent-first disclosure,
 - TTL/freshness posture,
-- optional-shard extensibility.
+- optional-facet extensibility.
 
 What should be adopted from external sources instead of re-invented locally:
 
@@ -472,11 +472,11 @@ What should be adopted from external sources instead of re-invented locally:
 - public sync and projection patterns from AT Protocol where public distribution is the actual role,
 - trust-anchor and trust-chain patterns from OpenID Federation where verifier/issuer trust is the actual role.
 
-### 7.2 Can federation or bridge strategy be integrated directly as a shard?
+### 7.2 Can federation or bridge strategy be integrated directly as a facet?
 
 Answer: `No, not as the primary design`.
 
-A shard can safely carry:
+A facet can safely carry:
 
 - canonical-source pointer metadata,
 - public projection references,
@@ -485,7 +485,7 @@ A shard can safely carry:
 - scene package or world package references,
 - bridge configuration references for a specific implementation.
 
-A shard should not be treated as:
+A facet should not be treated as:
 
 - the federation protocol itself,
 - the live relay/session plane,

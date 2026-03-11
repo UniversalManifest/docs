@@ -8,7 +8,7 @@ Canonical repo path: `<repo-root>`
 
 - `spec/` — Versioned spec artifacts (JSON-LD context, schemas, normative text)
 - `examples/` — Example manifests (valid + invalid fixtures as the spec stabilizes)
-- `examples/code/` — 12 runnable code examples (hello-world, validation, signing, shards, resolution, projection, and more)
+- `examples/code/` — 12 runnable code examples (hello-world, validation, signing, facets, resolution, projection, and more)
 - `examples/demo-app/` — Full demo application with server and library
 - `integrations/` — Practical guidance for consuming/producing manifests across adopter surfaces
 - `research/` — Imported background docs and synthesis from supporting design libraries

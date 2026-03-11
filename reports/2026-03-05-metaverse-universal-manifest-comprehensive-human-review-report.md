@@ -19,7 +19,7 @@ This is a living document and should be updated whenever any workstream status c
 
 ## 2) Essential context in plain language
 
-MUM is the metaverse portability lineage source for Universal Manifest. In current UM architecture, metaverse behavior is implemented through optional overlays (shards, pointers, claims, consents) while keeping the base UM core contract stable and method-neutral.
+MUM is the metaverse portability lineage source for Universal Manifest. In current UM architecture, metaverse behavior is implemented through optional overlays (facets, pointers, claims, consents) while keeping the base UM core contract stable and method-neutral.
 
 Two tracks are used:
 

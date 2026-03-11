@@ -436,7 +436,7 @@ For each completed workstream:
 ## 11) Risk register
 
 Risk: metaverse-specific assumptions leak into core UM required fields.  
-Mitigation: keep all MUM semantics in optional shards/pointers/consents.
+Mitigation: keep all MUM semantics in optional facets/pointers/consents.
 
 Risk: privacy/security claims exceed implemented controls.  
 Mitigation: no claims without fixture/journey evidence and threat-model alignment.

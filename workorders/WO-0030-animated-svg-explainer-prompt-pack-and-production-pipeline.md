@@ -124,7 +124,7 @@ Expected output paths:
 
 - visuals must explain real UM architecture, not generic "web3/network" abstractions.
 - motion should teach causality and sequence, not decorative movement.
-- iconography must distinguish core components (manifest, subject, claims, consent, pointers, shards, resolver, verifier, consumers, overlay lanes).
+- iconography must distinguish core components (manifest, subject, claims, consent, pointers, facets, resolver, verifier, consumers, overlay lanes).
 - text overlays must use precise UM terminology aligned with spec/docs.
 - generated narratives must be traceable back to source files listed above.
 

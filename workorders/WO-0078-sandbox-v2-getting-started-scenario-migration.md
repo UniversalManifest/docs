@@ -24,7 +24,7 @@ The Getting Started scenarios are the first thing new users see in the sandbox. 
 ### Files created (V2 versions)
 
 - `site/src/scripts/sandbox/scenarios/getting-started/gs-01-first-manifest-v2.ts`
-- `site/src/scripts/sandbox/scenarios/getting-started/gs-02-manifest-with-shards-v2.ts`
+- `site/src/scripts/sandbox/scenarios/getting-started/gs-02-manifest-with-facets-v2.ts`
 - `site/src/scripts/sandbox/scenarios/getting-started/gs-03-forward-compatibility-v2.ts`
 - `site/src/scripts/sandbox/scenarios/getting-started/gs-04-resolver-lookup-v2.ts`
 
@@ -33,7 +33,7 @@ The Getting Started scenarios are the first thing new users see in the sandbox. 
 | Scenario | Entity A | Entity B | Subject |
 |----------|----------|----------|---------|
 | GS-01: First Manifest | Site (issuer) | Consumer (verifier) | Minimal manifest |
-| GS-02: Manifest with Shards | Site (issuer) | Consumer (verifier) | Manifest with shards |
+| GS-02: Manifest with Facets | Site (issuer) | Consumer (verifier) | Manifest with facets |
 | GS-03: Forward Compatibility | Site (issuer, new version) | Consumer (older version) | Manifest with unknown fields |
 | GS-04: Resolver Lookup | Resolver service | Consumer (requester) | Manifest fetched by UMID |
 

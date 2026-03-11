@@ -13,13 +13,13 @@ Show that a subject can move between different metaverse platforms using one UM 
 1. Validate fixture with baseline v0.1 validation.
 2. Confirm cross-world pointers are modeled in optional `pointers` entries.
 3. Confirm metaverse consents gate profile/social/voice publication behavior at destination entry.
-4. Confirm unsupported or world-specific shard payloads do not invalidate the whole transfer.
-5. Confirm unknown-field tolerance remains intact for world-specific shard payloads.
+4. Confirm unsupported or world-specific facet payloads do not invalidate the whole transfer.
+5. Confirm unknown-field tolerance remains intact for world-specific facet payloads.
 
 ## Expected outcomes
 
 - Fixture passes baseline structural validation.
-- World-specific semantics remain in optional shards/pointers.
+- World-specific semantics remain in optional facets/pointers.
 - Portaling uses pointer-first projection and policy continuity rather than a monolithic payload copy.
 - Core required UM fields are unchanged.
 

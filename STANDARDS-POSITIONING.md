@@ -30,10 +30,10 @@ DIDs are the recommended format for the `subject` field in a manifest. UM suppor
 
 ### Verifiable Credentials Data Model (W3C Recommendation)
 
-UM can carry W3C Verifiable Credentials as claims within shards. The UM manifest is the container; VCs are one type of payload it can hold. UM does not implement the VC issuance or verification protocol itself -- it provides a portable envelope that can transport VC-based claims alongside other data types.
+UM can carry W3C Verifiable Credentials as claims within facets. The UM manifest is the container; VCs are one type of payload it can hold. UM does not implement the VC issuance or verification protocol itself -- it provides a portable envelope that can transport VC-based claims alongside other data types.
 
 - **W3C specification:** Verifiable Credentials Data Model v2.0 (W3C Recommendation, 2025-05-15)
-- **UM usage:** Claims within shards can be structured as VCs
+- **UM usage:** Claims within facets can be structured as VCs
 
 ### JSON Canonicalization Scheme / JCS (IETF RFC 8785)
 
@@ -73,7 +73,7 @@ UM occupies a specific position in the identity, credential, and data portabilit
 
 **Relationship:** Complementary. UM is a container; VCs are a payload type.
 
-VCs are individual claims issued by an authority and verifiable by a third party. A UM manifest can carry VCs as claims within shards. The analogy: VCs are stamps in a passport; UM is the passport itself. A system that already issues VCs can embed them in a manifest to make them portable alongside consents, device registrations, and pointers to canonical data.
+VCs are individual claims issued by an authority and verifiable by a third party. A UM manifest can carry VCs as claims within facets. The analogy: VCs are stamps in a passport; UM is the passport itself. A system that already issues VCs can embed them in a manifest to make them portable alongside consents, device registrations, and pointers to canonical data.
 
 UM does not replace the VC issuance/verification protocol. It provides a transport envelope and composition mechanism that allows VCs to coexist with other data types in a single document.
 
@@ -137,7 +137,7 @@ OMA3 is a consortium focused on Web3 interoperability and open metaverse standar
 - Published site documentation at `/integrations/oma-trust/`
 - Three dedicated fixture manifests (proof-based service, trusted-attester service, lifecycle-edge service)
 - A user journey (J11) proving interoperability patterns
-- Suggested claim keys, pointer keys, and shard names for OMATrust signals
+- Suggested claim keys, pointer keys, and facet names for OMATrust signals
 
 **Maturity note:** The assessment acknowledges that OMATrust portals are in preview/pre-alpha/testnet state. The domain structure (`docs.omatrust.org` vs `docs.oma3.org`) is in transition. Integration is staged to accommodate OMATrust's own maturation timeline.
 
@@ -154,7 +154,7 @@ UM builds directly on three W3C Recommendations: JSON-LD 1.1, Decentralized Iden
 **Future plans:** Engaging with W3C working groups is a possibility if UM reaches maturity levels where formal standardization is appropriate. The most relevant W3C groups would be:
 
 - **W3C Credentials Community Group** — given UM's relationship to VCs and DIDs
-- **W3C Verifiable Credentials Working Group** — if UM's shard/claim composition model intersects with VC envelope discussions
+- **W3C Verifiable Credentials Working Group** — if UM's facet/claim composition model intersects with VC envelope discussions
 - **W3C Decentralized Identifier Working Group** — for DID method interoperability
 
 No timeline or concrete plans exist for W3C engagement. This is a decision that will be revisited after the project achieves broader external adoption and multiple independent implementations.
@@ -204,7 +204,7 @@ Before formal standardization would be appropriate, the project needs:
 
 ### What this means for adopters
 
-UM is designed so that adopters do not need to wait for formal standardization. The specification is public, the schemas are published at stable URLs, the conformance requirements are documented, and the license (Apache-2.0) permits unrestricted use. Progressive adoption (parse, validate, consume shards, issue, sign/verify) is available today.
+UM is designed so that adopters do not need to wait for formal standardization. The specification is public, the schemas are published at stable URLs, the conformance requirements are documented, and the license (Apache-2.0) permits unrestricted use. Progressive adoption (parse, validate, consume facets, issue, sign/verify) is available today.
 
 Formal standardization, if pursued, would provide additional governance guarantees (multi-stakeholder stewardship, formal change processes, patent commitments) but is not a prerequisite for technical adoption.
 

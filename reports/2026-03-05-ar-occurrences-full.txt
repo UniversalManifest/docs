@@ -42,7 +42,7 @@
 ./docs/workorders/WO-0044-public-open-source-examples-work-stream.md:15:4. Find integration examples for their platform of interest (social, IoT, AR/VR, identity).
 ./docs/workorders/WO-0044-public-open-source-examples-work-stream.md:28:- 16 near-real stub manifests under `examples/v0.1/stubs/` (social, venue, device, OMATrust, metaverse, AR, Chia, personhood, etc.)
 ./docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md:51:- **Key point:** Same manifest projected by 3 different consumers (social, AR, metaverse)
-./docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md:85:  - Contents: combine social profile shard + AR consent keys + metaverse cross-world shard + metaverse/AR/social pointers + multiple consent keys
+./docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md:85:  - Contents: combine social profile facet + AR consent keys + metaverse cross-world facet + metaverse/AR/social pointers + multiple consent keys
 ./docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md:29:  - Smart glasses AR
 ./docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md:33:- rename "Smart Glasses AR Integration" label to "Smart Glasses".
 ./docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md:34:- keep Smart Glasses framing as current AI/HUD usage now; AR is future-facing. Do not include "siloed hardware" phrasing.

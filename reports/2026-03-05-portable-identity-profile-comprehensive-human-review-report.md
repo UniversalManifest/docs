@@ -390,7 +390,7 @@ Why this exists:
 Research questions:
 
 - anchor formats and metadata conventions,
-- minimum translation shard shape,
+- minimum translation facet shape,
 - runtime-agnostic viability.
 
 What “done” means:
@@ -401,7 +401,7 @@ What “done” means:
 
 Promotion gate:
 
-- optional shard representation without UM core-field bloat.
+- optional facet representation without UM core-field bloat.
 
 Evidence to attach when complete:
 

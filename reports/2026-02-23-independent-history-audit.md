@@ -266,7 +266,7 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 - Onboarding clarity review (Step 3 of this audit) found severe jargon issues:
   - `universal-manifest-overview.md` scored 2/5 for clarity
   - `concepts.md` scored 1/5 for clarity
-  - Key undefined terms: "state capsule", "integration pair", "shards", "convergence profile", "UMID", "CEO-directed integration lanes"
+  - Key undefined terms: "state capsule", "integration pair", "facets", "convergence profile", "UMID", "CEO-directed integration lanes"
 - WO-0039 explicitly created to address these issues, status NOT_STARTED
   - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 

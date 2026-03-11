@@ -18,7 +18,7 @@ I deploy on a Thursday. The first user with a UMID signs up on Friday.
 
 ---
 
-Her name is Jules. She enters her UMID in the signup field and taps "continue." My app fetches her manifest, validates it, and reads the `publicProfile` shard. Her display name, bio, avatar URL, and social links flow into her profile page. The twelve empty fields are now eight filled fields. Her profile looks real. She did not type a single character.
+Her name is Jules. She enters her UMID in the signup field and taps "continue." My app fetches her manifest, validates it, and reads the `publicProfile` facet. Her display name, bio, avatar URL, and social links flow into her profile page. The twelve empty fields are now eight filled fields. Her profile looks real. She did not type a single character.
 
 But the interesting part is the consents. Jules's manifest says `social.profilePublic: allowed` -- she has explicitly permitted platforms to publish a public profile view derived from her manifest. Good. But I also check for analytics consent, and there is no entry for search indexing. Under UM's default-deny model, the absence of an explicit `allowed` means the answer is no. My app renders her profile for visitors but does not add her to the public search index.
 
@@ -44,11 +44,11 @@ I sit back and think about what I did not have to build. I did not build a profi
 
 ## How UM Works Here
 
-**TS helper integration:** Sam installs the `universal-manifest` npm package and uses `assertUniversalManifestV01` to validate incoming manifests. The function checks all required fields (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`), validates ISO date-time formats, confirms `@type` includes `um:Manifest`, and verifies shard structure. It throws typed errors for any validation failure.
+**TS helper integration:** Sam installs the `universal-manifest` npm package and uses `assertUniversalManifestV01` to validate incoming manifests. The function checks all required fields (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`), validates ISO date-time formats, confirms `@type` includes `um:Manifest`, and verifies facet structure. It throws typed errors for any validation failure.
 
 **UMID resolution:** The app fetches manifests by sending an HTTP GET to `myum.net/{UMID}`. The resolver returns the manifest as `application/ld+json` with short cache headers (`max-age=60`). The app re-fetches on a TTL-driven cycle to detect updates and consent changes.
 
-**Shard reading:** The app reads the `publicProfile` shard to extract profile fields (name, bio, avatar, links). Each shard has a `@type` of `um:Shard` and a `name` field for lookup. The app ignores unknown shards per the v0.1 conformance requirement -- forward compatibility is built in.
+**Facet reading:** The app reads the `publicProfile` facet to extract profile fields (name, bio, avatar, links). Each facet has a `@type` of `um:Facet` and a `name` field for lookup. The app ignores unknown facets per the v0.1 conformance requirement -- forward compatibility is built in.
 
 **Consent checking:** The app checks the `consents` array for specific consent names (`social.profilePublic`, analytics toggles). Each consent entry has a `name` and `value` (`allowed` or `denied`). If a consent name is absent from the array, the app treats it as denied (default-deny). This five-line check replaces an entire consent management subsystem.
 
@@ -56,4 +56,4 @@ I sit back and think about what I did not have to build. I did not build a profi
 
 **TTL re-validation:** The app checks `expiresAt` on every access using `assertUniversalManifestV01Fresh`. Expired manifests are rejected. Periodic re-fetching before TTL expiry ensures the app always has current consent and profile data. When a user revokes consent, the change is picked up on the next fetch cycle.
 
-**UM capabilities demonstrated:** TS helper validation, UMID resolution, shard-based profile reading, default-deny consent model, Ed25519 signature verification (v0.2), TTL-driven freshness enforcement, consent revocation handling.
+**UM capabilities demonstrated:** TS helper validation, UMID resolution, facet-based profile reading, default-deny consent model, Ed25519 signature verification (v0.2), TTL-driven freshness enforcement, consent revocation handling.

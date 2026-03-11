@@ -10,7 +10,7 @@ I spend more time managing my privacy settings than I do using some of these pla
 
 When I first hear about Universal Manifest, I am skeptical. Another identity layer. Another place to put my data. But when I read the spec, one sentence stops me: "Default-deny -- anything not explicitly allowed is blocked." That is the opposite of every platform I have ever used. Every platform defaults to "we take everything unless you find the off switch." UM defaults to "nothing is shared unless you say yes."
 
-I create my manifest. I set the bare minimum in my publicProfile shard: my professional name and a link to my personal website. Nothing else. Then I set my consents. I go through the list deliberately:
+I create my manifest. I set the bare minimum in my publicProfile facet: my professional name and a link to my personal website. Nothing else. Then I set my consents. I go through the list deliberately:
 
 - `publicDisplay`: denied.
 - `analytics.proofOfPlay`: denied.
@@ -25,7 +25,7 @@ I set the TTL to 48 hours. My manifest expires every two days and auto-renews wi
 
 ---
 
-I sign up for a new professional networking app using my UMID. The app fetches my manifest and reads my publicProfile shard -- just my name and website link. The app checks for `social.profilePublic` consent. It finds the value set to `denied`. My profile is created but not visible to other users. I can browse the platform, but nobody can find me or see my information. The app does not push back or nag me about "completing my profile." It respects what the manifest says.
+I sign up for a new professional networking app using my UMID. The app fetches my manifest and reads my publicProfile facet -- just my name and website link. The app checks for `social.profilePublic` consent. It finds the value set to `denied`. My profile is created but not visible to other users. I can browse the platform, but nobody can find me or see my information. The app does not push back or nag me about "completing my profile." It respects what the manifest says.
 
 I decide this platform is trustworthy after a week of using it. I open my manifest and flip one toggle: `social.profilePublic: allowed`. I sync. Within the hour -- on the next TTL refresh cycle -- the app picks up the change. My profile becomes visible. One toggle, one place, one change. Not a fifteen-step privacy wizard. Not a cookie banner. One consent value in my manifest.
 
@@ -55,7 +55,7 @@ Months later, I look back at that spreadsheet I used to maintain. I have not upd
 
 **Consent entries as explicit toggles:** Each consent entry in the manifest has a `@type` of `um:Consent`, a `name` (e.g., `ar.recording.faceVisible`, `social.profilePublic`), and a `value` (`allowed`, `denied`, or `restricted`). Riley controls each toggle independently. Consumers read specific consent names relevant to their function.
 
-**Smart glasses consent enforcement:** smart glasses devices fetch nearby attendees' manifests via UMID resolution and check smart glasses-specific consent entries (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`). When these are denied, the device applies privacy filters in real-time (face blurring, voice exclusion). The smart glasses policy is modeled through an `arPolicyPack` shard with a default stance of `deny-if-missing-consent`.
+**Smart glasses consent enforcement:** smart glasses devices fetch nearby attendees' manifests via UMID resolution and check smart glasses-specific consent entries (`ar.recording.faceVisible`, `ar.recording.voiceAllowed`). When these are denied, the device applies privacy filters in real-time (face blurring, voice exclusion). The smart glasses policy is modeled through an `arPolicyPack` facet with a default stance of `deny-if-missing-consent`.
 
 **TTL as a privacy guarantee:** Riley sets a 48-hour TTL (`expiresAt` = `issuedAt` + 48 hours). Consumers must re-fetch before expiry. Expired manifests must be rejected per the conformance spec -- no consumer may continue to use an expired manifest to grant permissions or render state. This ensures that no system retains valid permissions beyond the TTL window.
 

@@ -167,7 +167,7 @@ The `DEPTH-AND-SCOPE.md` adoption tiers are well-designed:
 
 > "1. Tier 0 -- Parse-only: validate `@type`, TTL, and treat unknown fields as opaque
 > 2. Tier 1 -- Pointers consumer: use `pointers` to fetch canonical content
-> 3. Tier 2 -- Projection renderer: render known `shards`
+> 3. Tier 2 -- Projection renderer: render known `facets`
 > 4. Tier 3 -- Verified consumer: enforce signature verification + TTL
 > 5. Tier 4 -- Issuer: produce signed manifests" (lines 150-161)
 

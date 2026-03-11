@@ -19,7 +19,7 @@ Imagine a Swiss Army Knife for your personal data -- one compact document that c
 - **GitHub:** `github.com/grigb/universal-manifest`
 - **License:** Apache-2.0
 - **Status:** Production infrastructure live (resolver, docs site, published schemas, JSON Schema validation artifacts)
-- **Manifest size:** Minimal ~300 bytes; typical with shards 1-3 KB
+- **Manifest size:** Minimal ~300 bytes; typical with facets 1-3 KB
 - **Subject identifier:** Any URI; DIDs recommended but not required
 - **Signature algorithm (v0.2):** JCS (RFC 8785) canonicalization + Ed25519
 - **Consent model:** Default-deny (nothing shared without explicit permission)
@@ -35,7 +35,7 @@ Imagine a Swiss Army Knife for your personal data -- one compact document that c
 | UMID (`@id`) | Globally unique identifier (UUID URN) | Passport number |
 | Subject | Who/what the manifest is about (DID or URI) | Passport holder |
 | Validity window | `issuedAt` + `expiresAt` timestamps | Expiry date on a coupon |
-| Shards | Composable, named data sections | Compartments in a Swiss Army Knife |
+| Facets | Composable, named data sections | Compartments in a Swiss Army Knife |
 | Pointers | URL references to canonical data sources | Business cards with URLs |
 | Claims | Verified assertions (roles, permissions) | Stamps in a passport |
 | Consents | Explicit permission grants (default-deny) | Permission slips |
@@ -59,7 +59,7 @@ Universal Manifest is built on a default-deny consent model. Nothing is shared u
 
 ### For Standards Bodies
 
-Universal Manifest is a portable state document format built on JSON-LD, designed to complement (not replace) existing standards. It can carry W3C Verifiable Credentials as claims within shards. It uses DIDs as subject identifiers without mandating a specific DID method. It references Solid Pods via pointers. The v0.2 signature profile uses JCS (RFC 8785) and Ed25519, following established cryptographic conventions. The spec is versioned, with explicit forward-compatibility rules and a published conformance document. The project is open source under Apache-2.0 and welcomes participation.
+Universal Manifest is a portable state document format built on JSON-LD, designed to complement (not replace) existing standards. It can carry W3C Verifiable Credentials as claims within facets. It uses DIDs as subject identifiers without mandating a specific DID method. It references Solid Pods via pointers. The v0.2 signature profile uses JCS (RFC 8785) and Ed25519, following established cryptographic conventions. The spec is versioned, with explicit forward-compatibility rules and a published conformance document. The project is open source under Apache-2.0 and welcomes participation.
 
 ---
 
@@ -84,7 +84,7 @@ A: Forward-compatibility rule: consumers MUST safely ignore fields they don't re
 A: v0.1 is stable with production infrastructure (resolver at myum.net, published JSON Schemas, conformance fixtures, and a TypeScript reference implementation). v0.2 (adding signatures) is in draft.
 
 **Q: How big are manifests?**
-A: Minimal: ~300 bytes. Typical with shards: 1-3 KB. Small enough for QR codes and Bluetooth.
+A: Minimal: ~300 bytes. Typical with facets: 1-3 KB. Small enough for QR codes and Bluetooth.
 
 **Q: What happens when a manifest expires?**
 A: Consumers must reject it. The issuer creates a new one. There is no renewal -- expired means expired.
@@ -101,13 +101,13 @@ A: Consumers must reject it. The issuer creates a new one. There is no renewal -
 
 "Universal Manifest is a portable JSON-LD document format for exchanging identity, credentials, and preferences between systems. Here's the problem it solves: every pair of systems that needs to talk about a user invents a new format. Profile sync, credential verification, consent propagation -- each one is a custom integration. UM replaces all of them with one document.
 
-A manifest carries a subject identifier (typically a DID), a validity window (issued and expiry timestamps), and modular sections called shards. Shards are composable -- a public profile shard, a device registration shard, a venue policy shard -- and consumers pick the ones they understand, ignoring the rest. Pointers reference canonical data at its source instead of copying it. Consents follow a default-deny model, so privacy travels with the data.
+A manifest carries a subject identifier (typically a DID), a validity window (issued and expiry timestamps), and modular sections called facets. Facets are composable -- a public profile facet, a device registration facet, a venue policy facet -- and consumers pick the ones they understand, ignoring the rest. Pointers reference canonical data at its source instead of copying it. Consents follow a default-deny model, so privacy travels with the data.
 
 The format is offline-tolerant by design. Every manifest expires automatically. No revocation check needed. This makes it work for edge devices, public displays, and field operations with intermittent connectivity.
 
 v0.1 is stable with production infrastructure: a resolver service at myum.net, published JSON Schema and JSON-LD context files, conformance fixtures, a full suite of code examples, and a TypeScript reference implementation on npm. v0.2 adds a cryptographic signature profile using JCS canonicalization and Ed25519.
 
-Adoption is progressive. Level one: parse the JSON. Level two: validate against the schema. Level three: consume well-known shards. Level four: issue your own manifests. Level five: sign and verify. You can start at any level."
+Adoption is progressive. Level one: parse the JSON. Level two: validate against the schema. Level three: consume well-known facets. Level four: issue your own manifests. Level five: sign and verify. You can start at any level."
 
 ### Partnership Proposal Opening
 
@@ -125,9 +125,9 @@ Adoption is progressive. Level one: parse the JSON. Level two: validate against 
 
 4. **Forward compatible.** Unknown fields are safely ignored. New versions never break old consumers.
 
-5. **Progressive adoption.** Parse JSON on day one. Add validation, shard consumption, issuance, and signatures at your own pace.
+5. **Progressive adoption.** Parse JSON on day one. Add validation, facet consumption, issuance, and signatures at your own pace.
 
-6. **Composable.** Shards let you build manifests from modular sections, mixing standard and custom data in the same document.
+6. **Composable.** Facets let you build manifests from modular sections, mixing standard and custom data in the same document.
 
 7. **Transport-agnostic.** QR code, Bluetooth, API call, file transfer, resolver lookup -- UM doesn't care how the document gets from A to B.
 

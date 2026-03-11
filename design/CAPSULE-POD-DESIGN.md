@@ -29,7 +29,7 @@ Three concentric zones:
 |------|---------|-------------|
 | **Shell** (outer) | Envelope boundary | Protective container; carries the pod through transit |
 | **Gap** (between) | Integrity / signature layer | Illuminates during verification; the key animation beat |
-| **Payload** (inner) | Claims, shards, pointers, consents | The carried data; revealed during projection |
+| **Payload** (inner) | Claims, facets, pointers, consents | The carried data; revealed during projection |
 
 ---
 
@@ -40,7 +40,7 @@ Three concentric zones:
 
   ╭──────────╮          ╭──────────╮           ╭──  ────  ──╮
  ╱  ┌──────┐  ╲       ╱░░┌──────┐░░╲         ╱  ┌──────┐    ╲
-│   │      │   │     │░░░│  ✓   │░░░│       │   │ shard│───→  │
+│   │      │   │     │░░░│  ✓   │░░░│       │   │ facet│───→  │
 │   │  UM  │   │     │░░░│  UM  │░░░│       │   │  UM  │───→  │
 │   │      │   │     │░░░│      │░░░│       │   │ ptr  │───→  │
  ╲  └──────┘  ╱       ╲░░└──────┘░░╱         ╲  └──────┘    ╱
@@ -55,7 +55,7 @@ Three concentric zones:
 | **In Transit** | Gentle bobbing motion; faint blue pulse in the gap |
 | **Verified** | Gap illuminates green; checkmark appears in payload |
 | **Rejected / Tampered** | Crack appears in shell; red light leaks through gap |
-| **Projecting** | Shell peels open (seed-pod gesture); shard elements emerge |
+| **Projecting** | Shell peels open (seed-pod gesture); facet elements emerge |
 | **Expiring** | Shell becomes translucent; amber countdown; eventual shatter |
 | **Creation** | Payload forms first, shell wraps around it, seal applied |
 

@@ -38,10 +38,10 @@ Implement 8 scenario definition files. This includes creating one new composite 
 - **Fixture:** `examples/v0.2/invalid/clock-skew-future-issuedAt.jsonld`
 - **Key point:** SHOULD-level check for future `issuedAt`
 
-### EC-04: Shard Type Violation (4 steps)
+### EC-04: Facet Type Violation (4 steps)
 
-- **Fixture:** `examples/v0.1/invalid/shard-wrong-type.jsonld`
-- **Key point:** Every shard must include `um:Shard` in `@type`
+- **Fixture:** `examples/v0.1/invalid/facet-wrong-type.jsonld`
+- **Key point:** Every facet must include `um:Facet` in `@type`
 
 ## Advanced Scenarios
 
@@ -65,8 +65,8 @@ Implement 8 scenario definition files. This includes creating one new composite 
 
 ### AD-04: v0.2 Full Integration (8 steps)
 
-- **Fixture:** `examples/v0.2/manifest-with-shards-signed.jsonld`
-- **Key point:** Four-layer validation (structure + shards + signature + Ed25519 verify)
+- **Fixture:** `examples/v0.2/manifest-with-facets-signed.jsonld`
+- **Key point:** Four-layer validation (structure + facets + signature + Ed25519 verify)
 - **Demonstrates:** The full power of v0.2
 
 ## Execution tasks
@@ -76,13 +76,13 @@ Implement 8 scenario definition files. This includes creating one new composite 
 - [ ] Create `site/src/scripts/sandbox/scenarios/edge-cases/ec-01-issued-after-expires.ts`
 - [ ] Create `site/src/scripts/sandbox/scenarios/edge-cases/ec-02-missing-signature.ts`
 - [ ] Create `site/src/scripts/sandbox/scenarios/edge-cases/ec-03-clock-skew.ts`
-- [ ] Create `site/src/scripts/sandbox/scenarios/edge-cases/ec-04-shard-type-violation.ts`
+- [ ] Create `site/src/scripts/sandbox/scenarios/edge-cases/ec-04-facet-type-violation.ts`
 
 ### Advanced scenarios
 
 - [ ] Create the composite fixture for AD-01:
   - File: `examples/v0.1/stubs/cross-system-projection-manifest.jsonld`
-  - Contents: combine social profile shard + AR consent keys + metaverse cross-world shard + metaverse/AR/social pointers + multiple consent keys
+  - Contents: combine social profile facet + AR consent keys + metaverse cross-world facet + metaverse/AR/social pointers + multiple consent keys
   - Must pass `assertUniversalManifestV01` validation
 - [ ] Create `site/src/scripts/sandbox/scenarios/advanced/ad-01-cross-system-projection.ts`
 - [ ] Create `site/src/scripts/sandbox/scenarios/advanced/ad-02-pointers-signed.ts`
@@ -105,7 +105,7 @@ Implement 8 scenario definition files. This includes creating one new composite 
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-01-issued-after-expires.ts`
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-02-missing-signature.ts`
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-03-clock-skew.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-04-shard-type-violation.ts`
+- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-04-facet-type-violation.ts`
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-01-cross-system-projection.ts`
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-02-pointers-signed.ts`
 - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-03-revocation-aware.ts`

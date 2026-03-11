@@ -22,7 +22,7 @@ This is the **standards/docs** site. Runtime UMID resolution is separate (`myum.
   - Adoption tiers and “not overbuild” boundaries
 - **Getting Started**
   - Quick start (fixtures + conformance + minimal validation)
-  - Concepts (manifest, shards, pointers, TTL, unknown-field behavior)
+  - Concepts (manifest, facets, pointers, TTL, unknown-field behavior)
 - **Specification**
   - v0.1 (schema/context, required fields, extension rules)
   - v0.2 (draft) signature profile artifacts

@@ -86,4 +86,4 @@ Rules:
 
 - implementation-specific endpoints belong in `integrations/` docs, not in `spec/`.
 - The UM spec must remain adopter-neutral; reference implementation is a consumer with guidance.
-- If reference implementation introduces a reusable standardized shard name, register it in `spec/v0.1/REGISTRY.md`.
+- If reference implementation introduces a reusable standardized facet name, register it in `spec/v0.1/REGISTRY.md`.

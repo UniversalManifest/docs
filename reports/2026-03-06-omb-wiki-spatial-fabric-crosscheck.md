@@ -11,7 +11,7 @@ Recommendation: `source refresh`
 
 The current repo already has the right core architectural stance:
 - keep RP1/MSF-specific semantics out of UM required core fields,
-- model RP1/MSF linkage as optional pointers and shards,
+- model RP1/MSF linkage as optional pointers and facets,
 - gate cross-world and location-sensitive behavior with consent,
 - prove compatibility through fixtures and journeys instead of hard-coding platform semantics into the normative core.
 
@@ -65,7 +65,7 @@ This rule matters here because the wiki is visibly still being built in public a
 The current repo already captures the following correctly:
 
 1. **Core boundary is correct**
-- The internal RP1 lane keeps RP1 semantics in optional pointers and shards rather than core required fields.
+- The internal RP1 lane keeps RP1 semantics in optional pointers and facets rather than core required fields.
 - This is stated directly in `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`.
 - `CON-UM-007` explicitly decided to keep RP1 object-model specificity out of the UM minimal core.
 
@@ -103,7 +103,7 @@ Wiki-discovered context:
 
 What the current repo already covers:
 - Only generic spatial overlay concepts: anchors, place graph, optional pointers, and consent.
-- No object taxonomy beyond the example shard names.
+- No object taxonomy beyond the example facet names.
 
 Assessment:
 - This is **new context**, not a core-schema gap.
@@ -112,10 +112,10 @@ Assessment:
 
 How this would apply in UM:
 - Keep topology data external to the UM core.
-- Carry it as a pointer or optional shard profile.
+- Carry it as a pointer or optional facet profile.
 - Example:
   - `rp1.placeGraph` points to a map-service or topology resource.
-  - A non-normative shard profile could describe `class`, `parentRef`, `placeType`, or `subsurfaceRef` for consumers that understand MSF-specific semantics.
+  - A non-normative facet profile could describe `class`, `parentRef`, `placeType`, or `subsurfaceRef` for consumers that understand MSF-specific semantics.
 
 ### 2. Attachment points and nested-fabric composition
 
@@ -131,7 +131,7 @@ Wiki-discovered context:
 
 What the current repo already covers:
 - `spatial.crossWorldLinking` consent.
-- Optional RP1 pointers and shard names.
+- Optional RP1 pointers and facet names.
 - No explicit attachment-point model.
 
 Assessment:
@@ -158,7 +158,7 @@ Wiki-discovered context:
 
 What the current repo already covers:
 - Identity and consent belong in UM.
-- RP1-specific overlay material belongs in pointers/shards.
+- RP1-specific overlay material belongs in pointers/facets.
 - Sandbox/fixture coverage focuses mostly on anchors and place membership.
 
 Assessment:
@@ -273,7 +273,7 @@ No evidence in this review shows that Universal Manifest needs new required core
 
 The existing model still holds:
 - core UM for identity / consent / routing / profile fragments,
-- optional pointers and shards for ecosystem-specific semantics,
+- optional pointers and facets for ecosystem-specific semantics,
 - runtime services for live spatial and communication state.
 
 ### Real documentation/source gaps found
@@ -304,7 +304,7 @@ The meaningful gaps are elsewhere.
 
 These points are already adequately grounded by the repo’s existing primary-source intake and implementation evidence:
 - RP1/MSF-specific semantics should remain out of the core UM contract.
-- RP1/MSF linkage can be represented through optional pointers and shards.
+- RP1/MSF linkage can be represented through optional pointers and facets.
 - Spatial anchors and place membership can be carried as additive overlay material.
 - Cross-world behavior should be consent-gated.
 
@@ -375,7 +375,7 @@ These are the most obvious next primary-source targets surfaced by the wiki audi
 
 However:
 - it does **not** show that Universal Manifest needs a core contract change,
-- it does **not** invalidate the current pointer/shard/consent overlay approach,
+- it does **not** invalidate the current pointer/facet/consent overlay approach,
 - it **does** show that the project’s spatial-fabric knowledge corpus should be refreshed from additional primary sources before further RP1/MSF integration decisions are made.
 
 The strongest outcome from this audit is:

@@ -23,7 +23,7 @@ The **Universal Manifest** is a **portable state capsule**: a single document th
 - **what’s allowed** to be shown/shared (consents)
 - **what devices** are in scope (devices + trust levels)
 - **where canonical data lives** (pointers)
-- **how it composes** (shards)
+- **how it composes** (facets)
 - **how integrity is asserted** (signature + short TTL)
 
 This is a **spec repo**, not an application.
@@ -41,7 +41,7 @@ These constraints appear repeatedly across the vision + research:
 3. **No forced identity method**
    - DIDs are recommended but not mandatory; `subject` is any stable URI.
 4. **Patches over payloads**
-   - Prefer `pointers` + small `shards` over embedding large data blobs.
+   - Prefer `pointers` + small `facets` over embedding large data blobs.
 5. **Security as an incremental profile**
    - v0.1 has a permissive signature placeholder; canonical signing format is a later milestone.
 
@@ -119,14 +119,14 @@ Index:
 
 ### In scope (v0.1 and near-term)
 
-- A stable **document shape** (`um:Manifest`) and composition primitive (`um:Shard`)
+- A stable **document shape** (`um:Manifest`) and composition primitive (`um:Facet`)
 - A minimal set of sections: `claims`, `consents`, `devices`, `pointers`, `signature` (permissive)
 - Guidance for caching, TTL, and logging by `@id`
 - Examples + stubs that exercise realistic scenarios:
   - venue/edge identity + policy
   - device enrollment + trust
   - creator public capsule
-  - social/profile projection via a shard (`schema:Person`)
+  - social/profile projection via a facet (`schema:Person`)
 
 ### Explicitly out of scope (v0.1)
 
@@ -152,7 +152,7 @@ Not every adopter needs the same depth. Design for adoption tiers:
 2. **Tier 1 — Pointers consumer**
    - use `pointers` to fetch canonical content (Pod, ActivityPub, etc.)
 3. **Tier 2 — Projection renderer**
-   - render known `shards` (e.g., `publicProfile`, `publicCapsule`)
+   - render known `facets` (e.g., `publicProfile`, `publicCapsule`)
 4. **Tier 3 — Verified consumer**
    - enforce signature verification + TTL; reject on failure
 5. **Tier 4 — Issuer**
@@ -166,7 +166,7 @@ This tiering is the core reason v0.1 remains permissive: adoption should start b
 
 The Universal Manifest should power social/profile surfaces by treating “a profile” as a **projection**:
 
-- A `publicProfile` shard can embed widely recognized vocab (e.g., `schema:Person`)
+- A `publicProfile` facet can embed widely recognized vocab (e.g., `schema:Person`)
 - `pointers` can link to federation identities (e.g., `activityPub.actor`, `matrix.userId`)
 - `consents` govern whether a profile projection may be public/indexed
 
@@ -187,7 +187,7 @@ These are the “depth” items that turn v0.1 into something broadly adoptable:
 3. **Conformance suite**
    - add invalid fixtures + a conformance checklist for third parties
 4. **Registry stabilization**
-   - stabilize well-known shard/pointer/claim/consent names (and version them)
+   - stabilize well-known facet/pointer/claim/consent names (and version them)
 5. **Hosting/distribution**
    - publish the context/schema at stable URLs and document versioning guarantees
 
@@ -209,7 +209,7 @@ There is substantially more background material in the reference implementation 
 ### standard drivers (local-first reality)
 
 - `research/reference-platform/profile-architecture.md`
-  - canonical vs projected state (Solid → Capsule), shards mapping, and why “profile” is a projection
+  - canonical vs projected state (Solid → Capsule), facets mapping, and why “profile” is a projection
 - `research/reference-platform/interoperability-sync.md`
   - update signaling and sync flows (push signal → fetch), offline behavior
 - `research/reference-platform/operational-runbooks.md`

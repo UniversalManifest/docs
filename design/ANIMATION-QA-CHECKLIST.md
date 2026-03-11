@@ -4,7 +4,7 @@ Use this checklist for every generated animated SVG before merge/deploy.
 
 ## A) Source fidelity
 
-- [x] Narrative terms match UM docs and spec (`@id`, `subject`, TTL fields, claims, consents, pointers, shards).
+- [x] Narrative terms match UM docs and spec (`@id`, `subject`, TTL fields, claims, consents, pointers, facets).
 - [x] No invented protocol behavior.
 - [x] Normative vs non-normative boundaries are preserved.
 

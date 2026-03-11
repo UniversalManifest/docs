@@ -14,7 +14,7 @@ Demonstrate context-aware smart glasses recording/profile behavior as optional m
 1. Validate both fixtures with standard v0.1 validation.
 2. Confirm allowed fixture permits capture/profile disclosures for declared keys.
 3. Confirm denied fixture blocks capture/profile disclosures for declared keys.
-4. Confirm unknown-field tolerance remains intact for smart glasses-specific keys and shards.
+4. Confirm unknown-field tolerance remains intact for smart glasses-specific keys and facets.
 
 ## Expected outcomes
 

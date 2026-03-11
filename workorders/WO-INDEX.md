@@ -79,10 +79,10 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0060-sandbox-foundation-and-browser-validator.md` — [COMPLETED] Extract validation logic for browser use with Web Crypto API adapter; scaffold sandbox pages and fixture pipeline (HIGHEST, foundational; no dependencies)
 - `docs/workorders/WO-0061-sandbox-three-panel-layout-and-step-engine.md` — [COMPLETED] Build three-panel layout shell, step-through engine, step controls, bubble annotations, and manifest viewer/editor (HIGHEST; depends on WO-0060)
 - `docs/workorders/WO-0062-sandbox-scenario-modal-and-navigation.md` — [COMPLETED] Build scenario selection modal with card grid, search/filter, and navigation between modal and sandbox (HIGHEST; depends on WO-0061)
-- `docs/workorders/WO-0063-sandbox-getting-started-scenarios.md` — [COMPLETED] Implement 4 Getting Started scenarios (GS-01 through GS-04): first manifest, shards, forward compatibility, resolver (HIGHEST; depends on WO-0062)
+- `docs/workorders/WO-0063-sandbox-getting-started-scenarios.md` — [COMPLETED] Implement 4 Getting Started scenarios (GS-01 through GS-04): first manifest, facets, forward compatibility, resolver (HIGHEST; depends on WO-0062)
 - `docs/workorders/WO-0064-sandbox-trust-verification-scenarios.md` — [COMPLETED] Implement 5 Trust & Verification scenarios (TV-01 through TV-05): signed manifest, tamper detection, expired, missing fields, invalid algorithm (HIGHEST; depends on WO-0063)
 - `docs/workorders/WO-0065-sandbox-integration-lane-scenarios.md` — [COMPLETED] Implement 8 Integration Lane scenarios (IL-01 through IL-08): social, smart glasses, metaverse, RP1, OMATrust, Chia, personhood, venue (HIGHEST; depends on WO-0063)
-- `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [COMPLETED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, shard type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
+- `docs/workorders/WO-0066-sandbox-edge-case-and-advanced-scenarios.md` — [COMPLETED] Implement 4 Edge Case + 4 Advanced scenarios: temporal misuse, missing sig, clock skew, facet type, cross-system, pointers, revocation, full v0.2 (HIGHEST; depends on WO-0064)
 - `docs/workorders/WO-0067-sandbox-visual-polish-and-illustrations.md` — [COMPLETED] Create 25 SVG illustrations, refine animations, category colors, dark mode, responsive polish (HIGH; depends on WO-0063, WO-0064, WO-0065, WO-0066)
 - `docs/workorders/WO-0068-sandbox-ci-parity-testing-and-qa.md` — [COMPLETED] CI parity testing (Node vs browser validator), scenario smoke tests, accessibility audit, performance audit (HIGH; depends on WO-0060, WO-0063, WO-0064, WO-0065, WO-0066)
 
@@ -187,7 +187,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Privacy Signal Standards Review Wave (WO-0127)
 
-- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [COMPLETED] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and shard-vs-non-shard recommendation package (P0)
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md` — [COMPLETED] Three-draft, standards-grounded GPC integration review with overlap/gap analysis, normative reference crosswalk, and facet-vs-non-facet recommendation package (P0)
 - `docs/workorders/WO-0128-gpc-go-now-runtime-mapping-fixtures-and-proof.md` — [COMPLETED] Execute GPC runtime mapping, support-resource parsing, fixture coverage, and journey proof in the TypeScript reference implementation (P0)
 
 ### Inbox Corpus Hygiene Wave (WO-0129)
@@ -228,8 +228,8 @@ Drift governance and follow-on WO trigger criteria:
 ### Ecosystem Expansion & Architecture Research (WO-0142 through WO-0143)
 
 - `docs/workorders/WO-0142-payment-handles-and-fiat-crypto-gateway-integration.md` — [NOT_STARTED] Create explicit standard pointers/overlays for fiat (Stripe/PayPal) and crypto gateways, establishing universal payment handle integration without leaking financial data (P1)
-- `docs/workorders/WO-0143-private-encrypted-inline-shards-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline facets, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)
+- `docs/workorders/WO-0143-private-encrypted-inline-facets-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline facets, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)
 
 ### Vignette Explainer Library (WO-0145)
 
-- `docs/workorders/WO-0145-vignette-video-library.md` — [OPEN] Create a dedicated library of Universal Manifest specific vignette explainers for UI integration and YouTube publishing (P1)
+- `docs/workorders/WO-0145-vignette-video-library.md` — [IN_PROGRESS] Create a dedicated library of Universal Manifest specific vignette explainers for UI integration and YouTube publishing; UI audit complete, 5 priority vignette scripts delivered (V-01 through V-05), production workflow documented (P1)

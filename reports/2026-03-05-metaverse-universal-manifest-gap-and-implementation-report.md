@@ -53,17 +53,17 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
   - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
 - Implementation now:
-  - Keep platform-specific semantics in optional shards/pointers/consents.
+  - Keep platform-specific semantics in optional facets/pointers/consents.
 - Applied example:
   - Platform A resolves `metaverse.avatar` and `metaverse.profile`.
-  - Platform B ignores unsupported shard fields and still validates base manifest.
+  - Platform B ignores unsupported facet fields and still validates base manifest.
 
 ### 2) DID/VC-based identity and credential portability
 
 - Status: `Covered`
 - Current UM support:
   - DID subject identifiers are recommended.
-  - VC-style claims can be carried as claim payloads and/or shard references.
+  - VC-style claims can be carried as claim payloads and/or facet references.
 - Evidence:
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
   - `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
@@ -85,7 +85,7 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
   - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Implementation now:
-  - Keep large asset data off-manifest; keep only references and minimal metadata in shards.
+  - Keep large asset data off-manifest; keep only references and minimal metadata in facets.
 - Applied example:
   - `metaverse.avatar -> ipfs://...`
   - `metaverse.inventory -> https://wallet.example/inventory`
@@ -150,7 +150,7 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 
 - Status: `Partial`
 - Current UM support:
-  - UM supports arbitrary namespaced claims/consents/pointers/shards.
+  - UM supports arbitrary namespaced claims/consents/pointers/facets.
 - Gap:
   - No registry pack yet for these exact preference classes and context policy semantics.
 - Evidence:
@@ -263,7 +263,7 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Implementation now:
   - Provide minimal baseline manifest path for legacy consumers; require manual onboarding when unsupported.
 - Applied example:
-  - Legacy world only reads base identity + TTL-valid consent flags, ignores advanced shards.
+  - Legacy world only reads base identity + TTL-valid consent flags, ignores advanced facets.
 
 ### 14) Standards alignment expectations (MSF/OMA3/W3C/DIF/Khronos/VRM)
 
@@ -282,7 +282,7 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Change recommended:
   - Publish explicit MUM standards crosswalk matrix as non-normative report.
 - Applied example:
-  - VRM and glTF references remain in metaverse translation shard profile without changing core UM required fields.
+  - VRM and glTF references remain in metaverse translation facet profile without changing core UM required fields.
 
 ## Consolidated gap set (priority order)
 

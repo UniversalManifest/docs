@@ -98,7 +98,7 @@ Resulting integration decision:
 - The lane now explicitly supports:
   - root/current fabric pointers,
   - attachment-index pointers,
-  - compact attachment-policy shards,
+  - compact attachment-policy facets,
   - asset-profile pointers or lightweight declarations,
   - explicit runtime-only vs portable-state boundaries.
 - GeoPose was considered as an adjacent future source family, but it was not required for this pass because the current lane still does not carry portable geodetic pose claims.

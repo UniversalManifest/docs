@@ -8,7 +8,7 @@ It is Monday morning and I have three new artists confirmed for this weekend's g
 
 Today, I have three UMIDs. Three short strings of text, sent to me in a single group chat message.
 
-I paste the first UMID into our gallery management system. The system reaches out to myum.net, fetches the manifest, and runs validation. The manifest is structurally sound -- all required fields present, types correct, timestamps valid. The TTL checks out: the manifest was issued yesterday and does not expire until next week. The system then reads the venue policy shard from our own gallery manifest -- PG-13 content rating, no nudity, no hate symbols -- and compares it against the artist's content tags. Everything passes. Within thirty seconds, the artist's name, bio, and featured work appear in our content queue, ready for display.
+I paste the first UMID into our gallery management system. The system reaches out to myum.net, fetches the manifest, and runs validation. The manifest is structurally sound -- all required fields present, types correct, timestamps valid. The TTL checks out: the manifest was issued yesterday and does not expire until next week. The system then reads the venue policy facet from our own gallery manifest -- PG-13 content rating, no nudity, no hate symbols -- and compares it against the artist's content tags. Everything passes. Within thirty seconds, the artist's name, bio, and featured work appear in our content queue, ready for display.
 
 I paste the second UMID. Same process, same speed. This artist has allowed public display and proof-of-play analytics. Their work loads into the queue alongside the first.
 
@@ -38,16 +38,16 @@ On Monday morning I review the weekend's activity. Six manifests resolved across
 
 ## How UM Works Here
 
-**Venue manifest:** Sunset Gallery operates its own `um:Manifest` with a `venueIdentity` shard (name, locale, timezone), a `venuePolicy` shard (content rating rules, curation preferences, safety mode), and an `edgeNode` shard (local network discovery, edge base URL). This manifest defines the gallery's identity and rules for content display.
+**Venue manifest:** Sunset Gallery operates its own `um:Manifest` with a `venueIdentity` facet (name, locale, timezone), a `venuePolicy` facet (content rating rules, curation preferences, safety mode), and an `edgeNode` facet (local network discovery, edge base URL). This manifest defines the gallery's identity and rules for content display.
 
 **Artist onboarding via UMID resolution:** When Jordan pastes an artist's UMID, the gallery system sends an HTTP GET to `myum.net/{UMID}` and receives the artist's manifest. It runs `assertUniversalManifestV01` to validate structure (required fields, type checks, ISO date-time format), then confirms the TTL window is valid (`issuedAt <= now <= expiresAt`).
 
-**Content policy matching:** The system compares the artist's content metadata against the gallery's `venuePolicy` shard -- checking safety mode compatibility, content rules (no nudity, no hate symbols), and preferred media types. Only content that passes the policy gate enters the display queue.
+**Content policy matching:** The system compares the artist's content metadata against the gallery's `venuePolicy` facet -- checking safety mode compatibility, content rules (no nudity, no hate symbols), and preferred media types. Only content that passes the policy gate enters the display queue.
 
-**Device enrollment:** New displays discover the gallery's edge node via local network service discovery (`_um-edge._tcp.local`). The display fetches the venue manifest, reads the `edgeNode` shard for the edge base URL, and registers itself with a `deviceIdentity` shard containing hardware model, capabilities, and resolution. Trust level starts at `local` and is promoted to `enrolled` by the operator.
+**Device enrollment:** New displays discover the gallery's edge node via local network service discovery (`_um-edge._tcp.local`). The display fetches the venue manifest, reads the `edgeNode` facet for the edge base URL, and registers itself with a `deviceIdentity` facet containing hardware model, capabilities, and resolution. Trust level starts at `local` and is promoted to `enrolled` by the operator.
 
 **Consent enforcement:** Before emitting analytics events, the system checks each artist's `consents` array. If `analytics.proofOfPlay` is set to `allowed`, proof-of-play events are emitted keyed by the manifest `@id`. If denied, no events are emitted. This check happens per-artist, per-render cycle.
 
 **TTL enforcement and automatic cleanup:** The system monitors each artist manifest's `expiresAt` timestamp. When a manifest expires, the system stops rendering that artist's content, purges the full manifest from the active cache, and retains only the manifest `@id` in logs. No stale content is ever displayed.
 
-**UM capabilities demonstrated:** Venue manifest with policy shards, UMID-based artist onboarding, device enrollment and trust levels, content policy matching, per-artist consent enforcement, TTL-driven automatic cleanup.
+**UM capabilities demonstrated:** Venue manifest with policy facets, UMID-based artist onboarding, device enrollment and trust levels, content policy matching, per-artist consent enforcement, TTL-driven automatic cleanup.

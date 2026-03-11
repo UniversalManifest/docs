@@ -723,7 +723,7 @@ Primary conflict register:
 - Treat `omb.wiki` as a discovery and synthesis map for spatial-fabric material, not as the source of record.
 - Keep the current UM RP1/MSF architectural boundary:
   - no new required core fields,
-  - optional pointers and shards for ecosystem-specific semantics,
+  - optional pointers and facets for ecosystem-specific semantics,
   - consent-gated cross-world behavior,
   - runtime-managed live spatial/presence state.
 - Require a primary-source refresh before promoting newly surfaced spatial-fabric details into stronger RP1/MSF guidance.
@@ -737,14 +737,14 @@ Primary conflict register:
 ### Policy impact
 
 - Follow-on spatial-fabric work should localize additional primary sources first, then refresh RP1/MSF guidance and proof artifacts from those sources.
-- The existing RP1/MSF pointer/shard/consent overlay model remains valid.
+- The existing RP1/MSF pointer/facet/consent overlay model remains valid.
 - No normative UM change is created by this decision.
 
 ## 2026-03-06 — RP1/MSF scope composition and asset delivery remain non-normative integration guidance
 
 ### Decision
 
-- Keep RP1/MSF scope composition represented through optional pointers and compact shards only.
+- Keep RP1/MSF scope composition represented through optional pointers and compact facets only.
 - Use parent/root scope, child scope, and attachment-point summaries as the portable model instead of promoting live scope-tree semantics into the UM core.
 - Keep 3D asset delivery external and pointer-first, with lightweight asset-profile hints only.
 - Treat runtime session/view/tool state as non-portable unless deliberately exposed through a revocable pointer.

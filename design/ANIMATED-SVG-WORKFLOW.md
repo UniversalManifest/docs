@@ -741,7 +741,7 @@ These elements should be adapted:
 | `scenario-06-motion-tutorial.svg` | Scenario | Visual objects and icons tutorial |
 | `scenario-07-workbench-explainer.svg` | Tool | Editor lifecycle (import/edit/validate/export) |
 | `scenario-08-harness-explainer.svg` | Tool | Fixture load/quick checks/resolver probe |
-| `scenario-09-social-integration.svg` | Integration | Social/profile projection via publicProfile shard |
+| `scenario-09-social-integration.svg` | Integration | Social/profile projection via publicProfile facet |
 | `scenario-10-pop-integration.svg` | Integration | Proof-of-personhood multi-provider flow |
 | `scenario-11-omatrust-integration.svg` | Integration | OMATrust attestation interoperability |
 | `scenario-12-rp1-integration.svg` | Integration | RP1 spatial fabric binding |

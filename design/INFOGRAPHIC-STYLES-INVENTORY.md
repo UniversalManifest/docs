@@ -45,7 +45,7 @@ All visuals must use a consistent design language:
 
 - **ID:** `swiss-army-knife-metaphor`
 - **Style:** illustration, static-diagram
-- **Subject:** Manifest as a compact card with fold-out panels (shards)
+- **Subject:** Manifest as a compact card with fold-out panels (facets)
 - **Visual Direction:** Glowing credit-card-sized rounded rectangle, matte dark material with bright-blue edge glow, circular emblem/seal on front, UMID engraved on bottom edge, fold-out panels like Swiss Army Knife tools
 - **Status:** needs-creation
 - **Priority:** critical
@@ -96,9 +96,9 @@ These are foundational visual elements reused across all other visuals. **Build 
 - **Status:** needs-creation
 - **Priority:** critical
 
-### 2.2 Shards (Fold-Out Panels)
+### 2.2 Facets (Fold-Out Panels)
 
-- **ID:** `visual-shards`
+- **ID:** `visual-facets`
 - **Style:** animated-illustration
 - **Subject:** Compartments folding out from manifest, each with distinct icon
 - **Visual Direction:** Bright-blue panels with icons — silhouette (profile), device/screen (device), building/shield (venue), controller/trophy (game), badge/certificate (credentials). Mechanical smooth fold-out animation.
@@ -118,7 +118,7 @@ These are foundational visual elements reused across all other visuals. **Build 
 
 - **ID:** `visual-consent-locks`
 - **Style:** animated-illustration
-- **Subject:** Lock icons on shard panels indicating permission state
+- **Subject:** Lock icons on facet panels indicating permission state
 - **Visual Direction:** Green (unlocked/allowed), red (locked/denied), gray (not-set/denied-by-default). Toggle flip animation with click sound, denial flash, approval glow.
 - **Status:** needs-creation
 - **Priority:** high
@@ -212,7 +212,7 @@ Full-length animated explainer storyboards. Each is a multi-scene narrative.
 - **ID:** `anim-script-what-is-um`
 - **Style:** animated-svg, motion-graphics
 - **Scenes:** 5 — Problem (fragmentation) → Metaphor (Swiss Army Knife) → How It Works (4 beats) → Promise (before/after) → CTA
-- **Visual Direction:** Dark background, manifest glows warm white/gold, consent toggles (green/red/gray), shards with distinct accent colors, Stripe/Notion-style
+- **Visual Direction:** Dark background, manifest glows warm white/gold, consent toggles (green/red/gray), facets with distinct accent colors, Stripe/Notion-style
 - **Status:** needs-creation
 - **Priority:** critical
 - **Source:** `docs/scripts/script-what-is-um.md`
@@ -221,7 +221,7 @@ Full-length animated explainer storyboards. Each is a multi-scene narrative.
 
 - **ID:** `anim-script-how-it-works`
 - **Style:** animated-svg, motion-graphics
-- **Scenes:** 6 — Meet the Manifest → Shards (tools) → Consent (locks) → Publishing/Resolving → Validation → Result
+- **Scenes:** 6 — Meet the Manifest → Facets (tools) → Consent (locks) → Publishing/Resolving → Validation → Result
 - **Visual Direction:** Swiss Army Knife transformation, mechanical fold-out animations, validation checkpoint gates, metallic clicks, clean electronic track
 - **Status:** needs-creation
 - **Priority:** critical
@@ -257,7 +257,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `scenario-01-object-model`
 - **Style:** static-diagram
-- **Subject:** Visual breakdown of manifest structure — @context, @id, @type, shards, claims, consents, pointers
+- **Subject:** Visual breakdown of manifest structure — @context, @id, @type, facets, claims, consents, pointers
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/scenario-01-object-model.svg`
 - **Priority:** high
@@ -266,7 +266,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `scenario-03-consent-policy-flow`
 - **Style:** animated-svg
-- **Subject:** How consent toggles gate access to shards and data
+- **Subject:** How consent toggles gate access to facets and data
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/5.2-consent-policy-flow.svg`
 - **Priority:** high
@@ -319,7 +319,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `scenario-09-social-integration`
 - **Style:** animated-svg
-- **Subject:** Portable social profiles between platforms via publicProfile shard
+- **Subject:** Portable social profiles between platforms via publicProfile facet
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/7.1-social-integration.svg`
 - **Priority:** high
@@ -387,7 +387,7 @@ Existing animations that need regeneration or are missing entirely.
 - **ID:** `integration-healthcare-patient-consent`
 - **Style:** animated-svg, flowchart
 - **Subject:** Patient sharing emergency contacts and allergy info with clinic via UMID
-- **Visual Direction:** Patient manifest with allergyAlerts and emergencyContact shards, consent toggles for health.shareEmergencyInfo and health.shareAllergies, clinic system checking consent before displaying
+- **Visual Direction:** Patient manifest with allergyAlerts and emergencyContact facets, consent toggles for health.shareEmergencyInfo and health.shareAllergies, clinic system checking consent before displaying
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/8.1-healthcare-consent.svg`
 - **Priority:** medium
@@ -398,7 +398,7 @@ Existing animations that need regeneration or are missing entirely.
 - **ID:** `integration-education-credentials`
 - **Style:** animated-svg, flowchart
 - **Subject:** Job applicant sharing UMID with employer to verify degree and skills
-- **Visual Direction:** Student manifest with academicCredential and skillAttestation shards, employer checking edu.verifyDegree consent, verification endpoints for transcript and certifications
+- **Visual Direction:** Student manifest with academicCredential and skillAttestation facets, employer checking edu.verifyDegree consent, verification endpoints for transcript and certifications
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/8.2-education-credentials.svg`
 - **Priority:** medium
@@ -409,7 +409,7 @@ Existing animations that need regeneration or are missing entirely.
 - **ID:** `integration-smart-home`
 - **Style:** animated-svg, flowchart
 - **Subject:** New smart device reading home manifest and applying household privacy policies
-- **Visual Direction:** Home network manifest with homePolicy shard, new device enrolling and inheriting consent settings (home.shareUsageData denied, home.allowRemoteAccess denied)
+- **Visual Direction:** Home network manifest with homePolicy facet, new device enrolling and inheriting consent settings (home.shareUsageData denied, home.allowRemoteAccess denied)
 - **Status:** exists
 - **Existing Asset:** `site/public/animations/8.3-smart-home.svg`
 - **Priority:** medium
@@ -443,7 +443,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `journey-app-developer`
 - **Style:** journey-map, sequential-diagram
-- **Subject:** Sam integrating UM into social platform — TS helper install → UMID resolution → shard reading → consent checking → signature verification → consent revocation handling
+- **Subject:** Sam integrating UM into social platform — TS helper install → UMID resolution → facet reading → consent checking → signature verification → consent revocation handling
 - **Status:** exists
 - **Existing Asset:** `site/public/diagrams/9.3-app-developer-journey.svg`
 - **Priority:** medium
@@ -463,7 +463,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `journey-enterprise-integrator`
 - **Style:** journey-map, sequential-diagram
-- **Subject:** Morgan building venue management software — consumer implementation → device enrollment shards → OMATrust claims → multi-provider personhood → integration template contribution
+- **Subject:** Morgan building venue management software — consumer implementation → device enrollment facets → OMATrust claims → multi-provider personhood → integration template contribution
 - **Status:** exists
 - **Existing Asset:** `site/public/diagrams/9.5-enterprise-journey.svg`
 - **Priority:** low
@@ -503,13 +503,13 @@ Existing animations that need regeneration or are missing entirely.
 - **Priority:** high
 - **Source:** `docs/explainers/full-briefing.md`
 
-### 10.4 Shard Modularity
+### 10.4 Facet Modularity
 
-- **ID:** `shard-modularity`
+- **ID:** `facet-modularity`
 - **Style:** static-diagram
-- **Subject:** How different shards compose into one manifest — publicProfile, deviceIdentity, venuePolicy, claims as visually distinct sections
+- **Subject:** How different facets compose into one manifest — publicProfile, deviceIdentity, venuePolicy, claims as visually distinct sections
 - **Status:** exists
-- **Existing Asset:** `site/public/diagrams/10.4-shard-modularity.svg`
+- **Existing Asset:** `site/public/diagrams/10.4-facet-modularity.svg`
 - **Priority:** medium
 - **Source:** `docs/explainers/full-briefing.md`
 
@@ -552,7 +552,7 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `progressive-adoption`
 - **Style:** staircase-diagram, progression-chart
-- **Subject:** Level 1 (parse) → Level 2 (validate) → Level 3 (consume shards) → Level 4 (issue) → Level 5 (sign/verify)
+- **Subject:** Level 1 (parse) → Level 2 (validate) → Level 3 (consume facets) → Level 4 (issue) → Level 5 (sign/verify)
 - **Visual Direction:** Ascending staircase or building blocks, each level building on previous
 - **Status:** exists
 - **Existing Asset:** `site/public/diagrams/11.2-progressive-adoption.svg`
@@ -567,14 +567,14 @@ Existing animations that need regeneration or are missing entirely.
 
 - **ID:** `icon-set-core-concepts`
 - **Style:** icon-set
-- **Subject:** Icons for UMID, TTL, shards, pointers, consents, claims, subject, resolver
+- **Subject:** Icons for UMID, TTL, facets, pointers, consents, claims, subject, resolver
 - **Visual Direction:** Consistent line-based or filled style, bright-blue accent, recognizable at small sizes
 - **Status:** needs-creation
 - **Priority:** high
 
-### 12.2 Shard Type Icons
+### 12.2 Facet Type Icons
 
-- **ID:** `icon-set-shard-types`
+- **ID:** `icon-set-facet-types`
 - **Style:** icon-set
 - **Subject:** Profile (silhouette), device (screen), venue (building/shield), game (controller/trophy), credentials (badge/certificate)
 - **Visual Direction:** Simple recognizable symbols for use on fold-out panels in animations
@@ -666,7 +666,7 @@ Existing animations that need regeneration or are missing entirely.
 ## Recommended Build Order
 
 1. **Icon Sets** (Category 12) — foundational elements reused everywhere
-2. **Visual Vocabulary** (Category 2) — manifest card, shards, pointers, consent locks, TTL timer, resolver, validation checkpoint
+2. **Visual Vocabulary** (Category 2) — manifest card, facets, pointers, consent locks, TTL timer, resolver, validation checkpoint
 3. **Characters** (Category 3) — Alex, Jordan, Sam, Riley with consistent appearance
 4. **Technical Diagrams** (Category 10) — manifest lifecycle, consent model, TTL enforcement
 5. **Animation Scripts** (Category 4) — the four explainer videos

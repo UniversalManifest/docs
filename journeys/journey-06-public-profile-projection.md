@@ -13,7 +13,7 @@ An adopter should be able to take a manifest and derive a safe, public-facing pr
 ## Steps (conceptual)
 
 1. Parse the manifest and verify it is structurally valid for v0.1 (required fields exist).
-2. Locate a shard intended for public profile projection (e.g., `shards[].name = "publicProfile"`).
+2. Locate a facet intended for public profile projection (e.g., `facets[].name = "publicProfile"`).
 3. Derive a small “public profile” object that a consumer could render.
 4. Confirm that the projection can be built without requiring implementation-specific fields.
 

@@ -41,13 +41,13 @@ A single paragraph (50-80 words) that explains what UM is to a person with zero 
 A single page (~500 words) that covers: what it is, what problem it solves, how it works (conceptually), who it's for, and what it enables. Written in the hybrid style guide's Why→What→How structure.
 
 **A3. The Full Briefing** (`docs/explainers/full-briefing.md`)
-A comprehensive document (~2000 words) covering: problem, solution, architecture overview, core concepts (UMID, TTL, shards, pointers, consent, signatures), integration examples, adoption path, competitive positioning, and FAQ. Suitable for a board presentation or partnership pitch.
+A comprehensive document (~2000 words) covering: problem, solution, architecture overview, core concepts (UMID, TTL, facets, pointers, consent, signatures), integration examples, adoption path, competitive positioning, and FAQ. Suitable for a board presentation or partnership pitch.
 
 **A4. The Agent Briefing** (`docs/explainers/agent-briefing.md`)
 A structured document optimized for AI agent consumption. Contains: canonical description, key facts, positioning statements, common questions with answers, pitch angles for different audiences (developer, business, privacy advocate, standards body), and links to supporting materials. An agent reading this should be able to pitch UM competently.
 
 **A5. The Animation Briefing** (`docs/explainers/animation-briefing.md`)
-A structured handoff document for animation producers. Contains: the core metaphor ("Swiss Army Knife of Personal Data"), visual vocabulary (what manifests look like, what shards look like, what pointers look like), the "characters" (Creator, Venue, Device, App, Privacy Guardian), and scene-by-scene guidance for the three core animation scripts.
+A structured handoff document for animation producers. Contains: the core metaphor ("Swiss Army Knife of Personal Data"), visual vocabulary (what manifests look like, what facets look like, what pointers look like), the "characters" (Creator, Venue, Device, App, Privacy Guardian), and scene-by-scene guidance for the three core animation scripts.
 
 ### Phase B: Animation Scripts
 
@@ -55,7 +55,7 @@ A structured handoff document for animation producers. Contains: the core metaph
 The origin story. Introduces the problem (fragmented data), the metaphor (Swiss Army Knife), and the solution. Characters: Alex (a creator) trying to move their profile between three different apps. Shows the manifest as a glowing document that carries their identity, preferences, and permissions in one portable package.
 
 **B2. Script: "How It Works" (90-120 seconds)** (`docs/scripts/script-how-it-works.md`)
-The technical walkthrough for a non-technical audience. Shows: creating a manifest (filling out the "Swiss Army Knife"), publishing it to the resolver (putting it in a locker anyone can check), fetching it by UMID (giving someone the locker key), validating it (checking the expiry date), and reading shards (opening specific tools on the knife). Visual: manifest as an animated object with fold-out sections.
+The technical walkthrough for a non-technical audience. Shows: creating a manifest (filling out the "Swiss Army Knife"), publishing it to the resolver (putting it in a locker anyone can check), fetching it by UMID (giving someone the locker key), validating it (checking the expiry date), and reading facets (opening specific tools on the knife). Visual: manifest as an animated object with fold-out sections.
 
 **B3. Script: "Why It Matters" (60-90 seconds)** (`docs/scripts/script-why-it-matters.md`)
 The impact story. Five 10-second vignettes showing UM in action: (1) Creator's art shows up at a venue they've never visited, (2) Smart glasses respect someone's "don't record me" preference, (3) A game character moves between virtual worlds, (4) A proof-of-personhood check works without revealing personal details, (5) A device automatically enrolls at a new venue. Ends with: "One document. Every system. Your rules."
@@ -78,7 +78,7 @@ Each journey: persona description, scenario, step-by-step narrative (what happen
 ### Phase D: Integration Expansion
 
 **D1. Integration Template** (`integrations/TEMPLATE.md`)
-A standardized template for creating new integration lane documentation. Sections: Overview, Use Cases, Manifest Structure (suggested shards/pointers/consents), Consumer Behavior, Issuer Behavior, Example Fixture, Proof Coverage, Implementation Checklist.
+A standardized template for creating new integration lane documentation. Sections: Overview, Use Cases, Manifest Structure (suggested facets/pointers/consents), Consumer Behavior, Issuer Behavior, Example Fixture, Proof Coverage, Implementation Checklist.
 
 **D2. Expanded Integration Catalog** (`site/src/content/docs/integrations/index.md`)
 Reorganize integrations into categories. Move current 8 from being the entire integration story to being "featured" examples within a larger taxonomy:
@@ -95,7 +95,7 @@ Reorganize integrations into categories. Move current 8 from being the entire in
 - **Media & Entertainment**: Content licensing, creator attribution, rights management, recommendation portability
 
 **D3. Agent-Driven Integration Generator Instructions** (`docs/guides/integration-authoring-guide.md`)
-Instructions that an AI agent can follow to create a new integration lane document from the template. Includes: how to identify relevant shards/pointers/consents, how to create an example fixture, naming conventions, and quality checklist.
+Instructions that an AI agent can follow to create a new integration lane document from the template. Includes: how to identify relevant facets/pointers/consents, how to create an example fixture, naming conventions, and quality checklist.
 
 **D4. Three New Integration Lanes** (created using the template to prove the system works)
 Pick three from the expanded catalog that are NOT in the current 8. Create them as proof that the template + authoring guide produces quality output.

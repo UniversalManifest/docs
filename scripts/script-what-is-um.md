@@ -37,7 +37,7 @@
 
 **Beat 1 -- Create:** Alex taps the manifest. It opens flat, and data tiles slide into named compartments: a "publicProfile" tile with name and avatar, a "claims" tile with a creator badge, a "consents" tile with toggle switches. A small serial number label appears at the top -- the UMID, rendered as `urn:uuid:9b1d...` with a QR code beside it. The `issuedAt` and `expiresAt` timestamps appear as a countdown bar along the bottom edge.
 
-**Beat 2 -- Share:** Alex walks into a gallery (Jordan's venue). Alex holds out the manifest. A beam of light connects the manifest to Jordan's screen -- not copying the whole thing, but illuminating specific compartments. Jordan's system reads the publicProfile shard. The other compartments stay closed.
+**Beat 2 -- Share:** Alex walks into a gallery (Jordan's venue). Alex holds out the manifest. A beam of light connects the manifest to Jordan's screen -- not copying the whole thing, but illuminating specific compartments. Jordan's system reads the publicProfile facet. The other compartments stay closed.
 
 **Beat 3 -- Consent:** Close-up on the consent compartment. Toggle switches are visible: "Public display: allowed" (green). "Analytics tracking: denied" (red). "Smart glasses recording: not set" (gray, with a small lock -- indicating denied by default). The denied and not-set switches have locked padlocks. Jordan's system reaches for the analytics toggle -- it bounces off the lock.
 
@@ -46,7 +46,7 @@
 **Narration:** "Alex fills out their manifest once -- profile, credentials, permissions, all in one place, with a unique ID and an expiration date. When they visit a gallery, the venue reads only the sections it needs. Consent toggles control what is shared -- and if a permission is not set, it is denied by default. Later, anyone with the manifest's ID can look it up through the resolver and get the latest version."
 
 **On-screen text:**
-- Beat 1: `Create once. Shards carry your data.`
+- Beat 1: `Create once. Facets carry your data.`
 - Beat 2: `Share what's relevant.`
 - Beat 3: `Consent controls access. Default = denied.`
 - Beat 4: `Look up any manifest by its UMID.`
@@ -81,8 +81,8 @@
 
 ## Production Notes
 
-- **Color palette:** Dark background (near-black or deep navy). Manifest glows warm white/gold. Consent toggles: green (#22c55e) for allowed, red (#ef4444) for denied, gray (#6b7280) for not set. Shards have distinct accent colors (blue for profile, amber for claims, teal for consents, violet for devices).
+- **Color palette:** Dark background (near-black or deep navy). Manifest glows warm white/gold. Consent toggles: green (#22c55e) for allowed, red (#ef4444) for denied, gray (#6b7280) for not set. Facets have distinct accent colors (blue for profile, amber for claims, teal for consents, violet for devices).
 - **Typography:** Clean sans-serif (Inter, Geist, or similar). On-screen text is minimal and appears with fade-in animations.
 - **Character style:** Flat illustration with subtle depth. Alex is vibrant and expressive. Jordan is practical and focused.
-- **Key technical terms shown on screen:** UMID, shards, consents, TTL, resolver. Each should feel natural, not jargon-heavy.
+- **Key technical terms shown on screen:** UMID, facets, consents, TTL, resolver. Each should feel natural, not jargon-heavy.
 - **Aspect ratios to deliver:** 16:9 (primary), 1:1 (social), 9:16 (stories/reels).

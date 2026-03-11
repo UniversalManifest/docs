@@ -45,7 +45,7 @@ The Universal Manifest project has a **strong foundational awareness** of the sp
 
 The v0.1 spec `README.md` contains a section header "ID + caching guidance (Shield / public display)" (line 49) -- "Shield" is an implementation-specific device name (NVIDIA Shield TV Pro) that has no place in spec text. The same file references `Reference implementation: /packages/universal-manifest/src/index.ts` (line 78) directly in the Security Considerations section. The v0.2 spec `README.md` also references `Reference implementation: /packages/universal-manifest/src/index.ts:272-302` (line 47) inline with normative-adjacent text. Both v0.1 and v0.2 `CONFORMANCE.md` files reference the TypeScript test harness (`packages/universal-manifest/ -> npm test`) as the "Reference harness" in their final sections.
 
-The `REGISTRY.md` file refers to "Solid Pod URL" (line 14) in the shard name description for `canonicalProfilePointer`, which leaks a specific storage technology into what should be technology-neutral registry guidance.
+The `REGISTRY.md` file refers to "Solid Pod URL" (line 14) in the facet name description for `canonicalProfilePointer`, which leaks a specific storage technology into what should be technology-neutral registry guidance.
 
 The `SIGNATURE-PROFILE.md` is clean -- it describes the profile in implementation-neutral terms with a clear verifier checklist that does not assume any particular language or runtime.
 

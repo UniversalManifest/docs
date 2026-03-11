@@ -10,7 +10,7 @@ It catalogs every usage of the term "envelope" across the repo, identifies incon
 
 **Answer: A Universal Manifest is ONE envelope. There is no nesting of envelopes.**
 
-A manifest is a single, flat JSON-LD document with structured internal sections. Shards are not sub-envelopes. Pointers are not references to other envelopes. The signature does not create a wrapper envelope around the payload. There is exactly one document, one `@id`, one `subject`, one validity window, and (in v0.2) one signature.
+A manifest is a single, flat JSON-LD document with structured internal sections. Facets are not sub-envelopes. Pointers are not references to other envelopes. The signature does not create a wrapper envelope around the payload. There is exactly one document, one `@id`, one `subject`, one validity window, and (in v0.2) one signature.
 
 ### The correct mental model
 
@@ -29,7 +29,7 @@ A manifest is a **single container with labeled compartments**:
 │  ┌───────────────────────────────────────────┐  │
 │  │  PAYLOAD SECTIONS (all optional)          │  │
 │  │                                           │  │
-│  │  shards[]    ← composable data slots      │  │
+│  │  facets[]    ← composable data slots      │  │
 │  │  claims[]    ← assertions about subject   │  │
 │  │  consents[]  ← privacy/disclosure rules   │  │
 │  │  devices[]   ← registered endpoints       │  │
@@ -72,7 +72,7 @@ This is the most common usage. The word "envelope" is used as a synonym for "man
 | `docs/UNIVERSAL-MANIFEST-BRIEFING.md` | line 300 | "the standard envelope adapts to a radically different domain" |
 | `docs/UNIVERSAL-MANIFEST-BRIEFING.md` | line 514 | "Envelope, not database" |
 | `docs/UNIVERSAL-MANIFEST-BRIEFING.md` | line 532 | "a standard envelope for identity, claims, consents..." |
-| `packages/universal-manifest/src/index.ts` | line 76 | "The manifest is the top-level envelope that binds a subject identity to a set of shards..." |
+| `packages/universal-manifest/src/index.ts` | line 76 | "The manifest is the top-level envelope that binds a subject identity to a set of facets..." |
 | `docs/STATE-OF-THE-PROJECT.md` | line 265 | "treat the manifest as an envelope that drives projections" |
 | `docs/journeys/commercial/enterprise-journey.md` | line 17 | "The manifest envelope is the same whether it describes an artist, a venue, or a display device" |
 | `docs/journeys/commercial/enterprise-journey.md` | line 51 | "the manifest envelope (@context, @id, @type...) is identical across all entity types" |
@@ -115,9 +115,9 @@ The `signature` property is frequently called a "signature envelope," meaning th
 | `docs/DONE-DONE-DEFINITION.md` | line 123 | "integrity envelope behavior" |
 | `docs/reports/2026-02-12-spec-status-and-foundations-audit.md` | line 23 | "Integrity envelope semantics by profile" |
 
-#### Sense C: "A shard or fixture called 'envelope'" (envelope as a name)
+#### Sense C: "A facet or fixture called 'envelope'" (envelope as a name)
 
-Some fixtures and shard names use "envelope" as a descriptive label.
+Some fixtures and facet names use "envelope" as a descriptive label.
 
 | File | Line/Context | Exact phrasing |
 |------|-------------|----------------|
@@ -183,7 +183,7 @@ LAYER 1: HEADER (required fields)
   expiresAt          → when it expires
 
 LAYER 2: PAYLOAD (optional structured sections)
-  shards[]           → named data compartments
+  facets[]           → named data compartments
   claims[]           → assertions about the subject
   consents[]         → disclosure/privacy controls
   devices[]          → registered endpoints
@@ -202,39 +202,39 @@ LAYER 3: INTEGRITY (optional in v0.1, required in v0.2)
 
 These layers are conceptual groupings. In the actual JSON, all three layers are **sibling properties** at the top level of a single object.
 
-### 3.2 How shards relate to the manifest
+### 3.2 How facets relate to the manifest
 
-Shards are **compartments within the single manifest**, not sub-envelopes. Each shard is a named JSON object in the `shards[]` array.
+Facets are **compartments within the single manifest**, not sub-envelopes. Each facet is a named JSON object in the `facets[]` array.
 
 ```
 manifest
-  └── shards[]
-       ├── shard: "publicProfile"
-       │     ├── @type: "um:Shard"
+  └── facets[]
+       ├── facet: "publicProfile"
+       │     ├── @type: "um:Facet"
        │     ├── name: "publicProfile"
        │     └── entity: { @id, @type, name, ... }
        │
-       ├── shard: "deviceRegistration"
-       │     ├── @type: "um:Shard"
+       ├── facet: "deviceRegistration"
+       │     ├── @type: "um:Facet"
        │     ├── name: "deviceRegistration"
        │     ├── ref: "https://..." (canonical source)
        │     └── entity: { @id, @type, ... }
        │
-       └── shard: "crossWorldProfile"
-             ├── @type: "um:Shard"
+       └── facet: "crossWorldProfile"
+             ├── @type: "um:Facet"
              ├── name: "crossWorldProfile"
              └── entity: { displayName, homeWorld, ... }
 ```
 
-Key properties of shards:
+Key properties of facets:
 
-- Shards do NOT have their own signatures. They are covered by the manifest-level signature.
-- Shards do NOT have their own validity windows. They inherit `issuedAt`/`expiresAt` from the manifest.
-- Shards do NOT have their own `@id` at the manifest level (though they may carry one for internal entity identification).
-- Shards CAN embed data (`entity`) or reference external data (`ref`), or both.
-- Shards are NOT independently addressable or resolvable. You resolve the manifest, then read the shards you understand.
+- Facets do NOT have their own signatures. They are covered by the manifest-level signature.
+- Facets do NOT have their own validity windows. They inherit `issuedAt`/`expiresAt` from the manifest.
+- Facets do NOT have their own `@id` at the manifest level (though they may carry one for internal entity identification).
+- Facets CAN embed data (`entity`) or reference external data (`ref`), or both.
+- Facets are NOT independently addressable or resolvable. You resolve the manifest, then read the facets you understand.
 
-**Shards are best described as: named data slots within a single manifest.**
+**Facets are best described as: named data slots within a single manifest.**
 
 ### 3.3 How pointers relate to the manifest
 
@@ -298,7 +298,7 @@ The signature covers **everything except itself**:
 │  │  subject ✓                        │  │
 │  │  issuedAt ✓                       │  │
 │  │  expiresAt ✓                      │  │
-│  │  shards[] ✓  (all shard content)  │  │
+│  │  facets[] ✓  (all facet content)  │  │
 │  │  claims[] ✓                       │  │
 │  │  consents[] ✓                     │  │
 │  │  devices[] ✓                      │  │
@@ -352,12 +352,12 @@ The **shape** does not change. The **semantics** of the signature change from "i
 │  issuedAt ─── "2026-02-11T20:45:58Z"        │
 │  expiresAt ── "2026-02-12T20:45:58Z"        │
 │                                             │
-│  shards: []  (empty)                        │
+│  facets: []  (empty)                        │
 │                                             │
 └─────────────────────────────────────────────┘
 ```
 
-### 4.2 v0.1 Manifest Topology (with shards and signature)
+### 4.2 v0.1 Manifest Topology (with facets and signature)
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -368,15 +368,15 @@ The **shape** does not change. The **semantics** of the signature change from "i
 │  ├── subject: "did:web:venue.localartist.network"    │
 │  ├── issuedAt / expiresAt                            │
 │                                                      │
-│  SHARDS                                              │
+│  FACETS                                              │
 │  ├── ┌──────────────────────────────────────┐        │
-│  │   │ um:Shard "canonicalProfilePointer"   │        │
+│  │   │ um:Facet "canonicalProfilePointer"   │        │
 │  │   │   ref: https://pod.example/profile   │───────────► external
 │  │   │   entity: { @id, @type, name }       │        │    data
 │  │   └──────────────────────────────────────┘        │
 │  │                                                   │
 │  └── ┌──────────────────────────────────────┐        │
-│      │ um:Shard "deviceRegistration"        │        │
+│      │ um:Facet "deviceRegistration"        │        │
 │      │   entity: { @id, @type, name, desc } │        │
 │      └──────────────────────────────────────┘        │
 │                                                      │
@@ -388,7 +388,7 @@ The **shape** does not change. The **semantics** of the signature change from "i
 └──────────────────────────────────────────────────────┘
 ```
 
-### 4.3 v0.2 Signed Manifest Topology (with shards)
+### 4.3 v0.2 Signed Manifest Topology (with facets)
 
 ```
 ┌────────────────────────────────────────────────────────────┐
@@ -405,15 +405,15 @@ The **shape** does not change. The **semantics** of the signature change from "i
 │  │  ├── issuedAt: "2026-02-27T00:00:00.000Z"           │  │
 │  │  └── expiresAt: "2026-02-28T00:00:00.000Z"          │  │
 │  │                                                      │  │
-│  │  SHARDS                                              │  │
+│  │  FACETS                                              │  │
 │  │  ├── ┌──────────────────────────────────┐            │  │
-│  │  │   │ um:Shard "venueProfile"          │            │  │
+│  │  │   │ um:Facet "venueProfile"          │            │  │
 │  │  │   │   entity: schema:Place           │            │  │
 │  │  │   │   { name, description }          │            │  │
 │  │  │   └──────────────────────────────────┘            │  │
 │  │  │                                                   │  │
 │  │  └── ┌──────────────────────────────────┐            │  │
-│  │      │ um:Shard "deviceRegistration"    │            │  │
+│  │      │ um:Facet "deviceRegistration"    │            │  │
 │  │      │   ref: https://pod.example/...   │────────────────► external
 │  │      │   entity: { @id, @type, ... }    │            │  │
 │  │      └──────────────────────────────────┘            │  │
@@ -477,7 +477,7 @@ Pointer targets are NOT signed (they are external documents).
    │          │  subject         ✓ signed    │
    │  JCS     │  issuedAt        ✓ signed    │
    │  canon-  │  expiresAt       ✓ signed    │
-   │  icalize │  shards[...]     ✓ signed    │
+   │  icalize │  facets[...]     ✓ signed    │
    │  ────►   │  claims[...]     ✓ signed    │
    │  Ed25519 │  consents[...]   ✓ signed    │
    │  sign    │  devices[...]    ✓ signed    │
@@ -521,9 +521,9 @@ Pointer targets are NOT signed (they are external documents).
 │  │  metaverse.socialGraph ───────────────────────► external    │  │
 │  └────────────────────────────────────────────────────────────┘  │
 │                                                                  │
-│  ┌── SHARDS (embedded data compartments) ─────────────────────┐  │
+│  ┌── FACETS (embedded data compartments) ─────────────────────┐  │
 │  │  ┌─────────────────────────────────────────────────┐       │  │
-│  │  │ um:Shard "crossWorldProfile"                    │       │  │
+│  │  │ um:Facet "crossWorldProfile"                    │       │  │
 │  │  │   entity:                                       │       │  │
 │  │  │     displayName: "Nova"                         │       │  │
 │  │  │     homeWorld: "world://origin.example/home"    │       │  │
@@ -552,8 +552,8 @@ Manifests are independent documents. They do NOT nest inside each other. They MA
   │ pointer ────────────────►  │                     │
   │   (href to B's @id) │      │                     │
   │                     │      │                     │
-  │ shard: "profile"    │      │ shard: "venue"      │
-  │ shard: "prefs"      │      │ shard: "devices"    │
+  │ facet: "profile"    │      │ facet: "venue"      │
+  │ facet: "prefs"      │      │ facet: "devices"    │
   │ signature ✓         │      │ signature ✓         │
   └─────────────────────┘      └─────────────────────┘
         │                             │
@@ -588,10 +588,10 @@ The word "envelope" causes three problems:
 | The manifest as a portable unit | **portable document** or **state document** | A manifest when emphasizing its transport-between-systems property | When explaining portability to newcomers | Do not use "state capsule" without defining it first |
 | The `signature` field | **signature block** | The JSON object containing the cryptographic signature, algorithm, key reference, and verification metadata | When referring to the `signature` property in the JSON | Do not call it "signature envelope" (it is not wrapping anything) |
 | The signature's signing scope | **signing input** | The manifest JSON with the `signature` property removed, then JCS-canonicalized | When describing what gets signed | Do not call it "the envelope contents" |
-| A shard | **shard** or **data slot** | A named compartment within the manifest's `shards` array that carries domain-specific data | When referring to items in `shards[]` | Do not call shards "sub-envelopes" or "inner envelopes" |
+| A facet | **facet** or **data slot** | A named compartment within the manifest's `facets` array that carries domain-specific data | When referring to items in `facets[]` | Do not call facets "sub-envelopes" or "inner envelopes" |
 | A pointer | **pointer** or **data reference** | A URL in the `pointers` array that links to an external authoritative data source | When referring to items in `pointers[]` | Do not call pointers "external envelopes" |
 | The header fields | **header** or **required fields** | The fixed set of required properties: `@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt` | When discussing the structural skeleton | Do not call it "the outer envelope" |
-| The payload sections | **payload sections** or **content sections** | The optional arrays: `shards`, `claims`, `consents`, `devices`, `pointers` | When discussing the variable content of a manifest | Do not call it "the inner envelope" |
+| The payload sections | **payload sections** or **content sections** | The optional arrays: `facets`, `claims`, `consents`, `devices`, `pointers` | When discussing the variable content of a manifest | Do not call it "the inner envelope" |
 | The manifest as a whole concept | **Universal Manifest** or **UM** | The specification, the format, and the ecosystem | When referring to the project/standard | Do not use "envelope standard" |
 
 ### 5.3 Migration from current terms
@@ -636,7 +636,7 @@ The pod has three visual elements:
 
 1. **Outer shell**: The manifest's structural boundary (header + format contract)
 2. **Gap between shell and payload**: The integrity layer (signature verification)
-3. **Inner payload**: The content sections (shards, claims, consents, devices, pointers)
+3. **Inner payload**: The content sections (facets, claims, consents, devices, pointers)
 
 ### 6.2 How the pod maps to the topology
 
@@ -644,25 +644,25 @@ The pod has three visual elements:
 |-------------------|---------------------|-------|
 | Outer shell | The manifest document itself, especially the required header fields | The shell defines the shape. All manifests have the same outer shape regardless of content. |
 | Gap / space between shell and payload | The signature block and verification process | The gap "lights up" during verification. Green = valid signature. Red = tampered. This is the most powerful visual metaphor in the system. |
-| Inner payload | The payload sections (shards, claims, consents, devices, pointers) | The contents vary by use case but always sit inside the same shell. |
-| Pod opening (projection) | Consumer reading specific shards/sections | The shell peels open, contents emerge toward their consumer destinations. |
+| Inner payload | The payload sections (facets, claims, consents, devices, pointers) | The contents vary by use case but always sit inside the same shell. |
+| Pod opening (projection) | Consumer reading specific facets/sections | The shell peels open, contents emerge toward their consumer destinations. |
 | Pod traveling | The manifest being transported between systems | The pod moves as a unit -- there are no sub-pods traveling separately. |
 
 ### 6.3 What the pod represents
 
 **The pod represents the entire manifest -- not just the payload, not just the wrapper.**
 
-The pod is a single object that travels as a unit. It is not an envelope that you open and discard. The shell and the payload are one thing. This is the correct metaphor: the manifest is a self-contained unit where the structure (header + signature) and the content (shards + claims + consents + devices + pointers) travel together inseparably.
+The pod is a single object that travels as a unit. It is not an envelope that you open and discard. The shell and the payload are one thing. This is the correct metaphor: the manifest is a self-contained unit where the structure (header + signature) and the content (facets + claims + consents + devices + pointers) travel together inseparably.
 
 The pod metaphor is better than the envelope metaphor because:
 
 - An envelope is something you **open and throw away**. A manifest is something you **verify and keep intact**.
-- An envelope has contents that can be **removed from the envelope**. A manifest's shards cannot be separated from the manifest's signature -- removing a shard invalidates the signature.
+- An envelope has contents that can be **removed from the envelope**. A manifest's facets cannot be separated from the manifest's signature -- removing a facet invalidates the signature.
 - An envelope is **passive packaging**. A pod is **active protection** (the gap = integrity layer) around active payload.
 
 ### 6.4 Where the pod metaphor gets tricky
 
-The pod metaphor breaks down slightly in one area: **projection**. When a consumer reads specific shards from a manifest, the teaching scripts show the pod "opening up" and shards floating toward consumers. This could imply that shards leave the pod, but in reality the manifest stays intact and the consumer simply reads the parts it understands. The teaching scripts handle this correctly by showing the inner payload remaining visible as the source while shard elements float toward destinations.
+The pod metaphor breaks down slightly in one area: **projection**. When a consumer reads specific facets from a manifest, the teaching scripts show the pod "opening up" and facets floating toward consumers. This could imply that facets leave the pod, but in reality the manifest stays intact and the consumer simply reads the parts it understands. The teaching scripts handle this correctly by showing the inner payload remaining visible as the source while facet elements float toward destinations.
 
 ---
 
@@ -690,7 +690,7 @@ The pod correctly represents the manifest as a single self-contained unit with s
 This report was produced on 2026-02-27 by analyzing:
 
 - All spec artifacts (v0.1 and v0.2 schemas, contexts, conformance, signature profile)
-- All example manifests (v0.1 and v0.2, including shards, pointers, revocation metadata)
+- All example manifests (v0.1 and v0.2, including facets, pointers, revocation metadata)
 - The TypeScript helper package (types and validation logic)
 - The reference runtime integration contract
 - The teaching-scripts visual design system
@@ -709,9 +709,9 @@ Files contributing to this analysis:
 - `spec/v0.2/SIGNATURE-PROFILE.md`
 - `packages/universal-manifest/src/index.ts`
 - `examples/v0.1/minimal-manifest.jsonld`
-- `examples/v0.1/manifest-with-shards.jsonld`
+- `examples/v0.1/manifest-with-facets.jsonld`
 - `examples/v0.2/minimal-signed-manifest.jsonld`
-- `examples/v0.2/manifest-with-shards-signed.jsonld`
+- `examples/v0.2/manifest-with-facets-signed.jsonld`
 - `examples/v0.2/manifest-with-pointers-signed.jsonld`
 - `examples/v0.2/manifest-with-revocation-metadata.jsonld`
 - `integrations/reference-runtime.md`

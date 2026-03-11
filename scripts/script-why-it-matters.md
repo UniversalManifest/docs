@@ -21,7 +21,7 @@
 
 ### Scene 2: Vignette 1 -- The Gallery (12s)
 
-**Visual:** Alex walks into a gallery they have never visited before -- Sunset Gallery, Jordan's venue. As Alex crosses the threshold, a subtle light pulse travels from Alex's pocket (where their manifest glows) to the gallery's system (a small edge node on the wall). The system fetches Alex's manifest by UMID. It opens the `publicCapsule` shard: display name, bio, featured artworks. It checks the `publicDisplay` consent toggle -- green, allowed. It checks the `safeMode` claim against the venue's content policy -- PG-13, match.
+**Visual:** Alex walks into a gallery they have never visited before -- Sunset Gallery, Jordan's venue. As Alex crosses the threshold, a subtle light pulse travels from Alex's pocket (where their manifest glows) to the gallery's system (a small edge node on the wall). The system fetches Alex's manifest by UMID. It opens the `publicCapsule` facet: display name, bio, featured artworks. It checks the `publicDisplay` consent toggle -- green, allowed. It checks the `safeMode` claim against the venue's content policy -- PG-13, match.
 
 Within seconds, three screens in the gallery light up with Alex's art. Alex looks up, surprised and delighted. They did not lift a finger.
 
@@ -51,7 +51,7 @@ Immediately, Riley's face in the glasses' view is replaced with a smooth, respec
 
 **Visual:** A stylized game character -- "Nova" -- stands in a neon-lit virtual world (World A). A portal appears. Nova leaps through it and lands in a completely different world (World B) -- different art style, different lighting, different environment. But Nova still looks like Nova. Their avatar is intact. Their display name floats above their head. Their social connections (friend list) are visible in the HUD.
 
-How? A quick cutaway shows the manifest's `crossWorldProfile` shard being read by World B's system. The `metaverse.avatar` pointer is fetched -- it resolves to Nova's avatar asset. The `metaverse.socialGraph` pointer is fetched -- friend list loads. The `metaverse.profilePublic` consent is checked -- allowed. Everything carries over.
+How? A quick cutaway shows the manifest's `crossWorldProfile` facet being read by World B's system. The `metaverse.avatar` pointer is fetched -- it resolves to Nova's avatar asset. The `metaverse.socialGraph` pointer is fetched -- friend list loads. The `metaverse.profilePublic` consent is checked -- allowed. Everything carries over.
 
 **Narration:** "Nova jumps from one virtual world to another. Their avatar, display name, and social connections carry over seamlessly. Same manifest, different worlds. No re-registration, no data loss."
 
@@ -77,9 +77,9 @@ Sam's app checks both. Two green checkmarks appear. The user is verified as a un
 
 ### Scene 6: Vignette 5 -- The New Device (12s)
 
-**Visual:** A new display screen -- a large mounted TV -- is plugged in at a venue. It powers on with a blank screen. A small edge node nearby detects it. The edge node holds the venue's manifest. The venue manifest contains a `devices` section with enrolled devices and a `venuePolicy` shard with content rules (PG-13, no nudity, preferred tags: local art, photography).
+**Visual:** A new display screen -- a large mounted TV -- is plugged in at a venue. It powers on with a blank screen. A small edge node nearby detects it. The edge node holds the venue's manifest. The venue manifest contains a `devices` section with enrolled devices and a `venuePolicy` facet with content rules (PG-13, no nudity, preferred tags: local art, photography).
 
-The new screen sends a registration request. The venue manifest's `deviceRegistration` shard is read. The device is enrolled -- its DID appears in the `devices` array. The content policy downloads. The screen starts showing curated art -- thumbnails slide into place, all matching the venue's content rules. Zero manual configuration. No one touched a keyboard.
+The new screen sends a registration request. The venue manifest's `deviceRegistration` facet is read. The device is enrolled -- its DID appears in the `devices` array. The content policy downloads. The screen starts showing curated art -- thumbnails slide into place, all matching the venue's content rules. Zero manual configuration. No one touched a keyboard.
 
 **Narration:** "A new display is plugged in at a venue. It reads the venue's manifest, enrolls itself, downloads the content policy, and starts showing curated art. Zero manual configuration."
 
@@ -111,10 +111,10 @@ The new screen sends a registration request. The venue manifest's `deviceRegistr
   - Vignette 4: Sam (app developer) + anonymous new user
   - Vignette 5: No human character -- the device and the venue manifest are the actors
 - **Technical accuracy across vignettes:**
-  - Vignette 1 references real fixture structure: `publicCapsule` shard, `publicDisplay` consent, `safeMode` claim.
+  - Vignette 1 references real fixture structure: `publicCapsule` facet, `publicDisplay` consent, `safeMode` claim.
   - Vignette 2 references real fixture structure: `ar.recording.faceVisible` and `ar.recording.voiceAllowed` consents from the smart-glasses-consent-denied fixture.
-  - Vignette 3 references real fixture structure: `crossWorldProfile` shard, metaverse pointers (`metaverse.avatar`, `metaverse.socialGraph`), `metaverse.profilePublic` consent.
+  - Vignette 3 references real fixture structure: `crossWorldProfile` facet, metaverse pointers (`metaverse.avatar`, `metaverse.socialGraph`), `metaverse.profilePublic` consent.
   - Vignette 4 references real fixture structure: `personhood.worldId.verification` and `personhood.brightId.verification` claims with issuer DIDs.
-  - Vignette 5 references real fixture structure: venue manifest's `devices` array, `venuePolicy` shard with `safeMode` and `contentRules`, device enrollment via DID.
+  - Vignette 5 references real fixture structure: venue manifest's `devices` array, `venuePolicy` facet with `safeMode` and `contentRules`, device enrollment via DID.
 - **Visual consistency:** Same color palette, typography, and character style as the other scripts in this series.
 - **Aspect ratios to deliver:** 16:9 (primary), 1:1 (social), 9:16 (stories/reels).

@@ -19,10 +19,10 @@
 For systems that understand Linked Data, the JSON-LD `@context` provides rich, unambiguous semantics.
 Every manifest has a globally unique identifier (typically a UUID URN) and built-in validity timestamps: 'issued at' and 'expires at'. This time-to-live (TTL) mechanism is critical. It makes UM offline-tolerant. A consuming system or edge device can cache the manifest and know exactly when to stop trusting it, without needing to ping a central server for revocation checks."
 
-### Slide 3: The Data Structure (Shards & Pointers)
-**Visual:** An exploded view of the manifest document. The "Envelope" opens up to reveal modular "Shards" (e.g., `publicProfile`, `deviceIdentity`). A magnifying glass hovers over a "Pointer" showing a URL instead of raw data.
+### Slide 3: The Data Structure (Facets & Pointers)
+**Visual:** An exploded view of the manifest document. The "Envelope" opens up to reveal modular "Facets" (e.g., `publicProfile`, `deviceIdentity`). A magnifying glass hovers over a "Pointer" showing a URL instead of raw data.
 **Speaker Notes:**
-"The internal data structure is highly modular, organized into what we call 'Shards'. Think of Shards as functional compartments—one shard might carry a public profile, another a venue policy, and another a gaming achievement.
+"The internal data structure is highly modular, organized into what we call 'Facets'. Think of Facets as functional compartments—one facet might carry a public profile, another a venue policy, and another a gaming achievement.
 Crucially, UM relies heavily on 'Pointers'. Instead of copying a 50-megabyte 3D avatar or an entire database history into the manifest, it includes a URI pointing to the authoritative source. This keeps the file size extremely lightweight—typically 1 to 3 kilobytes—making it easily transportable via API, Bluetooth, or even a QR code."
 
 ### Slide 4: Default-Deny Consent Model

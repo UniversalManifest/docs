@@ -19,7 +19,7 @@ The firewall metaphor is precise:
 
 | Network Firewall (Little Snitch) | Data Firewall (Universal Manifest) |
 |---|---|
-| Application wants to connect to a server | Consumer wants to read a shard or claim |
+| Application wants to connect to a server | Consumer wants to read a facet or claim |
 | Rule: allow/deny by app + destination + port | Rule: allow/deny by consumer + data-type + context |
 | Default: deny all (zero trust) | Default: deny all (consents absent = denied) |
 | First connection triggers a prompt | First access request triggers a consent decision |
@@ -135,7 +135,7 @@ The current v0.1 consent is a simple name/value pair. The firewall model extends
 | `audience` | `um:Audience` | **Spec** | Who this rule applies to (consumer matching criteria) |
 | `context` | string | **Spec** | Context tag for when this rule applies |
 | `expires` | ISO 8601 | **Spec** | When this specific consent rule expires (independent of manifest TTL) |
-| `scope` | string | **Spec** | What level of data this rule covers (`section`, `shard`, `field`) |
+| `scope` | string | **Spec** | What level of data this rule covers (`section`, `facet`, `field`) |
 | `notes` | string | **Spec** | Human-readable rationale (already exists in some integration lanes) |
 
 #### Backward compatibility:
@@ -194,16 +194,16 @@ Consents can apply at different levels of the manifest:
 | Scope | Applies to | Example consent name |
 |---|---|---|
 | `section` | An entire top-level section | `"publicDisplay"` (governs all rendering) |
-| `shard` | A specific shard by name | `"shard:allergyAlerts"` (governs one shard) |
-| `field` | A specific field within a shard | `"shard:publicProfile.field:dateOfBirth"` |
+| `facet` | A specific facet by name | `"facet:allergyAlerts"` (governs one facet) |
+| `field` | A specific field within a facet | `"facet:publicProfile.field:dateOfBirth"` |
 
 **Scope semantics (normative):**
 
 - If `scope` is absent, it is inferred from the consent `name`:
   - Names without `:` prefix are section-level (current v0.1 behavior)
-  - Names starting with `shard:` are shard-level
+  - Names starting with `facet:` are facet-level
   - Names containing `.field:` are field-level
-- More specific scopes override less specific ones (a shard-level deny overrides a section-level allow for that shard).
+- More specific scopes override less specific ones (a facet-level deny overrides a section-level allow for that facet).
 
 ### 4.5 Default-Deny Formalization
 
@@ -212,7 +212,7 @@ The current v0.1 spec recommends but does not mandate default-deny. The firewall
 **Proposed normative requirement (for conformant consumers at Tier 2+):**
 
 > A consumer that respects consent semantics MUST treat the absence of a consent
-> entry for a given data section, shard, or field as equivalent to `"denied"`.
+> entry for a given data section, facet, or field as equivalent to `"denied"`.
 > Explicit consent is required for access. This is the **default-deny** principle.
 
 **Exception: Tier 0 and Tier 1 consumers** (parse-only and pointer-consumers from the adoption tiers) are not required to enforce consent semantics, as they do not interpret payload content.
@@ -223,8 +223,8 @@ When multiple consent rules could apply, specificity determines which rule wins.
 
 **Precedence hierarchy (most specific wins):**
 
-1. Field-level consent (`shard:publicProfile.field:dateOfBirth`)
-2. Shard-level consent (`shard:publicProfile`)
+1. Field-level consent (`facet:publicProfile.field:dateOfBirth`)
+2. Facet-level consent (`facet:publicProfile`)
 3. Section-level consent (`publicDisplay`)
 4. Audience-specific rule over audience-general rule
 5. Context-specific rule over context-general rule
@@ -332,23 +332,23 @@ Groups allow bulk enable/disable operations and make the rule set manageable as 
 
 ## 6. Integration with Existing Manifest Sections
 
-### 6.1 Consents Governing Shards
+### 6.1 Consents Governing Facets
 
-A consent rule can gate access to a specific shard. The consumer checks the consent before reading the shard:
+A consent rule can gate access to a specific facet. The consumer checks the consent before reading the facet:
 
 ```json
 {
   "consents": [
     {
       "@type": "um:Consent",
-      "name": "shard:allergyAlerts",
+      "name": "facet:allergyAlerts",
       "value": "allowed",
       "audience": { "@type": "um:Audience", "match": "accreditation", "value": "healthcare.provider" }
     }
   ],
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "allergyAlerts",
       "entity": {
         "@type": "health:AllergyList",
@@ -359,14 +359,14 @@ A consent rule can gate access to a specific shard. The consumer checks the cons
 }
 ```
 
-**Consumer behavior**: A consumer reads `shard:allergyAlerts`, checks for a consent named `shard:allergyAlerts`, verifies it can satisfy the audience requirement (it is an accredited healthcare provider), and only then processes the shard data.
+**Consumer behavior**: A consumer reads `facet:allergyAlerts`, checks for a consent named `facet:allergyAlerts`, verifies it can satisfy the audience requirement (it is an accredited healthcare provider), and only then processes the facet data.
 
-**Key design question**: Should the shard data even be *present* in the manifest if the consent is `"denied"`? Two valid approaches:
+**Key design question**: Should the facet data even be *present* in the manifest if the consent is `"denied"`? Two valid approaches:
 
-1. **Declarative model** (spec-level): The shard is always present; the consent governs whether the consumer is *permitted* to use it. The data is visible in the JSON but access is policy-controlled.
-2. **Selective inclusion model** (implementation-level): The issuing system omits shards that the intended audience is not permitted to access, producing a *projection* of the manifest tailored to the consumer. The consent rules describe the policy; the issuing system enforces it at generation time.
+1. **Declarative model** (spec-level): The facet is always present; the consent governs whether the consumer is *permitted* to use it. The data is visible in the JSON but access is policy-controlled.
+2. **Selective inclusion model** (implementation-level): The issuing system omits facets that the intended audience is not permitted to access, producing a *projection* of the manifest tailored to the consumer. The consent rules describe the policy; the issuing system enforces it at generation time.
 
-**Recommendation**: Both models are valid. The spec should define the consent semantics (model 1). Implementations may additionally use selective inclusion (model 2) as an optimization. A consumer MUST NOT assume that the absence of a shard means the subject does not have that data -- it may mean the consent was `"denied"` for this consumer.
+**Recommendation**: Both models are valid. The spec should define the consent semantics (model 1). Implementations may additionally use selective inclusion (model 2) as an optimization. A consumer MUST NOT assume that the absence of a facet means the subject does not have that data -- it may mean the consent was `"denied"` for this consumer.
 
 ### 6.2 Consents Governing Pointers
 
@@ -430,7 +430,7 @@ The pod's outer **shell** is the firewall boundary. The shell determines what pa
       ╭────────╮
      ╱  ╭────╮  ╲       Shell = data firewall boundary
     │   │ UM │   │       Gap   = consent verification layer
-     ╲  ╰────╯  ╱       Core  = protected data (shards, claims, pointers)
+     ╲  ╰────╯  ╱       Core  = protected data (facets, claims, pointers)
       ╰────────╯
 ```
 
@@ -440,7 +440,7 @@ The pod's outer **shell** is the firewall boundary. The shell determines what pa
 |---|---|---|
 | **Access request** | Shell pulses with incoming arrow | A consumer is requesting data |
 | **Consent check** | Gap illuminates amber while checking rules | Firewall is evaluating the request against consent rules |
-| **Access granted** | Gap glows green; specific shard emerges through shell opening | Consent matched; data flows to consumer |
+| **Access granted** | Gap glows green; specific facet emerges through shell opening | Consent matched; data flows to consumer |
 | **Access denied** | Gap flashes red; shell stays sealed | Consent check failed; no data released |
 | **New rule prompt** | Gap pulses with question mark | No matching rule exists; subject must decide |
 
@@ -467,11 +467,11 @@ The smart-glasses lane already defines consent keys like `ar.recording.faceVisib
 
 ### Healthcare (`integrations/healthcare-patient-consent.md`)
 
-The healthcare lane already defines consent-gated shards (`health.shareAllergies` gates `allergyAlerts`). The firewall model formalizes this:
+The healthcare lane already defines consent-gated facets (`health.shareAllergies` gates `allergyAlerts`). The firewall model formalizes this:
 
 ```json
 {
-  "name": "shard:allergyAlerts",
+  "name": "facet:allergyAlerts",
   "value": "allowed",
   "audience": { "@type": "um:Audience", "match": "accreditation", "value": "healthcare.provider" },
   "context": "emergency"
@@ -486,7 +486,7 @@ Cross-world identity sharing gets granular control:
 
 ```json
 {
-  "name": "shard:crossWorldProfile",
+  "name": "facet:crossWorldProfile",
   "value": "restricted",
   "audience": { "@type": "um:Audience", "match": "domain", "value": "*.trustedworlds.example" },
   "notes": "Only share my metaverse profile with verified world operators"
@@ -546,7 +546,7 @@ If a subject changes a consent from `"allowed"` to `"denied"`, does this affect 
 
 - Add `audience` field to `um:Consent` (optional, backward-compatible)
 - Add `context` field to `um:Consent` (optional, backward-compatible)
-- Add `scope` field for shard/field-level granularity
+- Add `scope` field for facet/field-level granularity
 - Formalize default-deny as normative for Tier 2+ consumers
 - Define consent precedence rules
 - Add `um:Audience` type to JSON-LD context
@@ -581,7 +581,7 @@ If a subject changes a consent from `"allowed"` to `"denied"`, does this affect 
 ### Lateral integration touchpoints:
 
 1. **Teaching scripts** -- Add a "firewall" scene to the teaching progression: *"Your pod has a shell. That shell is your firewall. Nothing gets in or out without your permission."*
-2. **Interactive sandbox** (WO-0060+) -- Add a consent-rule builder to the sandbox UI, demonstrating how rules gate shard visibility
+2. **Interactive sandbox** (WO-0060+) -- Add a consent-rule builder to the sandbox UI, demonstrating how rules gate facet visibility
 3. **Journey proofs** -- Add a journey proving audience-scoped consent enforcement (e.g., healthcare provider accreditation check)
 4. **Animated SVG** -- Produce a "data firewall" explainer SVG using the established animation pipeline
 5. **Threat model** (`docs/security/THREAT-MODEL.md`) -- Add consent-bypass and audience-spoofing threats
@@ -604,7 +604,7 @@ The design patterns from Little Snitch that directly inform this architecture:
 |---|---|
 | **Deny by default** | Absent consent = denied; explicit rules required for access |
 | **Progressive disclosure** | Start with no rules; prompt on first access; accumulate rules over time |
-| **Rule specificity precedence** | Field > shard > section; specific audience > any audience; deny wins ties |
+| **Rule specificity precedence** | Field > facet > section; specific audience > any audience; deny wins ties |
 | **Profiles** | Context tags (personal, professional, public, emergency) select different rule subsets |
 | **Rule groups** | Domain-grouped consents (healthcare, social, professional) for bulk management |
 | **Network Monitor** | Access log showing which consumers accessed which data |
@@ -642,7 +642,7 @@ The design patterns from Little Snitch that directly inform this architecture:
     },
     {
       "@type": "um:Consent",
-      "name": "shard:allergyAlerts",
+      "name": "facet:allergyAlerts",
       "value": "allowed",
       "audience": {
         "@type": "um:Audience",
@@ -654,7 +654,7 @@ The design patterns from Little Snitch that directly inform this architecture:
     },
     {
       "@type": "um:Consent",
-      "name": "shard:allergyAlerts",
+      "name": "facet:allergyAlerts",
       "value": "denied",
       "notes": "Default: allergy data is private"
     },
@@ -693,9 +693,9 @@ The design patterns from Little Snitch that directly inform this architecture:
     }
   ],
 
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "publicProfile",
       "entity": {
         "@type": "schema:Person",
@@ -704,7 +704,7 @@ The design patterns from Little Snitch that directly inform this architecture:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "allergyAlerts",
       "entity": {
         "@type": "health:AllergyList",

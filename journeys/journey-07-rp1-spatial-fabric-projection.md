@@ -2,7 +2,7 @@
 
 ## Goal
 
-Demonstrate that RP1/MSF-style spatial-fabric data can be represented as optional pointers and compact shards in Universal Manifest without changing core v0.1 required fields.
+Demonstrate that RP1/MSF-style spatial-fabric data can be represented as optional pointers and compact facets in Universal Manifest without changing core v0.1 required fields.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ Demonstrate that RP1/MSF-style spatial-fabric data can be represented as optiona
    - `spatial.anchorShare`
    - `spatial.crossWorldLinking`
    - `spatial.sessionReplay`
-5. Confirm compact shards summarize only the portable subset of state:
+5. Confirm compact facets summarize only the portable subset of state:
    - `spatialAnchors`
    - `placeMembership`
    - `spatialFabricAttachmentPolicy`

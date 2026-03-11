@@ -193,12 +193,12 @@ Answer:
 - No core UM concept should be replaced.
 - The correct move is to add a stricter recommendation policy around examples, not to collapse UM into DID/VC/OIDC-specific language.
 
-### Can this be integrated directly as a shard?
+### Can this be integrated directly as a facet?
 
 Answer:
 
 - No.
-- Volatility governance is not a shard concern. It is a documentation and promotion-governance concern.
+- Volatility governance is not a facet concern. It is a documentation and promotion-governance concern.
 - At most, manifests carry pointers or claims that happen to use a volatile upstream protocol family.
 
 ### Recommended position now
@@ -256,13 +256,13 @@ Answer:
 - Proximity is not a replacement for consent or pointers.
 - It is a transport and presentation context that may consume UM policy state.
 
-### Can this be integrated directly as a shard?
+### Can this be integrated directly as a facet?
 
 Answer:
 
 - Not as a primary design.
 - A manifest may carry request-policy pointers, verifier preferences, or audit references related to a proximity flow.
-- The live proximity exchange itself belongs to the presentation protocol and runtime layer, not to a static shard.
+- The live proximity exchange itself belongs to the presentation protocol and runtime layer, not to a static facet.
 
 ### Recommended position now
 
@@ -323,12 +323,12 @@ Answer:
 - The subject-controlled runtime and adapter model remain the right umbrella abstraction.
 - External storage or federation systems should be treated as attachable substrates, not as the definition of UM itself.
 
-### Can this be integrated directly as a shard?
+### Can this be integrated directly as a facet?
 
 Answer:
 
 - No, not as the primary solution.
-- Shards may describe public-profile projections, social handles, canonical-source pointers, or change-log references.
+- Facets may describe public-profile projections, social handles, canonical-source pointers, or change-log references.
 - Federation semantics, relay behavior, and bridge contracts remain runtime/integration concerns.
 
 ### Recommended position now

@@ -34,16 +34,16 @@ Each core concept in Universal Manifest has a specific visual representation. Us
 - **Animation:** Floats slightly above surfaces, rotates gently when idle, glows brighter when active
 - **Sound:** Soft, clean chime when it appears or is activated
 
-### Shards
+### Facets
 
 - **Visual:** Fold-out panels that hinge from the manifest's edges, like compartments in a Swiss Army Knife. Each panel has a distinct icon representing its data type.
-- **Icons by shard type:**
+- **Icons by facet type:**
   - Public Profile: silhouette/avatar icon
   - Device Registration: device/screen icon
   - Venue Policy: building/shield icon
   - Game Profile: controller/trophy icon
   - Credentials: badge/certificate icon
-- **Animation:** Panels fold out smoothly with a satisfying mechanical motion. When a shard is being read, its panel glows and a data stream flows from it to the consuming system.
+- **Animation:** Panels fold out smoothly with a satisfying mechanical motion. When a facet is being read, its panel glows and a data stream flows from it to the consuming system.
 - **Color:** Panels use the bright-blue accent color by default, with the icon in white
 
 ### Pointers
@@ -54,8 +54,8 @@ Each core concept in Universal Manifest has a specific visual representation. Us
 
 ### Consent
 
-- **Visual:** Small toggle locks on each shard panel. Green (unlocked, glowing) = allowed. Red (locked, matte) = denied.
-- **Animation:** Toggles flip with a clean click. When a system tries to access a denied shard, the red lock briefly flashes and the panel stays closed. When access is allowed, the green lock glows and the panel opens smoothly.
+- **Visual:** Small toggle locks on each facet panel. Green (unlocked, glowing) = allowed. Red (locked, matte) = denied.
+- **Animation:** Toggles flip with a clean click. When a system tries to access a denied facet, the red lock briefly flashes and the panel stays closed. When access is allowed, the green lock glows and the panel opens smoothly.
 - **Sound:** Click for toggle. Soft denial tone (low) for red. Soft approval tone (high) for green.
 
 ### TTL (Time-to-Live / Validity Window)
@@ -106,7 +106,7 @@ These characters appear across all animation scripts. They represent different p
 - **Role:** Building a social platform, wants portable user profiles
 - **Visual:** Developer aesthetic -- hoodie, laptop, coffee. Surrounded by floating code snippets and API endpoints. Often shown at a desk with multiple screens.
 - **Personality:** Curious, efficiency-driven, hates building custom integrations. They're the "just give me one format" archetype.
-- **Use case focus:** Parsing manifests, consuming shards, progressive adoption, reference implementation usage
+- **Use case focus:** Parsing manifests, consuming facets, progressive adoption, reference implementation usage
 
 ### Riley (The Privacy Guardian)
 
@@ -136,7 +136,7 @@ Reference the project's dark-mode design system. All animations should use this 
 | Consent: allowed | Green | `#22c55e` | Unlocked consent toggles, validation success |
 | Consent: denied | Red | `#ef4444` | Locked consent toggles, validation failure, expiry |
 | Warning / expiring | Amber | `#f59e0b` | TTL countdown in final phase |
-| Text (primary) | White | `#f8fafc` | Labels, UMID, shard names |
+| Text (primary) | White | `#f8fafc` | Labels, UMID, facet names |
 | Text (secondary) | Muted blue-gray | `#94a3b8` | Descriptions, secondary labels |
 | Inactive / expired | Gray | `#475569` | Expired manifests, disabled elements |
 
@@ -170,15 +170,15 @@ These are suggested scene structures for explainer animations. Each can be produ
 1. **Open:** Split screen showing three different apps, each with its own format for a user profile. Arrows between them are tangled, red, frustrated.
 2. **Problem statement:** Text overlay -- "Every pair of systems invents a new format."
 3. **Transition:** The tangled arrows dissolve. A single manifest card appears in the center, glowing.
-4. **Solution:** The manifest opens its shard panels. Clean, blue arrows extend from it to each system. Each system reads the shards it needs.
+4. **Solution:** The manifest opens its facet panels. Clean, blue arrows extend from it to each system. Each system reads the facets it needs.
 5. **Close:** The manifest closes, compact again. Text: "One document. Every system."
 
 ### Sequence 2: "How Consent Works" (30-45 seconds)
 
-1. **Open:** Riley holds their manifest. Several shard panels are visible, most with red locks.
+1. **Open:** Riley holds their manifest. Several facet panels are visible, most with red locks.
 2. **A system requests access:** A scanning beam reaches toward the manifest.
-3. **Denied shards:** The scanner hits a red-locked panel. Flash. Access denied.
-4. **Allowed shard:** Riley taps a lock, turning it green. The panel opens, data flows to the requesting system.
+3. **Denied facets:** The scanner hits a red-locked panel. Flash. Access denied.
+4. **Allowed facet:** Riley taps a lock, turning it green. The panel opens, data flows to the requesting system.
 5. **Close:** Riley closes the panel, locks it again. Text: "Nothing without your permission."
 
 ### Sequence 3: "Offline Tolerance" (30-45 seconds)
@@ -186,7 +186,7 @@ These are suggested scene structures for explainer animations. Each can be produ
 1. **Open:** Jordan's gallery, remote location. Wi-Fi icon is crossed out.
 2. **Alex arrives:** Alex presents their manifest. Jordan's scanner validates it -- green checkmark.
 3. **Time passes:** The TTL timer on Alex's manifest counts down visibly.
-4. **Still working:** The gallery display shows Alex's art, sourced from the manifest's shard data. No internet needed.
+4. **Still working:** The gallery display shows Alex's art, sourced from the manifest's facet data. No internet needed.
 5. **Expiry:** The timer runs out. The manifest fades to gray. The display politely removes Alex's content.
 6. **Close:** Text: "Works offline. Expires on time."
 
@@ -195,14 +195,14 @@ These are suggested scene structures for explainer animations. Each can be produ
 1. **Open:** Sam at their desk, staring at a UMID string.
 2. **Query:** Sam sends the UMID to myum.net. The UMID travels as a glowing packet to the resolver (the locker room).
 3. **Lookup:** The correct slot illuminates. The manifest slides out.
-4. **Delivery:** The manifest travels back to Sam's screen. Sam reads the shards.
+4. **Delivery:** The manifest travels back to Sam's screen. Sam reads the facets.
 5. **Close:** Text: "Any manifest, anywhere. Just look it up."
 
 ### Sequence 5: "Progressive Adoption" (45-60 seconds)
 
 1. **Level 1:** Sam opens a manifest in a basic JSON viewer. "Parse it."
 2. **Level 2:** Sam runs a validation check. Green checkmark. "Validate it."
-3. **Level 3:** Sam reads a shard and uses the data in their app. "Consume it."
+3. **Level 3:** Sam reads a facet and uses the data in their app. "Consume it."
 4. **Level 4:** Sam creates their own manifest and publishes it. "Issue it."
 5. **Level 5:** Sam signs the manifest (a notary stamp animation). "Sign it."
 6. **Close:** The five levels stack up like building blocks. Text: "Start wherever you are."

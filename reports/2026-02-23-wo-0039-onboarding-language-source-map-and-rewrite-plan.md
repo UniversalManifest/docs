@@ -29,7 +29,7 @@
 |---|---|---|---|---|---|
 | 1 | **"portable state capsule"** | `index.md:3,6`; `overview.md:8` | UNDEFINED_JARGON | CRITICAL | REWRITE to plain English ("a portable document format for passing identity and permission data between systems") |
 | 2 | **"integration pair"** | `overview.md:34` | UNDEFINED_JARGON | CRITICAL | REPLACE_WITH "each time two systems need to share data" |
-| 3 | **"shards"** (no definition before use) | `overview.md:10,38`; `index.md:15`; `quick-start.md:20,32`; `concepts.md:10` | UNDEFINED_JARGON | CRITICAL | DEFINE_INLINE on first use: "Shards are named, optional sub-sections within a manifest that group related data (for example, a `publicProfile` shard and a `deviceRegistration` shard)." |
+| 3 | **"facets"** (no definition before use) | `overview.md:10,38`; `index.md:15`; `quick-start.md:20,32`; `concepts.md:10` | UNDEFINED_JARGON | CRITICAL | DEFINE_INLINE on first use: "Facets are named, optional sub-sections within a manifest that group related data (for example, a `publicProfile` facet and a `deviceRegistration` facet)." |
 | 4 | **"UMID"** (acronym before expansion) | `overview.md:41`; `index.md:13,18`; `quick-start.md:18`; `concepts.md:7` | UNDEFINED_JARGON | CRITICAL | DEFINE_INLINE on first use: "UMID (Universal Manifest Identifier) -- the unique `@id` of a manifest" |
 | 5 | **"convergence profile"** | `overview.md:12` | INSIDER_FRAMING | HIGH | REMOVE or REWRITE: "UM re-uses existing standards (JSON-LD, W3C Verifiable Credentials patterns) rather than inventing from scratch" |
 | 6 | **"CEO-directed integration lanes"** | `overview.md:18` | INSIDER_FRAMING | HIGH | REMOVE from onboarding; reframe as "Current integration targets include:" |
@@ -48,7 +48,7 @@
 | 19 | **"harness"** / **"Interactive harness loader"** | `quick-start.md:53,55` | UNDEFINED_JARGON | MEDIUM | REPLACE_WITH "interactive test tool" or DEFINE_INLINE: "The harness is a browser-based tool that loads and displays manifest examples." |
 | 20 | **"freshness for use"** | `quick-start.md:27`; `concepts.md:8` | UNDEFINED_JARGON | MEDIUM | REWRITE: "whether the manifest has expired" or "whether the manifest is still within its valid time window" |
 | 21 | **"projections"** | `concepts.md:10` | UNDEFINED_JARGON | MEDIUM | DEFINE_INLINE: "A projection is a view of a manifest tailored for a specific context (for example, showing only public fields on a display screen)." |
-| 22 | **"composable"** (used without explaining how) | `overview.md:10`; `quick-start.md:32`; `concepts.md:10` | UNDEFINED_JARGON | MEDIUM | DEFINE_INLINE: "Composable means you can mix and match shards independently -- include only the ones relevant to your use case." |
+| 22 | **"composable"** (used without explaining how) | `overview.md:10`; `quick-start.md:32`; `concepts.md:10` | UNDEFINED_JARGON | MEDIUM | DEFINE_INLINE: "Composable means you can mix and match facets independently -- include only the ones relevant to your use case." |
 | 23 | **"Metaverse Universal Manifest (MUM)"** | `overview.md:16` | INSIDER_FRAMING | MEDIUM | REMOVE from onboarding or reduce to a single sentence: "UM evolved from earlier metaverse-focused work." No need to name MUM. |
 | 24 | **"local-first"** | `overview.md:30`; `index.md:3,27` | ASSUMED_KNOWLEDGE | MEDIUM | DEFINE_INLINE: "Local-first means the system can work with cached data even when offline, using TTL to know when to refresh." |
 | 25 | **"bounded caching"** | `index.md:27` | UNDEFINED_JARGON | MEDIUM | DEFINE_INLINE: "Bounded caching means caching data only until its TTL expires." |
@@ -179,7 +179,7 @@ This section traces where each problematic term propagates beyond the four first
 
 **Status**: Widely used (13+ files). Define it once in the first onboarding file, then use consistently. Deeper pages can use it freely once it is established.
 
-### 2.9 "shards"
+### 2.9 "facets"
 
 | File | Line(s) |
 |---|---|
@@ -296,7 +296,7 @@ This section traces where each problematic term propagates beyond the four first
 1. Opening line ("portable state capsule standard") uses undefined jargon as the primary definition.
 2. Line 8 attempts to clarify "in practical terms" but introduces MORE jargon: "trusted context", "per-integration payload design".
 3. "UMID" introduced on line 13 without expanding the acronym.
-4. "shards, pointers, claims, and consents" listed on line 15 without any definitions.
+4. "facets, pointers, claims, and consents" listed on line 15 without any definitions.
 5. "resolver domain" on line 18 -- unexplained architectural detail.
 6. "envelope contract" on line 26 -- undefined.
 7. "local-first with bounded caching" on line 27 -- buzzwords.
@@ -331,7 +331,7 @@ This section traces where each problematic term propagates beyond the four first
 **Current problems:**
 
 1. Line 8: "portable state capsule" -- opening definition is jargon.
-2. Line 10: "composable shards" -- undefined on first use.
+2. Line 10: "composable facets" -- undefined on first use.
 3. Line 12: "convergence profile" -- insider standards language.
 4. Lines 14-16: MUM lineage section -- insider history irrelevant to a first-time reader.
 5. Line 18: "CEO-directed integration lanes" -- organizational framing that means nothing to an external developer.
@@ -362,7 +362,7 @@ This section traces where each problematic term propagates beyond the four first
 | Current | Replacement |
 |---|---|
 | "portable state capsule format" | "a portable document format for sharing identity, permissions, and data references between systems" |
-| "composable shards" | "optional, named data sections" |
+| "composable facets" | "optional, named data sections" |
 | "convergence profile over existing standards" | "builds on existing standards like JSON-LD rather than inventing from scratch" |
 | "CEO-directed integration lanes" | "Current integration targets" |
 | "RP1 spatial fabric style systems" | "3D/spatial computing platforms" (with link) |
@@ -382,7 +382,7 @@ This section traces where each problematic term propagates beyond the four first
 2. "UMID: the manifest `@id` (issuer-minted; v0.1 recommends `urn:uuid:<uuidv4>`)" -- circular: uses `@id`, "issuer-minted", and `urn:uuid` without explanation.
 3. "TTL: `issuedAt`/`expiresAt` define freshness for use" -- does not explain what TTL stands for or what "freshness for use" means.
 4. "Unknown-field tolerance" -- does not explain WHY this matters.
-5. "Shards: small composable sections used for projections" -- "composable" and "projections" are undefined.
+5. "Facets: small composable sections used for projections" -- "composable" and "projections" are undefined.
 6. "Pointers: references to canonical data that lives elsewhere" -- "canonical" is undefined.
 7. "avoid overbuilding" -- vague.
 8. The closing line ("keep adoption possible across multiple ecosystems") is hand-wavy.
@@ -395,7 +395,7 @@ This section traces where each problematic term propagates beyond the four first
   - One plain-English sentence saying what it IS.
   - One sentence saying WHY it matters.
   - One concrete example (code snippet or scenario).
-- Structure: lead with the manifest as a whole (what the document looks like), then introduce each part (UMID, TTL, shards, pointers, unknown-field tolerance).
+- Structure: lead with the manifest as a whole (what the document looks like), then introduce each part (UMID, TTL, facets, pointers, unknown-field tolerance).
 - Add a minimal JSON example at the top showing a real manifest with labels pointing to each concept.
 - End with a "now you know enough to read the Quick Start" transition.
 
@@ -476,7 +476,7 @@ These terms/patterns MUST NOT appear in first-read surfaces (`site/src/content/d
 | Pattern | Required inline definition |
 |---|---|
 | `state capsule` | Must immediately explain what "state" means in this context and what "capsule" means |
-| `shards` | Must define as "optional named sections within a manifest" |
+| `facets` | Must define as "optional named sections within a manifest" |
 | `pointers` | Must define as "URL references to data stored at its source" |
 | `UMID` | Must expand as "UMID (Universal Manifest Identifier)" on first use |
 | `TTL` | Must expand as "TTL (time-to-live)" on first use |
@@ -511,7 +511,7 @@ BANNED_PATTERNS=(
 # RESTRICTED patterns -- warn if found without definition within 2 lines
 RESTRICTED_PATTERNS=(
   "state capsule"
-  "\\bshards\\b"
+  "\\bfacets\\b"
   "\\bpointers\\b"
   "\\bUMID\\b"
   "\\bTTL\\b"

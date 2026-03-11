@@ -48,7 +48,7 @@ Animation text and labels must align with UM terminology:
 - `claims`
 - `consents`
 - `pointers`
-- `shards`
+- `facets`
 - resolver
 - verifier
 

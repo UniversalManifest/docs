@@ -13,7 +13,7 @@
 
 ## Objective
 
-Build the SubjectPanel component that occupies the lower portion of the center column in the V2 layout. It displays the object being exchanged or resolved between the two entities (a manifest shard, a DID document, a credential, etc.) using a DetailsCard with dual-mode rendering (hierarchy/JSON).
+Build the SubjectPanel component that occupies the lower portion of the center column in the V2 layout. It displays the object being exchanged or resolved between the two entities (a manifest facet, a DID document, a credential, etc.) using a DetailsCard with dual-mode rendering (hierarchy/JSON).
 
 ## Why this work matters
 
@@ -29,7 +29,7 @@ The V1 sandbox had no concept of a "subject" -- the thing being exchanged betwee
 
 ### Capabilities
 
-- Displays the subject type label (e.g., "manifest-shard", "did-document", "credential")
+- Displays the subject type label (e.g., "manifest-facet", "did-document", "credential")
 - Shows subject data in a DetailsCard with dual-mode (hierarchy/JSON)
 - Subject status indicator (idle, in-transit, resolved, rejected)
 - Updates per step as the protocol progresses

@@ -77,7 +77,7 @@ Implemented automated terminology/readability guard with:
 **Features:**
 - Scans first-read documentation for banned and restricted terms
 - BANNED patterns: Must never appear (e.g., "integration pair", "CEO-directed", "MUM")
-- RESTRICTED patterns: Must have inline definition within 2 lines (e.g., "shards", "UMID", "TTL", "pointers")
+- RESTRICTED patterns: Must have inline definition within 2 lines (e.g., "facets", "UMID", "TTL", "pointers")
 - Definition detection using multiple heuristics:
   - Parenthetical definitions: "UMID (Universal Manifest Identifier)"
   - Colon definitions: "UMID: the Universal..."
@@ -106,15 +106,15 @@ Initial run of guard script found 6 restricted-term violations. All were fixed b
 **Fix:** Added inline definition "(browser-based tools for creating, editing, and validating manifests)"
 **Context:** Tools section describing Manifest Workbench and Verification Harness
 
-### 2. "shards" and "TTL" violations
+### 2. "facets" and "TTL" violations
 **File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md:63`
-**Fix:** Added inline definitions "TTL (time-to-live validity window)" and "shards (named data sections)"
+**Fix:** Added inline definitions "TTL (time-to-live validity window)" and "facets (named data sections)"
 **Context:** "How to start" section listing core concepts
 
-### 3. "shards" violation in code block
+### 3. "facets" violation in code block
 **File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:71`
-**Fix:** Added inline definition in example introduction "Below is a manifest with two shards (named data sections):" and added comment in code block
-**Context:** Section 4 example showing shards structure
+**Fix:** Added inline definition in example introduction "Below is a manifest with two facets (named data sections):" and added comment in code block
+**Context:** Section 4 example showing facets structure
 
 ### 4. "pointers" violation in code block
 **File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:98`
@@ -199,8 +199,8 @@ npm run smoke:endpoints:prod
 
 ### Terminology violation fixes (2026-02-23)
 5. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` (Harness definition)
-6. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md` (shards, TTL definitions)
-7. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md` (UMID, shards, pointers definitions)
+6. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md` (facets, TTL definitions)
+7. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md` (UMID, facets, pointers definitions)
 
 ### Propagation fixes (Phase 3)
 See source map report for complete list of 67 files updated across:

@@ -265,12 +265,12 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 #### Queued and Open Work Orders
 
 - `WO-0142` — Payment Handles and Fiat/Crypto Gateway Integration (NOT_STARTED)
-- `WO-0143` — Private Encrypted Inline Shards vs Projection Model Analysis (NOT_STARTED)
+- `WO-0143` — Private Encrypted Inline Facets vs Projection Model Analysis (NOT_STARTED)
 - `WO-0145` — Vignette Explainer Library (OPEN)
 
 ## Priority context (2026-03-11)
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), WO-0130 through WO-0136, the Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138), the RP1/MSF Adversarial Hardening Wave (WO-0139), the K2B Concept Integration Traceability pass (WO-0140), the Metaverse Portaling Integration pass (WO-0141), and the Consumer Resolver UX Hardening pass (WO-0144) are completed. Three work orders remain in the queue: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline shards vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), WO-0130 through WO-0136, the Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138), the RP1/MSF Adversarial Hardening Wave (WO-0139), the K2B Concept Integration Traceability pass (WO-0140), the Metaverse Portaling Integration pass (WO-0141), and the Consumer Resolver UX Hardening pass (WO-0144) are completed. Three work orders remain in the queue: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline facets vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 
@@ -366,7 +366,7 @@ For formal gate-level completion criteria and evidence requirements, use:
 ### Milestone A — Conformance scaffolding (still v0.1.x)
 
 - ✅ Added `spec/v0.1/CONFORMANCE.md` checklist (“what a consumer MUST do to claim v0.1 support”)
-- ✅ Added initial invalid fixtures (missing required fields, wrong `@type`, bad shards)
+- ✅ Added initial invalid fixtures (missing required fields, wrong `@type`, bad facets)
 - ✅ Updated `packages/universal-manifest` validator to assert invalid fixtures fail
 - Next: add deeper TTL and misuse/adversarial fixtures for v0.1.x and v0.2.x as the suite hardens
 
@@ -425,7 +425,7 @@ Recommended adoption tier for external systems *right now*:
 
 - Validate required fields (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`)
 - Enforce TTL for caching decisions
-- Use `pointers` and known `shards` for projection
+- Use `pointers` and known `facets` for projection
 - Treat `signature` as optional and/or “best effort” until the signature profile is finalized
 - For v0.2 drafts: verify signatures when present and required by that profile
 

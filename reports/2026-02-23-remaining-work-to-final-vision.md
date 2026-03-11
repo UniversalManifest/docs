@@ -60,7 +60,7 @@ The project's internal governance framework (done-done definition, evidence pack
 | CONF-002 | No fixture for missing `manifestVersion` field | HIGH | 1 hour |
 | CONF-003 | No fixture for empty `subject` field (only `missing-subject` exists) | LOW | 1 hour |
 | CONF-004 | v0.2 has only 1 valid fixture (`minimal-signed-manifest.jsonld`) -- a single valid example is insufficient to demonstrate the profile works across different payloads | HIGH | 1 day |
-| CONF-005 | No v0.2 valid fixture with shards, pointers, or claims alongside a signature | HIGH | 4 hours |
+| CONF-005 | No v0.2 valid fixture with facets, pointers, or claims alongside a signature | HIGH | 4 hours |
 | CONF-006 | No fixture testing revocation-aware verification behavior (CONFORMANCE v0.2 section 2.2 defines this) | MEDIUM | 1 day |
 | CONF-007 | No fixture testing that `statusRef`/`revocationCursor` fields do not affect canonicalization | MEDIUM | 4 hours |
 | CONF-008 | No negative test for tampering (valid signature over modified payload) | HIGH | 4 hours |
@@ -93,7 +93,7 @@ The project's internal governance framework (done-done definition, evidence pack
 | TS-005 | The JCS canonicalization implementation (`canonicalizeJson`) uses `localeCompare` for key sorting -- this is locale-dependent and technically incorrect for RFC 8785 which requires Unicode code-point ordering | CRITICAL | 4 hours |
 | TS-006 | The `canonicalizeJson` function does not handle IEEE 754 special values (NaN, Infinity) per RFC 8785 requirements | HIGH | 4 hours |
 | TS-007 | No unit tests for the canonicalization function in isolation -- only tested indirectly through fixture validation | HIGH | 4 hours |
-| TS-008 | Type names use `Lan` prefix (e.g., `LanEntityV01`, `LanShardV01`, `LanSignatureV01`) -- legacy naming from "Local Artist Network" | HIGH | 2 hours |
+| TS-008 | Type names use `Lan` prefix (e.g., `LanEntityV01`, `LanFacetV01`, `LanSignatureV01`) -- legacy naming from "Local Artist Network" | HIGH | 2 hours |
 | TS-009 | No exported utility for creating/signing manifests -- only assertion/validation is implemented | MEDIUM | 1 day |
 | TS-010 | No exported utility for canonicalizing a manifest (the `canonicalizeJson` function is not exported) | MEDIUM | 1 hour |
 
@@ -145,7 +145,7 @@ The project's internal governance framework (done-done definition, evidence pack
 | SEC-004 | No threat model document (what attacks does the manifest format protect against? what does it not protect against?) | HIGH | 1-2 days |
 | SEC-005 | The JCS canonicalization implementation concern (TS-005: locale-dependent sorting) is a potential security vulnerability in signature verification | CRITICAL | 4 hours |
 | SEC-006 | No guidance on manifest size limits (a 100MB manifest would pass validation) | MEDIUM | 2 hours |
-| SEC-007 | No guidance on nested depth limits for shards/entities | LOW | 2 hours |
+| SEC-007 | No guidance on nested depth limits for facets/entities | LOW | 2 hours |
 
 ### 2.10 Governance
 
@@ -304,7 +304,7 @@ The project's internal governance framework (done-done definition, evidence pack
 **Objective:** Expand conformance fixtures to cover edge cases, adversarial scenarios, and multi-payload v0.2 signing.
 
 **Scope:**
-- Add v0.2 valid fixtures: manifest with shards + signature, manifest with pointers + signature
+- Add v0.2 valid fixtures: manifest with facets + signature, manifest with pointers + signature
 - Add tampering fixture: valid signature over modified payload
 - Add clock-skew fixture: `issuedAt` in the future
 - Add missing `manifestVersion` fixture

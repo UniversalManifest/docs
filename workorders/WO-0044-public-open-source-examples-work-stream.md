@@ -24,14 +24,14 @@ The examples ecosystem should serve as **proof that Universal Manifest works**, 
 The project has a solid foundation of **static fixtures** and **internal proof tooling**, but lacks developer-facing runnable examples:
 
 **Fixtures (JSON-LD files only, no runnable code):**
-- 4 valid v0.1 manifests: `examples/v0.1/minimal-manifest.jsonld`, `manifest-with-shards.jsonld`, `type-array-manifest.jsonld`, `unknown-fields-manifest.jsonld`
+- 4 valid v0.1 manifests: `examples/v0.1/minimal-manifest.jsonld`, `manifest-with-facets.jsonld`, `type-array-manifest.jsonld`, `unknown-fields-manifest.jsonld`
 - 16 near-real stub manifests under `examples/v0.1/stubs/` (social, venue, device, OMATrust, metaverse, AR, Chia, personhood, etc.)
 - 11 invalid v0.1 fixtures under `examples/v0.1/invalid/`
 - 1 valid v0.2 signed manifest: `examples/v0.2/minimal-signed-manifest.jsonld`
 - 8 invalid v0.2 fixtures under `examples/v0.2/invalid/`
 
 **TypeScript helper package (`packages/universal-manifest/`):**
-- Exports type definitions (`UniversalManifestV01`, `UniversalManifestV02`, shard/signature types)
+- Exports type definitions (`UniversalManifestV01`, `UniversalManifestV02`, facet/signature types)
 - Exports assertion functions (`assertUniversalManifestV01`, `assertUniversalManifestV01Fresh`, v0.2 variants)
 - Exports `getManifestId` helper
 - Includes JCS canonicalization and Ed25519 signature verification for v0.2
@@ -86,9 +86,9 @@ examples/
       sign-manifest.mjs
       verify-manifest.mjs
       README.md
-    04-shards-and-pointers/
-      compose-manifest-with-shards.mjs
-      read-specific-shards.mjs
+    04-facets-and-pointers/
+      compose-manifest-with-facets.mjs
+      read-specific-facets.mjs
       README.md
     05-resolve-from-myum/
       publish-to-resolver.mjs
@@ -134,7 +134,7 @@ examples/
 |---|---------|---------------------|-----------|--------------|
 | 1 | `01-hello-world` | Create a minimal v0.1 manifest from scratch in plain JS (no library), print it, validate required fields manually | Beginner | None |
 | 2 | `02-validate-and-check-ttl` | Load a fixture, validate it using the TS helper `assertUniversalManifestV01`, check TTL freshness with `assertUniversalManifestV01Fresh`, show what happens with expired manifests | Beginner | TS helper built (`npm run build` in `packages/universal-manifest/`) |
-| 3 | `04-shards-and-pointers` | Build a manifest with multiple shards and pointers, then show a consumer reading only the shards it understands and ignoring the rest | Beginner | None |
+| 3 | `04-facets-and-pointers` | Build a manifest with multiple facets and pointers, then show a consumer reading only the facets it understands and ignoring the rest | Beginner | None |
 | 4 | `09-unknown-field-tolerance` | Show a consumer receiving a manifest with fields it does not recognize, proving it processes safely without errors | Beginner | None |
 
 **Deliverables per example:**
@@ -151,7 +151,7 @@ examples/
 | 5 | `03-create-signed-manifest-v02` | Generate an Ed25519 keypair, create a v0.2 manifest, sign it using JCS canonicalization, verify the signature using `assertUniversalManifestV02` | Intermediate | TS helper, Node.js crypto |
 | 6 | `05-resolve-from-myum` | Publish a manifest to the local resolver (via direct KV simulation or HTTP), then fetch it by UMID, demonstrate ETag caching and 304 responses | Intermediate | Resolver running locally |
 | 7 | `08-consent-enforcement` | Create manifests with consent declarations, implement a consumer that checks consent before rendering profile data or sharing information | Intermediate | None |
-| 8 | `10-multi-manifest-aggregation` | Fetch multiple manifests for different subjects, aggregate/merge shard data into a unified view (e.g., a venue display combining creator + venue + device manifests) | Intermediate | TS helper |
+| 8 | `10-multi-manifest-aggregation` | Fetch multiple manifests for different subjects, aggregate/merge facet data into a unified view (e.g., a venue display combining creator + venue + device manifests) | Intermediate | TS helper |
 
 **Deliverables per example:**
 - Same as Phase 1, plus inline comments explaining each step
@@ -163,7 +163,7 @@ examples/
 
 | # | Example | What it demonstrates | Complexity | Dependencies |
 |---|---------|---------------------|-----------|--------------|
-| 9 | `06-social-profile-projection` | Create a social profile manifest with `schema:Person` shards, ActivityPub pointers, and profile consent; implement a projection that renders an HTML profile page from the manifest | Intermediate | None |
+| 9 | `06-social-profile-projection` | Create a social profile manifest with `schema:Person` facets, ActivityPub pointers, and profile consent; implement a projection that renders an HTML profile page from the manifest | Intermediate | None |
 | 10 | `07-device-registration` | Create a device manifest with hardware metadata, enrollment status, and trust level; show a venue system accepting or rejecting the device based on manifest claims | Intermediate | None |
 | 11 | End-to-end demo app (new directory: `examples/demo-app/`) | A complete Node.js application that: (a) creates manifests for a creator and a venue, (b) publishes them to a local resolver, (c) fetches them by UMID, (d) validates and checks TTL, (e) renders a simple web page showing the resolved data | Advanced | TS helper, resolver |
 
@@ -237,16 +237,16 @@ node verify-manifest.mjs signed.jsonld
 
 **Key takeaway:** v0.2 adds cryptographic integrity. The signature is computed over the JCS-canonicalized manifest (excluding the signature block itself).
 
-### Example 4: Shards and pointers (`04-shards-and-pointers`)
+### Example 4: Facets and pointers (`04-facets-and-pointers`)
 
-**What it demonstrates:** How to compose a manifest using shards (embedded data sections) and pointers (references to authoritative sources). Shows a consumer selectively reading only relevant shards.
+**What it demonstrates:** How to compose a manifest using facets (embedded data sections) and pointers (references to authoritative sources). Shows a consumer selectively reading only relevant facets.
 
 **Files created:**
-- `examples/code/04-shards-and-pointers/compose-manifest-with-shards.mjs` — Creates a manifest with a `publicProfile` shard, a `deviceRegistration` shard, and two pointers; prints the complete manifest.
-- `examples/code/04-shards-and-pointers/read-specific-shards.mjs` — Reads a manifest, extracts only the `publicProfile` shard (simulating a social app), ignores other shards; then extracts only the `deviceRegistration` shard (simulating a device management system), ignores other shards; demonstrates selective consumption.
-- `examples/code/04-shards-and-pointers/README.md`
+- `examples/code/04-facets-and-pointers/compose-manifest-with-facets.mjs` — Creates a manifest with a `publicProfile` facet, a `deviceRegistration` facet, and two pointers; prints the complete manifest.
+- `examples/code/04-facets-and-pointers/read-specific-facets.mjs` — Reads a manifest, extracts only the `publicProfile` facet (simulating a social app), ignores other facets; then extracts only the `deviceRegistration` facet (simulating a device management system), ignores other facets; demonstrates selective consumption.
+- `examples/code/04-facets-and-pointers/README.md`
 
-**Key takeaway:** Different systems read different parts of the same manifest. Shards are embedded data; pointers are references to data that lives elsewhere.
+**Key takeaway:** Different systems read different parts of the same manifest. Facets are embedded data; pointers are references to data that lives elsewhere.
 
 ### Example 5: Resolve from myum.net (`05-resolve-from-myum`)
 
@@ -265,8 +265,8 @@ node verify-manifest.mjs signed.jsonld
 **What it demonstrates:** A realistic integration scenario where a social platform consumes a Universal Manifest and projects it into a public profile view.
 
 **Files created:**
-- `examples/code/06-social-profile-projection/create-social-manifest.mjs` — Creates a social profile manifest with `schema:Person` shards, ActivityPub pointer, and consent declarations.
-- `examples/code/06-social-profile-projection/project-to-web-profile.mjs` — Reads a social manifest, checks the `social.profilePublic` consent, extracts profile fields from shards, generates a simple HTML profile page and writes it to `output/profile.html`.
+- `examples/code/06-social-profile-projection/create-social-manifest.mjs` — Creates a social profile manifest with `schema:Person` facets, ActivityPub pointer, and consent declarations.
+- `examples/code/06-social-profile-projection/project-to-web-profile.mjs` — Reads a social manifest, checks the `social.profilePublic` consent, extracts profile fields from facets, generates a simple HTML profile page and writes it to `output/profile.html`.
 - `examples/code/06-social-profile-projection/README.md`
 
 **Key takeaway:** The manifest is a container for portable identity state. A social platform reads only the parts it needs and respects consent declarations before rendering.
@@ -276,7 +276,7 @@ node verify-manifest.mjs signed.jsonld
 **What it demonstrates:** How a venue system uses manifests to register and manage display devices, check enrollment status, and enforce trust levels.
 
 **Files created:**
-- `examples/code/07-device-registration/register-device.mjs` — Creates a venue manifest with device registration shards, enrollment timestamps, and hardware metadata.
+- `examples/code/07-device-registration/register-device.mjs` — Creates a venue manifest with device registration facets, enrollment timestamps, and hardware metadata.
 - `examples/code/07-device-registration/check-device-enrollment.mjs` — Reads a venue manifest, looks up a device by `deviceDid`, checks enrollment status and trust level, prints whether the device would be accepted or rejected by the venue.
 - `examples/code/07-device-registration/README.md`
 
@@ -308,7 +308,7 @@ node verify-manifest.mjs signed.jsonld
 **What it demonstrates:** A venue display system that fetches manifests from multiple subjects (creator, venue, device) and aggregates them into a unified view.
 
 **Files created:**
-- `examples/code/10-multi-manifest-aggregation/aggregate-manifests.mjs` — Loads three manifests (venue, creator, device), validates each, extracts relevant shards from each, combines them into a display-ready data structure, prints the aggregated view.
+- `examples/code/10-multi-manifest-aggregation/aggregate-manifests.mjs` — Loads three manifests (venue, creator, device), validates each, extracts relevant facets from each, combines them into a display-ready data structure, prints the aggregated view.
 - `examples/code/10-multi-manifest-aggregation/README.md`
 
 **Key takeaway:** In a multi-party environment, each participant provides their own manifest. The consuming system aggregates data from multiple manifests to build a complete picture.
@@ -324,7 +324,7 @@ node verify-manifest.mjs signed.jsonld
 
 ### Coverage
 
-- [ ] At least one example covers each core concept: UMID, TTL, unknown field tolerance, shards, pointers.
+- [ ] At least one example covers each core concept: UMID, TTL, unknown field tolerance, facets, pointers.
 - [ ] At least one example shows the v0.2 signature lifecycle (create, sign, verify).
 - [ ] At least one example demonstrates resolver interaction.
 - [ ] At least one example shows a realistic integration scenario (not just validation).
@@ -399,7 +399,7 @@ All 4 examples created and verified:
 
 - `examples/code/01-hello-world/` — create-manifest.mjs, validate-manifest.mjs, README.md
 - `examples/code/02-validate-and-check-ttl/` — validate-with-ttl.mjs, README.md
-- `examples/code/04-shards-and-pointers/` — compose-manifest-with-shards.mjs, read-specific-shards.mjs, README.md
+- `examples/code/04-facets-and-pointers/` — compose-manifest-with-facets.mjs, read-specific-facets.mjs, README.md
 - `examples/code/09-unknown-field-tolerance/` — forward-compatible-consumer.mjs, README.md
 
 ### Phase 2 (Intermediate) — COMPLETED 2026-02-26

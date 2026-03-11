@@ -21,7 +21,7 @@ In scope:
 
 - Add a dedicated workbench route in the docs site (or linked tool surface) with:
   - Import: JSON/JSON-LD from file or paste
-  - Explorer: structured view of core sections (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`, `shards`, `pointers`, `signature`)
+  - Explorer: structured view of core sections (`@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`, `facets`, `pointers`, `signature`)
   - Editor: guided add/update/remove flows for known fields
   - Validation: run structural + conformance checks and return actionable errors
   - Export: JSON and JSON-LD outputs

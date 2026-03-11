@@ -112,7 +112,7 @@ Out of scope:
   - Read-only JSON display with syntax highlighting
   - Line numbers
   - JSON path-based highlight overlays (colored outlines around specified paths)
-  - Collapsible sections for shards, claims, consents, etc.
+  - Collapsible sections for facets, claims, consents, etc.
 - [ ] Create `site/src/components/sandbox/ManifestEditor.astro`:
   - Textarea with JSON syntax highlighting
   - Real-time JSON parsing feedback (valid/invalid indicator)

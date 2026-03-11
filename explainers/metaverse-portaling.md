@@ -33,7 +33,7 @@
 
 
 ### Scene 4: How It Works Under the Hood (2:00 - 2:30)
-- **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code, highlighting a `crossWorldProfile` shard. We show a cryptographically secure signature locking the code, plus freshness TTL timers.
+- **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code, highlighting a `crossWorldProfile` facet. We show a cryptographically secure signature locking the code, plus freshness TTL timers.
 - **Action:** An animated lock snaps shut on the document. A stamp says "Verified by Cryptography. No Central Authority Required. Cache Freshness Enforced."
 
 

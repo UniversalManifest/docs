@@ -41,9 +41,9 @@ Metaverse applications remain a **first-class integration lane** in the UM proje
 - Suggested pointer names (`metaverse.profile`, `metaverse.avatar`, `metaverse.inventory`, `metaverse.socialGraph`, `metaverse.reputation`)
 - Suggested consent keys (`metaverse.profilePublic`, `metaverse.socialGraphShare`, `metaverse.voiceCapture`, `metaverse.recording.faceVisible`)
 - A cross-world profile fixture: `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
-- A rich manifest example in the AI briefing demonstrating cross-world identity with claims, consents, pointers, and shards
+- A rich manifest example in the AI briefing demonstrating cross-world identity with claims, consents, pointers, and facets
 
-The metaverse integration lane follows the same architecture as all other UM integration lanes: domain-specific data lives in shards, pointers, and consent keys, while the core manifest envelope remains stable and domain-neutral.
+The metaverse integration lane follows the same architecture as all other UM integration lanes: domain-specific data lives in facets, pointers, and consent keys, while the core manifest envelope remains stable and domain-neutral.
 
 ### What the MSF is today
 

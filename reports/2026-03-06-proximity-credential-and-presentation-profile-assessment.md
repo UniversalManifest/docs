@@ -187,7 +187,7 @@ Examples:
 Applied example:
 
 - A venue kiosk asks for age-over-threshold proof.
-- The wallet/runtime checks `metaverse.credentials.presentation=allowed` and a holder policy shard saying retail age-verification is allowed only for in-person sessions.
+- The wallet/runtime checks `metaverse.credentials.presentation=allowed` and a holder policy facet saying retail age-verification is allowed only for in-person sessions.
 - If absent or denied, nothing is presented.
 
 ### B. Freshness and trust posture expectations
@@ -202,7 +202,7 @@ Examples:
 Applied example:
 
 - A wallet sees an OpenID4VP request from a kiosk but holder policy says: only proceed if verifier metadata is signed or otherwise trusted and the request is fresh.
-- That holder policy can be represented in a non-normative policy shard or pointer, but the actual request freshness check stays in the runtime.
+- That holder policy can be represented in a non-normative policy facet or pointer, but the actual request freshness check stays in the runtime.
 
 ### C. Preference and capability hints
 
@@ -469,11 +469,11 @@ What should not be replaced:
 - UM subject/runtime separation,
 - UM TTL/freshness posture.
 
-## 8. Can proximity be integrated directly as a shard?
+## 8. Can proximity be integrated directly as a facet?
 
 Answer: `No, not as the primary design`.
 
-A shard can carry:
+A facet can carry:
 
 - holder-side policy metadata,
 - preferred proof family hints,
@@ -481,7 +481,7 @@ A shard can carry:
 - audit references,
 - proof-result references.
 
-A shard should not be used as:
+A facet should not be used as:
 
 - the transport envelope,
 - the verifier request object,
@@ -490,12 +490,12 @@ A shard should not be used as:
 
 Applied example:
 
-- A `presentationPolicy` shard could say:
+- A `presentationPolicy` facet could say:
   - adult-status proofs may be shown to trusted in-person venue verifiers,
   - background or silent requests are disallowed,
   - reuse across verifier classes is disallowed,
   - results should be logged by pointer only.
-- The actual OpenID4VP or mdoc session still occurs outside the shard.
+- The actual OpenID4VP or mdoc session still occurs outside the facet.
 
 ## 9. GPC-style precedent: where it helps and where it does not
 
@@ -517,7 +517,7 @@ What does not map cleanly:
 Correct adaptation:
 
 - Use the GPC precedent only for `runtime-authoritative, optional evidence projection`.
-- Do not use it to justify turning live credential exchange into a manifest shard.
+- Do not use it to justify turning live credential exchange into a manifest facet.
 
 ## 10. Decision on future guidance
 

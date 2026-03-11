@@ -149,9 +149,9 @@ An attacker submits oversized, deeply nested, or computationally expensive manif
 
 **Attack Scenarios:**
 
-- **Oversized manifests**: Multi-megabyte manifests containing large embedded data (e.g., base64-encoded images in shards)
-- **Deep nesting**: Manifests with deeply nested `shards` or entity structures that exhaust stack/heap during parsing
-- **Algorithmic complexity attacks**: Manifests with thousands of shards or claims, triggering O(n²) validation loops
+- **Oversized manifests**: Multi-megabyte manifests containing large embedded data (e.g., base64-encoded images in facets)
+- **Deep nesting**: Manifests with deeply nested `facets` or entity structures that exhaust stack/heap during parsing
+- **Algorithmic complexity attacks**: Manifests with thousands of facets or claims, triggering O(n²) validation loops
 - **Signature verification DoS**: Flooding verifier with invalid signatures to consume CPU resources
 
 **Mitigations:**
@@ -162,14 +162,14 @@ An attacker submits oversized, deeply nested, or computationally expensive manif
 
    - **Consumer-enforced limits**: Consumers MUST validate manifest size before parsing. Recommended limits:
      - Total JSON size: 1 MB
-     - Individual shard size: 100 KB
-     - Array lengths: 1,000 elements max per array (`shards`, `claims`, etc.)
+     - Individual facet size: 100 KB
+     - Array lengths: 1,000 elements max per array (`facets`, `claims`, etc.)
 
 2. **Depth limits (REQUIRED)**:
 
    - **Maximum nesting depth**: Consumers MUST enforce a maximum JSON object depth. Recommended limit: **10 levels**.
 
-   - **Shard composition limits**: Consumers SHOULD limit the number of shards per manifest (recommended: 100 shards max).
+   - **Facet composition limits**: Consumers SHOULD limit the number of facets per manifest (recommended: 100 facets max).
 
 3. **Early rejection**:
 
@@ -190,9 +190,9 @@ An attacker submits oversized, deeply nested, or computationally expensive manif
 | Resource | Limit | Enforcement Point |
 |----------|-------|-------------------|
 | Total manifest size | 1 MB | Resolver + Consumer |
-| Individual shard size | 100 KB | Consumer |
+| Individual facet size | 100 KB | Consumer |
 | JSON nesting depth | 10 levels | Consumer (parser config) |
-| Shards per manifest | 100 | Consumer |
+| Facets per manifest | 100 | Consumer |
 | Array element counts | 1,000 | Consumer |
 | Signature verification attempts | Rate-limited | Resolver |
 
@@ -392,9 +392,9 @@ This section provides operational best practices for issuers managing signing ke
 // Example validation configuration
 const MANIFEST_LIMITS = {
   maxTotalBytes: 1_048_576,        // 1 MB total JSON
-  maxShardBytes: 102_400,           // 100 KB per shard
+  maxFacetBytes: 102_400,           // 100 KB per facet
   maxNestingDepth: 10,              // JSON object depth
-  maxShards: 100,                   // Shards per manifest
+  maxFacets: 100,                   // Facets per manifest
   maxArrayElements: 1_000,          // Claims, consents, devices, etc.
   maxStringLength: 10_000,          // Individual string fields
 }
@@ -416,9 +416,9 @@ function validateManifestSize(manifest: unknown): void {
   }
 
   // Validate array sizes
-  if (Array.isArray((manifest as any).shards)) {
-    if ((manifest as any).shards.length > MANIFEST_LIMITS.maxShards) {
-      throw new Error(`Too many shards: ${(manifest as any).shards.length}`)
+  if (Array.isArray((manifest as any).facets)) {
+    if ((manifest as any).facets.length > MANIFEST_LIMITS.maxFacets) {
+      throw new Error(`Too many facets: ${(manifest as any).facets.length}`)
     }
   }
 }

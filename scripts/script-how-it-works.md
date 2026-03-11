@@ -19,7 +19,7 @@
 
 ---
 
-### Scene 2: Shards -- The Tools (20s)
+### Scene 2: Facets -- The Tools (20s)
 
 **Visual:** The manifest card transforms into the Swiss Army Knife. It rotates slowly. Then, one by one, tools fold out from the body:
 
@@ -30,9 +30,9 @@
 
 Each tool is a different accent color. After all four are deployed, the knife holds steady, showing the full complement.
 
-**Narration:** "Inside the manifest, data is organized into shards -- named sections, each carrying different information for different situations. A public profile shard for social apps. A device registration shard for hardware. A claims section for credentials and roles. And pointers -- these do not copy data into the manifest. Instead, they reference where the authoritative data lives, so consumers always get the freshest version."
+**Narration:** "Inside the manifest, data is organized into facets -- named sections, each carrying different information for different situations. A public profile facet for social apps. A device registration facet for hardware. A claims section for credentials and roles. And pointers -- these do not copy data into the manifest. Instead, they reference where the authoritative data lives, so consumers always get the freshest version."
 
-**On-screen text:** `Shards: named data sections` | `Pointers: references, not copies`
+**On-screen text:** `Facets: named data sections` | `Pointers: references, not copies`
 
 **Sound/Music:** Satisfying metallic click for each tool deployment. A brief melodic progression as each tool appears -- building complexity.
 
@@ -96,10 +96,10 @@ All three gates show green checkmarks. The manifest passes through and arrives, 
 
 **Visual:** A rapid montage of the manifest working across contexts, each scene lasting 3--4 seconds:
 
-- **Gallery:** Alex's art appears on screens at Jordan's venue. The publicProfile shard and public capsule data are being read. The manifest glows softly in the corner of the display.
-- **Social app:** Sam, a developer, builds an app that reads the publicProfile shard to auto-fill a user's profile page. No duplicate forms.
+- **Gallery:** Alex's art appears on screens at Jordan's venue. The publicProfile facet and public capsule data are being read. The manifest glows softly in the corner of the display.
+- **Social app:** Sam, a developer, builds an app that reads the publicProfile facet to auto-fill a user's profile page. No duplicate forms.
 - **Smart glasses:** A person wearing smart glasses walks past Riley. The glasses check Riley's manifest -- `ar.recording.faceVisible: denied`. Riley's face is automatically blurred in the glasses' view.
-- **Virtual world:** A game character leaps between two virtual worlds. Their avatar, display name, and social connections carry over through the crossWorldProfile shard and metaverse pointers.
+- **Virtual world:** A game character leaps between two virtual worlds. Their avatar, display name, and social connections carry over through the crossWorldProfile facet and metaverse pointers.
 
 All four scenes merge into a single flowing visual -- the manifest at the center, with light beams connecting to each context.
 
@@ -116,7 +116,7 @@ All four scenes merge into a single flowing visual -- the manifest at the center
 - **Pacing:** This video is denser than "What Is UM?" -- it teaches mechanics. Each scene should breathe but not linger. Use visual transitions (the manifest transforming, traveling, being scanned) to maintain flow.
 - **Character use:** Alex appears in scenes 1, 4, and 6. Riley owns scene 3. Jordan appears in scenes 4, 5, and 6. Sam appears briefly in scene 6. The manifest itself is a constant presence throughout.
 - **Technical accuracy:**
-  - Shards are arrays of objects with `@type: "um:Shard"` and a `name` field.
+  - Facets are arrays of objects with `@type: "um:Facet"` and a `name` field.
   - Consents are arrays of objects with `@type: "um:Consent"`, `name`, and `value` (`"allowed"` or `"denied"`).
   - Pointers contain `name` and `url` -- they are references, not embedded data.
   - The signature uses Ed25519 + JCS canonicalization (v0.2 profile).

@@ -143,7 +143,7 @@ export async function issueSignedManifest(input: {
   const unsigned = createUnsignedManifestV02({
     subject: input.subject,
     ttlSeconds: input.ttlSeconds,
-    shards: [],
+    facets: [],
   });
 
   return signUniversalManifestV02(unsigned, {

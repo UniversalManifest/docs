@@ -17,7 +17,7 @@ Universal Manifest is a **portable state capsule** specification. The spec progr
 
 - Document identity + lifecycle: `@id`, `manifestVersion`, `issuedAt`, `expiresAt`
 - Subject binding: `subject` (stable identifier URI; DID recommended but not required)
-- Composition primitives: `shards`, `pointers`
+- Composition primitives: `facets`, `pointers`
 - Machine-actionable sections: `claims`, `consents`, `devices`
 - Compatibility semantics: unknown-field tolerance, extension points, version policy
 - Integrity signature semantics by profile: `signature` (v0.1 permissive; v0.2 profile drafted)

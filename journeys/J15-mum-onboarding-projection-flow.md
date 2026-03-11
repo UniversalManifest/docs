@@ -10,7 +10,7 @@ Prove that MUM onboarding data can project identity/profile/avatar/inventory ove
 1. Validate required manifest envelope fields.
 2. Verify onboarding pointers include profile, avatar, and inventory references.
 3. Verify onboarding consents allow profile and inventory projection.
-4. Verify cross-world profile shard exists for world projection metadata.
+4. Verify cross-world profile facet exists for world projection metadata.
 
 ## Expected outcomes
 - Fixture passes structural checks.

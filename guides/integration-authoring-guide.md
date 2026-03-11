@@ -7,7 +7,7 @@ This guide explains how to create a new Universal Manifest integration lane. It 
 Create a new integration lane when:
 
 - **A new domain** needs to use Universal Manifest (e.g., healthcare, education, automotive) and no existing lane covers its data model or consent requirements.
-- **A new use-case pattern** emerges within an existing domain that requires distinct shards, pointers, or consent keys not covered by existing lanes.
+- **A new use-case pattern** emerges within an existing domain that requires distinct facets, pointers, or consent keys not covered by existing lanes.
 - **A new consent model** is needed (e.g., a domain with unique privacy regulations like HIPAA, FERPA, or GDPR-specific requirements).
 - **A new platform or protocol** wants to integrate with UM and needs guidance on how to map its concepts to manifest fields.
 
@@ -42,17 +42,17 @@ Fill in the **Overview** section with:
 
 Write 3-5 **use cases** as user stories in the format: "As a {role}, I want to {action} so that {benefit}."
 
-### Step 3: Identify Natural Shards
+### Step 3: Identify Natural Facets
 
-Shards are named data compartments within the manifest. Ask:
+Facets are named data compartments within the manifest. Ask:
 
 - What distinct categories of data does this domain need to carry?
 - What would a consumer need to extract and process independently?
 
-Each shard should have:
+Each facet should have:
 
 - A descriptive `name` (camelCase, e.g., `patientConsent`, `deviceIdentity`).
-- A `@type` of `"um:Shard"` (additional domain types are optional).
+- A `@type` of `"um:Facet"` (additional domain types are optional).
 - An `entity` object with domain-relevant fields.
 
 **Naming convention:** `{domain}{DataCategory}` in camelCase. Examples: `patientConsent`, `academicCredential`, `deviceIdentity`.
@@ -114,14 +114,14 @@ Each claim should have:
 **Issuer behavior** describes how to construct manifests. Always include:
 
 1. Setting standard required fields with fresh values.
-2. Integration-specific shard, pointer, consent, and claim construction.
+2. Integration-specific facet, pointer, consent, and claim construction.
 3. Signature addition (optional in v0.1, expected in v0.2).
 
 ### Step 8: Create an Example Fixture
 
 Write a complete, valid v0.1 JSON-LD manifest that demonstrates the integration in action. Requirements:
 
-- Must include all required fields: `@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`, `shards`.
+- Must include all required fields: `@context`, `@id`, `@type`, `manifestVersion`, `subject`, `issuedAt`, `expiresAt`, `facets`.
 - `@context` must be `"https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld"`.
 - `@id` must be a `urn:uuid:` with a valid UUID.
 - `@type` must be `"um:Manifest"`.
@@ -129,8 +129,8 @@ Write a complete, valid v0.1 JSON-LD manifest that demonstrates the integration 
 - `subject` must be a DID or URI.
 - `issuedAt` must be a valid ISO 8601 timestamp.
 - `expiresAt` must be after `issuedAt`.
-- `shards` must be an array (may be empty, but should contain domain-relevant shards for a useful example).
-- Each shard must have `@type: "um:Shard"`.
+- `facets` must be an array (may be empty, but should contain domain-relevant facets for a useful example).
+- Each facet must have `@type: "um:Facet"`.
 
 Use realistic but fictional data. Do not use real people, organizations, or identifiers.
 
@@ -156,7 +156,7 @@ The fixture must pass `assertUniversalManifestV01`. If it does not, fix the stru
 | Element | Convention | Examples |
 |---|---|---|
 | File name | kebab-case | `healthcare-patient-consent.md`, `smart-home.md` |
-| Shard name | camelCase, `{domain}{DataCategory}` | `patientConsent`, `academicCredential` |
+| Facet name | camelCase, `{domain}{DataCategory}` | `patientConsent`, `academicCredential` |
 | Pointer name | dot-notation, `{domain}.{resourceType}` | `health.record`, `edu.transcript` |
 | Consent name | dot-notation, `{domain}.{verbObject}` | `health.shareRecords`, `edu.verifyDegree` |
 | Claim name | dot-notation, `{domain}.{claimCategory}` | `health.role`, `edu.degreeStatus` |
@@ -171,16 +171,16 @@ Before submitting, verify:
 - [ ] **No normative language**: The document does not use "MUST", "SHALL", "REQUIRED" (RFC 2119 keywords) except when referring to core UM spec requirements. Integration guidance uses "should", "recommended", or "suggested".
 - [ ] **Boundary declared**: The Normative Boundary section is present and unmodified.
 - [ ] **Use cases concrete**: Each use case is a specific, actionable user story.
-- [ ] **Shards well-scoped**: Each shard represents a distinct data compartment, not a dump of all fields.
-- [ ] **Pointers reference external systems**: Pointers link to resources outside the manifest, not to shard contents.
-- [ ] **Claims are attestations**: Claims represent verifiable assertions, not data fields (data belongs in shard entities).
+- [ ] **Facets well-scoped**: Each facet represents a distinct data compartment, not a dump of all fields.
+- [ ] **Pointers reference external systems**: Pointers link to resources outside the manifest, not to facet contents.
+- [ ] **Claims are attestations**: Claims represent verifiable assertions, not data fields (data belongs in facet entities).
 - [ ] **Consumer behavior is defensive**: Consumer steps include TTL checks, consent checks, and unknown-field tolerance.
 - [ ] **Issuer behavior is constructive**: Issuer steps produce a valid manifest from scratch.
 
 ## Common Mistakes
 
-- **Putting data in claims instead of shards.** Claims are assertions ("this person has role X"). Data belongs in shard entities ("this person's name is Y").
+- **Putting data in claims instead of facets.** Claims are assertions ("this person has role X"). Data belongs in facet entities ("this person's name is Y").
 - **Forgetting the consent default.** Every consent key must default to "denied". A missing consent means denied.
 - **Using normative language.** Integration lanes are non-normative guidance. Do not write "The consumer MUST do X" -- write "The consumer should do X" or "Recommended: do X".
-- **Invalid fixture structure.** Missing `@context`, wrong `@type`, `issuedAt` after `expiresAt`, or shards not in an array are common fixture errors.
+- **Invalid fixture structure.** Missing `@context`, wrong `@type`, `issuedAt` after `expiresAt`, or facets not in an array are common fixture errors.
 - **Namespace collisions.** Use domain-specific prefixes for all pointer, consent, and claim names to avoid collisions with other lanes.

@@ -44,7 +44,7 @@ After the Getting Started scenarios were migrated (WO-0078), the remaining 21 sc
 - `site/src/scripts/sandbox/scenarios/edge-cases/ec-01-temporal-misuse-v2.ts`
 - `site/src/scripts/sandbox/scenarios/edge-cases/ec-02-missing-signature-v2.ts`
 - `site/src/scripts/sandbox/scenarios/edge-cases/ec-03-clock-skew-v2.ts`
-- `site/src/scripts/sandbox/scenarios/edge-cases/ec-04-shard-type-v2.ts`
+- `site/src/scripts/sandbox/scenarios/edge-cases/ec-04-facet-type-v2.ts`
 
 **Advanced (4 scenarios):**
 - `site/src/scripts/sandbox/scenarios/advanced/ad-01-cross-system-v2.ts`

@@ -60,14 +60,14 @@ All test suites pass after the fix:
 
 **Current:** All exported types use `Lan` prefix (legacy from "Local Artist Network")
 - `LanEntityV01`
-- `LanShardV01`
+- `LanFacetV01`
 - `LanSignatureV01`
 - `LanSignatureV02`
 
 **Recommended:** Use neutral prefix
-- Option A: `UmEntity`, `UmShard`, `UmSignature` (Um = Universal Manifest)
+- Option A: `UmEntity`, `UmFacet`, `UmSignature` (Um = Universal Manifest)
 - Option B: `UniversalManifestEntity`, etc. (more verbose but clearer)
-- Option C: No prefix, just `Entity`, `Shard`, `Signature` (simplest)
+- Option C: No prefix, just `Entity`, `Facet`, `Signature` (simplest)
 
 **Location:** `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
 
@@ -79,7 +79,7 @@ All test suites pass after the fix:
 **Affected exports:**
 ```typescript
 export interface LanEntityV01 { ... }
-export interface LanShardV01 { ... }
+export interface LanFacetV01 { ... }
 export interface LanSignatureV01 { ... }
 export interface LanSignatureV02 { ... }
 ```

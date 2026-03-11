@@ -20,7 +20,7 @@ It must visually communicate:
 It must support these animation states:
 - **Traveling** -- moving between systems
 - **Being verified** -- signature check (glow, shield overlay, checkmark reveal)
-- **Being projected** -- shards/pointers extracting outward (opening, radiating)
+- **Being projected** -- facets/pointers extracting outward (opening, radiating)
 - **Expiring** -- TTL countdown, fade/dissolve
 - **Being created** -- assembly, sealing
 - **Being rejected** -- tamper detected, red flash, crack/shatter
@@ -49,7 +49,7 @@ It must support these animation states:
 
 **Verification**: A translucent shield shimmer sweeps across the capsule surface, then a green glow emanates from the inner border. The capsule briefly becomes transparent to show a checkmark inside.
 
-**Projection**: The capsule splits at a seam (like opening a pill), and shard elements float outward. The two halves stay connected by thin lines.
+**Projection**: The capsule splits at a seam (like opening a pill), and facet elements float outward. The two halves stay connected by thin lines.
 
 **Rating**:
 - Simplicity: 8/10 -- very simple shape, easy to draw at any size
@@ -80,7 +80,7 @@ It must support these animation states:
 
 **Verification**: The wax seal pulses, then a magnifying glass or scanner beam sweeps over it. The seal flashes green if valid, cracks and turns red if tampered.
 
-**Projection**: The flap lifts up, and shard elements rise out of the open envelope like documents being fanned out. Pointer arrows extend from the envelope edges.
+**Projection**: The flap lifts up, and facet elements rise out of the open envelope like documents being fanned out. Pointer arrows extend from the envelope edges.
 
 **Rating**:
 - Simplicity: 6/10 -- more visual detail than minimal shapes; the seal adds complexity
@@ -103,7 +103,7 @@ It must support these animation states:
        ╲╱
 ```
 
-**Shape**: A hexagonal or octagonal gem shape, viewed from above, with internal facet lines suggesting crystalline structure. The facets represent the different sections of a manifest (header, shards, claims, consents, pointers). The whole gem has a subtle internal glow.
+**Shape**: A hexagonal or octagonal gem shape, viewed from above, with internal facet lines suggesting crystalline structure. The facets represent the different sections of a manifest (header, facets, claims, consents, pointers). The whole gem has a subtle internal glow.
 
 **Visual metaphor**: A gem is compact, valuable, internally structured, and durable. The facets suggest multiple faces/views (projection). Light passing through a gem creates different colors depending on the angle -- just as different consumers see different projections of the same manifest.
 
@@ -111,7 +111,7 @@ It must support these animation states:
 
 **Verification**: The gem pulses with internal light, each facet briefly illuminating in sequence. A verified gem glows with a steady, pure light. A tampered gem shows a visible crack through one facet.
 
-**Projection**: Individual facets detach slightly and float outward, each representing a shard or pointer. The core gem remains intact while projections radiate.
+**Projection**: Individual facets detach slightly and float outward, each representing a facet or pointer. The core gem remains intact while projections radiate.
 
 **Rating**:
 - Simplicity: 5/10 -- facet lines add detail that may not read at small sizes
@@ -139,7 +139,7 @@ It must support these animation states:
 
 **Verification**: The coin flips to reveal a second face -- the "verified" face shows a green checkmark or shield. The two-faced nature maps to signed/unsigned states.
 
-**Projection**: Hex segments separate outward like a honeycomb exploding, each segment carrying a shard or pointer label. The center remains as the core envelope.
+**Projection**: Hex segments separate outward like a honeycomb exploding, each segment carrying a facet or pointer label. The center remains as the core envelope.
 
 **Rating**:
 - Simplicity: 9/10 -- hexagon is trivially simple; reads at any size
@@ -159,7 +159,7 @@ It must support these animation states:
         ─ ─
 ```
 
-**Shape**: A sphere (drawn as a circle with shading to suggest 3D) surrounded by one or two orbital ellipses, like an atom or a planet with rings. The orb is the manifest core; the rings represent the layers (claims, consents, shards, pointers) orbiting around it.
+**Shape**: A sphere (drawn as a circle with shading to suggest 3D) surrounded by one or two orbital ellipses, like an atom or a planet with rings. The orb is the manifest core; the rings represent the layers (claims, consents, facets, pointers) orbiting around it.
 
 **Visual metaphor**: An atom contains structured matter in a compact form. The orbital rings suggest energy, dynamism, and layers of structure. The contained-yet-active nature maps well to a living document with a TTL.
 
@@ -167,7 +167,7 @@ It must support these animation states:
 
 **Verification**: The rings lock into alignment (like a combination lock clicking), and the orb pulses green. Failed verification shows rings jittering out of alignment.
 
-**Projection**: Rings expand outward, each ring segment becoming a shard or pointer label that floats to its destination.
+**Projection**: Rings expand outward, each ring segment becoming a facet or pointer label that floats to its destination.
 
 **Rating**:
 - Simplicity: 6/10 -- the orbit rings add complexity
@@ -199,7 +199,7 @@ It must support these animation states:
 
 **Verification**: The inner area glows, and a checkmark or lock icon appears inside. The double border pulses with light traveling along it (a verification sweep).
 
-**Projection**: The shield opens like a book (hinged at the top), revealing shard elements stacked inside. Or: the shield becomes semi-transparent, and labeled layers separate vertically.
+**Projection**: The shield opens like a book (hinged at the top), revealing facet elements stacked inside. Or: the shield becomes semi-transparent, and labeled layers separate vertically.
 
 **Rating**:
 - Simplicity: 7/10 -- shield is recognizable; works at small sizes but the pointed bottom adds detail
@@ -227,7 +227,7 @@ It must support these animation states:
 
 **Verification**: A seal appears on the scroll's surface, glows, and resolves to a checkmark. The scroll's edges tighten (the roll becomes tighter) to indicate integrity.
 
-**Projection**: The scroll unfurls in both directions, revealing layered content sections. Shards peel off as individual mini-scrolls.
+**Projection**: The scroll unfurls in both directions, revealing layered content sections. Facets peel off as individual mini-scrolls.
 
 **Rating**:
 - Simplicity: 6/10 -- the rolled edges add drawing complexity at small sizes
@@ -310,9 +310,9 @@ It must support these animation states:
           ╲╱
 ```
 
-**Shape**: A four-pointed compass star with a circular center. The four points suggest four cardinal directions (or the four key manifest sections: claims, consents, shards, pointers). The circular center carries the UM mark. The overall shape suggests navigation, direction, and destination-finding.
+**Shape**: A four-pointed compass star with a circular center. The four points suggest four cardinal directions (or the four key manifest sections: claims, consents, facets, pointers). The circular center carries the UM mark. The overall shape suggests navigation, direction, and destination-finding.
 
-**Visual metaphor**: A compass helps you navigate. The manifest is a navigational document -- it tells systems where to find data (pointers), what permissions exist (consents), what claims are made, and what payloads are available (shards). The compass rose also suggests the manifest works in all directions -- any system can read it.
+**Visual metaphor**: A compass helps you navigate. The manifest is a navigational document -- it tells systems where to find data (pointers), what permissions exist (consents), what claims are made, and what payloads are available (facets). The compass rose also suggests the manifest works in all directions -- any system can read it.
 
 **Traveling**: Rotates slowly as it moves, the compass points suggesting it is orienting to its new environment.
 
@@ -346,7 +346,7 @@ It must support these animation states:
 
 **Verification**: The gap between shell and payload illuminates (green for valid, red for tampered). This directly visualizes the integrity layer being checked.
 
-**Projection**: The outer shell peels open (like a seed pod), and shard elements emerge and float toward their destinations. The inner payload stays visible as the source.
+**Projection**: The outer shell peels open (like a seed pod), and facet elements emerge and float toward their destinations. The inner payload stays visible as the source.
 
 **Rating**:
 - Simplicity: 7/10 -- two concentric shapes is relatively simple
@@ -437,7 +437,7 @@ The double-contour shape (shell + payload) also gives us a **built-in visual hie
 
   ╭──────────╮          ╭──────────╮           ╭──  ────  ──╮
  ╱  ┌──────┐  ╲       ╱░░┌──────┐░░╲         ╱  ┌──────┐    ╲
-│   │      │   │     │░░░│  ✓   │░░░│       │   │ shard│───→  │
+│   │      │   │     │░░░│  ✓   │░░░│       │   │ facet│───→  │
 │   │  UM  │   │     │░░░│  UM  │░░░│       │   │  UM  │───→  │
 │   │      │   │     │░░░│      │░░░│       │   │ ptr  │───→  │
  ╲  └──────┘  ╱       ╲░░└──────┘░░╱         ╲  └──────┘    ╱
@@ -452,7 +452,7 @@ The double-contour shape (shell + payload) also gives us a **built-in visual hie
 
 The prism also carries a strong metaphor for trust: a pure, flawless prism refracts light cleanly; a cracked or cloudy prism distorts the output. Verification = optical purity.
 
-**Why it is second, not first**: The prism excels at explaining projection but is weaker for the other animation states. A prism does not naturally "travel" between systems the way a capsule does. It does not obviously "contain" shards. And at small sizes, a triangle is less distinctive than a pod shape. The prism works best as a **secondary visual metaphor** used in specific scenes (the projection/consumption scene) rather than as the primary traveling character.
+**Why it is second, not first**: The prism excels at explaining projection but is weaker for the other animation states. A prism does not naturally "travel" between systems the way a capsule does. It does not obviously "contain" facets. And at small sizes, a triangle is less distinctive than a pod shape. The prism works best as a **secondary visual metaphor** used in specific scenes (the projection/consumption scene) rather than as the primary traveling character.
 
 **Recommended use**: The prism should appear as a **transformation scene** -- the pod arrives at a consumer, enters a prism, and the consumer's specific projection emerges from the other side. The prism is the consumer's lens, not the manifest itself.
 

@@ -59,15 +59,15 @@ Please answer the following questions after reading the documentation (no refere
 
 ### 1. In one sentence, what is Universal Manifest?
 
-Universal Manifest (UM) is a portable state capsule (a versioned JSON-LD manifest/envelope) that lets apps, devices, and services exchange interoperable identity references, permissions, pointers, and optional shards without inventing a custom payload format for every pair of systems.
+Universal Manifest (UM) is a portable state capsule (a versioned JSON-LD manifest/envelope) that lets apps, devices, and services exchange interoperable identity references, permissions, pointers, and optional facets without inventing a custom payload format for every pair of systems.
 
 ### 2. Who is the intended audience?
 
 Implementers (developers/engineers) building apps, devices, or services that need to pass user/device/app data between systems reliably, plus evaluators reviewing adoption fit and operators who need predictable cached/offline behavior and resolver lookup by UMID.
 
-### 3. What are "shards"?
+### 3. What are "facets"?
 
-Shards are optional, named data sections inside a manifest that group related information; producers include only the shards needed for a use case, and consumers read the shards they understand and ignore the rest.
+Facets are optional, named data sections inside a manifest that group related information; producers include only the facets needed for a use case, and consumers read the facets they understand and ignore the rest.
 
 ### 4. What is a UMID?
 
@@ -75,11 +75,11 @@ A UMID (Universal Manifest Identifier) is the manifest’s unique, stable identi
 
 ### 5. How would you start using UM in your own project?
 
-I would (1) review the core contract (Concepts and the v0.1 spec) so I understand required fields and the key rules (TTL validity window via issuedAt/expiresAt and safe unknown-field tolerance), (2) implement a minimum viable consumer (require core fields, reject expired manifests, ignore unknown fields, and read only the sections I support like shards and pointers), (3) validate with conformance and fixtures (official JSON-LD vocabulary + JSON Schema files plus stub manifests and the Conformance v0.1 checklist), and (4) use proof and tools (interactive harness + Manifest Workbench to import/edit/validate/export, plus proof journeys and endpoint smoke tests; and resolver conformance if I’m implementing a resolver).
+I would (1) review the core contract (Concepts and the v0.1 spec) so I understand required fields and the key rules (TTL validity window via issuedAt/expiresAt and safe unknown-field tolerance), (2) implement a minimum viable consumer (require core fields, reject expired manifests, ignore unknown fields, and read only the sections I support like facets and pointers), (3) validate with conformance and fixtures (official JSON-LD vocabulary + JSON Schema files plus stub manifests and the Conformance v0.1 checklist), and (4) use proof and tools (interactive harness + Manifest Workbench to import/edit/validate/export, plus proof journeys and endpoint smoke tests; and resolver conformance if I’m implementing a resolver).
 
 ### 6. Were there any terms you didn't understand?
 
-No blocking terms; UMID, TTL, shards, pointers, and unknown-field tolerance were defined inline. If I were new to JSON-LD, I’d likely look up deeper background later, but it wasn’t required to follow the getting-started path.
+No blocking terms; UMID, TTL, facets, pointers, and unknown-field tolerance were defined inline. If I were new to JSON-LD, I’d likely look up deeper background later, but it wasn’t required to follow the getting-started path.
 
 ### 7. On a scale of 1-5, how clear was the documentation overall?
 
@@ -107,7 +107,7 @@ Per the [gate checklist](/Users/grig/work/repo/universalmanifest/docs/reports/20
 - [x] Developers/engineers/implementers as primary audience
 
 **Question 3 must show understanding of:**
-- [x] Shards as linked reference structures or components
+- [x] Facets as linked reference structures or components
 
 **Question 4 must show understanding of:**
 - [x] UMID as a unique identifier for manifests
@@ -119,7 +119,7 @@ Per the [gate checklist](/Users/grig/work/repo/universalmanifest/docs/reports/20
 
 ### Observations
 
-The landing page and overview quickly establish the “envelope” model and the interoperability intent (avoid bespoke payload formats per integration). The Concepts page is especially effective: it defines UMID, TTL, unknown-field tolerance, shards, and pointers with plain-language examples. Quick Start provides a clear 1-2-3 implement/validate path and points to fixtures/conformance plus the interactive harness and Manifest Workbench. Answers were produced after reading the four pages in order, without revisiting the docs while answering.
+The landing page and overview quickly establish the “envelope” model and the interoperability intent (avoid bespoke payload formats per integration). The Concepts page is especially effective: it defines UMID, TTL, unknown-field tolerance, facets, and pointers with plain-language examples. Quick Start provides a clear 1-2-3 implement/validate path and points to fixtures/conformance plus the interactive harness and Manifest Workbench. Answers were produced after reading the four pages in order, without revisiting the docs while answering.
 
 ---
 

@@ -221,7 +221,7 @@ Goal: provide runnable code examples and a demo application so adopters can lear
 
 Delivered:
 
-- 12 runnable code examples covering hello-world, validation, signing, shards, resolution, projection, device registration, consent enforcement, unknown-field tolerance, and multi-manifest aggregation ([`examples/code/`](../examples/code/))
+- 12 runnable code examples covering hello-world, validation, signing, facets, resolution, projection, device registration, consent enforcement, unknown-field tolerance, and multi-manifest aggregation ([`examples/code/`](../examples/code/))
 - browser-based and Python validation examples ([`examples/code/browser-validate/`](../examples/code/browser-validate/), [`examples/code/python-validate/`](../examples/code/python-validate/))
 - full demo application with server and library ([`examples/demo-app/`](../examples/demo-app/))
 
@@ -342,4 +342,4 @@ Primary evidence:
 - `docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
 - `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
 
-Status: Completed. Three follow-on work orders exist: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline shards vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).
+Status: Completed. Three follow-on work orders exist: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline facets vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).

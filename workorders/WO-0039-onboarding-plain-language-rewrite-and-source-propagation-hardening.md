@@ -136,8 +136,8 @@ All work phases are complete:
 
 Fixed 6 restricted-term violations:
 - "Harness" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md:41` - added inline definition
-- "shards" and "TTL" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md:63` - added inline definitions
-- "shards" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:71` - added inline definition in code block
+- "facets" and "TTL" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md:63` - added inline definitions
+- "facets" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:71` - added inline definition in code block
 - "pointers" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:98` - added inline definition in code block
 - "UMID" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:33` - added inline definition
 

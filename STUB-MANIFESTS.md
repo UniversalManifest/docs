@@ -4,7 +4,7 @@ This document is a **human-first index** of the Universal Manifest stub fixtures
 
 - A short “why this exists” for each manifest
 - Full JSON(-LD) inline (collapsed by default)
-- Links to the **vision-driving** docs for each section (`subject`, `claims`, `consents`, `devices`, `pointers`, `shards`, `signature`, TTL)
+- Links to the **vision-driving** docs for each section (`subject`, `claims`, `consents`, `devices`, `pointers`, `facets`, `signature`, TTL)
 
 > These stubs intentionally include **extra fields** not yet standardized in the v0.1 context/schema (v0.1 allows this). Treat them as *shape + intent* fixtures, not final ontology.
 
@@ -15,7 +15,7 @@ Normative-ish minimal examples:
 - `examples/v0.1/minimal-manifest.jsonld`
 - `examples/v0.1/type-array-manifest.jsonld`
 - `examples/v0.1/unknown-fields-manifest.jsonld`
-- `examples/v0.1/manifest-with-shards.jsonld`
+- `examples/v0.1/manifest-with-facets.jsonld`
 
 Richer “near-real” stubs:
 
@@ -45,7 +45,7 @@ Use these links to understand **why a section exists** and what direction it’s
 | `@id` (Manifest ID) | Stable reference for caching + telemetry/logging | `docs/DECISIONS.md` (Manifest ID generation), `spec/v0.1/README.md` |
 | `issuedAt` / `expiresAt` (TTL) | Prevent stale cache + bound trust window | `spec/v0.1/README.md` (ID + caching guidance), `integrations/reference-runtime.md`, `docs/CRUCIAL-DETAILS.md` |
 | `subject` | Who the manifest is “about” (user/device/venue) | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
-| `shards` | Composable sub-documents (embed or reference) | `spec/v0.1/README.md` (Shard), `examples/v0.1/manifest-with-shards.jsonld`, `research/reference-platform/profile-architecture.md` |
+| `facets` | Composable sub-documents (embed or reference) | `spec/v0.1/README.md` (Facet), `examples/v0.1/manifest-with-facets.jsonld`, `research/reference-platform/profile-architecture.md` |
 | `claims` | Roles/permissions/verification/policy assertions | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
 | `consents` | Privacy + surface permissions (public display, analytics) | `docs/PROJECT-VISION.md`, `research/federation/universal-manifest-workstream.md` |
 | `devices` | Device registrations + trust levels | `integrations/reference-runtime.md`, `research/reference-platform/operational-runbooks.md` |
@@ -95,7 +95,7 @@ Driver docs:
   "subject": "did:key:z6MkpExampleSubjectDid",
   "issuedAt": "2026-02-11T20:45:58Z",
   "expiresAt": "2026-02-12T20:45:58Z",
-  "shards": []
+  "facets": []
 }
 ```
 
@@ -126,7 +126,7 @@ Driver docs:
   "subject": "did:key:z6MkpExampleSubjectDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
-  "shards": []
+  "facets": []
 }
 ```
 
@@ -134,16 +134,16 @@ Driver docs:
 
 ---
 
-### `manifest-with-shards.jsonld` (baseline shard composition)
+### `manifest-with-facets.jsonld` (baseline facet composition)
 
 Purpose:
 
-- Demonstrates `shards` as the primary “composition” mechanism.
-- Shows a shard that is a pointer (`ref`) and a shard that embeds an entity.
+- Demonstrates `facets` as the primary “composition” mechanism.
+- Shows a facet that is a pointer (`ref`) and a facet that embeds an entity.
 
 Driver docs:
 
-- `spec/v0.1/README.md` (Shard definition)
+- `spec/v0.1/README.md` (Facet definition)
 - `research/reference-platform/profile-architecture.md` (“canonical vs projected” state; capsule concept)
 
 <details>
@@ -158,9 +158,9 @@ Driver docs:
   "subject": "did:web:venue.localartist.network",
   "issuedAt": "2026-02-11T20:45:58Z",
   "expiresAt": "2026-02-12T20:45:58Z",
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "canonicalProfilePointer",
       "ref": "https://example.pod.provider/profile.jsonld",
       "entity": {
@@ -170,7 +170,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "deviceRegistration",
       "entity": {
         "@id": "urn:uuid:36cf6d1c-e119-44b0-b0a6-5e1da0fbfe16",
@@ -217,9 +217,9 @@ Driver docs:
   "subject": "did:web:ember-cafe.localartist.network",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "venueIdentity",
       "entity": {
         "@id": "did:web:ember-cafe.localartist.network",
@@ -231,7 +231,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "venuePolicy",
       "entity": {
         "@id": "urn:uuid:a873eefb-4811-4bba-887d-dfa8c7cfe3ac",
@@ -251,7 +251,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "edgeNode",
       "entity": {
         "@id": "did:key:z6MkiEdgeNodeExampleDid",
@@ -347,9 +347,9 @@ Driver docs:
   "subject": "did:key:z6MkiShieldTvProExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-12T03:00:00Z",
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "deviceIdentity",
       "entity": {
         "@id": "did:key:z6MkiShieldTvProExampleDid",
@@ -364,7 +364,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "venueAssociation",
       "ref": "did:web:ember-cafe.localartist.network",
       "entity": {
@@ -442,7 +442,7 @@ Driver docs:
 Purpose:
 
 - A creator-scoped manifest that carries (or points to) a **Public Capsule**: safe-to-render data for public screens.
-- Demonstrates: canonical pointer shard + embedded public capsule shard.
+- Demonstrates: canonical pointer facet + embedded public capsule facet.
 
 Driver docs:
 
@@ -462,9 +462,9 @@ Driver docs:
   "subject": "did:key:z6MkiAliceRiveraExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "canonicalProfilePointer",
       "ref": "https://pods.localartist.network/creators/alice-rivera/profile.jsonld",
       "entity": {
@@ -476,7 +476,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "publicCapsule",
       "entity": {
         "@id": "urn:uuid:8ea146e2-743a-4f0b-8f99-a53be2d5b614",
@@ -564,7 +564,7 @@ Driver docs:
 Purpose:
 
 - A person/creator-scoped manifest that can drive a **public profile** in any compatible system (reference implementation web views, future social profile views, or other DC properties).
-- Demonstrates how `shards` can embed a schema-aligned profile (`schema:Person`) while still pointing to canonical sources (Pod / ActivityPub).
+- Demonstrates how `facets` can embed a schema-aligned profile (`schema:Person`) while still pointing to canonical sources (Pod / ActivityPub).
 
 Driver docs:
 
@@ -584,9 +584,9 @@ Driver docs:
   "subject": "did:key:z6MkiJulesChenExampleDid",
   "issuedAt": "2026-02-12T02:00:00Z",
   "expiresAt": "2026-02-13T02:00:00Z",
-  "shards": [
+  "facets": [
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "canonicalProfilePointer",
       "ref": "https://pods.localartist.network/creators/jules-chen/profile.jsonld",
       "entity": {
@@ -598,7 +598,7 @@ Driver docs:
       }
     },
     {
-      "@type": "um:Shard",
+      "@type": "um:Facet",
       "name": "publicProfile",
       "entity": {
         "@id": "https://localartist.network/@jules",

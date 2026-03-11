@@ -221,11 +221,11 @@ This audit uncovered systemic status inflation across multiple project documents
 
 **Severity:** MEDIUM
 
-### TD-005: "Shards" -- Circular Definition
+### TD-005: "Facets" -- Circular Definition
 
 **Locations:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md` (line 10), all onboarding files
 
-**Issue:** Concepts page defines shards as "small composable sections used for projections." Neither "composable" (in what sense?) nor "projections" (of what?) are defined. This is a circular definition that assumes insider knowledge.
+**Issue:** Concepts page defines facets as "small composable sections used for projections." Neither "composable" (in what sense?) nor "projections" (of what?) are defined. This is a circular definition that assumes insider knowledge.
 
 **Severity:** HIGH
 
@@ -359,7 +359,7 @@ This audit uncovered systemic status inflation across multiple project documents
 | TD-002 | "Integration pair" undefined in value proposition | CRITICAL |
 | TD-003 | "CEO-directed integration lanes" insider framing | HIGH |
 | TD-004 | "Convergence profile" insider jargon | MEDIUM |
-| TD-005 | "Shards" circular definition | HIGH |
+| TD-005 | "Facets" circular definition | HIGH |
 | TD-006 | "reference implementation" undefined acronym | MEDIUM |
 | TD-007 | "MUM" insider history | LOW |
 | TD-008 | "RP1 spatial fabric" undefined | MEDIUM |

@@ -29,7 +29,7 @@ The completeness audit found that there is no standalone adoption guide for thir
 From `docs/DEPTH-AND-SCOPE.md` (lines 150-161) — Adoption tiers:
 - Tier 0: Parse-only (validate `@type`, TTL, treat unknown fields as opaque)
 - Tier 1: Pointers consumer (use `pointers` to fetch canonical content)
-- Tier 2: Projection renderer (render known `shards`)
+- Tier 2: Projection renderer (render known `facets`)
 - Tier 3: Verified consumer (enforce signature verification + TTL)
 - Tier 4: Issuer (produce signed manifests)
 

@@ -16,7 +16,7 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 
 **What UM gives them:** A single document format that carries identity, credentials, preferences, and consent between their platform and any UM-aware system. Progressive adoption: start by consuming manifests from other platforms, later issue their own.
 
-**Entry point:** Parse a manifest (Level 1), consume known shards like `publicProfile` (Level 3), then issue manifests for their users (Level 4).
+**Entry point:** Parse a manifest (Level 1), consume known facets like `publicProfile` (Level 3), then issue manifests for their users (Level 4).
 
 ### Profile 2: IoT / Edge / Venue Operator
 
@@ -54,7 +54,7 @@ This strategy covers **how to reach adopters**. For the onboarding package adopt
 
 **Pain point:** DIDs and VCs provide identity and credential primitives, but there is no standard portable document that composes them with consent, device state, and data pointers into a single handoff-ready envelope.
 
-**What UM gives them:** A manifest that uses their existing DID as the subject, carries their VCs as claims within shards, and adds consent, device registration, and pointer capabilities that DIDs and VCs alone do not provide. The OMATrust integration lane and the DID + VC lane demonstrate concrete examples.
+**What UM gives them:** A manifest that uses their existing DID as the subject, carries their VCs as claims within facets, and adds consent, device registration, and pointer capabilities that DIDs and VCs alone do not provide. The OMATrust integration lane and the DID + VC lane demonstrate concrete examples.
 
 **Entry point:** The DID + VC integration lane ([`integrations/did-vc.md`](../integrations/did-vc.md)), the OMATrust integration lane ([`integrations/oma-trust.md`](../integrations/oma-trust.md)), and the proof-of-personhood integration lane ([`integrations/proof-of-personhood.md`](../integrations/proof-of-personhood.md)).
 

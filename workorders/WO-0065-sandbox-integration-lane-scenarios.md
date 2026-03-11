@@ -19,7 +19,7 @@ Integration lane scenarios show the breadth of Universal Manifest. They prove th
 
 ## Scope
 
-Implement 8 scenario definition files. Each uses an existing fixture stub from `examples/v0.1/stubs/`. Each has 7 steps showing the flow from manifest receipt to consumer projection. These scenarios emphasize consent checking, shard extraction, and domain-specific rendering.
+Implement 8 scenario definition files. Each uses an existing fixture stub from `examples/v0.1/stubs/`. Each has 7 steps showing the flow from manifest receipt to consumer projection. These scenarios emphasize consent checking, facet extraction, and domain-specific rendering.
 
 ## Scenarios
 
@@ -27,7 +27,7 @@ Implement 8 scenario definition files. Each uses an existing fixture stub from `
 
 - **Fixture:** `examples/v0.1/stubs/social-profile-manifest.jsonld`
 - **Consumer:** Social profile rendering service
-- **Key concepts:** Consent gating (`social.profilePublic`), shard extraction (`publicProfile`), schema:Person rendering, pointer resolution
+- **Key concepts:** Consent gating (`social.profilePublic`), facet extraction (`publicProfile`), schema:Person rendering, pointer resolution
 - **Modifiable:** Yes -- changing consent to "denied" blocks rendering
 
 ### IL-02: Smart Glasses Consent Check (7 steps)
@@ -42,14 +42,14 @@ Implement 8 scenario definition files. Each uses an existing fixture stub from `
 
 - **Fixture:** `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - **Consumer:** Two virtual worlds receiving the same manifest
-- **Key concepts:** Cross-system projection, consent per world feature, shard with supported worlds list
+- **Key concepts:** Cross-system projection, consent per world feature, facet with supported worlds list
 - **Modifiable:** Yes -- changing `metaverse.voiceCapture` consent changes voice features
 
 ### IL-04: RP1 Spatial Fabric Anchoring (7 steps)
 
 - **Fixture:** `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 - **Consumer:** RP1 spatial fabric node
-- **Key concepts:** Spatial anchor data, place membership, cross-world linking consent, coordinate data in shards
+- **Key concepts:** Spatial anchor data, place membership, cross-world linking consent, coordinate data in facets
 - **Modifiable:** Yes -- changing `spatial.crossWorldLinking` consent changes cross-world behavior
 
 ### IL-05: OMATrust Attestation Lifecycle (7 steps)
@@ -77,7 +77,7 @@ Implement 8 scenario definition files. Each uses an existing fixture stub from `
 
 - **Fixture:** `examples/v0.1/stubs/venue-edge-manifest.jsonld`
 - **Consumer:** Edge node + enrolled display device
-- **Key concepts:** Venue identity, content policy shards (safe mode, content rules), device enrollment, edge discovery
+- **Key concepts:** Venue identity, content policy facets (safe mode, content rules), device enrollment, edge discovery
 - **Modifiable:** Yes -- changing policy values changes content rendering rules
 
 ## Execution tasks
