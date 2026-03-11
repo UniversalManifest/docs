@@ -2,7 +2,7 @@
 
 **Status:** Reference only  
 **Imported:** 2026-03-06  
-**Source inbox path:** `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest Logo/`
+**Source inbox path:** *(original files sourced from a local Downloads inbox; not included in this repository)*
 
 This directory captures the logo exploration assets that existed in the inbox but had not yet been localized into the repository.
 
@@ -11,7 +11,7 @@ These files are **not normative branding guidance** and they do **not** define a
 ## Destination
 
 Localized asset directory:
-- `/Users/grig/work/repo/universalmanifest/docs/design/logo-reference/`
+- `docs/design/logo-reference/`
 
 ## Asset inventory
 

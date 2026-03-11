@@ -4,7 +4,7 @@ This document is the single authoritative reference for Universal Manifest's rel
 
 Current protocol-family currency and recommendation strength are tracked separately in the dated matrix:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
 
 This document explains relationship and positioning. The matrix above controls time-sensitive status language for volatile protocol families.
 

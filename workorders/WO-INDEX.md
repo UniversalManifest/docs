@@ -233,3 +233,18 @@ Drift governance and follow-on WO trigger criteria:
 ### Vignette Explainer Library (WO-0145)
 
 - `docs/workorders/WO-0145-vignette-video-library.md` — [IN_PROGRESS] Create a dedicated library of Universal Manifest specific vignette explainers for UI integration and YouTube publishing; UI audit complete, 5 priority vignette scripts delivered (V-01 through V-05), production workflow documented (P1)
+
+### IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0148)
+
+- `docs/workorders/WO-0146-iwps-specification-localization.md` — [COMPLETED] Localized IWPS Base Specification v0.3 from OMA3 GitHub to project markdown at `docs/research/iwps-base-specification-v0.3.md` (877 lines, full spec with APIs, identity framework, auth tiers) (P0)
+- `docs/workorders/WO-0147-iwps-um-alignment-analysis.md` — [COMPLETED] Comprehensive IWPS–UM alignment analysis: layer mapping, integration points, proposed portal flow, gap analysis, and OMA3 recommendations at `docs/reports/2026-03-11-iwps-um-alignment-analysis.md` (P0)
+- `docs/workorders/WO-0148-oma3-presentation-explainer-package.md` — [COMPLETED] OMA3 presentation explainer package with 9-section architectural overview and NotebookLM briefs at `docs/presentations/2026-03-12-oma3-*` (P0)
+
+### Video Explainer Hierarchy (WO-0149)
+
+- `docs/workorders/WO-0149-video-explainer-hierarchy-of-discovery.md` — [COMPLETED] Designed 4-level video hierarchy of discovery (meta/index → master → audience summaries → topic deep dives → micro-vignettes) with NotebookLM briefs for 16 named videos; supersedes flat vignette approach (P1)
+
+### Hackathon Learnings and Concept Documents (WO-0150 through WO-0151)
+
+- `docs/workorders/WO-0150-spatial-fabric-hackathon-learnings-report.md` — [COMPLETED] Standalone hackathon learnings report documenting UM concepts validated in the peer-mesh-spatial-fabric proof-of-concept, IWPS alignment implications, and adoption patterns at `docs/reports/2026-03-11-spatial-fabric-hackathon-learnings.md` (P0)
+- `docs/workorders/WO-0151-avatar-equip-tool-concept.md` — [COMPLETED] Avatar equip tool concept document: gamified UM management interface with AAA-style equip menu, facet-to-slot mapping, spec pressure points, and IWPS portaling relationship at `docs/concepts/avatar-equip-tool.md` (P1)

@@ -142,7 +142,7 @@ Recommended offline behavior:
 Run from repo root:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm test
 npm run journeys
 ```
