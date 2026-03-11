@@ -318,7 +318,7 @@ Primary evidence:
 - `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
 - `docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
 
-Status: Completed. No queued follow-on work orders remain in the current approved sequence.
+Status: Completed. Three follow-on work orders exist in the queue: WO-0142 (NOT_STARTED), WO-0143 (NOT_STARTED), WO-0145 (OPEN).
 
 ## Phase 18 — RP1/MSF Adversarial Hardening -- COMPLETED
 
@@ -342,4 +342,4 @@ Primary evidence:
 - `docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
 - `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
 
-Status: Completed. No queued follow-on work orders remain in the current approved sequence.
+Status: Completed. Three follow-on work orders exist: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline shards vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).

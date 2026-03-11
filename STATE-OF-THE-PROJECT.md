@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-06
-**Status:** 135 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED.
+**Date:** 2026-03-11
+**Status:** 135 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Consumer Resolver UX Hardening (WO-0144) COMPLETED. Queued/open: WO-0142 (NOT_STARTED), WO-0143 (NOT_STARTED), WO-0145 (OPEN).
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -255,9 +255,22 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Key artifact:
   - `docs/reports/2026-03-06-metaverse-portaling-integration-note.md`
 
-## Priority context (2026-03-06)
+#### Consumer Resolver UX Hardening (WO-0144) — COMPLETED
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), WO-0130 through WO-0136, the Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138), the RP1/MSF Adversarial Hardening Wave (WO-0139), the K2B Concept Integration Traceability pass (WO-0140), and the Metaverse Portaling Integration pass (WO-0141) are completed. There are no queued follow-on work orders in `docs/workorders/WO-INDEX.md`.
+- Completed: `WO-0144` myum consumer provenance and example-state hardening (2026-03-10)
+- Eliminated live-vs-fallback ambiguity in the consumer resolver UX and added/verified live production example states for contract-visible redirect/revoked behavior.
+- Key artifact:
+  - `docs/workorders/WO-0144-myum-consumer-provenance-and-example-state-hardening.md`
+
+#### Queued and Open Work Orders
+
+- `WO-0142` — Payment Handles and Fiat/Crypto Gateway Integration (NOT_STARTED)
+- `WO-0143` — Private Encrypted Inline Shards vs Projection Model Analysis (NOT_STARTED)
+- `WO-0145` — Vignette Explainer Library (OPEN)
+
+## Priority context (2026-03-11)
+
+The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), WO-0130 through WO-0136, the Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138), the RP1/MSF Adversarial Hardening Wave (WO-0139), the K2B Concept Integration Traceability pass (WO-0140), the Metaverse Portaling Integration pass (WO-0141), and the Consumer Resolver UX Hardening pass (WO-0144) are completed. Three work orders remain in the queue: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline shards vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 

@@ -212,6 +212,9 @@ Drift governance and follow-on WO trigger criteria:
 ### RP1/MSF Adversarial Hardening Wave (WO-0139)
 
 - `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md` — [COMPLETED] Add fail-closed RP1/MSF proof for stale attachment traversal and expired/revoked session-context replay without expanding the UM core contract (P1)
+
+### Consumer Resolver UX Hardening (WO-0144)
+
 - `docs/workorders/WO-0144-myum-consumer-provenance-and-example-state-hardening.md` — [COMPLETED] Eliminate live-vs-fallback ambiguity in the consumer resolver UX and add/verify live production example states for contract-visible redirect/revoked behavior where possible (P0)
 
 ### K2B Concept Integration Traceability (WO-0140)
@@ -225,4 +228,8 @@ Drift governance and follow-on WO trigger criteria:
 ### Ecosystem Expansion & Architecture Research (WO-0142 through WO-0143)
 
 - `docs/workorders/WO-0142-payment-handles-and-fiat-crypto-gateway-integration.md` — [NOT_STARTED] Create explicit standard pointers/overlays for fiat (Stripe/PayPal) and crypto gateways, establishing universal payment handle integration without leaking financial data (P1)
-- `docs/workorders/WO-0143-private-encrypted-inline-shards-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline shards, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)
+- `docs/workorders/WO-0143-private-encrypted-inline-shards-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline facets, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)
+
+### Vignette Explainer Library (WO-0145)
+
+- `docs/workorders/WO-0145-vignette-video-library.md` — [OPEN] Create a dedicated library of Universal Manifest specific vignette explainers for UI integration and YouTube publishing (P1)

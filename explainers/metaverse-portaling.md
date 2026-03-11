@@ -21,7 +21,6 @@
   - **Compliance Transactions:** Proof that she meets age or entry requirements.
   - **Social & Reputation Portability:** Links to her friends list and gathered trust scores.
   - **Preferences Bundle:** Her saved interface settings and accessibility needs.
-- **Narrative (Voiceover):** "Enter the Metaverse Universal Manifest, or MUM for short. It's not a new platform or a centralized database. It's a standard, portable digital envelope specifically designed for virtual worlds. It is a verifiable capsule that holds your identity projection, consent policies, compliance proofs, social reputation, and preference bundles."
 
 ### Scene 3: The Portaling Experience (1:15 - 2:00)
 - **Visuals:** Nova steps into the portal to "Fantasy Realm" again, but this time, her MUM capsule travels with her.
@@ -31,17 +30,17 @@
   3. **Social Portability**: Her friends list populates with familiar faces already in this realm.
   4. **Compliance Checking**: It verifies her age gate requirements silently through the manifest.
   5. If one cosmetic item is unsupported, the platform falls back gracefully instead of failing the whole jump.
-- **Narrative (Voiceover):** "When you jump to a new world, MUM acts as your digital passport. The new platform reads your manifest, projects your identity, propagates your consent choices, and maintains your social reputation seamlessly. Best of all, it respects your true boundaries the moment you arrive."
+
 
 ### Scene 4: How It Works Under the Hood (2:00 - 2:30)
 - **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code, highlighting a `crossWorldProfile` shard. We show a cryptographically secure signature locking the code, plus freshness TTL timers.
 - **Action:** An animated lock snaps shut on the document. A stamp says "Verified by Cryptography. No Central Authority Required. Cache Freshness Enforced."
-- **Narrative (Voiceover):** "Under the hood, MUM is a simple JSON document, signed with production-grade cryptography. That means the target world knows exactly who arrived, what they are allowed to project, and that the envelope hasn't been tampered with. Built-in 'freshness' TTL timers ensure outdated policies are never accidentally applied."
+
 
 ### Scene 5: The Future of Portability (2:30 - 3:00)
 - **Visuals:** Montage of different scenarios. The same glowing MUM envelope being scanned at a virtual concert, maintaining social reputation in a competitive game, and proving compliance at a virtual storefront.
 - **Action:** The text "Build Your Metaverse Universal Manifest Today" appears on screen with a link to `universalmanifest.net`.
-- **Narrative (Voiceover):** "Whether you're portaling between gaming environments, moving through spatial web platforms, or shopping in virtual commerce zones, MUM guarantees your digital life belongs to you. It carries your complete identity, policy, and compliance state so any compatible world can meet you exactly where you arrive."
+
 
 ---
 

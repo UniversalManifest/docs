@@ -19,7 +19,7 @@ While Universal Manifest v0.1 supports financial preferences via the `prefs.fina
 In scope:
 - Deep analysis of major fiat payment gateways (Stripe, PayPal, etc.) and crypto wallet handling.
 - Development of a universal, non-opinionated schema for declaring these capabilities in a manifest.
-- Proposal for explicit `REGISTRY.md` pointers, shards, or claims.
+- Proposal for explicit `REGISTRY.md` pointers, facets, or claims.
 - Consideration of standardizing receiver formats without leaking sensitive financial info.
 
 Out of scope:
