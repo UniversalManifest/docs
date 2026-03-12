@@ -267,4 +267,4 @@ Drift governance and follow-on WO trigger criteria:
 
 ### OMA3 Handout Collection Site Publication (WO-0156)
 
-- `docs/workorders/WO-0156-oma3-handout-collection-site-publication.md` — [IN_PROGRESS] Publish OMA3 handout collection as navigable subsection on universalmanifest.net with proper Starlight integration (P0)
+- `docs/workorders/WO-0156-oma3-handout-collection-site-publication.md` — [COMPLETED] Publish OMA3 handout collection as navigable subsection on universalmanifest.net with proper Starlight integration (P0)

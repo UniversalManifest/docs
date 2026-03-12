@@ -1,6 +1,6 @@
 # WO-0156 -- OMA3 Handout Collection Site Publication
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Priority:** P0
 **Created:** 2026-03-11
 
