@@ -3,7 +3,7 @@
 This folder tracks scoped, actionable work for the Universal Manifest spec repo.
 
 Drift governance and follow-on WO trigger criteria:
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (Phase 9)
+- `docs/CRITICAL-PATH.md` (Phase 9)
 
 ## Index
 
@@ -248,3 +248,23 @@ Drift governance and follow-on WO trigger criteria:
 
 - `docs/workorders/WO-0150-spatial-fabric-hackathon-learnings-report.md` — [COMPLETED] Standalone hackathon learnings report documenting UM concepts validated in the peer-mesh-spatial-fabric proof-of-concept, IWPS alignment implications, and adoption patterns at `docs/reports/2026-03-11-spatial-fabric-hackathon-learnings.md` (P0)
 - `docs/workorders/WO-0151-avatar-equip-tool-concept.md` — [COMPLETED] Avatar equip tool concept document: gamified UM management interface with AAA-style equip menu, facet-to-slot mapping, spec pressure points, and IWPS portaling relationship at `docs/concepts/avatar-equip-tool.md` (P1)
+
+### Portal Loading Content (WO-0152)
+
+- `docs/workorders/WO-0152-portal-loading-content-integration.md` — [COMPLETED] CEO mandate for destination-world loading content during portal transitions; integrated loading content pointers into metaverse integration lane, IWPS alignment, portaling explainer, and video briefs (P1)
+
+### Facet Encryption Deep Dive (WO-0153)
+
+- `docs/workorders/WO-0153-facet-encryption-deep-dive-report.md` — [COMPLETED] Comprehensive facet visibility and encryption deep dive: three approaches (projection, consent, encrypted inline), three encryption methods (JWE, BBS+/SD-JWT, HPKE envelope), engineering justifications, and L3-10 video brief at `docs/explainers/facet-encryption-deep-dive.md` (P1)
+
+### Hashing and Data Bundling Deep Dive (WO-0154)
+
+- `docs/workorders/WO-0154-hashing-and-data-bundling-deep-dive.md` — [COMPLETED] Comprehensive hashing, caching, and data bundling deep dive: SHA-256 ETags, Ed25519+JCS signing, pointer-first architecture, CID deferral rationale, digestMultibase pointer integrity proposal, CBOR-LD future profile, and L3-11 video brief at `docs/explainers/hashing-and-data-bundling-deep-dive.md` (P1)
+
+### Concept Hierarchy Explorer and Ecosystem Namespace (WO-0155)
+
+- `docs/workorders/WO-0155-concept-hierarchy-explorer-and-ecosystem-namespace.md` — [IN_PROGRESS] Interactive single-page concept hierarchy explorer showing the full breadth of UM application domains, plus ecosystem namespace vision for external compliance submissions and distributed name management (P0)
+
+### OMA3 Handout Collection Site Publication (WO-0156)
+
+- `docs/workorders/WO-0156-oma3-handout-collection-site-publication.md` — [IN_PROGRESS] Publish OMA3 handout collection as navigable subsection on universalmanifest.net with proper Starlight integration (P0)
