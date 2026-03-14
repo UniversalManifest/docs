@@ -30,7 +30,7 @@ Tooling:
 
 Command run:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 Observed result (summary):
 

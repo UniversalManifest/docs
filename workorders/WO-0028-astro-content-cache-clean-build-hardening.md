@@ -20,27 +20,27 @@ Out of scope:
 
 ## Deliverables
 
-- `/Users/grig/work/repo/universalmanifest/site/package.json`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
+- `site/package.json`
+- `docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md`
+- `docs/workorders/WO-INDEX.md`
+- `.dev/ai/workorders/WO-INDEX.md`
 
 ## Acceptance criteria
 
-- [x] `npm run build` in `/Users/grig/work/repo/universalmanifest/site` runs with cache cleanup and no duplicate-id warnings.
+- [x] `npm run build` in `site` runs with cache cleanup and no duplicate-id warnings.
 - [x] `npm run build:clean` remains valid and non-recursive.
 - [x] New WO is indexed in both work-order indexes.
 
 ## Execution log
 
 Completed changes:
-1. Updated `/Users/grig/work/repo/universalmanifest/site/package.json` so default `build` always performs `clean:astro` before sync and Astro build.
+1. Updated `site/package.json` so default `build` always performs `clean:astro` before sync and Astro build.
 2. Simplified `build:clean` to alias `build` (single deterministic clean-build path).
 3. Re-ran build commands to confirm warning-free output and valid script wiring.
 
 Validation commands:
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build` (pass)
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (pass)
+- `cd site && npm run build` (pass)
+- `cd site && npm run build:clean` (pass)
 
 ## Post-Completion Notes
 
@@ -61,6 +61,6 @@ The original WO-0028 fix (cache cleanup script + build process hardening) remain
 
 **Verification command:**
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site && rm -rf .astro dist node_modules/.vite && npm run build 2>&1 | grep -ci "warn"
+cd site && rm -rf .astro dist node_modules/.vite && npm run build 2>&1 | grep -ci "warn"
 # Output: 0
 ```

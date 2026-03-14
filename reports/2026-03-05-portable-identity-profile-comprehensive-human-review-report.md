@@ -1,7 +1,7 @@
 # Portable Identity Profile Program Report (First-Time Reviewer Edition)
 
 Date: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
+Project: Universal Manifest (``)  
 Program scope: Portable Identity Profile workstreams (Go-Now + Research-First)
 
 ## 1) What this document is
@@ -33,9 +33,9 @@ Two execution tracks are used:
 
 Primary plan and assessment documents:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-spec-integration-log.md`
+- `docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
+- `docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-portable-identity-profile-spec-integration-log.md`
 
 This report summarizes and operationalizes those files for first-time reviewers.
 
@@ -84,10 +84,10 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
+- `integrations/portable-identity-profile-xr.md`
+- `site/src/content/docs/integrations/portable-identity-profile-xr.md`
+- `site/src/content/docs/integrations/index.md`
+- `docs/reports/2026-03-05-gn06-site-build-clean.txt`
 
 ## PIP-GN-02 — Fixture Pack Expansion
 
@@ -117,16 +117,16 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
+- `examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld`
+- `examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld`
+- `examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld`
+- `examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld`
+- `examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld`
+- `examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld`
+- `docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
+- `docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
 - supporting signing-helper alignment for v0.2 fixture key material:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/sign-fixture.mjs`
+  - `packages/universal-manifest/scripts/sign-fixture.mjs`
 
 ## PIP-GN-03 — Journey Expansion
 
@@ -156,14 +156,14 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/J12-portable-identity-profile-projection-and-consent.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/J13-portable-identity-profile-pairwise-privacy.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/J14-portable-identity-profile-revocation-aware-policy.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
+- `docs/journeys/J12-portable-identity-profile-projection-and-consent.md`
+- `docs/journeys/J13-portable-identity-profile-pairwise-privacy.md`
+- `docs/journeys/J14-portable-identity-profile-revocation-aware-policy.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `docs/journeys/README.md`
+- `docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
+- `docs/reports/2026-03-05-gn03-journeys-run.txt`
+- `docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
 
 ## PIP-GN-04 — Registry Expansion
 
@@ -192,9 +192,9 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
+- `spec/v0.1/REGISTRY.md`
+- `docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
+- `docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
 
 ## PIP-GN-05 — Implementation Guide Addendum
 
@@ -223,10 +223,10 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-link-scan.txt`
+- `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+- `site/src/content/docs/guides/portable-identity-profile-xr-implementation-path.md`
+- `docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
+- `docs/reports/2026-03-05-portable-identity-profile-implementation-path-link-scan.txt`
 
 ## PIP-GN-06 — Governance and Status Synchronization
 
@@ -256,10 +256,10 @@ Evidence to attach when complete:
 
 Completion evidence:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
+- `docs/DECISIONS.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/CRITICAL-PATH.md`
+- `docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
 
 ## 6) Track B — Research-First workstreams
 
@@ -417,8 +417,8 @@ When any workstream changes status:
 3. Add evidence links under the workstream’s “Evidence to attach” section.
 4. Update `Last program status refresh` date in section 4.
 5. Mirror critical status changes into:
-   - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+   - `docs/STATE-OF-THE-PROJECT.md`
+   - `docs/DECISIONS.md`
 
 ## 8) First-time reviewer quick answer
 

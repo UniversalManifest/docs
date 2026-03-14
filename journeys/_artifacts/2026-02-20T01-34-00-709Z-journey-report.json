@@ -1,7 +1,7 @@
 {
   "runId": "2026-02-20T01-34-00-709Z",
   "createdAt": "2026-02-20T01:34:09.347Z",
-  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "repoRoot": ".",
   "journeys": [
     {
       "id": "J01",
@@ -32,7 +32,7 @@
         "stdout": "",
         "stderr": "",
         "details": {
-          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+          "distRoot": "deploy/universalmanifest.net/dist"
         }
       }
     },
@@ -52,7 +52,7 @@
       "endedAt": "2026-02-20T01:34:05.082Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/social-profile-manifest.jsonld",
         "projection": {
           "umid": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
           "subject": "did:key:z6MkiJulesChenExampleDid",

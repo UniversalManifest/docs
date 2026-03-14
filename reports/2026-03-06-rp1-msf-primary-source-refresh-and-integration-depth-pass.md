@@ -1,7 +1,7 @@
 # RP1/MSF Primary-Source Refresh and Integration-Depth Pass
 
 Date: 2026-03-06
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
+Work order: `docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
 
 ## Executive result
 
@@ -11,10 +11,10 @@ This pass localized four additional primary sources, refreshed provenance record
 
 ## Primary sources localized in this pass
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-29-manifolder-readme.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-30-manifolder-data-model.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-31-manifolder-client.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-32-khronos-gltf-runtime-delivery.md`
+- `.dev/ai/knowledge-corpus/imports/external-29-manifolder-readme.md`
+- `.dev/ai/knowledge-corpus/imports/external-30-manifolder-data-model.md`
+- `.dev/ai/knowledge-corpus/imports/external-31-manifolder-client.md`
+- `.dev/ai/knowledge-corpus/imports/external-32-khronos-gltf-runtime-delivery.md`
 
 ## What these sources closed
 
@@ -76,21 +76,21 @@ Resulting integration decision:
 
 ### Integration guidance refreshed
 
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
 
 ### Proof/example surfaces deepened
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+- `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
 
 ### Provenance refreshed
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-03-06-rp1-msf-source-refresh-stage0-triage.md`
+- `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+- `.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
+- `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+- `.dev/ai/ingestion/LEDGER.md`
+- `.dev/ai/ingestion/records/2026-03-06-rp1-msf-source-refresh-stage0-triage.md`
 
 ## Final decision
 

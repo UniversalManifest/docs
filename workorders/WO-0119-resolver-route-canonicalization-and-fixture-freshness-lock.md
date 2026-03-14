@@ -51,25 +51,25 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/src/index.ts`
-- `/Users/grig/work/repo/universalmanifest/site/public/resolver/index.html`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/post-deploy-verify.mjs`
+- `services/myum-resolver/src/index.ts`
+- `site/public/resolver/index.html`
+- `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- `packages/universal-manifest/scripts/post-deploy-verify.mjs`
 
 ## Verification Commands
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/services/myum-resolver
+cd services/myum-resolver
 npm test
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run build
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 npm run verify:postdeploy:prod
 ```
@@ -85,11 +85,11 @@ curl -s "https://myum.net/${ENC_UMID}" | jq '{"@type": ."@type", issuedAt, expir
 Implemented in repo this pass:
 
 - Removed resolver Astro wrapper pages that caused redirect-shell output at canonical resolver routes:
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/index.astro` (deleted)
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/ops.astro` (deleted)
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/result.astro` (deleted)
+  - `site/src/pages/resolver/index.astro` (deleted)
+  - `site/src/pages/resolver/ops.astro` (deleted)
+  - `site/src/pages/resolver/result.astro` (deleted)
 - Updated resolver fallback fixture validity window:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/src/index.ts`
+  - `services/myum-resolver/src/index.ts`
     - `issuedAt` -> `2026-03-01T00:00:00.000Z`
     - `expiresAt` -> `2036-03-01T00:00:00.000Z`
 
@@ -99,7 +99,7 @@ Local verification evidence:
 - `npm run build` (site) -> PASS
 - `npm run smoke:endpoints:prod` -> PASS
 - `npm run verify:postdeploy:prod` -> PASS
-  - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-27-20-209Z-post-deploy-verification.md`
+  - report: `.dev/ai/reports/deploy-checks/2026-03-04T04-27-20-209Z-post-deploy-verification.md`
 
 Deployment completion evidence:
 
@@ -109,4 +109,4 @@ Deployment completion evidence:
   - docs deploy artifact: `https://bf844b03.universalmanifest-net.pages.dev`
   - resolver deploy version: `7608b4e0-6e7e-44b9-84a7-06bc816f3d02`
 - Live runtime truth probe:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-40-35Z-resolver-runtime-truth-check.md`
+  - `.dev/ai/reports/deploy-checks/2026-03-04T04-40-35Z-resolver-runtime-truth-check.md`

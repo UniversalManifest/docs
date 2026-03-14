@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Runtime and Integration Architecture  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+**Source:** `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
 
 ## Objective
 
@@ -31,7 +31,7 @@ Out of scope:
 
 ## Deliverables
 
-- A new report under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+- A new report under `docs/reports/`
 - Governance synchronization if a stronger runtime guidance profile is approved
 
 ## Acceptance Criteria
@@ -43,12 +43,12 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
+- `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
 
 ## Execution Notes
 
 - Completed on 2026-03-06.
-- Delivered report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+- Delivered report: `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
 - Outcome:
   - UM should keep a role-based federation and bridge strategy.
   - No single external substrate should be normative for UM.

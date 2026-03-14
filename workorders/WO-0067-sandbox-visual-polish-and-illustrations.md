@@ -117,8 +117,8 @@ Out of scope:
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/site/public/sandbox/illustrations/gs-01.svg` (and 24 more)
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/animations.css`
+- `site/public/sandbox/illustrations/gs-01.svg` (and 24 more)
+- `site/src/styles/sandbox/animations.css`
 - Updated: All existing sandbox CSS files with refinements
 
 ## Acceptance criteria
@@ -135,7 +135,7 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev`
+- `cd site && npm run build:clean`
+- `cd site && npm run dev`
 - Manual visual review at multiple viewport sizes
 - Manual dark mode review

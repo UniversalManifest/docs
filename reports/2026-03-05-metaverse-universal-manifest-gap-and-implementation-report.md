@@ -1,7 +1,7 @@
 # Metaverse Universal Manifest (MUM) Implementation and Gap Assessment for Universal Manifest
 
 Date: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
+Project: Universal Manifest (``)  
 Primary source input: `/Users/grig/Desktop/Use Case_ Metaverse Universal Manifest - v1.0.md`
 
 ## Scope
@@ -48,10 +48,10 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - JSON-LD + unknown-field tolerance supports heterogenous consumers.
   - Integration lane exists for metaverse projection.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
+  - `spec/v0.1/README.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `integrations/metaverse.md`
+  - `docs/journeys/journey-09-metaverse-crossworld-projection.md`
 - Implementation now:
   - Keep platform-specific semantics in optional facets/pointers/consents.
 - Applied example:
@@ -65,8 +65,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - DID subject identifiers are recommended.
   - VC-style claims can be carried as claim payloads and/or facet references.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
+  - `spec/v0.1/README.md`
+  - `docs/STANDARDS-POSITIONING.md`
 - Implementation now:
   - Use DID in `subject`, carry verifier-relevant credential references in pointers/claims.
 - Applied example:
@@ -81,9 +81,9 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - Pointer-first composition explicitly supports externalized assets.
   - Metaverse lane defines suggested pointer names for profile/avatar/inventory/social/reputation.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+  - `integrations/metaverse.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Implementation now:
   - Keep large asset data off-manifest; keep only references and minimal metadata in facets.
 - Applied example:
@@ -98,8 +98,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No normative profile for social graph schema, trust provenance, or portability semantics across worlds.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
+  - `integrations/metaverse.md`
+  - `docs/journeys/journey-09-metaverse-crossworld-projection.md`
 - Implementation now:
   - Use pointer contracts + explicit consent controls for sharing scope.
 - Change recommended:
@@ -116,9 +116,9 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - Cross-platform propagation semantics and update SLAs are not standardized.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-08-smart-glasses-consent-enforcement.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `integrations/smart-glasses.md`
+  - `docs/journeys/journey-08-smart-glasses-consent-enforcement.md`
 - Implementation now:
   - Treat manifest refresh cycle + TTL expiration as propagation driver.
 - Change recommended:
@@ -135,9 +135,9 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No canonical compliance claim taxonomy and no selective disclosure profile in UM core.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `docs/security/THREAT-MODEL.md`
 - Implementation now:
   - Carry decision-grade compliance flags + proof references.
 - Change recommended:
@@ -154,8 +154,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No registry pack yet for these exact preference classes and context policy semantics.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/CONFORMANCE.md`
 - Implementation now:
   - Use namespaced key families in optional sections.
 - Change recommended:
@@ -176,9 +176,9 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No explicit UM version-sync protocol for authoritative source comparison and conflict resolution.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-02-ttl-and-freshness.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `docs/journeys/journey-02-ttl-and-freshness.md`
 - Implementation now:
   - Use TTL + rotated manifest issuance + authoritative pointer.
 - Change recommended:
@@ -194,8 +194,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - Accountability and copy-control semantics for local copies are not standardized.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `spec/v0.1/README.md`
+  - `docs/security/THREAT-MODEL.md`
 - Implementation now:
   - Permit local copies only under explicit TTL and consent policy; log access decisions.
 - Change recommended:
@@ -210,8 +210,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - UM is storage-neutral and method-neutral.
   - Granular consent model exists through named consent keys.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/README.md`
+  - `spec/v0.1/REGISTRY.md`
 - Implementation now:
   - Encode user-selected controls as claims/consents/pointers without forcing one wallet/storage provider.
 - Applied example:
@@ -226,8 +226,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
   - No standardized anti-cloning holder-binding profile.
   - No standard platform attestation or secure enclave metadata profile in UM.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `docs/security/THREAT-MODEL.md`
 - Implementation now:
   - Use short TTL + signature verification + optional revocation status checks + external attestation channels.
 - Change recommended:
@@ -243,8 +243,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No normative selective-disclosure profile (SD-JWT VC/BBS+/ZK binding rules).
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
+  - `docs/security/THREAT-MODEL.md`
+  - `spec/v0.2/README.md`
 - Implementation now:
   - Reference external proof artifacts and expose only decision-grade booleans in manifest claims.
 - Change recommended:
@@ -258,8 +258,8 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Current UM support:
   - Unknown-field tolerance and optional overlays make progressive integration viable.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/TEMPLATE.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `integrations/TEMPLATE.md`
 - Implementation now:
   - Provide minimal baseline manifest path for legacy consumers; require manual onboarding when unsupported.
 - Applied example:
@@ -274,9 +274,9 @@ Conclusion: this is a `build-now with targeted hardening` situation, not an arch
 - Gap:
   - No formal crosswalk document for each listed SPP/POG requirement from the MUM use case.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/MSF-RELATIONSHIP.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+  - `docs/STANDARDS-POSITIONING.md`
+  - `docs/MSF-RELATIONSHIP.md`
+  - `integrations/metaverse.md`
 - Implementation now:
   - Maintain standards-neutral carrier model and adapter-style integration lanes.
 - Change recommended:

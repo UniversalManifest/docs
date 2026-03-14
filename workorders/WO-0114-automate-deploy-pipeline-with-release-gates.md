@@ -58,19 +58,19 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
+- `.github/workflows/ci.yml`
+- `.github/workflows/verify.yml`
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
 
 ## Verification Commands (Target)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run verify:postdeploy:prod
 ```
 
@@ -79,11 +79,11 @@ npm run verify:postdeploy:prod
 Repository deliverables completed:
 
 - Added gated staged->production deployment workflow:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+  - `.github/workflows/deploy-gated.yml`
 - Added release gate runbook and required secret/variable contract:
-  - `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+  - `docs/site/STAGING-PROMOTION-RUNBOOK.md`
 - Added staging verification script hooks used by gated workflow:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
+  - `packages/universal-manifest/package.json`
 
 Verification results:
 
@@ -112,8 +112,8 @@ Execution update:
 
 Repository fixes applied after that run:
 
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` now uses real staging KV IDs
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml` now supports staging host overrides via repo vars
+- `services/myum-resolver/wrangler.toml` now uses real staging KV IDs
+- `.github/workflows/deploy-gated.yml` now supports staging host overrides via repo vars
 
 Completion addendum (2026-03-03):
 

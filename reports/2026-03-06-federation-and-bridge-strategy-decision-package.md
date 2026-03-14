@@ -1,7 +1,7 @@
 # Federation and Bridge Strategy Decision Package
 
 Date: 2026-03-06  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
+Work order: `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
 
 ## 1. Executive answer
 
@@ -37,10 +37,10 @@ The repo already had the right direction but not the final comparison frame.
 
 What already existed:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md` correctly defines a subject-controlled runtime and pointer-first architecture.
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md` correctly defines bridge adapters as implementation detail.
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md` already defines authoritative source, change log, snapshot, staleness checks, deterministic retry, and offline behavior.
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md` already prevents accidental overpromotion of Solid, DWN, AT Protocol, and OpenID Federation.
+- `docs/PROJECT-VISION.md` correctly defines a subject-controlled runtime and pointer-first architecture.
+- `integrations/reference-runtime.md` correctly defines bridge adapters as implementation detail.
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md` already defines authoritative source, change log, snapshot, staleness checks, deterministic retry, and offline behavior.
+- `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md` already prevents accidental overpromotion of Solid, DWN, AT Protocol, and OpenID Federation.
 
 What was missing:
 
@@ -356,7 +356,7 @@ UM recommendation level:
 
 Current source status:
 
-- The fresh spatial-fabric crosscheck is recorded at `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`.
+- The fresh spatial-fabric crosscheck is recorded at `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`.
 
 What that report established:
 
@@ -380,7 +380,7 @@ UM implication:
 Current source status:
 
 - This is a repo architecture pattern, not a named standards family.
-- Primary repo sources: `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md` and `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
+- Primary repo sources: `docs/PROJECT-VISION.md` and `integrations/reference-runtime.md`
 
 What the repo says:
 
@@ -502,8 +502,8 @@ It should land in this order.
 
 Recommended first targets:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `integrations/reference-runtime.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 
 Why:
 
@@ -585,13 +585,13 @@ Primary standards and protocol sources reviewed:
 
 Key repo sources aligned in this assessment:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
-- `/Users/grig/work/repo/universalmanifest/research/federation/universal-manifest-workstream.md`
-- `/Users/grig/work/repo/universalmanifest/research/reference-platform/interoperability-sync.md`
+- `docs/PROJECT-VISION.md`
+- `integrations/reference-runtime.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `integrations/metaverse.md`
+- `docs/DECISIONS.md`
+- `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+- `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- `research/federation/universal-manifest-workstream.md`
+- `research/reference-platform/interoperability-sync.md`

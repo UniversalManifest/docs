@@ -1,9 +1,9 @@
 # First-Time Reader Testing Protocol (WO-0015)
 
 Date: 2026-02-19
-Project root: `/Users/grig/work/repo/universalmanifest`
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-Gate checklist: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+Project root: ``
+Work order: `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+Gate checklist: `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Goal
 
@@ -13,9 +13,9 @@ Validate that a new implementer can answer, after reading only the first-time pa
 
 ## Pages under test
 
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `site/src/content/docs/getting-started/quick-start.md`
+- `site/src/content/docs/getting-started/workbench.md`
 
 ## Test script for human readers
 
@@ -45,4 +45,4 @@ Validate that a new implementer can answer, after reading only the first-time pa
 
 - Human-participant evidence is optional and can be used as additional onboarding quality signal.
 - Optional artifact path:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
+- `docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`

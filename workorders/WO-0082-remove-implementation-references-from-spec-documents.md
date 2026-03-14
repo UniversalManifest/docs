@@ -22,23 +22,23 @@ The boundary audit identified seven specific instances of implementation leakage
 
 ### HIGH severity fixes
 
-1. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` line 49** — Change section header "ID + caching guidance (Shield / public display)" to "ID + caching guidance (constrained devices / public displays)". Remove the NVIDIA Shield brand name.
+1. **`spec/v0.1/README.md` line 49** — Change section header "ID + caching guidance (Shield / public display)" to "ID + caching guidance (constrained devices / public displays)". Remove the NVIDIA Shield brand name.
 
-2. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` line 78** — Remove or relocate "Reference implementation: `/packages/universal-manifest/src/index.ts`" from the Security Considerations section. Replace with a non-normative note: "See the conformance fixtures for validation examples. A TypeScript reference implementation is available in `packages/universal-manifest/` for those who want one."
+2. **`spec/v0.1/README.md` line 78** — Remove or relocate "Reference implementation: `/packages/universal-manifest/src/index.ts`" from the Security Considerations section. Replace with a non-normative note: "See the conformance fixtures for validation examples. A TypeScript reference implementation is available in `packages/universal-manifest/` for those who want one."
 
-3. **`/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md` line 47** — Remove or relocate "Reference implementation: `/packages/universal-manifest/src/index.ts:272-302`" with specific line numbers. Replace with the same non-normative note pattern.
+3. **`spec/v0.2/README.md` line 47** — Remove or relocate "Reference implementation: `/packages/universal-manifest/src/index.ts:272-302`" with specific line numbers. Replace with the same non-normative note pattern.
 
 ### MEDIUM severity fixes
 
-4. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md` line 61** — Change "Consumers SHOULD follow `integrations/reference-runtime.md` guidance" to "See `integrations/reference-runtime.md` for one reference implementation pattern (non-normative)." Remove the SHOULD keyword from this non-normative reference.
+4. **`spec/v0.1/CONFORMANCE.md` line 61** — Change "Consumers SHOULD follow `integrations/reference-runtime.md` guidance" to "See `integrations/reference-runtime.md` for one reference implementation pattern (non-normative)." Remove the SHOULD keyword from this non-normative reference.
 
-5. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md` lines 131-135** — Qualify the "Reference harness (repo-local)" section. Change from directing to `packages/universal-manifest/ -> npm test` to "TypeScript reference harness (one of many possible implementations): `packages/universal-manifest/ -> npm test`."
+5. **`spec/v0.1/CONFORMANCE.md` lines 131-135** — Qualify the "Reference harness (repo-local)" section. Change from directing to `packages/universal-manifest/ -> npm test` to "TypeScript reference harness (one of many possible implementations): `packages/universal-manifest/ -> npm test`."
 
-6. **`/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md` lines 96-98** — Apply the same qualification to the v0.2 "Reference harness" section.
+6. **`spec/v0.2/CONFORMANCE.md` lines 96-98** — Apply the same qualification to the v0.2 "Reference harness" section.
 
 ### LOW severity fixes
 
-7. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md` line 14** — Change "Pointer to canonical identity/profile source (often a Solid Pod URL)" to "Pointer to canonical identity/profile source (any stable URL)." Remove the Solid Pod technology reference.
+7. **`spec/v0.1/REGISTRY.md` line 14** — Change "Pointer to canonical identity/profile source (often a Solid Pod URL)" to "Pointer to canonical identity/profile source (any stable URL)." Remove the Solid Pod technology reference.
 
 ## Acceptance criteria
 
@@ -47,12 +47,12 @@ The boundary audit identified seven specific instances of implementation leakage
 - [ ] No conformance document uses SHOULD language to reference implementation-specific guidance.
 - [ ] All "Reference harness" sections are explicitly qualified as "one reference implementation."
 - [ ] No spec document references "Solid Pod" as a specific technology.
-- [ ] `rg -n "Shield" /Users/grig/work/repo/universalmanifest/spec/` returns zero matches.
-- [ ] `rg -n "index.ts" /Users/grig/work/repo/universalmanifest/spec/` returns zero unqualified matches.
+- [ ] `rg -n "Shield" spec/` returns zero matches.
+- [ ] `rg -n "index.ts" spec/` returns zero unqualified matches.
 
 ## Validation commands
 
-- `rg -n "Shield" /Users/grig/work/repo/universalmanifest/spec/`
-- `rg -n "index.ts" /Users/grig/work/repo/universalmanifest/spec/`
-- `rg -n "Solid Pod" /Users/grig/work/repo/universalmanifest/spec/`
-- `rg -n "SHOULD.*reference-runtime" /Users/grig/work/repo/universalmanifest/spec/`
+- `rg -n "Shield" spec/`
+- `rg -n "index.ts" spec/`
+- `rg -n "Solid Pod" spec/`
+- `rg -n "SHOULD.*reference-runtime" spec/`

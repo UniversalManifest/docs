@@ -69,21 +69,21 @@ Out of scope:
 ## References
 
 - Done-done authority:
-  - `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
+  - `docs/DONE-DONE-DEFINITION.md`
+  - `docs/DONE-DONE-CHECKLIST.md`
+  - `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
 - Domain split:
-  - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
+  - `docs/DOMAIN-ARCHITECTURE.md`
 - Conformance:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.1/CONFORMANCE.md`
 - reference implementation stubs (context only):
   - `/Users/grig/work/repo/reference-platform/.dev/ai/handoffs/2026-02-11-21-52-41Z-handoff-reference-platform-universal-manifest-stubs.md`
 
 ## Post-Completion Corpus Delta Addendum (2026-02-19T04:57:00Z)
 
 Source linkage:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 New planning deltas to execute under WO-0017:
 - add cross-domain overlay coverage to journey planning (venue, creator/profile, metaverse exemplar),
@@ -91,4 +91,4 @@ New planning deltas to execute under WO-0017:
 - apply sequencing rubric driven by interoperability evidence quality.
 
 Primary execution artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `docs/journeys/README.md`

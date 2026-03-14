@@ -42,15 +42,15 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
+- `.github/workflows/deploy-gated.yml`
+- `docs/workorders/WO-0123-cloudflare-credential-stabilization-for-gated-production-promotions.md`
+- `.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
 
 ## Execution Progress (2026-03-04)
 
 Completed in this pass:
 - Added Cloudflare auth preflight checks to all deploy jobs in gated workflow:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+  - `.github/workflows/deploy-gated.yml`
 - Validated preflight-enabled workflow on production promotion path:
   - Run: https://github.com/grigb/universal-manifest/actions/runs/22659009192 (`success`)
   - All staging + production jobs passed.
@@ -60,7 +60,7 @@ Completed in this pass:
   - All staging + production jobs passed.
 - Corrected API-token enforcement match logic to accept Cloudflare `Account API Token` auth type string variants in all deploy jobs.
   - Commit: `e15fd8ef1fa816b97ff64417300f265e305ff4c4`
-  - File: `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+  - File: `.github/workflows/deploy-gated.yml`
 - Enabled token-only enforcement flags in GitHub environments:
   - staging var: `CF_REQUIRE_API_TOKEN_STAGING=true`
   - production var: `CF_REQUIRE_API_TOKEN_PRODUCTION=true`
@@ -73,19 +73,19 @@ Completed in this pass:
   - Synthetic checks + post-deploy verify passed.
 
 Evidence:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run.log`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-log-extract.txt`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run.log`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-log-extract.txt`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run.log`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-log-extract.txt`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run.log`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-log-extract.txt`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0124-api-token-enforcement-closeout.md`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-run.log`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-preflight-enabled-success-log-extract.txt`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-run.log`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-auth-type-telemetry-success-log-extract.txt`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-run.log`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-api-token-enforcement-success-log-extract.txt`
+- `.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-run.log`
+- `.dev/ai/reports/operations/2026-03-04-synthetic-prod-post-enforcement-success-log-extract.txt`
+- `.dev/ai/reports/operations/2026-03-04-wo-0124-api-token-enforcement-closeout.md`
 
 ## Post-Closeout Addendum (2026-03-05)
 
@@ -100,8 +100,8 @@ Follow-up incident and remediation completed in this pass:
 Validation evidence:
 - Failed gated run (permission gap): https://github.com/grigb/universal-manifest/actions/runs/22702105155
 - Green gated rerun after permission fix: https://github.com/grigb/universal-manifest/actions/runs/22702756070
-- Failure meta: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run-meta.json`
-- Failure log: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run.log`
-- Failure extract: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-log-extract.txt`
-- Success meta: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-remediation-success-run-meta.json`
-- Session report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-05-wo-0124-cloudflare-token-permission-remediation.md`
+- Failure meta: `.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run-meta.json`
+- Failure log: `.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-run.log`
+- Failure extract: `.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-failure-log-extract.txt`
+- Success meta: `.dev/ai/reports/operations/2026-03-05-deploy-gated-zone-route-auth-remediation-success-run-meta.json`
+- Session report: `.dev/ai/reports/operations/2026-03-05-wo-0124-cloudflare-token-permission-remediation.md`

@@ -40,7 +40,7 @@ Completed external deployment actions:
 1. `universalmanifest.net` deployed on Cloudflare Pages
 2. `myum.net` resolver deployed on Cloudflare Workers + KV
 3. Production smoke validated with:
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+   - `cd packages/universal-manifest && npm run smoke:endpoints:prod`
    - Result: **PASS**
 
 Validation notes:
@@ -54,5 +54,5 @@ Validation notes:
  - `docs/PUBLISHING-AND-VERSIONING.md`
  - `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
  - `docs/LEGACY-LOCALARTIST-NETWORK-COMPATIBILITY.md`
- - Endpoint smoke script: `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
- - Production deploy smoke runbook: `/Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md`
+ - Endpoint smoke script: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+ - Production deploy smoke runbook: `docs/PRODUCTION-DEPLOY-SMOKE.md`

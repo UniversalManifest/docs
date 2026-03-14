@@ -21,11 +21,11 @@ The agent briefing currently lists the npm package in the "Key Facts" section (l
 
 ### Files to modify
 
-1. **`/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md`**
+1. **`docs/explainers/agent-briefing.md`**
    - Move the npm package from the "Key Facts" section to a separate "Reference Implementation" section lower in the document.
    - Update the "For Developers" positioning to lead with the spec and fixtures, mentioning the TypeScript helper as one optional tool.
 
-2. **`/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`** (line 234)
+2. **`docs/UNIVERSAL-MANIFEST-BRIEFING.md`** (line 234)
    - Review the fixture example that mentions "NVIDIA Shield TV Pro enrolled to venue edge" and consider replacing with a generic device description (e.g., "public display device enrolled to venue edge").
    - Note: This item overlaps with WO-0089 (Fix Legacy Naming and Branding Leaks). If WO-0089 is executed first, this item may already be resolved.
 
@@ -40,4 +40,4 @@ The agent briefing currently lists the npm package in the "Key Facts" section (l
 ## Validation commands
 
 - Manual review of updated agent briefing structure.
-- `rg -n "npm" /Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md` (should not appear in Key Facts section).
+- `rg -n "npm" docs/explainers/agent-briefing.md` (should not appear in Key Facts section).

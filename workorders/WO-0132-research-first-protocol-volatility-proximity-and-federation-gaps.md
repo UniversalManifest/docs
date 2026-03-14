@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Research-First Program  
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+**Source:** `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`, `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
 
 ## Objective
 
@@ -31,7 +31,7 @@ Out of scope:
 
 ## Deliverables
 
-- A new Research-First report under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+- A new Research-First report under `docs/reports/`
 - Governance/status synchronization if new follow-on work orders are required
 
 ## Acceptance Criteria
@@ -42,20 +42,20 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md`
+- `docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
+- `docs/workorders/WO-0131-did-vc-and-metaverse-lane-refresh-from-localized-corpus.md`
 
 ## Execution Progress (2026-03-06)
 
 Completed in this pass:
 
 - Created the Research-First decision package:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+  - `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
 - Verified current official standards checkpoints for time-volatile protocol families before finalizing the decision package.
 - Registered explicit follow-on work orders so unresolved topics remain actionable instead of implicit:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
+  - `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+  - `docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
+  - `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
 
 ## Completion notes
 

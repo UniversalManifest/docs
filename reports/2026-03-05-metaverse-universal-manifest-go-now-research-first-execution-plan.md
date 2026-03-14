@@ -1,8 +1,8 @@
 # Metaverse Universal Manifest (MUM) — Comprehensive Go-Now / Research-First Execution Plan
 
 Date: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Source baseline: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`  
+Project: Universal Manifest (``)  
+Source baseline: `docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`  
 Primary use-case input: `/Users/grig/Desktop/Use Case_ Metaverse Universal Manifest - v1.0.md`
 
 ## 1) Purpose and outcome
@@ -19,23 +19,23 @@ Outcomes required:
 ## 1.1) Execution status snapshot (2026-03-05)
 
 - `MUM-GN-01`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - evidence: `integrations/metaverse.md`
+  - evidence: `site/src/content/docs/integrations/metaverse.md`
 - `MUM-GN-02`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
+  - evidence: `spec/v0.1/REGISTRY.md`
+  - evidence: `docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
 - `MUM-GN-03`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+  - evidence: `docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
+  - evidence: `docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
 - `MUM-GN-04`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
+  - evidence: `docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
+  - evidence: `docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
 - `MUM-GN-05`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+  - evidence: `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - evidence: `docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
 - `MUM-GN-06`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
+  - evidence: `docs/DECISIONS.md`
+  - evidence: `docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
 
 ## 2) Program constraints and operating rules
 
@@ -58,11 +58,11 @@ Outcomes required:
 
 Baseline references:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+- `integrations/metaverse.md`
+- `docs/journeys/journey-09-metaverse-crossworld-projection.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `docs/security/THREAT-MODEL.md`
 
 ## 3.2 Requires research/planning before broad claims
 
@@ -96,9 +96,9 @@ Goal:
 Deliverables:
 
 - update:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+  - `integrations/metaverse.md`
 - mirror update:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - `site/src/content/docs/integrations/metaverse.md`
 
 Scope:
 
@@ -123,7 +123,7 @@ Goal:
 Deliverables:
 
 - extend:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/REGISTRY.md`
 - add MUM key families for:
   - profile/avatar/inventory/social/reputation,
   - language/translation preferences,
@@ -148,8 +148,8 @@ Goal:
 Deliverables:
 
 - add fixtures under:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/`
+  - `examples/v0.1/stubs/`
+  - `examples/v0.2/`
 
 Candidate fixture set:
 
@@ -175,9 +175,9 @@ Goal:
 Deliverables:
 
 - new/expanded journey docs under:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
+  - `docs/journeys/`
 - runner updates in:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 
 Candidate journey additions:
 
@@ -203,7 +203,7 @@ Goal:
 Deliverables:
 
 - new guidance document:
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 - site mirror publication under guides.
 
 Scope:
@@ -228,9 +228,9 @@ Goal:
 Deliverables:
 
 - update:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (if milestone impact exists)
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/CRITICAL-PATH.md` (if milestone impact exists)
 
 Acceptance criteria:
 
@@ -261,7 +261,7 @@ Research tasks:
 
 Output artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/research/MUM-SELECTIVE-DISCLOSURE-AND-COMPLIANCE-PROFILE-RESEARCH.md`
+- `docs/research/MUM-SELECTIVE-DISCLOSURE-AND-COMPLIANCE-PROFILE-RESEARCH.md`
 
 Promotion gate:
 
@@ -281,7 +281,7 @@ Research tasks:
 
 Output artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/research/MUM-ANTI-CLONING-HOLDER-BINDING-RESEARCH.md`
+- `docs/research/MUM-ANTI-CLONING-HOLDER-BINDING-RESEARCH.md`
 
 Promotion gate:
 
@@ -301,7 +301,7 @@ Research tasks:
 
 Output artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/research/MUM-ATTESTATION-AND-SECURE-ENCLAVE-PROFILE-RESEARCH.md`
+- `docs/research/MUM-ATTESTATION-AND-SECURE-ENCLAVE-PROFILE-RESEARCH.md`
 
 Promotion gate:
 
@@ -321,7 +321,7 @@ Research tasks:
 
 Output artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/research/MUM-SYNC-CONFLICT-RESOLUTION-RESEARCH.md`
+- `docs/research/MUM-SYNC-CONFLICT-RESOLUTION-RESEARCH.md`
 
 Promotion gate:
 
@@ -341,7 +341,7 @@ Research tasks:
 
 Output artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/research/MUM-SOCIAL-REPUTATION-PORTABILITY-RESEARCH.md`
+- `docs/research/MUM-SOCIAL-REPUTATION-PORTABILITY-RESEARCH.md`
 
 Promotion gate:
 
@@ -410,10 +410,10 @@ Promotion prerequisites:
 For each merged implementation unit:
 
 1. Build and test:
-   - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+   - `cd site && npm run build:clean`
+   - `cd packages/universal-manifest && npm test`
 2. Journey evidence when applicable:
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+   - `cd packages/universal-manifest && npm run journeys`
 3. Drift and publication checks:
    - docs link hygiene,
    - route integrity for updated site pages,
@@ -421,8 +421,8 @@ For each merged implementation unit:
 
 Evidence artifacts must be stored under:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/` (operational support artifacts)
+- `docs/reports/`
+- `.dev/ai/reports/` (operational support artifacts)
 
 ## 10) Governance update policy
 
@@ -496,4 +496,4 @@ Use this exact sequence for each new concept bundle:
 
 Operational artifact for this protocol:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-spec-integration-log.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-spec-integration-log.md`

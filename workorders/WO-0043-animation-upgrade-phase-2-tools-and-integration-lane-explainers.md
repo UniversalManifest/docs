@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-23
 **Priority:** HIGH
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/proposals/2026-02-23-21-41-41-universalmanifest-animation-upgrade-proposal.md`
+**Source:** `.dev/ai/proposals/2026-02-23-21-41-41-universalmanifest-animation-upgrade-proposal.md`
 **Depends on:** `WO-0042`
 
 ## Objective
@@ -30,12 +30,12 @@ In scope:
   - Metaverse
   - Chia VC
 - Integrate generated assets into corresponding docs pages under:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/`
+  - `site/src/content/docs/getting-started/`
+  - `site/src/content/docs/proof/`
+  - `site/src/content/docs/integrations/`
 - Update placement and QA tracking documents to reflect generated/integrated assets:
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-PLACEMENT-PLAN.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-QA-CHECKLIST.md`
+  - `docs/design/ANIMATION-PLACEMENT-PLAN.md`
+  - `docs/design/ANIMATION-QA-CHECKLIST.md`
 
 Out of scope:
 
@@ -44,8 +44,8 @@ Out of scope:
 
 ## Required deliverables
 
-1. Tool explainer SVGs (minimum 2) in `/Users/grig/work/repo/universalmanifest/site/public/animations/`.
-2. Integration-lane explainer SVGs (minimum 7) in `/Users/grig/work/repo/universalmanifest/site/public/animations/`.
+1. Tool explainer SVGs (minimum 2) in `site/public/animations/`.
+2. Integration-lane explainer SVGs (minimum 7) in `site/public/animations/`.
 3. Docs page integrations (embed/link) for all generated explainers.
 4. Updated placement and QA documents showing completion status and evidence.
 5. Verification evidence in this WO including build and spot-check results.
@@ -61,16 +61,16 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `rg -n "animations/" /Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started /Users/grig/work/repo/universalmanifest/site/src/content/docs/proof /Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations`
-- `rg -n "<title>|<desc>|prefers-reduced-motion" /Users/grig/work/repo/universalmanifest/site/public/animations/*.svg`
+- `cd site && npm run build:clean`
+- `rg -n "animations/" site/src/content/docs/getting-started site/src/content/docs/proof site/src/content/docs/integrations`
+- `rg -n "<title>|<desc>|prefers-reduced-motion" site/public/animations/*.svg`
 
 ## Dependencies
 
 - `WO-0042` completion (core asset quality baseline and scenario completeness).
 - Existing animation prompt system and design constraints:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/`
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-SPEC.md`
+  - `.dev/ai/prompts/animation/`
+  - `docs/design/ANIMATED-SVG-SPEC.md`
 
 ## Sequencing
 

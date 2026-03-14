@@ -2,7 +2,7 @@
 
 Date: 2026-03-05  
 Program: Metaverse Universal Manifest Go-Now (`MUM-GN-03`)  
-Repository: `/Users/grig/work/repo/universalmanifest`
+Repository: ``
 
 ## Purpose
 
@@ -38,7 +38,7 @@ Map each new MUM fixture to its scenario requirement and capture execution evide
 
 Validation command:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 Result summary (2026-03-05):
 
@@ -49,4 +49,4 @@ Result summary (2026-03-05):
 
 Artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+- `docs/reports/2026-03-05-gn03-conformance-npm-test.txt`

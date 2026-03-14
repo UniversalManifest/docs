@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Research Governance  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+**Source:** `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
 
 ## Objective
 
@@ -31,7 +31,7 @@ Out of scope:
 
 ## Deliverables
 
-- A new report under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+- A new report under `docs/reports/`
 - Governance synchronization if documentation policy changes are adopted
 
 ## Acceptance Criteria
@@ -43,18 +43,18 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
+- `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
 
 ## Execution Progress (2026-03-06)
 
 Completed in this pass:
 
 - Created the dated currency matrix and governance report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+  - `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
 - Defined recommendation tiers, promotion rules, demotion rules, and review cadence for volatile protocol families.
 - Updated standards-positioning surfaces to point to the matrix as the maintenance anchor for time-sensitive protocol-family status language:
-  - `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/about/standards-positioning.md`
+  - `docs/STANDARDS-POSITIONING.md`
+  - `site/src/content/docs/about/standards-positioning.md`
 
 ## Completion notes
 

@@ -22,7 +22,7 @@ The freshness audit noted that `DECISIONS.md` references `.github/workflows/veri
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`**
+**`docs/DECISIONS.md`**
 
 ### Changes
 
@@ -38,4 +38,4 @@ The freshness audit noted that `DECISIONS.md` references `.github/workflows/veri
 
 ## Validation commands
 
-- `rg -n "ci.yml" /Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (should find the new entry).
+- `rg -n "ci.yml" docs/DECISIONS.md` (should find the new entry).

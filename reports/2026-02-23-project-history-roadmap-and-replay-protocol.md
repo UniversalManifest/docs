@@ -1,7 +1,7 @@
 # Universal Manifest Project History Roadmap and Replay Protocol
 
 Date: 2026-02-23  
-Project: `/Users/grig/work/repo/universalmanifest`  
+Project: ``  
 Agent Task ID: `b617cafd_1771721466`
 
 ## Purpose
@@ -26,8 +26,8 @@ Current head anchor at roadmap creation:
 - Message: `Create work order to rewrite docs`
 
 Command to verify:
-- `git -C /Users/grig/work/repo/universalmanifest log --reverse --date=iso --pretty=format:'%ad %h %s' | sed -n '1,5p'`
-- `git -C /Users/grig/work/repo/universalmanifest log --date=iso --pretty=format:'%ad %h %s' | sed -n '1,5p'`
+- `git -C  log --reverse --date=iso --pretty=format:'%ad %h %s' | sed -n '1,5p'`
+- `git -C  log --date=iso --pretty=format:'%ad %h %s' | sed -n '1,5p'`
 
 ## Chronological roadmap (major milestones)
 
@@ -39,10 +39,10 @@ Major outcomes:
 - Initial reference implementation integration note and TS helper skeleton created.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/WORKLOG-2026-02-11.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
+- `docs/WORKLOG-2026-02-11.md`
+- `spec/v0.1/README.md`
+- `spec/v0.1/schema.json`
+- `spec/v0.1/schema.jsonld`
 
 ## 2026-02-12: Conformance scaffolding, publishing architecture, and early WO system
 
@@ -54,11 +54,11 @@ Major outcomes:
 - Work-order tracking system formalized.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/WORKLOG-2026-02-12.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+- `docs/WORKLOG-2026-02-12.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `docs/DOMAIN-ARCHITECTURE.md`
+- `docs/PUBLISHING-AND-VERSIONING.md`
+- `docs/workorders/WO-INDEX.md`
 
 ## 2026-02-13: Gate-based completion model adopted
 
@@ -67,10 +67,10 @@ Major outcomes:
 - Completion claims became gate-driven instead of narrative-only.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (2026-02-13 sections)
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
+- `docs/DECISIONS.md` (2026-02-13 sections)
+- `docs/DONE-DONE-DEFINITION.md`
+- `docs/DONE-DONE-CHECKLIST.md`
+- `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
 
 ## 2026-02-17: Proof model hardening and repo/system alignment
 
@@ -81,10 +81,10 @@ Major outcomes:
 - Repo relocation and GAS split onboarding model recorded.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (2026-02-17 sections)
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
-- `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
+- `docs/DECISIONS.md` (2026-02-17 sections)
+- `.github/workflows/verify.yml`
+- `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- `PROJECT-RULES.md`
 
 ## 2026-02-18: CEO-priority onboarding and tooling wave
 
@@ -94,11 +94,11 @@ Major outcomes:
 - Knowledge integration ledger and deferred-corpus conflict protocol formalized.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (2026-02-18 sections)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `docs/DECISIONS.md` (2026-02-18 sections)
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+- `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
 
 ## 2026-02-19: Full-corpus synthesis materialized into IA, journeys, and workbench planning
 
@@ -108,10 +108,10 @@ Major outcomes:
 - Critical-path stabilization work queued and advanced.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (2026-02-19 section)
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+- `docs/DECISIONS.md` (2026-02-19 section)
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`
 
 ## 2026-02-20: Lineage codification + lane expansion + resolver reliability hardening
 
@@ -122,14 +122,14 @@ Major outcomes:
 - WO-0018 through WO-0024 execution wave completed.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (2026-02-20 sections)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md`
+- `docs/DECISIONS.md` (2026-02-20 sections)
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
+- `docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
+- `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+- `docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md`
+- `docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md`
+- `docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md`
+- `docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md`
 
 ## 2026-02-21 to 2026-02-22: Docs/tooling hardening and governance wave
 
@@ -143,20 +143,20 @@ Major outcomes:
 - Onboarding policy gate set to mandatory human evidence (`WO-0035` remains blocked).
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0025-documentation-human-readability-and-links.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0026-workbench-and-harness-redesign.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0027-omatrust-integration-lane-execution.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0033-published-docs-label-first-link-normalization.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0034-documentation-status-coherence-and-stale-reference-reconciliation.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md`
+- `docs/workorders/WO-0025-documentation-human-readability-and-links.md`
+- `docs/workorders/WO-0026-workbench-and-harness-redesign.md`
+- `docs/workorders/WO-0027-omatrust-integration-lane-execution.md`
+- `docs/workorders/WO-0028-astro-content-cache-clean-build-hardening.md`
+- `docs/workorders/WO-0029-docs-nav-order-and-overview-clarity-pass.md`
+- `docs/workorders/WO-0030-animated-svg-explainer-prompt-pack-and-production-pipeline.md`
+- `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md`
+- `docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md`
+- `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md`
+- `docs/workorders/WO-0034-documentation-status-coherence-and-stale-reference-reconciliation.md`
+- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+- `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md`
+- `docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md`
+- `docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md`
 
 ## 2026-02-23: New rewrite/hardening order for onboarding language propagation
 
@@ -165,10 +165,10 @@ Major outcomes:
 - This explicitly requires docs and backend/tooling/template source-path hardening, not docs-only edits.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+- `docs/workorders/WO-INDEX.md`
+- `.dev/ai/workorders/WO-INDEX.md`
+- `docs/STATE-OF-THE-PROJECT.md`
 
 ## Current state snapshot (as of 2026-02-23)
 
@@ -181,8 +181,8 @@ Active/non-complete gates:
 - `WO-0039` is NOT_STARTED and defines the onboarding rewrite + propagation hardening path.
 
 Primary evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/workorders/WO-INDEX.md`
 
 ## Reproducible replay protocol for an independent agent
 
@@ -190,9 +190,9 @@ Primary evidence:
 
 Run:
 - `pwd`
-- `git -C /Users/grig/work/repo/universalmanifest status --short`
-- `git -C /Users/grig/work/repo/universalmanifest rev-parse --abbrev-ref HEAD`
-- `git -C /Users/grig/work/repo/universalmanifest log --reverse --date=iso --pretty=format:'%ad %h %s' | sed -n '1,40p'`
+- `git -C  status --short`
+- `git -C  rev-parse --abbrev-ref HEAD`
+- `git -C  log --reverse --date=iso --pretty=format:'%ad %h %s' | sed -n '1,40p'`
 
 Goal:
 - Confirm correct repo.
@@ -202,24 +202,24 @@ Goal:
 ## Stage 1: Source-of-truth reading order
 
 Read in order:
-1. `/Users/grig/work/repo/universalmanifest/AGENTS.md`
-2. `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
-3. `/Users/grig/work/repo/universalmanifest/docs/README.md`
-4. `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-5. `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-6. `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-7. `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-8. `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
-9. `/Users/grig/work/repo/universalmanifest/.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md`
-10. `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
-11. `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+1. `AGENTS.md`
+2. `PROJECT-RULES.md`
+3. `docs/README.md`
+4. `docs/STATE-OF-THE-PROJECT.md`
+5. `docs/CRITICAL-PATH.md`
+6. `docs/DECISIONS.md`
+7. `docs/workorders/WO-INDEX.md`
+8. `.dev/ai/workorders/WO-INDEX.md`
+9. `.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md`
+10. `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+11. `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 
 ## Stage 2: Rebuild milestone chronology from primary files
 
 Run:
-- `for f in /Users/grig/work/repo/universalmanifest/docs/workorders/WO-*.md; do id=$(basename \"$f\" .md); created=$(rg -n \"^\\*\\*Created:\\*\\*\" \"$f\" | sed -E 's/^[0-9]+:\\*\\*Created:\\*\\*\\s*//'); st=$(rg -n \"^\\*\\*Status:\\*\\*\" \"$f\" | sed -E 's/^[0-9]+:\\*\\*Status:\\*\\*\\s*//'); title=$(sed -n '1s/^# //p' \"$f\"); printf \"%s|%s|%s|%s|%s\\n\" \"$id\" \"$created\" \"$st\" \"$title\" \"$f\"; done | sort -V`
-- `rg -n \"^## 2026\" /Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `ls -lt /Users/grig/work/repo/universalmanifest/docs/reports | sed -n '1,120p'`
+- `for f in docs/workorders/WO-*.md; do id=$(basename \"$f\" .md); created=$(rg -n \"^\\*\\*Created:\\*\\*\" \"$f\" | sed -E 's/^[0-9]+:\\*\\*Created:\\*\\*\\s*//'); st=$(rg -n \"^\\*\\*Status:\\*\\*\" \"$f\" | sed -E 's/^[0-9]+:\\*\\*Status:\\*\\*\\s*//'); title=$(sed -n '1s/^# //p' \"$f\"); printf \"%s|%s|%s|%s|%s\\n\" \"$id\" \"$created\" \"$st\" \"$title\" \"$f\"; done | sort -V`
+- `rg -n \"^## 2026\" docs/DECISIONS.md`
+- `ls -lt docs/reports | sed -n '1,120p'`
 
 Goal:
 - Produce an independently verified date-sequenced timeline.
@@ -228,11 +228,11 @@ Goal:
 ## Stage 3: Re-run core technical proof commands
 
 Run:
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:dev`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd site && npm run build:clean`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run smoke:endpoints:dev`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
 
 Goal:
 - Validate current code/docs claims against executable evidence.
@@ -241,11 +241,11 @@ Goal:
 
 Required outputs:
 1. Independent history audit report:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-independent-history-audit.md`
+   - `docs/reports/YYYY-MM-DD-independent-history-audit.md`
 2. Contradictions/drift report:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-independent-drift-and-contradictions.md`
+   - `docs/reports/YYYY-MM-DD-independent-drift-and-contradictions.md`
 3. Recommended execution order for remaining work:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-independent-next-steps-plan.md`
+   - `docs/reports/YYYY-MM-DD-independent-next-steps-plan.md`
 
 Output quality rules:
 - Every milestone claim must cite at least one absolute-path source.
@@ -255,19 +255,19 @@ Output quality rules:
 ## Primary source inventory for unbiased review
 
 Core state and decision docs:
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/CRITICAL-PATH.md`
+- `docs/DECISIONS.md`
 
 Work-order control plane:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+- `docs/workorders/WO-INDEX.md`
+- `.dev/ai/workorders/WO-INDEX.md`
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 
 Historical anchors:
-- `/Users/grig/work/repo/universalmanifest/docs/WORKLOG-2026-02-11.md`
-- `/Users/grig/work/repo/universalmanifest/docs/WORKLOG-2026-02-12.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-18-live-status-and-next-critical-path.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md`
+- `docs/WORKLOG-2026-02-11.md`
+- `docs/WORKLOG-2026-02-12.md`
+- `docs/reports/2026-02-18-live-status-and-next-critical-path.md`
+- `.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md`

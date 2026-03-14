@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-23
 **Priority:** HIGH
-**Source:** Direct user review of `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+**Source:** Direct user review of `site/src/content/docs/getting-started/universal-manifest-overview.md`
 **Agent Task ID:** `b617cafd_1771721466`
 
 ## Objective
@@ -16,7 +16,7 @@ Current onboarding copy still uses undefined jargon in critical first-read secti
 
 ## Problem statement (current failure)
 
-In `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`, the "What problem it solves" section uses language that is not explained before use:
+In `site/src/content/docs/getting-started/universal-manifest-overview.md`, the "What problem it solves" section uses language that is not explained before use:
 
 - "Without UM, each integration pair tends to invent custom payloads and brittle mappings."
 
@@ -27,10 +27,10 @@ That line must be rewritten in plain language and aligned with supporting docs/t
 In scope:
 
 - Rewrite first-read onboarding content for plain-language clarity:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+  - `site/src/content/docs/getting-started/universal-manifest-overview.md`
+  - `site/src/content/docs/index.md`
+  - `site/src/content/docs/getting-started/concepts.md`
+  - `site/src/content/docs/getting-started/quick-start.md`
 - Ensure first-use terminology is either defined immediately or replaced with plain language.
 - Perform source-of-language inventory across docs and backend/tooling surfaces that can re-inject wording:
   - docs pages, protocol/templates, scripts output strings, package/service readme/help text, and validation artifacts.
@@ -75,9 +75,9 @@ Out of scope:
 - [x] Reconcile WO-0015 and WO-0035 references to the updated wording.
 
 **Note:** Human-reader test artifacts remain available for optional execution:
-- Template: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-first-time-reader-test-results-human.md`
-- Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-- Validation checklist: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+- Template: `docs/reports/2026-02-23-first-time-reader-test-results-human.md`
+- Protocol: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+- Validation checklist: `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 Pages ready for human review at `http://127.0.0.1:4300/`:
 - Landing page: `http://127.0.0.1:4300/`
@@ -88,12 +88,12 @@ Pages ready for human review at `http://127.0.0.1:4300/`:
 ## Required deliverables
 
 1. Source-map + rewrite plan report:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
+   - `docs/reports/YYYY-MM-DD-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
 2. Rewritten onboarding content in first-read docs (paths in Scope).
 3. Propagation updates in all identified source files that can reintroduce stale wording.
 4. Terminology/readability guard script + documented command usage.
 5. Completion evidence report:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-wo-0039-onboarding-language-hardening-completion-report.md`
+   - `docs/reports/YYYY-MM-DD-wo-0039-onboarding-language-hardening-completion-report.md`
 
 ## Acceptance criteria
 
@@ -107,19 +107,19 @@ Pages ready for human review at `http://127.0.0.1:4300/`:
 
 ## Validation commands
 
-- `rg -n -i "integration pair|brittle mappings|undefined jargon|prior art" /Users/grig/work/repo/universalmanifest/site/src/content/docs /Users/grig/work/repo/universalmanifest/docs`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run check:terminology`
+- `rg -n -i "integration pair|brittle mappings|undefined jargon|prior art" site/src/content/docs docs`
+- `cd site && npm run build:clean`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run check:terminology`
 
 ## Dependencies and sequencing notes
 
 - This WO should be executed before final closure of onboarding-readability claims under:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+  - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
 - Maintain policy consistency with:
-  - `/Users/grig/work/repo/universalmanifest/docs/site/EDITORIAL-STYLE-GUIDE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `docs/site/EDITORIAL-STYLE-GUIDE.md`
+  - `docs/DECISIONS.md`
 
 ## Completion evidence (2026-02-23)
 
@@ -127,19 +127,19 @@ Pages ready for human review at `http://127.0.0.1:4300/`:
 
 All work phases are complete:
 
-1. **Phase 1 (Inventory)**: Source map report created at `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
+1. **Phase 1 (Inventory)**: Source map report created at `docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
 2. **Phase 2 (Onboarding rewrite)**: All first-read pages rewritten for plain language
 3. **Phase 3 (Propagation fixes)**: All source files updated per source map
-4. **Phase 4 (Guardrail automation)**: Terminology guard script implemented at `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/check-terminology.mjs`
+4. **Phase 4 (Guardrail automation)**: Terminology guard script implemented at `packages/universal-manifest/scripts/check-terminology.mjs`
 
 ### Terminology violations fixed (2026-02-23)
 
 Fixed 6 restricted-term violations:
-- "Harness" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md:41` - added inline definition
-- "facets" and "TTL" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md:63` - added inline definitions
-- "facets" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:71` - added inline definition in code block
-- "pointers" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:98` - added inline definition in code block
-- "UMID" in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:33` - added inline definition
+- "Harness" in `site/src/content/docs/index.md:41` - added inline definition
+- "facets" and "TTL" in `site/src/content/docs/getting-started/universal-manifest-overview.md:63` - added inline definitions
+- "facets" in `site/src/content/docs/getting-started/concepts.md:71` - added inline definition in code block
+- "pointers" in `site/src/content/docs/getting-started/concepts.md:98` - added inline definition in code block
+- "UMID" in `site/src/content/docs/getting-started/concepts.md:33` - added inline definition
 
 ### Verification results (all pass)
 
@@ -155,7 +155,7 @@ Fixed 6 restricted-term violations:
 
 None for this work order. Optional human-reader runs can still be executed using existing protocol/checklist/template artifacts.
 
-See completion report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-wo-0039-onboarding-language-hardening-completion-report.md`
+See completion report: `docs/reports/2026-02-23-wo-0039-onboarding-language-hardening-completion-report.md`
 
 ## Handoff instructions for the writing-focused agent
 

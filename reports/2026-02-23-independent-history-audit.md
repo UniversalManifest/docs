@@ -23,14 +23,14 @@ This audit was conducted by reading source documents, running verification comma
 - `git ls-files --error-unmatch` to verify tracking status of key files
 
 **Work order metadata extraction:**
-- Scripted extraction of status, creation date, and title from all 39 WO files under `/Users/grig/work/repo/universalmanifest/docs/workorders/`
+- Scripted extraction of status, creation date, and title from all 39 WO files under `docs/workorders/`
 
 **Technical validation (executed fresh during this audit):**
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` -- site build
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -- package tests
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -- journey runner
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:dev` -- dev endpoint smoke
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod` -- production endpoint smoke
+- `cd site && npm run build:clean` -- site build
+- `cd packages/universal-manifest && npm test` -- package tests
+- `cd packages/universal-manifest && npm run journeys` -- journey runner
+- `cd packages/universal-manifest && npm run smoke:endpoints:dev` -- dev endpoint smoke
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod` -- production endpoint smoke
 
 **Source document review:**
 - Read all 12 key project documents (AGENTS.md, PROJECT-RULES.md, docs/README.md, STATE-OF-THE-PROJECT.md, CRITICAL-PATH.md, DECISIONS.md, two WO-INDEX files, handoff, WO-0035, WO-0039, and the project-history-roadmap report)
@@ -59,40 +59,40 @@ This audit was conducted by reading source documents, running verification comma
 #### 2026-02-11: Project Bootstrap
 
 - **16:06:45 -0700**: Initial repository creation (commit `904538b`)
-  - Evidence: `git log --reverse` output, first commit in `/Users/grig/work/repo/universalmanifest/`
+  - Evidence: `git log --reverse` output, first commit in ``
 - **22:21:46 -0700**: Added conformance suite, fixtures, and scope/state documentation (commit `c3cc400`)
 - **22:22:16 -0700**: Updated work order statuses (commit `1668621`)
 - **Decision recorded**: v0.1 bootstrap decisions -- separate spec repo, UMID as `urn:uuid`, device caching policy, signature deferred
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` line 3
+  - Evidence: `docs/DECISIONS.md` line 3
 
 #### 2026-02-12: Foundation Work Orders Created
 
 - Work orders WO-0001 through WO-0011 created, covering: commit/push, v0.2 signature profiles, publishing/release, conformance expansion, TS helper package, domain architecture, myum resolver skeleton, spec status audit, professional docs site, reference implementation support, and Linux Foundation benchmark
-  - Evidence: Individual WO files under `/Users/grig/work/repo/universalmanifest/docs/workorders/`; all show `Created: 2026-02-12`
+  - Evidence: Individual WO files under `docs/workorders/`; all show `Created: 2026-02-12`
 - **Decision recorded**: Public domain split -- `universalmanifest.net` for standards, `myum.net` for resolver
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` line 26
+  - Evidence: `docs/DECISIONS.md` line 26
 
 #### 2026-02-13: Done-Done Framework
 
 - **10:51:36 -0700**: Comprehensive done-done documentation system introduced (commit `ef21ae1`)
   - Evidence: git log; commit message references publishing domains update
 - **Decisions recorded**: Official done-done framework adopted; record-primitive vision direction captured
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` lines 44 and 64
+  - Evidence: `docs/DECISIONS.md` lines 44 and 64
 
 #### 2026-02-17: Major Checkpoint and Proof Model
 
 - Six commits between 19:10 and 22:00, including pre-merge checkpoint, CEO priorities scaffolding, GAS knowledge integration, and K2B infrastructure bootstrap
   - Evidence: Commits `2b27d55` through `3e9391c` in git log
 - Work orders WO-0012 and WO-0013 created (user journeys E2E proof suite, harness endpoint test surface)
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`, `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0013-harness-endpoint-test-surface.md`
+  - Evidence: `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`, `docs/workorders/WO-0013-harness-endpoint-test-surface.md`
 - Astro site configuration and myum resolver source code first appear in commit `2b27d55`
   - Evidence: `git log --oneline --diff-filter=A -- site/astro.config.mjs` and `git log --oneline --diff-filter=A -- services/myum-resolver/src/index.ts` both return `2b27d55`
 - Spec schema files (v0.1 and v0.2) added across commits `904538b` and `2b27d55`
   - Evidence: `git log --oneline --diff-filter=A -- 'spec/v0.1/*.json' 'spec/v0.2/*.json'`
 - **Five decisions recorded**: journeys-as-tests validation direction, v0.2 signature profile baseline, TS helper "do not publish yet" policy, CI verification + endpoint smoke, repository relocation + GAS split
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` lines 84-175
+  - Evidence: `docs/DECISIONS.md` lines 84-175
 - Journey report artifacts begin appearing: earliest is `2026-02-17T08-15-24-024Z-journey-report.json`
-  - Evidence: `ls /Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/`
+  - Evidence: `ls docs/journeys/_artifacts/`
 
 #### 2026-02-18: Workbench and Knowledge Integration
 
@@ -100,30 +100,30 @@ This audit was conducted by reading source documents, running verification comma
 - Work orders WO-0014 through WO-0017 created (interactive workbench, first-time overview, GAS index scan, full-corpus synthesis)
   - Evidence: Individual WO files with `Created: 2026-02-18`
 - **Four decisions recorded**: CEO priority workbench, CEO priority overview, knowledge integration ledger, deferred corpus resolution
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` lines 181-270
+  - Evidence: `docs/DECISIONS.md` lines 181-270
 
 #### 2026-02-19: Critical Path Stabilization
 
 - Four commits between 14:21 and 22:47, completing WO-0014/WO-0017, stabilizing critical path, starting RP1 intake, completing smart-glasses/metaverse lanes
   - Evidence: Commits `c78d81b` through `06b2da2` in git log
 - First-time reader testing protocol created (but only executed by AI agent, not human)
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - Evidence: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
 
 #### 2026-02-20: Integration Lanes Expansion
 
 - Work orders WO-0018 through WO-0024 created and completed (MUM lineage, resolver hardening, RP1 intake, smart-glasses consent, metaverse fixtures, deployment automation, multi-provider proof-of-personhood/social/DID/Chia)
   - Evidence: Individual WO files with `Created: 2026-02-20`, all showing status COMPLETED
 - AI-agent first-time reader test results published (not human participant)
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md`, line 13: "Participant type: CLI-based AI agent (Claude Opus 4.6)"
+  - Evidence: `docs/reports/2026-02-20-first-time-reader-test-results.md`, line 13: "Participant type: CLI-based AI agent (Claude Opus 4.6)"
 - **Four decisions recorded**: CEO directive on MUM lineage, resolver reliability hardening, DID method selection, proof-of-personhood provider selection
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` lines 303-391
+  - Evidence: `docs/DECISIONS.md` lines 303-391
 
 #### 2026-02-21: Documentation and Redesign
 
 - Three commits completing WO-0025 (readability), adding journey reports/manifest stubs, and completing WO-0026/WO-0027
   - Evidence: Commits `934dc45` through `6216b49` in git log
 - WO-0026 created (workbench/harness redesign)
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0026-workbench-and-harness-redesign.md`
+  - Evidence: `docs/workorders/WO-0026-workbench-and-harness-redesign.md`
 
 #### 2026-02-22: Polishing, Hardening, and Status Drift Discovery
 
@@ -132,24 +132,24 @@ This audit was conducted by reading source documents, running verification comma
 - Work orders WO-0027 through WO-0038 created and processed
   - Evidence: Individual WO files with `Created: 2026-02-22`
 - **Handoff file identifies critical status drift** at 22:30:19Z: WO-0031 was NOT_STARTED and WO-0033 was IN_PROGRESS, contradicting status documents that claimed them complete
-  - Evidence: `/Users/grig/work/repo/universalmanifest/.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md` lines 35, 84-86
+  - Evidence: `.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md` lines 35, 84-86
 - Both WO-0031 and WO-0033 were subsequently completed and committed in commit `52c1377` (2026-02-22T23:03:37Z), approximately 33 minutes after the handoff flagged the drift
   - Evidence: `git show HEAD:docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` shows status COMPLETED; `git show --stat 52c1377` shows both files in the commit
 - WO-0031 completion evidence artifact shows 11/11 journeys passing at 2026-02-22T22:55:37Z
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`, summary: `"pass": 11, "fail": 0`
+  - Evidence: `docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`, summary: `"pass": 11, "fail": 0`
 - **Policy A decision**: Human participant evidence is mandatory for onboarding closure
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` line 393
+  - Evidence: `docs/DECISIONS.md` line 393
 
 #### 2026-02-23: Current State
 
 - WO-0039 created (onboarding plain-language rewrite), status NOT_STARTED
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+  - Evidence: `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 - Fresh technical validation run shows regression:
   - `npm test`: FAIL (1/40 -- v0.2 signed manifest fails signature verification)
   - `npm run journeys`: FAIL (3/11 -- J01, J02, J03 fail because they depend on `npm test` passing)
   - `npm run smoke:endpoints:prod`: PASS (9/9)
   - `npm run build:clean`: PASS (32 pages built)
-  - Evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-23T01-45-51-016Z-journey-report.json`
+  - Evidence: `docs/journeys/_artifacts/2026-02-23T01-45-51-016Z-journey-report.json`
 
 ### Work Order Progression Summary
 
@@ -163,7 +163,7 @@ This audit was conducted by reading source documents, running verification comma
 | WO-0039 | 1 | NOT_STARTED |
 | **Total** | **39** | **36 completed, 2 blocked, 1 not started** |
 
-Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-*.md`
+Evidence: All work order files under `docs/workorders/WO-*.md`
 
 ---
 
@@ -174,12 +174,12 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 **Status: VERIFIED_COMPLETED**
 
 **Evidence:**
-- Schema artifacts exist: `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`, `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
-- Spec overview exists: `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- Conformance checklist exists: `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+- Schema artifacts exist: `spec/v0.1/schema.json`, `spec/v0.1/schema.jsonld`
+- Spec overview exists: `spec/v0.1/README.md`
+- Conformance checklist exists: `spec/v0.1/CONFORMANCE.md`
 - 13 valid v0.1 fixtures pass validation (20 valid total across v0.1 and v0.2 stubs): Technical validation output, all "OK"
 - 11 invalid v0.1 fixtures correctly rejected: Technical validation output, all "OK (expected invalid)"
-- All v0.1 fixture files present under `/Users/grig/work/repo/universalmanifest/examples/v0.1/`
+- All v0.1 fixture files present under `examples/v0.1/`
 
 **Notes:** v0.1 structural validation is solid. All 31 v0.1 examples (valid + invalid + stubs) behave correctly in the test suite.
 
@@ -190,11 +190,11 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 **Status: INCONSISTENT**
 
 **Evidence:**
-- Schema and signature profile artifacts exist: `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`, `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.json`, `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.jsonld`, `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- Schema and signature profile artifacts exist: `spec/v0.2/SIGNATURE-PROFILE.md`, `spec/v0.2/schema.json`, `spec/v0.2/schema.jsonld`, `spec/v0.2/CONFORMANCE.md`
 - 8 invalid v0.2 fixtures correctly rejected: Technical validation output
 - The sole valid signed manifest example FAILS signature verification: `FAIL examples/v0.2/minimal-signed-manifest.jsonld -- Signature verification failed`
-- WO-0002 (Signature profiles v0.2) is marked COMPLETED: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0002-signature-profiles-v0-2.md`
-- WO-0036 (v0.2 publication and verification edge-case expansion) is marked COMPLETED: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md`
+- WO-0002 (Signature profiles v0.2) is marked COMPLETED: `docs/workorders/WO-0002-signature-profiles-v0-2.md`
+- WO-0036 (v0.2 publication and verification edge-case expansion) is marked COMPLETED: `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md`
 
 **Notes:** The work order status claims do not match the test evidence. The v0.2 signed manifest fails verification. The project's own `STATE-OF-THE-PROJECT.md` does acknowledge v0.2 as draft (line 67: "v0.2 defines an interop profile but remains draft"), which is more honest than the WO status claims. However, the completion evidence for WO-0031 (line 82) claims "npm test -> PASS", which contradicts the current test failure. This suggests a regression occurred between 2026-02-22T22:55Z and 2026-02-23T01:45Z, possibly due to uncommitted changes to example fixtures or validation logic in the dirty working tree.
 
@@ -241,15 +241,15 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 
 **Evidence:**
 - Completion evidence artifact (2026-02-22T22:55:37Z): 11/11 journeys pass, 0 fail
-  - File: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`
+  - File: `docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`
 - Fresh audit run (2026-02-23T01:45:51Z): 8/11 journeys pass, 3 fail
-  - File: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-23T01-45-51-016Z-journey-report.json`
+  - File: `docs/journeys/_artifacts/2026-02-23T01-45-51-016Z-journey-report.json`
 - Failing journeys: J01 (Parse and ignore unknown fields), J02 (TTL and freshness), J03 (Signature verification v0.2) -- all fail with "Core conformance suite failed"
 - Passing journeys: J04 (UMID resolution), J05 (UM edge smoke -- skipped/pass), J06 (Public profile projection), J07 (RP1 spatial fabric), J08 (Smart-glasses consent), J09 (Metaverse cross-world), J10 (Multi-provider personhood), J11 (OMATrust attestation)
 
 **Root cause of regression:** The journey runner maps J01, J02, J03 to a shared `npm test` command. When the v0.2 signature verification failure causes `npm test` to exit with code 1, all three journeys are marked failed, even though J01 and J02 (v0.1 structural validation) would pass independently. This is a design fragility: a single v0.2 test failure cascades into three journey failures, obscuring the actual scope of the problem.
 
-**Notes:** The 30 journey report artifacts under `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/` show testing occurred frequently across the development period. However, the current state is a regression from the completion evidence. WO-0031 acceptance criterion states "npm run journeys passes" (line 55), which was true at completion time but is no longer true.
+**Notes:** The 30 journey report artifacts under `docs/journeys/_artifacts/` show testing occurred frequently across the development period. However, the current state is a regression from the completion evidence. WO-0031 acceptance criterion states "npm run journeys passes" (line 55), which was true at completion time but is no longer true.
 
 ---
 
@@ -259,16 +259,16 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 
 **Evidence:**
 - WO-0015 (First-time overview and visual onboarding): Status BLOCKED, 3 of 4 acceptance criteria checked, final criterion requires human-participant evidence
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - File: `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
 - First-time reader test results exist but were conducted by AI agent, not human: "Participant type: CLI-based AI agent (Claude Opus 4.6)"
-  - File: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md`, line 13
-- No human-participant test results file exists: searched for `*first-time-reader-test-results-human*` under `/Users/grig/work/repo/universalmanifest/docs/reports/` -- no match found
+  - File: `docs/reports/2026-02-20-first-time-reader-test-results.md`, line 13
+- No human-participant test results file exists: searched for `*first-time-reader-test-results-human*` under `docs/reports/` -- no match found
 - Onboarding clarity review (Step 3 of this audit) found severe jargon issues:
   - `universal-manifest-overview.md` scored 2/5 for clarity
   - `concepts.md` scored 1/5 for clarity
   - Key undefined terms: "state capsule", "integration pair", "facets", "convergence profile", "UMID", "CEO-directed integration lanes"
 - WO-0039 explicitly created to address these issues, status NOT_STARTED
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+  - File: `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 
 **Notes:** Onboarding is the project's most significant unresolved gap. The documentation is written for insiders, not newcomers. The project correctly identified this problem (WO-0039) but has not yet begun remediation.
 
@@ -280,12 +280,12 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 
 **Evidence:**
 - WO-0035 file: Status BLOCKED, 3 of 4 acceptance criteria checked
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+  - File: `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
 - Unchecked criterion (line 63): "If policy is mandatory-human, at least one dated human-participant report exists."
 - Policy A was selected on 2026-02-22: "Human participant evidence is mandatory for closure-grade completion"
-  - File: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` line 397
-- Human gate checklist created: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
-- Blocker artifact still required: a file matching `YYYY-MM-DD-first-time-reader-test-results-human.md` under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+  - File: `docs/DECISIONS.md` line 397
+- Human gate checklist created: `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+- Blocker artifact still required: a file matching `YYYY-MM-DD-first-time-reader-test-results-human.md` under `docs/reports/`
 
 **Notes:** This is correctly blocked. The policy decision was made, the checklist was prepared, but the actual human testing has not occurred. This work order cannot close without a real human participant.
 
@@ -297,9 +297,9 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 
 **Evidence:**
 - WO-0039 file: Status NOT_STARTED, all 5 execution phases unchecked, all 7 acceptance criteria unchecked
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+  - File: `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
 - Created 2026-02-23 in response to user review of onboarding language
-- Source trigger: user review of `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- Source trigger: user review of `site/src/content/docs/getting-started/universal-manifest-overview.md`
 - Explicitly names "integration pair" (overview.md line 34) as the triggering example of undefined jargon
 
 **Notes:** This is correctly identified and scoped. The work order has good structure (5 phases, 7 acceptance criteria, validation commands). It should be executed before WO-0035 can close, since the onboarding language must be clear before human reader testing would be meaningful.
@@ -312,12 +312,12 @@ Evidence: All work order files under `/Users/grig/work/repo/universalmanifest/do
 
 **Evidence:**
 - Handoff (2026-02-22T22:30:19Z) identified WO-0031 as NOT_STARTED and WO-0033 as IN_PROGRESS
-  - File: `/Users/grig/work/repo/universalmanifest/.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md` lines 84-86
+  - File: `.dev/ai/handoffs/2026-02-22-22-30-19Z-handoff-universalmanifest.md` lines 84-86
 - Both WO files now show COMPLETED status in the committed repository (commit `52c1377`, 2026-02-22T23:03:37Z)
 - WO-0031 has completion evidence section with specific file paths and validation results
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` lines 68-83
+  - File: `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` lines 68-83
 - WO-0033 has completion evidence section with deploy and live check results
-  - File: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` lines 49-68
+  - File: `docs/workorders/WO-0033-published-docs-label-first-link-normalization.md` lines 49-68
 - STATE-OF-THE-PROJECT.md now lists both as completed (lines 94, 96)
 - Both WO-INDEX files list them as COMPLETED
 
@@ -342,7 +342,7 @@ Evidence supporting this inference:
 
 39 work orders, 25 commits, and 30 journey report artifacts in 12 days is an extremely high velocity for any project. The `.dev/ai/` directory structure, handoff files, and agent task IDs in work order metadata strongly suggest that most of the execution was performed by AI agents with human (CEO) direction. The first-time reader test was explicitly performed by "CLI-based AI agent (Claude Opus 4.6)" rather than a human.
 
-Evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-first-time-reader-test-results.md` line 13; `.dev/ai/handoffs/`, `.dev/ai/workorders/`, `.dev/ai/audits/` directory structure; WO-0039 `Agent Task ID: b617cafd_1771721466`
+Evidence: `docs/reports/2026-02-20-first-time-reader-test-results.md` line 13; `.dev/ai/handoffs/`, `.dev/ai/workorders/`, `.dev/ai/audits/` directory structure; WO-0039 `Agent Task ID: b617cafd_1771721466`
 
 ### 5.3 The journey runner has a fragile shared-dependency design
 
@@ -378,13 +378,13 @@ Evidence: Step-0/Step-1 chronology extraction shows `WO-0025-documentation-human
 
 ### 6.3 Local Verification Status Claims in STATE-OF-THE-PROJECT.md
 
-**UNVERIFIED**: `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` lines 166-171 claim all 6 local verification checks pass (site build, package tests, journeys, dev endpoints, prod endpoints, harness autorun). As of the audit date, 2 of these 5 tested checks fail (package tests and journeys). The "latest runs" referenced in that section do not include timestamps, so it is impossible to know when those results were actually observed.
+**UNVERIFIED**: `docs/STATE-OF-THE-PROJECT.md` lines 166-171 claim all 6 local verification checks pass (site build, package tests, journeys, dev endpoints, prod endpoints, harness autorun). As of the audit date, 2 of these 5 tested checks fail (package tests and journeys). The "latest runs" referenced in that section do not include timestamps, so it is impossible to know when those results were actually observed.
 
 ### 6.4 WO-0031 Completion Claim -- "npm test -> PASS"
 
 **UNVERIFIED (at audit time)**: WO-0031 completion evidence (line 82) states `npm test -> PASS`. This was likely true at 2026-02-22T22:55Z (based on the passing journey report), but is not true at audit time (2026-02-23). The completion claim was accurate when made but is no longer reproducible, which means the work order's "COMPLETED" status is based on evidence that has degraded.
 
-Evidence: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` line 82 claims PASS; current `npm test` exits with code 1.
+Evidence: `docs/workorders/WO-0031-journey-proof-parity-and-decoupling-hardening.md` line 82 claims PASS; current `npm test` exits with code 1.
 
 ### 6.5 "All 30 Work Orders Completed" Broad Claims
 

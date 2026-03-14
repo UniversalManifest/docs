@@ -54,27 +54,27 @@ Out of scope:
 Primary deliverables (all required):
 
 1. V1 comprehensive review:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v1-primary.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v1-primary.md`
 2. V2 secondary review:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v2-secondary.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v2-secondary.md`
 3. V3 final gap-closed review:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
 
 Supporting deliverables:
 
 4. Normative reference crosswalk:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
 5. UM artifact overlap index:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
 6. Integration options decision memo (including facet vs non-facet recommendation):
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
+   - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 
 Optional implementation-ready outputs (if confidence is high):
 
 7. Draft non-normative integration lane:
-   - `/Users/grig/work/repo/universalmanifest/integrations/gpc-global-privacy-control.md`
+   - `integrations/gpc-global-privacy-control.md`
 8. Site mirror draft:
-   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/gpc-global-privacy-control.md`
+   - `site/src/content/docs/integrations/gpc-global-privacy-control.md`
 
 ## Core review questions (must be answered explicitly)
 
@@ -107,15 +107,15 @@ Normative references listed by GPC:
 
 Relevant UM context anchors:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/data-firewall-ux.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+- `spec/v0.1/README.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.1/REGISTRY.md`
+- `spec/v0.2/README.md`
+- `spec/v0.2/CONFORMANCE.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `docs/security/THREAT-MODEL.md`
+- `integrations/data-firewall-ux.md`
+- `integrations/metaverse.md`
 
 ## Acceptance criteria
 
@@ -124,7 +124,7 @@ Relevant UM context anchors:
 - [x] Normative reference crosswalk is complete and includes implications for UM architecture.
 - [x] Explicit recommendation provided for facet vs non-facet GPC integration.
 - [x] Replacement/supersession candidates in UM are listed with rationale and risk.
-- [x] Deliverables are fully contained in `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/`.
+- [x] Deliverables are fully contained in `.dev/ai/reports/gpc-wo-0127/`.
 
 ## Execution notes
 
@@ -135,17 +135,17 @@ Relevant UM context anchors:
 ## Execution progress log
 
 - 2026-03-05: Draft V1 completed (primary standards interpretation and initial recommendation).
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v1-primary.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v1-primary.md`
 - 2026-03-05: Normative reference crosswalk completed.
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-normative-reference-crosswalk.md`
 - 2026-03-05: UM overlap/gap matrix completed.
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-um-overlap-and-gap-matrix.md`
 - 2026-03-05: Integration options memo completed (including facet vs non-facet decision path).
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 - 2026-03-05: Draft V2 completed (independent challenge pass with explicit gap list).
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v2-secondary.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v2-secondary.md`
 - 2026-03-05: Draft V3 completed (gap closure, final recommendation, migration posture, risk register).
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
+  - `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
 
 ## Completion notes
 

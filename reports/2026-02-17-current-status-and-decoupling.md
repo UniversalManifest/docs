@@ -2,8 +2,8 @@
 
 **Date:** 2026-02-17  
 **Project:** Universal Manifest  
-**Canonical repository path:** `/Users/grig/work/repo/universalmanifest`  
-**Previous path (legacy):** `/Users/grig/work/repo/universalmanifest (legacy path archived)`
+**Canonical repository path:** ``  
+**Previous path (legacy):** ` (legacy path archived)`
 
 ## Executive status
 
@@ -24,21 +24,21 @@ The main remaining blocker for "published and live" status is production deploym
 
 ## Verification status (latest local run)
 
-- Site build: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` → PASS
-- Package validation: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` → PASS
-- Journeys proof: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` → PASS
-- Endpoint smoke (dev): `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:dev` → PASS
+- Site build: `cd site && npm run build:clean` → PASS
+- Package validation: `cd packages/universal-manifest && npm test` → PASS
+- Journeys proof: `cd packages/universal-manifest && npm run journeys` → PASS
+- Endpoint smoke (dev): `cd packages/universal-manifest && npm run smoke:endpoints:dev` → PASS
 - Harness autorun: `http://127.0.0.1:4300/harness/index.html?autorun=1` → PASS
 
 Latest journey artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-17T23-21-42-271Z-journey-report.json`
+- `docs/journeys/_artifacts/2026-02-17T23-21-42-271Z-journey-report.json`
 
 ## Decoupling status
 
 Decoupling from reference implementation is now explicit and operational:
 
-- Repo moved out of `/Users/grig/work/repo/` into `/Users/grig/work/repo/universalmanifest`.
+- Repo moved out of `/Users/grig/work/repo/` into ``.
 - Agent infrastructure aligned to GAS split model:
   - `AGENTS.md` = immutable global rules copy
   - `PROJECT-RULES.md` = Universal Manifest-specific onboarding and project rules

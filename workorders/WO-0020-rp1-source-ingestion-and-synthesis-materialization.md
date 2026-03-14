@@ -21,16 +21,16 @@ Out of scope:
 ## Deliverables
 
 - updated source inventory/selection/provenance artifacts under:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/`
+  - `.dev/ai/knowledge-index/`
+  - `.dev/ai/knowledge-corpus/`
+  - `.dev/ai/ingestion/records/`
 - RP1 fixture addition under:
-  - `/Users/grig/work/repo/universalmanifest/examples/`
+  - `examples/`
 - RP1 journey/proof update under:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
+  - `docs/journeys/`
 - decisions/state synchronization:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
 
 ## Acceptance criteria
 
@@ -42,9 +42,9 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- `integrations/rp1-spatial-fabric.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`
+- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
 
 ## Progress update (2026-02-20)
 
@@ -52,16 +52,16 @@ Completed in this batch:
 - Stage -1/0 RP1 source intake executed with three selected captures from official RP1 domains.
 - source selection, provenance map, and ingestion ledger updated for RP1 batch.
 - triage record added:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-20-rp1-stage0-triage.md`
+  - `.dev/ai/ingestion/records/2026-02-20-rp1-stage0-triage.md`
 - RP1 fixture added and validated:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 - RP1 journey definition added:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+  - `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
 - Journey index updated:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `docs/journeys/README.md`
 
 Remaining:
 - none for WO scope; follow-on enhancements continue under regular conformance/interoperability hardening tracks.
 
 Conflict reconciliation evidence:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md` (`CON-UM-007`)
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md` (`CON-UM-007`)

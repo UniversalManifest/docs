@@ -2,7 +2,7 @@
 
 Date: 2026-03-05  
 Program: Metaverse Universal Manifest Go-Now (`MUM-GN-05`)  
-Repository: `/Users/grig/work/repo/universalmanifest`
+Repository: ``
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 {
   "runId": "2026-03-05T15-18-11-406Z",
   "createdAt": "2026-03-05T15:18:18.271Z",
-  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "repoRoot": ".",
   "runtimeConfig": {
     "lanSmokeMode": "auto",
     "lanRepoPath": null
@@ -21,7 +21,7 @@
         "stdout": "",
         "stderr": "",
         "details": {
-          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+          "distRoot": "deploy/universalmanifest.net/dist"
         }
       }
     }
@@ -106,7 +106,7 @@
       "endedAt": "2026-03-05T15:18:18.265Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/social-profile-manifest.jsonld",
         "projection": {
           "umid": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
           "subject": "did:key:z6MkiJulesChenExampleDid",
@@ -134,7 +134,7 @@
       "endedAt": "2026-03-05T15:18:18.265Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:5f5e6f7a-1111-4a9a-8d5e-7c9a5f3e2b10",
           "subject": "did:example:rp1-user-01",
@@ -157,8 +157,8 @@
       "details": {
         "type": "consent-enforcement",
         "fixtures": [
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-consent-allowed-manifest.jsonld",
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-consent-denied-manifest.jsonld"
+          "examples/v0.1/stubs/smart-glasses-consent-allowed-manifest.jsonld",
+          "examples/v0.1/stubs/smart-glasses-consent-denied-manifest.jsonld"
         ],
         "details": {
           "allowedFixtureUmid": "urn:uuid:6a7b8c9d-2222-4b8d-9d44-9fd2d00a1201",
@@ -177,7 +177,7 @@
       "endedAt": "2026-03-05T15:18:18.267Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:7b8c9d0e-4444-4a3d-8a11-0dbf2ce44210",
           "subject": "did:example:metaverse-user-01",
@@ -257,9 +257,9 @@
       "details": {
         "type": "projection",
         "fixtures": [
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld",
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld",
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld"
+          "examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld",
+          "examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld",
+          "examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld"
         ],
         "details": {
           "minimalSubject": "did:web:xr.example:users:alpha",
@@ -292,8 +292,8 @@
       "details": {
         "type": "privacy-lane",
         "fixtures": [
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld",
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld"
+          "examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld",
+          "examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld"
         ],
         "details": {
           "variantASubject": "did:web:retail-world.example:users:pairwise-9a3",
@@ -311,7 +311,7 @@
       "endedAt": "2026-03-05T15:18:18.270Z",
       "details": {
         "type": "revocation-aware",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld",
+        "fixturePath": "examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld",
         "details": {
           "umid": "urn:uuid:2fbc6a45-aec3-40db-8a4b-8f7cab20f4ff",
           "subject": "did:web:xr.example:issuers:portable-identity",
@@ -331,7 +331,7 @@
       "endedAt": "2026-03-05T15:18:18.270Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:5fb44bd8-9d55-40af-80d1-3a07bda30f01",
           "subject": "did:web:metaverse.example:users:onboarding-001",
@@ -351,7 +351,7 @@
       "endedAt": "2026-03-05T15:18:18.270Z",
       "details": {
         "type": "consent-enforcement",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:14b5c9ab-4ef1-4a84-94e5-2e5da30f0202",
           "consentKeys": [
@@ -373,7 +373,7 @@
       "endedAt": "2026-03-05T15:18:18.271Z",
       "details": {
         "type": "transaction-compliance",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:0f4fcbf1-8bf2-43e4-83a0-35fc0f2d0303",
           "pointers": [
@@ -392,7 +392,7 @@
       "endedAt": "2026-03-05T15:18:18.271Z",
       "details": {
         "type": "social-reputation",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:6ed799ea-f6f8-4436-8ad5-fced0f4f0404",
           "reputationLevel": "tier-2",
@@ -412,7 +412,7 @@
       "endedAt": "2026-03-05T15:18:18.271Z",
       "details": {
         "type": "preferences",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:3bd94f5f-6d0c-45b3-b750-c90b39cc0505",
           "pointerCount": 1,
@@ -434,7 +434,7 @@
       "endedAt": "2026-03-05T15:18:18.271Z",
       "details": {
         "type": "freshness",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld",
+        "fixturePath": "examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld",
         "details": {
           "umid": "urn:uuid:c8e9b0f7-8618-4ffd-b8a7-4fd00b4f0606",
           "statusRef": "https://status.metaverse.example/revocations/freshness-001",

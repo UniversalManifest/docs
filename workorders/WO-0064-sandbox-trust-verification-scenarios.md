@@ -95,6 +95,6 @@ Implement 5 scenario definition files. TV-01 is the most complex (8 steps with f
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test each scenario)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (test each scenario)
 - Browser DevTools console: verify no simulation warnings, real crypto.subtle calls

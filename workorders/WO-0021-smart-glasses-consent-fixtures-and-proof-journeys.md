@@ -21,12 +21,12 @@ Out of scope:
 ## Deliverables
 
 - fixture additions under:
-  - `/Users/grig/work/repo/universalmanifest/examples/`
+  - `examples/`
 - journey/proof updates under:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
+  - `docs/journeys/`
 - integration documentation updates:
-  - `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
+  - `integrations/smart-glasses-ar.md`
+  - `site/src/content/docs/integrations/smart-glasses-ar.md`
 
 ## Acceptance criteria
 
@@ -37,18 +37,18 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`
 
 ## Completion evidence (2026-02-20)
 
 - Fixtures:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld`
+  - `examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld`
+  - `examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld`
 - Journey coverage:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-08-smart-glasses-consent-enforcement.md`
+  - `docs/journeys/journey-08-smart-glasses-consent-enforcement.md`
   - executable journey check integrated in:
-    - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs` (`J04` overlay assertions)
+    - `packages/universal-manifest/scripts/run-journeys.mjs` (`J04` overlay assertions)
 - Verification:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -> PASS
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -> PASS
+  - `cd packages/universal-manifest && npm test` -> PASS
+  - `cd packages/universal-manifest && npm run journeys` -> PASS

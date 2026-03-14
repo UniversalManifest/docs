@@ -1,7 +1,7 @@
 # OMATrust Integration Assessment for Universal Manifest
 
 Date: 2026-02-22 UTC  
-Project root: `/Users/grig/work/repo/universalmanifest`  
+Project root: ``  
 Prepared for: Universal Manifest status check + OMATrust product and OMA3 standards-body integration decision support
 
 ## 1) Executive status summary
@@ -30,7 +30,7 @@ I covered OMATrust sources in two layers:
 
 Coverage artifact created:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-oma-link-coverage-evidence.md`
+- `docs/reports/2026-02-22-oma-link-coverage-evidence.md`
 
 Coverage highlights from the artifact:
 
@@ -255,5 +255,5 @@ Why:
 
 ## 11) Evidence artifacts generated in this assessment run
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-oma-link-coverage-evidence.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-omatrust-integration-assessment.md`
+- `docs/reports/2026-02-22-oma-link-coverage-evidence.md`
+- `docs/reports/2026-02-22-omatrust-integration-assessment.md`

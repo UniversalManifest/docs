@@ -21,7 +21,7 @@ Currently, the site sidebar groups the TypeScript helper under "Getting Started,
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/site/astro.config.mjs`** — Sidebar configuration
+**`site/astro.config.mjs`** — Sidebar configuration
 
 ### Recommended new sidebar structure
 
@@ -86,10 +86,10 @@ Additionally, the catalog index page (`integrations/index.md`) and the reference
 - [ ] The sidebar label includes "Reference" or "(Reference Implementation)" qualifier.
 - [ ] A reader following "Getting Started" top-to-bottom encounters only spec-level content.
 - [ ] ALL integration lane content pages are discoverable via the sidebar (including Healthcare, Education, Smart Home).
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 - [ ] All existing page URLs continue to work (no broken links).
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of sidebar navigation in browser.

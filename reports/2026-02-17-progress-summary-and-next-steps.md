@@ -1,7 +1,7 @@
 # Universal Manifest — Progress Summary and Next Steps
 
 Date: 2026-02-17  
-Repo: `/Users/grig/work/repo/universalmanifest`
+Repo: ``
 
 This report is an action-oriented summary of what exists in the Universal Manifest project right now, what we verified today, and the next critical path items to move toward broad adoption.
 
@@ -39,35 +39,35 @@ Publishing + hosting skeletons:
 
 TypeScript + fixtures validation + signature verification:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 Journeys proof suite:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`
   - Evidence written under: `docs/journeys/_artifacts/`
   - Includes a cross-implementation adopter proof (public profile projection)
 
 Endpoint smoke (docs + resolver contract; local dev):
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:dev`
+- `cd packages/universal-manifest && npm run smoke:endpoints:dev`
 
 Docs site build and deploy bundle:
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build`
-- `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
+- `cd site && npm run build`
+- `node deploy/universalmanifest.net/build.mjs`
   - Output: `deploy/universalmanifest.net/dist/`
 
 Local UI smoke via reserved port:
 
 - Dev server running at: `http://127.0.0.1:4300/`
 - Screenshots captured:
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-home.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-harness-autorun-2026-02-17T09-32-02Z.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-conformance-resolver-2026-02-17T09-33-07Z.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-stub-manifests-2026-02-17T09-45-59Z.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-proof-smoke-2026-02-17T09-45-59Z.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-quick-start-2026-02-17T09-59-55Z.png`
-  - `/Users/grig/work/repo/universalmanifest/site/.agent-browser-harness-autorun-2026-02-17T10-01-19Z.png`
+  - `site/.agent-browser-home.png`
+  - `site/.agent-browser-harness-autorun-2026-02-17T09-32-02Z.png`
+  - `site/.agent-browser-conformance-resolver-2026-02-17T09-33-07Z.png`
+  - `site/.agent-browser-stub-manifests-2026-02-17T09-45-59Z.png`
+  - `site/.agent-browser-proof-smoke-2026-02-17T09-45-59Z.png`
+  - `site/.agent-browser-quick-start-2026-02-17T09-59-55Z.png`
+  - `site/.agent-browser-harness-autorun-2026-02-17T10-01-19Z.png`
 
 ## 3) Key decisions (current stance)
 

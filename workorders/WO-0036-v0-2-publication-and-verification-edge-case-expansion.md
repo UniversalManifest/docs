@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** MEDIUM
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+**Source:** `docs/STATE-OF-THE-PROJECT.md`
 
 ## Objective
 
@@ -29,14 +29,14 @@ Out of scope:
 ## Required deliverables
 
 1. Updated v0.2 publication references in:
-   - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md`
+   - `docs/PUBLISHING-AND-VERSIONING.md`
+   - `docs/RELEASING.md`
 2. Expanded v0.2 fixtures in:
-   - `/Users/grig/work/repo/universalmanifest/examples/v0.2/`
+   - `examples/v0.2/`
 3. Conformance updates in:
-   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+   - `spec/v0.2/CONFORMANCE.md`
 4. Validation evidence report in:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/`
+   - `docs/reports/`
 
 ## Acceptance criteria
 
@@ -47,24 +47,24 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `rg -n 'v0.2|stable URL|schema.jsonld|schema.json|SIGNATURE-PROFILE' /Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md /Users/grig/work/repo/universalmanifest/docs/RELEASING.md /Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run journeys`
+- `cd site && npm run build:clean`
+- `rg -n 'v0.2|stable URL|schema.jsonld|schema.json|SIGNATURE-PROFILE' docs/PUBLISHING-AND-VERSIONING.md docs/RELEASING.md spec/v0.2/CONFORMANCE.md`
 
 ## Completion evidence (2026-02-22)
 
 - Report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0036-v0.2-publication-and-edge-case-expansion-report.md`
+  - `docs/reports/2026-02-22-wo-0036-v0.2-publication-and-edge-case-expansion-report.md`
 - Updated docs/spec:
-  - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
+  - `docs/PUBLISHING-AND-VERSIONING.md`
+  - `docs/RELEASING.md`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `spec/v0.2/README.md`
 - Added fixtures:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-algorithm.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-canonicalization.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-created-format.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/missing-signature-key-material.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/invalid-signature-public-key.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/issued-after-expires-signed.jsonld`
+  - `examples/v0.2/invalid/invalid-signature-algorithm.jsonld`
+  - `examples/v0.2/invalid/invalid-signature-canonicalization.jsonld`
+  - `examples/v0.2/invalid/invalid-signature-created-format.jsonld`
+  - `examples/v0.2/invalid/missing-signature-key-material.jsonld`
+  - `examples/v0.2/invalid/invalid-signature-public-key.jsonld`
+  - `examples/v0.2/invalid/issued-after-expires-signed.jsonld`

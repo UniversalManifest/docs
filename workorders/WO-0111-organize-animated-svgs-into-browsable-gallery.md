@@ -48,9 +48,9 @@ Add to the "About" section of the site sidebar.
 - [x] All production animated SVGs are included with titles and brief descriptions.
 - [x] SVGs are organized in a logical teaching sequence.
 - [x] Each SVG is viewable directly on the page (embedded, not just linked).
-- [x] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [x] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of gallery page in browser.

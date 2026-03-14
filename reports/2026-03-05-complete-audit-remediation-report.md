@@ -116,7 +116,7 @@ Location concentration:
 
 Suggested edit:
 - Run a historical-doc redaction pass that replaces:
-  - `/Users/grig/work/repo/universalmanifest` -> `<repo-root>`
+  - `` -> `<repo-root>`
   - `/Users/grig/.agents` -> `~/.agents`
 - Or move workorders/reports artifacts to a non-public archive location.
 

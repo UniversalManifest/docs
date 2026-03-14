@@ -21,7 +21,7 @@ The verification agent confirmed that the integration authoring guide **exists**
 
 ### Existing file (confirmed to exist)
 
-**`/Users/grig/work/repo/universalmanifest/docs/guides/integration-authoring-guide.md`** — 186 lines, already written. Review for completeness and consistency with TEMPLATE.md.
+**`docs/guides/integration-authoring-guide.md`** — 186 lines, already written. Review for completeness and consistency with TEMPLATE.md.
 
 ### Create site page
 
@@ -50,10 +50,10 @@ The guide already covers (verify each is present and current):
 - [ ] Guide is published as a page on the public site.
 - [ ] Guide and TEMPLATE.md are consistent and cross-linked.
 - [ ] The integration catalog index link resolves to the published guide.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of guide completeness.
 - Verify link from integration catalog index resolves.

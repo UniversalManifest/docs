@@ -365,16 +365,16 @@ After each phase, run:
 
 ```bash
 # Verify all example scripts execute without errors
-for f in $(find /Users/grig/work/repo/universalmanifest/examples/code -name '*.mjs' -not -path '*/node_modules/*'); do
+for f in $(find examples/code -name '*.mjs' -not -path '*/node_modules/*'); do
   echo "Running: $f"
   node "$f" || echo "FAILED: $f"
 done
 
 # Existing test suite still passes
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test
+cd packages/universal-manifest && npm test
 
 # Site build still passes
-cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean
+cd site && npm run build:clean
 ```
 
 ## Relationship to existing work orders

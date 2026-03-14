@@ -43,10 +43,10 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
-- `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`
+- `.github/workflows/synthetic-monitoring.yml`
+- `.github/workflows/synthetic-monitoring-staging.yml`
+- `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+- `docs/operations/INCIDENT-REPORT-TEMPLATE.md`
 
 ## Completion Evidence (2026-03-04)
 
@@ -77,10 +77,10 @@ Webhook payload evidence:
 Evidence artifacts:
 
 - Drill report:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-synthetic-alert-drill-report.md`
+  - `.dev/ai/reports/operations/2026-03-04-wo-0121-synthetic-alert-drill-report.md`
 - Incident report:
-  - `/Users/grig/work/repo/universalmanifest/docs/operations/incidents/INC-2026-03-04-synthetic-alert-drill.md`
+  - `docs/operations/incidents/INC-2026-03-04-synthetic-alert-drill.md`
 - Run-2 log extract:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-run2-job.log`
+  - `.dev/ai/reports/operations/2026-03-04-wo-0121-run2-job.log`
 - Webhook capture snapshot:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-webhook-requests.json`
+  - `.dev/ai/reports/operations/2026-03-04-wo-0121-webhook-requests.json`

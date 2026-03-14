@@ -131,23 +131,23 @@ Out of scope:
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/SandboxLayout.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/EntityPanel.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ConsumerPanel.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ProtocolPanel.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/StepController.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/StepBubble.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/StepTimeline.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ManifestViewer.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ManifestEditor.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/engine.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/highlight.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/layout.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/panels.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/steps.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/bubbles.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/editor.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/highlight.css`
+- `site/src/components/sandbox/SandboxLayout.astro`
+- `site/src/components/sandbox/EntityPanel.astro`
+- `site/src/components/sandbox/ConsumerPanel.astro`
+- `site/src/components/sandbox/ProtocolPanel.astro`
+- `site/src/components/sandbox/StepController.astro`
+- `site/src/components/sandbox/StepBubble.astro`
+- `site/src/components/sandbox/StepTimeline.astro`
+- `site/src/components/sandbox/ManifestViewer.astro`
+- `site/src/components/sandbox/ManifestEditor.astro`
+- `site/src/scripts/sandbox/engine.ts`
+- `site/src/scripts/sandbox/highlight.ts`
+- `site/src/styles/sandbox/layout.css`
+- `site/src/styles/sandbox/panels.css`
+- `site/src/styles/sandbox/steps.css`
+- `site/src/styles/sandbox/bubbles.css`
+- `site/src/styles/sandbox/editor.css`
+- `site/src/styles/sandbox/highlight.css`
 
 ## Acceptance criteria
 
@@ -164,6 +164,6 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test at /sandbox/test/)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (test at /sandbox/test/)
 - Manual responsive testing at multiple viewport widths

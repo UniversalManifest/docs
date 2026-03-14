@@ -47,9 +47,9 @@ Out of scope:
 
 - All previously deferred sources in the current batch were promoted and integrated.
 - Conflict IDs and reconciliation decisions are recorded in:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+  - `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
 - Follow-on execution scope is explicitly captured in:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ## Dependencies
 

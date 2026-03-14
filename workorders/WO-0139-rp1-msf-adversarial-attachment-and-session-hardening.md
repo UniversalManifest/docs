@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Spatial Integration Hardening  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+**Source:** `docs/DECISIONS.md`
 
 ## Objective
 
@@ -36,19 +36,19 @@ Out of scope:
 ## Deliverables
 
 - Updated positive-path RP1 fixture:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 - New adversarial fixtures:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld`
 - New proof journey:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
+  - `docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
 - Updated journey runner:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 - Updated RP1 integration docs and sandbox flows:
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
-  - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
+  - `integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
+  - `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
 
 ## Acceptance Criteria
 
@@ -58,14 +58,14 @@ Out of scope:
 - [x] RP1 integration docs and sandbox flows describe the same fail-closed behavior.
 - [x] No UM core schema change is introduced.
 - [x] Local verification passes:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - `cd packages/universal-manifest && npm test`
+  - `cd packages/universal-manifest && npm run journeys`
+  - `cd site && npm run build:clean`
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
+- `docs/workorders/WO-0138-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
+- `docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
 
 ## Execution Notes
 
@@ -73,7 +73,7 @@ Out of scope:
 - Introduced `J22` for adversarial RP1/MSF hardening.
 - Preserved the current architectural boundary: optional RP1 pointer metadata only, no new UM core semantics.
 - Verification artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-npm-test.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-journeys.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-site-build-clean.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
+  - `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-npm-test.txt`
+  - `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-journeys.txt`
+  - `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-site-build-clean.txt`
+  - `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`

@@ -61,19 +61,19 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+- `docs/DOMAIN-ARCHITECTURE.md`
+- `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- `services/myum-resolver/CLOUDFLARE-DEPLOY.md`
 
 ## Verification Commands (Target)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 node scripts/smoke-endpoints.mjs --mode prod --docs-base https://staging.universalmanifest.net --resolver-base https://staging.myum.net
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 node scripts/post-deploy-verify.mjs --mode prod --docs-base https://staging.universalmanifest.net --resolver-base https://staging.myum.net --resolver-www-base https://www.staging.myum.net
 ```
 
@@ -82,15 +82,15 @@ node scripts/post-deploy-verify.mjs --mode prod --docs-base https://staging.univ
 Repository deliverables completed:
 
 - Added staging/production promotion and rollback runbook:
-  - `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
+  - `docs/site/STAGING-PROMOTION-RUNBOOK.md`
 - Added resolver staging environment configuration:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` (`[env.staging]`)
+  - `services/myum-resolver/wrangler.toml` (`[env.staging]`)
 - Added staging verification scripts:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json` (`smoke:endpoints:staging`, `verify:postdeploy:staging`)
+  - `packages/universal-manifest/package.json` (`smoke:endpoints:staging`, `verify:postdeploy:staging`)
 - Updated architecture/deployment docs to include staging/promotion model:
-  - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DEPLOY-CHECKLIST.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/site/DEPLOYMENT.md`
+  - `docs/DOMAIN-ARCHITECTURE.md`
+  - `docs/DEPLOY-CHECKLIST.md`
+  - `docs/site/DEPLOYMENT.md`
 
 Verification results:
 
@@ -110,7 +110,7 @@ Provisioning update:
 - fallback staging verification now passes with explicit base URLs:
   - `node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
   - `node scripts/post-deploy-verify.mjs --mode prod --docs-base https://universalmanifest-net-staging.pages.dev --resolver-base https://myum-resolver-staging.grig-624.workers.dev --resolver-www-base https://myum-resolver-staging.grig-624.workers.dev` -> PASS
-  - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
+  - report: `.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
 Completion addendum (2026-03-03):
 

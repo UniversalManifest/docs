@@ -10,11 +10,11 @@ Redesign the Manifest Workbench and Verification Harness as visual, app-like sur
 
 ## Deliverables
 
-- `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
-- `/Users/grig/work/repo/universalmanifest/site/public/workbench/workbench.js`
-- `/Users/grig/work/repo/universalmanifest/site/public/harness/index.html`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
+- `site/public/workbench/index.html`
+- `site/public/workbench/workbench.js`
+- `site/public/harness/index.html`
+- `site/src/content/docs/getting-started/workbench.md`
+- `site/src/content/docs/proof/harness.md`
 
 ## Acceptance criteria
 
@@ -33,5 +33,5 @@ Completed implementation includes:
 
 ## Validation evidence
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build` (pass)
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (pass)
+- `cd site && npm run build` (pass)
+- `cd site && npm run build:clean` (pass)

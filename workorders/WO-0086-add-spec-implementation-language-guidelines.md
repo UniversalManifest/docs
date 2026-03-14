@@ -22,7 +22,7 @@ Without explicit language guidelines, new documentation naturally drifts toward 
 
 ### 1. Add language guideline table to PROJECT-RULES.md
 
-Add a "Spec-vs-Implementation Language" section to `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md` with the following table:
+Add a "Spec-vs-Implementation Language" section to `PROJECT-RULES.md` with the following table:
 
 | Context | Use | Avoid |
 |---------|-----|-------|
@@ -41,7 +41,7 @@ Add to the "Agent-Specific Instructions" section:
 
 ### 3. Add "For implementers in other languages" callout
 
-Add a callout to `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`:
+Add a callout to `site/src/content/docs/getting-started/quick-start.md`:
 
 > The examples on this page use the TypeScript reference implementation for convenience. You can implement the same validation logic in any language. The specification, conformance requirements, and fixtures are language-neutral. Start with the conformance page for a language-independent implementation checklist.
 
@@ -54,5 +54,5 @@ Add a callout to `/Users/grig/work/repo/universalmanifest/site/src/content/docs/
 
 ## Validation commands
 
-- `rg -n "specification first" /Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
-- `rg -n "other languages" /Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+- `rg -n "specification first" PROJECT-RULES.md`
+- `rg -n "other languages" site/src/content/docs/getting-started/quick-start.md`

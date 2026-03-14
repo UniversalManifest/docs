@@ -1,11 +1,11 @@
 # Universal Manifest - Comprehensive Critical Path Map and Milestones
 
 Date: 2026-02-23  
-Project root: `/Users/grig/work/repo/universalmanifest`  
+Project root: ``  
 Primary source docs:
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `docs/CRITICAL-PATH.md`
+- `docs/workorders/WO-INDEX.md`
+- `docs/STATE-OF-THE-PROJECT.md`
 
 ## 1) Executive map
 
@@ -29,10 +29,10 @@ Milestones achieved:
 - Done-done framework established and in active use.
 
 Primary artifacts:
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0008-spec-status-scope-and-foundations-audit.md` (`COMPLETED`)
+- `docs/DONE-DONE-DEFINITION.md`
+- `docs/DONE-DONE-CHECKLIST.md`
+- `docs/DONE-DONE-EVIDENCE-PACK-TEMPLATE.md`
+- `docs/workorders/WO-0008-spec-status-scope-and-foundations-audit.md` (`COMPLETED`)
 
 Status: COMPLETE
 
@@ -62,9 +62,9 @@ Milestones achieved:
 - signature verification investigation resolved as working.
 
 Key WOs:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md` (`COMPLETED`)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md` (`COMPLETED`)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0040-v0-2-signature-verification-fix.md` (`COMPLETED`)
+- `docs/workorders/WO-0036-v0-2-publication-and-verification-edge-case-expansion.md` (`COMPLETED`)
+- `docs/workorders/WO-0037-integrity-profile-revocation-and-adversarial-conformance-hardening.md` (`COMPLETED`)
+- `docs/workorders/WO-0040-v0-2-signature-verification-fix.md` (`COMPLETED`)
 
 Status: COMPLETE
 
@@ -140,10 +140,10 @@ Open milestones:
 - human validation artifacts required for closure-grade onboarding claims.
 
 Key WOs:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md` (`COMPLETED`)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` (`IN_PROGRESS`; Phase 5 open)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md` (`BLOCKED`; waiting human evidence)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` (`BLOCKED`; depends on WO-0035 + WO-0039)
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md` (`COMPLETED`)
+- `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md` (`IN_PROGRESS`; Phase 5 open)
+- `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md` (`BLOCKED`; waiting human evidence)
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md` (`BLOCKED`; depends on WO-0035 + WO-0039)
 
 Status: IN PROGRESS (critical open gate)
 
@@ -171,8 +171,8 @@ Milestones achieved:
 - status-document reconciliation pass completed.
 
 Key WOs:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md` (`COMPLETED`)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0041-status-document-drift-reconciliation.md` (`COMPLETED`)
+- `docs/workorders/WO-0038-corpus-drift-governance-and-follow-on-workorder-cycle.md` (`COMPLETED`)
+- `docs/workorders/WO-0041-status-document-drift-reconciliation.md` (`COMPLETED`)
 
 Status: ACTIVE OPERATIONAL LOOP
 
@@ -204,9 +204,9 @@ Open milestones:
 Step 1:
 - Execute human reader validation run using the existing protocol/checklist and publish dated results artifact.
 - Primary files:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-first-time-reader-test-results-human.md` (template)
+  - `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+  - `docs/reports/2026-02-23-first-time-reader-test-results-human.md` (template)
 
 Step 2:
 - Close `WO-0039` Phase 5 acceptance criteria with the human evidence linked.
@@ -222,12 +222,12 @@ Step 5:
 
 ## 6) Verification checkpoint commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run check:terminology`
-- `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh /Users/grig/work/repo/universalmanifest --artifact-root /Users/grig/work/repo/universalmanifest/.dev/ai --strict`
+- `cd site && npm run build:clean`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd packages/universal-manifest && npm run check:terminology`
+- `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh  --artifact-root .dev/ai --strict`
 
 ## 7) Notes on status consistency
 

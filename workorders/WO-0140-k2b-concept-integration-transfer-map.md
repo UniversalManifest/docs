@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Documentation and Knowledge Materialization  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/K2B-README.md`, `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+**Source:** `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`, `.dev/ai/K2B-README.md`, `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 ## Objective
 
@@ -34,11 +34,11 @@ Out of scope:
 ## Deliverables
 
 - Transfer-map report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-k2b-concept-integration-transfer-map.md`
+  - `docs/reports/2026-03-06-k2b-concept-integration-transfer-map.md`
 - Work-order and project-state synchronization:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/README.md`
+  - `docs/workorders/WO-INDEX.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/README.md`
 
 ## Acceptance Criteria
 
@@ -49,13 +49,13 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/K2B-README.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/synthesis/2026-02-18-full-corpus-ia-and-journey-synthesis.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md`
+- `.dev/ai/K2B-README.md`
+- `.dev/ai/knowledge-corpus/synthesis/2026-02-18-full-corpus-ia-and-journey-synthesis.md`
+- `.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
+- `docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
+- `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md`
 
 ## Execution Notes
 

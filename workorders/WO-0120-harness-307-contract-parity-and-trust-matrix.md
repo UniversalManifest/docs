@@ -45,19 +45,19 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/site/public/harness/index.html`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CONTRACT.md`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/scripts/contract-tests.mjs`
+- `site/public/harness/index.html`
+- `services/myum-resolver/CONTRACT.md`
+- `services/myum-resolver/scripts/contract-tests.mjs`
 
 ## Verification Commands
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run build
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 ```
 
@@ -66,7 +66,7 @@ npm run smoke:endpoints:prod
 Implemented in repo this pass:
 
 - Updated redirect handling for both resolver fetch actions:
-  - `/Users/grig/work/repo/universalmanifest/site/public/harness/index.html`
+  - `site/public/harness/index.html`
   - `307` with `Location` now reports pass summary
   - `307` missing `Location` reports fail summary
   - status display now marks `307` as non-error for resolver action feedback
@@ -79,10 +79,10 @@ Verification completed:
 Browser evidence:
 
 - Harness live verification (post-deploy) confirms redirect branch pass on deployed `/harness/` route:
-  - screenshot: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04-harness-opaque-redirect-pass.png`
+  - screenshot: `.dev/ai/reports/deploy-checks/2026-03-04-harness-opaque-redirect-pass.png`
   - tested UMID: `urn:uuid:22222222-2222-4222-8222-222222222222` (redirect record in production KV)
   - smoke + post-deploy reports:
-    - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-04T04-52-22-400Z-post-deploy-verification.md`
+    - `.dev/ai/reports/deploy-checks/2026-03-04T04-52-22-400Z-post-deploy-verification.md`
 
 Completion note:
 

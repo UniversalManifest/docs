@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Integration Documentation  
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+**Source:** `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
 
 ## Objective
 
@@ -32,10 +32,10 @@ Out of scope:
 
 ## Deliverables
 
-- `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/did-vc.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+- `integrations/did-vc.md`
+- `site/src/content/docs/integrations/did-vc.md`
+- `integrations/metaverse.md`
+- `site/src/content/docs/integrations/metaverse.md`
 
 ## Acceptance Criteria
 
@@ -46,22 +46,22 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
+- `docs/workorders/WO-0130-composite-architecture-and-active-runtime-alignment.md`
 
 ## Execution Progress (2026-03-06)
 
 Completed in this pass:
 
-- Updated `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md` and `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/did-vc.md` with:
+- Updated `integrations/did-vc.md` and `site/src/content/docs/integrations/did-vc.md` with:
   - explicit landscape caveats,
   - non-endorsement and volatility language,
   - composite-stack positioning for DID + VC material.
-- Updated `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md` and `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md` with:
+- Updated `integrations/metaverse.md` and `site/src/content/docs/integrations/metaverse.md` with:
   - explicit trust/data/interaction layer framing,
   - cross-links to the active-runtime direction,
   - guardrails for runtime authority, pointer-first assets, and non-mandatory proof stacks.
 - Verified the docs surface still builds:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - `cd site && npm run build:clean`
 
 ## Completion notes
 

@@ -161,7 +161,7 @@ Out of scope:
     - Conformance suite pass after fix.
     - Retrospective report.
 - [x] Publish simulation evidence at:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
+  - `docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
 
 ### Phase 5 — Release cadence documentation
 
@@ -188,18 +188,18 @@ Out of scope:
 ## Key file paths (created/modified)
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/docs/governance/BREAKING-CHANGE-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md` (or expand if created by WO-0058)
-- `/Users/grig/work/repo/universalmanifest/docs/governance/INCIDENT-RESPONSE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/RELEASE-CADENCE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md` (if not existing)
-- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
+- `docs/governance/BREAKING-CHANGE-POLICY.md`
+- `docs/governance/DEPRECATION-POLICY.md` (or expand if created by WO-0058)
+- `docs/governance/INCIDENT-RESPONSE.md`
+- `docs/governance/RELEASE-CADENCE.md`
+- `docs/RELEASING.md` (if not existing)
+- `docs/reports/YYYY-MM-DD-incident-simulation-evidence.md`
 
 Modified files:
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md` (G6 evidence paths)
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` (G6 status update)
-- `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md` (link to new policies)
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` (record governance decisions)
+- `docs/DONE-DONE-CHECKLIST.md` (G6 evidence paths)
+- `docs/STATE-OF-THE-PROJECT.md` (G6 status update)
+- `docs/governance/GOVERNANCE.md` (link to new policies)
+- `docs/DECISIONS.md` (record governance decisions)
 
 ## Acceptance criteria
 
@@ -215,8 +215,8 @@ Modified files:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (site builds)
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` (tests pass)
+- `cd site && npm run build:clean` (site builds)
+- `cd packages/universal-manifest && npm test` (tests pass)
 - Manual review of all governance documents for completeness and internal consistency.
 - Verify incident simulation evidence report contains all required sections.
 
@@ -232,13 +232,13 @@ Modified files:
 
 Completed with governance policy set and incident simulation evidence:
 
-- `/Users/grig/work/repo/universalmanifest/docs/governance/BREAKING-CHANGE-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/INCIDENT-RESPONSE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/RELEASE-CADENCE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-02-incident-simulation-evidence.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md` updated with Gate G6 evidence paths
-- `/Users/grig/work/repo/universalmanifest/docs/RELEASING.md` expanded with conformance-suite release process and approval rules
+- `docs/governance/BREAKING-CHANGE-POLICY.md`
+- `docs/governance/DEPRECATION-POLICY.md`
+- `docs/governance/INCIDENT-RESPONSE.md`
+- `docs/governance/RELEASE-CADENCE.md`
+- `docs/reports/2026-03-02-incident-simulation-evidence.md`
+- `docs/DONE-DONE-CHECKLIST.md` updated with Gate G6 evidence paths
+- `docs/RELEASING.md` expanded with conformance-suite release process and approval rules
 
 Evidence:
 

@@ -1,7 +1,7 @@
 {
   "runId": "2026-02-17T09-30-20-736Z",
   "createdAt": "2026-02-17T09:30:29.180Z",
-  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "repoRoot": ".",
   "journeys": [
     {
       "id": "J01",
@@ -32,7 +32,7 @@
         "stdout": "",
         "stderr": "",
         "details": {
-          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+          "distRoot": "deploy/universalmanifest.net/dist"
         }
       }
     },

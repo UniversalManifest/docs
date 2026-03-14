@@ -14,13 +14,13 @@ Scope: Close the deferred-source gap by promoting all deferred external corpus i
 1. Promoted all deferred external sources into selected.
 2. Added localized import notes for `external-09` through `external-18`.
 3. Updated provenance and ingestion control surfaces:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
+- `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+- `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+- `.dev/ai/ingestion/LEDGER.md`
 4. Added explicit conflict reconciliation with decisions:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
 5. Produced full-corpus IA/journey synthesis output:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/synthesis/2026-02-18-full-corpus-ia-and-journey-synthesis.md`
+- `.dev/ai/knowledge-corpus/synthesis/2026-02-18-full-corpus-ia-and-journey-synthesis.md`
 
 ## Current corpus disposition snapshot
 
@@ -29,7 +29,7 @@ Scope: Close the deferred-source gap by promoting all deferred external corpus i
 - Excluded: 7
 
 Canonical source of truth:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+- `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
 
 ## Why this matters now
 
@@ -38,4 +38,4 @@ This removes the risk of building IA and journeys from a partial knowledge base.
 ## Follow-on execution path
 
 Next work is to convert synthesis outputs into concrete IA and journey deltas under one executable scope:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`

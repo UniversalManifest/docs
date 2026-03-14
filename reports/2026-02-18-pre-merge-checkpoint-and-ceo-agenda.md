@@ -6,7 +6,7 @@
 
 ## 1) Pre-merge repository checkpoint
 
-Repository: `/Users/grig/work/repo/universalmanifest`  
+Repository: ``  
 Current branch at checkpoint creation: `codex/checkpoint-2026-02-18-pre-merge`
 
 Working tree at checkpoint creation:
@@ -26,7 +26,7 @@ Production domains are live and externally reachable:
 
 Production smoke verification command:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
 
 Latest result at checkpoint time: **PASS**.
 

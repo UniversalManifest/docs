@@ -1,9 +1,9 @@
 # First-Time Reader Test Results (WO-0015)
 
 Date: 2026-02-20
-Project root: `/Users/grig/work/repo/universalmanifest`
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+Project root: ``
+Work order: `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+Protocol: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
 
 ## Participant profile
 
@@ -50,7 +50,7 @@ Q2: What are the first three implementation steps?
 
 - Minimum required to close:
   - at least one PASS participant who is new to the repo: **YES (P-001, CLI-agent, PASS)**
-  - this report committed under `/Users/grig/work/repo/universalmanifest/docs/reports/`: **YES**
+  - this report committed under `docs/reports/`: **YES**
 - Caveat: This participant is a CLI-based AI agent, not a human. The content-sufficiency evaluation is genuine (the agent had no prior repo context), but a human participant test is recommended as supplementary validation if higher confidence is desired.
 - After evidence is committed:
   - update WO-0015: check final acceptance criterion, set status to COMPLETED

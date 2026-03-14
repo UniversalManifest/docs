@@ -79,5 +79,5 @@ Implement 4 scenario definition files with full step definitions, panel states, 
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test each scenario)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (test each scenario)

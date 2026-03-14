@@ -1,8 +1,8 @@
 # Protocol Recommendation Governance and Standards Currency Matrix
 
 Date: 2026-03-06  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+Project: Universal Manifest (``)  
+Work order: `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
 
 ## 1) Purpose
 
@@ -238,15 +238,15 @@ Run an out-of-band review when any of the following occurs:
 
 Highest priority surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/about/standards-positioning.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md`
+- `docs/STANDARDS-POSITIONING.md`
+- `site/src/content/docs/about/standards-positioning.md`
+- `integrations/did-vc.md`
 
 Next editorial pass surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/docs/explainers/full-briefing.md`
-- `/Users/grig/work/repo/universalmanifest/docs/OUTREACH-AND-ADOPTION-STRATEGY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`
+- `docs/explainers/full-briefing.md`
+- `docs/OUTREACH-AND-ADOPTION-STRATEGY.md`
+- `docs/UNIVERSAL-MANIFEST-BRIEFING.md`
 
 Policy:
 

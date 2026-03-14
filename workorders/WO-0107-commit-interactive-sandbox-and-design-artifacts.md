@@ -69,10 +69,10 @@ Organize into logical commits:
 - [x] All uncommitted documentation diffs are committed.
 - [x] New fixture is committed.
 - [x] `git status` shows a clean working tree (or only intentionally-deferred items).
-- [x] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds after commit.
+- [x] `cd site && npm run build:clean` succeeds after commit.
 
 ## Validation commands
 
 - `git status` (should show clean or minimal working tree)
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest && npm test`
+- `cd site && npm run build:clean`
+- `cd  && npm test`

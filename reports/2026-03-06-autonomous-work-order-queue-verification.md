@@ -21,18 +21,18 @@ The RP1/MSF adversarial hardening wave (`WO-0139`) had just been completed and c
 ## Verification checklist
 
 - `DONE` — Read the autonomous-mode instructions.
-- `DONE` — Scanned `/Users/grig/work/repo/universalmanifest/docs/workorders/` for `Status: NOT_STARTED`, `Status: IN_PROGRESS`, or `Status: BLOCKED`.
-- `DONE` — Checked `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md` tail for the latest wave.
-- `DONE` — Checked `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` priority section for queue state.
+- `DONE` — Scanned `docs/workorders/` for `Status: NOT_STARTED`, `Status: IN_PROGRESS`, or `Status: BLOCKED`.
+- `DONE` — Checked `docs/workorders/WO-INDEX.md` tail for the latest wave.
+- `DONE` — Checked `docs/STATE-OF-THE-PROJECT.md` priority section for queue state.
 
 ## Observed reality
 
 Queue scan result:
-- No work-order files under `/Users/grig/work/repo/universalmanifest/docs/workorders/` currently declare `NOT_STARTED`, `IN_PROGRESS`, or `BLOCKED`.
+- No work-order files under `docs/workorders/` currently declare `NOT_STARTED`, `IN_PROGRESS`, or `BLOCKED`.
 
 Index/state result:
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md` ends with `WO-0139`, marked `[COMPLETED]`.
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` states there are no queued follow-on work orders in the current approved sequence.
+- `docs/workorders/WO-INDEX.md` ends with `WO-0139`, marked `[COMPLETED]`.
+- `docs/STATE-OF-THE-PROJECT.md` states there are no queued follow-on work orders in the current approved sequence.
 
 ## Conclusion
 
@@ -43,8 +43,8 @@ Execution stopped because the in-scope queue is empty, not because work was skip
 ## How to verify from scratch
 
 1. Search work-order files for non-completed statuses:
-   - `rg -n "Status:\s*(NOT_STARTED|IN_PROGRESS|BLOCKED)" /Users/grig/work/repo/universalmanifest/docs/workorders`
+   - `rg -n "Status:\s*(NOT_STARTED|IN_PROGRESS|BLOCKED)" docs/workorders`
 2. Review the latest index section:
-   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+   - `docs/workorders/WO-INDEX.md`
 3. Review the current project-state priority section:
-   - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+   - `docs/STATE-OF-THE-PROJECT.md`

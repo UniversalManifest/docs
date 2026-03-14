@@ -27,10 +27,10 @@ Out of scope:
 
 ## Deliverables
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `services/myum-resolver/wrangler.toml`
+- `docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
+- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
 
 ## Acceptance criteria
 
@@ -43,13 +43,13 @@ Out of scope:
 ## Completion evidence
 
 - Journeys pass:
-  - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-  - artifact: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
+  - command: `cd packages/universal-manifest && npm run journeys`
+  - artifact: `docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
 - Pages deployment:
-  - command: `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist --project-name universalmanifest-net`
+  - command: `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy deploy/universalmanifest.net/dist --project-name universalmanifest-net`
   - deployment URL: `https://5f6a06d8.universalmanifest-net.pages.dev`
 - Resolver routing deployment:
-  - command: `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 ./node_modules/.bin/wrangler deploy`
+  - command: `cd services/myum-resolver && CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 ./node_modules/.bin/wrangler deploy`
   - deployed triggers include:
     - `myum.net/*`
     - `www.myum.net/*`
@@ -58,10 +58,10 @@ Out of scope:
   - `https://universalmanifest.net/getting-started/workbench/` -> `308` (`Location: /workbench/`)
   - `https://universalmanifest.net/workbench/` -> `200`
   - `https://www.myum.net/health` -> `200`
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod` -> `PASS`
+  - `cd packages/universal-manifest && npm run smoke:endpoints:prod` -> `PASS`
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0003-publishing-and-release.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+- `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- `docs/workorders/WO-0003-publishing-and-release.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`

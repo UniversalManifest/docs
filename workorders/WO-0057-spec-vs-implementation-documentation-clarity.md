@@ -50,16 +50,16 @@ Out of scope:
   - Integration docs that assume TypeScript/Node.js.
 - [x] Produce an audit report listing every instance with file path, line number, and proposed fix.
 - [x] Key files to audit:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/README.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/` (all pages)
-  - `/Users/grig/work/repo/universalmanifest/integrations/` (all files)
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-  - `/Users/grig/work/repo/universalmanifest/README.md`
+  - `spec/v0.1/README.md`
+  - `spec/v0.2/README.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `packages/universal-manifest/README.md`
+  - `site/src/content/docs/` (all pages)
+  - `integrations/` (all files)
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/CRITICAL-PATH.md`
+  - `README.md`
 
 ### Phase 2 — Key entry-point messaging updates
 
@@ -107,20 +107,20 @@ Out of scope:
 ## Key file paths (created/modified)
 
 Modified files (partial list; full list from audit):
-- `/Users/grig/work/repo/universalmanifest/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/README.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/` (multiple pages)
-- `/Users/grig/work/repo/universalmanifest/integrations/` (multiple files)
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `README.md`
+- `spec/v0.1/README.md`
+- `spec/v0.2/README.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.2/CONFORMANCE.md`
+- `packages/universal-manifest/README.md`
+- `site/src/content/docs/index.md`
+- `site/src/content/docs/getting-started/` (multiple pages)
+- `integrations/` (multiple files)
+- `docs/STATE-OF-THE-PROJECT.md`
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-wo-0057-spec-impl-audit-report.md` (audit report)
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/implementations/` (new docs section, if navigation restructure is warranted)
+- `docs/reports/YYYY-MM-DD-wo-0057-spec-impl-audit-report.md` (audit report)
+- `site/src/content/docs/implementations/` (new docs section, if navigation restructure is warranted)
 
 ## Acceptance criteria
 
@@ -131,13 +131,13 @@ New files:
 - [x] Code examples in docs include qualification notes about being reference-implementation examples.
 - [x] Integration docs do not assume TypeScript/Node.js as the only option.
 - [x] A new reader encountering UM for the first time would understand within the first 30 seconds that UM is a specification they can implement in any language.
-- [x] `rg -i "the implementation" /Users/grig/work/repo/universalmanifest/site/src/content/docs/ /Users/grig/work/repo/universalmanifest/spec/` returns zero results that position the TS helper as "the" (only) implementation.
+- [x] `rg -i "the implementation" site/src/content/docs/ spec/` returns zero results that position the TS helper as "the" (only) implementation.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (site builds cleanly)
-- `rg -n "the implementation" /Users/grig/work/repo/universalmanifest/site/src/content/docs/ /Users/grig/work/repo/universalmanifest/spec/` (check for problematic phrasing)
-- `rg -n "packages/universal-manifest" /Users/grig/work/repo/universalmanifest/site/src/content/docs/` (verify all references are qualified)
+- `cd site && npm run build:clean` (site builds cleanly)
+- `rg -n "the implementation" site/src/content/docs/ spec/` (check for problematic phrasing)
+- `rg -n "packages/universal-manifest" site/src/content/docs/` (verify all references are qualified)
 - Manual review of docs site entry points for correct messaging.
 
 ## Dependencies and sequencing notes
@@ -153,5 +153,5 @@ Completed with audit + messaging updates across root README, spec READMEs, site 
 
 Evidence:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-02-wo-0057-spec-impl-audit-report.md`
+- `docs/reports/2026-03-02-wo-0057-spec-impl-audit-report.md`
 - Agent Task ID preserved: `e0a7fe60_1772165606`

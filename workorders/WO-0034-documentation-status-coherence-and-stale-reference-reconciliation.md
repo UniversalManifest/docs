@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** HIGH
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/LOOSE-ENDS-REVIEW-2026-02-22.md`
+**Source:** `.dev/ai/LOOSE-ENDS-REVIEW-2026-02-22.md`
 
 ## Objective
 
@@ -21,9 +21,9 @@ Current docs contain contradictory status statements that can mislead operators 
 
 In scope:
 
-- Update stale blocker language in `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`.
-- Correct stale/missing evidence path(s) in `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`.
-- Add clear superseded/historical marker in `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md` pointing to canonical current-state docs.
+- Update stale blocker language in `PROJECT-RULES.md`.
+- Correct stale/missing evidence path(s) in `docs/workorders/WO-0014-interactive-manifest-workbench.md`.
+- Add clear superseded/historical marker in `docs/reports/2026-02-20-master-forward-worklist.md` pointing to canonical current-state docs.
 - Add explicit note in current-state guidance that prior handoff/audit priority sections are time-scoped snapshots unless revalidated.
 - Keep state docs and rule docs semantically aligned on current completion posture.
 
@@ -35,14 +35,14 @@ Out of scope:
 ## Required deliverables
 
 1. Reconciled status language in:
-   - `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
+   - `PROJECT-RULES.md`
 2. Corrected completion evidence path references in:
-   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
+   - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
 3. Historical/superseded marker in:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+   - `docs/reports/2026-02-20-master-forward-worklist.md`
 4. Brief reconciliation note in:
-   - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-   - or an adjacent dated report under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+   - `docs/STATE-OF-THE-PROJECT.md`
+   - or an adjacent dated report under `docs/reports/`
 
 ## Acceptance criteria
 
@@ -55,10 +55,10 @@ Out of scope:
 
 ## Validation commands
 
-- `rg -n 'WO-0003|production publishing pending|blocked on external infra actions' /Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
-- `rg -n 'site/public/getting-started/workbench/' /Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-- `rg -n 'single source list of all remaining known work|superseded|historical snapshot' /Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `rg -n 'WO-0003|production publishing pending|blocked on external infra actions' PROJECT-RULES.md`
+- `rg -n 'site/public/getting-started/workbench/' docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `rg -n 'single source list of all remaining known work|superseded|historical snapshot' docs/reports/2026-02-20-master-forward-worklist.md`
+- `cd site && npm run build:clean`
 
 ## Dependencies
 
@@ -67,9 +67,9 @@ Out of scope:
 ## Completion evidence (2026-02-22)
 
 - Reconciliation report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0034-documentation-status-reconciliation-report.md`
+  - `docs/reports/2026-02-22-wo-0034-documentation-status-reconciliation-report.md`
 - Updated files:
-  - `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `PROJECT-RULES.md`
+  - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+  - `docs/reports/2026-02-20-master-forward-worklist.md`
+  - `docs/STATE-OF-THE-PROJECT.md`

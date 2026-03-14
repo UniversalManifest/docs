@@ -24,23 +24,23 @@ Out of scope:
 ## Deliverables
 
 - Work order and tracking:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0027-omatrust-integration-lane-execution.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
+  - `docs/workorders/WO-0027-omatrust-integration-lane-execution.md`
+  - `docs/workorders/WO-INDEX.md`
+  - `.dev/ai/workorders/WO-INDEX.md`
 - Integration docs:
-  - `/Users/grig/work/repo/universalmanifest/integrations/oma-trust.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/oma-trust.md`
+  - `integrations/oma-trust.md`
+  - `site/src/content/docs/integrations/oma-trust.md`
 - Fixtures:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/site/public/harness/fixtures/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/site/public/harness/fixtures/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/site/public/harness/fixtures/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld`
+  - `examples/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld`
+  - `examples/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld`
+  - `examples/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld`
+  - `site/public/harness/fixtures/v0.1/stubs/oma-trust-proof-based-service-manifest.jsonld`
+  - `site/public/harness/fixtures/v0.1/stubs/oma-trust-trusted-attester-service-manifest.jsonld`
+  - `site/public/harness/fixtures/v0.1/stubs/oma-trust-lifecycle-edge-service-manifest.jsonld`
 - Journey and proof execution:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J11-omatrust-attestation-interoperability.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `docs/journeys/J11-omatrust-attestation-interoperability.md`
+  - `docs/journeys/README.md`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 
 ## Acceptance criteria
 
@@ -55,10 +55,10 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-omatrust-integration-assessment.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-oma-link-coverage-evidence.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md`
+- `docs/reports/2026-02-22-omatrust-integration-assessment.md`
+- `docs/reports/2026-02-22-oma-link-coverage-evidence.md`
+- `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
+- `docs/workorders/WO-0024-multi-provider-proof-of-personhood-social-did-chia-integration.md`
 
 ## Execution log
 
@@ -73,9 +73,9 @@ Completed:
 6. Ran validation commands successfully.
 
 Validation commands:
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` (pass)
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` (pass; report: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-22T05-22-19-014Z-journey-report.json`)
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build` (pass; generated `/integrations/oma-trust/index.html`)
+- `cd packages/universal-manifest && npm test` (pass)
+- `cd packages/universal-manifest && npm run journeys` (pass; report: `docs/journeys/_artifacts/2026-02-22T05-22-19-014Z-journey-report.json`)
+- `cd site && npm run build` (pass; generated `/integrations/oma-trust/index.html`)
 
 Notes:
 - Astro build emitted pre-existing duplicate-id warnings for previously existing pages; no build failures.

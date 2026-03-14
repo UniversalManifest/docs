@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P0  
 **Owner:** Vision + Integration Architecture  
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`, `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+**Source:** `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`, `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`, `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
 
 ## Objective
 
@@ -33,13 +33,13 @@ Out of scope:
 ## Deliverables
 
 1. Vision/source-of-truth updates:
-   - `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
+   - `docs/PROJECT-VISION.md`
 2. Reference runtime alignment:
-   - `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
+   - `integrations/reference-runtime.md`
+   - `site/src/content/docs/integrations/reference-runtime.md`
 3. Decision synchronization:
-   - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-   - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/decisions.md`
+   - `docs/DECISIONS.md`
+   - `site/src/content/docs/governance/decisions.md`
 
 ## Acceptance Criteria
 
@@ -50,28 +50,28 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+- `docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md`
+- `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
+- `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+- `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
 
 ## Execution Progress (2026-03-06)
 
 Completed in this pass:
 
-- Updated `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md` with:
+- Updated `docs/PROJECT-VISION.md` with:
   - composite-stack framing,
   - subject-controlled active-runtime guidance,
   - explicit pointer-first storage separation,
   - and an active-runtime loop model.
-- Updated `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md` and its site mirror:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
+- Updated `integrations/reference-runtime.md` and its site mirror:
+  - `site/src/content/docs/integrations/reference-runtime.md`
   with active-runtime, bridge-adapter, and local-first source-of-truth language.
 - Added a new architecture decision record to:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/decisions.md`
+  - `docs/DECISIONS.md`
+  - `site/src/content/docs/governance/decisions.md`
 - Verified the public docs surface still builds:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - `cd site && npm run build:clean`
 
 ## Completion notes
 

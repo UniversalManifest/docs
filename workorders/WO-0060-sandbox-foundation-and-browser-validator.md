@@ -91,14 +91,14 @@ Out of scope:
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/validator-browser.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/crypto-browser.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/canonicalize.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/types.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/index.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/index.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/[...scenario].astro`
-- `/Users/grig/work/repo/universalmanifest/site/public/sandbox/fixtures/` (directory)
+- `site/src/scripts/sandbox/validator-browser.ts`
+- `site/src/scripts/sandbox/crypto-browser.ts`
+- `site/src/scripts/sandbox/canonicalize.ts`
+- `site/src/scripts/sandbox/types.ts`
+- `site/src/scripts/sandbox/scenarios/index.ts`
+- `site/src/pages/sandbox/index.astro`
+- `site/src/pages/sandbox/[...scenario].astro`
+- `site/public/sandbox/fixtures/` (directory)
 
 ## Acceptance criteria
 
@@ -113,6 +113,6 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (verify /sandbox/ route)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (verify /sandbox/ route)
 - Parity test script (created in Phase 5)

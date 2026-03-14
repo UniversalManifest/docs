@@ -24,7 +24,7 @@ Disallowed:
 ## Scope
 
 In scope:
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/**/*.md`
+- `site/src/content/docs/**/*.md`
 - Any currently published page under docs content that uses plain route/file path references.
 
 Out of scope:
@@ -41,23 +41,23 @@ Out of scope:
 
 ## Validation commands
 
-- `rg -n '/[A-Za-z0-9._-]' /Users/grig/work/repo/universalmanifest/site/src/content/docs`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
-- `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist --project-name universalmanifest-net --branch main`
+- `rg -n '/[A-Za-z0-9._-]' site/src/content/docs`
+- `cd site && npm run build:clean`
+- `node deploy/universalmanifest.net/build.mjs`
+- `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy deploy/universalmanifest.net/dist --project-name universalmanifest-net --branch main`
 
 ## Completion evidence (2026-02-22)
 
 - Normalization scope completed across publish-facing docs in:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/*.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/*.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/spec/*.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/publishing/*.md`
+  - `site/src/content/docs/getting-started/*.md`
+  - `site/src/content/docs/integrations/*.md`
+  - `site/src/content/docs/spec/*.md`
+  - `site/src/content/docs/publishing/*.md`
 - RP1 malformed heading fixed in:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
 - Validation:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` -> PASS
-  - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' /Users/grig/work/repo/universalmanifest/site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'` -> no remaining path-only reference hits (except non-path phrase in `conformance/resolver.md`)
+  - `cd site && npm run build:clean` -> PASS
+  - `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'` -> no remaining path-only reference hits (except non-path phrase in `conformance/resolver.md`)
 - Deploy and live checks:
   - Deploy: `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy ... --branch main` -> SUCCESS
   - Live `200` checks:

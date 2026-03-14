@@ -9,7 +9,7 @@
 
 ### Fixed Files
 
-**File:** `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
+**File:** `spec/v0.1/schema.json`
 
 **Change:**
 ```diff
@@ -39,7 +39,7 @@ All test suites pass after the fix:
 **Current:** `@localartistnetwork/universal-manifest`
 **Recommended:** `@universalmanifest/core` or `universal-manifest`
 
-**Location:** `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
+**Location:** `packages/universal-manifest/package.json`
 
 **Impact:** HIGH
 - npm publication blocked by legacy naming
@@ -69,7 +69,7 @@ All test suites pass after the fix:
 - Option B: `UniversalManifestEntity`, etc. (more verbose but clearer)
 - Option C: No prefix, just `Entity`, `Facet`, `Signature` (simplest)
 
-**Location:** `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
+**Location:** `packages/universal-manifest/src/index.ts`
 
 **Impact:** HIGH
 - Creates confusion about project identity
@@ -93,8 +93,8 @@ export interface LanSignatureV02 { ... }
 ### 2.3 No Other Legacy References Found
 
 **Verified clean:**
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/` - No `localartist` strings
-- `/Users/grig/work/repo/universalmanifest/services/` - No `localartist` strings
+- `packages/universal-manifest/src/` - No `localartist` strings
+- `services/` - No `localartist` strings
 - Spec text files - Already use `universalmanifest.net`
 - Example fixtures - Already use correct domain
 - Documentation site - Already uses correct branding
@@ -103,7 +103,7 @@ export interface LanSignatureV02 { ... }
 
 ## 3. Gap Analysis Alignment
 
-This work addresses the following items from `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-remaining-work-to-final-vision.md`:
+This work addresses the following items from `docs/reports/2026-02-23-remaining-work-to-final-vision.md`:
 
 ### Completed
 - **SPEC-001** (CRITICAL): v0.1 `schema.json` `$id` now references `universalmanifest.net` - RESOLVED
@@ -170,20 +170,20 @@ To verify the current state at any time:
 
 ```bash
 # Check for remaining localartist references
-rg "localartist" /Users/grig/work/repo/universalmanifest/spec/
-rg "localartist" /Users/grig/work/repo/universalmanifest/packages/universal-manifest/
+rg "localartist" spec/
+rg "localartist" packages/universal-manifest/
 
 # Check Lan type prefixes
-rg "^export.*Lan" /Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts
-rg "Lan[A-Z]" /Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts
+rg "^export.*Lan" packages/universal-manifest/src/index.ts
+rg "Lan[A-Z]" packages/universal-manifest/src/index.ts
 
 # Verify tests still pass
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm test
 npm run journeys
 
 # Verify site builds
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run build:clean
 ```
 

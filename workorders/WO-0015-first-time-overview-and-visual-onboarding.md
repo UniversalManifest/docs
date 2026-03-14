@@ -51,21 +51,21 @@ Applied alignment directives:
   - overview -> quickstart -> v0.1 spec -> conformance -> journeys.
 
 Evidence:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 Closure note:
 - Human-participant reader testing remains recommended but optional.
 
 Reader-testing protocol and pilot evidence:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`
+- `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+- `docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`
 
 Closure command sequence (next agent/operator):
-1. `cd /Users/grig/work/repo/universalmanifest/site && npm run dev`
+1. `cd site && npm run dev`
 2. Run the protocol with at least one implementer who has not worked on this repository.
 3. Save evidence as:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
+   - `docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
 4. Update this work order:
    - check final acceptance criterion
    - keep status aligned to current onboarding policy in `docs/DECISIONS.md`

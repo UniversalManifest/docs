@@ -37,35 +37,35 @@ This crosswalk maps foundational references to the current spec scope and comple
 
 ## B) Universal Manifest Repo Foundational References
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
+- `docs/PROJECT-VISION.md`
   - Defines umbrella vision and multi-surface adoption model.
   - Prevents scope drift toward single-implementation-only implementation.
 
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+- `docs/STATE-OF-THE-PROJECT.md`
   - Declares explicit current-state and not-yet-finalized areas.
   - Primary source for spec completion maturity.
 
-- `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
+- `docs/DEPTH-AND-SCOPE.md`
   - Separates normative spec from examples, integrations, tooling, and research.
   - Used as boundary enforcement for “done done.”
 
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `docs/DECISIONS.md`
   - Canonical record of ID strategy and domain split (`universalmanifest.net` + `myum.net`).
   - Aligns with publish/deployment work orders.
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
+- `spec/v0.1/README.md`
   - Normative v0.1 field and behavior specification.
   - Core input to D1 (contract completeness).
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+- `spec/v0.1/CONFORMANCE.md`
   - Consumer/issuer conformance behaviors and fixture policy.
   - Core input to D2 (conformance readiness).
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
+- `spec/v0.1/schema.json`
   - Structural contract used by reference implementation smoke validation.
   - Validates spec-to-implementation alignment.
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
   - Direction for integrity profile evolution.
   - Evidence that integrity profile is drafted, not finalized.
 

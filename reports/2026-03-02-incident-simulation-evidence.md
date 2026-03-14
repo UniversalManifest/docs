@@ -23,7 +23,7 @@ Temporary local mutation (not committed):
 Runner command (with faulty expectation):
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/conformance/runner
+cd conformance/runner
 node ./cli.mjs --mode command --adapter-command "node ../adapters/typescript/adapter.mjs" --versions 0.2 --report ./conformance-report-sim-fail.json
 ```
 
@@ -34,7 +34,7 @@ Observed output:
 
 Artifacts:
 
-- `/Users/grig/work/repo/universalmanifest/conformance/runner/conformance-report-sim-fail.json`
+- `conformance/runner/conformance-report-sim-fail.json`
 - `/tmp/um-incident-sim-fail.log`
 
 ## 4. Triage and Communication Draft (Simulation)
@@ -52,7 +52,7 @@ Fix action:
 Recovery command:
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/conformance/runner
+cd conformance/runner
 node ./cli.mjs --mode command --adapter-command "node ../adapters/typescript/adapter.mjs" --versions 0.2 --report ./conformance-report-sim-recovered.json
 ```
 
@@ -63,7 +63,7 @@ Observed output:
 
 Artifacts:
 
-- `/Users/grig/work/repo/universalmanifest/conformance/runner/conformance-report-sim-recovered.json`
+- `conformance/runner/conformance-report-sim-recovered.json`
 - `/tmp/um-incident-sim-recovered.log`
 
 ## 6. Post-Fix Verification
@@ -85,6 +85,6 @@ What to harden next:
 
 ## 8. Policy Links
 
-- `/Users/grig/work/repo/universalmanifest/docs/governance/INCIDENT-RESPONSE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/REGRESSION-PREVENTION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/BREAKING-CHANGE-POLICY.md`
+- `docs/governance/INCIDENT-RESPONSE.md`
+- `docs/governance/REGRESSION-PREVENTION.md`
+- `docs/governance/BREAKING-CHANGE-POLICY.md`

@@ -44,8 +44,8 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm run journeys`
 
 ## Completion evidence (2026-02-23)
 

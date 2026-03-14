@@ -49,19 +49,19 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/src/index.ts`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CONTRACT.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- `services/myum-resolver/src/index.ts`
+- `services/myum-resolver/CONTRACT.md`
+- `packages/universal-manifest/scripts/smoke-endpoints.mjs`
 
 ## Verification Commands (Target)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/services/myum-resolver
+cd services/myum-resolver
 npm run test
 ```
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:dev
 ```
 
@@ -70,16 +70,16 @@ npm run smoke:endpoints:dev
 Delivered artifacts:
 
 - Contract-grade resolver test suite:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/scripts/contract-tests.mjs`
+  - `services/myum-resolver/scripts/contract-tests.mjs`
 - Resolver test command wiring:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/package.json`
+  - `services/myum-resolver/package.json`
 - Resolver contract/test docs:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/README.md`
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CONTRACT.md`
+  - `services/myum-resolver/README.md`
+  - `services/myum-resolver/CONTRACT.md`
 - CI integration for resolver contract tests:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml` (`resolver-contract` job)
+  - `.github/workflows/ci.yml` (`resolver-contract` job)
 
 Verification results:
 
-- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run test:contract` -> PASS
-- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck` -> PASS
+- `cd services/myum-resolver && npm run test:contract` -> PASS
+- `cd services/myum-resolver && npm run typecheck` -> PASS

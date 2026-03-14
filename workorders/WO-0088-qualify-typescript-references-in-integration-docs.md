@@ -21,32 +21,32 @@ Integration documents are used by external adopters to understand how to impleme
 
 ### Files to modify
 
-1. **`/Users/grig/work/repo/universalmanifest/integrations/TEMPLATE.md`** (line 122)
+1. **`integrations/TEMPLATE.md`** (line 122)
    - Change: "run `assertUniversalManifestV01` from the `packages/universal-manifest` test harness"
    - To: "validate against the v0.1 JSON Schema and conformance fixtures. If using the TypeScript reference implementation, run `assertUniversalManifestV01` from the `packages/universal-manifest` test harness."
 
-2. **`/Users/grig/work/repo/universalmanifest/integrations/social.md`** (line 34)
+2. **`integrations/social.md`** (line 34)
    - Qualify the reference to `packages/universal-manifest -> npm run journeys` as "Executable proof (TypeScript reference implementation):" rather than "Executable proof (cross-runtime adopter):".
    - Add a note that any conformant implementation can serve as proof.
 
-3. **`/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`** (line 11)
+3. **`integrations/rp1-spatial-fabric.md`** (line 11)
    - Qualify the reference to the TS journey runner script as "TypeScript reference implementation status evidence."
 
 4. **Any other integration files** that reference `packages/universal-manifest` or `npm run` without qualification.
 
 ### Verification search
 
-Run `rg -n "packages/universal-manifest|npm run|npm test" /Users/grig/work/repo/universalmanifest/integrations/` to find all instances that need qualification.
+Run `rg -n "packages/universal-manifest|npm run|npm test" integrations/` to find all instances that need qualification.
 
 ## Acceptance criteria
 
 - [ ] Integration TEMPLATE.md does not assume TypeScript as the only validation path.
 - [ ] All `packages/universal-manifest` references in integration docs are qualified as "TypeScript reference implementation."
 - [ ] The template instructs new integration authors to validate against the schema and fixtures first, with the TypeScript helper as one option.
-- [ ] `rg -n "packages/universal-manifest" /Users/grig/work/repo/universalmanifest/integrations/` returns only qualified references.
+- [ ] `rg -n "packages/universal-manifest" integrations/` returns only qualified references.
 
 ## Validation commands
 
-- `rg -n "packages/universal-manifest" /Users/grig/work/repo/universalmanifest/integrations/`
-- `rg -n "npm run\|npm test" /Users/grig/work/repo/universalmanifest/integrations/`
+- `rg -n "packages/universal-manifest" integrations/`
+- `rg -n "npm run\|npm test" integrations/`
 - Manual review of each match for proper qualification.

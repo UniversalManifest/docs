@@ -26,10 +26,10 @@ Add the following standard banner language (or a context-appropriate variant) to
 
 ### Files to modify
 
-1. **`/Users/grig/work/repo/universalmanifest/README.md`** — Add banner near the top, before any code or npm commands.
-2. **`/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`** — Add as a prominent callout (Starlight `:::note` or similar) near the top of the landing page.
-3. **`/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`** — Add as the first paragraph after the title.
-4. **`/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`** — Add as the first paragraph after the title.
+1. **`README.md`** — Add banner near the top, before any code or npm commands.
+2. **`site/src/content/docs/index.md`** — Add as a prominent callout (Starlight `:::note` or similar) near the top of the landing page.
+3. **`spec/v0.1/README.md`** — Add as the first paragraph after the title.
+4. **`spec/v0.2/README.md`** — Add as the first paragraph after the title.
 
 ### Additional action
 
@@ -42,11 +42,11 @@ Add the following standard banner language (or a context-appropriate variant) to
 - [ ] The statement mentions that the TypeScript helper is ONE reference implementation.
 - [ ] The statement invites implementations in any language.
 - [ ] The origin-runtime relationship text is surfaced on at least one public-facing site page.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `rg -n "specification" /Users/grig/work/repo/universalmanifest/README.md` (confirm banner exists)
-- `rg -n "specification" /Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` (confirm banner exists)
-- `rg -n "specification" /Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` (confirm banner exists)
-- `rg -n "specification" /Users/grig/work/repo/universalmanifest/spec/v0.2/README.md` (confirm banner exists)
+- `rg -n "specification" README.md` (confirm banner exists)
+- `rg -n "specification" site/src/content/docs/index.md` (confirm banner exists)
+- `rg -n "specification" spec/v0.1/README.md` (confirm banner exists)
+- `rg -n "specification" spec/v0.2/README.md` (confirm banner exists)

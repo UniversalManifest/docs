@@ -5,9 +5,9 @@ Date: 2026-02-22
 ## Deployment
 
 - Build artifact refresh:
-  - `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
+  - `node deploy/universalmanifest.net/build.mjs`
 - Cloudflare Pages deploy:
-  - `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist --project-name universalmanifest-net`
+  - `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy deploy/universalmanifest.net/dist --project-name universalmanifest-net`
 - Deployment URL returned by Wrangler:
   - `https://1683128a.universalmanifest-net.pages.dev`
 

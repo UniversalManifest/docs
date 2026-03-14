@@ -13,9 +13,9 @@ Incident commander: Platform/Ops owner
 - First failing check: Production synthetic endpoint smoke with forced unknown UMID (urn:uuid:99999999-9999-4999-8999-999999999999)
 - Was webhook alert delivered? (yes/no): yes
 - Related run artifact paths:
-  - /Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-synthetic-alert-drill-report.md
-  - /Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-run2-job.log
-  - /Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0121-webhook-requests.json
+  - .dev/ai/reports/operations/2026-03-04-wo-0121-synthetic-alert-drill-report.md
+  - .dev/ai/reports/operations/2026-03-04-wo-0121-run2-job.log
+  - .dev/ai/reports/operations/2026-03-04-wo-0121-webhook-requests.json
 
 ## 2) Impact
 
@@ -59,7 +59,7 @@ Incident commander: Platform/Ops owner
 
 ## 7) Links
 
-- Synthetic policy: /Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md
-- Production smoke runbook: /Users/grig/work/repo/universalmanifest/docs/PRODUCTION-DEPLOY-SMOKE.md
-- Resolver deploy runbook: /Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md
-- Docs deploy runbook: /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md
+- Synthetic policy: docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md
+- Production smoke runbook: docs/PRODUCTION-DEPLOY-SMOKE.md
+- Resolver deploy runbook: services/myum-resolver/CLOUDFLARE-DEPLOY.md
+- Docs deploy runbook: deploy/universalmanifest.net/CLOUDFLARE-PAGES.md

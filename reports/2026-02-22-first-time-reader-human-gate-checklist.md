@@ -1,7 +1,7 @@
 # First-Time Reader Human Validation Checklist (Optional)
 
 Date: 2026-02-22
-Project root: `/Users/grig/work/repo/universalmanifest`
+Project root: ``
 Policy status: Optional quality validation (not a closure gate)
 
 ## Purpose
@@ -10,9 +10,9 @@ Define exactly what a human participant should see and be able to explain when r
 
 ## Pages the participant must use
 
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `site/src/content/docs/getting-started/quick-start.md`
+- `site/src/content/docs/getting-started/workbench.md`
 
 Local route sequence:
 
@@ -63,7 +63,7 @@ Q2 must include:
 
 Save a dated report as:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
+- `docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
 
 Minimum report fields:
 

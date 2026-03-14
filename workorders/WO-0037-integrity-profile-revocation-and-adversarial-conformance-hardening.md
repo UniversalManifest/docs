@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** MEDIUM
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+**Source:** `docs/STATE-OF-THE-PROJECT.md`
 
 ## Objective
 
@@ -36,14 +36,14 @@ Out of scope:
 ## Required deliverables
 
 1. Decision updates in:
-   - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+   - `docs/DECISIONS.md`
 2. Contract/conformance updates in:
-   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-   - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+   - `spec/v0.2/CONFORMANCE.md`
+   - `spec/v0.2/SIGNATURE-PROFILE.md`
 3. Adversarial fixtures in:
-   - `/Users/grig/work/repo/universalmanifest/examples/v0.2/`
+   - `examples/v0.2/`
 4. Hardening evidence report in:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/`
+   - `docs/reports/`
 
 ## Acceptance criteria
 
@@ -54,17 +54,17 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `rg -n 'integrity|revocation|cursor|adversarial|misuse' /Users/grig/work/repo/universalmanifest/docs/DECISIONS.md /Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md /Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `cd packages/universal-manifest && npm test`
+- `cd site && npm run build:clean`
+- `rg -n 'integrity|revocation|cursor|adversarial|misuse' docs/DECISIONS.md spec/v0.2/SIGNATURE-PROFILE.md spec/v0.2/CONFORMANCE.md`
 
 ## Completion evidence (2026-02-22)
 
 - Report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0037-integrity-revocation-adversarial-hardening-report.md`
+  - `docs/reports/2026-02-22-wo-0037-integrity-revocation-adversarial-hardening-report.md`
 - Updated decision/spec artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+  - `docs/DECISIONS.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.2/CONFORMANCE.md`
 - Adversarial fixture evidence:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/invalid/`
+  - `examples/v0.2/invalid/`

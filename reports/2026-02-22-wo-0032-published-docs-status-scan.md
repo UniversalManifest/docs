@@ -1,16 +1,16 @@
 # WO-0032 Report — Published Docs Stale-Status Scan and Fix
 
 Date: 2026-02-22
-Work order: /Users/grig/work/repo/universalmanifest/docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md
+Work order: docs/workorders/WO-0032-published-docs-stale-status-scan-and-fix.md
 
 ## Scope scanned
 
-- /Users/grig/work/repo/universalmanifest/site/src/content/docs/
+- site/src/content/docs/
 
 ## Findings
 
 1. Stale published RP1 status block (fixed)
-- File: /Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md
+- File: site/src/content/docs/integrations/rp1-spatial-fabric.md
 - Old content incorrectly stated partial ingestion and in-progress materialization.
 - Old content exposed internal `.dev/ai` absolute paths on a public page.
 
@@ -24,28 +24,28 @@ Work order: /Users/grig/work/repo/universalmanifest/docs/workorders/WO-0032-publ
   - /harness/fixtures/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld
   - /proof/journeys/
 - Updated repo integration source page for consistency:
-  - /Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md
+  - integrations/rp1-spatial-fabric.md
 
 ## Scan commands and results
 
-- `rg -n -i 'partially ingested|stage -1/0|materialization is in progress|fixture/journey materialization pending|source corpus is now partially imported' /Users/grig/work/repo/universalmanifest/site/src/content/docs`
+- `rg -n -i 'partially ingested|stage -1/0|materialization is in progress|fixture/journey materialization pending|source corpus is now partially imported' site/src/content/docs`
   - Result: no matches after fix.
 
-- `rg -n '/Users/grig/work/repo/universalmanifest/\\.dev/ai' /Users/grig/work/repo/universalmanifest/site/src/content/docs`
+- `rg -n '\\.dev/ai' site/src/content/docs`
   - Result: no matches after fix.
 
 ## Build and deploy
 
 - Site build:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - `cd site && npm run build:clean`
   - Result: PASS.
 
 - Publish bundle build:
-  - `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
+  - `node deploy/universalmanifest.net/build.mjs`
   - Result: PASS.
 
 - Cloudflare Pages deploy (production):
-  - `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist --project-name universalmanifest-net --branch main`
+  - `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy deploy/universalmanifest.net/dist --project-name universalmanifest-net --branch main`
   - Deployment ID: `ed663d39-d97a-4bfe-8f83-bff4e84a46e1`
   - Environment: Production
 

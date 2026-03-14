@@ -22,7 +22,7 @@ The freshness audit found that CRITICAL-PATH.md has received no commits during t
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`**
+**`docs/CRITICAL-PATH.md`**
 
 ### Phases/milestones to add
 
@@ -63,6 +63,6 @@ Review and update the status of existing phases (1-9) to reflect completions fro
 
 ## Validation commands
 
-- `rg -n "sandbox\|Sandbox" /Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (should find references)
-- `rg -n "adopter\|Adopter" /Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (should find references)
+- `rg -n "sandbox\|Sandbox" docs/CRITICAL-PATH.md` (should find references)
+- `rg -n "adopter\|Adopter" docs/CRITICAL-PATH.md` (should find references)
 - Manual review of phase ordering and completeness.

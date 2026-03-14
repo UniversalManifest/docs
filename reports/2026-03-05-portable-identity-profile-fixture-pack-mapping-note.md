@@ -2,7 +2,7 @@
 
 Date: 2026-03-05  
 Program: Portable Identity Profile Go-Now (`PIP-GN-02`)  
-Repository: `/Users/grig/work/repo/universalmanifest`
+Repository: ``
 
 ## Purpose
 
@@ -38,7 +38,7 @@ Document how the new Portable Identity Profile fixtures map to implementation re
 
 Validation command executed:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 Validation result summary (2026-03-05):
 

@@ -5,7 +5,7 @@
 **Updated:** 2026-03-05  
 **Priority:** P0  
 **Owner:** Documentation + Spec Integration  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+**Source:** `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
 
 ## Objective
 
@@ -21,12 +21,12 @@ In scope:
 
 - Execute and track `MUM-GN-01` through `MUM-GN-06`.
 - Deliver and harden integration pages as part of `MUM-GN-01`:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - `integrations/metaverse.md`
+  - `site/src/content/docs/integrations/metaverse.md`
   - integration catalog updates clarifying MUM lane.
 - Keep status synchronized in:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+  - `docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md`
+  - `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
 
 Out of scope:
 
@@ -51,10 +51,10 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-comprehensive-human-review-report.md`
+- `site/src/content/docs/integrations/index.md`
 
 ## Execution Progress (2026-03-05)
 
@@ -66,60 +66,60 @@ Started in this pass:
 Completed in this pass:
 
 - Hardened source integration lane with expanded MUM scenario coverage:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
+  - `integrations/metaverse.md`
 - Hardened site integration page with explicit scenario mapping and next links:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - `site/src/content/docs/integrations/metaverse.md`
 - Updated integration catalog entry to reflect MUM scenario interoperability:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
+  - `site/src/content/docs/integrations/index.md`
 - Validated docs build with hardened metaverse lane:
-  - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - command: `cd site && npm run build:clean`
 - Started `MUM-GN-02` with registry pack additions for namespaced metaverse key families:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/REGISTRY.md`
 - Added consistency-scan evidence artifact for registry/doc/fixture key reuse:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
+  - `docs/reports/2026-03-05-mum-registry-pack-consistency-scan.txt`
 - Re-validated package fixtures and site publication after registry/signing helper updates:
-  - command: `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-  - command: `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - command: `cd packages/universal-manifest && npm test`
+  - command: `cd site && npm run build:clean`
 - Completed `MUM-GN-03` fixture pack expansion:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld`
+  - `examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld`
+  - `examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld`
+  - `examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`
+  - `examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld`
+  - `examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld`
+  - `examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld`
 - Added fixture-to-scenario mapping evidence note:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
+  - `docs/reports/2026-03-05-metaverse-mum-fixture-pack-scenario-mapping-note.md`
 - Captured GN-03 command artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
+  - `docs/reports/2026-03-05-gn03-conformance-npm-test.txt`
+  - `docs/reports/2026-03-05-gn03-journeys-run.txt`
 - Completed `MUM-GN-04` journey-suite expansion:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J15-mum-onboarding-projection-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J16-mum-consent-propagation-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J17-mum-compliance-transaction-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J18-mum-social-reputation-portability-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J19-mum-preferences-bundle-projection-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J20-mum-freshness-and-change-log-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `docs/journeys/J15-mum-onboarding-projection-flow.md`
+  - `docs/journeys/J16-mum-consent-propagation-flow.md`
+  - `docs/journeys/J17-mum-compliance-transaction-flow.md`
+  - `docs/journeys/J18-mum-social-reputation-portability-flow.md`
+  - `docs/journeys/J19-mum-preferences-bundle-projection-flow.md`
+  - `docs/journeys/J20-mum-freshness-and-change-log-flow.md`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 - Added journey-to-scenario mapping evidence note:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
+  - `docs/reports/2026-03-05-metaverse-mum-journey-suite-mapping-note.md`
 - Captured GN-04 command artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn04-journeys-run.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
+  - `docs/reports/2026-03-05-gn04-conformance-npm-test.txt`
+  - `docs/reports/2026-03-05-gn04-journeys-run.txt`
+  - `docs/journeys/_artifacts/2026-03-05T15-18-11-406Z-journey-report.json`
 - Completed `MUM-GN-05` synchronization profile guidance + publication:
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
+  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - `site/src/content/docs/guides/mum-synchronization-profile.md`
+  - `docs/reports/2026-03-05-mum-synchronization-profile-mapping-note.md`
 - Completed `MUM-GN-06` governance/status synchronization:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/CRITICAL-PATH.md`
+  - `docs/reports/2026-03-05-metaverse-mum-governance-sync-closeout-note.md`
 - Captured GN-06 validation artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-journeys-run.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn06-site-build-clean.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
+  - `docs/reports/2026-03-05-gn06-conformance-npm-test.txt`
+  - `docs/reports/2026-03-05-gn06-journeys-run.txt`
+  - `docs/reports/2026-03-05-gn06-site-build-clean.txt`
+  - `docs/reports/2026-03-05-mum-synchronization-profile-link-scan.txt`
 
 Closeout:
 

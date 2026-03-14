@@ -1,7 +1,7 @@
 # Universal Manifest Inbox Import Crosswalk
 
 **Date:** 2026-03-06  
-**Work order:** `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md`
+**Work order:** `docs/workorders/WO-0129-universal-manifest-inbox-dedupe-import-and-archive.md`
 
 ## Purpose
 
@@ -17,46 +17,46 @@ This report records the two-pass disposition of the user-supplied Universal Mani
 
 These files were already imported into the internal knowledge-corpus provenance lane and did not need to be re-imported:
 
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Architecture - The Composite Universal Manifest.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-01-composite-universal-manifest.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Landscape Analysis of Universal Manifest Convergence.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-02-landscape-convergence.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Standard Existence Clarification.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-03-standard-existence-clarification.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/The Universal Manifest - Architectural Convergence in User-Centric Data Pointers and Decentralized Identity Standards.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-04-architectural-convergence.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest & User-Centric Data Pointer Landscape.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-05-user-centric-pointer-landscape.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest - Candidate Projects and Protocols.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-06-candidate-projects-protocols.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/universal-manifest-standards-verification-kit - MAIN CHAT.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-07-standards-verification-main-chat.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/universal-manifest-standards-verification-kit-sparkday-perplexity.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-08-standards-verification-perplexity.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Checking if a standard exists - Claude.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-09-checking-standard-exists-claude.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Exa - Universal Manifest search.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-10-exa-search.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest Architectures - Google Gemini.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-11-architectures-google-gemini.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest SSI Standards and Protocols - Grok.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-12-ssi-protocols-grok.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest- A Novel Concept in Standardization.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-13-novel-concept-standardization.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal manifest search for decentralized identity protocols - Claude.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-14-decentralized-identity-protocols-claude.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Use Case_ Metaverse Universal Manifest - v1.0.docx` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-15-metaverse-use-case-docx.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Valid and Useful Decentralized Projects.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-16-valid-useful-decentralized-projects.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/core definition+vision doc for peermesh - Google Gemini.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-17-peermesh-core-definition-vision.md`
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/publication-venue-analysis.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-18-publication-venue-analysis.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Architecture - The Composite Universal Manifest.md` -> `.dev/ai/knowledge-corpus/imports/external-01-composite-universal-manifest.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Landscape Analysis of Universal Manifest Convergence.md` -> `.dev/ai/knowledge-corpus/imports/external-02-landscape-convergence.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Standard Existence Clarification.md` -> `.dev/ai/knowledge-corpus/imports/external-03-standard-existence-clarification.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/The Universal Manifest - Architectural Convergence in User-Centric Data Pointers and Decentralized Identity Standards.md` -> `.dev/ai/knowledge-corpus/imports/external-04-architectural-convergence.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest & User-Centric Data Pointer Landscape.md` -> `.dev/ai/knowledge-corpus/imports/external-05-user-centric-pointer-landscape.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest - Candidate Projects and Protocols.md` -> `.dev/ai/knowledge-corpus/imports/external-06-candidate-projects-protocols.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/universal-manifest-standards-verification-kit - MAIN CHAT.md` -> `.dev/ai/knowledge-corpus/imports/external-07-standards-verification-main-chat.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/universal-manifest-standards-verification-kit-sparkday-perplexity.md` -> `.dev/ai/knowledge-corpus/imports/external-08-standards-verification-perplexity.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Checking if a standard exists - Claude.md` -> `.dev/ai/knowledge-corpus/imports/external-09-checking-standard-exists-claude.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Exa - Universal Manifest search.md` -> `.dev/ai/knowledge-corpus/imports/external-10-exa-search.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest Architectures - Google Gemini.md` -> `.dev/ai/knowledge-corpus/imports/external-11-architectures-google-gemini.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest SSI Standards and Protocols - Grok.md` -> `.dev/ai/knowledge-corpus/imports/external-12-ssi-protocols-grok.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest- A Novel Concept in Standardization.md` -> `.dev/ai/knowledge-corpus/imports/external-13-novel-concept-standardization.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal manifest search for decentralized identity protocols - Claude.md` -> `.dev/ai/knowledge-corpus/imports/external-14-decentralized-identity-protocols-claude.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Use Case_ Metaverse Universal Manifest - v1.0.docx` -> `.dev/ai/knowledge-corpus/imports/external-15-metaverse-use-case-docx.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Valid and Useful Decentralized Projects.md` -> `.dev/ai/knowledge-corpus/imports/external-16-valid-useful-decentralized-projects.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/core definition+vision doc for peermesh - Google Gemini.md` -> `.dev/ai/knowledge-corpus/imports/external-17-peermesh-core-definition-vision.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/publication-venue-analysis.md` -> `.dev/ai/knowledge-corpus/imports/external-18-publication-venue-analysis.md`
 
 ### Newly localized in WO-0129
 
 These sources were present only in the inbox at the start of this wave and were newly localized into the repo:
 
-- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest and User-Centric Data Pointer Protocols- 2025 Landscape.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
-- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest Architectures.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
-- `/Users/grig/Downloads/INBOX-markdown/The Universal Manifest Defined and Vision for PeerMesh.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
-- `/Users/grig/Downloads/INBOX-markdown/hot-grid-browser-live-tiles-and-site-transformers-archive-pack/MANIFEST-note.md` -> `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
+- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest and User-Centric Data Pointer Protocols- 2025 Landscape.md` -> `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
+- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest Architectures.md` -> `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+- `/Users/grig/Downloads/INBOX-markdown/The Universal Manifest Defined and Vision for PeerMesh.md` -> `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+- `/Users/grig/Downloads/INBOX-markdown/hot-grid-browser-live-tiles-and-site-transformers-archive-pack/MANIFEST-note.md` -> `.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
 
 ### Already absorbed into a design-reference lane
 
 These items were already represented in the repo, but not through the knowledge-corpus markdown-import pipeline:
 
-- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest cinematic renders/` -> `/Users/grig/work/repo/universalmanifest/docs/design/capsule-pod-reference/`
-  - Supporting doc: `/Users/grig/work/repo/universalmanifest/docs/design/CAPSULE-POD-DESIGN.md`
-- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest cinematic renders/Grok link to full list.md` -> `/Users/grig/work/repo/universalmanifest/docs/design/capsule-pod-reference/Grok link to full list.md`
+- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest cinematic renders/` -> `docs/design/capsule-pod-reference/`
+  - Supporting doc: `docs/design/CAPSULE-POD-DESIGN.md`
+- `/Users/grig/Downloads/INBOX-markdown/Universal Manifest cinematic renders/Grok link to full list.md` -> `docs/design/capsule-pod-reference/Grok link to full list.md`
 
 ### Newly absorbed into a design-reference lane in WO-0129
 
-- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest Logo/` -> `/Users/grig/work/repo/universalmanifest/docs/design/logo-reference/`
-  - Reference doc: `/Users/grig/work/repo/universalmanifest/docs/design/LOGO-REFERENCE.md`
+- `/Users/grig/Downloads/INBOX-markdown/universal-manifest/Universal Manifest Logo/` -> `docs/design/logo-reference/`
+  - Reference doc: `docs/design/LOGO-REFERENCE.md`
 
 ### Reviewed and intentionally not re-localized
 

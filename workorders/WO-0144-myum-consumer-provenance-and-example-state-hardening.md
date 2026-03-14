@@ -63,9 +63,9 @@ The root cause was not the resolver runtime. It was the browser-side inspection 
 Code and deploy changes completed:
 
 - Added a Pages Function probe at:
-  - `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/functions/api/resolver-probe.js`
+  - `deploy/universalmanifest.net/functions/api/resolver-probe.js`
 - Updated the consumer page at:
-  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/index.html`
+  - `site/public/resolver/index.html`
 
 Behavior after the fix:
 
@@ -83,13 +83,13 @@ Deployment hardening completed:
 - `.github/workflows/deploy-gated.yml` now uploads/downloads the whole Pages bundle directory, not just `dist/`
 - staging and production Pages deploy steps now run from the bundle root and deploy `dist/`, allowing sibling `functions/` to ship
 - Pages runbook updated to require deploys from:
-  - `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net`
+  - `deploy/universalmanifest.net`
 
 ## Deployment Evidence
 
 Production Pages deploy executed manually on 2026-03-10 from:
 
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net`
+- `deploy/universalmanifest.net`
 
 Command used:
 
@@ -154,4 +154,4 @@ Follow-redirect action also verified on production:
 
 Closeout report:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-10-myum-consumer-redirect-probe-production-fix.md`
+- `.dev/ai/reports/operations/2026-03-10-myum-consumer-redirect-probe-production-fix.md`

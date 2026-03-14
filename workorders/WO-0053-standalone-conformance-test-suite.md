@@ -43,14 +43,14 @@ Out of scope:
 
 ## Completion summary (2026-03-02)
 
-- Verified standalone conformance package under `/Users/grig/work/repo/universalmanifest/conformance/` with fixture packaging, expected manifests, runner CLI, schemas, TypeScript reference adapter, and badges.
+- Verified standalone conformance package under `conformance/` with fixture packaging, expected manifests, runner CLI, schemas, TypeScript reference adapter, and badges.
 - Applied runner/schema alignment fix so generated reports validate cleanly against `conformance-report.schema.json`:
   - Added optional `adapterReason` field to report schema.
   - Added `none` conformance level for failing-report compatibility.
   - Updated runner conformance-level derivation to return `v0.2-extended` when extended fixtures are present and passing.
 - Ran end-to-end conformance execution against the TypeScript adapter and validated report JSON against schema.
 - Verification evidence recorded at:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0053-conformance-suite-verification.md`
+  - `.dev/ai/reports/2026-03-02-wo-0053-conformance-suite-verification.md`
 
 ## Execution phases
 
@@ -160,18 +160,18 @@ Out of scope:
 ## Key file paths (created/modified)
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/conformance/README.md`
-- `/Users/grig/work/repo/universalmanifest/conformance/v0.1/expected.json`
-- `/Users/grig/work/repo/universalmanifest/conformance/v0.2/expected.json`
-- `/Users/grig/work/repo/universalmanifest/conformance/schema/conformance-report.schema.json`
-- `/Users/grig/work/repo/universalmanifest/conformance/schema/conformance-status.schema.json`
-- `/Users/grig/work/repo/universalmanifest/conformance/runner/` (CLI tool)
-- `/Users/grig/work/repo/universalmanifest/conformance/adapters/typescript/` (reference adapter)
-- `/Users/grig/work/repo/universalmanifest/conformance/badges/` (SVG templates)
+- `conformance/README.md`
+- `conformance/v0.1/expected.json`
+- `conformance/v0.2/expected.json`
+- `conformance/schema/conformance-report.schema.json`
+- `conformance/schema/conformance-status.schema.json`
+- `conformance/runner/` (CLI tool)
+- `conformance/adapters/typescript/` (reference adapter)
+- `conformance/badges/` (SVG templates)
 
 Modified files:
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/` (new conformance testing docs page)
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+- `site/src/content/docs/` (new conformance testing docs page)
+- `docs/workorders/WO-INDEX.md`
 
 ## Acceptance criteria
 
@@ -186,10 +186,10 @@ Modified files:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/conformance/runner && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/conformance/runner && node cli.mjs --adapter ../adapters/typescript/ --report report.json`
+- `cd conformance/runner && npm test`
+- `cd conformance/runner && node cli.mjs --adapter ../adapters/typescript/ --report report.json`
 - JSON schema validation of generated report against `conformance-report.schema.json`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 
 ## Dependencies and sequencing notes
 

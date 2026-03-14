@@ -1,7 +1,7 @@
 # Portable Identity Profile Implementation and Gap Assessment for Universal Manifest
 
 Date: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)
+Project: Universal Manifest (``)
 
 ## Scope
 
@@ -48,9 +48,9 @@ These are evolvable gaps, not architectural blockers.
   - UM is explicitly spec-first and language/runtime neutral.
   - JSON-LD + JSON shape with unknown-field tolerance supports broad consumer diversity.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+  - `README.md`
+  - `spec/v0.1/README.md`
+  - `spec/v0.1/CONFORMANCE.md`
 - Implementation now:
   - Build one issuer pipeline and multiple consumer projections.
   - Enforce baseline parse + TTL + unknown-field tolerance on every surface.
@@ -65,9 +65,9 @@ These are evolvable gaps, not architectural blockers.
   - Supports DID-based subjects, short TTL, signature verification (v0.2), consent gating.
   - Supports pointer-based decentralized data placement.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.1/README.md`
+  - `docs/security/THREAT-MODEL.md`
 - Gap:
   - "Ownership/control" is supported architecturally, but not enforced as a strict conformance profile (for example, no mandatory wallet control semantics).
 - Implementation now:
@@ -83,9 +83,9 @@ These are evolvable gaps, not architectural blockers.
   - Default-deny consent model is already established in integrations.
   - Minimal disclosure principle is already documented.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/integrations/data-firewall-ux.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `integrations/data-firewall-ux.md`
+  - `spec/v0.2/README.md`
+  - `docs/security/THREAT-MODEL.md`
 - Gap:
   - No standardized encrypted-fragment/facet profile in UM core today.
 - Implementation now:
@@ -103,9 +103,9 @@ These are evolvable gaps, not architectural blockers.
 - Current UM support:
   - Pairwise/pseudonymous DID usage is explicitly recommended.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
+  - `spec/v0.1/README.md`
+  - `spec/v0.2/README.md`
+  - `docs/security/THREAT-MODEL.md`
 - Gap:
   - Recommendation exists, but not a conformance requirement with test fixtures.
 - Implementation now:
@@ -125,8 +125,8 @@ These are evolvable gaps, not architectural blockers.
   - UM can carry proof references and minimally disclosed claims.
   - Security docs explicitly call ZK/selective disclosure a future extension layer.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
+  - `docs/security/THREAT-MODEL.md`
+  - `spec/v0.2/README.md`
 - Gap:
   - No normative UM selective-disclosure proof profile yet.
 - Implementation now:
@@ -145,9 +145,9 @@ These are evolvable gaps, not architectural blockers.
   - Pointer-first composition is an established UM pattern.
   - Metaverse/XR lanes already use avatar/profile/inventory pointer names.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+  - `spec/v0.1/README.md`
+  - `integrations/metaverse.md`
+  - `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Implementation now:
   - Keep high-volume binary assets outside manifest, referenced by URLs/CIDs.
 - Applied example:
@@ -163,9 +163,9 @@ These are evolvable gaps, not architectural blockers.
   - Consent keys and default-deny behavior are present.
   - Firewall-style audit logging guidance exists (manifest ID + rule ID).
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/data-firewall-ux.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `integrations/smart-glasses.md`
+  - `integrations/data-firewall-ux.md`
 - Gap:
   - Prompt UX and consent-log schema are not standardized as normative UM protocol behavior.
 - Implementation now:
@@ -184,8 +184,8 @@ These are evolvable gaps, not architectural blockers.
 - Current UM support:
   - Recovery is acknowledged as future/out-of-scope in current baseline posture.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `spec/v0.1/README.md`
+  - `docs/DECISIONS.md`
 - Gap:
   - No UM recovery profile or interoperability guidance for wallet/key restoration.
 - Implementation now:
@@ -203,9 +203,9 @@ These are evolvable gaps, not architectural blockers.
   - Freshness (TTL) is mandatory baseline behavior.
   - Revocation-aware verification is explicitly defined as v0.2 extended behavior via `statusRef` and `revocationCursor`.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.2/CONFORMANCE.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
 - Gap:
   - Revocation remains optional unless consumers claim revocation-aware conformance.
 - Implementation now:
@@ -223,8 +223,8 @@ These are evolvable gaps, not architectural blockers.
   - UM clearly occupies manifest/document layer.
   - Adjacent standards are explicitly positioned as complementary (DIDComm, OIDC, VC).
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
+  - `docs/STANDARDS-POSITIONING.md`
+  - `docs/DOMAIN-ARCHITECTURE.md`
 - Gap:
   - No single normative protocol binding document for wallet handshake flows (QR/deep-link/OIDC4VP/DIDComm).
 - Implementation now:
@@ -243,9 +243,9 @@ These are evolvable gaps, not architectural blockers.
   - v0.1 well-known registry exists.
   - Integration lanes define domain-specific suggested names.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/TEMPLATE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/integration-authoring-guide.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `integrations/TEMPLATE.md`
+  - `docs/guides/integration-authoring-guide.md`
 - Gap:
   - Registry is non-normative and not yet comprehensive for all XR Portable Identity Profile needs.
 - Implementation now:
@@ -265,8 +265,8 @@ These are evolvable gaps, not architectural blockers.
 - Current UM support:
   - Metaverse integration lane already models avatar/inventory/profile pointers and cross-world profile facets.
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+  - `integrations/metaverse.md`
+  - `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Gap:
   - No standardized schema for avatar rig metadata and translation capability descriptors.
 - Implementation now:

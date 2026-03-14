@@ -11,18 +11,18 @@ Pages reviewed:
 - `http://127.0.0.1:4300/sandbox/gs-01-first-manifest-v2/` (scenario detail baseline)
 
 Code reviewed:
-- `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/index.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioModal.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioCard.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/modal.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/layout-v3.css`
-- `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/[...scenario].astro`
+- `site/src/pages/sandbox/index.astro`
+- `site/src/components/sandbox/ScenarioModal.astro`
+- `site/src/components/sandbox/ScenarioCard.astro`
+- `site/src/styles/sandbox/modal.css`
+- `site/src/styles/sandbox/layout-v3.css`
+- `site/src/pages/sandbox/[...scenario].astro`
 
 Evidence screenshots:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/sandbox-home-audit-chooser-before.png`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/sandbox-home-audit-site-home.png`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/sandbox-home-audit-scenario-detail-intro.png`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/sandbox-home-audit-scenario-detail-running.png`
+- `.dev/ai/reports/sandbox-home-audit-chooser-before.png`
+- `.dev/ai/reports/sandbox-home-audit-site-home.png`
+- `.dev/ai/reports/sandbox-home-audit-scenario-detail-intro.png`
+- `.dev/ai/reports/sandbox-home-audit-scenario-detail-running.png`
 
 ## Executive summary
 
@@ -167,24 +167,24 @@ Concretely:
 ## Implementation plan (how I’ll make it fit)
 
 Phase 1: Data shaping and content hierarchy
-- Update `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/index.astro` to build a presentation model that:
+- Update `site/src/pages/sandbox/index.astro` to build a presentation model that:
   - collapses duplicate families
   - prefers V2 as primary
   - optionally exposes V1 in a secondary mode
 
 Phase 2: Component redesign
-- Refactor `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioModal.astro` into a V3-style landing composition:
+- Refactor `site/src/components/sandbox/ScenarioModal.astro` into a V3-style landing composition:
   - hero section
   - featured quick-start row
   - categorized cards with cleaner grouping
 
 Phase 3: Card system update
-- Update `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioCard.astro`:
+- Update `site/src/components/sandbox/ScenarioCard.astro`:
   - normalize illustration resolution for V2 IDs
   - improve title/description rendering and metadata hierarchy
 
 Phase 4: Styling unification
-- Replace/augment `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/modal.css` with a V3-aligned stylesheet that references shared V3 tokens from `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/layout-v3.css`.
+- Replace/augment `site/src/styles/sandbox/modal.css` with a V3-aligned stylesheet that references shared V3 tokens from `site/src/styles/sandbox/layout-v3.css`.
 
 Phase 5: Verification
 - Validate desktop and mobile layouts.

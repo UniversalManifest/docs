@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-23
 **Priority:** HIGH
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/proposals/2026-02-23-21-41-41-universalmanifest-animation-upgrade-proposal.md`
+**Source:** `.dev/ai/proposals/2026-02-23-21-41-41-universalmanifest-animation-upgrade-proposal.md`
 
 ## Objective
 
@@ -18,19 +18,19 @@ Current pilot animations are functional but not yet production-grade for high-co
 In scope:
 
 - Replace existing pilot animations with production-quality assets:
-  - `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
-  - `/Users/grig/work/repo/universalmanifest/site/public/animations/um-overlay-lanes-pilot.svg`
+  - `site/public/animations/um-core-flow-pilot.svg`
+  - `site/public/animations/um-overlay-lanes-pilot.svg`
 - Upgrade static overview diagram to animated explainer while preserving conceptual parity:
-  - `/Users/grig/work/repo/universalmanifest/site/public/diagrams/universal-manifest-overview-template.svg`
+  - `site/public/diagrams/universal-manifest-overview-template.svg`
 - Generate missing scenario outputs from existing WO-0030 prompt system:
   - Scenario 01 (object model)
   - Scenario 03 (consent/policy)
   - Scenario 04 (user journey)
   - Scenario 06 (motion tutorial)
 - Store generated scenario assets in canonical animations path:
-  - `/Users/grig/work/repo/universalmanifest/site/public/animations/`
+  - `site/public/animations/`
 - Ensure generated/replaced assets satisfy accessibility and performance constraints defined in:
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-SPEC.md`
+  - `docs/design/ANIMATED-SVG-SPEC.md`
 
 Out of scope:
 
@@ -48,23 +48,23 @@ Out of scope:
 
 - [ ] `um-core-flow-pilot.svg` and `um-overlay-lanes-pilot.svg` are replaced with production-quality versions.
 - [ ] `universal-manifest-overview-template.svg` is upgraded to animated form.
-- [ ] Scenario 01/03/04/06 assets exist under `/Users/grig/work/repo/universalmanifest/site/public/animations/`.
+- [ ] Scenario 01/03/04/06 assets exist under `site/public/animations/`.
 - [ ] Every new/replaced SVG includes accessibility metadata (`<title>`, `<desc>`) and reduced-motion support.
 - [ ] Site build passes after integration (`npm run build:clean`).
 - [ ] No regression in docs-page rendering where these assets are used.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `rg -n "<title>|<desc>|prefers-reduced-motion" /Users/grig/work/repo/universalmanifest/site/public/animations/*.svg /Users/grig/work/repo/universalmanifest/site/public/diagrams/*.svg`
-- `find /Users/grig/work/repo/universalmanifest/site/public/animations -maxdepth 1 -type f -name '*.svg' | sort`
+- `cd site && npm run build:clean`
+- `rg -n "<title>|<desc>|prefers-reduced-motion" site/public/animations/*.svg site/public/diagrams/*.svg`
+- `find site/public/animations -maxdepth 1 -type f -name '*.svg' | sort`
 
 ## Dependencies
 
 - Existing prompt system from `WO-0030`:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/`
+  - `.dev/ai/prompts/animation/`
 - Technical constraints:
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-SPEC.md`
+  - `docs/design/ANIMATED-SVG-SPEC.md`
 
 ## Sequencing
 

@@ -11,7 +11,7 @@ Universal Manifest is live on the two-domain architecture:
 
 Production smoke verification:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod`
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod`
 - Result: **PASS**
 
 ## Work-order status update

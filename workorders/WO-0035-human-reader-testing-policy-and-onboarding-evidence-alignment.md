@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** HIGH
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/LOOSE-ENDS-REVIEW-2026-02-22.md`
+**Source:** `.dev/ai/LOOSE-ENDS-REVIEW-2026-02-22.md`
 
 ## Objective
 
@@ -30,17 +30,17 @@ Decision resolved (2026-02-23):
 
 In scope:
 
-- Record chosen policy in `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`.
+- Record chosen policy in `docs/DECISIONS.md`.
 - Normalize wording and status implications across:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
 - Remove placeholder artifact naming (`2026-02-XX-...`) from active guidance.
 
 Optional scope:
 
 - Execute human-participant run and create a dated results artifact under:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/`
+  - `docs/reports/`
 
 Out of scope:
 
@@ -49,12 +49,12 @@ Out of scope:
 ## Required deliverables
 
 1. Policy record in:
-   - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+   - `docs/DECISIONS.md`
 2. Aligned wording updates in the three core files listed above.
 3. Optional dated results report in:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/`
+   - `docs/reports/`
 4. Human gate checklist artifact defining expected observations/questions:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+   - `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Acceptance criteria
 
@@ -65,8 +65,8 @@ Out of scope:
 
 ## Validation commands
 
-- `rg -n 'human participant|recommended|required|pending|2026-02-XX-first-time-reader-test-results' /Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md /Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md /Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `rg -n 'WO-0015|reader testing|human participant|CLI-agent evidence' /Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `rg -n 'human participant|recommended|required|pending|2026-02-XX-first-time-reader-test-results' docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md docs/reports/2026-02-19-first-time-reader-testing-protocol.md docs/STATE-OF-THE-PROJECT.md`
+- `rg -n 'WO-0015|reader testing|human participant|CLI-agent evidence' docs/DECISIONS.md`
 
 ## Blocker
 
@@ -75,20 +75,20 @@ Out of scope:
 ## Progress evidence (2026-02-22)
 
 - Policy-alignment report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0035-policy-a-gate-alignment-report.md`
+  - `docs/reports/2026-02-22-wo-0035-policy-a-gate-alignment-report.md`
 - Human gate checklist:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+  - `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Completion evidence (2026-02-23)
 
 - Onboarding pages rewritten (WO-0039 Phases 1-4 complete):
-  - Landing page: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-  - Overview: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-  - Concepts: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md`
-  - Quick Start: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+  - Landing page: `site/src/content/docs/index.md`
+  - Overview: `site/src/content/docs/getting-started/universal-manifest-overview.md`
+  - Concepts: `site/src/content/docs/getting-started/concepts.md`
+  - Quick Start: `site/src/content/docs/getting-started/quick-start.md`
 - Human reader test evidence template created:
-  - Template: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-first-time-reader-test-results-human.md`
+  - Template: `docs/reports/2026-02-23-first-time-reader-test-results-human.md`
 - Pages live and ready for human review at `http://127.0.0.1:4300/`
 - Policy update recorded in:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `docs/DECISIONS.md`
 - Work-order and status docs updated to remove human-evidence blocking semantics.

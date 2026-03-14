@@ -48,22 +48,22 @@ This inconsistency must be resolved before any public presentation — a broken 
 
 ### Files likely affected
 
-- **`/Users/grig/work/repo/universalmanifest/site/astro.config.mjs`** — Site header GitHub link (uses `LocalArtistNetwork`)
-- **`/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md`** — Governance references (uses `WebOfTrustInfo`)
-- **`/Users/grig/work/repo/universalmanifest/CONTRIBUTING.md`** — Contributing guide (uses `WebOfTrustInfo`)
-- **`/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md`** — Agent briefing (uses `nicholasgrigoriadis`)
-- **`/Users/grig/work/repo/universalmanifest/docs/explainers/full-briefing.md`** — Full briefing (uses `nicholasgrigoriadis`)
+- **`site/astro.config.mjs`** — Site header GitHub link (uses `LocalArtistNetwork`)
+- **`docs/governance/GOVERNANCE.md`** — Governance references (uses `WebOfTrustInfo`)
+- **`CONTRIBUTING.md`** — Contributing guide (uses `WebOfTrustInfo`)
+- **`docs/explainers/agent-briefing.md`** — Agent briefing (uses `nicholasgrigoriadis`)
+- **`docs/explainers/full-briefing.md`** — Full briefing (uses `nicholasgrigoriadis`)
 - **Code example files** — (use `universalmanifest/universalmanifest`)
 - **Any other file** referencing any of the four URL patterns
 
 ### Search commands
 
 ```bash
-rg -n "github.com/LocalArtistNetwork" /Users/grig/work/repo/universalmanifest/
-rg -n "github.com/WebOfTrustInfo" /Users/grig/work/repo/universalmanifest/
-rg -n "github.com/nicholasgrigoriadis" /Users/grig/work/repo/universalmanifest/
-rg -n "github.com/universalmanifest" /Users/grig/work/repo/universalmanifest/
-rg -n "github.com.*universalmanifest\|github.com.*universal-manifest" /Users/grig/work/repo/universalmanifest/
+rg -n "github.com/LocalArtistNetwork" 
+rg -n "github.com/WebOfTrustInfo" 
+rg -n "github.com/nicholasgrigoriadis" 
+rg -n "github.com/universalmanifest" 
+rg -n "github.com.*universalmanifest\|github.com.*universal-manifest" 
 ```
 
 ### Fix
@@ -73,15 +73,15 @@ Update ALL references across ALL FOUR patterns to use the single canonical URL.
 ## Acceptance criteria
 
 - [ ] A single canonical GitHub URL is used in ALL files across the project.
-- [ ] `rg -n "github.com" /Users/grig/work/repo/universalmanifest/site/` returns only the canonical URL (for the UM repo itself).
+- [ ] `rg -n "github.com" site/` returns only the canonical URL (for the UM repo itself).
 - [ ] The site header GitHub icon links to the correct, accessible repository.
 - [ ] No governance or documentation files reference an incorrect or outdated GitHub URL.
 - [ ] All four legacy URL patterns return zero matches: `LocalArtistNetwork`, `WebOfTrustInfo`, `nicholasgrigoriadis`, and any non-canonical `universalmanifest` org URL.
 
 ## Validation commands
 
-- `rg -n "github.com/LocalArtistNetwork" /Users/grig/work/repo/universalmanifest/`
-- `rg -n "github.com/WebOfTrustInfo" /Users/grig/work/repo/universalmanifest/`
-- `rg -n "github.com/nicholasgrigoriadis" /Users/grig/work/repo/universalmanifest/`
-- `rg -n "github.com/universalmanifest" /Users/grig/work/repo/universalmanifest/` (verify only canonical URL remains)
+- `rg -n "github.com/LocalArtistNetwork" `
+- `rg -n "github.com/WebOfTrustInfo" `
+- `rg -n "github.com/nicholasgrigoriadis" `
+- `rg -n "github.com/universalmanifest" ` (verify only canonical URL remains)
 - Manual verification that the canonical URL resolves in a browser.

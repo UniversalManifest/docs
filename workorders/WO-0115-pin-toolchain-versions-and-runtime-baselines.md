@@ -51,18 +51,18 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
-- `/Users/grig/work/repo/universalmanifest/site/package.json`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/package.json`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
+- `.github/workflows/ci.yml`
+- `.github/workflows/verify.yml`
+- `site/package.json`
+- `services/myum-resolver/package.json`
+- `packages/universal-manifest/package.json`
 
 ## Verification Commands (Target)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean
-cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test && npm run journeys && npm run smoke:endpoints:dev
+cd site && npm run build:clean
+cd services/myum-resolver && npm run typecheck
+cd packages/universal-manifest && npm test && npm run journeys && npm run smoke:endpoints:dev
 ```
 
 ## Completion Evidence (2026-03-02)
@@ -70,24 +70,24 @@ cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm te
 Delivered artifacts:
 
 - Node baseline pin:
-  - `/Users/grig/work/repo/universalmanifest/.nvmrc`
+  - `.nvmrc`
 - Runtime/toolchain policy:
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/RUNTIME-BASELINE.md`
+  - `docs/guides/RUNTIME-BASELINE.md`
 - Engine pinning:
-  - `/Users/grig/work/repo/universalmanifest/site/package.json`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/package.json`
+  - `site/package.json`
+  - `packages/universal-manifest/package.json`
+  - `services/myum-resolver/package.json`
 - CI runtime alignment (`node-version: 22`):
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml`
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+  - `.github/workflows/ci.yml`
+  - `.github/workflows/verify.yml`
+  - `.github/workflows/deploy-gated.yml`
+  - `.github/workflows/synthetic-monitoring.yml`
 
 Verification results:
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` -> PASS
-- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck` -> PASS
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -> PASS
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -> PASS
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:dev` -> PASS (with local resolver running at `http://127.0.0.1:8787`)
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod` -> PASS
+- `cd site && npm run build:clean` -> PASS
+- `cd services/myum-resolver && npm run typecheck` -> PASS
+- `cd packages/universal-manifest && npm test` -> PASS
+- `cd packages/universal-manifest && npm run journeys` -> PASS
+- `cd packages/universal-manifest && npm run smoke:endpoints:dev` -> PASS (with local resolver running at `http://127.0.0.1:8787`)
+- `cd packages/universal-manifest && npm run smoke:endpoints:prod` -> PASS

@@ -1,7 +1,7 @@
 # Metaverse Universal Manifest (MUM) Specification Integration Log
 
 Date created: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)
+Project: Universal Manifest (``)
 
 ## Purpose
 
@@ -11,7 +11,7 @@ This log is the operational ledger for weaving incoming metaverse concept specif
 
 Follow the protocol in:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
 
 Do not skip decomposition, classification, routing, and evidence gates.
 

@@ -1,8 +1,8 @@
 # K2B Concept Integration Transfer Map
 
 Date: 2026-03-06  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0140-k2b-concept-integration-transfer-map.md`
+Project: Universal Manifest (``)  
+Work order: `docs/workorders/WO-0140-k2b-concept-integration-transfer-map.md`
 
 ## 1) Direct answer
 
@@ -45,12 +45,12 @@ The project already has an explicit K2B runtime and stage model.
 
 Primary evidence:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/K2B-README.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/PROJECT-MASTER-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`
+- `.dev/ai/K2B-README.md`
+- `.dev/ai/knowledge-index/PROJECT-MASTER-INDEX.md`
+- `.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
+- `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+- `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+- `.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`
 
 K2B in this repo already defines the path from source material into:
 
@@ -65,7 +65,7 @@ K2B in this repo already defines the path from source material into:
 
 The clearest repo-local execution bridge is:
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 That work order explicitly defines itself as the execution bridge between knowledge integration and productized adopter-facing assets.
 
@@ -109,8 +109,8 @@ Filled with:
 
 Primary artifacts:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`
+- `docs/reports/2026-03-06-protocol-recommendation-governance-and-standards-currency-matrix.md`
 
 What this means:
 
@@ -133,7 +133,7 @@ Filled with:
 
 Primary artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-proximity-credential-and-presentation-profile-assessment.md`
+- `docs/reports/2026-03-06-proximity-credential-and-presentation-profile-assessment.md`
 
 What the boundary says:
 
@@ -161,7 +161,7 @@ Filled with:
 
 Primary artifact:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+- `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
 
 What this means:
 
@@ -187,12 +187,12 @@ What it added:
 
 Blueprint landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
+- `docs/PROJECT-VISION.md`
 
 Integration and guidance landings:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `integrations/reference-runtime.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 
 Proof or fixture impact:
 
@@ -216,8 +216,8 @@ What it added:
 
 Research and planning landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
+- `docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
 
 Integration and guide landings:
 
@@ -225,7 +225,7 @@ Integration and guide landings:
 
 Proof landings:
 
-- `J12`, `J13`, and `J14` in `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `J12`, `J13`, and `J14` in `docs/journeys/README.md`
 
 Current status:
 
@@ -247,17 +247,17 @@ What it added:
 
 Research and planning landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
 
 Integration and guide landings:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `integrations/metaverse.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 
 Proof landings:
 
-- `J15` through `J20` in `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `J15` through `J20` in `docs/journeys/README.md`
 
 Current status:
 
@@ -277,21 +277,21 @@ What it added:
 
 Research landings:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
+- `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
+- `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 
 Decision landing:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+- `docs/DECISIONS.md`
 
 Integration landings:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/gpc-global-privacy-control.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/gpc-global-privacy-control.md`
+- `integrations/gpc-global-privacy-control.md`
+- `site/src/content/docs/integrations/gpc-global-privacy-control.md`
 
 Proof landings:
 
-- `J21` in `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `J21` in `docs/journeys/README.md`
 - GPC runtime helpers and fixtures in the TypeScript reference implementation
 
 Current status:
@@ -310,8 +310,8 @@ What it added:
 
 Blueprint or governance landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
+- `docs/DECISIONS.md`
+- `docs/STANDARDS-POSITIONING.md`
 
 Integration landings:
 
@@ -364,12 +364,12 @@ What it added:
 
 Blueprint landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
+- `docs/PROJECT-VISION.md`
 
 Integration and guidance landings:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `integrations/reference-runtime.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
 
 Proof impact:
 
@@ -395,19 +395,19 @@ What it added:
 
 Research landings:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-attachment-and-session-hardening.md`
+- `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- `docs/reports/2026-03-06-rp1-msf-primary-source-refresh-and-integration-depth-pass.md`
+- `docs/reports/2026-03-06-rp1-msf-adversarial-attachment-and-session-hardening.md`
 
 Integration landings:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
 
 Proof landings:
 
-- `J07` and `J22` in `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-- RP1 fixtures under `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/`
+- `J07` and `J22` in `docs/journeys/README.md`
+- RP1 fixtures under `examples/v0.1/stubs/`
 
 Current status:
 

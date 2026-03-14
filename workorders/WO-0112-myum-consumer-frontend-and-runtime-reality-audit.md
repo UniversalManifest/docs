@@ -9,7 +9,7 @@
 **Blocks:** External adopter confidence, senior-team architecture decisions, friendly consumer-facing myum UX
 **Dependencies:**
 - WO-0098 (resolver API reference page; completed)
-- Existing audit baseline: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-myum-domain-implementation-audit.md`
+- Existing audit baseline: `.dev/ai/reports/2026-03-02-myum-domain-implementation-audit.md`
 **Estimated effort:** 2-3 days (design + implementation + verification + report pack)
 
 ## Progress update (2026-03-02)
@@ -17,27 +17,27 @@
 Completed this pass:
 
 - Comprehensive WO-grade report created:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-runtime-reality-report.md`
+  - `.dev/ai/reports/2026-03-02-wo-0112-runtime-reality-report.md`
 - Resolver consumer frontend and route-entry enhancements implemented:
-  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/index.html`
-  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/result.html`
-  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/ops.html`
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/index.astro`
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/result.astro`
-  - `/Users/grig/work/repo/universalmanifest/site/src/pages/resolver/ops.astro`
+  - `site/public/resolver/index.html`
+  - `site/public/resolver/result.html`
+  - `site/public/resolver/ops.html`
+  - `site/src/pages/resolver/index.astro`
+  - `site/src/pages/resolver/result.astro`
+  - `site/src/pages/resolver/ops.astro`
 - Docs/examples alignment updates implemented:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/reference/resolver-api.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/publishing/production-smoke.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/code/05-resolve-from-myum/README.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/code/05-resolve-from-myum/fetch-by-umid.mjs`
+  - `site/src/content/docs/index.md`
+  - `site/src/content/docs/reference/resolver-api.md`
+  - `site/src/content/docs/publishing/production-smoke.md`
+  - `examples/code/05-resolve-from-myum/README.md`
+  - `examples/code/05-resolve-from-myum/fetch-by-umid.mjs`
 - Verification evidence captured:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-index-home.png`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-result-404.png`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-ops.png`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-home.png`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-result.png`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0112-resolver-route-ops.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-index-home.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-result-404.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-ops.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-route-home.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-route-result.png`
+  - `.dev/ai/reports/2026-03-02-wo-0112-resolver-route-ops.png`
 
 Deployment alignment completion:
 
@@ -48,9 +48,9 @@ Deployment alignment completion:
   - `https://universalmanifest.net/resolver/ops` -> `200`
   - `https://universalmanifest.net/reference/resolver-api/` -> `200`
 - Production endpoint smoke now passes:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net`
+  - `cd packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net`
 - Post-deploy verification report:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T21-54-52-324Z-post-deploy-verification.md`
+  - `.dev/ai/reports/deploy-checks/2026-03-02T21-54-52-324Z-post-deploy-verification.md`
 
 ## Objective
 
@@ -82,7 +82,7 @@ Without this work, teams will continue spending integration cycles on mismatch r
 
 Create and/or update a report in:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/`
+- `.dev/ai/reports/`
 
 Required report sections:
 
@@ -122,7 +122,7 @@ Required report sections:
 
 Implement a dedicated consumer-facing resolver frontend under:
 
-- `/Users/grig/work/repo/universalmanifest/site/public/resolver/` (or equivalent Astro route if preferred)
+- `site/public/resolver/` (or equivalent Astro route if preferred)
 
 Must include:
 
@@ -526,9 +526,9 @@ Give senior engineers and integrators a quick operational pane.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run typecheck`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd services/myum-resolver && npm run typecheck`
+- `cd packages/universal-manifest && node scripts/smoke-endpoints.mjs --mode prod --docs-base https://universalmanifest.net --resolver-base https://myum.net`
+- `cd site && npm run build:clean`
 - Browser verification via DevTools:
   - load `/resolver/` and `/resolver/ops`
   - execute success + failure + redirect cases
@@ -537,11 +537,11 @@ Give senior engineers and integrators a quick operational pane.
 ## Evidence locations
 
 - Comprehensive report:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/`
+  - `.dev/ai/reports/`
 - Work order implementation files:
-  - `/Users/grig/work/repo/universalmanifest/site/public/resolver/` (or final route paths)
+  - `site/public/resolver/` (or final route paths)
 - Contract and resolver source:
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/`
+  - `services/myum-resolver/`
 
 ## Notes for execution
 

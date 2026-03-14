@@ -94,9 +94,9 @@ Out of scope:
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/site/scripts/test-validator-parity.mjs`
-- `/Users/grig/work/repo/universalmanifest/site/scripts/test-scenarios-smoke.mjs` (or Playwright config)
-- Updated: `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
+- `site/scripts/test-validator-parity.mjs`
+- `site/scripts/test-scenarios-smoke.mjs` (or Playwright config)
+- Updated: `.github/workflows/ci.yml`
 
 ## Acceptance criteria
 
@@ -111,7 +111,7 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && node scripts/test-validator-parity.mjs`
-- `cd /Users/grig/work/repo/universalmanifest/site && node scripts/test-scenarios-smoke.mjs` (or Playwright equivalent)
-- `cd /Users/grig/work/repo/universalmanifest && npm run build && npm test` (CI equivalent)
+- `cd site && node scripts/test-validator-parity.mjs`
+- `cd site && node scripts/test-scenarios-smoke.mjs` (or Playwright equivalent)
+- `cd  && npm run build && npm test` (CI equivalent)
 - Lighthouse audit on `/sandbox/` page

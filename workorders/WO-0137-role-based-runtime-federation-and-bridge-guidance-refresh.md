@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Runtime and Documentation Architecture  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+**Source:** `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
 
 ## Objective
 
@@ -38,8 +38,8 @@ Out of scope:
 ## Deliverables
 
 - Updated shared guidance docs under:
-  - `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - `integrations/reference-runtime.md`
+  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
   - site mirrors if applicable
 - Governance/state synchronization where wording changes affect public project posture
 
@@ -52,17 +52,17 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
+- `docs/workorders/WO-0135-federation-and-bridge-strategy-decision-package.md`
+- `docs/reports/2026-03-06-federation-and-bridge-strategy-decision-package.md`
 
 ## Execution Notes
 
 - Completed on 2026-03-06.
 - Updated shared guidance surfaces:
-  - `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+  - `integrations/reference-runtime.md`
+  - `site/src/content/docs/integrations/reference-runtime.md`
+  - `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+  - `site/src/content/docs/guides/mum-synchronization-profile.md`
 - Outcome:
   - the shared docs now express the role-based runtime/federation/bridge taxonomy,
   - source-of-truth and offline failure rules are more explicit,

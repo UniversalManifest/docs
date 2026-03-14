@@ -35,20 +35,20 @@ Out of scope:
 ## Deliverables
 
 1. Formal disposition and crosswalk report:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-universal-manifest-inbox-import-crosswalk.md`
+   - `docs/reports/2026-03-06-universal-manifest-inbox-import-crosswalk.md`
 2. New localized import notes for previously unlocalized text sources:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
+   - `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
+   - `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+   - `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+   - `.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
 3. Design-reference localization for logo exploration assets:
-   - `/Users/grig/work/repo/universalmanifest/docs/design/LOGO-REFERENCE.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/design/logo-reference/`
+   - `docs/design/LOGO-REFERENCE.md`
+   - `docs/design/logo-reference/`
 4. Provenance and selection updates:
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
+   - `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+   - `.dev/ai/ingestion/LEDGER.md`
+   - `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+   - `.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
 5. Inbox archive destination:
    - `/Users/grig/Downloads/INBOX-markdown/universal-manifest-imported-into-project/`
 
@@ -67,39 +67,39 @@ Started in this pass:
 
 - Audited the explicitly supplied inbox items plus the `universal-manifest/` directory contents.
 - Verified earlier localization work through:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+  - `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+  - `.dev/ai/ingestion/LEDGER.md`
+  - `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
 - Confirmed that the cinematic render pack was already absorbed into the design-reference lane.
 - Identified four missing markdown sources and one missing logo-reference asset pack requiring new localization.
 
 Completed in this pass:
 
 - Added four new localized import notes for previously untracked inbox markdown sources:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
+  - `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
+  - `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+  - `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+  - `.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
 - Added a design-reference lane for the logo exploration pack:
-  - `/Users/grig/work/repo/universalmanifest/docs/design/LOGO-REFERENCE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/design/logo-reference/`
+  - `docs/design/LOGO-REFERENCE.md`
+  - `docs/design/logo-reference/`
 - Produced the full crosswalk/disposition report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-universal-manifest-inbox-import-crosswalk.md`
+  - `docs/reports/2026-03-06-universal-manifest-inbox-import-crosswalk.md`
 - Synchronized the provenance/indexing system:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
+  - `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+  - `.dev/ai/ingestion/LEDGER.md`
+  - `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+  - `.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
 - Archived the processed inbox material under:
   - `/Users/grig/Downloads/INBOX-markdown/universal-manifest-imported-into-project/`
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-- `/Users/grig/work/repo/universalmanifest/docs/design/CAPSULE-POD-DESIGN.md`
+- `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+- `.dev/ai/ingestion/LEDGER.md`
+- `docs/design/CAPSULE-POD-DESIGN.md`
 
 ## Completion notes
 

@@ -28,16 +28,16 @@ Out of scope:
 
 ## Deliverables
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `docs/PROJECT-VISION.md`
+- `docs/DECISIONS.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `integrations/metaverse.md`
+- `integrations/rp1-spatial-fabric.md`
+- `integrations/smart-glasses-ar.md`
+- `site/src/content/docs/integrations/metaverse.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/smart-glasses-ar.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
 
 ## Acceptance criteria
 
@@ -53,15 +53,15 @@ Out of scope:
 - MUM lineage source path recorded:
   - `Metaverse Universal Manifest (MUM) concept source document (Metaverse Standards Forum working group archive)`
 - Source-of-truth updates:
-  - `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `docs/PROJECT-VISION.md`
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
 - Integration docs:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
+  - `integrations/metaverse.md`
+  - `integrations/rp1-spatial-fabric.md`
+  - `integrations/smart-glasses-ar.md`
 - Site docs pages:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+  - `site/src/content/docs/integrations/metaverse.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/smart-glasses-ar.md`
+  - `site/src/content/docs/getting-started/universal-manifest-overview.md`

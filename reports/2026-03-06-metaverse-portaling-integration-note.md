@@ -1,8 +1,8 @@
 # Metaverse Portaling Integration Note
 
 Date: 2026-03-06  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0141-metaverse-portaling-integration-and-guidance-refresh.md`
+Project: Universal Manifest (``)  
+Work order: `docs/workorders/WO-0141-metaverse-portaling-integration-and-guidance-refresh.md`
 
 ## 1) Direct answer
 
@@ -102,22 +102,22 @@ This is an integration-lane clarification, not a new normative requirement for a
 
 Blueprint and relationship surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/MSF-RELATIONSHIP.md`
+- `docs/PROJECT-VISION.md`
+- `docs/MSF-RELATIONSHIP.md`
 
 Integration guidance surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+- `integrations/metaverse.md`
+- `site/src/content/docs/integrations/metaverse.md`
 
 Proof and teaching surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld-v2.ts`
-- `/Users/grig/work/repo/universalmanifest/docs/explainers/metaverse-portaling.md`
+- `docs/journeys/journey-09-metaverse-crossworld-projection.md`
+- `docs/journeys/README.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld.ts`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld-v2.ts`
+- `docs/explainers/metaverse-portaling.md`
 
 ## 7) Executive status after integration
 

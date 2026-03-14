@@ -26,7 +26,7 @@ The freshness audit found multiple stale references in STATE-OF-THE-PROJECT.md:
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`**
+**`docs/STATE-OF-THE-PROJECT.md`**
 
 ### Changes required
 
@@ -60,4 +60,4 @@ The freshness audit found multiple stale references in STATE-OF-THE-PROJECT.md:
 ## Validation commands
 
 - Manual review of all status claims against current repo state.
-- `rg -n "NOT_STARTED" /Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` (verify only truly not-started items are marked as such).
+- `rg -n "NOT_STARTED" docs/STATE-OF-THE-PROJECT.md` (verify only truly not-started items are marked as such).

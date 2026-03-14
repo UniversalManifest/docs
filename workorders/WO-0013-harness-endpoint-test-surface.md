@@ -47,9 +47,9 @@ Out of scope:
 ## Verification
 
 - Start resolver dev:
-  - `cd /Users/grig/work/repo/universalmanifest/services/myum-resolver && npm run dev`
+  - `cd services/myum-resolver && npm run dev`
 - Start site dev:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run dev -- --host 127.0.0.1 --port 4300`
+  - `cd site && npm run dev -- --host 127.0.0.1 --port 4300`
 - Visit:
   - `http://127.0.0.1:4300/harness/index.html?autorun=1`
 - Agent verification:
@@ -65,4 +65,4 @@ Out of scope:
 - Resolver dev fixture fallback:
   - `services/myum-resolver/src/index.ts` resolves `urn:uuid:11111111-1111-4111-8111-111111111111`
 - Verified:
-  - Harness autorun PASS screenshot: `/Users/grig/work/repo/universalmanifest/site/.agent-browser-harness-autorun-4.png`
+  - Harness autorun PASS screenshot: `site/.agent-browser-harness-autorun-4.png`

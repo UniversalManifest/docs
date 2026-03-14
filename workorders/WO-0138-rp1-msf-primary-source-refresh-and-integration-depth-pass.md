@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Research Intake and Spatial Integration Architecture  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+**Source:** `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
 
 ## Objective
 
@@ -38,7 +38,7 @@ Out of scope:
 
 - Refreshed source/provenance records under the repo intake lanes
 - Updated RP1/MSF integration guidance under:
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
+  - `integrations/rp1-spatial-fabric.md`
   - site mirror if applicable
 - Follow-on fixture/journey or scenario update if justified by refreshed sources
 
@@ -51,30 +51,30 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0136-omb-wiki-spatial-fabric-source-refresh-and-primary-source-crosscheck.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0137-role-based-runtime-federation-and-bridge-guidance-refresh.md`
+- `docs/workorders/WO-0136-omb-wiki-spatial-fabric-source-refresh-and-primary-source-crosscheck.md`
+- `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- `docs/workorders/WO-0137-role-based-runtime-federation-and-bridge-guidance-refresh.md`
 
 ## Execution Notes
 
 - Completed on 2026-03-06.
 - Localized four additional primary RP1/MSF-adjacent sources:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-29-manifolder-readme.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-30-manifolder-data-model.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-31-manifolder-client.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-32-khronos-gltf-runtime-delivery.md`
+  - `.dev/ai/knowledge-corpus/imports/external-29-manifolder-readme.md`
+  - `.dev/ai/knowledge-corpus/imports/external-30-manifolder-data-model.md`
+  - `.dev/ai/knowledge-corpus/imports/external-31-manifolder-client.md`
+  - `.dev/ai/knowledge-corpus/imports/external-32-khronos-gltf-runtime-delivery.md`
 - Refreshed provenance and ingestion records:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/SOURCE-MAP.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/SOURCE-SELECTION.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/LEDGER.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-03-06-rp1-msf-source-refresh-stage0-triage.md`
+  - `.dev/ai/knowledge-corpus/SOURCE-MAP.md`
+  - `.dev/ai/knowledge-index/CANDIDATE-SOURCES.md`
+  - `.dev/ai/knowledge-index/SOURCE-SELECTION.md`
+  - `.dev/ai/ingestion/LEDGER.md`
+  - `.dev/ai/ingestion/records/2026-03-06-rp1-msf-source-refresh-stage0-triage.md`
 - Deepened the RP1/MSF lane and proof/example surfaces:
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+  - `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 - Outcome:
   - the lane now explains parent/child scope composition and attachment points more concretely,
   - runtime-only vs portable-state boundaries are explicit,

@@ -1,7 +1,7 @@
 # Portable Identity Profile Specification Integration Log
 
 Date created: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)
+Project: Universal Manifest (``)
 
 ## Purpose
 
@@ -10,7 +10,7 @@ This log records each incoming specification concept and how it is woven into th
 ## Process contract
 
 Follow the protocol in:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
 
 Do not skip requirement decomposition, classification, routing, and evidence gates.
 

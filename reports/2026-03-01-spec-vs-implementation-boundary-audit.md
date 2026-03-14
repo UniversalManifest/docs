@@ -1,7 +1,7 @@
 # Spec vs. Implementation Boundary Audit
 
 **Date:** 2026-03-01
-**Scope:** Full project audit of Universal Manifest at `/Users/grig/work/repo/universalmanifest`
+**Scope:** Full project audit of Universal Manifest at ``
 **Purpose:** Assess how clearly the project distinguishes between "Universal Manifest as a specification" and "Universal Manifest as an implementation," and recommend concrete improvements.
 
 ---
@@ -17,15 +17,15 @@ The Universal Manifest project has a **strong foundational awareness** of the sp
 ### 2.1 Onboarding Documents
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/README.md`
-- `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`
-- `/Users/grig/work/repo/universalmanifest/docs/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-- `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`
+- `README.md`
+- `PROJECT-RULES.md`
+- `docs/README.md`
+- `docs/PROJECT-VISION.md`
+- `docs/DEPTH-AND-SCOPE.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/CRITICAL-PATH.md`
+- `docs/DONE-DONE-DEFINITION.md`
+- `docs/UNIVERSAL-MANIFEST-BRIEFING.md`
 
 **Assessment:** Mixed. The root `README.md` is the first thing a newcomer sees, and its "Quick start" section immediately sends the reader to `cd packages/universal-manifest && npm test`. This frames UM as "a TypeScript project you install" rather than "a specification you read and implement." The `STATE-OF-THE-PROJECT.md` correctly states "This repo is a spec + fixtures + minimal tooling project. It is not a running service" (line 8), which is good. `DEPTH-AND-SCOPE.md` is excellent -- it explicitly defines layers A through E and says "This is a spec repo, not an application" (line 29). `PROJECT-RULES.md` has a reasonable structure but its "Build, Test, and Development Commands" section (lines 43-48) lists only TypeScript/npm commands, reinforcing a single-implementation perception. `CRITICAL-PATH.md` Phase 5 says "demonstrate the spec is not 'just for reference implementation'" (line 56), showing awareness but using the legacy name "reference implementation" that leaks implementation identity into the spec context. `DONE-DONE-DEFINITION.md` is spec-first and implementation-neutral -- it is one of the cleanest documents in the repo.
 
@@ -34,12 +34,12 @@ The Universal Manifest project has a **strong foundational awareness** of the sp
 ### 2.2 Spec Artifacts
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
+- `spec/v0.1/README.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.1/REGISTRY.md`
+- `spec/v0.2/README.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `spec/v0.2/CONFORMANCE.md`
 
 **Assessment:** Mostly clean, with several specific leaks.
 
@@ -54,9 +54,9 @@ The `SIGNATURE-PROFILE.md` is clean -- it describes the profile in implementatio
 ### 2.3 Implementation Code and Tooling
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/` (via docs references)
-- `/Users/grig/work/repo/universalmanifest/docs/TS-HELPER-PACKAGE.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/typescript-helper.md`
+- `packages/universal-manifest/` (via docs references)
+- `docs/TS-HELPER-PACKAGE.md`
+- `site/src/content/docs/getting-started/typescript-helper.md`
 
 **Assessment:** The TypeScript helper documentation is well-bounded. `TS-HELPER-PACKAGE.md` explicitly says what the package provides and does not provide, and its distribution policy section is clear that the package is private and supplementary. The site page for the TypeScript helper opens with "It is optional -- you can implement the spec in any language" (line 5), which is the right framing. However, the package name in `TS-HELPER-PACKAGE.md` still uses the legacy `@localartistnetwork/universal-manifest` scope (line 14), which embeds the origin runtime's brand into the package identity.
 
@@ -67,13 +67,13 @@ The `services/myum-resolver/` directory is implementation code for the resolver.
 ### 2.4 Integration Guidance
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/social.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/healthcare-patient-consent.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/TEMPLATE.md`
+- `integrations/reference-runtime.md`
+- `integrations/social.md`
+- `integrations/metaverse.md`
+- `integrations/smart-glasses-ar.md`
+- `integrations/rp1-spatial-fabric.md`
+- `integrations/healthcare-patient-consent.md`
+- `integrations/TEMPLATE.md`
 
 **Assessment:** Strong. Every integration document includes a "Boundary: normative vs non-normative" section that clearly states the normative contract lives in `spec/` and the integration file is guidance only. The integration template (`TEMPLATE.md`) enforces this pattern for new lanes. The `reference-runtime.md` opens with "This document describes one reference implementation pattern... It is guidance, not the normative spec" (lines 1-6). The healthcare integration goes further with an explicit checklist item: "No normative language used in this non-normative document" (line 227).
 
@@ -84,11 +84,11 @@ Two concerns: (1) `integrations/social.md` references `packages/universal-manife
 ### 2.5 Teaching Materials and Explainers
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/docs/teaching-scripts/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/explainers/one-pager.md`
-- `/Users/grig/work/repo/universalmanifest/docs/explainers/paragraph.md`
-- `/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md`
-- `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`
+- `docs/teaching-scripts/README.md`
+- `docs/explainers/one-pager.md`
+- `docs/explainers/paragraph.md`
+- `docs/explainers/agent-briefing.md`
+- `docs/UNIVERSAL-MANIFEST-BRIEFING.md`
 
 **Assessment:** The teaching scripts directory is well-designed and spec-first -- it explicitly says "Abstract the spec. A viewer should understand what Universal Manifest does without knowing that it uses JSON-LD, Ed25519, or JCS" (line 84). The one-pager and paragraph explainers are spec-level descriptions with no implementation leakage.
 
@@ -101,17 +101,17 @@ The `UNIVERSAL-MANIFEST-BRIEFING.md` is the most comprehensive briefing and is l
 ### 2.6 Site Content (universalmanifest.net)
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/typescript-helper.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/spec/v0.1.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/spec/v0.2.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/conformance/resolver.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/publishing/domain-split.md`
+- `site/src/content/docs/index.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `site/src/content/docs/getting-started/concepts.md`
+- `site/src/content/docs/getting-started/quick-start.md`
+- `site/src/content/docs/getting-started/typescript-helper.md`
+- `site/src/content/docs/spec/v0.1.md`
+- `site/src/content/docs/spec/v0.2.md`
+- `site/src/content/docs/integrations/index.md`
+- `site/src/content/docs/integrations/reference-runtime.md`
+- `site/src/content/docs/conformance/resolver.md`
+- `site/src/content/docs/publishing/domain-split.md`
 
 **Assessment:** The site landing page (`index.md`) does not include any statement that UM is a specification implementable in any language. It positions UM as "a portable document format" (line 6), which is neutral but does not affirmatively communicate the spec-vs-implementation distinction. The TypeScript helper is not mentioned on the landing page, which is good. However, the "Choose a starting path" section (lines 43-60) includes "Tools" for the workbench and harness but does not distinguish between spec-reading paths and implementation-specific paths.
 
@@ -128,8 +128,8 @@ The integration catalog (`integrations/index.md`) is one of the strongest docume
 ### 2.7 Governance and Decisions
 
 **Files reviewed:**
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md`
+- `docs/DECISIONS.md`
+- `docs/governance/GOVERNANCE.md`
 
 **Assessment:** `DECISIONS.md` explicitly records the decision to keep the repo separate from the reference implementation (2026-02-11, line 7-8), to keep the TS helper private to avoid "public SDK drift" (2026-02-17, line 125-137), and to relocate the repo to reduce "reference implementation/UM context bleed" (2026-02-17, line 164-173). These decisions show strong architectural awareness.
 
@@ -145,32 +145,32 @@ The integration catalog (`integrations/index.md`) is one of the strongest docume
 
 | File | Location | Issue | Severity |
 |------|----------|-------|----------|
-| `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` | Line 49, section header | "ID + caching guidance (Shield / public display)" -- "Shield" is NVIDIA Shield, an implementation-specific device | HIGH |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` | Line 78 | "Reference implementation: `/packages/universal-manifest/src/index.ts`" inline in Security Considerations | HIGH |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md` | Line 61 | "Consumers SHOULD follow `integrations/reference-runtime.md` guidance" -- conformance doc should not reference a specific implementation's guidance | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md` | Lines 131-135 | "Reference harness (repo-local)" section directs to `packages/universal-manifest/ -> npm test` | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md` | Line 14 | "often a Solid Pod URL" -- names a specific storage technology in registry guidance | LOW |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md` | Line 47 | "Reference implementation: `/packages/universal-manifest/src/index.ts:272-302`" with line numbers | HIGH |
-| `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md` | Lines 96-98 | "Reference harness" section points to TS package | MEDIUM |
+| `spec/v0.1/README.md` | Line 49, section header | "ID + caching guidance (Shield / public display)" -- "Shield" is NVIDIA Shield, an implementation-specific device | HIGH |
+| `spec/v0.1/README.md` | Line 78 | "Reference implementation: `/packages/universal-manifest/src/index.ts`" inline in Security Considerations | HIGH |
+| `spec/v0.1/CONFORMANCE.md` | Line 61 | "Consumers SHOULD follow `integrations/reference-runtime.md` guidance" -- conformance doc should not reference a specific implementation's guidance | MEDIUM |
+| `spec/v0.1/CONFORMANCE.md` | Lines 131-135 | "Reference harness (repo-local)" section directs to `packages/universal-manifest/ -> npm test` | MEDIUM |
+| `spec/v0.1/REGISTRY.md` | Line 14 | "often a Solid Pod URL" -- names a specific storage technology in registry guidance | LOW |
+| `spec/v0.2/README.md` | Line 47 | "Reference implementation: `/packages/universal-manifest/src/index.ts:272-302`" with line numbers | HIGH |
+| `spec/v0.2/CONFORMANCE.md` | Lines 96-98 | "Reference harness" section points to TS package | MEDIUM |
 
 ### 3.2 Onboarding Framing Issues
 
 | File | Location | Issue | Severity |
 |------|----------|-------|----------|
-| `/Users/grig/work/repo/universalmanifest/README.md` | Lines 17-23 | "Quick start" immediately shows `cd packages/universal-manifest && npm test` as the first thing to do | HIGH |
-| `/Users/grig/work/repo/universalmanifest/README.md` | Entire file | No statement that UM is a specification implementable in any language | HIGH |
-| `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` | Entire file | No "UM is a specification" callout on the docs site landing page | HIGH |
-| `/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md` | Lines 43-48 | "Build, Test, and Development Commands" lists only npm/TS commands | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md` | Lines 20-22 | npm package listed alongside the spec site and resolver in "Key Facts" as co-equal | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md` | Line 51 | "The TypeScript helper library handles validation" as the developer value proposition | MEDIUM |
+| `README.md` | Lines 17-23 | "Quick start" immediately shows `cd packages/universal-manifest && npm test` as the first thing to do | HIGH |
+| `README.md` | Entire file | No statement that UM is a specification implementable in any language | HIGH |
+| `site/src/content/docs/index.md` | Entire file | No "UM is a specification" callout on the docs site landing page | HIGH |
+| `PROJECT-RULES.md` | Lines 43-48 | "Build, Test, and Development Commands" lists only npm/TS commands | MEDIUM |
+| `docs/explainers/agent-briefing.md` | Lines 20-22 | npm package listed alongside the spec site and resolver in "Key Facts" as co-equal | MEDIUM |
+| `docs/explainers/agent-briefing.md` | Line 51 | "The TypeScript helper library handles validation" as the developer value proposition | MEDIUM |
 
 ### 3.3 Cross-Contamination in Integration and Proof Documents
 
 | File | Location | Issue | Severity |
 |------|----------|-------|----------|
-| `/Users/grig/work/repo/universalmanifest/integrations/social.md` | Line 34 | Points to TS package as "Executable proof (cross-runtime adopter)" | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/integrations/TEMPLATE.md` | Line 122 | Instructs authors to use TS helper for validation: "run `assertUniversalManifestV01` from the `packages/universal-manifest` test harness" | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md` | Line 11 | References TS journey runner script as source status evidence | LOW |
+| `integrations/social.md` | Line 34 | Points to TS package as "Executable proof (cross-runtime adopter)" | MEDIUM |
+| `integrations/TEMPLATE.md` | Line 122 | Instructs authors to use TS helper for validation: "run `assertUniversalManifestV01` from the `packages/universal-manifest` test harness" | MEDIUM |
+| `integrations/rp1-spatial-fabric.md` | Line 11 | References TS journey runner script as source status evidence | LOW |
 
 ### 3.4 Navigation and Structural Issues
 
@@ -178,15 +178,15 @@ The integration catalog (`integrations/index.md`) is one of the strongest docume
 |-------------|-------|----------|
 | Site sidebar navigation | TypeScript Helper is under "Getting Started" alongside spec-level content, suggesting it is a prerequisite rather than one optional tool | MEDIUM |
 | Site sidebar navigation | No "Implementations" or "Reference Implementation" section separate from spec content | HIGH |
-| `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md` | Lines 23-28: "The project includes: ... Reference implementations and integration guides" without hierarchy | LOW |
+| `docs/governance/GOVERNANCE.md` | Lines 23-28: "The project includes: ... Reference implementations and integration guides" without hierarchy | LOW |
 
 ### 3.5 Legacy Naming and Branding Leaks
 
 | File | Location | Issue | Severity |
 |------|----------|-------|----------|
-| `/Users/grig/work/repo/universalmanifest/docs/TS-HELPER-PACKAGE.md` | Line 14 | Package name still uses `@localartistnetwork/universal-manifest` | MEDIUM |
-| `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md` | Line 234 | Fixture example mentions "NVIDIA Shield TV Pro enrolled to venue edge" in what reads like normative example text | LOW |
-| `/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/decisions.md` | Line 18 | "Device caching + logging (public display / Shield)" -- implementation brand name in governance page | LOW |
+| `docs/TS-HELPER-PACKAGE.md` | Line 14 | Package name still uses `@localartistnetwork/universal-manifest` | MEDIUM |
+| `docs/UNIVERSAL-MANIFEST-BRIEFING.md` | Line 234 | Fixture example mentions "NVIDIA Shield TV Pro enrolled to venue edge" in what reads like normative example text | LOW |
+| `site/src/content/docs/governance/decisions.md` | Line 18 | "Device caching + logging (public display / Shield)" -- implementation brand name in governance page | LOW |
 
 ---
 
@@ -196,7 +196,7 @@ Several areas demonstrate strong and deliberate spec-vs-implementation separatio
 
 ### 4.1 DEPTH-AND-SCOPE.md: The Gold Standard
 
-`/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md` is the single best document in the repo for boundary clarity. It explicitly defines five layers (A through E) from normative spec to research, states "This is a spec repo, not an application" (line 29), and provides an adoption-tier model (Tiers 0-4) that is entirely language-neutral. Every other document in the project should be measured against this standard.
+`docs/DEPTH-AND-SCOPE.md` is the single best document in the repo for boundary clarity. It explicitly defines five layers (A through E) from normative spec to research, states "This is a spec repo, not an application" (line 29), and provides an adoption-tier model (Tiers 0-4) that is entirely language-neutral. Every other document in the project should be measured against this standard.
 
 ### 4.2 Integration Document Pattern
 
@@ -204,7 +204,7 @@ The `integrations/` directory consistently uses a "Boundary: normative vs non-no
 
 ### 4.3 Integration Catalog on the Site
 
-`/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md` opens with the strongest spec-vs-implementation framing on the entire site: "Each integration lane is non-normative guidance. The core specification stays the same regardless of domain."
+`site/src/content/docs/integrations/index.md` opens with the strongest spec-vs-implementation framing on the entire site: "Each integration lane is non-normative guidance. The core specification stays the same regardless of domain."
 
 ### 4.4 Domain Split Architecture
 
@@ -212,7 +212,7 @@ The `universalmanifest.net` / `myum.net` domain split is architecturally sound a
 
 ### 4.5 Decision Records
 
-`/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md` contains explicit decisions about:
+`docs/DECISIONS.md` contains explicit decisions about:
 - Keeping the spec repo separate from the reference implementation (2026-02-11)
 - Not publishing the TS helper to npm yet to avoid "public SDK drift" (2026-02-17)
 - Relocating the repo to reduce "reference implementation/UM context bleed" (2026-02-17)
@@ -232,7 +232,7 @@ The teaching-scripts README explicitly says "Abstract the spec" and "A viewer sh
 
 ### 4.9 STATE-OF-THE-PROJECT Origin-Runtime Section
 
-`/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` lines 316-322 include a "Notes on origin-runtime relationship" section that explicitly says "the reference implementation is a primary design driver, but the project goal is broader" and explains why implementation specifics live in `integrations/`, not `spec/`. This is exactly the kind of clarification that should be more prominent.
+`docs/STATE-OF-THE-PROJECT.md` lines 316-322 include a "Notes on origin-runtime relationship" section that explicitly says "the reference implementation is a primary design driver, but the project goal is broader" and explains why implementation specifics live in `integrations/`, not `spec/`. This is exactly the kind of clarification that should be more prominent.
 
 ### 4.10 WO-0057 Already Exists
 
@@ -248,10 +248,10 @@ Work order WO-0057 ("Spec-vs-Implementation Documentation Clarity") already iden
 
 The following files need an explicit statement that UM is a specification implementable in any language:
 
-- `/Users/grig/work/repo/universalmanifest/README.md` (root README)
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` (site landing page)
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` (v0.1 spec entry)
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md` (v0.2 spec entry)
+- `README.md` (root README)
+- `site/src/content/docs/index.md` (site landing page)
+- `spec/v0.1/README.md` (v0.1 spec entry)
+- `spec/v0.2/README.md` (v0.2 spec entry)
 
 Suggested standard language (adapted from WO-0057):
 
@@ -348,7 +348,7 @@ The word "Shield" (referring to NVIDIA Shield TV Pro) should not appear in any `
 
 **R9. Add a "For implementers in other languages" callout to the Quick Start page.**
 
-`/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md` should include a note after the spec-reading section:
+`site/src/content/docs/getting-started/quick-start.md` should include a note after the spec-reading section:
 
 > The examples on this page use the TypeScript reference implementation for convenience. You can implement the same validation logic in any language. The specification, conformance requirements, and fixtures are language-neutral. Start with the [conformance page](/conformance/v01/) for a language-independent implementation checklist.
 

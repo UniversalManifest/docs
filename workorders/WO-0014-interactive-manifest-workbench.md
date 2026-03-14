@@ -43,9 +43,9 @@ Out of scope:
 ## Corpus-Derived Requirement Addendum (2026-02-19T04:55:00Z)
 
 Source linkage:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 Requirements added from full-corpus synthesis:
 - Profile mode handling MUST remain identity-method neutral in core fields (`CON-UM-003`).
@@ -69,16 +69,16 @@ Requirements added from full-corpus synthesis:
 ## Completion Evidence (2026-02-19T21:14:00Z)
 
 Implementation artifacts:
-- `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
-- `/Users/grig/work/repo/universalmanifest/site/public/workbench/workbench.js`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `site/public/workbench/index.html`
+- `site/public/workbench/workbench.js`
+- `site/src/content/docs/getting-started/workbench.md`
+- `site/src/content/docs/getting-started/quick-start.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
 
 Functional verification report:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-19-workbench-functional-checks.md`
+- `.dev/ai/reports/2026-02-19-workbench-functional-checks.md`
 - screenshot evidence:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-19-workbench-ui-verification.png`
+  - `.dev/ai/reports/2026-02-19-workbench-ui-verification.png`
 
 ## Dependencies
 

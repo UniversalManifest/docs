@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** HIGH
-**Source:** `/Users/grig/work/repo/universalmanifest/.dev/ai/audits/COMPLETION-AUDIT-2026-02-22-08-21-10Z.md`
+**Source:** `.dev/ai/audits/COMPLETION-AUDIT-2026-02-22-08-21-10Z.md`
 
 ## Objective
 
@@ -39,11 +39,11 @@ Out of scope:
 ## Required deliverables
 
 1. Journey output contract hardening in:
-   - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+   - `packages/universal-manifest/scripts/run-journeys.mjs`
 2. Journey documentation alignment in:
-   - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+   - `docs/journeys/README.md`
 3. Evidence artifact from updated runner:
-   - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/<timestamp>-journey-report.json`
+   - `docs/journeys/_artifacts/<timestamp>-journey-report.json`
 4. Work order completion evidence note in this file.
 
 ## Acceptance criteria
@@ -57,9 +57,9 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm test`
+- `cd site && npm run build:clean`
 
 ## Notes
 
@@ -68,16 +68,16 @@ Any deliberate aggregation of journey logic is acceptable only if evidence remai
 ## Completion evidence (2026-02-22)
 
 - Runner hardening completed in:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
     - explicit `J01`..`J11` journey rows now emitted
     - `J05` reference implementation smoke is configurable via `optional smoke flag` and `optional smoke path` (or CLI args `--optional-smoke`, `--optional-smoke-path`)
     - hardcoded reference implementation absolute path removed
 - Journey documentation alignment completed in:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-05-um-edge-to-display-smoke.md`
+  - `docs/journeys/README.md`
+  - `docs/journeys/journey-05-um-edge-to-display-smoke.md`
 - Evidence artifact:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`
+  - `docs/journeys/_artifacts/2026-02-22T22-55-37-227Z-journey-report.json`
 - Validation results:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -> PASS (`J01`..`J11`)
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -> PASS
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` -> PASS
+  - `cd packages/universal-manifest && npm run journeys` -> PASS (`J01`..`J11`)
+  - `cd packages/universal-manifest && npm test` -> PASS
+  - `cd site && npm run build:clean` -> PASS

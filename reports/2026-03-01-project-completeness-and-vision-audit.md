@@ -383,34 +383,34 @@ Yes, this is the most mature standards-adjacent integration. The OMATrust assess
 
 | File | Description |
 |------|-------------|
-| `/Users/grig/work/repo/universalmanifest/docs/explainers/one-pager.md` | Strongest external-facing explainer |
-| `/Users/grig/work/repo/universalmanifest/docs/explainers/full-briefing.md` | Deepest explainer with competitive positioning |
-| `/Users/grig/work/repo/universalmanifest/docs/explainers/agent-briefing.md` | AI-optimized reference with pitch templates |
-| `/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md` | Comprehensive 537-line briefing with examples |
-| `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md` | Adoption tier model (Tier 0-4) |
-| `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` | 9-phase development roadmap |
-| `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md` | Maturity gate framework (G1-G7) |
-| `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md` | Release readiness checklist |
-| `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md` | Journey proof system documentation |
-| `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md` | Publishing model and immutability policy |
-| `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md` | Domain split rationale |
-| `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` | Current project snapshot |
-| `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md` | Vision including MUM lineage |
-| `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md` | Governance charter |
-| `/Users/grig/work/repo/universalmanifest/docs/site/INFORMATION-ARCHITECTURE.md` | Site IA document |
-| `/Users/grig/work/repo/universalmanifest/docs/MANDATE-interactive-implementation-sandbox.md` | CEO sandbox mandate |
-| `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-omatrust-integration-assessment.md` | OMATrust integration assessment |
-| `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-23-remaining-work-to-final-vision.md` | Previous gap analysis |
-| `/Users/grig/work/repo/universalmanifest/site/astro.config.mjs` | Site configuration and navigation |
-| `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` | Site landing page |
-| `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md` | "What Is UM?" page |
-| `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/index.md` | Integration catalog |
-| `/Users/grig/work/repo/universalmanifest/integrations/oma-trust.md` | OMATrust integration lane |
-| `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md` | Metaverse integration lane (with MSF lineage) |
-| `/Users/grig/work/repo/universalmanifest/research/linux-foundation-projects/2026-02/SYNTHESIS.md` | LF documentation benchmark |
-| `/Users/grig/work/repo/universalmanifest/docs/journeys/commercial/enterprise-journey.md` | Enterprise adopter narrative |
-| `/Users/grig/work/repo/universalmanifest/docs/teaching-scripts/README.md` | Teaching scripts system overview |
-| `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md` | Security threat model |
+| `docs/explainers/one-pager.md` | Strongest external-facing explainer |
+| `docs/explainers/full-briefing.md` | Deepest explainer with competitive positioning |
+| `docs/explainers/agent-briefing.md` | AI-optimized reference with pitch templates |
+| `docs/UNIVERSAL-MANIFEST-BRIEFING.md` | Comprehensive 537-line briefing with examples |
+| `docs/DEPTH-AND-SCOPE.md` | Adoption tier model (Tier 0-4) |
+| `docs/CRITICAL-PATH.md` | 9-phase development roadmap |
+| `docs/DONE-DONE-DEFINITION.md` | Maturity gate framework (G1-G7) |
+| `docs/DONE-DONE-CHECKLIST.md` | Release readiness checklist |
+| `docs/journeys/README.md` | Journey proof system documentation |
+| `docs/PUBLISHING-AND-VERSIONING.md` | Publishing model and immutability policy |
+| `docs/DOMAIN-ARCHITECTURE.md` | Domain split rationale |
+| `docs/STATE-OF-THE-PROJECT.md` | Current project snapshot |
+| `docs/PROJECT-VISION.md` | Vision including MUM lineage |
+| `docs/governance/GOVERNANCE.md` | Governance charter |
+| `docs/site/INFORMATION-ARCHITECTURE.md` | Site IA document |
+| `docs/MANDATE-interactive-implementation-sandbox.md` | CEO sandbox mandate |
+| `docs/reports/2026-02-22-omatrust-integration-assessment.md` | OMATrust integration assessment |
+| `docs/reports/2026-02-23-remaining-work-to-final-vision.md` | Previous gap analysis |
+| `site/astro.config.mjs` | Site configuration and navigation |
+| `site/src/content/docs/index.md` | Site landing page |
+| `site/src/content/docs/getting-started/universal-manifest-overview.md` | "What Is UM?" page |
+| `site/src/content/docs/integrations/index.md` | Integration catalog |
+| `integrations/oma-trust.md` | OMATrust integration lane |
+| `integrations/metaverse.md` | Metaverse integration lane (with MSF lineage) |
+| `research/linux-foundation-projects/2026-02/SYNTHESIS.md` | LF documentation benchmark |
+| `docs/journeys/commercial/enterprise-journey.md` | Enterprise adopter narrative |
+| `docs/teaching-scripts/README.md` | Teaching scripts system overview |
+| `docs/security/THREAT-MODEL.md` | Security threat model |
 
 ---
 

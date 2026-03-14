@@ -1,90 +1,87 @@
 # NotebookLM Knowledge Vault — Upload List
 
 **Created:** 2026-03-11
-**Purpose:** Prioritized list of files to upload to NotebookLM for full UM project context.
-**Constraint:** Max 50 sources, max ~500K chars per source.
+**Updated:** 2026-03-12
+**Purpose:** Comprehensive knowledge package for NotebookLM upload.
 
-## ESSENTIAL (Upload First — 43+ sources)
+## Approach: Big Package Zip
 
-### Core Project Documents
-1. `README.md`
-2. `docs/STATE-OF-THE-PROJECT.md`
-3. `docs/CRITICAL-PATH.md`
-4. `docs/PROJECT-VISION.md`
+Instead of manually uploading individual files (limited to 50 sources), we created a single comprehensive zip archive containing the entire knowledge base. This gives NotebookLM full project context in one upload.
 
-### Specification
-5. `spec/v0.1/README.md`
-6. `spec/v0.1/CONFORMANCE.md`
-7. `spec/v0.1/schema.json`
-8. `spec/v0.2/README.md`
-9. `spec/v0.2/CONFORMANCE.md`
-10. `spec/v0.2/SIGNATURE-PROFILE.md`
-11. `spec/v0.2/schema.json`
+**Zip file:** `notebooklm-knowledge-vault.zip` (project root)
 
-### Architecture and Design
-12. `docs/ENVELOPE-TOPOLOGY.md`
-13. `docs/DOMAIN-ARCHITECTURE.md`
-14. `docs/DECISIONS.md`
+## Package Stats
 
-### Standards and Positioning
-15. `docs/STANDARDS-POSITIONING.md`
-16. `docs/MSF-RELATIONSHIP.md`
+| Metric | Value |
+|---|---|
+| Total files | 633 |
+| Uncompressed size | ~4.1 MB |
+| Compressed size | 1.4 MB |
+| Compression ratio | ~66% |
 
-### Integration Lanes (all 16)
-17. `integrations/metaverse.md`
-18. `integrations/portable-identity-profile-xr.md`
-19. `integrations/rp1-spatial-fabric.md`
-20. `integrations/smart-glasses.md`
-21. `integrations/reference-runtime.md`
-22. `integrations/runtime-profile.md`
-23. `integrations/did-vc.md`
-24. `integrations/oma-trust.md`
-25. `integrations/proof-of-personhood.md`
-26. `integrations/gpc-global-privacy-control.md`
-27. `integrations/education-credentials.md`
-28. `integrations/healthcare-patient-consent.md`
-29. `integrations/smart-home.md`
-30. `integrations/social.md`
-31. `integrations/data-firewall-ux.md`
-32. `integrations/TEMPLATE.md`
+### Breakdown by Directory
 
-### Explainers and Briefings
-33. `docs/explainers/full-briefing.md`
-34. `docs/explainers/agent-briefing.md`
-35. `docs/explainers/one-pager.md`
-36. `docs/explainers/metaverse-portaling.md`
+| Directory | File count | Description |
+|---|---|---|
+| `docs/` | 416 | All markdown docs: reports, workorders, scripts, design, journeys, explainers, governance, security, concepts, presentations, research, teaching-scripts, diagrams |
+| `examples/` | 115 | JSON/JSONLD fixture files showing real UM data structures |
+| `integrations/` | 16 | All integration lane documents |
+| `spec/` | 10 | Specification files (README, CONFORMANCE, SIGNATURE-PROFILE, schema.json, context files) |
+| Root | 2 | README.md, PROJECT-RULES.md |
 
-### IWPS and OMA3
-37. `docs/reports/2026-03-11-iwps-um-alignment-analysis.md`
-38. `docs/research/iwps-base-specification-v0.3.md` *(pending WO-0146)*
+## What's Included
 
-### Governance and Operations
-39. `docs/governance/GOVERNANCE.md`
-40. `PROJECT-RULES.md`
+- **ALL markdown files from `docs/`** — every subdirectory including reports, workorders, scripts, design, journeys, explainers, governance, security, concepts, presentations, research, teaching-scripts
+- **ALL markdown files from `integrations/`** — all 16 integration lane documents
+- **ALL files from `spec/`** — both v0.1 and v0.2 specs, schemas, conformance, context files
+- **ALL JSON/JSONLD fixtures from `examples/`** — real data structures demonstrating UM envelopes
+- **`README.md`** — project overview
+- **`PROJECT-RULES.md`** — project-specific rules and configuration
 
-### Work Order Index
-41. `docs/workorders/WO-INDEX.md`
+## What's Excluded
 
-### Presentations
-42. `docs/presentations/2026-03-12-oma3-architectural-overview.md`
-43. `docs/presentations/2026-03-12-oma3-notebooklm-briefs.md`
+- **Binary video files** — `docs/design/capsule-pod-reference/*.mp4` (14.4 MB of reference videos)
+- **Binary image files** — `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.ico`, `.ai` (logos, screenshots)
+- **Font files** — `.woff`, `.woff2`, `.ttf`, `.eot`
+- **Obsidian config** — `docs/.obsidian/` (editor settings, not knowledge)
+- **Excalidraw diagrams** — `.excalidraw` (binary diagram format)
+- **AGENTS.md** — operational infrastructure, not UM knowledge
+- **`.dev/` directory** — session handoffs, not canonical knowledge
+- **Build/runtime artifacts** — `node_modules/`, `dist/`, `.astro/`, `site/`
+- **`.git/` directory** — version control internals
 
-### Gap-Fill Documents (pending creation)
-44. `docs/reports/2026-03-11-spatial-fabric-hackathon-learnings.md` *(pending WO-0150)*
-45. `docs/concepts/avatar-equip-tool.md` *(pending WO-0151)*
+## Priority Tiers (Reference)
 
-## IMPORTANT (Upload if Space Allows — 7 remaining slots)
+The original upload list organized files into priority tiers for the 50-source limit. With the zip approach, all tiers are included. For reference, the highest-priority files for focused review remain:
 
-46. `docs/journeys/README.md` (journey system overview)
-47. `docs/scripts/video-hierarchy-of-discovery.md` (video content strategy)
-48. `docs/design/CAPSULE-POD-DESIGN.md` (visual identity)
-49. `docs/design/PERMISSIONS-FIREWALL-DESIGN.md` (consent visualization)
-50. `docs/OUTREACH-AND-ADOPTION-STRATEGY.md` (adoption roadmap)
+### Tier 1 — Core Understanding
+- `README.md` — project overview
+- `docs/STATE-OF-THE-PROJECT.md` — current status
+- `docs/CRITICAL-PATH.md` — what matters now
+- `docs/PROJECT-VISION.md` — long-term direction
+
+### Tier 2 — Specification
+- `spec/v0.2/README.md` — current spec
+- `spec/v0.2/CONFORMANCE.md` — conformance requirements
+- `spec/v0.2/SIGNATURE-PROFILE.md` — signature architecture
+
+### Tier 3 — Architecture
+- `docs/ENVELOPE-TOPOLOGY.md` — data model
+- `docs/DOMAIN-ARCHITECTURE.md` — system architecture
+- `docs/DECISIONS.md` — architectural decisions
+
+### Tier 4 — Positioning and Outreach
+- `docs/STANDARDS-POSITIONING.md` — standards landscape
+- `docs/MSF-RELATIONSHIP.md` — MSF alignment
+- `docs/explainers/full-briefing.md` — comprehensive explainer
+- `docs/explainers/agent-briefing.md` — agent-oriented briefing
+
+### Tier 5 — Integration Lanes
+- All 16 files in `integrations/` — each covers a specific integration domain
 
 ## Notes
 
-- Total ESSENTIAL: ~45 sources (~800K content, well within limits)
-- AGENTS.md excluded — it's operational infrastructure, not UM knowledge
-- Individual work orders excluded — WO-INDEX.md covers all 149+
-- Handoffs excluded — session-specific, not canonical knowledge
-- SVGs, CSS, CI/CD, build artifacts excluded — not text knowledge
+- The zip preserves full directory structure for organized extraction
+- All content is text-based (markdown, JSON, JSONLD) — no binary content included
+- Total text content is ~3.7 MB uncompressed, well within NotebookLM limits
+- Work orders are included in full (not just the index), providing complete project history

@@ -133,15 +133,15 @@ Out of scope:
 ## Key file paths (created/modified)
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MIGRATION-V01-V02.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/migration-v01-v02.md` (Starlight page)
+- `docs/guides/MIGRATION-V01-V02.md`
+- `docs/governance/DEPRECATION-POLICY.md`
+- `site/src/content/docs/guides/migration-v01-v02.md` (Starlight page)
 
 Modified files:
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md` (add migration callout)
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md` (add "migrating from v0.1?" link)
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/` (cross-links)
-- `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md` (link to deprecation policy)
+- `spec/v0.1/README.md` (add migration callout)
+- `spec/v0.2/README.md` (add "migrating from v0.1?" link)
+- `site/src/content/docs/getting-started/` (cross-links)
+- `docs/governance/GOVERNANCE.md` (link to deprecation policy)
 
 ## Acceptance criteria
 
@@ -157,7 +157,7 @@ Modified files:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (docs site builds with new pages)
+- `cd site && npm run build:clean` (docs site builds with new pages)
 - Manual review of breaking changes catalog against actual spec diffs between `spec/v0.1/` and `spec/v0.2/`.
 - Verify code examples compile/run (TypeScript examples).
 
@@ -172,9 +172,9 @@ Modified files:
 
 Completed with migration documentation and publishing links:
 
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MIGRATION-V01-V02.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/DEPRECATION-POLICY.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/migration-v01-v02.md`
+- `docs/guides/MIGRATION-V01-V02.md`
+- `docs/governance/DEPRECATION-POLICY.md`
+- `site/src/content/docs/guides/migration-v01-v02.md`
 - Cross-links in spec and getting-started pages
 
 Evidence:

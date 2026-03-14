@@ -2,7 +2,7 @@
 
 Date: 2026-03-05  
 Program: Portable Identity Profile Go-Now (`PIP-GN-03`)  
-Repository: `/Users/grig/work/repo/universalmanifest`
+Repository: ``
 
 ## Purpose
 
@@ -29,15 +29,15 @@ Map the new Portable Identity Profile journey IDs to implementation requirements
 
 Runner update:
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
 
 Journey index update:
 
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+- `docs/journeys/README.md`
 
 Execution command:
 
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`
 
 Result summary (2026-03-05):
 
@@ -46,5 +46,5 @@ Result summary (2026-03-05):
 
 Artifacts:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-gn03-journeys-run.txt`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
+- `docs/reports/2026-03-05-gn03-journeys-run.txt`
+- `docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`

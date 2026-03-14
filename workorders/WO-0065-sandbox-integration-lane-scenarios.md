@@ -109,5 +109,5 @@ Implement 8 scenario definition files. Each uses an existing fixture stub from `
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test each scenario)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (test each scenario)

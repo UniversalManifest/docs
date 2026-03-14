@@ -30,20 +30,20 @@ Out of scope:
 ## Deliverables
 
 - work order execution artifacts under:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-index/`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/`
+  - `.dev/ai/knowledge-index/`
+  - `.dev/ai/knowledge-corpus/`
+  - `.dev/ai/ingestion/records/`
 - new/updated integration docs under:
-  - `/Users/grig/work/repo/universalmanifest/integrations/`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/`
+  - `integrations/`
+  - `site/src/content/docs/integrations/`
 - fixtures and proof artifacts under:
-  - `/Users/grig/work/repo/universalmanifest/examples/`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/`
+  - `examples/`
+  - `docs/journeys/`
+  - `docs/journeys/_artifacts/`
 - source-of-truth updates:
-  - `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+  - `docs/PROJECT-VISION.md`
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
 
 ## Acceptance criteria
 
@@ -57,42 +57,42 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md`
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
+- `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+- `docs/workorders/WO-0021-smart-glasses-consent-fixtures-and-proof-journeys.md`
+- `docs/workorders/WO-0022-metaverse-lane-fixtures-and-proof-hardening.md`
+- `docs/workorders/WO-0023-production-deployment-drift-prevention-automation.md`
 
 ## Execution evidence (2026-02-20)
 
 K2B source intake (P1):
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-22-world-id-proof-of-personhood.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-23-gitcoin-passport-verification.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-24-brightid-verification.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-20-wo0024-personhood-provider-intake.md`
+- `.dev/ai/knowledge-corpus/imports/external-22-world-id-proof-of-personhood.md`
+- `.dev/ai/knowledge-corpus/imports/external-23-gitcoin-passport-verification.md`
+- `.dev/ai/knowledge-corpus/imports/external-24-brightid-verification.md`
+- `.dev/ai/ingestion/records/2026-02-20-wo0024-personhood-provider-intake.md`
 
 Fixtures (P2):
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/chia-credential-lane-manifest.jsonld`
+- `examples/v0.1/stubs/mastodon-personhood-multi-credential-manifest.jsonld`
+- `examples/v0.1/stubs/bluesky-personhood-multi-credential-manifest.jsonld`
+- `examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld`
+- `examples/v0.1/stubs/chia-credential-lane-manifest.jsonld`
 
 Integration docs (P3):
 
-- `/Users/grig/work/repo/universalmanifest/integrations/proof-of-personhood.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/chia-vc.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/proof-of-personhood.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/chia-vc.md`
+- `integrations/proof-of-personhood.md`
+- `integrations/chia-vc.md`
+- `site/src/content/docs/integrations/proof-of-personhood.md`
+- `site/src/content/docs/integrations/chia-vc.md`
 
 Journey evidence (P4):
 
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/J10-multi-provider-personhood-coexistence.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-20T19-58-34-497Z-journey-report.json`
+- `docs/journeys/J10-multi-provider-personhood-coexistence.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `docs/journeys/_artifacts/2026-02-20T19-58-34-497Z-journey-report.json`
 
 Validation gate (P5):
 

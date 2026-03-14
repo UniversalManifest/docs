@@ -22,7 +22,7 @@ The freshness audit found that `docs/README.md` is significantly stale — it ha
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/docs/README.md`**
+**`docs/README.md`**
 
 ### New references to add
 
@@ -80,4 +80,4 @@ The freshness audit found that `docs/README.md` is significantly stale — it ha
 ## Validation commands
 
 - Manual comparison of docs/README.md references against actual file inventory.
-- `ls /Users/grig/work/repo/universalmanifest/docs/` to verify all top-level docs are referenced.
+- `ls docs/` to verify all top-level docs are referenced.

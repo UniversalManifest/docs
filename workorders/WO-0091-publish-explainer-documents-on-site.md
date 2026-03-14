@@ -43,10 +43,10 @@ Add a new top-level "About" or "Learn" section to the site sidebar navigation in
 - [ ] At least 3 explainer documents are published as site pages.
 - [ ] A new "About" or "Learn" section exists in the site navigation.
 - [ ] The one-pager is discoverable within 2 clicks from the site landing page.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 - [ ] Links within the published explainers resolve correctly to other site pages.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of published explainer pages in browser.

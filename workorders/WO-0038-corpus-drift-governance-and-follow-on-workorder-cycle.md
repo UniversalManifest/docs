@@ -3,7 +3,7 @@
 **Status:** COMPLETED
 **Created:** 2026-02-22
 **Priority:** LOW
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
+**Source:** `docs/STATE-OF-THE-PROJECT.md`
 
 ## Objective
 
@@ -31,14 +31,14 @@ Out of scope:
 ## Required deliverables
 
 1. Drift-check runbook update in one of:
-   - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-   - `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/GATES.md`
+   - `docs/CRITICAL-PATH.md`
+   - `docs/STATE-OF-THE-PROJECT.md`
+   - `.dev/ai/ingestion/GATES.md`
 2. Baseline drift report in:
-   - `/Users/grig/work/repo/universalmanifest/docs/reports/`
-   - or `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/`
+   - `docs/reports/`
+   - or `.dev/ai/reports/`
 3. Follow-on WO trigger criteria documented in:
-   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+   - `docs/workorders/WO-INDEX.md`
    - or a dedicated governance doc referenced by the index
 
 ## Acceptance criteria
@@ -51,16 +51,16 @@ Out of scope:
 
 ## Validation commands
 
-- `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh /Users/grig/work/repo/universalmanifest --artifact-root /Users/grig/work/repo/universalmanifest/.dev/ai --strict`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh  --artifact-root .dev/ai --strict`
+- `cd packages/universal-manifest && npm run journeys`
 - `curl -I https://universalmanifest.net/ && curl -I https://universalmanifest.net/getting-started/workbench/ && curl -I https://universalmanifest.net/proof/harness/`
-- `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' /Users/grig/work/repo/universalmanifest/site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
-- `rg -n 'drift|follow-on|work order|threshold|cadence' /Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md /Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md /Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/GATES.md`
+- `rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/integrations/' site/src/content/docs --glob '*.md' | rg -v '\\]\\([^)]+'`
+- `rg -n 'drift|follow-on|work order|threshold|cadence' docs/STATE-OF-THE-PROJECT.md docs/CRITICAL-PATH.md .dev/ai/ingestion/GATES.md`
 
 ## Completion evidence (2026-02-22)
 
 - Baseline run report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0038-drift-governance-baseline-report.md`
+  - `docs/reports/2026-02-22-wo-0038-drift-governance-baseline-report.md`
 - Runbook and index updates:
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (Phase 9)
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md` (trigger criteria reference)
+  - `docs/CRITICAL-PATH.md` (Phase 9)
+  - `docs/workorders/WO-INDEX.md` (trigger criteria reference)

@@ -31,23 +31,23 @@ Legacy naming creates confusion about the project's current identity and scope. 
 
 ### Files to modify
 
-1. **`/Users/grig/work/repo/universalmanifest/docs/TS-HELPER-PACKAGE.md`** (line 14)
+1. **`docs/TS-HELPER-PACKAGE.md`** (line 14)
    - Update the legacy `@localartistnetwork/universal-manifest` package name to the current package name (or add a note that this is the legacy name and the current name is X).
 
-2. **`/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/decisions.md`** (line 18)
+2. **`site/src/content/docs/governance/decisions.md`** (line 18)
    - Remove or qualify "Device caching + logging (public display / Shield)" — replace "Shield" with "constrained device" or "public display device."
 
-3. **`/Users/grig/work/repo/universalmanifest/docs/UNIVERSAL-MANIFEST-BRIEFING.md`** (line 234)
+3. **`docs/UNIVERSAL-MANIFEST-BRIEFING.md`** (line 234)
    - Review the fixture example mentioning "NVIDIA Shield TV Pro enrolled to venue edge" — consider replacing with a generic device description like "public display device enrolled to venue edge."
 
 ## Acceptance criteria
 
 - [ ] No document outside of `integrations/reference-runtime.md` and fixture files uses the "Shield" device brand name without context.
 - [ ] The legacy `@localartistnetwork` package scope is either updated or explicitly noted as legacy.
-- [ ] `rg -n "Shield" /Users/grig/work/repo/universalmanifest/site/src/content/docs/` returns zero unqualified results.
+- [ ] `rg -n "Shield" site/src/content/docs/` returns zero unqualified results.
 
 ## Validation commands
 
-- `rg -n "@localartistnetwork" /Users/grig/work/repo/universalmanifest/docs/`
-- `rg -n "Shield" /Users/grig/work/repo/universalmanifest/site/src/content/docs/`
-- `rg -n "NVIDIA" /Users/grig/work/repo/universalmanifest/docs/` (should return only integration/fixture references)
+- `rg -n "@localartistnetwork" docs/`
+- `rg -n "Shield" site/src/content/docs/`
+- `rg -n "NVIDIA" docs/` (should return only integration/fixture references)

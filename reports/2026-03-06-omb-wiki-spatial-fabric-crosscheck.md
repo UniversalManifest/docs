@@ -39,17 +39,17 @@ This review audited the following `omb.wiki` pages for spatial-fabric / open-spa
 - [Open Standards for the Metaverse](https://omb.wiki/en/standards)
 
 It compared those pages against the current repo baseline, especially:
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-19-rp1-learn-source-capture.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-20-rp1-dev-rdfabric-container-js.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-21-rp1-dev-rdfabric-partial-js.md`
+- `integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+- `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+- `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `.dev/ai/knowledge-corpus/imports/external-19-rp1-learn-source-capture.md`
+- `.dev/ai/knowledge-corpus/imports/external-20-rp1-dev-rdfabric-container-js.md`
+- `.dev/ai/knowledge-corpus/imports/external-21-rp1-dev-rdfabric-partial-js.md`
 
 ## Authority rule
 
@@ -66,11 +66,11 @@ The current repo already captures the following correctly:
 
 1. **Core boundary is correct**
 - The internal RP1 lane keeps RP1 semantics in optional pointers and facets rather than core required fields.
-- This is stated directly in `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`.
+- This is stated directly in `integrations/rp1-spatial-fabric.md`.
 - `CON-UM-007` explicitly decided to keep RP1 object-model specificity out of the UM minimal core.
 
 2. **A concrete overlay exists**
-- The fixture at `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld` already models:
+- The fixture at `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld` already models:
   - `rp1.fabric`
   - `rp1.anchorSet`
   - `rp1.placeGraph`
@@ -285,7 +285,7 @@ The meaningful gaps are elsewhere.
 - Those sources do not cover the full spatial-fabric operational model now visible via `omb.wiki`.
 
 2. **Integration-doc depth gap**
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md` is directionally correct but too thin relative to the newly visible composition model.
+- `integrations/rp1-spatial-fabric.md` is directionally correct but too thin relative to the newly visible composition model.
 
 3. **Evidence-profile gap**
 - Existing fixture/journey material proves anchor and consent carriage.
@@ -309,11 +309,11 @@ These points are already adequately grounded by the repo’s existing primary-so
 - Cross-world behavior should be consent-gated.
 
 Primary repo evidence:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-20-rp1-dev-rdfabric-container-js.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-21-rp1-dev-rdfabric-partial-js.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+- `.dev/ai/knowledge-corpus/imports/external-20-rp1-dev-rdfabric-container-js.md`
+- `.dev/ai/knowledge-corpus/imports/external-21-rp1-dev-rdfabric-partial-js.md`
+- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
 
 ### Wiki-discovered but not yet sufficiently source-localized
 

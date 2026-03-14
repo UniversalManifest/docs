@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Metaverse Integration Lane  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/explainers/metaverse-portaling.md`, `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`, `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
+**Source:** `docs/explainers/metaverse-portaling.md`, `integrations/metaverse.md`, `docs/journeys/journey-09-metaverse-crossworld-projection.md`
 
 ## Objective
 
@@ -33,17 +33,17 @@ Out of scope:
 ## Deliverables
 
 - Portaling integration note:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-metaverse-portaling-integration-note.md`
+  - `docs/reports/2026-03-06-metaverse-portaling-integration-note.md`
 - Updated metaverse lane docs:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - `integrations/metaverse.md`
+  - `site/src/content/docs/integrations/metaverse.md`
 - Updated proof and teaching surfaces:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/explainers/metaverse-portaling.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld.ts`
-  - `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld-v2.ts`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `docs/journeys/journey-09-metaverse-crossworld-projection.md`
+  - `docs/journeys/README.md`
+  - `docs/explainers/metaverse-portaling.md`
+  - `site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld.ts`
+  - `site/src/scripts/sandbox/scenarios/integration-lanes/il-03-metaverse-crossworld-v2.ts`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 
 ## Acceptance Criteria
 
@@ -55,9 +55,9 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0140-k2b-concept-integration-transfer-map.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
+- `docs/workorders/WO-0126-metaverse-universal-manifest-go-now-execution-and-integration-pages.md`
+- `docs/workorders/WO-0140-k2b-concept-integration-transfer-map.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-gap-and-implementation-report.md`
 
 ## Execution Notes
 

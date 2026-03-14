@@ -54,15 +54,15 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/smoke-endpoints.mjs`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/post-deploy-verify.mjs`
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md`
+- `packages/universal-manifest/scripts/smoke-endpoints.mjs`
+- `packages/universal-manifest/scripts/post-deploy-verify.mjs`
 
 ## Verification Commands (Target)
 
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 npm run verify:postdeploy:prod
 ```
@@ -72,28 +72,28 @@ npm run verify:postdeploy:prod
 Repository deliverables completed:
 
 - Added synthetic production monitoring workflow:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring.yml`
+  - `.github/workflows/synthetic-monitoring.yml`
 - Added synthetic staging monitoring workflow:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
+  - `.github/workflows/synthetic-monitoring-staging.yml`
 - Added SLO/SLI and alert policy:
-  - `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+  - `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
 - Added incident/reliability templates:
-  - `/Users/grig/work/repo/universalmanifest/docs/operations/INCIDENT-REPORT-TEMPLATE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
+  - `docs/operations/INCIDENT-REPORT-TEMPLATE.md`
+  - `docs/operations/RELIABILITY-SUMMARY-TEMPLATE.md`
 
 Verification results:
 
 - `npm run smoke:endpoints:prod` -> PASS
 - `npm run verify:postdeploy:prod` -> PASS
 - report generated:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-25-02-686Z-post-deploy-verification.md`
+  - `.dev/ai/reports/deploy-checks/2026-03-02T22-25-02-686Z-post-deploy-verification.md`
 - staging checks currently fail due unreachable hosts:
   - `npm run smoke:endpoints:staging` -> FAIL (`fetch failed`)
   - `npm run verify:postdeploy:staging` -> FAIL (`fetch failed`)
 - fallback-host staging checks:
   - smoke -> PASS
   - post-deploy verify -> PASS
-  - report: `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
+  - report: `.dev/ai/reports/deploy-checks/2026-03-02T22-59-38-831Z-post-deploy-verification.md`
 
 Completion addendum (2026-03-03):
 
@@ -111,4 +111,4 @@ Remaining optional enhancement:
 
 Reliability summary artifact (latest):
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-03-reliability-summary.md`
+- `.dev/ai/reports/2026-03-03-reliability-summary.md`

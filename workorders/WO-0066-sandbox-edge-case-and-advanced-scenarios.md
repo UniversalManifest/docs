@@ -101,15 +101,15 @@ Implement 8 scenario definition files. This includes creating one new composite 
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/cross-system-projection-manifest.jsonld` (new fixture)
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-01-issued-after-expires.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-02-missing-signature.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-03-clock-skew.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/edge-cases/ec-04-facet-type-violation.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-01-cross-system-projection.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-02-pointers-signed.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-03-revocation-aware.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/advanced/ad-04-full-v02-integration.ts`
+- `examples/v0.1/stubs/cross-system-projection-manifest.jsonld` (new fixture)
+- `site/src/scripts/sandbox/scenarios/edge-cases/ec-01-issued-after-expires.ts`
+- `site/src/scripts/sandbox/scenarios/edge-cases/ec-02-missing-signature.ts`
+- `site/src/scripts/sandbox/scenarios/edge-cases/ec-03-clock-skew.ts`
+- `site/src/scripts/sandbox/scenarios/edge-cases/ec-04-facet-type-violation.ts`
+- `site/src/scripts/sandbox/scenarios/advanced/ad-01-cross-system-projection.ts`
+- `site/src/scripts/sandbox/scenarios/advanced/ad-02-pointers-signed.ts`
+- `site/src/scripts/sandbox/scenarios/advanced/ad-03-revocation-aware.ts`
+- `site/src/scripts/sandbox/scenarios/advanced/ad-04-full-v02-integration.ts`
 
 ## Acceptance criteria
 
@@ -124,6 +124,6 @@ Implement 8 scenario definition files. This includes creating one new composite 
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` (verify new fixture passes)
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test each scenario)
+- `cd site && npm run build:clean`
+- `cd packages/universal-manifest && npm test` (verify new fixture passes)
+- `cd site && npm run dev` (test each scenario)

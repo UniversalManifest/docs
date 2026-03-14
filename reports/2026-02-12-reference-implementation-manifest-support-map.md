@@ -74,7 +74,7 @@ Logging:
 
 UM proof suite (UM-first):
 
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest` → `npm run journeys`
+- `packages/universal-manifest` → `npm run journeys`
 
 reference implementation smoke test (reference implementation repo; validates issuance, retrieval, socket, logging semantics):
 

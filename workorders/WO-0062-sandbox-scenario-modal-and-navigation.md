@@ -98,12 +98,12 @@ Out of scope:
 
 ## Key file paths (created)
 
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioModal.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/components/sandbox/ScenarioCard.astro`
-- `/Users/grig/work/repo/universalmanifest/site/src/styles/sandbox/modal.css`
-- Updated: `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/index.astro`
-- Updated: `/Users/grig/work/repo/universalmanifest/site/src/pages/sandbox/[...scenario].astro`
-- Updated: `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/index.ts`
+- `site/src/components/sandbox/ScenarioModal.astro`
+- `site/src/components/sandbox/ScenarioCard.astro`
+- `site/src/styles/sandbox/modal.css`
+- Updated: `site/src/pages/sandbox/index.astro`
+- Updated: `site/src/pages/sandbox/[...scenario].astro`
+- Updated: `site/src/scripts/sandbox/scenarios/index.ts`
 
 ## Acceptance criteria
 
@@ -123,6 +123,6 @@ Out of scope:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev` (test at /sandbox/)
+- `cd site && npm run build:clean`
+- `cd site && npm run dev` (test at /sandbox/)
 - Manual testing: search, filter, card click, back navigation, keyboard navigation

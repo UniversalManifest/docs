@@ -5,7 +5,7 @@
 
 Update (later on 2026-02-18):
 - Deferred-source reconciliation was completed in a follow-on pass.
-- See: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-18-stage1-deferred-corpus-reconciliation.md`
+- See: `docs/reports/2026-02-18-stage1-deferred-corpus-reconciliation.md`
 
 ## 1) Direct answer
 

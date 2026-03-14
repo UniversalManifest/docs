@@ -47,9 +47,9 @@ Document how the changelog is maintained (manual entry at release time, or autom
 - [ ] Breaking changes are visually distinguished.
 - [ ] The page is linked from the Publishing section of the site navigation.
 - [ ] A maintenance process for updating the changelog is documented.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of changelog content.

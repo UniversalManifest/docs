@@ -52,9 +52,9 @@ Add to the site navigation, potentially under a new "Reference" section or under
 - [ ] Error codes are listed with explanations.
 - [ ] At least 3 curl examples are included.
 - [ ] Page is linked from the conformance resolver page and the getting started section.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of API reference completeness.

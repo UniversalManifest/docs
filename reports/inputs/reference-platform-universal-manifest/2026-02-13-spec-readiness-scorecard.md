@@ -17,24 +17,24 @@ Scoring scale:
 
 - Score: 3/4
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
+  - `spec/v0.1/README.md`
+  - `spec/v0.1/schema.json`
+  - `spec/v0.1/schema.jsonld`
 - Notes: clear v0.1 shape and semantics exist; still pre-v1 stability guarantees.
 
 ### Gate 2: Consumer/issuer conformance
 
 - Score: 3/4
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/`
+  - `spec/v0.1/CONFORMANCE.md`
+  - `examples/v0.1/`
 - Notes: baseline conformance path exists; deeper edge/security cases remain.
 
 ### Gate 3: Integrity profile maturity
 
 - Score: 2/4
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
+  - `spec/v0.2/SIGNATURE-PROFILE.md`
   - `/Users/grig/work/repo/reference-platform/packages/backend/src/universalManifest.ts`
   - `/Users/grig/work/repo/reference-platform/packages/player-client/src/universalManifest/verifySignature.ts`
 - Notes: direction and stubs exist; cross-ecosystem profile and trust distribution are not final.
@@ -43,8 +43,8 @@ Scoring scale:
 
 - Score: 2/4
 - Evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
+  - `docs/PUBLISHING-AND-VERSIONING.md`
+  - `docs/DOMAIN-ARCHITECTURE.md`
 - Notes: architecture and policy exist; operational publishing rails now being formalized in reference implementation workstream.
 
 ### Gate 5: Integration viability (real system)

@@ -1,7 +1,7 @@
 # Universal Manifest Master Forward Worklist
 
 Date: 2026-02-20
-Project root: `/Users/grig/work/repo/universalmanifest`
+Project root: ``
 Purpose: single source list of all remaining known work from this checkpoint forward.
 Scope rule: includes product, docs, proof, deployment, K2B, and governance work still required to reach completion claims.
 
@@ -11,9 +11,9 @@ This document is a historical checkpoint snapshot for 2026-02-20 execution conte
 
 It is superseded as an operational source of truth by:
 
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/workorders/WO-INDEX.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/workorders/WO-INDEX.md`
+- `.dev/ai/workorders/WO-INDEX.md`
 
 ## Execution update (2026-02-20)
 
@@ -24,7 +24,7 @@ Completed in this cycle:
 3. Resolver routing expanded to include `www.myum.net/*`; health checks return `200`.
 4. Production endpoint smoke re-run and passing.
 5. Follow-on work order created and closed:
-   - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
+   - `docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
 
 Highest-priority remaining blocker:
 
@@ -50,16 +50,16 @@ Highest-priority remaining blocker:
 ## 2) Open work order closure requirements
 
 1. `WO-0015` completion actions:
-2. Run protocol at `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`.
-3. Record results using `/Users/grig/work/repo/universalmanifest/docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`.
-4. Check final acceptance criterion and set status `COMPLETED` in `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`.
+2. Run protocol at `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`.
+3. Record results using `docs/reports/FIRST-TIME-READER-RESULTS-TEMPLATE.md`.
+4. Check final acceptance criterion and set status `COMPLETED` in `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`.
 5. Create follow-on WO for resolver `J03` defect if not already tracked as a dedicated WO.
 
 ## 3) K2B system integrity and consistency tasks
 
 1. Keep strict validator green on every major transition:
-2. `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh /Users/grig/work/repo/universalmanifest --artifact-root /Users/grig/work/repo/universalmanifest/.dev/ai --strict`
-3. Refresh `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/GATES.md` so project-local wording is consistent with strict gate evidence.
+2. `/opt/homebrew/bin/bash /Users/grig/.agents/scripts/validate-k2b-gates.sh  --artifact-root .dev/ai --strict`
+3. Refresh `.dev/ai/ingestion/GATES.md` so project-local wording is consistent with strict gate evidence.
 4. Run a new K2B provenance audit after integrating new CEO lanes and deployment fixes.
 5. Update source-selection/integration records whenever new external sources are added.
 6. Ensure every newly selected source has origin mapping and downstream artifact linkage.
@@ -124,7 +124,7 @@ Highest-priority remaining blocker:
 
 ## 11) Governance and release readiness
 
-1. Record all normative-impact decisions in `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`.
+1. Record all normative-impact decisions in `docs/DECISIONS.md`.
 2. Prepare done-done evidence pack when claiming release readiness.
 3. Complete release checklist and production smoke evidence before any completion claim.
 4. Keep `STATE-OF-THE-PROJECT` aligned with actual runtime truth (tests, deployment, open WOs).
@@ -151,9 +151,9 @@ Highest-priority remaining blocker:
 
 ## 14) Canonical evidence files to keep updating during execution
 
-1. `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-2. `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-3. `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
-4. `/Users/grig/work/repo/universalmanifest/.dev/ai/ingestion/GATES.md`
-5. `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
-6. `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/`
+1. `docs/STATE-OF-THE-PROJECT.md`
+2. `docs/DECISIONS.md`
+3. `docs/workorders/WO-INDEX.md`
+4. `.dev/ai/ingestion/GATES.md`
+5. `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+6. `docs/journeys/_artifacts/`

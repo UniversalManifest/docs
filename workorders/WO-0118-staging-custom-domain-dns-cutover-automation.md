@@ -54,32 +54,32 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md`
+- `docs/workorders/WO-0113-establish-staging-environments-and-promotion-model.md`
+- `docs/workorders/WO-0114-automate-deploy-pipeline-with-release-gates.md`
+- `docs/workorders/WO-0117-add-synthetic-monitoring-alerting-and-slo-policy.md`
 
 ## Progress Update (2026-03-03)
 
 Repository deliverables completed:
 
 - Added staging target selector:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/select-staging-bases.mjs`
+  - `packages/universal-manifest/scripts/select-staging-bases.mjs`
 - Added helper npm script:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json` (`resolve:staging-targets`)
+  - `packages/universal-manifest/package.json` (`resolve:staging-targets`)
 - Updated gated deploy staging verification path to shared selector:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
+  - `.github/workflows/deploy-gated.yml`
 - Updated synthetic staging monitoring path to shared selector:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
+  - `.github/workflows/synthetic-monitoring-staging.yml`
 - Updated staging/synthetic operations docs:
-  - `/Users/grig/work/repo/universalmanifest/docs/site/STAGING-PROMOTION-RUNBOOK.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+  - `docs/site/STAGING-PROMOTION-RUNBOOK.md`
+  - `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
 
 Verification results:
 
 - `node packages/universal-manifest/scripts/select-staging-bases.mjs --format json` -> selected `fallback_auto` with successful fallback probes
 - `eval \"$(node scripts/select-staging-bases.mjs --format shell)\"` + staging smoke/post-deploy commands -> PASS
 - post-deploy verification report:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-03-03T00-14-02-884Z-post-deploy-verification.md`
+  - `.dev/ai/reports/deploy-checks/2026-03-03T00-14-02-884Z-post-deploy-verification.md`
 
 Operational note:
 
@@ -97,18 +97,18 @@ Cloud run evidence (2026-03-03):
 Remediation implemented in repo:
 
 - Added compatibility fallback in both workflows to resolve staging bases from legacy env defaults when selector script is absent:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/synthetic-monitoring-staging.yml`
+  - `.github/workflows/deploy-gated.yml`
+  - `.github/workflows/synthetic-monitoring-staging.yml`
 
 Completion addendum (2026-03-03, later pass):
 
 - Custom domains are now active for staging endpoints.
 - Provisioning approach uses Worker custom domains (no direct DNS-record API dependency):
   - docs custom domain via staging proxy Worker:
-    - `/Users/grig/work/repo/universalmanifest/services/staging-docs-proxy/wrangler.toml`
-    - `/Users/grig/work/repo/universalmanifest/services/staging-docs-proxy/src/index.ts`
+    - `services/staging-docs-proxy/wrangler.toml`
+    - `services/staging-docs-proxy/src/index.ts`
   - resolver staging custom domains via:
-    - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/wrangler.toml` (`[env.staging]` routes with `custom_domain=true`)
+    - `services/myum-resolver/wrangler.toml` (`[env.staging]` routes with `custom_domain=true`)
 - Repository variable cutover completed:
   - `STAGING_DOCS_BASE=https://staging.universalmanifest.net`
   - `STAGING_RESOLVER_BASE=https://staging.myum.net`

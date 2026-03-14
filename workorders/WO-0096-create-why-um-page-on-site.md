@@ -44,9 +44,9 @@ Link from the "About" section and from the site landing page "Choose a starting 
 - [ ] No JSON-LD, Ed25519, or implementation details appear in the first screen of content.
 - [ ] At least 3 real-world scenarios are included.
 - [ ] The page is linked from the site landing page.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of page content for non-technical accessibility.

@@ -20,12 +20,12 @@ Out of scope:
 ## Deliverables
 
 - fixture additions under:
-  - `/Users/grig/work/repo/universalmanifest/examples/`
+  - `examples/`
 - journey/proof updates under:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
+  - `docs/journeys/`
 - integration documentation updates:
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
+  - `integrations/metaverse.md`
+  - `site/src/content/docs/integrations/metaverse.md`
 
 ## Acceptance criteria
 
@@ -36,18 +36,18 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+- `docs/workorders/WO-0018-mum-lineage-and-emerging-integration-codification.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`
 
 ## Completion evidence (2026-02-20)
 
 - Fixture:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
+  - `examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld`
 - Journey definition:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-09-metaverse-crossworld-projection.md`
+  - `docs/journeys/journey-09-metaverse-crossworld-projection.md`
 - Executable journey coverage (overlay assertions):
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs` (`J04`)
+  - `packages/universal-manifest/scripts/run-journeys.mjs` (`J04`)
 - Verification:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test` -> PASS
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys` -> PASS
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run smoke:endpoints:prod` -> PASS (latest production check)
+  - `cd packages/universal-manifest && npm test` -> PASS
+  - `cd packages/universal-manifest && npm run journeys` -> PASS
+  - `cd packages/universal-manifest && npm run smoke:endpoints:prod` -> PASS (latest production check)

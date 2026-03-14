@@ -22,7 +22,7 @@ There is currently no single page that tells a developer "here is how to build a
 
 ### New file
 
-**`/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/implement.md`**
+**`site/src/content/docs/getting-started/implement.md`**
 
 ### Content to include
 
@@ -52,10 +52,10 @@ There is currently no single page that tells a developer "here is how to build a
 - [ ] No TypeScript-specific code is presented as the only way to implement.
 - [ ] Links to JSON Schema, JSON-LD context, and fixtures are correct and functional.
 - [ ] At least 3 other site pages link to this new page.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of the new page content.
 - Check cross-links from Quick Start, Concepts, and landing page.

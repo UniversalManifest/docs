@@ -4,13 +4,13 @@ Date: 2026-02-22
 
 ## Pilot assets reviewed
 
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
-- `/Users/grig/work/repo/universalmanifest/site/public/animations/um-overlay-lanes-pilot.svg`
+- `site/public/animations/um-core-flow-pilot.svg`
+- `site/public/animations/um-overlay-lanes-pilot.svg`
 
 ## Placement verified
 
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+- `site/src/content/docs/index.md`
+- `site/src/content/docs/getting-started/universal-manifest-overview.md`
 
 ## Checklist result (pre-build)
 
@@ -24,8 +24,8 @@ Date: 2026-02-22
 ## Verification notes
 
 - Build commands:
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build`
-  - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+  - `cd site && npm run build`
+  - `cd site && npm run build:clean`
 - Browser checks (local):
   - `http://localhost:4321/`
   - `http://localhost:4321/getting-started/universal-manifest-overview/`

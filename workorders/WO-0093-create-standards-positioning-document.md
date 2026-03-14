@@ -51,9 +51,9 @@ The completeness audit found that UM has no dedicated document explaining its re
 - [ ] All five standards bodies mentioned in the project (MSF, OMA3, W3C, IETF, LF) are addressed.
 - [ ] UM's relationship to at least 4 adjacent standards (VCs, DIDComm, Solid, OIDC) is clearly articulated.
 - [ ] The current standardization intent is explicitly stated (even if the answer is "undecided").
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of document completeness against the five standards bodies.

@@ -1,7 +1,7 @@
 {
   "runId": "2026-03-04T04-11-14-774Z",
   "createdAt": "2026-03-04T04:11:39.625Z",
-  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "repoRoot": ".",
   "runtimeConfig": {
     "lanSmokeMode": "auto",
     "lanRepoPath": null
@@ -21,7 +21,7 @@
         "stdout": "",
         "stderr": "",
         "details": {
-          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+          "distRoot": "deploy/universalmanifest.net/dist"
         }
       }
     }
@@ -106,7 +106,7 @@
       "endedAt": "2026-03-04T04:11:39.503Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/social-profile-manifest.jsonld",
         "projection": {
           "umid": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
           "subject": "did:key:z6MkiJulesChenExampleDid",
@@ -134,7 +134,7 @@
       "endedAt": "2026-03-04T04:11:39.524Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:5f5e6f7a-1111-4a9a-8d5e-7c9a5f3e2b10",
           "subject": "did:example:rp1-user-01",
@@ -157,8 +157,8 @@
       "details": {
         "type": "consent-enforcement",
         "fixtures": [
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld",
-          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld"
+          "examples/v0.1/stubs/smart-glasses-ar-consent-allowed-manifest.jsonld",
+          "examples/v0.1/stubs/smart-glasses-ar-consent-denied-manifest.jsonld"
         ],
         "details": {
           "allowedFixtureUmid": "urn:uuid:6a7b8c9d-2222-4b8d-9d44-9fd2d00a1201",
@@ -177,7 +177,7 @@
       "endedAt": "2026-03-04T04:11:39.550Z",
       "details": {
         "type": "projection",
-        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
+        "fixturePath": "examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
         "details": {
           "umid": "urn:uuid:7b8c9d0e-4444-4a3d-8a11-0dbf2ce44210",
           "subject": "did:example:metaverse-user-01",

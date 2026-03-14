@@ -38,13 +38,13 @@ The "16" claim is therefore significantly outdated regardless of how "production
 
 ### Files to update
 
-1. **`/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`** (line 51) — "16 production animated SVGs" -> actual count
-2. **`/Users/grig/work/repo/universalmanifest/docs/diagrams/README.md`** (line 9) — "16 production assets" -> actual count
-3. **`/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-WORKFLOW.md`** (lines 3, 25, 720) — "16" -> actual count
+1. **`docs/STATE-OF-THE-PROJECT.md`** (line 51) — "16 production animated SVGs" -> actual count
+2. **`docs/diagrams/README.md`** (line 9) — "16 production assets" -> actual count
+3. **`docs/design/ANIMATED-SVG-WORKFLOW.md`** (lines 3, 25, 720) — "16" -> actual count
 
 ### Verification
 
-Run `ls /Users/grig/work/repo/universalmanifest/site/public/animations/ | wc -l` to confirm total count, then subtract test and pilot files.
+Run `ls site/public/animations/ | wc -l` to confirm total count, then subtract test and pilot files.
 
 ### Decision needed
 
@@ -58,9 +58,9 @@ Do NOT simply say "31" without qualification, as that count includes the 2 pilot
 
 - [ ] All three files have the correct, matching SVG count.
 - [ ] The count has been verified against the actual file inventory.
-- [ ] `rg -n "16 production\|16 animated" /Users/grig/work/repo/universalmanifest/docs/` returns zero stale matches.
+- [ ] `rg -n "16 production\|16 animated" docs/` returns zero stale matches.
 
 ## Validation commands
 
-- `ls /Users/grig/work/repo/universalmanifest/site/public/animations/ | wc -l` (verify actual count)
-- `rg -n "16 production\|16 animated" /Users/grig/work/repo/universalmanifest/docs/`
+- `ls site/public/animations/ | wc -l` (verify actual count)
+- `rg -n "16 production\|16 animated" docs/`

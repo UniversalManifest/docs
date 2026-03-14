@@ -60,9 +60,9 @@ WO-0055 creates a comprehensive implementation guide (`docs/guides/IMPLEMENTATIO
 - [ ] All five adoption tiers are clearly described with what each requires and provides.
 - [ ] A developer or architect can determine their adoption tier within 5 minutes of reading.
 - [ ] The guide links to the implementation guide (WO-0055), conformance suite (WO-0053), and Build Your Own Implementation page (WO-0085).
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of adoption guide content completeness.

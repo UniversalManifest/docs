@@ -22,7 +22,7 @@ The governance document currently defines project scope as including five co-equ
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md`** (lines 23-28)
+**`docs/governance/GOVERNANCE.md`** (lines 23-28)
 
 ### Changes
 
@@ -40,4 +40,4 @@ The governance document currently defines project scope as including five co-equ
 
 ## Validation commands
 
-- Manual review of `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md`.
+- Manual review of `docs/governance/GOVERNANCE.md`.

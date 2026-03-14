@@ -52,10 +52,10 @@ Add a "Use Cases" section to the site sidebar in `site/astro.config.mjs`.
 
 - [ ] At least 5 commercial journeys are published as site pages.
 - [ ] A "Use Cases" or "Stories" section exists in the site navigation.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 - [ ] Each published journey includes clear, relatable narrative.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of published journey pages.

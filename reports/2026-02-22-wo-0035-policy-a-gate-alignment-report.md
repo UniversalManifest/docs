@@ -1,7 +1,7 @@
 # WO-0035 Progress Report — Policy A Gate Alignment
 
 Date: 2026-02-22
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
+Work order: `docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md`
 
 ## Summary
 
@@ -10,19 +10,19 @@ Policy decision is resolved to **Policy A** (human participant evidence mandator
 ## Policy alignment changes completed
 
 - Decision recorded in:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `docs/DECISIONS.md`
 - WO status and acceptance gate updated in:
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
 - Protocol wording and placeholder path updated in:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+  - `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
 - Human gate checklist created:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
+  - `docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md`
 
 ## Remaining blocker
 
 Required artifact not yet present:
 
-- `/Users/grig/work/repo/universalmanifest/docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
+- `docs/reports/YYYY-MM-DD-first-time-reader-test-results-human.md`
 
 Until this file exists with a PASS human-participant run, `WO-0015` and `WO-0035` remain blocked for closure-grade completion claims.
 
@@ -36,8 +36,8 @@ Local docs pages were loaded via browser automation before requesting human gate
 
 Captured screenshots:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-22-wo-0035-human-gate-overview-page.png`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-22-wo-0035-human-gate-workbench-page.png`
+- `.dev/ai/reports/2026-02-22-wo-0035-human-gate-overview-page.png`
+- `.dev/ai/reports/2026-02-22-wo-0035-human-gate-workbench-page.png`
 
 Console check:
 

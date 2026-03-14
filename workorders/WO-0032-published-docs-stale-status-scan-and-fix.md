@@ -22,7 +22,7 @@ Problematic published excerpt:
 
 In scope:
 - scan all published docs under:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/`
+  - `site/src/content/docs/`
 - identify stale status statements tied to completed work.
 - replace stale statements with current state and public-facing evidence links.
 - remove internal `.dev/ai` path leakage from published docs where it appears in stale-status blocks.
@@ -42,17 +42,17 @@ Out of scope:
 
 ## Validation commands
 
-- `rg -n -i 'current status|in progress|partially ingested|stage -1/0|materialization is in progress' /Users/grig/work/repo/universalmanifest/site/src/content/docs`
-- `rg -n '/Users/grig/work/repo/universalmanifest/\\.dev/ai' /Users/grig/work/repo/universalmanifest/site/src/content/docs`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-- `node /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/build.mjs`
-- `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy /Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist --project-name universalmanifest-net`
+- `rg -n -i 'current status|in progress|partially ingested|stage -1/0|materialization is in progress' site/src/content/docs`
+- `rg -n '\\.dev/ai' site/src/content/docs`
+- `cd site && npm run build:clean`
+- `node deploy/universalmanifest.net/build.mjs`
+- `CLOUDFLARE_ACCOUNT_ID=62421a9019bd0761655214e1160bcad0 npx --yes wrangler pages deploy deploy/universalmanifest.net/dist --project-name universalmanifest-net`
 
 ## Completion evidence
 
 - Scan/build/deploy report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0032-published-docs-status-scan.md`
+  - `docs/reports/2026-02-22-wo-0032-published-docs-status-scan.md`
 - Updated published source page:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
 - Consistency update in repo integration guidance:
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
+  - `integrations/rp1-spatial-fabric.md`

@@ -22,7 +22,7 @@ The root README is the first thing a newcomer sees on GitHub. Currently, its Qui
 
 ### File to modify
 
-**`/Users/grig/work/repo/universalmanifest/README.md`** (lines 17-23, Quick Start section)
+**`README.md`** (lines 17-23, Quick Start section)
 
 ### New Quick Start structure
 
@@ -36,7 +36,7 @@ Replace the current Quick Start with:
 
 ### Also update
 
-- **`/Users/grig/work/repo/universalmanifest/PROJECT-RULES.md`** (lines 43-48) — The "Build, Test, and Development Commands" section lists only npm/TS commands. Add a note that these are specific to the TypeScript reference implementation, and that the spec itself is language-neutral.
+- **`PROJECT-RULES.md`** (lines 43-48) — The "Build, Test, and Development Commands" section lists only npm/TS commands. Add a note that these are specific to the TypeScript reference implementation, and that the spec itself is language-neutral.
 
 ## Acceptance criteria
 
@@ -48,5 +48,5 @@ Replace the current Quick Start with:
 
 ## Validation commands
 
-- Manual review of `/Users/grig/work/repo/universalmanifest/README.md` Quick Start section ordering.
-- `rg -n "npm test" /Users/grig/work/repo/universalmanifest/README.md` (should appear only in the optional TypeScript section).
+- Manual review of `README.md` Quick Start section ordering.
+- `rg -n "npm test" README.md` (should appear only in the optional TypeScript section).

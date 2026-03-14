@@ -80,6 +80,8 @@ UM fills the gaps that IWPS explicitly marks as TBD or does not address:
 
 6. **Cryptographic integrity so state cannot be tampered with in transit.** The v0.2 signature profile ensures that the manifest the Destination World receives is exactly what the issuer produced. Combined with IWPS's transport-level session binding (`teleportId` + `teleportPin`), this provides defense in depth.
 
+7. **Loading content for seamless portal transitions.** UM can carry destination-world loading content pointers (`metaverse.portal.loadingScreen`, `metaverse.portal.loadingBranding`, `metaverse.portal.loadingInstructions`, `metaverse.portal.estimatedLoadTime`) so the Source World displays the Destination World's branded loading experience while the full handshake completes. IWPS's `downloadUrl` field in the Query response provides an app-download path; UM loading content pointers complement this by providing the in-transit visual experience that keeps the user immersed during the technical handshake. The user never sees a blank screen between worlds.
+
 ---
 
 ## 5. What IWPS Adds to UM

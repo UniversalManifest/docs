@@ -1,7 +1,7 @@
 # RP1/MSF Adversarial Attachment and Session Hardening
 
 Date: 2026-03-06  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md`
+Work order: `docs/workorders/WO-0139-rp1-msf-adversarial-attachment-and-session-hardening.md`
 
 ## Summary
 
@@ -12,7 +12,7 @@ This pass closes the remaining RP1/MSF proof gap left after the primary-source r
 ### 1. Positive-path RP1 fixture strengthened
 
 Updated:
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
+- `examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld`
 
 Added optional RP1 pointer metadata to the positive fixture:
 - `rp1.attachmentIndex.observedAt`
@@ -29,8 +29,8 @@ Also made the attachment policy explicit about fail-closed behavior:
 ### 2. Adversarial fixtures added
 
 Created:
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld`
+- `examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld`
+- `examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld`
 
 These fixtures remain structurally valid UM documents while modeling two failure cases:
 - stale attachment evidence that must block child-scope traversal,
@@ -39,12 +39,12 @@ These fixtures remain structurally valid UM documents while modeling two failure
 ### 3. New executable journey proof
 
 Created:
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
+- `docs/journeys/J22-rp1-attachment-freshness-and-session-safety.md`
 
 Updated:
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
+- `packages/universal-manifest/scripts/run-journeys.mjs`
+- `docs/journeys/README.md`
+- `docs/journeys/journey-07-rp1-spatial-fabric-projection.md`
 
 `J22` proves:
 - stale `rp1.attachmentIndex` evidence blocks child-scope traversal,
@@ -56,16 +56,16 @@ Updated:
 ### 4. Integration docs and sandbox flows synchronized
 
 Updated repo docs:
-- `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
+- `integrations/rp1-spatial-fabric.md`
 
 Updated site docs:
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/how-we-build.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/governance/decisions.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/governance/how-we-build.md`
+- `site/src/content/docs/governance/decisions.md`
 
 Updated sandbox scenarios:
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
-- `/Users/grig/work/repo/universalmanifest/site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric.ts`
+- `site/src/scripts/sandbox/scenarios/integration-lanes/il-04-rp1-spatial-fabric-v2.ts`
 
 The public-facing explanation is now aligned with the proof model:
 - fresh attachment/session pointers permit the happy path,
@@ -75,10 +75,10 @@ The public-facing explanation is now aligned with the proof model:
 ### 5. Governance and status synchronization
 
 Updated:
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md`
+- `docs/DECISIONS.md`
+- `docs/CRITICAL-PATH.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/workorders/WO-INDEX.md`
 
 Added decision:
 - RP1/MSF stale attachment indexes and revoked session context must fail closed.
@@ -100,10 +100,10 @@ That means the current system can address this need without a UM v0.1 schema cha
 ### Package tests
 
 Command:
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 Artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-npm-test.txt`
+- `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-npm-test.txt`
 
 Result:
 - PASS
@@ -112,11 +112,11 @@ Result:
 ### Journey proof
 
 Command:
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`
 
 Artifacts:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-journeys.txt`
-- `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
+- `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-journeys.txt`
+- `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
 
 Result:
 - PASS
@@ -126,10 +126,10 @@ Result:
 ### Site build
 
 Command:
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 
 Artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-rp1-msf-adversarial-hardening-site-build-clean.txt`
+- `docs/reports/2026-03-06-rp1-msf-adversarial-hardening-site-build-clean.txt`
 
 Result:
 - PASS

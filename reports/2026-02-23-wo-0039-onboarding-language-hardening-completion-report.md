@@ -14,7 +14,7 @@ WO-0039 addressed plain-language clarity issues in first-read onboarding documen
 ### Phase 1 — Inventory and source map
 
 **Deliverable:** Source map report
-**Location:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
+**Location:** `docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
 
 Completed full inventory of all wording sources that affect onboarding narrative, including:
 - First-read documentation pages (4 files)
@@ -29,10 +29,10 @@ Completed full inventory of all wording sources that affect onboarding narrative
 
 All first-read pages were rewritten to use plain language with inline definitions for technical terms:
 
-1. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-2. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-3. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md`
-4. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+1. `site/src/content/docs/index.md`
+2. `site/src/content/docs/getting-started/universal-manifest-overview.md`
+3. `site/src/content/docs/getting-started/concepts.md`
+4. `site/src/content/docs/getting-started/quick-start.md`
 
 Key improvements:
 - Removed undefined jargon (e.g., "integration pair", "brittle mappings")
@@ -69,7 +69,7 @@ See source map report for complete file list with change rationale.
 ### Phase 4 — Guardrail automation
 
 **Deliverable:** Automated terminology guard script
-**Location:** `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/check-terminology.mjs`
+**Location:** `packages/universal-manifest/scripts/check-terminology.mjs`
 **Command:** `npm run check:terminology`
 
 Implemented automated terminology/readability guard with:
@@ -88,7 +88,7 @@ Implemented automated terminology/readability guard with:
 
 **Wired to npm script:**
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run check:terminology
 ```
 
@@ -102,27 +102,27 @@ npm run check:terminology
 Initial run of guard script found 6 restricted-term violations. All were fixed by adding inline definitions:
 
 ### 1. "Harness" violation
-**File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md:41`
+**File:** `site/src/content/docs/index.md:41`
 **Fix:** Added inline definition "(browser-based tools for creating, editing, and validating manifests)"
 **Context:** Tools section describing Manifest Workbench and Verification Harness
 
 ### 2. "facets" and "TTL" violations
-**File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md:63`
+**File:** `site/src/content/docs/getting-started/universal-manifest-overview.md:63`
 **Fix:** Added inline definitions "TTL (time-to-live validity window)" and "facets (named data sections)"
 **Context:** "How to start" section listing core concepts
 
 ### 3. "facets" violation in code block
-**File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:71`
+**File:** `site/src/content/docs/getting-started/concepts.md:71`
 **Fix:** Added inline definition in example introduction "Below is a manifest with two facets (named data sections):" and added comment in code block
 **Context:** Section 4 example showing facets structure
 
 ### 4. "pointers" violation in code block
-**File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:98`
+**File:** `site/src/content/docs/getting-started/concepts.md:98`
 **Fix:** Modified section header definition and added comment in code block "Below shows pointers (URL references to authoritative sources):"
 **Context:** Section 5 example showing pointers structure
 
 ### 5. "UMID" violation
-**File:** `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md:33`
+**File:** `site/src/content/docs/getting-started/concepts.md:33`
 **Fix:** Added inline definition in Example line "In the manifest above, the UMID (the unique `@id` identifier) is..."
 **Context:** Section 1 example explaining UMID field
 
@@ -132,14 +132,14 @@ All verification tests pass:
 
 ### 1. Terminology guard
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run check:terminology
 ```
 **Result:** ✓ No violations found. All terminology checks passed. (Exit code 0)
 
 ### 2. Test suite
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm test
 ```
 **Result:**
@@ -149,17 +149,17 @@ npm test
 
 ### 3. Journeys
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run journeys
 ```
 **Result:**
 - Preflight: 1 pass, 0 fail
 - Journeys: 11 pass, 0 fail
-- Report: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-23T03-12-36-425Z-journey-report.json`
+- Report: `docs/journeys/_artifacts/2026-02-23T03-12-36-425Z-journey-report.json`
 
 ### 4. Site build
 ```bash
-cd /Users/grig/work/repo/universalmanifest/site
+cd site
 npm run build:clean
 ```
 **Result:**
@@ -170,7 +170,7 @@ npm run build:clean
 
 ### 5. Production endpoints
 ```bash
-cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest
+cd packages/universal-manifest
 npm run smoke:endpoints:prod
 ```
 **Result:** PASS
@@ -192,15 +192,15 @@ npm run smoke:endpoints:prod
 ## Files modified
 
 ### First-read documentation (Phase 2)
-1. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-2. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-3. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md`
-4. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/quick-start.md`
+1. `site/src/content/docs/index.md`
+2. `site/src/content/docs/getting-started/universal-manifest-overview.md`
+3. `site/src/content/docs/getting-started/concepts.md`
+4. `site/src/content/docs/getting-started/quick-start.md`
 
 ### Terminology violation fixes (2026-02-23)
-5. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md` (Harness definition)
-6. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md` (facets, TTL definitions)
-7. `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/concepts.md` (UMID, facets, pointers definitions)
+5. `site/src/content/docs/index.md` (Harness definition)
+6. `site/src/content/docs/getting-started/universal-manifest-overview.md` (facets, TTL definitions)
+7. `site/src/content/docs/getting-started/concepts.md` (UMID, facets, pointers definitions)
 
 ### Propagation fixes (Phase 3)
 See source map report for complete list of 67 files updated across:
@@ -213,8 +213,8 @@ See source map report for complete list of 67 files updated across:
 - Test fixtures and harness files
 
 ### Guardrail automation (Phase 4)
-8. `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/check-terminology.mjs` (new file)
-9. `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json` (added check:terminology script)
+8. `packages/universal-manifest/scripts/check-terminology.mjs` (new file)
+9. `packages/universal-manifest/package.json` (added check:terminology script)
 
 ## Remaining work
 
@@ -236,10 +236,10 @@ See source map report for complete list of 67 files updated across:
 
 ## References
 
-- **Source map report:** `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
-- **Work order:** `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
-- **Terminology guard script:** `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/check-terminology.mjs`
-- **Latest journey report:** `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-02-23T03-12-36-425Z-journey-report.json`
+- **Source map report:** `docs/reports/2026-02-22-wo-0039-onboarding-language-source-map-and-rewrite-plan.md`
+- **Work order:** `docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md`
+- **Terminology guard script:** `packages/universal-manifest/scripts/check-terminology.mjs`
+- **Latest journey report:** `docs/journeys/_artifacts/2026-02-23T03-12-36-425Z-journey-report.json`
 
 ## Conclusion
 

@@ -124,20 +124,20 @@ Out of scope:
 ## Key file paths (created/modified)
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/conformance-question.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/spec-ambiguity.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/implementation-bug.yml`
-- `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/feature-request.yml`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/ADOPTER-SLA.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/SPEC-IMPROVEMENT-QUEUE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/governance/REGRESSION-PREVENTION.md`
-- `/Users/grig/work/repo/universalmanifest/adopters/registry.json`
-- `/Users/grig/work/repo/universalmanifest/adopters/README.md`
+- `.github/ISSUE_TEMPLATE/conformance-question.yml`
+- `.github/ISSUE_TEMPLATE/spec-ambiguity.yml`
+- `.github/ISSUE_TEMPLATE/implementation-bug.yml`
+- `.github/ISSUE_TEMPLATE/feature-request.yml`
+- `docs/governance/ADOPTER-SLA.md`
+- `docs/governance/SPEC-IMPROVEMENT-QUEUE.md`
+- `docs/governance/REGRESSION-PREVENTION.md`
+- `adopters/registry.json`
+- `adopters/README.md`
 
 Modified files:
-- `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/` (may need to update existing templates)
-- `/Users/grig/work/repo/universalmanifest/docs/governance/GOVERNANCE.md` (link to new processes)
-- `/Users/grig/work/repo/universalmanifest/conformance/runner/` (add `--baseline` flag, from WO-0053)
+- `.github/ISSUE_TEMPLATE/` (may need to update existing templates)
+- `docs/governance/GOVERNANCE.md` (link to new processes)
+- `conformance/runner/` (add `--baseline` flag, from WO-0053)
 
 ## Acceptance criteria
 
@@ -157,7 +157,7 @@ Modified files:
 
 - Verify GitHub Issues templates render correctly in the GitHub UI.
 - `jsonschema validate adopters/registry.json` (registry validates against its schema)
-- `cd /Users/grig/work/repo/universalmanifest && npm test` (existing tests still pass)
+- `cd  && npm test` (existing tests still pass)
 - CI conformance regression check passes on a clean PR.
 
 ## Dependencies and sequencing notes
@@ -171,21 +171,21 @@ Modified files:
 
 Completed with deliverables:
 
-- Structured GitHub templates under `/Users/grig/work/repo/universalmanifest/.github/ISSUE_TEMPLATE/`
+- Structured GitHub templates under `.github/ISSUE_TEMPLATE/`
 - Governance docs:
-  - `/Users/grig/work/repo/universalmanifest/docs/governance/ADOPTER-SLA.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/governance/SPEC-IMPROVEMENT-QUEUE.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/governance/REGRESSION-PREVENTION.md`
+  - `docs/governance/ADOPTER-SLA.md`
+  - `docs/governance/SPEC-IMPROVEMENT-QUEUE.md`
+  - `docs/governance/REGRESSION-PREVENTION.md`
 - Adopter registry:
-  - `/Users/grig/work/repo/universalmanifest/adopters/registry.json`
-  - `/Users/grig/work/repo/universalmanifest/adopters/README.md`
+  - `adopters/registry.json`
+  - `adopters/README.md`
 - Conformance runner baseline support (`--baseline`) in:
-  - `/Users/grig/work/repo/universalmanifest/conformance/runner/src/cli.mjs`
-  - `/Users/grig/work/repo/universalmanifest/conformance/runner/src/core.mjs`
+  - `conformance/runner/src/cli.mjs`
+  - `conformance/runner/src/core.mjs`
 - CI regression gate in:
-  - `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml`
+  - `.github/workflows/ci.yml`
 
 Evidence:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0056-execution-report.md`
+- `.dev/ai/reports/2026-03-02-wo-0056-execution-report.md`
 - Agent Task ID preserved: `e0a7fe60_1772165606`

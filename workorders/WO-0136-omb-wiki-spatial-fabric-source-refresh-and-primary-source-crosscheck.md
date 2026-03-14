@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P1  
 **Owner:** Research Intake and Integration Architecture  
-**Source:** `https://omb.wiki`, `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`, `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+**Source:** `https://omb.wiki`, `integrations/rp1-spatial-fabric.md`, `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
 
 ## Objective
 
@@ -21,8 +21,8 @@ In scope:
 
 - Audit `https://omb.wiki` for spatial-fabric, open-spatial-internet, and RP1-adjacent material relevant to Universal Manifest.
 - Compare wiki-discovered material against:
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+  - `integrations/rp1-spatial-fabric.md`
+  - `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
   - existing RP1 fixtures, journeys, and localized source records.
 - Identify:
   - already-covered concepts,
@@ -38,7 +38,7 @@ Out of scope:
 
 ## Deliverables
 
-- A new report under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+- A new report under `docs/reports/`
 - Governance/status synchronization only if the audit creates new follow-on work
 
 ## Acceptance Criteria
@@ -50,8 +50,8 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
+- `docs/workorders/WO-0020-rp1-source-ingestion-and-synthesis-materialization.md`
+- `docs/workorders/WO-0133-protocol-recommendation-governance-and-standards-currency-matrix.md`
 
 ## Sequencing Note
 
@@ -60,7 +60,7 @@ Out of scope:
 ## Execution Notes
 
 - Completed on 2026-03-06.
-- Delivered report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
+- Delivered report: `docs/reports/2026-03-06-omb-wiki-spatial-fabric-crosscheck.md`
 - Outcome:
   - The current UM core boundary for RP1/MSF remains correct.
   - `omb.wiki` is valuable as a discovery map, not as the source of record.

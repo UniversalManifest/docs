@@ -52,9 +52,9 @@ Add to the "About" section of the site sidebar.
 - [ ] At least 4 adjacent standards/specs are compared to UM.
 - [ ] The page clearly communicates UM's complementary (not competitive) relationship.
 - [ ] A comparison table provides quick-glance differentiation.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review for accuracy and fair comparison.

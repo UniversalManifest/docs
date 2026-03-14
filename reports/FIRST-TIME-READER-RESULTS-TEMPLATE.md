@@ -1,9 +1,9 @@
 # First-Time Reader Test Results Template (WO-0015)
 
 Date: YYYY-MM-DD
-Project root: `/Users/grig/work/repo/universalmanifest`
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-Protocol: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
+Project root: ``
+Work order: `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+Protocol: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
 
 ## Participant profile
 
@@ -38,8 +38,8 @@ Q2: What are the first three implementation steps?
 
 - Minimum required to close:
   - at least one PASS participant who is new to the repo
-  - this report committed under `/Users/grig/work/repo/universalmanifest/docs/reports/`
+  - this report committed under `docs/reports/`
 - After evidence is committed:
-  - update `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+  - update `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
   - check final acceptance criterion
   - set status to `COMPLETED`

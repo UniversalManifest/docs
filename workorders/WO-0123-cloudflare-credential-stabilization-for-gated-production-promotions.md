@@ -51,20 +51,20 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-cloudflare-one-time-setup-checklist-for-gated-deploy.md`
+- `.github/workflows/deploy-gated.yml`
+- `.dev/ai/reports/operations/2026-03-04-cloudflare-one-time-setup-checklist-for-gated-deploy.md`
 - GitHub repo: `grigb/universal-manifest`
 - Cloudflare account access for token creation and scope assignment
 
 ## Current Evidence Snapshot
 
 - Hardening validation summary:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-hardening-validation-summary.md`
+  - `.dev/ai/reports/operations/2026-03-04-deploy-gated-hardening-validation-summary.md`
 - Latest sequential-staging production attempt (failed at production resolver):
   - https://github.com/grigb/universal-manifest/actions/runs/22657904731
 - Manual production recovery and runtime health evidence:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-production-promotion-failure-and-manual-recovery-summary.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-post-hardening-final-post-deploy-verification.md`
+  - `.dev/ai/reports/operations/2026-03-04-production-promotion-failure-and-manual-recovery-summary.md`
+  - `.dev/ai/reports/operations/2026-03-04-post-hardening-final-post-deploy-verification.md`
 
 ## Completion Evidence (2026-03-04)
 
@@ -73,14 +73,14 @@ Credential setup + two consecutive green production promotions:
 - Run 2 (green): https://github.com/grigb/universal-manifest/actions/runs/22658652963
 
 Closeout report:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
+- `.dev/ai/reports/operations/2026-03-04-wo-0123-credential-stabilization-closeout.md`
 
 Run artifacts:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1.log`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2-meta.json`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2.log`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run1.log`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-deploy-gated-credential-stabilization-success-run2.log`
 
 Post-closeout synthetic confirmation:
 - https://github.com/grigb/universal-manifest/actions/runs/22658785827 (`success`)
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/operations/2026-03-04-post-wo0123-synthetic-prod-green-run-meta.json`
+- `.dev/ai/reports/operations/2026-03-04-post-wo0123-synthetic-prod-green-run-meta.json`

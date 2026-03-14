@@ -51,17 +51,17 @@ In `/` Overview page:
 
 ## Implementation paths (expected)
 
-- `/Users/grig/work/repo/universalmanifest/site/astro.config.mjs`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/social.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/proof-of-personhood.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/oma-trust.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/chia-vc.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
+- `site/astro.config.mjs`
+- `site/src/content/docs/index.md`
+- `site/src/content/docs/integrations/social.md`
+- `site/src/content/docs/integrations/proof-of-personhood.md`
+- `site/src/content/docs/integrations/oma-trust.md`
+- `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+- `site/src/content/docs/integrations/smart-glasses-ar.md`
+- `site/src/content/docs/integrations/metaverse.md`
+- `site/src/content/docs/integrations/chia-vc.md`
+- `site/src/content/docs/getting-started/workbench.md`
+- `site/src/content/docs/proof/harness.md`
 
 ## Acceptance criteria
 
@@ -71,34 +71,34 @@ In `/` Overview page:
 - [x] Tools appears as a top-level sidebar section at the bottom with Workbench + Verification Harness links.
 - [x] Overview no longer contains "Highlighted Tools".
 - [x] Overview opening description is rewritten for first-time comprehension and reviewed for clarity.
-- [x] Site build passes: `cd /Users/grig/work/repo/universalmanifest/site && npm run build`.
+- [x] Site build passes: `cd site && npm run build`.
 - [x] Live verification checklist is run after deploy for `/`, integrations pages, workbench, and harness.
 
 ## Completion evidence
 
 - Updated sidebar/nav config:
-  - `/Users/grig/work/repo/universalmanifest/site/astro.config.mjs`
+  - `site/astro.config.mjs`
 - Updated overview framing:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
+  - `site/src/content/docs/index.md`
 - Integration labels and ordering metadata:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/social.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/proof-of-personhood.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/oma-trust.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/smart-glasses-ar.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/chia-vc.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/reference-runtime.md`
+  - `site/src/content/docs/integrations/social.md`
+  - `site/src/content/docs/integrations/proof-of-personhood.md`
+  - `site/src/content/docs/integrations/oma-trust.md`
+  - `site/src/content/docs/integrations/rp1-spatial-fabric.md`
+  - `site/src/content/docs/integrations/smart-glasses-ar.md`
+  - `site/src/content/docs/integrations/metaverse.md`
+  - `site/src/content/docs/integrations/chia-vc.md`
+  - `site/src/content/docs/integrations/reference-runtime.md`
 - Tools docs visibility adjustments:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
+  - `site/src/content/docs/getting-started/workbench.md`
+  - `site/src/content/docs/proof/harness.md`
 - Live deploy and verification report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0029-nav-live-verification.md`
+  - `docs/reports/2026-02-22-wo-0029-nav-live-verification.md`
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build`
+- `cd site && npm run build:clean`
 - `agent-browser --session um-navcheck open https://universalmanifest.net/`
 - `agent-browser --session um-navcheck open https://universalmanifest.net/integrations/social/`
 - `agent-browser --session um-navcheck open https://universalmanifest.net/getting-started/workbench/`
@@ -106,8 +106,8 @@ In `/` Overview page:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0014-interactive-manifest-workbench.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0025-documentation-human-readability-and-links.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0026-workbench-and-harness-redesign.md`
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0027-omatrust-integration-lane-execution.md`
+- `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
+- `docs/workorders/WO-0014-interactive-manifest-workbench.md`
+- `docs/workorders/WO-0025-documentation-human-readability-and-links.md`
+- `docs/workorders/WO-0026-workbench-and-harness-redesign.md`
+- `docs/workorders/WO-0027-omatrust-integration-lane-execution.md`

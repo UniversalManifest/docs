@@ -5,7 +5,7 @@
 **Updated:** 2026-03-06  
 **Priority:** P0  
 **Owner:** Reference Implementation + Standards Integration  
-**Source:** `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
+**Source:** `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
 
 ## Objective
 
@@ -35,20 +35,20 @@ Out of scope:
 ## Deliverables
 
 1. GPC runtime normalization helpers in:
-   - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
+   - `packages/universal-manifest/src/index.ts`
 2. GPC example/fixture pack:
-   - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/`
-   - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/gpc-evidence-projection-manifest.jsonld`
+   - `examples/integrations/gpc/`
+   - `examples/v0.1/stubs/gpc-evidence-projection-manifest.jsonld`
 3. GPC validation coverage:
-   - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/validate-gpc.mjs`
-   - package script wiring in `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
+   - `packages/universal-manifest/scripts/validate-gpc.mjs`
+   - package script wiring in `packages/universal-manifest/package.json`
 4. GPC journey proof:
-   - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-   - `/Users/grig/work/repo/universalmanifest/docs/journeys/J21-gpc-runtime-signal-and-evidence-projection.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+   - `packages/universal-manifest/scripts/run-journeys.mjs`
+   - `docs/journeys/J21-gpc-runtime-signal-and-evidence-projection.md`
+   - `docs/journeys/README.md`
 5. Registry/docs synchronization:
-   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-   - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+   - `spec/v0.1/REGISTRY.md`
+   - `spec/v0.1/CONFORMANCE.md`
 
 ## Acceptance Criteria
 
@@ -61,11 +61,11 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/gpc-global-privacy-control.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/gpc-global-privacy-control.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
+- `docs/workorders/WO-0127-gpc-standards-integration-review-and-gap-analysis.md`
+- `integrations/gpc-global-privacy-control.md`
+- `site/src/content/docs/integrations/gpc-global-privacy-control.md`
+- `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-review-v3-gap-closed.md`
+- `.dev/ai/reports/gpc-wo-0127/2026-03-05-gpc-integration-options-and-recommendation.md`
 
 ## Execution Progress (2026-03-06)
 
@@ -77,37 +77,37 @@ Started in this pass:
 Completed in this pass:
 
 - Added GPC runtime normalization, support-resource parsing, and evidence-projection helpers:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
+  - `packages/universal-manifest/src/index.ts`
 - Added GPC fixture pack:
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/header-active.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/header-inactive.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/header-duplicate-active.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/js-only-active.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/no-signal-unknown.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/intermediary-active.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/valid.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/unknown-members.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/invalid-last-update.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/wrong-media-type.json`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/gpc-evidence-projection-manifest.jsonld`
+  - `examples/integrations/gpc/runtime/header-active.json`
+  - `examples/integrations/gpc/runtime/header-inactive.json`
+  - `examples/integrations/gpc/runtime/header-duplicate-active.json`
+  - `examples/integrations/gpc/runtime/js-only-active.json`
+  - `examples/integrations/gpc/runtime/no-signal-unknown.json`
+  - `examples/integrations/gpc/runtime/intermediary-active.json`
+  - `examples/integrations/gpc/support-resource/valid.json`
+  - `examples/integrations/gpc/support-resource/unknown-members.json`
+  - `examples/integrations/gpc/support-resource/invalid-last-update.json`
+  - `examples/integrations/gpc/support-resource/wrong-media-type.json`
+  - `examples/v0.1/stubs/gpc-evidence-projection-manifest.jsonld`
 - Added dedicated GPC validation harness and package wiring:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/validate-gpc.mjs`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/package.json`
+  - `packages/universal-manifest/scripts/validate-gpc.mjs`
+  - `packages/universal-manifest/package.json`
 - Added GPC journey proof and documentation:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J21-gpc-runtime-signal-and-evidence-projection.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
+  - `docs/journeys/J21-gpc-runtime-signal-and-evidence-projection.md`
+  - `docs/journeys/README.md`
 - Synchronized non-normative registry and conformance docs:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+  - `spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/CONFORMANCE.md`
 - Recorded governance/status updates:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md`
+  - `docs/DECISIONS.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/CRITICAL-PATH.md`
 - Captured validation artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-gpc-go-now-npm-test.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-gpc-go-now-journeys.txt`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-06T07-50-34-715Z-journey-report.json`
+  - `docs/reports/2026-03-06-gpc-go-now-npm-test.txt`
+  - `docs/reports/2026-03-06-gpc-go-now-journeys.txt`
+  - `docs/journeys/_artifacts/2026-03-06T07-50-34-715Z-journey-report.json`
 
 ## Completion notes
 

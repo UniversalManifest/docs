@@ -132,17 +132,17 @@ Out of scope:
 ## Key file paths (created/modified)
 
 New files:
-- `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/QUICK-REFERENCE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/implementation-guide.md` (Starlight page)
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/quick-reference.md` (Starlight page)
-- `/Users/grig/work/repo/universalmanifest/site/public/diagrams/conformance-decision-tree.svg`
+- `docs/guides/IMPLEMENTATION-GUIDE.md`
+- `docs/guides/QUICK-REFERENCE.md`
+- `docs/guides/AGENT-HANDOFF.md`
+- `site/src/content/docs/guides/implementation-guide.md` (Starlight page)
+- `site/src/content/docs/guides/quick-reference.md` (Starlight page)
+- `site/public/diagrams/conformance-decision-tree.svg`
 
 Modified files:
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/` (cross-links)
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md` (link to guide)
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md` (link to guide)
+- `site/src/content/docs/getting-started/` (cross-links)
+- `spec/v0.1/CONFORMANCE.md` (link to guide)
+- `spec/v0.2/CONFORMANCE.md` (link to guide)
 
 ## Acceptance criteria
 
@@ -157,7 +157,7 @@ Modified files:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` (docs site builds with new pages)
+- `cd site && npm run build:clean` (docs site builds with new pages)
 - Manual review of implementation guide for completeness and accuracy.
 - Agent-handoff test: provide `AGENT-HANDOFF.md` to a fresh agent session and evaluate the resulting plan.
 
@@ -172,15 +172,15 @@ Modified files:
 
 Completed with deliverables:
 
-- `/Users/grig/work/repo/universalmanifest/docs/guides/IMPLEMENTATION-GUIDE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/QUICK-REFERENCE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/AGENT-HANDOFF.md`
-- `/Users/grig/work/repo/universalmanifest/docs/diagrams/conformance-decision-tree.excalidraw`
-- `/Users/grig/work/repo/universalmanifest/site/public/diagrams/conformance-decision-tree.svg`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/implementation-guide.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/quick-reference.md`
+- `docs/guides/IMPLEMENTATION-GUIDE.md`
+- `docs/guides/QUICK-REFERENCE.md`
+- `docs/guides/AGENT-HANDOFF.md`
+- `docs/diagrams/conformance-decision-tree.excalidraw`
+- `site/public/diagrams/conformance-decision-tree.svg`
+- `site/src/content/docs/guides/implementation-guide.md`
+- `site/src/content/docs/guides/quick-reference.md`
 
 Evidence:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0055-execution-report.md`
+- `.dev/ai/reports/2026-03-02-wo-0055-execution-report.md`
 - Agent Task ID preserved: `e0a7fe60_1772165606`

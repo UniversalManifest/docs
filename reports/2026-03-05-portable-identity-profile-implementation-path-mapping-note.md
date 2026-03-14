@@ -2,7 +2,7 @@
 
 Date: 2026-03-05  
 Program: Portable Identity Profile Go-Now (`PIP-GN-05`)  
-Repository: `/Users/grig/work/repo/universalmanifest`
+Repository: ``
 
 ## Purpose
 

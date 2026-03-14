@@ -32,7 +32,12 @@
   5. If one cosmetic item is unsupported, the platform falls back gracefully instead of failing the whole jump.
 
 
-### Scene 4: How It Works Under the Hood (2:00 - 2:30)
+### Scene 3b: The Seamless Transition — Loading Content (2:00 - 2:20)
+- **Visuals:** Rewind slightly. Nova steps into the portal again. Instead of a black screen or a loading bar, the portal itself transforms — Fantasy Realm's branded loading screen appears around her. She sees Fantasy Realm's logo, a stylized landscape preview, and a message: "Preparing your arrival..."
+- **Action:** While Nova watches the loading experience, a translucent sidebar shows the technical steps happening behind the scenes: manifest transfer, consent verification, avatar pointer resolution, signature checking. Each step completes with a quiet checkmark. When the last step finishes, the loading screen dissolves seamlessly into the live Fantasy Realm world — Nova is already there.
+- **Narrative (Voiceover):** "But what about the gap between leaving Neon City and arriving in Fantasy Realm? With loading content pointers in the manifest, the destination world sends its branded loading experience to the source world *before* the full handshake completes. Nova never sees a blank screen. She's visually immersed in Fantasy Realm's world from the moment she steps into the portal — even while consent checks, avatar loading, and signature verification happen behind the scenes. It's the same pattern AAA games use: show the next level's content while it loads."
+
+### Scene 4: How It Works Under the Hood (2:20 - 2:50)
 - **Visuals:** Split screen. On the left, Nova enjoying the world. On the right, a simplified, color-coded glimpse of the JSON-LD code, highlighting a `crossWorldProfile` facet. We show a cryptographically secure signature locking the code, plus freshness TTL timers.
 - **Action:** An animated lock snaps shut on the document. A stamp says "Verified by Cryptography. No Central Authority Required. Cache Freshness Enforced."
 

@@ -51,9 +51,9 @@ Normative conventions:
 
 ## 4) Source-of-Truth Inputs
 
-- `/Users/grig/work/repo/universalmanifest/spec/`
-- `/Users/grig/work/repo/universalmanifest/docs/`
-- `/Users/grig/work/repo/universalmanifest/integrations/`
+- `spec/`
+- `docs/`
+- `integrations/`
 - `/Users/grig/work/repo/reference-platform/UNIVERSAL-MANIFEST.md`
 - `/Users/grig/work/repo/reference-platform/.dev/ai/reports/universal-manifest/2026-02-13-spec-scope-and-done-definition.md`
 

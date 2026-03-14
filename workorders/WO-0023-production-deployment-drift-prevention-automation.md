@@ -24,11 +24,11 @@ Out of scope:
 ## Deliverables
 
 - script/runbook updates under:
-  - `/Users/grig/work/repo/universalmanifest/deploy/`
-  - `/Users/grig/work/repo/universalmanifest/docs/`
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/`
+  - `deploy/`
+  - `docs/`
+  - `packages/universal-manifest/scripts/`
 - deployment verification report template/artifacts under:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/`
+  - `.dev/ai/reports/`
 
 ## Acceptance criteria
 
@@ -39,18 +39,18 @@ Out of scope:
 
 ## Dependencies
 
-- `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-- `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
+- `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- `services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+- `docs/reports/2026-02-20-master-forward-worklist.md`
 
 ## Completion evidence (2026-02-20)
 
 - Automation script:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/post-deploy-verify.mjs`
+  - `packages/universal-manifest/scripts/post-deploy-verify.mjs`
 - npm command:
-  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run verify:postdeploy:prod`
+  - `cd packages/universal-manifest && npm run verify:postdeploy:prod`
 - report artifact (PASS):
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/deploy-checks/2026-02-20T05-44-07-832Z-post-deploy-verification.md`
+  - `.dev/ai/reports/deploy-checks/2026-02-20T05-44-07-832Z-post-deploy-verification.md`
 - runbook updates:
-  - `/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-  - `/Users/grig/work/repo/universalmanifest/services/myum-resolver/CLOUDFLARE-DEPLOY.md`
+  - `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+  - `services/myum-resolver/CLOUDFLARE-DEPLOY.md`

@@ -17,19 +17,19 @@ Universal Manifest is a portable state-capsule specification. It is responsible 
 
 In-scope normative surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/README.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- `spec/v0.1/schema.jsonld`
+- `spec/v0.1/schema.json`
+- `spec/v0.1/README.md`
+- `spec/v0.1/CONFORMANCE.md`
+- `spec/v0.1/REGISTRY.md`
 
 In-scope but required-to-adopt surfaces:
 
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/social.md`
-- `/Users/grig/work/repo/universalmanifest/docs/PUBLISHING-AND-VERSIONING.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DOMAIN-ARCHITECTURE.md`
+- `examples/v0.1/`
+- `integrations/reference-runtime.md`
+- `integrations/social.md`
+- `docs/PUBLISHING-AND-VERSIONING.md`
+- `docs/DOMAIN-ARCHITECTURE.md`
 
 Explicitly out of scope for current phase:
 
@@ -100,9 +100,9 @@ It is not yet “foundation-grade finalized” until signature profile hardening
 - `/Users/grig/work/repo/reference-platform/docs/decisions/2026-02-12-universal-manifest-queue-decisions.md`
 - `/Users/grig/work/repo/reference-platform/.dev/ai/handoffs/2026-02-11-20-45-58Z-universal-manifest-handoff.md`
 - `/Users/grig/work/repo/reference-platform/.dev/ai/reports/2026-02-12-universal-manifest-status-report.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/CONFORMANCE.md`
+- `docs/STATE-OF-THE-PROJECT.md`
+- `docs/DEPTH-AND-SCOPE.md`
+- `docs/DECISIONS.md`
+- `spec/v0.1/CONFORMANCE.md`
 - `/Users/grig/.agents/knowledge-sources/INDEX.md`
 - `/Users/grig/Downloads/INBOX-markdown/universal-manifest/`

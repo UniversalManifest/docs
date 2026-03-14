@@ -23,44 +23,44 @@ Current docs have strong technical depth but insufficient visual narrative for f
 All prompts and generated visual specs must be grounded in these project sources:
 
 - Vision and strategy:
-  - `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/DEPTH-AND-SCOPE.md`
+  - `docs/PROJECT-VISION.md`
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/DECISIONS.md`
+  - `docs/DEPTH-AND-SCOPE.md`
 - Normative and conformance contract:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.json`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/schema.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.json`
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.2/schema.jsonld`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/spec/v0.1.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/spec/v0.2.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/conformance/v0.1.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/conformance/v0.2.md`
+  - `spec/v0.1/schema.json`
+  - `spec/v0.1/schema.jsonld`
+  - `spec/v0.2/schema.json`
+  - `spec/v0.2/schema.jsonld`
+  - `site/src/content/docs/spec/v0.1.md`
+  - `site/src/content/docs/spec/v0.2.md`
+  - `site/src/content/docs/conformance/v0.1.md`
+  - `site/src/content/docs/conformance/v0.2.md`
 - Proof and journey evidence:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/README.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-04-umid-resolution-myum.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/journey-06-public-profile-projection.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J10-multi-provider-personhood-coexistence.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/J11-omatrust-attestation-interoperability.md`
+  - `docs/journeys/README.md`
+  - `docs/journeys/journey-04-umid-resolution-myum.md`
+  - `docs/journeys/journey-06-public-profile-projection.md`
+  - `docs/journeys/J10-multi-provider-personhood-coexistence.md`
+  - `docs/journeys/J11-omatrust-attestation-interoperability.md`
 - Integration lanes:
-  - `/Users/grig/work/repo/universalmanifest/integrations/social.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/proof-of-personhood.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/oma-trust.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/rp1-spatial-fabric.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses-ar.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-  - `/Users/grig/work/repo/universalmanifest/integrations/chia-vc.md`
+  - `integrations/social.md`
+  - `integrations/proof-of-personhood.md`
+  - `integrations/oma-trust.md`
+  - `integrations/rp1-spatial-fabric.md`
+  - `integrations/smart-glasses-ar.md`
+  - `integrations/metaverse.md`
+  - `integrations/chia-vc.md`
 - UX/tool surfaces where explainers will attach:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/workbench.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/proof/harness.md`
-  - `/Users/grig/work/repo/universalmanifest/site/public/workbench/index.html`
-  - `/Users/grig/work/repo/universalmanifest/site/public/harness/index.html`
+  - `site/src/content/docs/getting-started/universal-manifest-overview.md`
+  - `site/src/content/docs/index.md`
+  - `site/src/content/docs/getting-started/workbench.md`
+  - `site/src/content/docs/proof/harness.md`
+  - `site/public/workbench/index.html`
+  - `site/public/harness/index.html`
 - K2B and synthesis context:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-20-master-forward-worklist.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - `docs/reports/2026-02-20-master-forward-worklist.md`
+  - `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
 
 ## Scope
 
@@ -85,7 +85,7 @@ Create a documented prompt set with:
 - adaptation prompts (short-form variants for hero, inline section, and full-page tutorial loops).
 
 Expected output path:
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/`
+- `.dev/ai/prompts/animation/`
 
 ### 2) Scenario prompt catalog (minimum set)
 
@@ -107,7 +107,7 @@ Define hard requirements for generated SVGs:
 - file size/performance budget for docs page load.
 
 Expected output path:
-- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-SPEC.md`
+- `docs/design/ANIMATED-SVG-SPEC.md`
 
 ### 4) Integration plan for docs
 
@@ -117,8 +117,8 @@ Create insertion plan for where each animation lands:
 - selected integration/journey pages.
 
 Expected output paths:
-- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-PLACEMENT-PLAN.md`
-- `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-QA-CHECKLIST.md`
+- `docs/design/ANIMATION-PLACEMENT-PLAN.md`
+- `docs/design/ANIMATION-QA-CHECKLIST.md`
 
 ## Quality and narrative rules
 
@@ -141,8 +141,8 @@ Expected output paths:
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build`
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run dev`
+- `cd site && npm run build`
+- `cd site && npm run dev`
 - `agent-browser --session um-animcheck open http://127.0.0.1:4300/`
 - `agent-browser --session um-animcheck snapshot -i`
 
@@ -156,25 +156,25 @@ Expected output paths:
 ## Completion evidence
 
 - Prompt package:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/README.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-01-um-object-model.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-03-consent-policy-flow.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-04-user-journey-sequence.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-05-overlay-lanes-map.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/SCENARIO-06-motion-tutorial-objects-and-icons.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/ADAPTATION-INLINE-MEDIUM.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/prompts/animation/ADAPTATION-FULLPAGE-LOOP.md`
+  - `.dev/ai/prompts/animation/README.md`
+  - `.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
+  - `.dev/ai/prompts/animation/SCENARIO-01-um-object-model.md`
+  - `.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
+  - `.dev/ai/prompts/animation/SCENARIO-03-consent-policy-flow.md`
+  - `.dev/ai/prompts/animation/SCENARIO-04-user-journey-sequence.md`
+  - `.dev/ai/prompts/animation/SCENARIO-05-overlay-lanes-map.md`
+  - `.dev/ai/prompts/animation/SCENARIO-06-motion-tutorial-objects-and-icons.md`
+  - `.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
+  - `.dev/ai/prompts/animation/ADAPTATION-INLINE-MEDIUM.md`
+  - `.dev/ai/prompts/animation/ADAPTATION-FULLPAGE-LOOP.md`
 - Technical design artifacts:
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATED-SVG-SPEC.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-PLACEMENT-PLAN.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/design/ANIMATION-QA-CHECKLIST.md`
+  - `docs/design/ANIMATED-SVG-SPEC.md`
+  - `docs/design/ANIMATION-PLACEMENT-PLAN.md`
+  - `docs/design/ANIMATION-QA-CHECKLIST.md`
 - Pilot animations and integration:
-  - `/Users/grig/work/repo/universalmanifest/site/public/animations/um-core-flow-pilot.svg`
-  - `/Users/grig/work/repo/universalmanifest/site/public/animations/um-overlay-lanes-pilot.svg`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/getting-started/universal-manifest-overview.md`
+  - `site/public/animations/um-core-flow-pilot.svg`
+  - `site/public/animations/um-overlay-lanes-pilot.svg`
+  - `site/src/content/docs/index.md`
+  - `site/src/content/docs/getting-started/universal-manifest-overview.md`
 - Pilot review report:
-  - `/Users/grig/work/repo/universalmanifest/docs/reports/2026-02-22-wo-0030-pilot-animation-review.md`
+  - `docs/reports/2026-02-22-wo-0030-pilot-animation-review.md`

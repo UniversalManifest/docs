@@ -48,9 +48,9 @@ Add to the "Governance" section of the site sidebar.
 - [ ] "How We Build This" page exists on the site.
 - [ ] All three key methodology components (journeys, done-done, work orders) are explained.
 - [ ] A potential contributor can understand how to participate after reading this page.
-- [ ] `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean` succeeds.
+- [ ] `cd site && npm run build:clean` succeeds.
 
 ## Validation commands
 
-- `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
+- `cd site && npm run build:clean`
 - Manual review of content completeness.

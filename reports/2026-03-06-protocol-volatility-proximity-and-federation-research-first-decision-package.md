@@ -1,8 +1,8 @@
 # Protocol Volatility, Proximity Credentials, and Federation Bridges — Research-First Decision Package
 
 Date: 2026-03-06  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
+Project: Universal Manifest (``)  
+Work order: `docs/workorders/WO-0132-research-first-protocol-volatility-proximity-and-federation-gaps.md`
 
 ## 1) Purpose and outcome
 
@@ -52,24 +52,24 @@ Not safe to say now:
 
 Primary localized sources:
 
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
+- `.dev/ai/knowledge-corpus/imports/external-25-user-centric-pointer-protocols-2025-landscape.md`
+- `.dev/ai/knowledge-corpus/imports/external-26-universal-manifest-architectures-comprehensive-analysis.md`
+- `.dev/ai/knowledge-corpus/imports/external-27-peermesh-universal-manifest-vision.md`
+- `.dev/ai/knowledge-corpus/imports/external-28-hot-grid-manifest-note.md`
 
 ### 3.2 Existing in-repo coverage checked in this pass
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/research/federation/universal-manifest-workstream.md`
-- `/Users/grig/work/repo/universalmanifest/research/reference-platform/profile-architecture.md`
-- `/Users/grig/work/repo/universalmanifest/research/reference-platform/interoperability-sync.md`
-- `/Users/grig/work/repo/universalmanifest/docs/design/PERMISSIONS-FIREWALL-DESIGN.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
+- `docs/PROJECT-VISION.md`
+- `integrations/reference-runtime.md`
+- `integrations/did-vc.md`
+- `integrations/metaverse.md`
+- `docs/guides/MUM-SYNCHRONIZATION-PROFILE.md`
+- `research/federation/universal-manifest-workstream.md`
+- `research/reference-platform/profile-architecture.md`
+- `research/reference-platform/interoperability-sync.md`
+- `docs/design/PERMISSIONS-FIREWALL-DESIGN.md`
+- `docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
+- `docs/reports/2026-03-05-metaverse-universal-manifest-go-now-research-first-execution-plan.md`
 
 ### 3.3 Current standards checkpoints verified in this pass
 

@@ -49,6 +49,6 @@ Add all 12 new WO entries to the Sandbox V2 section of `docs/workorders/WO-INDEX
 
 ## Validation commands
 
-- `ls /Users/grig/work/repo/universalmanifest/docs/workorders/WO-007*.md` (should show WO-0069 through WO-0079)
-- `ls /Users/grig/work/repo/universalmanifest/docs/workorders/WO-0080*.md` (should exist)
-- `rg -n "WO-0069\|WO-0080" /Users/grig/work/repo/universalmanifest/docs/workorders/WO-INDEX.md` (should find entries)
+- `ls docs/workorders/WO-007*.md` (should show WO-0069 through WO-0079)
+- `ls docs/workorders/WO-0080*.md` (should exist)
+- `rg -n "WO-0069\|WO-0080" docs/workorders/WO-INDEX.md` (should find entries)

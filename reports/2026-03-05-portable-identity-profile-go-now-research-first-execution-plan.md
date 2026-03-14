@@ -1,8 +1,8 @@
 # Portable Identity Profile — Comprehensive Go-Now / Research-First Execution Plan
 
 Date: 2026-03-05  
-Project: Universal Manifest (`/Users/grig/work/repo/universalmanifest`)  
-Source baseline: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
+Project: Universal Manifest (``)  
+Source baseline: `docs/reports/2026-03-05-portable-identity-profile-gap-and-implementation-report.md`
 
 ## 1) Purpose and outcome
 
@@ -18,23 +18,23 @@ This is not a concept note. It is a work-execution blueprint.
 ## 1.1) Execution status snapshot (2026-03-05)
 
 - `PIP-GN-01`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
+  - evidence: `integrations/portable-identity-profile-xr.md`
+  - evidence: `site/src/content/docs/integrations/portable-identity-profile-xr.md`
 - `PIP-GN-02`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-fixture-pack-mapping-note.md`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-fixture-pack-npm-test.txt`
 - `PIP-GN-03`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-journey-pack-mapping-note.md`
+  - evidence: `docs/journeys/_artifacts/2026-03-05T15-12-58-478Z-journey-report.json`
 - `PIP-GN-04`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
+  - evidence: `spec/v0.1/REGISTRY.md`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-registry-consistency-scan.txt`
 - `PIP-GN-05`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
+  - evidence: `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-implementation-path-mapping-note.md`
 - `PIP-GN-06`: `DONE`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-  - evidence: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
+  - evidence: `docs/DECISIONS.md`
+  - evidence: `docs/reports/2026-03-05-portable-identity-profile-governance-sync-closeout-note.md`
 
 ## 2) Planning constraints and operating rules
 
@@ -42,8 +42,8 @@ This is not a concept note. It is a work-execution blueprint.
 2. Normative changes must go through `spec/` + `conformance/` + evidence.
 3. Non-normative integration guidance should land first when uncertainty is high.
 4. Work must satisfy existing Done-Done gate expectations:
-   - `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-DEFINITION.md`
-   - `/Users/grig/work/repo/universalmanifest/docs/DONE-DONE-CHECKLIST.md`
+   - `docs/DONE-DONE-DEFINITION.md`
+   - `docs/DONE-DONE-CHECKLIST.md`
 5. No execution outside approved sequence without user confirmation (current project policy).
 
 ## 3) What is already strong vs what is still uncertain
@@ -57,11 +57,11 @@ This is not a concept note. It is a work-execution blueprint.
 - Existing metaverse, smart-glasses, personhood, and Chia integration lanes.
 
 Primary references:
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/SIGNATURE-PROFILE.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/CONFORMANCE.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/metaverse.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/smart-glasses.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/data-firewall-ux.md`
+- `spec/v0.2/SIGNATURE-PROFILE.md`
+- `spec/v0.2/CONFORMANCE.md`
+- `integrations/metaverse.md`
+- `integrations/smart-glasses.md`
+- `integrations/data-firewall-ux.md`
 
 ## 3.2 Needs research/planning first
 
@@ -72,24 +72,24 @@ Primary references:
 - XR avatar translation profile standardization.
 
 Primary references:
-- `/Users/grig/work/repo/universalmanifest/docs/security/THREAT-MODEL.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.2/README.md`
-- `/Users/grig/work/repo/universalmanifest/docs/STANDARDS-POSITIONING.md`
+- `docs/security/THREAT-MODEL.md`
+- `spec/v0.2/README.md`
+- `docs/STANDARDS-POSITIONING.md`
 
 ## 3.3 Research depth status
 
 Research exists, but unevenly:
 
 - Deepest and most execution-ready: proof-of-personhood provider intake and integration artifacts.
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-22-world-id-proof-of-personhood.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-23-gitcoin-passport-verification.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-24-brightid-verification.md`
+  - `.dev/ai/knowledge-corpus/imports/external-22-world-id-proof-of-personhood.md`
+  - `.dev/ai/knowledge-corpus/imports/external-23-gitcoin-passport-verification.md`
+  - `.dev/ai/knowledge-corpus/imports/external-24-brightid-verification.md`
 - Moderate: reference-platform architecture context (DIDComm, VRM, encryption patterns).
-  - `/Users/grig/work/repo/universalmanifest/research/reference-platform/profile-architecture.md`
-  - `/Users/grig/work/repo/universalmanifest/research/reference-platform/appendices-and-standards-mapping.md`
+  - `research/reference-platform/profile-architecture.md`
+  - `research/reference-platform/appendices-and-standards-mapping.md`
 - Weaker: several external corpus items are still import-note level, not full design-ready synthesis.
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-01-composite-universal-manifest.md`
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/knowledge-corpus/imports/external-06-candidate-projects-protocols.md`
+  - `.dev/ai/knowledge-corpus/imports/external-01-composite-universal-manifest.md`
+  - `.dev/ai/knowledge-corpus/imports/external-06-candidate-projects-protocols.md`
 
 Execution implication:
 - We should not block all progress.
@@ -117,9 +117,9 @@ Goal:
 
 Deliverables:
 - New integration doc:
-  - `/Users/grig/work/repo/universalmanifest/integrations/portable-identity-profile-xr.md`
+  - `integrations/portable-identity-profile-xr.md`
 - Site page mirror:
-  - `/Users/grig/work/repo/universalmanifest/site/src/content/docs/integrations/portable-identity-profile-xr.md`
+  - `site/src/content/docs/integrations/portable-identity-profile-xr.md`
 - Link from docs index and integrations navigation.
 
 Scope:
@@ -145,8 +145,8 @@ Goal:
 
 Deliverables:
 - New fixtures under:
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/`
-  - `/Users/grig/work/repo/universalmanifest/examples/v0.2/`
+  - `examples/v0.1/stubs/`
+  - `examples/v0.2/`
 - Suggested fixture set:
   - `portable-identity-profile-xr-minimal-manifest.jsonld`
   - `portable-identity-profile-xr-avatar-pointers-manifest.jsonld`
@@ -161,7 +161,7 @@ Acceptance criteria:
 - Fixture names and semantics are documented.
 
 Verification commands:
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+- `cd packages/universal-manifest && npm test`
 
 ## A3) Workstream PIP-GN-03 — Journey expansion for Portable Identity Profile
 
@@ -170,9 +170,9 @@ Goal:
 
 Deliverables:
 - New journey docs in:
-  - `/Users/grig/work/repo/universalmanifest/docs/journeys/`
+  - `docs/journeys/`
 - New or extended runner mappings in:
-  - `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/scripts/run-journeys.mjs`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 - Candidate journey additions:
   - Portable Identity Profile XR onboarding projection.
   - Avatar + wearable pointer projection with consent gating.
@@ -185,7 +185,7 @@ Acceptance criteria:
 - Journey report artifact generated with pass evidence.
 
 Verification commands:
-- `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+- `cd packages/universal-manifest && npm run journeys`
 
 ## A4) Workstream PIP-GN-04 — Registry expansion (non-normative, controlled)
 
@@ -194,7 +194,7 @@ Goal:
 
 Deliverables:
 - Extend:
-  - `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+  - `spec/v0.1/REGISTRY.md`
 - Add keys for:
   - avatar and wearables pointers,
   - translation/profile metadata facets,
@@ -215,7 +215,7 @@ Goal:
 
 Deliverables:
 - New guide addendum:
-  - `/Users/grig/work/repo/universalmanifest/docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
+  - `docs/guides/PORTABLE-IDENTITY-PROFILE-XR-IMPLEMENTATION-PATH.md`
 - Site publication page mirror.
 
 Scope:
@@ -237,10 +237,10 @@ Goal:
 
 Deliverables:
 - Add decision record entries in:
-  - `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
+  - `docs/DECISIONS.md`
 - Update status docs:
-  - `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md`
-  - `/Users/grig/work/repo/universalmanifest/docs/CRITICAL-PATH.md` (if phase impact exists)
+  - `docs/STATE-OF-THE-PROJECT.md`
+  - `docs/CRITICAL-PATH.md` (if phase impact exists)
 
 Acceptance criteria:
 - All go-now scope changes are traceable to decisions.
@@ -272,7 +272,7 @@ Research tasks:
 3. Evaluate canonicalization/signature interactions for signed manifests with encrypted parts.
 
 Output artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-ENCRYPTED-FRAGMENTS-RESEARCH.md`
+- `docs/research/PORTABLE-IDENTITY-PROFILE-ENCRYPTED-FRAGMENTS-RESEARCH.md`
 
 Promotion gate:
 - Promote only if at least two implementation patterns are shown feasible across independent runtimes.
@@ -288,7 +288,7 @@ Research tasks:
 3. Define failure semantics and privacy guarantees.
 
 Output artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-SELECTIVE-DISCLOSURE-RESEARCH.md`
+- `docs/research/PORTABLE-IDENTITY-PROFILE-SELECTIVE-DISCLOSURE-RESEARCH.md`
 
 Promotion gate:
 - Promote only if the selected option has:
@@ -307,7 +307,7 @@ Research tasks:
 3. Define whether recovery belongs as integration guidance only or candidate profile.
 
 Output artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-RECOVERY-PROFILE-RESEARCH.md`
+- `docs/research/PORTABLE-IDENTITY-PROFILE-RECOVERY-PROFILE-RESEARCH.md`
 
 Promotion gate:
 - Promote only if minimum metadata can be defined without mandating wallet vendor internals.
@@ -323,7 +323,7 @@ Research tasks:
 3. Define cross-protocol error taxonomy and evidence model.
 
 Output artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-WALLET-PROTOCOL-BINDINGS-RESEARCH.md`
+- `docs/research/PORTABLE-IDENTITY-PROFILE-WALLET-PROTOCOL-BINDINGS-RESEARCH.md`
 
 Promotion gate:
 - Promote only if binding model demonstrates equivalent semantics across at least two transport families.
@@ -343,7 +343,7 @@ Research tasks:
 3. Validate against at least two distinct XR runtime assumptions.
 
 Output artifact:
-- `/Users/grig/work/repo/universalmanifest/docs/research/PORTABLE-IDENTITY-PROFILE-AVATAR-TRANSLATION-RESEARCH.md`
+- `docs/research/PORTABLE-IDENTITY-PROFILE-AVATAR-TRANSLATION-RESEARCH.md`
 
 Promotion gate:
 - Promote only if schema can be represented as optional facet extensions without core-field bloat.
@@ -410,18 +410,18 @@ Promotion prerequisites:
 For every merged implementation unit:
 
 1. Build and test:
-   - `cd /Users/grig/work/repo/universalmanifest/site && npm run build:clean`
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+   - `cd site && npm run build:clean`
+   - `cd packages/universal-manifest && npm test`
 2. Journey evidence when applicable:
-   - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`
+   - `cd packages/universal-manifest && npm run journeys`
 3. Drift governance checks:
    - strict K2B validator
    - production route checks
    - docs link-hygiene scan
 
 Evidence artifacts must be stored under:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/`
-- `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/` (operational trace/evidence support)
+- `docs/reports/`
+- `.dev/ai/reports/` (operational trace/evidence support)
 
 ## 10) Governance and documentation update policy
 
@@ -503,4 +503,4 @@ Use this exact sequence whenever new concept specifications are introduced:
    - governance/status sync (`DECISIONS.md`, `STATE-OF-THE-PROJECT.md` as applicable).
 
 Operational artifact for this process:
-- `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-05-portable-identity-profile-spec-integration-log.md`
+- `docs/reports/2026-03-05-portable-identity-profile-spec-integration-log.md`

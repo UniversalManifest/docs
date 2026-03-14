@@ -1,7 +1,7 @@
 # Proximity Credential and Presentation Profile Assessment
 
 Date: 2026-03-06  
-Work order: `/Users/grig/work/repo/universalmanifest/docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
+Work order: `docs/workorders/WO-0134-proximity-credential-and-presentation-profile-assessment.md`
 
 ## 1. Executive answer
 
@@ -21,7 +21,7 @@ Decision:
 - `Public integration lane: deferred for now`.
 - `Allowed near-term scope: internal examples and boundary-only guidance`, not a broader adopter-facing lane, until executable proof exists.
 
-That conclusion is driven by the promotion gate already adopted in `/Users/grig/work/repo/universalmanifest/docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`: the repository still lacks fixture/journey proof for a proximity request/presentation flow.
+That conclusion is driven by the promotion gate already adopted in `docs/reports/2026-03-06-protocol-volatility-proximity-and-federation-research-first-decision-package.md`: the repository still lacks fixture/journey proof for a proximity request/presentation flow.
 
 ## 2. Standards checkpoint as of 2026-03-06
 
@@ -124,11 +124,11 @@ The repository already has the right architectural posture.
 
 Existing repo position that overlaps correctly:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
+- `docs/PROJECT-VISION.md`
+- `integrations/reference-runtime.md`
+- `integrations/did-vc.md`
+- `docs/DECISIONS.md`
+- `spec/v0.1/REGISTRY.md`
 
 What that posture already gets right:
 
@@ -145,7 +145,7 @@ Relevant existing UM primitives:
 - `metaverse.transaction.complianceShare`
 - `metaverse.credentials.presentation`
 - `prefs.credentials.*`
-- sync/freshness guidance in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
+- sync/freshness guidance in `site/src/content/docs/guides/mum-synchronization-profile.md`
 
 Relevant existing proof precedent:
 
@@ -604,11 +604,11 @@ Primary standards sources reviewed:
 
 Key repo sources aligned in this assessment:
 
-- `/Users/grig/work/repo/universalmanifest/docs/PROJECT-VISION.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md`
-- `/Users/grig/work/repo/universalmanifest/integrations/did-vc.md`
-- `/Users/grig/work/repo/universalmanifest/docs/DECISIONS.md`
-- `/Users/grig/work/repo/universalmanifest/spec/v0.1/REGISTRY.md`
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/guides/mum-synchronization-profile.md`
-- `/Users/grig/work/repo/universalmanifest/packages/universal-manifest/src/index.ts`
-- `/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`
+- `docs/PROJECT-VISION.md`
+- `integrations/reference-runtime.md`
+- `integrations/did-vc.md`
+- `docs/DECISIONS.md`
+- `spec/v0.1/REGISTRY.md`
+- `site/src/content/docs/guides/mum-synchronization-profile.md`
+- `packages/universal-manifest/src/index.ts`
+- `examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld`

@@ -45,7 +45,7 @@ Out of scope:
 - Public standalone repository created and published:
   - `https://github.com/grigb/um-typescript`
 - Local working repository path used for implementation and verification:
-  - `/Users/grig/work/repo/um-typescript`
+  - the separate `um-typescript` repository (https://github.com/grigb/um-typescript)
 - Repository now includes:
   - modular implementation source (`manifest`, `signer`, `verifier`, `resolver`, `types`, `index`)
   - unit tests + conformance adapter wrapper
@@ -53,7 +53,7 @@ Out of scope:
   - README, CONFORMANCE guide, and runnable example scripts
   - GitHub Actions workflow running build, unit tests, conformance, and artifact upload
 - Verification evidence:
-  - `/Users/grig/work/repo/universalmanifest/.dev/ai/reports/2026-03-02-wo-0054-reference-implementation-verification.md`
+  - `.dev/ai/reports/2026-03-02-wo-0054-reference-implementation-verification.md`
 
 ## Execution phases
 
@@ -129,9 +129,9 @@ New repository (external to spec repo):
 - `um-typescript/` (new public GitHub repository)
 
 Files modified in spec repo:
-- `/Users/grig/work/repo/universalmanifest/site/src/content/docs/` (link to reference implementation)
-- `/Users/grig/work/repo/universalmanifest/integrations/reference-runtime.md` (update to reference separate repo)
-- `/Users/grig/work/repo/universalmanifest/docs/STATE-OF-THE-PROJECT.md` (update implementation status)
+- `site/src/content/docs/` (link to reference implementation)
+- `integrations/reference-runtime.md` (update to reference separate repo)
+- `docs/STATE-OF-THE-PROJECT.md` (update implementation status)
 
 ## Acceptance criteria
 
