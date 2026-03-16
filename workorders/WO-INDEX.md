@@ -268,3 +268,14 @@ Drift governance and follow-on WO trigger criteria:
 ### OMA3 Handout Collection Site Publication (WO-0156)
 
 - `docs/workorders/WO-0156-oma3-handout-collection-site-publication.md` — [COMPLETED] Publish OMA3 handout collection as navigable subsection on universalmanifest.net with proper Starlight integration (P0)
+
+### Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160)
+
+- `docs/workorders/WO-0157-landing-surface-and-multi-layer-interaction-architecture.md` — [COMPLETED] Defined the target multi-surface public architecture and execution sequence for landing, docs, discovery, tooling, and runtime boundaries in `docs/reports/2026-03-15-multi-surface-agent-friendly-architecture.md` (P0)
+- `docs/workorders/WO-0158-agent-discovery-and-machine-readable-entrypoints.md` — [COMPLETED] Published the public discovery layer across universalmanifest.net and myum.net, including `llms.txt`, `security.txt`, enriched well-known descriptors, a `/for-agents/` route, generated fixture/scenario catalogs, and runtime OpenAPI/security endpoints documented in `docs/reports/2026-03-15-agent-discovery-and-machine-readable-entrypoints-report.md` (P0)
+- `docs/workorders/WO-0159-external-agent-onboarding-and-wild-adoption-documentation.md` — [COMPLETED] Added the external-agent onboarding path, updated discovery-facing docs/sidebar wiring, and documented the internal adoption argument plus measurable signals in `docs/reports/2026-03-15-external-agent-onboarding-and-adoption-memo.md` (P0)
+- `docs/workorders/WO-0160-agent-facing-content-completeness-and-verification-gates.md` — [COMPLETED] Defined the agent-facing publication gate framework, public governance page, and publish/no-publish verification model in `docs/reports/2026-03-15-agent-facing-publication-gates-framework.md` (P0)
+
+### Landing-First Public Experience Implementation (WO-0161)
+
+- `docs/workorders/WO-0161-landing-page-and-docs-secondary-route-implementation.md` — [COMPLETED] Implemented the landing-first root experience, added `/docs/` as the curated secondary docs entry path, preserved existing deep routes, and introduced audience lanes plus shared public navigation documented in `docs/reports/2026-03-15-landing-first-public-experience-implementation-report.md` (P0)
