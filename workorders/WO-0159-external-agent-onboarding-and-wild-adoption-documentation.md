@@ -51,8 +51,8 @@ Out of scope:
 Completed artifacts:
 
 - `docs/reports/2026-03-15-external-agent-onboarding-and-adoption-memo.md`
-- `site/src/content/docs/for-agents/external-agent-onboarding.md`
-- `site/src/content/docs/for-agents/index.md`
+- `site/src/content/docs/external-agent-onboarding.md`
+- `site/src/content/docs/for-agents.md`
 - `site/src/content/docs/governance/agent-facing-publication-gates.md`
 - `site/astro.config.mjs`
 - `site/scripts/sync-agent-discovery.mjs`

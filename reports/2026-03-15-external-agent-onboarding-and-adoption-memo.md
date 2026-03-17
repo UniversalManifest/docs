@@ -14,8 +14,8 @@ The central claim is that agent-friendly treatment increases adoption only if it
 
 ### Public onboarding path
 
-- Added `site/src/content/docs/for-agents/external-agent-onboarding.md`
-- Expanded `site/src/content/docs/for-agents/index.md` so the onboarding path and gate model are part of the visible agent entry route
+- Added `site/src/content/docs/external-agent-onboarding.md`
+- Expanded `site/src/content/docs/for-agents.md` so the onboarding path and gate model are part of the visible agent entry route
 - Updated the docs sidebar to expose a real multi-page `For Agents` section
 - Added onboarding and gate links to discovery-facing materials
 

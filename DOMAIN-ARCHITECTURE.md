@@ -6,12 +6,19 @@ This project uses two public domains with distinct responsibilities.
 
 Purpose:
 
+- Public landing page and curated docs entry
 - Public website for learning, governance, and adoption
+- Machine-readable discovery and agent entry points
+- Public tool surfaces for proof and exploration
 - Versioned spec artifacts (`schema.jsonld`, `schema.json`, conformance docs)
 
 Expected URL shape:
 
-- `https://universalmanifest.net/` (docs + overview)
+- `https://universalmanifest.net/` (landing)
+- `https://universalmanifest.net/docs/` (curated docs entry)
+- `https://universalmanifest.net/for-agents/`
+- `https://universalmanifest.net/.well-known/universal-manifest.json`
+- `https://universalmanifest.net/llms.txt`
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.jsonld`
 - `https://universalmanifest.net/ns/universal-manifest/v0.1/schema.json`
 
@@ -27,10 +34,13 @@ Purpose:
 
 - UMID resolution and manifest retrieval
 - Optional metadata/redirect behavior for clients
+- Runtime discovery metadata for machine consumers
 
 Expected URL shape:
 
 - `https://myum.net/{UMID}`
+- `https://myum.net/.well-known/myum-resolver.json`
+- `https://myum.net/openapi.json`
 
 Resolver behavior (recommended baseline):
 
@@ -51,6 +61,7 @@ Minimal response requirements:
 - Keeps the specification neutral and professional (`universalmanifest.net`)
 - Keeps runtime document lookup concerns isolated (`myum.net`)
 - Makes Linux Foundation style adoption paths cleaner (spec governance != app/runtime service)
+- Makes the public agent path explicit without turning the standards host into an agent runtime
 
 ## 4) Compatibility + migration
 
@@ -92,3 +103,16 @@ Operational policy:
 Runbook:
 
 - `docs/site/STAGING-PROMOTION-RUNBOOK.md`
+
+## 7) Agent-facing discovery entry
+
+The recommended public agent path is:
+
+1. `https://universalmanifest.net/.well-known/universal-manifest.json`
+2. `https://universalmanifest.net/llms.txt`
+3. `https://universalmanifest.net/for-agents/external-agent-onboarding/`
+4. `https://universalmanifest.net/reference/resolver-api/`
+5. `https://myum.net/.well-known/myum-resolver.json`
+6. `https://myum.net/openapi.json`
+
+This preserves the host split while giving external agents a predictable discovery order.

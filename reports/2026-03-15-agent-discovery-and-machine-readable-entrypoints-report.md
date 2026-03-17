@@ -34,7 +34,7 @@ This makes the agent entry path explicit and removes the need to scrape browser 
 - Added generated catalogs:
   - `site/public/agent/fixture-catalog.json`
   - `site/public/agent/sandbox-scenarios.json`
-- Added `site/src/content/docs/for-agents/index.md`
+- Added `site/src/content/docs/for-agents.md`
 - Added `For Agents` to the Starlight sidebar
 - Updated `site/src/content/docs/index.md` to route agent readers toward the canonical discovery path
 

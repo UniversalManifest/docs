@@ -279,3 +279,7 @@ Drift governance and follow-on WO trigger criteria:
 ### Landing-First Public Experience Implementation (WO-0161)
 
 - `docs/workorders/WO-0161-landing-page-and-docs-secondary-route-implementation.md` — [COMPLETED] Implemented the landing-first root experience, added `/docs/` as the curated secondary docs entry path, preserved existing deep routes, and introduced audience lanes plus shared public navigation documented in `docs/reports/2026-03-15-landing-first-public-experience-implementation-report.md` (P0)
+
+### Agent Path Drift Reconciliation (WO-0162)
+
+- `docs/workorders/WO-0162-agent-path-drift-reconciliation-and-starlight-warning-cleanup.md` — [IN_PROGRESS] Reconcile older authority docs with the new agent path and isolate or resolve the Starlight duplicate-id warning on affected docs pages without breaking the public `/for-agents/` routes (P1)

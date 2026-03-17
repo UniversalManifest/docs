@@ -56,7 +56,7 @@ Completed artifacts:
 
 - `docs/reports/2026-03-15-agent-facing-publication-gates-framework.md`
 - `site/src/content/docs/governance/agent-facing-publication-gates.md`
-- `site/src/content/docs/for-agents/index.md`
+- `site/src/content/docs/for-agents.md`
 - `site/astro.config.mjs`
 - `site/scripts/sync-agent-discovery.mjs`
 - `site/public/.well-known/universal-manifest.json`

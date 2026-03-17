@@ -53,7 +53,7 @@ Completed artifacts:
 - `site/public/.well-known/universal-manifest.json`
 - `site/public/agent/fixture-catalog.json`
 - `site/public/agent/sandbox-scenarios.json`
-- `site/src/content/docs/for-agents/index.md`
+- `site/src/content/docs/for-agents.md`
 - `services/myum-resolver/src/index.ts`
 
 ## Dependencies

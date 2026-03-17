@@ -32,6 +32,7 @@ Canonical repo path: `<repo-root>`
 - [`docs/UNIVERSAL-MANIFEST-BRIEFING.md`](UNIVERSAL-MANIFEST-BRIEFING.md) — Full AI agent briefing on the Universal Manifest standard
 - [`docs/MANDATE-interactive-implementation-sandbox.md`](MANDATE-interactive-implementation-sandbox.md) — CEO mandate for the interactive implementation sandbox
 - [`docs/DOMAIN-ARCHITECTURE.md`](DOMAIN-ARCHITECTURE.md) — Domain split: standards site vs UMID resolver
+- [`docs/reports/2026-03-15-multi-surface-agent-friendly-architecture.md`](reports/2026-03-15-multi-surface-agent-friendly-architecture.md) — Current public-surface architecture for landing, docs, discovery, tooling, and runtime boundaries
 - [`docs/PUBLISHING-AND-VERSIONING.md`](PUBLISHING-AND-VERSIONING.md) — How spec artifacts get hosted + versioned for adopters
 - [`docs/RELEASING.md`](RELEASING.md) — Draft release process for spec versions + publishing
 - [`docs/DEPLOY-CHECKLIST.md`](DEPLOY-CHECKLIST.md) — One linear checklist for first real deploy (`universalmanifest.net` + `myum.net`)
@@ -111,6 +112,10 @@ Canonical repo path: `<repo-root>`
 ## Reports
 
 - [`docs/reports/`](reports/) — Project reports directory (audits, status summaries, evidence packs, and verification reports)
+- [`docs/reports/2026-03-15-agent-discovery-and-machine-readable-entrypoints-report.md`](reports/2026-03-15-agent-discovery-and-machine-readable-entrypoints-report.md) — Discovery layer implementation across `universalmanifest.net` and `myum.net`
+- [`docs/reports/2026-03-15-external-agent-onboarding-and-adoption-memo.md`](reports/2026-03-15-external-agent-onboarding-and-adoption-memo.md) — External-agent onboarding package and the internal adoption argument
+- [`docs/reports/2026-03-15-agent-facing-publication-gates-framework.md`](reports/2026-03-15-agent-facing-publication-gates-framework.md) — Publication gates, anti-fabrication rules, and verification model for agent-facing surfaces
+- [`docs/reports/2026-03-15-landing-first-public-experience-implementation-report.md`](reports/2026-03-15-landing-first-public-experience-implementation-report.md) — Landing-first `/` and curated `/docs/` implementation closeout
 - [`docs/reports/2026-03-06-k2b-concept-integration-transfer-map.md`](reports/2026-03-06-k2b-concept-integration-transfer-map.md) — Consolidated map of how the recent concept-integration wave moved from research and blueprint into integration guidance, journeys, and proof
 - [`docs/reports/2026-03-06-metaverse-portaling-integration-note.md`](reports/2026-03-06-metaverse-portaling-integration-note.md) — Clarifies portaling as the cross-platform movement model for the metaverse lane and shows where that concept landed in repo guidance
 - [`docs/reports/2026-03-01-spec-vs-implementation-boundary-audit.md`](reports/2026-03-01-spec-vs-implementation-boundary-audit.md) — Spec vs implementation boundary audit
@@ -133,6 +138,17 @@ Canonical repo path: `<repo-root>`
 - [`integrations/smart-home.md`](../integrations/smart-home.md) — Smart home integration lane
 - [`integrations/data-firewall-ux.md`](../integrations/data-firewall-ux.md) — Firewall-style consent UX guidance
 - [`integrations/TEMPLATE.md`](../integrations/TEMPLATE.md) — Integration lane template
+
+## Agent-friendly public surface
+
+- Public landing page: `https://universalmanifest.net/`
+- Curated docs entry: `https://universalmanifest.net/docs/`
+- Agent overview: `https://universalmanifest.net/for-agents/`
+- External-agent onboarding: `https://universalmanifest.net/for-agents/external-agent-onboarding/`
+- Discovery descriptor: `https://universalmanifest.net/.well-known/universal-manifest.json`
+- llms.txt: `https://universalmanifest.net/llms.txt`
+- Runtime descriptor: `https://myum.net/.well-known/myum-resolver.json`
+- Runtime OpenAPI: `https://myum.net/openapi.json`
 
 ## Packages
 

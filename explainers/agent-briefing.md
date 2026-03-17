@@ -27,6 +27,27 @@ Imagine a Swiss Army Knife for your personal data -- one compact document that c
 
 ---
 
+## Discovery And Authority Path
+
+For agent onboarding, do not start from repository prose alone.
+
+Use this order:
+
+1. `https://universalmanifest.net/.well-known/universal-manifest.json`
+2. `https://universalmanifest.net/llms.txt`
+3. `https://universalmanifest.net/for-agents/external-agent-onboarding/`
+4. `https://universalmanifest.net/reference/resolver-api/`
+5. `https://myum.net/.well-known/myum-resolver.json`
+6. `https://myum.net/openapi.json`
+
+Authority split:
+
+- `universalmanifest.net` is the landing, standards, discovery, tooling, and artifact host.
+- `myum.net` is the read-only runtime resolver host.
+- These hosts do not currently expose a public A2A task lifecycle, public write API, or public MCP server.
+
+---
+
 ## Core Architecture (Summary)
 
 | Concept | What It Is | Analogy |
@@ -144,6 +165,9 @@ A TypeScript reference implementation is available as the `universal-manifest` n
 | Resource | URL |
 |---|---|
 | Documentation site | [universalmanifest.net](https://universalmanifest.net) |
+| External agent onboarding | `https://universalmanifest.net/for-agents/external-agent-onboarding/` |
+| Discovery descriptor | `https://universalmanifest.net/.well-known/universal-manifest.json` |
+| llms.txt | `https://universalmanifest.net/llms.txt` |
 | Resolver service | [myum.net](https://myum.net) |
 | Spec v0.1 | `spec/v0.1/README.md` |
 | Spec v0.2 (draft) | `spec/v0.2/README.md` |

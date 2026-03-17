@@ -13,3 +13,10 @@
 **Impact:** Low  
 **Category:** Inconsistency  
 **Status:** Open
+
+### 2026-03-16
+
+**Observation:** `cd /Users/grig/work/repo/universalmanifest/site && npm run build` still emits unresolved Starlight `glob-loader` duplicate-id warnings on changed docs pages (`for-agents/external-agent-onboarding`, `about/agent-briefing`, `publishing/domain-split`) even though the source tree does not show obvious duplicate markdown files and the routes still build and serve correctly.  
+**Impact:** Medium  
+**Category:** Inconsistency  
+**Status:** Open
