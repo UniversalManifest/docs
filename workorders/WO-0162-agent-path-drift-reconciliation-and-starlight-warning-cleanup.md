@@ -1,6 +1,6 @@
 # WO-0162 -- Agent Path Drift Reconciliation and Starlight Warning Cleanup
 
-**Status:** IN_PROGRESS
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-03-16
 
@@ -12,7 +12,7 @@ Reconcile the older agent-facing authority docs with the new onboarding path and
 
 WO-0159 through WO-0161 established the new public agent path, publication gates, and landing-first surface. The follow-on gap is that several older authority documents still needed to be aligned to that new path.
 
-During this cleanup pass, the content updates landed, but the site build still emits unresolved duplicate-id warnings from the Starlight content loader on changed docs pages. The routes still build and serve, but the warning remains unexplained on the current working tree.
+During this cleanup pass, the content updates landed, and the final warning investigation showed the duplicate-id issue was not caused by conflicting markdown files. The real root cause was a Starlight content-loader upgrade gap: the project was still using a bare `defineCollection({ schema: docsSchema() })` configuration instead of the current `docsLoader()` pattern required by the installed Astro/Starlight stack.
 
 ## Scope
 
@@ -34,6 +34,8 @@ Out of scope:
 - Updated authority and boundary docs.
 - Updated internal docs index entries for the agent-friendly public surface.
 - Investigation note or closeout explaining the Starlight duplicate-id warning state.
+- Final cleanup report:
+  - `docs/reports/2026-03-17-agent-path-drift-and-starlight-loader-fix.md`
 
 Current artifacts in progress:
 
@@ -56,9 +58,10 @@ Current artifacts in progress:
 - Do not silently weaken or remove the new public agent path while attempting to clean the warning.
 - If the warning cannot be fixed quickly, document it and preserve the working public routes.
 - Prefer the smallest safe structural change that keeps `/for-agents/` and `/for-agents/external-agent-onboarding/` stable.
+- Final fix applied: add `docsLoader()` in `site/src/content.config.ts`, then rebuild to confirm the duplicate-id warning disappears while the public routes remain stable.
 
 ## Acceptance Criteria
 
 - [x] Legacy authority docs reflect the current landing/docs/discovery/runtime split.
-- [ ] The build warning is either resolved or explicitly documented with root cause and next action.
+- [x] The build warning is either resolved or explicitly documented with root cause and next action.
 - [x] Public agent routes remain stable.

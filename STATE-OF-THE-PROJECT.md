@@ -1,11 +1,13 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-11
-**Status:** 135 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Consumer Resolver UX Hardening (WO-0144) COMPLETED. Queued/open: WO-0142 (NOT_STARTED), WO-0143 (NOT_STARTED), WO-0145 (OPEN).
+**Date:** 2026-03-20
+**Status:** 158 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Consumer Resolver UX Hardening (WO-0144) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Active frontier: WO-0142 (NOT_STARTED), WO-0143 (NOT_STARTED), WO-0145 (IN_PROGRESS), WO-0155 (IN_PROGRESS).
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
-This repo remains a **spec-first project with fixtures and tooling**, and it now also includes active production operations for the docs surface (`universalmanifest.net`) and resolver surface (`myum.net`) via Cloudflare Pages/Workers.
+This repo remains a **spec-first project with fixtures and tooling**, but it is no longer only a spec/docs repo. It now operates a multi-surface public program: a landing-first standards/discovery site on `universalmanifest.net`, executable proof and interactive tooling surfaces, and the resolver/runtime contract surface on `myum.net` via Cloudflare Pages/Workers.
+
+The most important change since the last refresh is that the March public-surface cleanup wave is finished. The landing-first homepage, curated `/docs/` entry, `/docs/overview/` long-form overview, `/for-agents/` path, machine-readable discovery files, and the warning-free site build baseline are all now real and verified.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For recent audit reports, see the [`docs/reports/`](reports/) directory (includes freshness audits, completeness audits, and status summaries).
@@ -37,6 +39,15 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
+- **Public landing/docs/discovery surfaces (completed through WO-0164)**
+  - Landing-first root and shared public navigation: `site/src/pages/index.astro`
+  - Curated docs entry: `site/src/pages/docs/index.astro`
+  - Long-form docs overview now published at `/docs/overview/`: `site/src/content/docs/index.md`
+  - Public agent path: `site/src/content/docs/for-agents.md` and `site/src/content/docs/external-agent-onboarding.md`
+  - Machine-readable discovery files: `site/public/llms.txt`, `site/public/.well-known/universal-manifest.json`, `site/public/.well-known/security.txt`
+  - Public catalogs for agent/browser consumption: `site/public/agent/fixture-catalog.json`, `site/public/agent/sandbox-scenarios.json`
+  - Resolver/runtime contract docs and descriptors: `site/src/content/docs/reference/resolver-api.md`, `services/myum-resolver/CONTRACT.md`
+  - Verified warning-free site build baseline documented in `docs/reports/2026-03-19-docs-root-relocation-warning-free-build-baseline.md`
 - **Official completion framework**
   - Done-done definition: `docs/DONE-DONE-DEFINITION.md`
   - Release checklist: `docs/DONE-DONE-CHECKLIST.md`
@@ -76,6 +87,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Explicit sidebar labels/order and adopter-first navigation in the docs site
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
   - Integration pages now include clear implementation checklists + fixture links + boundaries
+  - Landing/docs/discovery/runtime boundaries are now reconciled across the site and authority docs
 - **v0.2 draft signature profile (artifacts exist)**
   - Signature profile: `spec/v0.2/SIGNATURE-PROFILE.md`
   - Draft schema + context: `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
@@ -93,7 +105,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
-## Work-order status (2026-03-05)
+## Work-order status (2026-03-20)
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
 - Completed: `WO-0014` interactive workbench (first usable implementation + verification evidence)
@@ -262,15 +274,57 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Key artifact:
   - `docs/workorders/WO-0144-myum-consumer-provenance-and-example-state-hardening.md`
 
-#### Queued and Open Work Orders
+#### Concept Hierarchy Explorer and Ecosystem Namespace (WO-0155) — IN PROGRESS
+
+- In progress: `WO-0155` concept hierarchy explorer and ecosystem namespace
+- Purpose:
+  - make the breadth of Universal Manifest legible in one place instead of relying on readers to infer it from scattered integration pages
+  - establish the ecosystem namespace framing for external compliance submissions and distributed name management
+
+#### Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) — COMPLETED
+
+- Completed: `WO-0157` landing surface and multi-layer interaction architecture (2026-03-15)
+- Completed: `WO-0158` agent discovery and machine-readable entrypoints (2026-03-15)
+- Completed: `WO-0159` external-agent onboarding and wild adoption documentation (2026-03-15)
+- Completed: `WO-0160` agent-facing content completeness and verification gates (2026-03-15)
+- Result:
+  - `universalmanifest.net` now exposes a first-class discovery layer for humans and agents
+  - `myum.net` now exposes runtime/security/openapi descriptors as part of the public resolver contract
+
+#### Landing-First Public Experience and Cleanup Wave (WO-0161 through WO-0164) — COMPLETED
+
+- Completed: `WO-0161` landing-page and docs-secondary-route implementation (2026-03-15)
+- Completed: `WO-0162` agent-path drift reconciliation and Starlight warning cleanup (2026-03-17)
+- Completed: `WO-0163` remaining site build warning triage and noise reduction (2026-03-17)
+- Completed: `WO-0164` docs-root relocation and warning-free build baseline (2026-03-19)
+- Result:
+  - `/` is now the public landing surface
+  - `/docs/` is the curated docs entry
+  - `/docs/overview/` holds the long-form overview that previously occupied docs-root
+  - the site build baseline is now warning-free
+
+#### Active frontier (2026-03-20)
 
 - `WO-0142` — Payment Handles and Fiat/Crypto Gateway Integration (NOT_STARTED)
 - `WO-0143` — Private Encrypted Inline Facets vs Projection Model Analysis (NOT_STARTED)
-- `WO-0145` — Vignette Explainer Library (OPEN)
+- `WO-0145` — Vignette Explainer Library (IN_PROGRESS)
+- `WO-0155` — Concept Hierarchy Explorer and Ecosystem Namespace (IN_PROGRESS)
 
-## Priority context (2026-03-11)
+## Priority context (2026-03-20)
 
-The Interactive Sandbox Wave (WO-0060 through WO-0068), Sandbox V2 Redesign (WO-0069 through WO-0080), audit-driven waves (WO-0081 through WO-0112), External Adopter Wave (WO-0053 through WO-0059), runtime durability follow-on (WO-0119 through WO-0124), Go-Now execution wave (WO-0125 through WO-0126), GPC execution wave (WO-0127 through WO-0128), inbox corpus hygiene wave (WO-0129), WO-0130 through WO-0136, the Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138), the RP1/MSF Adversarial Hardening Wave (WO-0139), the K2B Concept Integration Traceability pass (WO-0140), the Metaverse Portaling Integration pass (WO-0141), and the Consumer Resolver UX Hardening pass (WO-0144) are completed. Three work orders remain in the queue: WO-0142 (NOT_STARTED, payment handles and fiat/crypto gateway integration), WO-0143 (NOT_STARTED, private encrypted inline facets vs projection model analysis), and WO-0145 (OPEN, vignette explainer library).
+The project is no longer blocked on public-surface cleanup. The March wave from `WO-0157` through `WO-0164` closed the biggest website/discovery/agent-path coherence gaps and ended with a warning-free site build baseline.
+
+That changes the execution focus. The real frontier is now:
+
+- breadth and ecosystem legibility (`WO-0155`, concept hierarchy explorer and namespace framing)
+- outward-facing explainer/distribution assets (`WO-0145`, vignette library)
+- unresolved architecture and expansion questions (`WO-0143`, privacy model analysis; `WO-0142`, payment-handle integration)
+
+Recommended sequencing remains:
+
+1. continue `WO-0155` to improve breadth visibility and ecosystem framing
+2. continue `WO-0145` where it directly supports the new public/adoption surfaces
+3. resolve `WO-0143` before `WO-0142`, since the privacy/data-shape decision is more foundational than the payment overlay work
 
 No work order may be executed outside the explicitly approved sequence without user confirmation.
 
@@ -334,15 +388,16 @@ Gap movement from latest provenance audit:
 - `GAP-K2B-004`: unchanged.
 - `GAP-K2B-005`: unchanged.
 
-## Local verification status (2026-02-28)
+## Local verification status (rolling)
 
-- `site` build (`npm run build:clean`): PASS (0 warnings, exit code 0)
-- `packages/universal-manifest` tests (`npm test`): PASS (46/46 fixtures, exit code 0)
-- Journeys proof (`npm run journeys`): PASS (11/11, exit code 0)
-- Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS (9/9 endpoints)
-- Endpoint smoke dev (`npm run smoke:endpoints:dev`): N/A (dev servers not running; expected, not a failure)
+- `site` build (`cd site && npm run build`): PASS with no warnings (2026-03-19, `WO-0164`)
+- Served-route checks after the final public-surface cleanup pass: PASS for `/`, `/docs/`, and `/docs/overview/` (2026-03-19)
+- Served-route checks during the agent-path reconciliation and warning-reduction passes: PASS for `/for-agents/`, `/for-agents/external-agent-onboarding/`, `/about/agent-briefing/`, `/publishing/domain-split/`, `/workbench/`, `/workbench/index/`, and `/sandbox/gs-01-first-manifest-v2/` (2026-03-17)
+- `packages/universal-manifest` tests (`npm test`): PASS (46/46 fixtures, 2026-02-28)
+- Journeys proof (`npm run journeys`): PASS (11/11, 2026-02-28)
+- Endpoint smoke prod (`npm run smoke:endpoints:prod`): PASS (9/9 endpoints, 2026-02-28)
+- Endpoint smoke dev (`npm run smoke:endpoints:dev`): N/A when dev servers are not running; not treated as a failure
 - v0.2 signature verification: WORKING
-- Nomenclature cleanup: 31 files updated (50 changes), "signature envelope" → "signature" throughout
 
 Note: 46 committed fixtures (31 v0.1 + 15 v0.2) after WO-0048 conformance suite expansion. 1 additional uncommitted stub (`cross-system-projection-manifest.jsonld`) exists on disk, totaling 47.
 
@@ -363,61 +418,25 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ## Next milestones (recommended)
 
-### Milestone A — Conformance scaffolding (still v0.1.x)
+### Milestone A — Breadth visibility and ecosystem framing
 
-- ✅ Added `spec/v0.1/CONFORMANCE.md` checklist (“what a consumer MUST do to claim v0.1 support”)
-- ✅ Added initial invalid fixtures (missing required fields, wrong `@type`, bad facets)
-- ✅ Updated `packages/universal-manifest` validator to assert invalid fixtures fail
-- Next: add deeper TTL and misuse/adversarial fixtures for v0.1.x and v0.2.x as the suite hardens
+- Continue `WO-0155` so the project can explain the full breadth of Universal Manifest from one place instead of asking outsiders to infer it from many integration pages
+- Use that explorer and namespace framing to support public adoption arguments, demo flows, and future compliance/discovery surfaces
 
-### Milestone B — Signature profile (v0.2)
+### Milestone B — Distribution-ready explainer assets
 
-- ✅ Chose a v0.2 baseline profile (JCS + Ed25519) and added draft artifacts + fixtures:
-  - `spec/v0.2/SIGNATURE-PROFILE.md`
-  - `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
-  - `spec/v0.2/CONFORMANCE.md`
-  - `examples/v0.2/`
-- Next: publish v0.2 artifacts at stable URLs and expand fixtures for verification edge-cases
+- Continue `WO-0145` so the new landing/discovery surfaces have a matched library of vignette explainers for the site, UI embeds, and video publishing
+- Keep this scoped to assets that strengthen the actual public adoption story rather than generic brand collateral
 
-### Milestone C — Distribution + stability (v0.2+)
+### Milestone C — Architecture closure on privacy model
 
-- Documented publishing + versioning plan: `docs/PUBLISHING-AND-VERSIONING.md`
-- Production deployment is live:
-  - `https://universalmanifest.net` (Cloudflare Pages)
-  - `https://myum.net` (Cloudflare Worker + KV)
-- Next: harden v0.2 migration policy and resolver edge-case semantics
-  - Cloudflare Pages runbook: `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
-  - Resolver contract: `services/myum-resolver/CONTRACT.md`
+- Execute `WO-0143` before new expansion lanes
+- The inline-encrypted-facets versus projection-model decision affects how far Universal Manifest should go with sensitive or externally resolved data, so it is higher leverage than incremental lane expansion
 
-### Milestone D — Adopter onboarding + interactive tooling
+### Milestone D — Payment-handle expansion after architecture closure
 
-- ✅ First-time overview content and visual onboarding are shipped
-- ✅ Interactive manifest workbench is shipped and verified (`WO-0014` completed)
-- ✅ CLI-agent reader test evidence logged
-- Optional quality step: run and log a human participant reader-test for additional onboarding confidence.
-  - Protocol: `docs/reports/2026-02-19-first-time-reader-testing-protocol.md`
-  - Results: `docs/reports/2026-02-20-first-time-reader-test-results.md`
-
-### Milestone E — Full-corpus IA and journey execution
-
-- Deferred-source reconciliation is complete for the current batch (`WO-0016` completed)
-- Conflict decisions are recorded with action targets:
-  - `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
-- ✅ Corpus-derived IA/journey/workbench deltas were executed and closed in:
-  - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
-- Next: run drift checks for newly ingested sources and open follow-on WOs when corpus deltas affect adopter-facing IA or proof flows
-
-### Milestone F — Metaverse lineage and emerging integration lanes
-
-- ✅ MUM origin and strategic lineage are codified in source-of-truth docs.
-- ✅ Metaverse integration lane is documented.
-- ✅ Metaverse fixture + journey execution evidence is completed (`WO-0022`).
-- ✅ RP1 spatial-fabric integration lane is documented.
-- ✅ Smart-glasses social-layer integration lane is documented.
-- ✅ Smart-glasses consent fixture + journey execution evidence is completed (`WO-0021`).
-- ✅ RP1 intake, fixture/journey materialization, and conflict reconciliation are completed (`WO-0020`).
-- ✅ Multi-provider proof-of-personhood (World ID, Gitcoin Passport, BrightID), social DID method coverage, and DID + VC credential lane completed (`WO-0024` closed 2026-02-20).
-- Next: maintain conformance/security hardening milestones and consider deeper adversarial fixture coverage.
+- Execute `WO-0142` after `WO-0143`
+- Payment handles remain important, but they should build on the settled privacy/data-shape position rather than forcing that decision implicitly
 
 ## How other systems should adopt it today (v0.1)
 

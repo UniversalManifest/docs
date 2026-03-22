@@ -282,4 +282,12 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Agent Path Drift Reconciliation (WO-0162)
 
-- `docs/workorders/WO-0162-agent-path-drift-reconciliation-and-starlight-warning-cleanup.md` — [IN_PROGRESS] Reconcile older authority docs with the new agent path and isolate or resolve the Starlight duplicate-id warning on affected docs pages without breaking the public `/for-agents/` routes (P1)
+- `docs/workorders/WO-0162-agent-path-drift-reconciliation-and-starlight-warning-cleanup.md` — [COMPLETED] Reconciled older authority docs with the new agent path and resolved the Starlight duplicate-id warning by adopting the required `docsLoader()` configuration, documented in `docs/reports/2026-03-17-agent-path-drift-and-starlight-loader-fix.md` (P1)
+
+### Remaining Site Build Warning Triage (WO-0163)
+
+- `docs/workorders/WO-0163-remaining-site-build-warning-triage-and-noise-reduction.md` — [COMPLETED] Triaged the three remaining non-blocking site build warnings, removing the sandbox mixed-import warning and the Pagefind `/workbench/index/` warning while explicitly accepting the intentional Starlight `/` route-priority override in `docs/reports/2026-03-17-remaining-site-build-warning-triage-and-noise-reduction.md` (P2)
+
+### Docs Root Relocation (WO-0164)
+
+- `docs/workorders/WO-0164-docs-root-relocation-and-warning-free-build-baseline.md` — [COMPLETED] Relocated the old docs-root content to `/docs/overview/`, linked it from the curated `/docs/` entry, and removed the last Starlight root-route warning in `docs/reports/2026-03-19-docs-root-relocation-warning-free-build-baseline.md` (P2)
