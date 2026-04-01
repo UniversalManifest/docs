@@ -9,11 +9,11 @@
         /* Specific enhancements per W3C specification layout */
         body { max-width: 50em; margin: 0 auto; line-height: 1.5; font-family: sans-serif; background-image: none !important; }
         .head { margin-bottom: 3em; }
-        .head a.logo img { border: none; }
+        .head a.logo, img[alt="W3C"], .w3c-logo { display: none !important; } /* Strip W3C branding injected by fixup.js */
         .head h1 { color: #005a9c; }
         .toc { font-weight: bold; margin-bottom: 2em; }
         .toc ol { list-style: none; counter-reset: section; margin-left: 0; padding-left: 0; }
-        .toc ol li { display: block; }
+        .toc ol li { display: flex; align-items: baseline; } /* Fix WO-0169: TOC alignment */
         .toc ol li::before { content: counters(section, ".") " "; counter-increment: section; display: inline-block; width: 2.5em; text-align: right; margin-right: 0.5em; font-weight: normal; }
         .toc ol ol { margin-left: 2em; counter-reset: subsection; }
         .toc ol ol li::before { content: counters(section, ".") "." counters(subsection, ".") " "; counter-increment: subsection; display: inline-block; width: 3.5em; }
@@ -32,9 +32,9 @@
         <h2><time class="dt-published" datetime="2026-03-31">31 March 2026</time></h2>
         <dl>
             <dt>This version:</dt>
-            <dd><a class="u-url" href="https://universalmanifest.net/TR/2026/WD-um-20260331/">https://universalmanifest.net/TR/2026/WD-um-20260331/</a></dd>
+            <dd><a class="u-url" href="https://universalmanifest.net/">https://universalmanifest.net/</a></dd>
             <dt>Latest published version:</dt>
-            <dd><a href="https://universalmanifest.net/TR/um/">https://universalmanifest.net/TR/um/</a></dd>
+            <dd><a href="https://universalmanifest.net/">https://universalmanifest.net/</a></dd>
             <dt>History:</dt>
             <dd><a href="https://universalmanifest.net/standards/history/um/">Initial Version</a></dd>
             <dt>Editors:</dt>
