@@ -89,7 +89,7 @@ An attacker obtains the private signing key used by an issuer, enabling them to 
 
 **Mitigations:**
 
-1. **Key rotation**: Issuers MUST rotate signing keys regularly (see §8, Key Rotation and Revocation).
+1. **Key rotation**: Issuers MUST rotate signing keys regularly (see §9, Key Rotation and Revocation).
 
 2. **Hardware security modules (HSMs)**: For production issuers, private keys SHOULD be stored in HSMs or secure enclaves with access controls.
 
@@ -308,7 +308,47 @@ An attacker removes the `signature` field from a v0.2 manifest and presents it t
 
 If a verifier incorrectly implements version/profile checks, an attacker may succeed in presenting unsigned manifests. Implementers MUST test against negative test vectors (unsigned manifests, wrong versions, invalid signatures).
 
-## 8. Key Rotation and Revocation Operational Guidance
+### 8. Identity Correlation and Claim Authenticity (Bag of Claims)
+
+**Threat:**
+
+A signed manifest contains claims from multiple issuers and references to multiple DIDs, but the signature only proves the signer produced the document — not that claims are authentic or that multiple DIDs share a common controller. This is the "Bag of Claims" vulnerability.
+
+**Attack Scenarios:**
+
+- **Credential stacking (Sybil amplification)** — Severity: Critical. Attacker copies a high-value claim (e.g., World ID personhood proof) across multiple manifests with different subject DIDs. Each manifest appears to represent a verified human.
+
+- **Cross-DID identity theft** — Severity: High. Attacker includes another party's public DID (e.g., public `did:plc` from Bluesky, on-chain `did:chia`) as a facet in their own manifest. No credential theft required — just knowledge of the target's DID string.
+
+- **Issuer impersonation** — Severity: High. `claims[].issuer` is a plain string. Writing `"issuer": "did:web:worldcoin.org"` requires zero interaction with World ID. No signature chain or VC envelope exists.
+
+- **Pairwise DID abuse** — Severity: Medium. Pairwise DIDs prevent cross-context correlation by design, which also shields adversarial identity farming from detection.
+
+- **Sybil amplification (compound)** — Severity: Critical. Combining credential stacking with pairwise DID abuse creates N apparently-independent verified identities from one real verification.
+
+**Mitigations:**
+
+1. **Security disclosure (v0.2, REQUIRED):** Document the vulnerability in the security considerations section. Explicitly state that `claims[].issuer` is a string assertion, not proof of issuance.
+
+2. **Consumer guidance (v0.2, REQUIRED):** Relying parties MUST NOT treat claims as authentic without independent verification. MUST NOT extend trust transitively across DIDs without binding evidence.
+
+3. **Attested cross-DID binding (v0.2, non-normative):** The `identity.crossDidBinding` claim convention enables trust-delegated DID correlation with attester accountability. Strength depends on attester trust.
+
+4. **VP evidence references (v0.2, optional):** The `claims[].evidence` field enables Verifiable Presentation proof of claim issuance. When populated, consumers can verify the claim's authenticity chain.
+
+5. **Multi-signature binding (v0.3, deferred):** Each DID in the manifest co-signs a binding statement, providing cryptographic proof of control.
+
+6. **ZK identity binding (v0.4+, deferred):** Zero-knowledge proofs demonstrate cross-DID control without revealing linking secrets.
+
+**Residual Risk:**
+
+In v0.2, credential stacking and issuer impersonation have HIGH residual risk because the `evidence` field is optional and no credential providers currently issue W3C VCs. This is explicitly accepted as a pre-1.0 limitation with a defined upgrade path (Tier 1/2 trust model).
+
+Cross-DID identity theft has MEDIUM residual risk — the attested binding claim (L1) provides pragmatic mitigation when a trusted attester is available.
+
+Pairwise DID abuse has MEDIUM residual risk and is inherent to the privacy model — not specific to UM.
+
+## 9. Key Rotation and Revocation Operational Guidance
 
 This section provides operational best practices for issuers managing signing keys and revocation infrastructure.
 
@@ -384,7 +424,7 @@ This section provides operational best practices for issuers managing signing ke
    - Implement additional key protection measures (HSM, access controls)
    - Update key rotation frequency if needed
 
-## 9. Size and Depth Limits Reference
+## 10. Size and Depth Limits Reference
 
 ### Recommended Consumer Limits
 
@@ -426,7 +466,7 @@ function validateManifestSize(manifest: unknown): void {
 
 Consumers MUST call `validateManifestSize()` before signature verification or semantic processing.
 
-## 10. Defense in Depth
+## 11. Defense in Depth
 
 The Universal Manifest security model relies on **layered defenses**:
 
@@ -439,7 +479,7 @@ The Universal Manifest security model relies on **layered defenses**:
 
 **No single mitigation is sufficient.** Implementers MUST adopt all applicable mitigations for their threat model.
 
-## 11. Threat Assessment Summary
+## 12. Threat Assessment Summary
 
 | Threat | Severity | v0.2 Mitigation | Residual Risk |
 |--------|----------|-----------------|---------------|
@@ -450,6 +490,7 @@ The Universal Manifest security model relies on **layered defenses**:
 | DoS (oversized manifests) | Medium | Size/depth limits (required) | Non-compliant consumers (medium) |
 | Privacy leakage | Medium | Opaque IDs, minimal disclosure (required) | Correlation across contexts (low) |
 | Signature stripping | High | Mandatory signature (v0.2 required) | Version downgrade (low) |
+| Identity correlation (Bag of Claims) | Critical | Security disclosure + tiered trust model (v0.2); VP evidence + multi-sig (v0.3+) | Credential stacking until L2 is ecosystem-ready (high) |
 
 **Severity levels:**
 
@@ -458,7 +499,7 @@ The Universal Manifest security model relies on **layered defenses**:
 - **Medium**: Requires specific conditions or affects limited scenarios
 - **Low**: Minimal impact or requires substantial attacker resources
 
-## 12. Conformance and Testing
+## 13. Conformance and Testing
 
 Implementers MUST validate their security implementation against test vectors in:
 
@@ -476,7 +517,7 @@ Implementers MUST validate their security implementation against test vectors in
 7. Unknown signature algorithm
 8. Missing required fields
 
-## 13. Security Contact
+## 14. Security Contact
 
 Report security vulnerabilities to: **security@universalmanifest.net**
 
@@ -484,7 +525,7 @@ Do NOT open public GitHub issues for security issues.
 
 See `/SECURITY.md` for reporting guidelines and response timelines.
 
-## 14. References
+## 15. References
 
 - **v0.2 Signature Profile**: `/spec/v0.2/SIGNATURE-PROFILE.md`
 - **v0.1 Spec**: `/spec/v0.1/README.md`

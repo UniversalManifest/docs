@@ -1,5 +1,47 @@
 # Decisions (Universal Manifest)
 
+## 2026-04-01 — Resolve Bag of Claims vulnerability with tiered trust model and identity binding conventions
+
+### Decision
+
+- Adopt a four-tier trust model for manifest claim verification:
+  - Tier 0 (Signature-only): zero friction, self-asserted claims.
+  - Tier 1 (Attested/evidence-backed): low friction, attested cross-DID binding or VP evidence.
+  - Tier 2 (Cryptographic binding): medium friction, multi-signature or ZK proofs.
+  - Tier 3 (Multi-party ceremony): high friction, multi-keyholder co-signing from different locations.
+- Ship three non-breaking additions in v0.2:
+  - Normative security considerations text documenting the Bag of Claims vulnerability, the tiered trust model, and the privacy-binding tension.
+  - An optional `claims[].evidence` schema field for VP references (Tier 1 foundation).
+  - A non-normative `identity.crossDidBinding` claim convention for attested cross-DID binding.
+  - A non-normative `um:agentDelegation` pointer convention for delegation transparency.
+  - A non-normative `requiredTrustTier` field convention for issuer-declared security requirements per claim/facet.
+- Explicitly defer L3 (multi-signature binding) to v0.3 and L4 (ZK identity proofs) to v0.4+.
+
+### Rationale
+
+- The Bag of Claims vulnerability is a structural gap: claims from multiple issuers sit in a manifest with no cryptographic proof of common control. Five attack vectors were identified (credential stacking, cross-DID theft, issuer impersonation, pairwise DID abuse, Sybil amplification), two rated Critical.
+- CRO assessment: only L1 (attested binding) is implementable in v0.2. No target credential provider (World ID, Gitcoin Passport, BrightID) issues W3C VCs. DID co-signing is blocked for `did:plc` and `did:chia`.
+- Security assessment: L1 alone doesn't address the two Critical vectors. The `claims[].evidence` field creates the upgrade path at zero current cost.
+- The tiered trust model gives relying parties a decision framework instead of a false sense of security, while the `requiredTrustTier` convention allows manifest authors to declare the security level their data requires.
+- User friction is the primary adoption concern. Each tier is designed with increasing friction matched to increasing stakes. Users should never face more ceremony than their use case requires.
+
+### Evidence
+
+- CRO Report: `.dev/ai/findings/synthetic-reviews/cro-identity-correlation-implementability.md`
+- Security Report: `.dev/ai/findings/synthetic-reviews/security-identity-correlation-privacy-impact.md`
+- Thesis: `.dev/ai/knowledge-corpus/thesis-identity-correlation-bag-of-claims.md`
+- Proposal: `.dev/ai/proposals/PROPOSAL-v0.2-identity-binding-and-liveness.md`
+- Work order: `.dev/ai/workorders/WO-0170-identity-correlation-binding.md`
+
+### Policy impact
+
+- `spec/v0.2/README.md` security considerations must be updated with Bag of Claims disclosure and tiered trust model.
+- `spec/v0.2/schema.json` gains an optional `claims[].evidence` field.
+- `docs/security/THREAT-MODEL.md` must be extended with five new attack vectors.
+- Follow-on work orders needed for: fixture suite, integration lane updates, site docs, claim registry entry.
+- L3/L4 are explicitly deferred — no multi-signature or ZK work should begin until v0.3 planning.
+- Pairwise DID privacy is preserved: cross-DID binding is always opt-in, never mandated.
+
 ## 2026-03-06 — Execute GPC as runtime-authoritative with optional UM evidence projection
 
 ### Decision
