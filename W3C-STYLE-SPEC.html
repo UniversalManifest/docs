@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Universal Manifest Specification</title>
+    <!-- Use the official W3C Working Draft style -->
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD" type="text/css">
+    <style>
+        /* Specific enhancements per W3C specification layout */
+        body { max-width: 50em; margin: 0 auto; line-height: 1.5; font-family: sans-serif; background-image: none !important; }
+        .head { margin-bottom: 3em; }
+        .head a.logo img { border: none; }
+        .head h1 { color: #005a9c; }
+        .toc { font-weight: bold; margin-bottom: 2em; }
+        .toc ol { list-style: none; counter-reset: section; margin-left: 0; padding-left: 0; }
+        .toc ol li { display: block; }
+        .toc ol li::before { content: counters(section, ".") " "; counter-increment: section; display: inline-block; width: 2.5em; text-align: right; margin-right: 0.5em; font-weight: normal; }
+        .toc ol ol { margin-left: 2em; counter-reset: subsection; }
+        .toc ol ol li::before { content: counters(section, ".") "." counters(subsection, ".") " "; counter-increment: subsection; display: inline-block; width: 3.5em; }
+        .note, .issue, .example { padding: .5em; border-left: .5em solid; margin: 1em 0; }
+        .example { border-color: #e0cb52; background: #fcfaee; }
+        .example-title { font-weight: bold; margin-bottom: 0.5em; }
+        pre { background-color: #f8f8f8; border: 1px solid #ddd; padding: 1em; overflow: auto; }
+        code { font-family: Inconsolata, Consolas, "Liberation Mono", monospace; color: #c83232; }
+        .rfc2119 { text-transform: lowercase; font-variant: small-caps; font-style: normal; font-weight: bold; color: #900; }
+    </style>
+</head>
+<body class="h-entry">
+    <div class="head">
+        <h1 id="title" class="title p-name">Universal Manifest Specification</h1>
+        <h2 id="subtitle">Universal Manifest Draft Specification</h2>
+        <h2><time class="dt-published" datetime="2026-03-31">31 March 2026</time></h2>
+        <dl>
+            <dt>This version:</dt>
+            <dd><a class="u-url" href="https://universalmanifest.net/TR/2026/WD-um-20260331/">https://universalmanifest.net/TR/2026/WD-um-20260331/</a></dd>
+            <dt>Latest published version:</dt>
+            <dd><a href="https://universalmanifest.net/TR/um/">https://universalmanifest.net/TR/um/</a></dd>
+            <dt>History:</dt>
+            <dd><a href="https://universalmanifest.net/standards/history/um/">Initial Version</a></dd>
+            <dt>Editors:</dt>
+            <dd class="p-author h-card vcard">
+                Universal Manifest Working Group
+            </dd>
+        </dl>
+        <p class="copyright">
+            Copyright © 2026 the Contributors to the Universal Manifest Specification.
+        </p>
+        <hr title="Separator for header">
+    </div>
+
+    <!-- Abstract -->
+    <section id="abstract" class="introductory">
+        <h2>Abstract</h2>
+        <p>This specification defines a JSON-LD-based file format known as the <strong>Universal Manifest</strong>, a portable state capsule. Formulated as a hybrid synthesis of web publication metadata and web application parameters, this format provides developers and issuers with a standardized envelope to convey linked-data identity references, role permissions, device registrations, and pointers to canonical data sources.</p>
+        <p>The Universal Manifest is specifically designed for local-first environments (e.g., venue edges, public displays) where consumers must tolerate partial connectivity and rely on cached, verifiable state. Using this standard, user agents, smart displays, and network edges can securely interoperate without requiring a continuous cloud connection, facilitating seamless cross-context experiences.</p>
+    </section>
+
+    <!-- Status of This Document -->
+    <section id="sotd" class="introductory">
+        <h2>Status of This Document</h2>
+        <p><em>This section describes the status of this document at the time of its publication.</em></p>
+        <p>This document is a draft specification of the Universal Manifest v0.1 format. It borrows structural paradigms from common web platform standards, notably combining web application document lifecycle and caching procedures with linked data contexts, identities, and structural facets commonly found in publication envelope standards.</p>
+        <p>Implementors need to be aware that this specification is not yet fully stable, particularly regarding the signature profile which allows for permissive integrity checks in this version. Implementors who are not taking part in the discussions will find the specification changing out from under them in incompatible ways as the v0.2 iteration is finalized.</p>
+        <p>This document uses layout formats established by major web standard groups to present normative requirements cleanly. It is inappropriate to cite this document as other than a work in progress.</p>
+    </section>
+
+    <!-- Table of Contents -->
+    <nav id="toc" class="toc">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#universal-manifest">Universal Manifest</a>
+                <ol>
+                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#json-ld-core-members">JSON-LD Core Members</a></li>
+                    <li><a href="#identities-lifespans">Identities &amp; Lifespans</a></li>
+                    <li><a href="#structural-state-members">Structural State Members</a></li>
+                    <li><a href="#signature-integrity">Signature Integrity</a></li>
+                </ol>
+            </li>
+            <li><a href="#entities-and-facets">Entities and Facets</a>
+                <ol>
+                    <li><a href="#umfacet-module">um:Facet Module</a></li>
+                    <li><a href="#umentity-base">um:Entity Base</a></li>
+                </ol>
+            </li>
+            <li><a href="#manifest-lifecycle-and-caching">Manifest Lifecycle and Caching</a>
+                <ol>
+                    <li><a href="#processing-the-manifest">Processing the Manifest</a></li>
+                    <li><a href="#caching-formulation">Caching Formulation</a></li>
+                </ol>
+            </li>
+            <li><a href="#conformance">Conformance</a>
+                <ol>
+                    <li><a href="#required-behavior-consumer">Consumer Behavior</a></li>
+                    <li><a href="#required-behavior-issuer">Issuer Behavior</a></li>
+                    <li><a href="#standalone-conformance-suite">Standalone Conformance Suite</a></li>
+                </ol>
+            </li>
+            <li><a href="#extensibility-profiles">Extensibility &amp; Profiles</a></li>
+            <li><a href="#security-considerations">Security Considerations</a>
+                <ol>
+                    <li><a href="#signature-limitations">Signature Limitations</a></li>
+                    <li><a href="#ttl-enforcement">TTL Enforcement</a></li>
+                    <li><a href="#resource-limits">Resource Limits</a></li>
+                </ol>
+            </li>
+            <li><a href="#privacy-considerations">Privacy Considerations</a></li>
+        </ol>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="universal-manifest">
+        <h2><span class="secno">1. </span>Universal Manifest</h2>
+        <p>A <strong>Universal Manifest</strong> is a <a href="https://www.w3.org/TR/json-ld/">JSON-LD</a> document acting as a cross-platform data envelope. It blends the semantic linkability of a Web Publication Manifest with the applied processing lifecycle of a Web App Manifest.</p>
+
+        <section id="examples">
+            <h3><span class="secno">1.1. </span>Examples</h3>
+            <p>The following is an example of a minimal Universal Manifest:</p>
+            <div class="example">
+                <div class="example-title">Example 1: Minimal Universal Manifest payload</div>
+<pre class="json"><code>{
+  "@context": [
+    "https://universalmanifest.net/ns/v0.1"
+  ],
+  "@id": "urn:uuid:123e4567-e89b-12d3-a456-426614174000",
+  "@type": ["um:Manifest"],
+  "manifestVersion": "0.1",
+  "subject": "did:example:123",
+  "issuedAt": "2026-03-01T00:00:00Z",
+  "expiresAt": "2026-03-02T00:00:00Z"
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="json-ld-core-members">
+            <h3><span class="secno">1.2. </span>JSON-LD Core Members</h3>
+            <h4 id="context-member">1.2.1. <code>@context</code> member</h4>
+            <p>The <code>@context</code> member establishes the semantic definitions of terms used within the manifest. It <span class="rfc2119">MUST</span> include the Universal Manifest namespace (e.g., <code>https://universalmanifest.net/ns/v0.1</code>).</p>
+
+            <h4 id="id-member">1.2.2. <code>@id</code> member</h4>
+            <p>The <code>@id</code> member provides a primary identifier. Issuers <span class="rfc2119">SHOULD</span> generate <code>@id</code> as an opaque, offline-safe identifier (e.g., <code>urn:uuid:&lt;uuidv4&gt;</code>).</p>
+
+            <h4 id="type-member">1.2.3. <code>@type</code> member</h4>
+            <p>The <code>@type</code> member indicates the document type classifying the resource. It <span class="rfc2119">MUST</span> include the value <code>um:Manifest</code>.</p>
+        </section>
+
+        <section id="identities-lifespans">
+            <h3><span class="secno">1.3. </span>Identities &amp; Lifespans</h3>
+            <h4 id="subject-member">1.3.1. <code>subject</code> member</h4>
+            <p>The <code>subject</code> member specifies the primary entity (user, app, venue) the manifest describes. It <span class="rfc2119">MUST</span> contain a stable identifier URI (e.g., a Decentralized Identifier / DID).</p>
+
+            <h4 id="lifetime">1.3.2. <code>issuedAt</code> and <code>expiresAt</code> members</h4>
+            <p>The <code>issuedAt</code> and <code>expiresAt</code> members formulate the bounding constraints (TTL) for the manifest's validity. Both parameters are formatted as ISO 8601 / RFC 3339 date-time strings.</p>
+        </section>
+
+        <section id="structural-state-members">
+            <h3><span class="secno">1.4. </span>Structural State Members</h3>
+            <p>The manifest structure relies on domain-specific members akin to Web Publication linkages.</p>
+
+            <h4 id="facets-member">1.4.1. <code>facets</code> member</h4>
+            <p>The <code>facets</code> member organizes extended functional blocks (<code>um:Facet</code>), packaging specific verifiable capabilities, metadata subsets, or configuration modules.</p>
+
+            <h4 id="arrays">1.4.2. <code>claims</code>, <code>consents</code>, <code>devices</code>, and <code>pointers</code></h4>
+            <p>These arrays group specific operational contexts representing permissions, deployed hardware targets, and external data reference pointers connected to the <code>subject</code>.</p>
+        </section>
+
+        <section id="signature-integrity">
+            <h3><span class="secno">1.5. </span>Signature Integrity</h3>
+            <h4 id="signature-member">1.5.1. <code>signature</code> member</h4>
+            <p>The <code>signature</code> member encapsulates cryptographic proofs of the manifest payload. In v0.1, its format is intentionally permissive and serves as a placeholder for interoperable profiles (reserved for subsequent iterations).</p>
+        </section>
+    </section>
+
+    <section id="entities-and-facets">
+        <h2><span class="secno">2. </span>Entities and Facets</h2>
+        <p>Universal Manifest adopts a compositional pattern allowing nested structures (<code>facets</code> mapping to specific <code>entities</code>), drawing from semantic web standards for deeply interlinked resources.</p>
+
+        <section id="umfacet-module">
+            <h3><span class="secno">2.1. </span>um:Facet Module</h3>
+            <p>A facet is a composable part grouped within a manifest's envelope. A facet <span class="rfc2119">MUST</span> explicitly declare <code>@type: um:Facet</code>. It <span class="rfc2119">MAY</span> optionally declare a <code>name</code> for display purposes, a <code>ref</code> routing to its authoritative source, and an <code>entity</code> holding the payload parameters (<code>um:Entity</code>).</p>
+        </section>
+
+        <section id="umentity-base">
+            <h3><span class="secno">2.2. </span>um:Entity Base</h3>
+            <p>The <code>um:Entity</code> acts as the base classification for all embedded configurations, representations, or localized states. It <span class="rfc2119">MUST</span> be resolvable through an <code>@id</code> URI and typed accordingly (<code>@type</code> array).</p>
+        </section>
+    </section>
+
+    <section id="manifest-lifecycle-and-caching">
+        <h2><span class="secno">3. </span>Manifest Lifecycle and Caching</h2>
+        <p>Parallel to the Web Application Manifest lifecycle, the Universal Manifest must be systematically processed, applied, and occasionally evicted from client edges.</p>
+
+        <section id="processing-the-manifest">
+            <h3><span class="secno">3.1. </span>Processing the Manifest</h3>
+            <p>When a user agent or smart edge encounters a Universal Manifest, it <span class="rfc2119">MUST</span>:</p>
+            <ol>
+                <li>Parse the JSON document for semantic syntax errors.</li>
+                <li>Confirm the existence of required properties (<code>@context</code>, <code>@id</code>, <code>subject</code>, <code>issuedAt</code>, <code>expiresAt</code>).</li>
+                <li>Discard any unknown fields seamlessly to preserve forward compatibility.</li>
+            </ol>
+        </section>
+
+        <section id="caching-formulation">
+            <h3><span class="secno">3.2. </span>Caching Formulation</h3>
+            <p>For constrained devices and public displays:</p>
+            <ol>
+                <li><strong>TTL Ejection</strong>: Caches <span class="rfc2119">MUST</span> immediately evict or reject payloads where the system clock surpasses <code>expiresAt</code>.</li>
+                <li><strong>Telemetry Minimization</strong>: Centralized logging platforms <span class="rfc2119">SHOULD</span> stream only the <code>@id</code> string (and potentially a content hash), bypassing the full JSON payload to conserve bandwidth.</li>
+                <li><strong>Identifier Rotation</strong>: Identifiers (<code>@id</code>) <span class="rfc2119">SHOULD</span> be rotated iteratively per-issuance to avert heuristic tracking.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section id="conformance">
+        <h2><span class="secno">4. </span>Conformance</h2>
+        <section id="required-behavior-consumer">
+            <h3><span class="secno">4.1. </span>Consumer Behavior</h3>
+            <p>A consumer platform parsing the manifest <span class="rfc2119">MUST</span> validate structural parameters and securely ignore unknown elements without raising fatal invocation errors. Freshness (via <code>expiresAt</code> TTL constraints) is an absolute rejection gateway. Implementers <span class="rfc2119">MUST</span> verify <code>issuedAt &lt;= expiresAt</code>.</p>
+        </section>
+        
+        <section id="required-behavior-issuer">
+            <h3><span class="secno">4.2. </span>Issuer Behavior</h3>
+            <p>Issuers generating the manifest <span class="rfc2119">MUST</span> assign a globally stable identifier URI for the <code>subject</code> (preferably an established DID) and a random URI for the manifest root (<code>@id</code>). To shield clients from unbounded trust windows, issuers <span class="rfc2119">MUST</span> strictly bound <code>expiresAt</code> to a sensible interaction lifetime (e.g., hours or days).</p>
+        </section>
+
+        <section id="standalone-conformance-suite">
+            <h3><span class="secno">4.3. </span>Standalone Conformance Suite</h3>
+            <p>Implementations validate conformance claims natively by testing against the official <code>conformance/</code> suite—which includes fixture validation (accepting valid stubs and correctly isolating/flagging malformed artifacts like missing contexts or expired logic trees).</p>
+        </section>
+    </section>
+
+    <section id="extensibility-profiles">
+        <h2><span class="secno">5. </span>Extensibility &amp; Profiles</h2>
+        <p>Echoing the extensibility models of generic W3C recommendations, proprietary manifest members can be injected via fully qualified URIs inside the linked <code>@context</code>. Consumers ignoring unrecognized properties guarantees that domain-specific profiles won't shatter cross-system interoperability.</p>
+    </section>
+
+    <section id="security-considerations">
+        <h2><span class="secno">6. </span>Security Considerations</h2>
+        <p><strong>Warning:</strong> Version 0.1 intentionally defers universal cryptographic standardization.</p>
+
+        <section id="signature-limitations">
+            <h3><span class="secno">6.1. </span>Signature Limitations</h3>
+            <p>Because v0.1 lacks strict prescriptive rules on canonicalization formatting and algorithm bounds, tamper-protection cannot be definitively guaranteed using baseline specifications. Implementers migrating to production applications <span class="rfc2119">MUST</span> implement additive signature topologies documented in v0.2.</p>
+        </section>
+
+        <section id="ttl-enforcement">
+            <h3><span class="secno">6.2. </span>TTL Enforcement</h3>
+            <p>Bounding the <code>expiresAt</code> timeline dictates the primary line of defense against presentation replay spoofing.</p>
+        </section>
+
+        <section id="resource-limits">
+            <h3><span class="secno">6.3. </span>Resource Limits</h3>
+            <p>Denial-of-Service vectors originating from disproportionately inflated arrays or recursion logic <span class="rfc2119">SHOULD</span> be countered with hard limits on payload ingestion:</p>
+            <ul>
+                <li>Maximum memory serialization threshold: 1 MB</li>
+                <li>Maximum recursion/nesting depth: 10 layers</li>
+                <li>Array length maximums: 1,000 bounds</li>
+            </ul>
+        </section>
+    </section>
+
+    <section id="privacy-considerations">
+        <h2><span class="secno">7. </span>Privacy Considerations</h2>
+        <ul>
+            <li><strong>Opaque Identifiers</strong>: Generating the <code>@id</code> via random-distribution UUIDv4 shields session metadata from enumerability.</li>
+            <li><strong>Minimal Disclosure</strong>: Universal Manifest acts as the fundamental passport. Issuers are strongly advised against over-bundling capabilities. Only embed contextually relevant facets.</li>
+            <li><strong>Subject Privacy</strong>: Static DID correlations across disparate endpoints create persistent observation footprints. The use of pairwise / pseudonymous DIDs resolves to significantly improved ecosystem privacy.</li>
+        </ul>
+    </section>
+
+    <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
+</body>
+</html>
