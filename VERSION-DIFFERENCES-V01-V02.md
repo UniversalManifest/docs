@@ -10,13 +10,14 @@
 
 ## 1. Executive Summary
 
-Universal Manifest v0.2 transforms the specification from a structurally sound but cryptographically permissive document format into a verifiable, trust-layered state capsule. The primary additions are: (1) a normative signature profile using JCS (RFC 8785) canonicalization with Ed25519 signing, making the `signature` field required and interoperable across implementations; (2) an identity binding framework that discloses the "Bag of Claims" vulnerability and introduces a four-tier trust model, an optional `claims[].claimProof` field for Verifiable Presentation evidence, and a non-normative `identity.crossDidBinding` claim convention; and (3) an `um:agentDelegation` pointer convention for delegation transparency in spatial and avatar platforms. The v0.2 changes are designed to be additive wherever possible, preserving the core document shape while closing the most critical security gaps identified through synthetic peer review.
+Universal Manifest v0.2 transforms the specification from a structurally sound but cryptographically permissive document format into a verifiable, trust-layered state capsule. The primary additions are: (1) a normative signature profile using JCS (RFC 8785) canonicalization with Ed25519 signing, making the `signature` field required and interoperable across implementations; (2) an identity binding framework that discloses the "Bag of Claims" vulnerability and introduces a four-tier trust model, an optional `claims[].claimProof` field for Verifiable Presentation proof material, and a non-normative `identity.crossDidBinding` claim convention; and (3) an `um:agentDelegation` pointer convention for delegation transparency in spatial and avatar platforms. The v0.2 changes are designed to be additive wherever possible, preserving the core document shape while closing the most critical security gaps identified through synthetic peer review.
 
 ---
 
-## 2. Breaking Changes
+## 2. Key Changes from v0.1
 
 v0.2 is designed to be additive to v0.1. However, two changes are breaking for strict consumers and issuers.
+Since v0.1 was a draft with no production adopters, these changes do not represent backwards-compatibility breaks in deployed systems.
 
 | Change | Type | Impact |
 |--------|------|--------|
@@ -160,9 +161,9 @@ Relying parties MUST NOT treat the presence of claims in a signed manifest as pr
 
 The specification defines four trust tiers for claim verification. Each tier is strictly additive -- a higher-tier manifest satisfies all lower-tier requirements. The specification does NOT mandate a minimum tier; relying parties choose based on their threat model.
 
-**Tier 0 -- Signature-only.** Zero friction. Claims are self-asserted by the manifest signer. No external evidence of claim authenticity is present. Suitable for low-stakes use cases where the relying party has an out-of-band trust relationship with the signer.
+**Tier 0 -- Signature-only.** Zero friction. Claims are self-asserted by the manifest signer. No external `claimProof` material is present. Suitable for low-stakes use cases where the relying party has an out-of-band trust relationship with the signer.
 
-**Tier 1 -- Attested or evidence-backed.** Low friction. Some or all claims carry external evidence of authenticity via `claims[].claimProof` (Verifiable Presentations) or an attested cross-DID binding claim (`identity.crossDidBinding`). Relying parties can verify specific claims against their issuers or evaluate attester trust. Suitable for medium-stakes use cases (social identity, reputation, basic access control).
+**Tier 1 -- Attested or claimProof-backed.** Low friction. Some or all claims carry external claimProof material via `claims[].claimProof` (Verifiable Presentations) or an attested cross-DID binding claim (`identity.crossDidBinding`). Relying parties can verify specific claims against their issuers or evaluate attester trust. Suitable for medium-stakes use cases (social identity, reputation, basic access control).
 
 **Tier 2 -- Cryptographic binding.** Medium friction. Cross-DID control is cryptographically proven via multi-signature binding or zero-knowledge proofs. Each DID independently proves control by signing. Suitable for high-stakes Sybil-resistance use cases. **Deferred to v0.3.**
 
@@ -281,7 +282,7 @@ The effective trust tier for an interaction is the maximum of what either party 
 
 - **No immediate code changes required** for the identity binding additions. `claimProof` is optional. The claim conventions use the existing `claims[]` and `pointers[]` arrays.
 - **Relying parties** should evaluate which trust tier their use case requires and implement verification logic accordingly.
-- **Issuers** should consider whether their claims need attestation evidence (`claimProof`) or cross-DID binding for the relying parties they serve.
+- **Issuers** should consider whether their claims need attestation proof material (`claimProof`) or cross-DID binding for the relying parties they serve.
 - **The upgrade path is incremental:** implementations can start at Tier 0 (signature-only, which is the v0.2 baseline) and add Tier 1 verification as credential providers begin issuing VCs.
 
 ---
@@ -525,7 +526,7 @@ v0.2 explicitly cites and positions itself relative to the following standards. 
 
 ### MAY (Optional Adoption)
 
-- [ ] **Issuers:** Add `claims[].claimProof` to claims that have VP or attestation evidence.
+- [ ] **Issuers:** Add `claims[].claimProof` to claims that have VP or attestation proof material.
 - [ ] **Issuers:** Include `identity.crossDidBinding` claims for cross-DID binding assertions.
 - [ ] **Issuers:** Include `um:agentDelegation` pointers for delegation transparency.
 - [ ] **Issuers:** Declare `requiredTrustTier` on manifests, claims, or facets.
