@@ -7,22 +7,102 @@
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD" type="text/css">
     <style>
         /* Specific enhancements per W3C specification layout */
-        body { max-width: 50em; margin: 0 auto; line-height: 1.5; font-family: sans-serif; background-image: none !important; }
+        body { margin: 0; max-width: none; line-height: 1.5; font-family: sans-serif; background-image: none !important; }
         .head { margin-bottom: 3em; }
         .head a.logo, img[alt="W3C"], .w3c-logo { display: none !important; } /* Strip W3C branding injected by fixup.js */
         .head h1 { color: #005a9c; }
-        .toc { font-weight: bold; margin-bottom: 2em; }
-        .toc ol { list-style: none; counter-reset: section; margin-left: 0; padding-left: 0; }
-        .toc ol li { display: flex; align-items: baseline; } /* Fix WO-0169: TOC alignment */
-        .toc ol li::before { content: counters(section, ".") " "; counter-increment: section; display: inline-block; width: 2.5em; text-align: right; margin-right: 0.5em; font-weight: normal; }
-        .toc ol ol { margin-left: 2em; counter-reset: subsection; }
-        .toc ol ol li::before { content: counters(section, ".") "." counters(subsection, ".") " "; counter-increment: subsection; display: inline-block; width: 3.5em; }
+        .toc,
+        body:not(.toc-inline) #toc,
+        body.toc-sidebar #toc {
+            background: #f4f6f8;
+            border-right: 1px solid #d4dce3;
+            box-sizing: border-box;
+            font-weight: bold;
+            height: 100vh;
+            left: 0;
+            margin: 0;
+            overflow-y: auto;
+            padding: 1rem 1.25rem 1.5rem;
+            padding-left: 1rem;
+            position: fixed;
+            top: 0;
+            width: 22rem;
+        }
+        body:not(.toc-inline),
+        body.toc-sidebar {
+            margin: 0;
+            padding-left: 0;
+        }
+        .toc h2 {
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            margin: 0 0 0.8rem;
+            text-transform: uppercase;
+        }
+        .toc ol {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+            counter-reset: item;
+        }
+        .toc li {
+            counter-increment: item;
+            display: block;
+            margin: 0.1rem 0;
+        }
+        .toc li > a {
+            color: #1f2a36;
+            display: block;
+            font-weight: 600;
+            line-height: 1.25;
+            padding: 0.18rem 0;
+            text-decoration: none;
+        }
+        .toc li > a::before {
+            color: #516172;
+            content: counters(item, ".") " ";
+            font-weight: 500;
+            margin-right: 0.35em;
+        }
+        .toc ol ol {
+            margin: 0.12rem 0 0.25rem 1.2rem;
+            padding-left: 0;
+        }
+        .toc ol ol li > a {
+            font-weight: 500;
+        }
+        .toc a.toc-active {
+            color: #005a9c;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        body > :not(#toc):not(script) {
+            margin-left: calc(22rem + 1.2rem);
+            margin-right: 1.4rem;
+            max-width: 50em;
+        }
         .note, .issue, .example { padding: .5em; border-left: .5em solid; margin: 1em 0; }
         .example { border-color: #e0cb52; background: #fcfaee; }
         .example-title { font-weight: bold; margin-bottom: 0.5em; }
         pre { background-color: #f8f8f8; border: 1px solid #ddd; padding: 1em; overflow: auto; }
         code { font-family: Inconsolata, Consolas, "Liberation Mono", monospace; color: #c83232; }
         .rfc2119 { text-transform: lowercase; font-variant: small-caps; font-style: normal; font-weight: bold; color: #900; }
+        @media (max-width: 1100px) {
+            .toc {
+                height: auto;
+                max-height: 45vh;
+                position: static;
+                width: auto;
+            }
+            body > :not(#toc):not(script) {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 50em;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="h-entry">
@@ -512,5 +592,117 @@
     </section>
 
     <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
+    <script>
+        (() => {
+            const tocRoot = document.getElementById('toc');
+            if (!tocRoot) {
+                return;
+            }
+            const tocLinks = Array.from(tocRoot.querySelectorAll('a[href^="#"]'));
+            const linksById = new Map();
+            const targetElements = [];
+            for (const link of tocLinks) {
+                const href = link.getAttribute('href');
+                if (!href || href.length < 2) {
+                    continue;
+                }
+                const id = decodeURIComponent(href.slice(1));
+                const target = document.getElementById(id);
+                if (!target) {
+                    continue;
+                }
+                const linksForId = linksById.get(id) || [];
+                linksForId.push(link);
+                linksById.set(id, linksForId);
+                if (!targetElements.includes(target)) {
+                    targetElements.push(target);
+                }
+            }
+            if (!targetElements.length) {
+                return;
+            }
+
+            const setActive = (id) => {
+                for (const link of tocLinks) {
+                    link.classList.remove('toc-active');
+                    link.removeAttribute('aria-current');
+                }
+                const linksForId = linksById.get(id);
+                if (linksForId) {
+                    for (const link of linksForId) {
+                        link.classList.add('toc-active');
+                        link.setAttribute('aria-current', 'location');
+                    }
+                }
+            };
+
+            const getActiveByScrollPosition = () => {
+                const topOffset = 170;
+                let currentId = targetElements[0].id;
+                for (const element of targetElements) {
+                    if (element.getBoundingClientRect().top <= topOffset) {
+                        currentId = element.id;
+                    } else {
+                        break;
+                    }
+                }
+                return currentId;
+            };
+
+            let scheduled = false;
+            const updateFromScroll = () => {
+                if (scheduled) {
+                    return;
+                }
+                scheduled = true;
+                requestAnimationFrame(() => {
+                    scheduled = false;
+                    setActive(getActiveByScrollPosition());
+                });
+            };
+
+            if ('IntersectionObserver' in window) {
+                const visibleIds = new Set();
+                const observer = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            visibleIds.add(entry.target.id);
+                        } else {
+                            visibleIds.delete(entry.target.id);
+                        }
+                    }
+                    const orderedVisible = targetElements
+                        .map((element) => element.id)
+                        .filter((id) => visibleIds.has(id));
+                    if (orderedVisible.length > 0) {
+                        setActive(orderedVisible[orderedVisible.length - 1]);
+                        return;
+                    }
+                    updateFromScroll();
+                }, {
+                    rootMargin: '-20% 0px -70% 0px',
+                    threshold: [0, 1]
+                });
+                for (const target of targetElements) {
+                    observer.observe(target);
+                }
+            }
+
+            window.addEventListener('scroll', updateFromScroll, { passive: true });
+            window.addEventListener('hashchange', () => {
+                const id = decodeURIComponent(window.location.hash.slice(1));
+                if (linksById.has(id)) {
+                    setActive(id);
+                }
+            });
+
+            const initialHash = decodeURIComponent(window.location.hash.slice(1));
+            if (initialHash && linksById.has(initialHash)) {
+                setActive(initialHash);
+            } else {
+                setActive(getActiveByScrollPosition());
+            }
+        })();
+    </script>
 </body>
 </html>
