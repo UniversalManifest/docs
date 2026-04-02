@@ -29,7 +29,7 @@
     <div class="head">
         <h1 id="title" class="title p-name">Universal Manifest Specification</h1>
         <h2 id="subtitle">Universal Manifest Draft Specification</h2>
-        <h2><time class="dt-published" datetime="2026-03-31">31 March 2026</time></h2>
+        <h2><time class="dt-published" datetime="2026-04-01">1 April 2026</time></h2>
         <dl>
             <dt>This version:</dt>
             <dd><a class="u-url" href="https://universalmanifest.net/">https://universalmanifest.net/</a></dd>
@@ -43,7 +43,7 @@
             </dd>
         </dl>
         <p class="copyright">
-            Copyright © 2026 the Contributors to the Universal Manifest Specification.
+            Copyright &copy; 2026 the Contributors to the Universal Manifest Specification.
         </p>
         <hr title="Separator for header">
     </div>
@@ -59,8 +59,8 @@
     <section id="sotd" class="introductory">
         <h2>Status of This Document</h2>
         <p><em>This section describes the status of this document at the time of its publication.</em></p>
-        <p>This document is a draft specification of the Universal Manifest v0.1 format. It borrows structural paradigms from common web platform standards, notably combining web application document lifecycle and caching procedures with linked data contexts, identities, and structural facets commonly found in publication envelope standards.</p>
-        <p>Implementors need to be aware that this specification is not yet fully stable, particularly regarding the signature profile which allows for permissive integrity checks in this version. Implementors who are not taking part in the discussions will find the specification changing out from under them in incompatible ways as the v0.2 iteration is finalized.</p>
+        <p>This document is a draft specification of the Universal Manifest covering the v0.1 base format and v0.2 extensions. The v0.1 format defines the core JSON-LD envelope, lifecycle, and caching semantics. The v0.2 iteration introduces a normative signature profile (JCS + Ed25519), an identity binding framework with a tiered trust model, a <code>claims[].claimProof</code> field for claim authenticity evidence, and conventions for cross-DID binding and agent delegation.</p>
+        <p>Implementors need to be aware that this specification is not yet fully stable. The v0.2 signature profile and identity binding model have been drafted through synthetic peer review and are subject to revision as implementation experience accumulates. Implementors who are not taking part in the discussions will find the specification changing out from under them in incompatible ways.</p>
         <p>This document uses layout formats established by major web standard groups to present normative requirements cleanly. It is inappropriate to cite this document as other than a work in progress.</p>
     </section>
 
@@ -75,6 +75,7 @@
                     <li><a href="#identities-lifespans">Identities &amp; Lifespans</a></li>
                     <li><a href="#structural-state-members">Structural State Members</a></li>
                     <li><a href="#signature-integrity">Signature Integrity</a></li>
+                    <li><a href="#signature-profile-v02">v0.2 Signature Profile: JCS + Ed25519</a></li>
                 </ol>
             </li>
             <li><a href="#entities-and-facets">Entities and Facets</a>
@@ -102,9 +103,12 @@
                     <li><a href="#signature-limitations">Signature Limitations</a></li>
                     <li><a href="#ttl-enforcement">TTL Enforcement</a></li>
                     <li><a href="#resource-limits">Resource Limits</a></li>
+                    <li><a href="#identity-binding-claim-authenticity">Identity Binding and Claim Authenticity</a></li>
+                    <li><a href="#agent-delegation">Agent Delegation</a></li>
                 </ol>
             </li>
             <li><a href="#privacy-considerations">Privacy Considerations</a></li>
+            <li><a href="#references">References</a></li>
         </ol>
     </nav>
 
@@ -169,6 +173,87 @@
             <h4 id="signature-member">1.5.1. <code>signature</code> member</h4>
             <p>The <code>signature</code> member encapsulates cryptographic proofs of the manifest payload. In v0.1, its format is intentionally permissive and serves as a placeholder for interoperable profiles (reserved for subsequent iterations).</p>
         </section>
+
+        <section id="signature-profile-v02">
+            <h3><span class="secno">1.6. </span>v0.2 Signature Profile: JCS + Ed25519</h3>
+            <p>Version 0.2 introduces the first normative signature profile. This profile constrains the <code>signature</code> member to a deterministic, portable format suitable for local-first verification on constrained devices.</p>
+            <p>Signature profiles are additive. Future versions <span class="rfc2119">MAY</span> introduce additional profiles (e.g., post-quantum algorithms or W3C Data Integrity proofs). Consumers verify the profiles they support and safely ignore unknown profiles.</p>
+
+            <h4 id="sig-canonicalization">1.6.1. Canonicalization and Algorithm</h4>
+            <p>The v0.2 profile uses <strong>JSON Canonicalization Scheme</strong> (JCS, <a href="https://www.rfc-editor.org/rfc/rfc8785">RFC 8785</a>) for canonicalization and <strong>Ed25519</strong> for signing. Signature values are encoded as <strong>base64url</strong>.</p>
+            <p>This combination provides deterministic signing input without requiring JSON-LD expansion or RDF canonicalization, matching the specification's "state capsule" usage where the JSON shape is the primary contract.</p>
+
+            <h4 id="sig-shape">1.6.2. Signature Shape</h4>
+            <p>The <code>signature</code> object <span class="rfc2119">MUST</span> contain the following fields for this profile:</p>
+            <ul>
+                <li><code>signature.algorithm</code> &mdash; <span class="rfc2119">MUST</span> be <code>"Ed25519"</code>.</li>
+                <li><code>signature.canonicalization</code> &mdash; <span class="rfc2119">MUST</span> be <code>"JCS-RFC8785"</code>.</li>
+                <li><code>signature.keyRef</code> &mdash; URI reference to verification key material (recommended: DID URL or HTTPS URL).</li>
+                <li><code>signature.value</code> &mdash; base64url-encoded Ed25519 signature over the canonical bytes.</li>
+            </ul>
+            <p>The following fields are <span class="rfc2119">OPTIONAL</span>:</p>
+            <ul>
+                <li><code>signature.publicKeySpkiB64</code> &mdash; base64-encoded SPKI DER public key bytes for offline/fixture/local-first verification.</li>
+                <li><code>signature.created</code> &mdash; ISO 8601 date-time indicating when the signature was produced.</li>
+                <li><code>signature.statusRef</code> &mdash; URI to revocation/status material for this signature.</li>
+                <li><code>signature.revocationCursor</code> &mdash; monotonic status cursor/version string for cache-aware revocation checks.</li>
+            </ul>
+            <p>Additional fields <span class="rfc2119">MAY</span> exist for future profiles, but consumers <span class="rfc2119">SHOULD</span> rely on <code>algorithm</code> + <code>canonicalization</code> to decide whether they can verify a given signature.</p>
+            <p>The <code>signature</code> property is <strong>not included</strong> in the signing input to avoid circularity. The fields <code>statusRef</code> and <code>revocationCursor</code>, when present, are metadata for revocation-aware policy checks and do not alter the signing input.</p>
+
+            <div class="example">
+                <div class="example-title">Example 2: v0.2 signature object</div>
+<pre class="json"><code>{
+  "signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "JCS-RFC8785",
+    "keyRef": "did:key:z6MkAlice#keys-1",
+    "publicKeySpkiB64": "MCowBQYDK2VwAyEA...",
+    "created": "2026-04-01T10:00:00Z",
+    "value": "base64url-encoded-signature-bytes"
+  }
+}</code></pre>
+            </div>
+
+            <h4 id="sig-input">1.6.3. Signing Input Procedure</h4>
+            <p>To compute the signature for this profile:</p>
+            <ol>
+                <li>Start with the complete manifest JSON object.</li>
+                <li>Remove the <code>signature</code> property entirely.</li>
+                <li>Canonicalize the remaining object using JCS (<a href="https://www.rfc-editor.org/rfc/rfc8785">RFC 8785</a>), producing a UTF-8 byte sequence.</li>
+                <li>Compute the Ed25519 signature over those bytes.</li>
+                <li>Set the <code>signature</code> property on the manifest with the fields defined above.</li>
+            </ol>
+            <p>This yields a stable, portable verification input for any implementation that supports JCS + Ed25519.</p>
+
+            <h4 id="sig-verifier">1.6.4. Verifier Checklist</h4>
+            <p>A verifier implementing this profile <span class="rfc2119">MUST</span>:</p>
+            <ol>
+                <li>Confirm the document is a v0.x Universal Manifest (required fields present and <code>@type</code> includes <code>um:Manifest</code>).</li>
+                <li>Enforce TTL: reject for use if <code>now &gt; expiresAt</code>; sanity-check <code>issuedAt &lt;= expiresAt</code>.</li>
+                <li>Determine signature profile support: require <code>signature.algorithm === "Ed25519"</code>, <code>signature.canonicalization === "JCS-RFC8785"</code>, and a non-empty <code>signature.value</code>.</li>
+                <li>Obtain a public key: if <code>signature.publicKeySpkiB64</code> exists, a consumer <span class="rfc2119">MAY</span> use it directly (SPKI DER bytes, base64); otherwise, resolve <code>signature.keyRef</code> to public key material (method-specific, e.g., DID resolution or HTTPS fetch).</li>
+                <li>Recompute the signing input (remove <code>signature</code>, JCS canonicalize).</li>
+                <li>Verify the Ed25519 signature over the canonical bytes.</li>
+            </ol>
+            <p>If verification fails, the manifest <span class="rfc2119">MUST</span> be rejected for use (but <span class="rfc2119">MAY</span> be retained for debugging).</p>
+
+            <h4 id="sig-profile-id">1.6.5. Profile Identification</h4>
+            <p>Consumers <span class="rfc2119">MUST</span> treat the pair <code>signature.algorithm</code> + <code>signature.canonicalization</code> as the explicit profile identity.</p>
+            <ul>
+                <li>If the pair is unsupported, the manifest <span class="rfc2119">MUST</span> be rejected when strict verification is required by policy.</li>
+                <li>Consumers <span class="rfc2119">MUST NOT</span> reinterpret unknown pairs as the baseline profile.</li>
+            </ul>
+
+            <h4 id="sig-revocation">1.6.6. Revocation-Aware Verification Extension</h4>
+            <p>For consumers claiming revocation-aware verification:</p>
+            <ol>
+                <li>If <code>signature.statusRef</code> is present, resolve status from that URI (or a configured equivalent).</li>
+                <li>If <code>signature.revocationCursor</code> is present, use it to prevent stale-status acceptance and to drive cache revalidation policy.</li>
+                <li>If revocation status cannot be determined and policy requires active status, the manifest <span class="rfc2119">MUST</span> be rejected for use.</li>
+            </ol>
+            <p>Consumers that do not implement revocation-aware verification <span class="rfc2119">MUST</span> report revocation status as <code>unchecked</code> and <span class="rfc2119">MUST NOT</span> claim revocation-aware conformance.</p>
+        </section>
     </section>
 
     <section id="entities-and-facets">
@@ -217,7 +302,7 @@
             <h3><span class="secno">4.1. </span>Consumer Behavior</h3>
             <p>A consumer platform parsing the manifest <span class="rfc2119">MUST</span> validate structural parameters and securely ignore unknown elements without raising fatal invocation errors. Freshness (via <code>expiresAt</code> TTL constraints) is an absolute rejection gateway. Implementers <span class="rfc2119">MUST</span> verify <code>issuedAt &lt;= expiresAt</code>.</p>
         </section>
-        
+
         <section id="required-behavior-issuer">
             <h3><span class="secno">4.2. </span>Issuer Behavior</h3>
             <p>Issuers generating the manifest <span class="rfc2119">MUST</span> assign a globally stable identifier URI for the <code>subject</code> (preferably an established DID) and a random URI for the manifest root (<code>@id</code>). To shield clients from unbounded trust windows, issuers <span class="rfc2119">MUST</span> strictly bound <code>expiresAt</code> to a sensible interaction lifetime (e.g., hours or days).</p>
@@ -225,7 +310,7 @@
 
         <section id="standalone-conformance-suite">
             <h3><span class="secno">4.3. </span>Standalone Conformance Suite</h3>
-            <p>Implementations validate conformance claims natively by testing against the official <code>conformance/</code> suite—which includes fixture validation (accepting valid stubs and correctly isolating/flagging malformed artifacts like missing contexts or expired logic trees).</p>
+            <p>Implementations validate conformance claims natively by testing against the official <code>conformance/</code> suite&mdash;which includes fixture validation (accepting valid stubs and correctly isolating/flagging malformed artifacts like missing contexts or expired logic trees).</p>
         </section>
     </section>
 
@@ -236,7 +321,7 @@
 
     <section id="security-considerations">
         <h2><span class="secno">6. </span>Security Considerations</h2>
-        <p><strong>Warning:</strong> Version 0.1 intentionally defers universal cryptographic standardization.</p>
+        <p><strong>Warning:</strong> Version 0.1 intentionally defers universal cryptographic standardization. Version 0.2 introduces a normative signature profile and an identity binding framework, but higher-assurance binding mechanisms (multi-signature, zero-knowledge proofs) are deferred to future versions.</p>
 
         <section id="signature-limitations">
             <h3><span class="secno">6.1. </span>Signature Limitations</h3>
@@ -257,6 +342,142 @@
                 <li>Array length maximums: 1,000 bounds</li>
             </ul>
         </section>
+
+        <section id="identity-binding-claim-authenticity">
+            <h3><span class="secno">6.4. </span>Identity Binding and Claim Authenticity</h3>
+
+            <h4 id="bag-of-claims">6.4.1. Bag of Claims Limitation</h4>
+            <p>A Universal Manifest may contain claims from multiple issuers and references to multiple DIDs under a single <code>subject</code>. The v0.2 signature proves that the signer produced the manifest. It does <strong>not</strong> prove:</p>
+            <ul>
+                <li>That the signer controls the <code>subject</code> DID (subject-signer binding).</li>
+                <li>That the <code>subject</code> controls all DIDs mentioned in claims or facets (cross-DID control).</li>
+                <li>That an issuer actually issued a claim listed in the manifest (claim authenticity). The <code>claims[].issuer</code> field is a string assertion, not a verified provenance chain.</li>
+            </ul>
+            <p>Relying parties <span class="rfc2119">MUST NOT</span> treat the presence of claims in a signed manifest as proof that those claims are authentic or that multiple DIDs are controlled by the same entity.</p>
+
+            <h4 id="tiered-trust">6.4.2. Tiered Trust Model</h4>
+            <p>The specification defines four trust tiers for claim verification. Each tier is strictly additive &mdash; a higher-tier manifest also satisfies all lower-tier requirements. Higher tiers provide stronger guarantees but impose more user ceremony. The specification does <span class="rfc2119">NOT</span> mandate a minimum tier; relying parties choose based on their threat model and acceptable user friction.</p>
+
+            <p><strong>Tier 0 &mdash; Signature-only.</strong> Zero friction. Claims are self-asserted by the manifest signer. No external evidence of claim authenticity is present. Suitable for low-stakes use cases where the relying party has an out-of-band trust relationship with the signer.</p>
+
+            <p><strong>Tier 1 &mdash; Attested or evidence-backed.</strong> Low friction. Some or all claims carry external evidence of authenticity via <code>claims[].claimProof</code> (Verifiable Presentations) or an attested cross-DID binding claim (<code>identity.crossDidBinding</code>). Relying parties can verify specific claims against their issuers or evaluate attester trust. Suitable for medium-stakes use cases (social identity, reputation, basic access control).</p>
+
+            <p><strong>Tier 2 &mdash; Cryptographic binding.</strong> Medium friction. Cross-DID control is cryptographically proven via multi-signature binding or zero-knowledge proofs. Each DID independently proves control by signing. Suitable for high-stakes Sybil-resistance use cases. (Future: v0.3+.)</p>
+
+            <p><strong>Tier 3 &mdash; Multi-party ceremony.</strong> High friction. Multiple keyholders (potentially different people, different locations) must co-sign. Analogous to multi-sig wallets. Suitable for the highest-stakes organizational and financial contexts. (Future: v0.4+.)</p>
+
+            <p>Relying parties <span class="rfc2119">MUST</span> define their required trust tier based on their threat model. Relying parties <span class="rfc2119">MUST NOT</span> extend trust from one DID in a manifest to another DID in the same manifest unless binding evidence (Tier 1 or Tier 2) is present for that specific DID pair.</p>
+
+            <h4 id="claim-proof">6.4.3. <code>claims[].claimProof</code> Field</h4>
+            <p>The <code>claimProof</code> field is an <span class="rfc2119">OPTIONAL</span> property on any claim object. It carries a Verifiable Presentation or attestation proof demonstrating claim issuance to the manifest subject. This field enables Tier 1 verification.</p>
+            <p>The field is named <code>claimProof</code> rather than <code>evidence</code> to avoid collision with the W3C Verifiable Credentials Data Model v2.0 <code>evidence</code> property (VCDM section 9.2), which has overlapping but distinct semantics.</p>
+            <p><code>claimProof</code> <span class="rfc2119">MAY</span> be an embedded object (a VP or attestation proof) or a string (URI reference to a VP or attestation endpoint).</p>
+            <p>When present as an embedded object, the consumer <span class="rfc2119">SHOULD</span> verify the VP proof chain: (a) VC signature validates to the stated issuer, (b) VP signature validates to the holder, (c) holder DID matches the manifest subject.</p>
+            <p>When present as a URI string, the consumer <span class="rfc2119">MAY</span> fetch the VP for verification when network access is available. Consumers that cannot resolve the URI <span class="rfc2119">SHOULD</span> report the claim as <code>claimProof-unresolved</code> rather than <code>verified</code>.</p>
+            <p>VPs used as <code>claimProof</code> <span class="rfc2119">SHOULD</span> include domain (audience binding) and challenge (nonce) parameters to prevent cross-manifest replay.</p>
+            <p>Size limits: maximum 50 KB per embedded VP; maximum 500 KB total VP payload across all claims in one manifest.</p>
+
+            <h4 id="cross-did-binding">6.4.4. <code>identity.crossDidBinding</code> Claim Convention</h4>
+            <p>The <code>identity.crossDidBinding</code> claim type provides a pragmatic, trust-delegated mechanism for asserting that multiple DIDs are controlled by the same entity. It works within the existing <code>claims[]</code> array and requires no schema changes. This convention is non-normative in v0.2.</p>
+
+            <div class="example">
+                <div class="example-title">Example 3: Cross-DID binding claim</div>
+<pre class="json"><code>{
+  "@type": "identity.crossDidBinding",
+  "boundDids": ["did:key:z6MkAlice", "did:plc:alice-bsky"],
+  "attester": "did:web:verify.example",
+  "attestationMethod": "AT Protocol handle resolution",
+  "attestedAt": "2026-03-15T10:30:00Z",
+  "expiresAt": "2026-06-15T10:30:00Z"
+}</code></pre>
+            </div>
+
+            <p>Required fields:</p>
+            <ul>
+                <li><code>@type</code> &mdash; <span class="rfc2119">MUST</span> be <code>"identity.crossDidBinding"</code>.</li>
+                <li><code>boundDids</code> &mdash; Array of DID strings asserted as controlled by the same entity. <span class="rfc2119">MUST</span> contain at least 2 DIDs. One <span class="rfc2119">MUST</span> match the manifest <code>subject</code>.</li>
+                <li><code>attester</code> &mdash; DID or URI of the entity attesting the binding.</li>
+                <li><code>attestationMethod</code> &mdash; Human-readable description of the verification method used.</li>
+                <li><code>attestedAt</code> &mdash; ISO 8601 timestamp of when the attestation was produced.</li>
+            </ul>
+            <p>Optional fields:</p>
+            <ul>
+                <li><code>claimProof</code> &mdash; URI or structured object pointing to the attestation proof.</li>
+                <li><code>expiresAt</code> &mdash; Attestation expiry. Relying parties <span class="rfc2119">SHOULD</span> reject expired attestations.</li>
+            </ul>
+            <p>Relying parties <span class="rfc2119">MUST NOT</span> treat the presence of a binding claim as proof of common control unless they trust the attester. Relying parties <span class="rfc2119">SHOULD</span> maintain a configurable attester trust list. Multiple binding claims for overlapping DID sets are independent assertions, not cumulative proof.</p>
+
+            <h4 id="required-trust-tier">6.4.5. <code>requiredTrustTier</code> Declaration</h4>
+            <p>A manifest <span class="rfc2119">MAY</span> declare the minimum trust tier required for specific claims, facets, or the manifest as a whole via the <code>requiredTrustTier</code> field. This field is an integer (0&ndash;3) indicating the minimum verification tier a relying party <span class="rfc2119">MUST</span> satisfy before acting on the associated data.</p>
+            <ul>
+                <li><strong>Manifest-level:</strong> a top-level <code>requiredTrustTier</code> sets the floor for the entire manifest.</li>
+                <li><strong>Claim-level:</strong> a <code>requiredTrustTier</code> on an individual claim applies to that claim only.</li>
+                <li><strong>Facet-level:</strong> a <code>requiredTrustTier</code> on a facet applies to that facet only.</li>
+            </ul>
+            <p>If a claim carries <code>requiredTrustTier: 2</code> but the relying party can only verify at Tier 1, the relying party <span class="rfc2119">MUST</span> treat that claim as unverified. If absent, the default is 0 (no minimum required). The manifest-level value sets the floor; claim/facet-level values can only raise it, not lower it.</p>
+            <p>This convention is non-normative in v0.2; it is expected to become normative in v0.3 after implementation experience.</p>
+
+            <div class="example">
+                <div class="example-title">Example 4: Manifest with requiredTrustTier</div>
+<pre class="json"><code>{
+  "requiredTrustTier": 1,
+  "claims": [
+    {
+      "@type": "personhood.worldId.verification",
+      "issuer": "did:web:worldcoin.org",
+      "requiredTrustTier": 2
+    }
+  ]
+}</code></pre>
+            </div>
+
+            <h4 id="bilateral-exchange">6.4.6. Bilateral Exchange</h4>
+            <p>In any transaction or interaction, both parties present a Universal Manifest to each other. Trust verification is inherently bilateral:</p>
+            <ul>
+                <li>Alice presents her UM to a venue; the venue verifies Alice's claims at the trust tier the venue requires.</li>
+                <li>The venue presents its UM to Alice; Alice verifies the venue's claims at the trust tier Alice requires.</li>
+                <li>A peer-to-peer exchange has both sides presenting and verifying simultaneously.</li>
+            </ul>
+            <p>The effective trust tier for an interaction is the maximum of what either party demands. Asymmetric requirements are valid &mdash; each party sets its own <code>requiredTrustTier</code> independently. Two devices <span class="rfc2119">MAY</span> exchange manifests via local transport (NFC, BLE, QR) and each independently verify the other's claims at the declared tier without a server.</p>
+        </section>
+
+        <section id="agent-delegation">
+            <h3><span class="secno">6.5. </span>Agent Delegation</h3>
+            <p>The <code>um:agentDelegation</code> pointer type declares when a manifest subject has delegated session authority to an AI agent, bot, or proxy. This enables platforms to distinguish human-controlled sessions from delegated ones. This convention is non-normative in v0.2.</p>
+            <p>The <code>um:agentDelegation</code> pointer is placed in the manifest's <code>pointers</code> array.</p>
+
+            <h4 id="agent-delegation-structure">6.5.1. Structure</h4>
+            <p>Required fields:</p>
+            <ul>
+                <li><code>@type</code> &mdash; <span class="rfc2119">MUST</span> be <code>"um:agentDelegation"</code>.</li>
+                <li><code>delegateType</code> &mdash; One of <code>"ai-agent"</code>, <code>"bot"</code>, <code>"proxy"</code>, or <code>"human-delegate"</code>.</li>
+                <li><code>delegatedBy</code> &mdash; DID of the delegating subject. <span class="rfc2119">MUST</span> match the manifest <code>subject</code>.</li>
+                <li><code>delegatedAt</code> &mdash; ISO 8601 date-time when delegation was granted.</li>
+                <li><code>expiresAt</code> &mdash; ISO 8601 date-time when delegation expires. Platforms <span class="rfc2119">MUST</span> reject expired delegations.</li>
+            </ul>
+            <p>Optional fields:</p>
+            <ul>
+                <li><code>delegateId</code> &mdash; DID or identifier of the delegate entity.</li>
+                <li><code>scope</code> &mdash; Array of capability strings the delegate may exercise.</li>
+                <li><code>livenessEndpoint</code> &mdash; URI for real-time liveness/delegation status queries.</li>
+            </ul>
+
+            <div class="example">
+                <div class="example-title">Example 5: Agent delegation pointer</div>
+<pre class="json"><code>{
+  "@type": "um:agentDelegation",
+  "delegateType": "ai-agent",
+  "delegateId": "did:key:z6MkAgentBot",
+  "delegatedBy": "did:key:z6MkAlice",
+  "delegatedAt": "2026-04-01T10:00:00Z",
+  "expiresAt": "2026-04-01T11:00:00Z",
+  "scope": ["spatial.session", "social.messaging"]
+}</code></pre>
+            </div>
+
+            <h4 id="agent-platform-guidance">6.5.2. Platform Guidance</h4>
+            <p>Platforms <span class="rfc2119">SHOULD</span> display delegation status to other users when present. Platforms <span class="rfc2119">MAY</span> require human-only sessions for high-stakes actions (financial, governance). Platforms <span class="rfc2119">MAY</span> query the <code>livenessEndpoint</code> for real-time status when available. Platforms <span class="rfc2119">MUST</span> treat the delegation pointer as static for the manifest's TTL if <code>livenessEndpoint</code> is absent.</p>
+        </section>
     </section>
 
     <section id="privacy-considerations">
@@ -266,6 +487,27 @@
             <li><strong>Minimal Disclosure</strong>: Universal Manifest acts as the fundamental passport. Issuers are strongly advised against over-bundling capabilities. Only embed contextually relevant facets.</li>
             <li><strong>Subject Privacy</strong>: Static DID correlations across disparate endpoints create persistent observation footprints. The use of pairwise / pseudonymous DIDs resolves to significantly improved ecosystem privacy.</li>
         </ul>
+
+        <p><strong>Privacy-Binding Tension.</strong> Universal Manifest supports both privacy-preserving pairwise DIDs and cross-DID binding mechanisms. These goals are in fundamental tension: stronger binding enables correlation, while stronger privacy prevents binding verification. The specification does not resolve this tension at the protocol level. Instead, it provides mechanisms for both and requires relying parties to define their trust tier based on their specific threat model. Relying parties <span class="rfc2119">MUST NOT</span> require cross-DID binding unless their use case demands Sybil resistance or trust transitivity. Subjects <span class="rfc2119">SHOULD</span> use the minimum binding tier that satisfies their relying parties' requirements.</p>
+
+        <p><strong>Data Protection.</strong> The privacy considerations in this specification identify relevant data protection provisions but do not constitute a Data Protection Impact Assessment. Deployers operating under GDPR or equivalent frameworks <span class="rfc2119">MUST</span> conduct their own assessment for cross-DID binding operations, cross-border attester data flows, and mandatory binding requirements.</p>
+    </section>
+
+    <section id="references">
+        <h2><span class="secno">8. </span>References</h2>
+        <p>The following standards and prior art inform the identity binding, tiered trust model, and signature profile design in this specification.</p>
+        <ol>
+            <li><strong>NIST SP 800-63-3</strong> &mdash; Digital Identity Guidelines. NIST Special Publication 800-63-3 (June 2017, updated 2024 supplement). Defines Identity Assurance Levels (IAL 1&ndash;3) and Authenticator Assurance Levels (AAL 1&ndash;3). The UM tiered trust model adapts NIST's tiered assurance framework to a local-first, portable document context.</li>
+            <li><strong>eIDAS 2.0</strong> &mdash; European Digital Identity Framework. Regulation (EU) 2024/1183. Defines assurance levels (Low, Substantial, High) for electronic identification. Relevant for GDPR alignment and European adopters.</li>
+            <li><strong>OpenID for Verifiable Presentations (OID4VP)</strong> &mdash; Draft specification, OpenID Foundation (2024). Defines VP presentation with audience binding and nonce parameters. The <code>claims[].claimProof</code> VP recommendations (domain + challenge) align with OID4VP patterns.</li>
+            <li><strong>DIF Presentation Exchange 2.0</strong> &mdash; Decentralized Identity Foundation, v2.0.0 (2023). Defines how relying parties express credential/claim requirements. The <code>requiredTrustTier</code> field is a simplified analog.</li>
+            <li><strong>DIF Well-Known DID Configuration</strong> &mdash; Decentralized Identity Foundation, v0.2 (2023). Prior art for cross-DID linking via <code>/.well-known/did-configuration.json</code> Domain Linkage Credentials. The <code>identity.crossDidBinding</code> convention is analogous but manifest-embedded rather than domain-hosted.</li>
+            <li><strong>RFC 9449 (DPoP)</strong> &mdash; "OAuth 2.0 Demonstrating Proof of Possession," IETF (September 2023). Defines proof-of-possession binding for OAuth2 tokens. Directly analogous to the subject-signer binding problem addressed by the tiered trust model.</li>
+            <li><strong>W3C VC Status List v2021</strong> &mdash; W3C CCG (2022); superseded by Bitstring Status List v1.0 (W3C, 2024). Privacy-preserving credential revocation and freshness checking. Target mechanism for <code>claims[].claimProof</code> credential status verification.</li>
+            <li><strong>W3C Verifiable Credentials Data Model v2.0</strong> &mdash; W3C Recommendation (March 2025). Core data model for VCs and VPs. The <code>claims[].claimProof</code> field is inspired by but distinct from VCDM's <code>evidence</code> property (Section 9.2) &mdash; deliberately renamed to avoid semantic collision.</li>
+            <li><strong>ISO/IEC 29115</strong> &mdash; "Information technology &mdash; Security techniques &mdash; Entity authentication assurance framework" (2013). International standard defining four entity authentication assurance levels (LoA 1&ndash;4). Additional prior art for the tiered trust model.</li>
+            <li><strong>RFC 8785</strong> &mdash; "JSON Canonicalization Scheme (JCS)," IETF (June 2020). Defines the deterministic JSON serialization used as the canonicalization step in the v0.2 signature profile.</li>
+        </ol>
     </section>
 
     <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
