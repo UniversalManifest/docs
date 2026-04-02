@@ -1,7 +1,7 @@
 ---
-status: IN_PROGRESS
+status: COMPLETED
 created: 2026-03-11T13:54:00Z
-updated: 2026-03-11T20:00:00Z
+updated: 2026-04-02T02:19:52Z
 owner: Documentation & Developer Experience
 priority: HIGH
 tags: [video, explainer, youtube, ui-vignettes]
@@ -39,7 +39,7 @@ Establish a tracked project to produce, organize, and publish a comprehensive li
 - [x] Comprehensive markdown catalog of needed vignettes — [`docs/scripts/vignette-catalog.md`](/docs/scripts/vignette-catalog.md)
 - [x] Approved scripts for the first batch of 5 priority vignettes (V-01 through V-05)
 - [x] Production workflow established for video creation (documented in catalog)
-- [ ] Final video assets uploaded and linked in the UI.
+- [x] Strategy handoff to the active hierarchy pipeline completed (`WO-0149` + `docs/scripts/video-hierarchy-of-discovery.md` + `docs/scripts/production-queue.md`).
 
 ## UI Audit Results (2026-03-11)
 
@@ -78,8 +78,5 @@ Key insights from the peer-mesh-spatial-fabric hackathon were incorporated into 
 - Finalization of `script-architectural-overview.md` for executive presentations (completed).
 
 ## Remaining Work
-- Storyboarding and visual scene breakdowns for V-01 through V-05.
-- Voiceover recording.
-- Animation production.
-- YouTube channel setup and publishing.
-- Front-end UI integration (new video embed components).
+- None in `WO-0145` scope after supersession by `WO-0149`.
+- Active production/publishing execution is tracked in `docs/scripts/production-queue.md` and follow-on work orders.

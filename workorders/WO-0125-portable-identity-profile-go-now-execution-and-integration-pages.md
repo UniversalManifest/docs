@@ -2,7 +2,7 @@
 
 **Status:** COMPLETED  
 **Created:** 2026-03-05  
-**Updated:** 2026-03-05  
+**Updated:** 2026-04-02  
 **Priority:** P0  
 **Owner:** Documentation + Spec Integration  
 **Source:** `docs/reports/2026-03-05-portable-identity-profile-go-now-research-first-execution-plan.md`
@@ -126,3 +126,15 @@ Completed in this pass:
 Closeout:
 
 - Go-Now track `PIP-GN-01` through `PIP-GN-06` completed with synchronized docs, evidence, and site publication readiness.
+
+## Strict Verification Refresh (2026-04-02)
+
+Verification commands re-run during closure:
+
+- `cd packages/universal-manifest && npm test` -> failed (repo-wide failures outside WO-0125 scope, including unrelated v0.2 identity-binding fixtures and invalid-fixture expectation drift).
+- `cd packages/universal-manifest && npm run journeys` -> failed overall (`J01-J04`), but Portable Identity Profile journey checks `J12`, `J13`, and `J14` passed in `docs/journeys/_artifacts/2026-04-02T02-09-24-039Z-journey-report.json`.
+- `cd site && npm run build:clean` -> passed.
+
+Closure decision:
+
+- WO-0125 scope acceptance remains satisfied and is marked `COMPLETED` based on in-scope artifact integrity, integration-page publication, execution tracking across `PIP-GN-01` through `PIP-GN-06`, and direct evidence links in program reports.

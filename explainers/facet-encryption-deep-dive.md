@@ -91,7 +91,7 @@ Each encrypted facet is a JWE (JSON Web Encryption) object embedded as the facet
 - Key distribution -- how do recipients obtain the decryption keys?
 - Implementation complexity -- every consumer needs encryption library support
 
-**Status:** Proposed. WO-0143 (NOT_STARTED) will produce the architectural decision. This deep dive informs that decision.
+**Status:** Decision integrated. WO-0143 is completed; this deep dive provided the research basis for that decision.
 
 ---
 
@@ -407,7 +407,7 @@ There is no external dependency beyond the recipient's own private key and the i
 
 ### Immediate next step
 
-WO-0143 (Private Encrypted Inline Facets vs Projection Model Analysis, NOT_STARTED) will produce the architectural decision on whether and how to add encrypted inline facets to the UM specification. This deep dive provides the research foundation for that decision.
+WO-0143 (Private Encrypted Inline Facets vs Projection Model Analysis, COMPLETED) produced the architectural decision for additive privacy paths (projection plus encrypted-inline guidance). This deep dive provided the research foundation for that decision.
 
 ### Recommended architecture
 

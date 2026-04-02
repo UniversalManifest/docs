@@ -1,8 +1,8 @@
 # WO-0142 — Payment Handles and Fiat/Crypto Gateway Integration
 
-**Status:** NOT_STARTED  
+**Status:** COMPLETED  
 **Created:** 2026-03-07  
-**Updated:** 2026-03-07  
+**Updated:** 2026-04-01  
 **Priority:** P1  
 **Owner:** Universal Manifest Integration  
 
@@ -28,14 +28,32 @@ Out of scope:
 
 ## Deliverables
 
-- Analysis report on payment gateway integration options.
-- Proposed standard additions to `REGISTRY.md` or a dedicated extension profile.
-- Fixtures and journey tests proving how an XR consumer would read the payment handle and initiate a transaction.
+- [x] Analysis report on payment gateway integration options.
+  - `docs/reports/2026-04-01-wo-0142-payment-handles-and-fiat-crypto-gateway-integration.md`
+- [x] Proposed standard additions to `REGISTRY.md` or a dedicated extension profile.
+  - `spec/v0.1/REGISTRY.md`
+  - `docs/DECISIONS.md`
+- [x] Fixtures and journey tests proving how an XR consumer would read the payment handle and initiate a transaction.
+  - `examples/v0.1/stubs/metaverse-mum-payment-handles-manifest.jsonld`
+  - `docs/journeys/J23-mum-payment-handles-and-gateway-flow.md`
+  - `docs/journeys/README.md`
+  - `packages/universal-manifest/scripts/run-journeys.mjs`
 
 ## Dependencies
 
-- None.
+- WO-0143 completed outcome consumed:
+  - additive privacy model (projection remains normative, encrypted inline facets allowed as optional guidance profile).
+  - authority: `docs/workorders/WO-0143-private-encrypted-inline-facets-vs-projection-model-analysis.md`
+  - ADR: `docs/reports/2026-04-01-wo-0143-private-encrypted-inline-facets-vs-projection-adr.md`
 
 ## Execution Notes
 
 - Must ensure the solution is thoroughly considered ("well thought out") and universally applicable, rather than just appending quick strings to the registry.
+
+## Completion Notes
+
+- Payment-handle naming now includes explicit public-vs-protected routing and provider-neutral fiat/crypto pointer conventions.
+- Protected-handle delivery is aligned with WO-0143 additive privacy direction (`projection-or-encrypted-inline`) while remaining non-normative.
+- Verification evidence captured via:
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm test`
+  - `cd /Users/grig/work/repo/universalmanifest/packages/universal-manifest && npm run journeys`

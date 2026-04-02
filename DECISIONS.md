@@ -1,5 +1,32 @@
 # Decisions (Universal Manifest)
 
+## 2026-04-01 — Payment-handle guidance adopts pointer-first split with additive privacy alignment (WO-0142)
+
+### Decision
+
+- Add non-normative payment-handle naming guidance to `spec/v0.1/REGISTRY.md` for:
+  - public-safe initiation pointers,
+  - fiat gateway account/order references,
+  - crypto settlement references,
+  - protected bundle routing.
+- Adopt explicit separation between:
+  - `payment.public.checkout` (safe initiation surface),
+  - `payment.protected.bundle` (sensitive handle route).
+- Add consent key `payment.handle.protected` and overlay family `prefs.financial.handle.*` as guidance-only conventions.
+- Align protected-handle delivery with WO-0143 privacy outcome using an additive model (`projection-or-encrypted-inline`) without introducing new core conformance requirements.
+
+### Rationale
+
+- `prefs.financial.*` existed but lacked interoperable naming for concrete payment routing.
+- Provider-neutral pointer naming avoids lock-in while allowing Stripe, PayPal, and crypto rails to coexist.
+- Explicit public-vs-protected split reduces accidental data exposure and gives consumers deterministic initiation behavior.
+- Keeping this work non-normative preserves v0.1/v0.2 contract stability.
+
+### Policy impact
+
+- New payment-handle conventions are discoverable via registry guidance and executable fixture/journey proof.
+- No core schema or conformance expansion is introduced by this decision.
+
 ## 2026-04-01 — Address Bag of Claims vulnerability with tiered trust model and identity binding conventions
 
 ### Decision

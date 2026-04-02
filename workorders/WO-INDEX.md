@@ -227,12 +227,12 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Ecosystem Expansion & Architecture Research (WO-0142 through WO-0143)
 
-- `docs/workorders/WO-0142-payment-handles-and-fiat-crypto-gateway-integration.md` — [NOT_STARTED] Create explicit standard pointers/overlays for fiat (Stripe/PayPal) and crypto gateways, establishing universal payment handle integration without leaking financial data (P1)
-- `docs/workorders/WO-0143-private-encrypted-inline-facets-vs-projection-model-analysis.md` — [NOT_STARTED] Deep analysis reconsidering the projection model versus encrypted inline facets, addressing projection lifecycles, key rotation, and ensuring multiple valid universal fallback methods (P1)
+- `docs/workorders/WO-0142-payment-handles-and-fiat-crypto-gateway-integration.md` — [COMPLETED] Create explicit standard pointers/overlays for fiat (Stripe/PayPal) and crypto gateways, establishing universal payment handle integration without leaking financial data (P1)
+- `docs/workorders/WO-0143-private-encrypted-inline-facets-vs-projection-model-analysis.md` — [COMPLETED] Deep analysis completed with accepted additive privacy model (projection normative + encrypted inline facets guidance), lifecycle guidance, and signed encrypted-facet lifecycle fixtures (P1)
 
 ### Vignette Explainer Library (WO-0145)
 
-- `docs/workorders/WO-0145-vignette-video-library.md` — [IN_PROGRESS] Create a dedicated library of Universal Manifest specific vignette explainers for UI integration and YouTube publishing; UI audit complete, 5 priority vignette scripts delivered (V-01 through V-05), production workflow documented (P1)
+- `docs/workorders/WO-0145-vignette-video-library.md` — [COMPLETED] Established the foundational vignette library package (UI audit + V-01 through V-05 scripts + workflow), then formally handed off active production/publishing execution to the WO-0149 hierarchy pipeline and production queue (P1)
 
 ### IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0148)
 
@@ -263,7 +263,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Concept Hierarchy Explorer and Ecosystem Namespace (WO-0155)
 
-- `docs/workorders/WO-0155-concept-hierarchy-explorer-and-ecosystem-namespace.md` — [IN_PROGRESS] Interactive single-page concept hierarchy explorer showing the full breadth of UM application domains, plus ecosystem namespace vision for external compliance submissions and distributed name management (P0)
+- `docs/workorders/WO-0155-concept-hierarchy-explorer-and-ecosystem-namespace.md` — [COMPLETED] Interactive single-page concept hierarchy explorer showing the full breadth of UM application domains, plus ecosystem namespace vision for external compliance submissions and distributed name management (P0)
 
 ### OMA3 Handout Collection Site Publication (WO-0156)
 

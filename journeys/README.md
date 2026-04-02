@@ -5,7 +5,7 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable row in the journey report (`J01` through `J22`)
+- a corresponding executable row in the journey report (`J01` through `J23`)
 
 Run the proof suite:
 
@@ -15,9 +15,9 @@ Run the proof suite:
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
-- The report includes explicit rows for every documented journey ID (`J01` through `J22`).
+- The report includes explicit rows for every documented journey ID (`J01` through `J23`).
 
-## Executable mapping (J01-J22)
+## Executable mapping (J01-J23)
 
 - `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
@@ -41,6 +41,7 @@ Outputs:
 - `J20` MUM freshness and change-log flow -> `journeyMumFreshnessChangeLog`
 - `J21` GPC runtime signal and evidence projection flow -> `journeyGpcRuntimeSignalAndEvidenceProjection`
 - `J22` RP1 attachment freshness and session-context safety -> `journeyRp1AttachmentFreshnessAndSessionSafety`
+- `J23` MUM payment handles and fiat/crypto gateway flow -> `journeyMumPaymentHandlesGatewayFlow`
 
 Execution source:
 
@@ -70,6 +71,7 @@ Execution source:
 20. `J20-mum-freshness-and-change-log-flow.md`
 21. `J21-gpc-runtime-signal-and-evidence-projection.md`
 22. `J22-rp1-attachment-freshness-and-session-safety.md`
+23. `J23-mum-payment-handles-and-gateway-flow.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 
