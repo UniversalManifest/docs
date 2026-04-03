@@ -303,12 +303,21 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
   - `/docs/overview/` holds the long-form overview that previously occupied docs-root
   - the site build baseline is now warning-free
 
-#### Active frontier (2026-03-20)
+#### Documentation and Spec Hardening Wave (WO-0165 through WO-0170) — COMPLETED
+
+- Completed: `WO-0165` through `WO-0170` including W3C-style specification adoption, synthetic review protocols, TOC visual fixes, and identity cross-DID research.
+- Result:
+  - `universalmanifest.net` now serves the hardened W3C-style specification HTML as the root.
+  - Critical architectural vulnerabilities tracked under `WO-0170` have complete research theses.
+  - Deployment processes execute without Starlight warnings.
+
+#### Active frontier (2026-04-02)
 
 - `WO-0142` — Payment Handles and Fiat/Crypto Gateway Integration (NOT_STARTED)
-- `WO-0143` — Private Encrypted Inline Facets vs Projection Model Analysis (NOT_STARTED)
-- `WO-0145` — Vignette Explainer Library (IN_PROGRESS)
-- `WO-0155` — Concept Hierarchy Explorer and Ecosystem Namespace (IN_PROGRESS)
+- `WO-0143` — Private Encrypted Inline Facets vs Projection Model Analysis (COMPLETED)
+- `WO-0145` — Vignette Explainer Library (COMPLETED)
+- `WO-0155` — Concept Hierarchy Explorer and Ecosystem Namespace (COMPLETED)
+- `PROPOSAL` — v0.2 Identity Binding and Liveness Proposal (NOT_STARTED; requires synthesis)
 
 ## Priority context (2026-03-20)
 

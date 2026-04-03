@@ -291,3 +291,12 @@ Drift governance and follow-on WO trigger criteria:
 ### Docs Root Relocation (WO-0164)
 
 - `docs/workorders/WO-0164-docs-root-relocation-and-warning-free-build-baseline.md` — [COMPLETED] Relocated the old docs-root content to `/docs/overview/`, linked it from the curated `/docs/` entry, and removed the last Starlight root-route warning in `docs/reports/2026-03-19-docs-root-relocation-warning-free-build-baseline.md` (P2)
+
+### Universal Manifest Architecture & Specification Update (WO-0165 through WO-0170)
+
+- `.dev/ai/workorders/WO-0165-w3c-sidebar-and-responsive-testing.md` — [COMPLETED] Implement W3C-style native sidebar, TOC navigation parity, and responsive constraints across viewports (P0)
+- `.dev/ai/workorders/WO-0166-site-backup.md` — [COMPLETED] Securely extract the `.astro` public site payload into an archive/backup before overwriting with the new spec structure (P0)
+- `.dev/ai/workorders/WO-0167-homepage-and-pitch-page-deployment.md` — [COMPLETED] Convert the W3C spec HTML into the public index/homepage experience and relocate pitch materials downstream (P0)
+- `.dev/ai/workorders/WO-0168-synthetic-peer-review-prompts.md` — [COMPLETED] Build the synthetic review methodology and executing agents to challenge spec architecture against adversarial and edge-case journeys (P1)
+- `.dev/ai/workorders/WO-0169-fix-toc-number-alignment.md` — [COMPLETED] Remediate visual alignment and CSS regression drift in TOC numbers following architecture shifts (P1)
+- `.dev/ai/workorders/WO-0170-identity-correlation-binding.md` — [COMPLETED] Resolve "Bag of Claims" vulnerability via research/decision process establishing cross-DID correlation binding and avatar liveness (CRITICAL)
