@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-03-20
-**Status:** 158 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Consumer Resolver UX Hardening (WO-0144) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Active frontier: WO-0142 (NOT_STARTED), WO-0143 (NOT_STARTED), WO-0145 (IN_PROGRESS), WO-0155 (IN_PROGRESS).
+**Date:** 2026-04-12
+**Status:** 158 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. No open formal work orders remain under `docs/workorders/`.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -62,7 +62,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
 - **Animated SVG explainer pipeline (established, proven)**
   - 29 production animated SVGs live on universalmanifest.net (plus 2 test files and 2 pilot iterations; 33 total) (WO-0042, WO-0043)
-  - Prompt pack system: `.dev/ai/prompts/animation/`
+  - Prompt-pack workflow and surviving implementation notes: `docs/design/ANIMATED-SVG-WORKFLOW.md`
   - Workflow documentation: `docs/design/ANIMATED-SVG-WORKFLOW.md`
   - QA checklist: `docs/design/ANIMATION-QA-CHECKLIST.md`
   - Production assets: `site/public/animations/`
@@ -72,7 +72,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Capsule-Pod iconic representation (approved): `docs/teaching-scripts/01-ICONIC-REPRESENTATION.md`
 - **Interactive sandbox (COMPLETED, WO-0060 through WO-0068)**
   - CEO mandate: `docs/MANDATE-interactive-implementation-sandbox.md`
-  - Proposal and scenario list: `.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md`
+  - Surviving scenario catalog: `site/public/agent/sandbox-scenarios.json`
   - 25 interactive scenarios across 5 categories (Getting Started, Trust and Verification, Integration Lanes, Edge Cases, Advanced)
   - Browser-based Ed25519 validator with 54/54 Node parity
   - Three-panel layout with step engine, scenario modal with search and filters
@@ -274,12 +274,16 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - Key artifact:
   - `docs/workorders/WO-0144-myum-consumer-provenance-and-example-state-hardening.md`
 
-#### Concept Hierarchy Explorer and Ecosystem Namespace (WO-0155) — IN PROGRESS
+#### Concept Hierarchy Explorer and Ecosystem Namespace (WO-0155) — COMPLETED
 
-- In progress: `WO-0155` concept hierarchy explorer and ecosystem namespace
-- Purpose:
-  - make the breadth of Universal Manifest legible in one place instead of relying on readers to infer it from scattered integration pages
-  - establish the ecosystem namespace framing for external compliance submissions and distributed name management
+- Completed: `WO-0155` concept hierarchy explorer and ecosystem namespace (2026-04-01)
+- Result:
+  - the project now has a single interactive explorer for showing the breadth of Universal Manifest application domains
+  - the ecosystem namespace framing is documented as part of the forward-looking compliance/discovery model
+- Key artifacts:
+  - `docs/workorders/WO-0155-concept-hierarchy-explorer-and-ecosystem-namespace.md`
+  - `site/public/tools/concept-explorer/index.html`
+  - `site/public/tools/concept-explorer/concepts.json`
 
 #### Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) — COMPLETED
 
@@ -311,31 +315,20 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
   - Critical architectural vulnerabilities tracked under `WO-0170` have complete research theses.
   - Deployment processes execute without Starlight warnings.
 
-#### Active frontier (2026-04-02)
+#### Formal queue status (2026-04-12)
 
-- `WO-0142` — Payment Handles and Fiat/Crypto Gateway Integration (NOT_STARTED)
-- `WO-0143` — Private Encrypted Inline Facets vs Projection Model Analysis (COMPLETED)
-- `WO-0145` — Vignette Explainer Library (COMPLETED)
-- `WO-0155` — Concept Hierarchy Explorer and Ecosystem Namespace (COMPLETED)
-- `PROPOSAL` — v0.2 Identity Binding and Liveness Proposal (NOT_STARTED; requires synthesis)
+- There are currently no open formal work orders under `docs/workorders/`.
+- The previously cited frontier items `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` are all marked `COMPLETED` in their individual work-order files.
+- The identity-binding / Bag-of-Claims follow-on is already integrated into the committed decision, threat-model, spec-delta, and schema artifacts rather than remaining as an open standalone proposal thread.
 
-## Priority context (2026-03-20)
+## Priority context (2026-04-12)
 
-The project is no longer blocked on public-surface cleanup. The March wave from `WO-0157` through `WO-0164` closed the biggest website/discovery/agent-path coherence gaps and ended with a warning-free site build baseline.
+The project is no longer blocked on public-surface cleanup, and the previously cited ecosystem/privacy/explainer frontier items are now closed at the work-order level.
 
-That changes the execution focus. The real frontier is now:
+That changes the execution posture. The repo no longer has an active formal WO sequence to continue from the current `docs/workorders/` queue. Remaining execution should begin from either:
 
-- breadth and ecosystem legibility (`WO-0155`, concept hierarchy explorer and namespace framing)
-- outward-facing explainer/distribution assets (`WO-0145`, vignette library)
-- unresolved architecture and expansion questions (`WO-0143`, privacy model analysis; `WO-0142`, payment-handle integration)
-
-Recommended sequencing remains:
-
-1. continue `WO-0155` to improve breadth visibility and ecosystem framing
-2. continue `WO-0145` where it directly supports the new public/adoption surfaces
-3. resolve `WO-0143` before `WO-0142`, since the privacy/data-shape decision is more foundational than the payment overlay work
-
-No work order may be executed outside the explicitly approved sequence without user confirmation.
+- a newly approved work order, or
+- routine drift/governance verification against the already-completed corpus and deployed surfaces.
 
 ## Critical-path execution update (2026-02-20)
 
@@ -350,7 +343,7 @@ Evidence:
 - `docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
 - `services/myum-resolver/wrangler.toml`
 - `docs/workorders/WO-0019-resolver-j03-reliability-and-routing-hardening.md`
-- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- Historical K2B completeness note was referenced in earlier status snapshots, but that `.dev` artifact is not present in the current checkout.
 
 Production route verification:
 - `https://universalmanifest.net/getting-started/workbench/` -> `200`
@@ -379,8 +372,7 @@ Evidence:
 ## WO-0017 execution pass update (2026-02-19)
 
 Concrete deltas completed this run:
-- IA delta artifact created:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- Historical IA delta artifact was referenced in earlier status snapshots, but that `.dev` spec artifact is not present in the current checkout.
 - Journey planning materialization updated:
   - `docs/journeys/README.md`
   - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
@@ -427,25 +419,15 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ## Next milestones (recommended)
 
-### Milestone A — Breadth visibility and ecosystem framing
+### Milestone A — Drift governance and reality checks
 
-- Continue `WO-0155` so the project can explain the full breadth of Universal Manifest from one place instead of asking outsiders to infer it from many integration pages
-- Use that explorer and namespace framing to support public adoption arguments, demo flows, and future compliance/discovery surfaces
+- Re-run the recurring verification gates in `docs/CRITICAL-PATH.md` so the project’s “completed” posture remains true over time.
+- Open a new formal work order only if those checks fail or if newly approved scope appears that is not already covered by the closed WO corpus.
 
-### Milestone B — Distribution-ready explainer assets
+### Milestone B — New execution only by explicit re-entry
 
-- Continue `WO-0145` so the new landing/discovery surfaces have a matched library of vignette explainers for the site, UI embeds, and video publishing
-- Keep this scoped to assets that strengthen the actual public adoption story rather than generic brand collateral
-
-### Milestone C — Architecture closure on privacy model
-
-- Execute `WO-0143` before new expansion lanes
-- The inline-encrypted-facets versus projection-model decision affects how far Universal Manifest should go with sensitive or externally resolved data, so it is higher leverage than incremental lane expansion
-
-### Milestone D — Payment-handle expansion after architecture closure
-
-- Execute `WO-0142` after `WO-0143`
-- Payment handles remain important, but they should build on the settled privacy/data-shape position rather than forcing that decision implicitly
+- Treat `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` as closed history, not active queue items.
+- Start any further implementation or documentation wave from a newly approved work order rather than by continuing stale milestone language in this file.
 
 ## How other systems should adopt it today (v0.1)
 

@@ -43,8 +43,7 @@ Out of scope:
 ## Corpus-Derived Requirement Addendum (2026-02-19T04:55:00Z)
 
 Source linkage:
-- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
-- `.dev/ai/ingestion/records/2026-02-18-cross-source-conflicts.md`
+- Historical WO-0017 synthesis artifacts referenced here are not present in the current checkout.
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 Requirements added from full-corpus synthesis:

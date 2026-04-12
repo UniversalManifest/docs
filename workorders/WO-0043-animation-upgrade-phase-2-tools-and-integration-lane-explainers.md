@@ -69,7 +69,7 @@ Out of scope:
 
 - `WO-0042` completion (core asset quality baseline and scenario completeness).
 - Existing animation prompt system and design constraints:
-  - `.dev/ai/prompts/animation/`
+  - `docs/design/ANIMATED-SVG-WORKFLOW.md`
   - `docs/design/ANIMATED-SVG-SPEC.md`
 
 ## Sequencing

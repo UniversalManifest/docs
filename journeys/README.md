@@ -76,7 +76,7 @@ Execution source:
 ## Cross-Domain Overlay Lanes (WO-0017)
 
 Planning authority:
-- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- Historical IA delta artifact referenced during WO-0017 materialization is not present in the current checkout.
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 Required overlay lanes for journey expansion:

@@ -705,10 +705,8 @@ These elements should be adapted:
 
 ### Prompt pack
 
-- System prompt: `.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
-- Scenario prompts: `.dev/ai/prompts/animation/SCENARIO-*.md`
-- Adaptation prompts: `.dev/ai/prompts/animation/ADAPTATION-*.md`
-- Prompt pack index: `.dev/ai/prompts/animation/README.md`
+- Historical `.dev` prompt-pack files referenced by earlier workflow revisions are not present in the current checkout.
+- Use this workflow document plus `site/public/animations/` as the surviving implementation record.
 
 ### Design documents
 

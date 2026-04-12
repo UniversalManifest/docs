@@ -206,7 +206,7 @@ This pattern should be documented as a recommended consumer implementation appro
 
 ## References
 
-- [Hackathon handoff notes](`../../.dev/ai/handoffs/2026-03-07-07-18-14Z-handoff-universalmanifest-portaling-hackathon.md`) — Original hackathon build guidance and context
+- Historical hackathon handoff notes were referenced during this writeup, but the corresponding `.dev` artifact is not present in the current checkout.
 - [`integrations/metaverse.md`](../../integrations/metaverse.md) — UM metaverse integration lane
 - [`integrations/rp1-spatial-fabric.md`](../../integrations/rp1-spatial-fabric.md) — RP1 spatial fabric integration lane
 - [`docs/explainers/metaverse-portaling.md`](../explainers/metaverse-portaling.md) — MUM portaling explainer

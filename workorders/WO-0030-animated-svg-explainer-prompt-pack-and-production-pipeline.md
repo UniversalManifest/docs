@@ -58,9 +58,8 @@ All prompts and generated visual specs must be grounded in these project sources
   - `site/public/workbench/index.html`
   - `site/public/harness/index.html`
 - K2B and synthesis context:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
   - `docs/reports/2026-02-20-master-forward-worklist.md`
-  - `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+  - Historical `.dev` synthesis/K2B artifacts referenced by this WO are not present in the current checkout.
 
 ## Scope
 
@@ -85,7 +84,7 @@ Create a documented prompt set with:
 - adaptation prompts (short-form variants for hero, inline section, and full-page tutorial loops).
 
 Expected output path:
-- `.dev/ai/prompts/animation/`
+- Historical prompt-pack output path referenced by this WO is not present in the current checkout; use `docs/design/ANIMATED-SVG-WORKFLOW.md` as the surviving workflow record.
 
 ### 2) Scenario prompt catalog (minimum set)
 
@@ -156,17 +155,10 @@ Expected output paths:
 ## Completion evidence
 
 - Prompt package:
-  - `.dev/ai/prompts/animation/README.md`
-  - `.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
-  - `.dev/ai/prompts/animation/SCENARIO-01-um-object-model.md`
-  - `.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
-  - `.dev/ai/prompts/animation/SCENARIO-03-consent-policy-flow.md`
-  - `.dev/ai/prompts/animation/SCENARIO-04-user-journey-sequence.md`
-  - `.dev/ai/prompts/animation/SCENARIO-05-overlay-lanes-map.md`
-  - `.dev/ai/prompts/animation/SCENARIO-06-motion-tutorial-objects-and-icons.md`
-  - `.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
-  - `.dev/ai/prompts/animation/ADAPTATION-INLINE-MEDIUM.md`
-  - `.dev/ai/prompts/animation/ADAPTATION-FULLPAGE-LOOP.md`
+  - Historical `.dev` prompt-pack files referenced by this WO are not present in the current checkout.
+  - Surviving workflow and asset records:
+    - `docs/design/ANIMATED-SVG-WORKFLOW.md`
+    - `site/public/animations/`
 - Technical design artifacts:
   - `docs/design/ANIMATED-SVG-SPEC.md`
   - `docs/design/ANIMATION-PLACEMENT-PLAN.md`

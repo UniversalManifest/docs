@@ -7,7 +7,7 @@
 **Dependencies:** WO-0061 (three-panel layout and step engine)
 **Estimated effort:** 3-4 days
 **Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
-**Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
+**Scenario catalog:** `site/public/agent/sandbox-scenarios.json`
 
 ## Objective
 

@@ -54,11 +54,10 @@
 
 ### Evidence
 
-- CRO Report: `.dev/ai/findings/synthetic-reviews/cro-identity-correlation-implementability.md`
-- Security Report: `.dev/ai/findings/synthetic-reviews/security-identity-correlation-privacy-impact.md`
-- Thesis: `.dev/ai/knowledge-corpus/thesis-identity-correlation-bag-of-claims.md`
-- Proposal: `.dev/ai/proposals/PROPOSAL-v0.2-identity-binding-and-liveness.md`
-- Work order: `.dev/ai/workorders/WO-0170-identity-correlation-binding.md`
+- Integrated v0.2 delta guidance: `docs/VERSION-DIFFERENCES-V01-V02.md`
+- Threat-model integration: `docs/security/THREAT-MODEL.md`
+- Public specification integration: `docs/W3C-STYLE-SPEC.html`
+- Historical WO summary for the architecture/spec wave: `docs/workorders/WO-INDEX.md`
 
 ### Policy impact
 
@@ -425,7 +424,7 @@ Primary conflict register:
 
 ### Evidence
 
-- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- Historical IA delta artifact is not present in the current checkout; surviving materialization outputs are:
 - `docs/journeys/README.md`
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
@@ -646,7 +645,7 @@ Primary conflict register:
 ### Date and reference
 
 - Date: 2026-02-28
-- Work order: [WO-0049](workorders/WO-0049-add-ci-workflow.md)
+- Work-order summary: `WO-0049` is recorded in `docs/workorders/WO-INDEX.md` (no standalone WO file in the current checkout).
 
 ### Rationale
 

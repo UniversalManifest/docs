@@ -62,7 +62,7 @@ Out of scope:
 ## Dependencies
 
 - Existing prompt system from `WO-0030`:
-  - `.dev/ai/prompts/animation/`
+  - `docs/design/ANIMATED-SVG-WORKFLOW.md`
 - Technical constraints:
   - `docs/design/ANIMATED-SVG-SPEC.md`
 
