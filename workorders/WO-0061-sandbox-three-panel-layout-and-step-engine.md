@@ -7,7 +7,7 @@
 **Dependencies:** WO-0060 (browser validator and page scaffolds)
 **Estimated effort:** 1 week
 **Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
-**Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
+**Scenario catalog:** `site/public/agent/sandbox-scenarios.json`
 
 ## Objective
 

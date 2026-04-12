@@ -2,15 +2,15 @@
 
 **Date:** 2026-02-23
 
-**Protocol used:** [First-Time Reader Testing Protocol](docs/reports/2026-02-19-first-time-reader-testing-protocol.md)
+**Protocol used:** [First-Time Reader Testing Protocol](2026-02-19-first-time-reader-testing-protocol.md)
 
-**Gate checklist:** [First-Time Reader Human Gate Checklist](docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md)
+**Gate checklist:** [First-Time Reader Human Gate Checklist](2026-02-22-first-time-reader-human-gate-checklist.md)
 
-**Work order:** [WO-0015 — First-time overview and visual onboarding](docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md)
+**Work order:** [WO-0015 — First-time overview and visual onboarding](../workorders/WO-0015-first-time-overview-and-visual-onboarding.md)
 
-**Related work order:** [WO-0035 — Human-reader testing policy and onboarding evidence alignment](docs/workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md)
+**Related work order:** [WO-0035 — Human-reader testing policy and onboarding evidence alignment](../workorders/WO-0035-human-reader-testing-policy-and-onboarding-evidence-alignment.md)
 
-**Related work order:** [WO-0039 — Onboarding plain-language rewrite and source-propagation hardening](docs/workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md)
+**Related work order:** [WO-0039 — Onboarding plain-language rewrite and source-propagation hardening](../workorders/WO-0039-onboarding-plain-language-rewrite-and-source-propagation-hardening.md)
 
 ---
 
@@ -97,7 +97,7 @@ No blocking terms; UMID, TTL, facets, pointers, and unknown-field tolerance were
 
 ### Required answer characteristics check
 
-Per the [gate checklist](docs/reports/2026-02-22-first-time-reader-human-gate-checklist.md), the following characteristics must be present:
+Per the [gate checklist](2026-02-22-first-time-reader-human-gate-checklist.md), the following characteristics must be present:
 
 **Question 1 must include:**
 - [x] Portable state capsule framing
@@ -150,7 +150,7 @@ N/A
 
 **Evidence location:**
 
-[This report (filled answers + evaluator verdict)](docs/reports/2026-02-23-first-time-reader-test-results-human.md)
+[This report (filled answers + evaluator verdict)](2026-02-23-first-time-reader-test-results-human.md)
 
 ---
 

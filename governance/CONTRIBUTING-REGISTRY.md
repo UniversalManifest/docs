@@ -105,7 +105,7 @@ packages/universal-manifest/tests/fixtures/registry/
 When the registry launches, add your entry to the registry index:
 
 ```markdown
-### [Your Entry Name](./category/your-entry.md)
+### `Your Entry Name` (`./category/your-entry.md`)
 
 **Category**: capability-type
 **Status**: Proposed

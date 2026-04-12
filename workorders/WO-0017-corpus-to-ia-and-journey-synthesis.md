@@ -33,7 +33,7 @@ Out of scope:
 ## Deliverables
 
 - IA delta artifact:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - Historical IA delta artifact referenced by this WO is not present in the current checkout.
 - Journey expansion plan update:
   - `docs/journeys/README.md`
   - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
@@ -51,8 +51,8 @@ Out of scope:
 
 ## Execution Progress (2026-02-19T04:52:00Z)
 
-Gap status movement from `.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28-33-universalmanifest-k2b-provenance-audit.md`:
-- `GAP-K2B-001`: moved to CLOSED by creation of `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`.
+Gap status movement from the historical K2B provenance audit captured during this execution pass:
+- `GAP-K2B-001`: moved to CLOSED by the IA/materialization pass reflected in the surviving WO/journey artifacts.
 - `GAP-K2B-002`: moved to CLOSED for planning-materialization by updates in:
   - `docs/journeys/README.md`
   - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
@@ -61,9 +61,8 @@ Gap status movement from `.dev/ai/reports/k2b-provenance-audits/2026-02-19-04-28
 
 Criterion-level evidence:
 - Conflict coverage (`CON-UM-001`..`CON-UM-006`) evidence:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - `docs/DECISIONS.md`
 - IA first-time path + standards-neutral boundaries evidence:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
   - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
 - Journey expansion (cross-domain + identity variants) evidence:
   - `docs/journeys/README.md`
@@ -75,7 +74,7 @@ Criterion-level evidence:
 
 Artifact evidence links:
 - IA delta artifact:
-  - `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+  - Historical IA delta artifact referenced by this WO is not present in the current checkout.
 - journey planning materialization:
   - `docs/journeys/README.md`
   - `docs/workorders/WO-0012-user-journeys-and-e2e-test-suite.md`
@@ -87,12 +86,11 @@ Artifact evidence links:
   - `docs/DECISIONS.md`
   - `docs/STATE-OF-THE-PROJECT.md`
 - execution reports:
-  - `.dev/ai/reports/2026-02-19-wo-0017-execution-progress.md`
-  - `.dev/ai/reports/2026-02-19-workbench-functional-checks.md`
+  - Historical `.dev` execution reports referenced by this WO are not present in the current checkout.
 
 ## Dependencies
 
-- `.dev/ai/knowledge-corpus/synthesis/2026-02-18-full-corpus-ia-and-journey-synthesis.md`
+- Historical full-corpus synthesis artifact referenced by this WO is not present in the current checkout.
 - `docs/workorders/WO-0014-interactive-manifest-workbench.md`
 - `docs/workorders/WO-0015-first-time-overview-and-visual-onboarding.md`
 - `docs/workorders/WO-0016-gas-index-scan-and-knowledge-integration-ledger.md`

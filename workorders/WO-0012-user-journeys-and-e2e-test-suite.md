@@ -82,7 +82,7 @@ Out of scope:
 ## Post-Completion Corpus Delta Addendum (2026-02-19T04:57:00Z)
 
 Source linkage:
-- `.dev/ai/specs/2026-02-19-ia-delta-from-full-corpus.md`
+- Historical IA delta artifact referenced during WO-0017 materialization is not present in the current checkout.
 - `docs/workorders/WO-0017-corpus-to-ia-and-journey-synthesis.md`
 
 New planning deltas to execute under WO-0017:

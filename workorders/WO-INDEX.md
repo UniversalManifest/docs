@@ -52,7 +52,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0043-animation-upgrade-phase-2-tools-and-integration-lane-explainers.md` — [COMPLETED] Execute phase 2 animation upgrade: 9 SVGs (2 tool explainers, 7 integration-lane explainers)
 - `docs/workorders/WO-0044-public-open-source-examples-work-stream.md` — [COMPLETED] Public open-source examples and demos work stream
 - `docs/workorders/WO-0045-commercial-explainer-ecosystem-and-integration-expansion.md` — [COMPLETED] Commercial explainer ecosystem and integration expansion
-- `.dev/ai/workorders/WO-0046-infographic-styles-viewer.md` — [COMPLETED] Infographic styles inventory and viewer
+- `docs/design/INFOGRAPHIC-STYLES-INVENTORY.md` — [COMPLETED] Infographic styles inventory and viewer
 - WO-0047 (no formal WO file; from audit report) — [COMPLETED] Security documentation and threat model (`docs/security/THREAT-MODEL.md`)
 - WO-0048 (no formal WO file; from audit report) — [COMPLETED] Conformance suite expansion: 6 new fixtures (3 valid, 3 invalid)
 - WO-0049 (no formal WO file; from audit report) — [COMPLETED] CI/CD hardening: 5-job GitHub Actions pipeline (`.github/workflows/ci.yml`)
@@ -73,7 +73,7 @@ Drift governance and follow-on WO trigger criteria:
 ### Interactive Implementation Sandbox Wave (WO-0060 through WO-0068)
 
 **Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
-**Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
+**Scenario catalog:** `site/public/agent/sandbox-scenarios.json`
 **Priority:** HIGHEST (per CEO mandate -- comes before WO-0053 through WO-0059)
 
 - `docs/workorders/WO-0060-sandbox-foundation-and-browser-validator.md` — [COMPLETED] Extract validation logic for browser use with Web Crypto API adapter; scaffold sandbox pages and fixture pipeline (HIGHEST, foundational; no dependencies)
@@ -294,9 +294,10 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Universal Manifest Architecture & Specification Update (WO-0165 through WO-0170)
 
-- `.dev/ai/workorders/WO-0165-w3c-sidebar-and-responsive-testing.md` — [COMPLETED] Implement W3C-style native sidebar, TOC navigation parity, and responsive constraints across viewports (P0)
-- `.dev/ai/workorders/WO-0166-site-backup.md` — [COMPLETED] Securely extract the `.astro` public site payload into an archive/backup before overwriting with the new spec structure (P0)
-- `.dev/ai/workorders/WO-0167-homepage-and-pitch-page-deployment.md` — [COMPLETED] Convert the W3C spec HTML into the public index/homepage experience and relocate pitch materials downstream (P0)
-- `.dev/ai/workorders/WO-0168-synthetic-peer-review-prompts.md` — [COMPLETED] Build the synthetic review methodology and executing agents to challenge spec architecture against adversarial and edge-case journeys (P1)
-- `.dev/ai/workorders/WO-0169-fix-toc-number-alignment.md` — [COMPLETED] Remediate visual alignment and CSS regression drift in TOC numbers following architecture shifts (P1)
-- `.dev/ai/workorders/WO-0170-identity-correlation-binding.md` — [COMPLETED] Resolve "Bag of Claims" vulnerability via research/decision process establishing cross-DID correlation binding and avatar liveness (CRITICAL)
+- Historical note: the per-WO `.dev/ai/workorders/...` paths previously listed for WO-0165 through WO-0170 are not present in the current checkout. The surviving outputs of this wave are integrated into the main repo artifacts below.
+- `docs/W3C-STYLE-SPEC.html` — [COMPLETED] W3C-style specification shell, sidebar behavior, and public root-route transition output.
+- `site_backup.tar.gz` — [COMPLETED] Backup artifact captured before the public spec/homepage transition.
+- `site/src/pages/index.astro` — [COMPLETED] Public root route now serves the W3C-style specification HTML shell.
+- `docs/DECISIONS.md` — [COMPLETED] Architectural decisions from the synthetic-review and identity-binding wave recorded in the canonical decision log.
+- `docs/VERSION-DIFFERENCES-V01-V02.md` — [COMPLETED] v0.2 identity-binding, trust-tier, and delegation deltas integrated into the version-differences layer.
+- `docs/security/THREAT-MODEL.md` — [COMPLETED] Bag-of-Claims / identity-correlation threat model integrated into the security layer.

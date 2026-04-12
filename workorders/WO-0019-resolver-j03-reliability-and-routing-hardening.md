@@ -30,7 +30,7 @@ Out of scope:
 - `packages/universal-manifest/scripts/run-journeys.mjs`
 - `services/myum-resolver/wrangler.toml`
 - `docs/journeys/_artifacts/2026-02-20T05-25-51-070Z-journey-report.json`
-- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- Historical K2B completeness report referenced by this WO is not present in the current checkout.
 
 ## Acceptance criteria
 

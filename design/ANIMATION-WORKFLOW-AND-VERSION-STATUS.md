@@ -21,11 +21,11 @@ Timeline:
 
 ### Production generation
 
-Use the animation prompt pack as the generation source:
-- `.dev/ai/prompts/animation/`
+Use the surviving workflow record as the generation source:
+- `docs/design/ANIMATED-SVG-WORKFLOW.md`
 
 Scenario 01 canonical prompt file:
-- `.dev/ai/prompts/animation/SCENARIO-01-object-model.md`
+- Historical `.dev` scenario prompt file referenced by earlier workflow revisions is not present in the current checkout.
 
 ### Production output location
 
@@ -93,12 +93,8 @@ Provenance (git):
 - Refreshed to current dark-theme version: `a631e41` (2026-02-27)
 
 Source path for regeneration:
-- System prompt:
-  - `.dev/ai/prompts/animation/SYSTEM-PROMPT-UM-ANIMATION.md`
-- Scenario prompt:
-  - `.dev/ai/prompts/animation/SCENARIO-02-resolve-verify-project-flow.md`
-- Optional adaptation:
-  - `.dev/ai/prompts/animation/ADAPTATION-HERO-SHORT.md`
+- Historical `.dev` prompt-pack files referenced by earlier workflow revisions are not present in the current checkout.
+- Use `docs/design/ANIMATED-SVG-WORKFLOW.md` together with `site/public/animations/` for the surviving regeneration context.
 
 Important:
 - This file has no exact hash match in infographics-kit deterministic outputs.

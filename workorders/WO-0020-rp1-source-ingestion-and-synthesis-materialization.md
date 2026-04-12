@@ -44,7 +44,7 @@ Out of scope:
 
 - `integrations/rp1-spatial-fabric.md`
 - `docs/reports/2026-02-20-master-forward-worklist.md`
-- `.dev/ai/reports/2026-02-20-k2b-integration-completeness-report.md`
+- Historical K2B completeness report referenced by this WO is not present in the current checkout.
 
 ## Progress update (2026-02-20)
 

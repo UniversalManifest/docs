@@ -7,7 +7,7 @@
 **Dependencies:** WO-0064 (trust and verification scenarios -- confirms crypto works in browser)
 **Estimated effort:** 4-5 days
 **Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
-**Proposal:** [PROPOSAL-interactive-implementation-sandbox.md](/.dev/ai/proposals/PROPOSAL-interactive-implementation-sandbox.md)
+**Scenario catalog:** `site/public/agent/sandbox-scenarios.json`
 
 ## Objective
 

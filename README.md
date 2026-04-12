@@ -21,7 +21,7 @@ Canonical repo path: `<repo-root>`
 - [`CONTRIBUTING.md`](../CONTRIBUTING.md) — Contribution guidelines
 - [`LICENSE`](../LICENSE) — Project license
 - [`SECURITY.md`](../SECURITY.md) — Security policy and vulnerability reporting
-- [`PROJECT-RULES.md`](../PROJECT-RULES.md) — Project-specific onboarding and operational rules (with global GAS `AGENTS.md`)
+- Project-specific onboarding and operational rules are maintained through the repo’s active root instructions when present.
 
 ## Key docs
 
