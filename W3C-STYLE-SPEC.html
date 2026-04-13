@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Universal Manifest Specification</title>
+    <title>Universal Manifest Latest Draft Specification</title>
     <!-- Use the official W3C Working Draft style -->
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD" type="text/css">
     <style>
@@ -12,6 +12,44 @@
         .head { margin-bottom: 3em; }
         .head a.logo, img[alt="W3C"], .w3c-logo { display: none !important; } /* Strip W3C branding injected by fixup.js */
         .head h1 { color: #005a9c; }
+        .um-site-nav {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-top: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .um-site-nav__label {
+            color: #5a6677;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-right: 0.15rem;
+            text-transform: uppercase;
+        }
+        .um-site-nav a {
+            background: #ffffff;
+            border: 1px solid #c9d3dd;
+            border-radius: 999px;
+            color: #1f2a36;
+            display: inline-flex;
+            font-size: 0.84rem;
+            font-weight: 700;
+            gap: 0.25rem;
+            padding: 0.42rem 0.72rem;
+            text-decoration: none;
+        }
+        .um-site-nav a:hover,
+        .um-site-nav a:focus-visible {
+            background: #eef4fb;
+            outline: none;
+        }
+        .um-site-nav a.is-current {
+            background: #005a9c;
+            border-color: #005a9c;
+            color: #ffffff;
+        }
         body:not(.toc-inline) #toc,
         body.toc-sidebar #toc {
             background: #f4f6f8;
@@ -203,17 +241,28 @@
     </style>
 </head>
 <body class="h-entry">
+    <nav class="um-site-nav" aria-label="Site">
+        <span class="um-site-nav__label">Site</span>
+        <a href="https://universalmanifest.net/">Home</a>
+        <a href="https://universalmanifest.net/use-cases/">Use Cases</a>
+        <a href="https://universalmanifest.net/docs/">Docs</a>
+        <a href="https://universalmanifest.net/spec/latest/" class="is-current" aria-current="page">Latest Draft Spec</a>
+        <a href="https://universalmanifest.net/spec/v01/">Spec v0.1</a>
+        <a href="https://universalmanifest.net/spec/v02/">Spec v0.2</a>
+        <a href="https://universalmanifest.net/sandbox/">Sandbox</a>
+        <a href="https://universalmanifest.net/for-agents/">For Agents</a>
+    </nav>
     <div class="head">
-        <h1 id="title" class="title p-name">Universal Manifest Specification</h1>
-        <h2 id="subtitle">Universal Manifest Draft Specification</h2>
+        <h1 id="title" class="title p-name">Universal Manifest Latest Draft Specification</h1>
+        <h2 id="subtitle">W3C-style draft specification on a stable subordinate route</h2>
         <h2><time class="dt-published" datetime="2026-04-01">1 April 2026</time></h2>
         <dl>
             <dt>This version:</dt>
-            <dd><a class="u-url" href="https://universalmanifest.net/">https://universalmanifest.net/</a></dd>
+            <dd><a class="u-url" href="https://universalmanifest.net/spec/latest/">https://universalmanifest.net/spec/latest/</a></dd>
             <dt>Latest published version:</dt>
-            <dd><a href="https://universalmanifest.net/">https://universalmanifest.net/</a></dd>
+            <dd><a href="https://universalmanifest.net/spec/latest/">https://universalmanifest.net/spec/latest/</a></dd>
             <dt>History:</dt>
-            <dd><a href="https://universalmanifest.net/standards/history/um/">Initial Version</a></dd>
+            <dd><a href="https://universalmanifest.net/publishing/changelog/">Changelog</a></dd>
             <dt>Editors:</dt>
             <dd class="p-author h-card vcard">
                 Universal Manifest Working Group

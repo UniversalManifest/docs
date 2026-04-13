@@ -72,7 +72,7 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Interactive Implementation Sandbox Wave (WO-0060 through WO-0068)
 
-**Mandate:** [MANDATE-interactive-implementation-sandbox.md](/docs/MANDATE-interactive-implementation-sandbox.md)
+**Mandate:** [MANDATE-interactive-implementation-sandbox.md](../MANDATE-interactive-implementation-sandbox.md)
 **Scenario catalog:** `site/public/agent/sandbox-scenarios.json`
 **Priority:** HIGHEST (per CEO mandate -- comes before WO-0053 through WO-0059)
 
@@ -88,8 +88,8 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Interactive Sandbox V2 Redesign Wave (WO-0069 through WO-0080)
 
-**Proposal:** [Sandbox V2 UI Redesign Proposal](/.dev/ai/proposals/2026-03-01-02-39-39Z-universalmanifest-sandbox-ui-redesign-proposal.md)
-**Handoff:** [V2 Handoff](/.dev/ai/handoffs/2026-03-01-03-55-34Z-handoff-universalmanifest.md)
+**Proposal:** Historical Sandbox V2 proposal artifact was referenced during this wave, but the corresponding `.dev` file is not present in the current checkout.
+**Handoff:** Historical Sandbox V2 handoff artifact was referenced during this wave, but the corresponding `.dev` file is not present in the current checkout.
 **Priority:** HIGH (CEO-directed redesign of sandbox detail page to symmetrical two-entity protocol lens layout)
 
 - `docs/workorders/WO-0069-sandbox-v2-hierarchy-explorer-component.md` — [COMPLETED] HierarchyExplorer: reusable collapsible JSON tree-view component (Phase 1 foundation; no dependencies)
@@ -301,3 +301,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/DECISIONS.md` — [COMPLETED] Architectural decisions from the synthetic-review and identity-binding wave recorded in the canonical decision log.
 - `docs/VERSION-DIFFERENCES-V01-V02.md` — [COMPLETED] v0.2 identity-binding, trust-tier, and delegation deltas integrated into the version-differences layer.
 - `docs/security/THREAT-MODEL.md` — [COMPLETED] Bag-of-Claims / identity-correlation threat model integrated into the security layer.
+
+### Consumer-First Public Front Door Rebalance (WO-0171)
+
+- `docs/workorders/WO-0171-consumer-first-homepage-and-spec-subpage-rebalance.md` — [COMPLETED] Replaced the spec-first root route with a consumer-friendly homepage, moved the latest W3C-style spec to `/spec/latest/`, repaired the specification-shell navigation, and verified the route split in `docs/reports/2026-04-12-consumer-homepage-and-spec-subpage-rebalance.md`.
