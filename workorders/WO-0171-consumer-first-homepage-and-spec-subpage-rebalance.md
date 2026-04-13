@@ -1,6 +1,6 @@
 # WO-0171 -- Consumer-First Homepage, Spec Subpage Rebalance, and Spec Navigation Repair
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P0
 **Created:** 2026-04-12
 
@@ -57,15 +57,14 @@ Out of scope:
 - Repaired navigation inside the W3C-style specification shell, including clear outbound routing to the rest of the site.
 - An implementation report documenting the route change, IA, navigation behavior, and compatibility decisions.
 
-Expected implementation targets:
+Completed artifacts:
 
 - `site/src/pages/index.astro`
+- `site/src/pages/spec/latest.astro`
 - `site/src/pages/docs/index.astro`
 - `site/src/layouts/PublicSurfaceLayout.astro`
-- `site/src/styles/public-surface.css`
 - `docs/W3C-STYLE-SPEC.html`
-- additional `site/src/pages/spec/...` route files as needed
-- a follow-on implementation report under `docs/reports/`
+- `docs/reports/2026-04-12-consumer-homepage-and-spec-subpage-rebalance.md`
 
 ## Dependencies
 
@@ -88,9 +87,9 @@ Expected implementation targets:
 
 ## Acceptance Criteria
 
-- [ ] `/` is a consumer-first homepage rather than the raw spec shell.
-- [ ] The latest W3C-style specification is accessible at a stable subordinate route.
-- [ ] The homepage clearly explains the value of UM across multiple user types and routes visitors by intent.
-- [ ] The current specification surface has repaired navigation that connects it cleanly to the wider site.
-- [ ] Existing deep docs/spec/reference routes remain stable or redirect predictably.
-- [ ] The site build passes with the new route structure and navigation model.
+- [x] `/` is a consumer-first homepage rather than the raw spec shell.
+- [x] The latest W3C-style specification is accessible at a stable subordinate route.
+- [x] The homepage clearly explains the value of UM across multiple user types and routes visitors by intent.
+- [x] The current specification surface has repaired navigation that connects it cleanly to the wider site.
+- [x] Existing deep docs/spec/reference routes remain stable or redirect predictably.
+- [x] The site build passes with the new route structure and navigation model.

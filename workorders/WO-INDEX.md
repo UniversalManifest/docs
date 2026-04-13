@@ -304,4 +304,4 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Consumer-First Public Front Door Rebalance (WO-0171)
 
-- `docs/workorders/WO-0171-consumer-first-homepage-and-spec-subpage-rebalance.md` — [NOT_STARTED] Replace the current spec-first root route with a consumer-friendly homepage, move the latest W3C-style spec to a subordinate route, and repair the navigation on the current spec homepage.
+- `docs/workorders/WO-0171-consumer-first-homepage-and-spec-subpage-rebalance.md` — [COMPLETED] Replaced the spec-first root route with a consumer-friendly homepage, moved the latest W3C-style spec to `/spec/latest/`, repaired the specification-shell navigation, and verified the route split in `docs/reports/2026-04-12-consumer-homepage-and-spec-subpage-rebalance.md`.
