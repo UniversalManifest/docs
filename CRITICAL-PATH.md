@@ -4,16 +4,17 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current execution focus — Reading-surface reintegration under the shared public shell -- ACTIVE
+## Current execution focus — Formal work-order queue complete
 
-Goal: preserve the verified two-page MVP and the new internal `UM UI` layer while bringing back selected reading surfaces under one shared public shell.
+Goal: preserve the verified two-page MVP, the completed first reader reintegration wave, and the new internal `UM UI` layer while bringing back interactive tool and proof surfaces under one shared shell family.
 
 Immediate rule:
 
 - the primary public menu should remain limited to `Home` and `Latest Spec`
 - the homepage should stay low-noise and plain-language
 - the latest spec must remain obviously one click away at `/spec/latest/`
-- reintegrated reading pages should adopt the shared public shell rather than reviving sprint-era visual fragmentation
+- reintegrated reading pages should stay under the shared public shell rather than reviving sprint-era visual fragmentation
+- tool and proof entry routes should return under a deliberate shared shell without replacing the calm MVP front door
 
 Current WO sequence:
 
@@ -21,11 +22,11 @@ Current WO sequence:
 2. `WO-0173` — tune homepage messaging and one-click spec prominence -- COMPLETED
 3. `WO-0174` — verify publication safeguards and continuity for the already-shared latest spec -- COMPLETED
 4. `WO-0175` — extract the internal `UM UI` component system from the tuned MVP shell -- COMPLETED
-5. `WO-0176` — reintroduce reading surfaces under the shared public shell -- ACTIVE
-6. `WO-0177` — reintroduce tool and proof surfaces under the shared tool shell -- PLANNED
+5. `WO-0176` — reintroduce reading surfaces under the shared public shell -- COMPLETED
+6. `WO-0177` — reintroduce tool and proof surfaces under the shared tool shell -- COMPLETED
 7. `WO-0178` — fix the `/spec/latest/` inline TOC overlap and verify in browser -- COMPLETED
 
-Status: WO-0171 already completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, and WO-0178 closed the outstanding `/spec/latest/` inline TOC bug. The active task is now `WO-0176`: begin bringing selected reading surfaces back under the shared public shell.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), and WO-0178 closed the outstanding `/spec/latest/` inline TOC bug. There are currently no open formal work orders in `docs/workorders/`.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 

@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-04-13
-**Status:** 166 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Consumer-first homepage and spec-subpage rebalance (WO-0171) COMPLETED. MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) ACTIVE, with WO-0176 active and WO-0177 planned. Public spec surface bugfix wave (WO-0178) COMPLETED.
+**Status:** 166 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Consumer-first homepage and spec-subpage rebalance (WO-0171) COMPLETED. MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) COMPLETED. Public spec surface bugfix wave (WO-0178) COMPLETED. There are currently no open formal work orders under `docs/workorders/`.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -9,7 +9,7 @@ This repo remains a **spec-first project with fixtures and tooling**, but it is 
 
 The most important change in this refresh is that the public front door has now been rebalanced. `/` is once again a consumer-facing homepage, the latest W3C-style draft specification now lives at `/spec/latest/`, and the specification shell has site-level navigation instead of behaving like an isolated homepage.
 
-The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The next step is to use that shared shell to bring selected reading surfaces back under one visual system without widening the public MVP menu itself.
+The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For recent audit reports, see the [`docs/reports/`](reports/) directory (includes freshness audits, completeness audits, and status summaries).
@@ -45,6 +45,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Consumer-first root homepage: `site/src/pages/index.astro`
   - Curated docs entry: `site/src/pages/docs/index.astro`
   - Stable latest-draft spec route: `site/src/pages/spec/latest.astro`
+  - Reintegrated reader routes under the shared shell: `site/src/pages/about/why-um.astro`, `site/src/pages/about/one-pager.astro`, `site/src/pages/use-cases/index.astro`
   - Long-form docs overview now published at `/docs/overview/`: `site/src/content/docs/index.md`
   - Public agent path: `site/src/content/docs/for-agents.md` and `site/src/content/docs/external-agent-onboarding.md`
   - Machine-readable discovery files: `site/public/llms.txt`, `site/public/.well-known/universal-manifest.json`, `site/public/.well-known/security.txt`
@@ -61,6 +62,9 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Standalone TypeScript reference implementation repository: `https://github.com/grigb/um-typescript`
   - Fixture validation run via `npm test` (build + validate valid + invalid fixtures + GPC proof pack)
 - **Proof surfaces (executable + visual)**
+  - Shared tool/proof hub: `site/src/pages/learning/index.astro`
+  - Sandbox chooser under shared shell: `site/src/pages/sandbox/index.astro`
+  - Workbench under shared shell with subordinate raw payload: `site/src/pages/workbench/index.astro`, `site/public/workbench/app/index.html`
   - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`; 22 executable journeys passing)
   - Harness → visual endpoint/fixture debugger: `site/public/harness/index.html` (served at `/harness/index.html`)
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
@@ -111,14 +115,14 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 
 ## Work-order status (2026-03-20)
 
-#### MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) — ACTIVE
+#### MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) — COMPLETED
 
 - Completed: `WO-0172` two-page MVP site, minimal navigation, and publication preparation
 - Completed: `WO-0173` homepage noise reduction and one-click spec prominence
 - Completed: `WO-0174` MVP publication safeguards and spec continuity verification
 - Completed: `WO-0175` internal `UM UI` component-library extraction
-- Active: `WO-0176` staged reading-surface reintegration under the shared public shell
-- Planned: `WO-0177` staged tool/proof-surface reintegration under the shared shell
+- Completed: `WO-0176` staged reading-surface reintegration under the shared public shell
+- Completed: `WO-0177` staged tool/proof-surface reintegration under the shared shell
 
 #### Public spec surface bugfixes (WO-0178) — COMPLETED
 

@@ -312,8 +312,8 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0173-homepage-noise-reduction-and-one-click-spec-prominence.md` — [COMPLETED] Reduced homepage messaging noise and made the latest-spec path unmistakable for first-time visitors with no prior context.
 - `docs/workorders/WO-0174-mvp-publication-safeguards-and-spec-continuity-verification.md` — [COMPLETED] Verified safe publication of the two-page MVP, added continuity safeguards for the already-shared latest spec surface, and recorded evidence in `docs/reports/2026-04-13-two-page-mvp-publication-safeguards-and-spec-continuity-verification.md`.
 - `docs/workorders/WO-0175-um-ui-internal-component-library-extraction.md` — [COMPLETED] Extracted the first internal Astro-native `UM UI` component library from the tuned MVP shell, including shared header/footer, panels, cards, section headers, action rows, chips, and token files adopted by the homepage and review surfaces.
-- `docs/workorders/WO-0176-staged-reading-surface-reintegration-under-shared-public-shell.md` — [ACTIVE] Reintroduce docs, guides, reference, governance, and use-case reading surfaces in controlled waves under the shared public shell.
-- `docs/workorders/WO-0177-staged-tool-and-proof-surface-reintegration-under-shared-shell.md` — [PLANNED] Reintroduce interactive tool and proof surfaces under a coherent shared tool shell after the reading surfaces are aligned.
+- `docs/workorders/WO-0176-staged-reading-surface-reintegration-under-shared-public-shell.md` — [COMPLETED] Reintroduced the first high-value reader wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`) under the shared public shell without widening the calm MVP navigation.
+- `docs/workorders/WO-0177-staged-tool-and-proof-surface-reintegration-under-shared-shell.md` — [COMPLETED] Reintroduced the first tool/proof reintegration wave under the shared tool shell via the rebuilt `/learning/` hub, the shared-shell `/sandbox/` chooser route, and the shared-shell `/workbench/` host route with the existing workbench preserved at `/workbench/app/`.
 
 ### Public Spec Surface Bugfixes (WO-0178)
 
