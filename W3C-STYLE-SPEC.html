@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Universal Manifest Latest Draft Specification</title>
+    <link rel="canonical" href="https://universalmanifest.net/spec/latest/">
     <!-- Use the official W3C Working Draft style -->
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD" type="text/css">
     <style>
@@ -209,6 +210,13 @@
             padding-right: 1.4rem;
             box-sizing: border-box;
         }
+        body.toc-inline #toc {
+            clear: both;
+            margin-bottom: 2rem;
+        }
+        body.toc-inline #toc + section {
+            clear: both;
+        }
         .note, .issue, .example { padding: .5em; border-left: .5em solid; margin: 1em 0; }
         .example { border-color: #e0cb52; background: #fcfaee; }
         .example-title { font-weight: bold; margin-bottom: 0.5em; }
@@ -244,13 +252,7 @@
     <nav class="um-site-nav" aria-label="Site">
         <span class="um-site-nav__label">Site</span>
         <a href="https://universalmanifest.net/">Home</a>
-        <a href="https://universalmanifest.net/use-cases/">Use Cases</a>
-        <a href="https://universalmanifest.net/docs/">Docs</a>
         <a href="https://universalmanifest.net/spec/latest/" class="is-current" aria-current="page">Latest Draft Spec</a>
-        <a href="https://universalmanifest.net/spec/v01/">Spec v0.1</a>
-        <a href="https://universalmanifest.net/spec/v02/">Spec v0.2</a>
-        <a href="https://universalmanifest.net/sandbox/">Sandbox</a>
-        <a href="https://universalmanifest.net/for-agents/">For Agents</a>
     </nav>
     <div class="head">
         <h1 id="title" class="title p-name">Universal Manifest Latest Draft Specification</h1>

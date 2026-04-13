@@ -1,5 +1,35 @@
 # Decisions (Universal Manifest)
 
+## 2026-04-12 — Publish a two-page MVP site before broader site reintegration
+
+### Decision
+
+- Treat the next public site move as a deliberate contraction, not an expansion.
+- Publish a minimal public site with only two first-class primary-menu routes:
+  - `Home`
+  - `Latest Spec`
+- Keep the latest draft specification at `/spec/latest/` as the stable, publicly shareable standards destination.
+- Make the latest spec visibly one click away from the homepage.
+- Reintroduce the rest of the site only after the two-page MVP is tuned and published.
+- Do not adopt DaisyUI as the first move. Instead, extract an internal Astro-native component system from the tuned MVP shell and use that as the basis for later reintegration work.
+
+### Rationale
+
+- The project currently contains too many sprint-era surfaces with different visual and structural assumptions to unify all at once without creating more confusion.
+- The homepage needs to become simpler and easier to absorb for readers with zero prior context.
+- The latest spec is already the public standards surface being shared with the world, so it must remain obvious, stable, and easy to reach even after the homepage takes over the public front-door role.
+- A tuned MVP shell is a better source for a durable internal component library than introducing a new framework migration on top of the current mixed Astro/Starlight/static-HTML stack.
+
+### Policy impact
+
+- The current active site sequence is:
+  1. Publish and tune the two-page MVP.
+  2. Verify publication continuity for `/spec/latest/`.
+  3. Extract the internal `UM UI` component system from that tuned MVP.
+  4. Reintroduce reading surfaces in controlled waves.
+  5. Reintroduce tool and proof surfaces after the reading surfaces are aligned.
+- New public-site work should respect the MVP-first contraction rule unless a later decision explicitly supersedes it.
+
 ## 2026-04-01 — Payment-handle guidance adopts pointer-first split with additive privacy alignment (WO-0142)
 
 ### Decision
