@@ -1,13 +1,13 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-04-12
-**Status:** 158 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. No open formal work orders remain under `docs/workorders/`.
+**Status:** 159 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Consumer-first homepage and spec-subpage rebalance (WO-0171) NOT_STARTED.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
-This repo remains a **spec-first project with fixtures and tooling**, but it is no longer only a spec/docs repo. It now operates a multi-surface public program: a landing-first standards/discovery site on `universalmanifest.net`, executable proof and interactive tooling surfaces, and the resolver/runtime contract surface on `myum.net` via Cloudflare Pages/Workers.
+This repo remains a **spec-first project with fixtures and tooling**, but it is no longer only a spec/docs repo. It now operates a multi-surface public program: a standards/docs site on `universalmanifest.net`, executable proof and interactive tooling surfaces, and the resolver/runtime contract surface on `myum.net` via Cloudflare Pages/Workers.
 
-The most important change since the last refresh is that the March public-surface cleanup wave is finished. The landing-first homepage, curated `/docs/` entry, `/docs/overview/` long-form overview, `/for-agents/` path, machine-readable discovery files, and the warning-free site build baseline are all now real and verified.
+The most important current gap is now explicit: the root route is still serving the latest W3C-style specification shell, which makes the public homepage standards-first instead of consumer-first. The curated `/docs/` entry, `/docs/overview/` long-form overview, `/for-agents/` path, machine-readable discovery files, and warning-free site build baseline are real, but the public front door still needs to be rebalanced around an audience-friendly homepage.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For recent audit reports, see the [`docs/reports/`](reports/) directory (includes freshness audits, completeness audits, and status summaries).
@@ -39,8 +39,8 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - **Publishing + versioning plan**
   - Stable URLs + headers + immutability policy: `docs/PUBLISHING-AND-VERSIONING.md`
   - Domain split architecture (`universalmanifest.net` + `myum.net`): `docs/DOMAIN-ARCHITECTURE.md`
-- **Public landing/docs/discovery surfaces (completed through WO-0164)**
-  - Landing-first root and shared public navigation: `site/src/pages/index.astro`
+- **Public landing/docs/discovery surfaces**
+  - Current root route is the W3C-style spec shell: `site/src/pages/index.astro`
   - Curated docs entry: `site/src/pages/docs/index.astro`
   - Long-form docs overview now published at `/docs/overview/`: `site/src/content/docs/index.md`
   - Public agent path: `site/src/content/docs/for-agents.md` and `site/src/content/docs/external-agent-onboarding.md`
@@ -48,6 +48,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Public catalogs for agent/browser consumption: `site/public/agent/fixture-catalog.json`, `site/public/agent/sandbox-scenarios.json`
   - Resolver/runtime contract docs and descriptors: `site/src/content/docs/reference/resolver-api.md`, `services/myum-resolver/CONTRACT.md`
   - Verified warning-free site build baseline documented in `docs/reports/2026-03-19-docs-root-relocation-warning-free-build-baseline.md`
+  - Active public-front-door correction tracked in `docs/workorders/WO-0171-consumer-first-homepage-and-spec-subpage-rebalance.md`
 - **Official completion framework**
   - Done-done definition: `docs/DONE-DONE-DEFINITION.md`
   - Release checklist: `docs/DONE-DONE-CHECKLIST.md`
@@ -317,18 +318,20 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 
 #### Formal queue status (2026-04-12)
 
-- There are currently no open formal work orders under `docs/workorders/`.
-- The previously cited frontier items `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` are all marked `COMPLETED` in their individual work-order files.
+- The formal queue is now re-opened by `WO-0171`.
+- `WO-0171` is the active P0 work order for restoring a consumer-first homepage, moving the latest W3C-style spec off the root route, and repairing the current spec-page navigation.
+- The previously cited frontier items `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` remain `COMPLETED`.
 - The identity-binding / Bag-of-Claims follow-on is already integrated into the committed decision, threat-model, spec-delta, and schema artifacts rather than remaining as an open standalone proposal thread.
 
 ## Priority context (2026-04-12)
 
-The project is no longer blocked on public-surface cleanup, and the previously cited ecosystem/privacy/explainer frontier items are now closed at the work-order level.
+The project is no longer blocked on public-surface cleanup in the narrow sense, but the current root-route/public-entry behavior still does not match the intended outside-in adoption posture.
 
-That changes the execution posture. The repo no longer has an active formal WO sequence to continue from the current `docs/workorders/` queue. Remaining execution should begin from either:
+That changes the execution posture again. The repo now has a single active formal re-entry point:
 
-- a newly approved work order, or
-- routine drift/governance verification against the already-completed corpus and deployed surfaces.
+- `WO-0171` — consumer-first homepage, spec-subpage rebalance, and spec-navigation repair
+
+Until `WO-0171` is addressed, the public front door will continue to privilege the standards artifact over the broader adoption story.
 
 ## Critical-path execution update (2026-02-20)
 
@@ -419,15 +422,16 @@ For formal gate-level completion criteria and evidence requirements, use:
 
 ## Next milestones (recommended)
 
-### Milestone A — Drift governance and reality checks
+### Milestone A — Consumer-first homepage and spec-route rebalance
 
-- Re-run the recurring verification gates in `docs/CRITICAL-PATH.md` so the project’s “completed” posture remains true over time.
-- Open a new formal work order only if those checks fail or if newly approved scope appears that is not already covered by the closed WO corpus.
+- Execute `WO-0171` to restore `/` as the audience-facing homepage rather than the raw spec shell.
+- Move the latest W3C-style spec to a subordinate route without weakening access to the normative standards surface.
+- Repair the navigation model on the current spec page so the standards surface is usable inside the broader site.
 
-### Milestone B — New execution only by explicit re-entry
+### Milestone B — Drift governance after the front-door correction
 
-- Treat `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` as closed history, not active queue items.
-- Start any further implementation or documentation wave from a newly approved work order rather than by continuing stale milestone language in this file.
+- After `WO-0171`, re-run the recurring verification gates in `docs/CRITICAL-PATH.md`.
+- Treat earlier completed WOs as closed history; new sequencing should flow from approved re-entry work, not stale milestone text.
 
 ## How other systems should adopt it today (v0.1)
 
