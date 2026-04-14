@@ -4,9 +4,9 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current execution focus — Formal work-order queue complete
+## Current execution focus — Remaining site architecture execution wave -- ACTIVE
 
-Goal: preserve the verified two-page MVP, the completed first reader reintegration wave, and the new internal `UM UI` layer while bringing back interactive tool and proof surfaces under one shared shell family.
+Goal: turn the documented loose ends into an explicit execution queue, starting with canonical route policy and the remaining site-architecture issues, while keeping the calm public MVP and the standard/runtime boundaries intact.
 
 Immediate rule:
 
@@ -18,15 +18,20 @@ Immediate rule:
 
 Current WO sequence:
 
-1. `WO-0172` — publish the two-page MVP and contract the primary navigation -- COMPLETED
-2. `WO-0173` — tune homepage messaging and one-click spec prominence -- COMPLETED
-3. `WO-0174` — verify publication safeguards and continuity for the already-shared latest spec -- COMPLETED
-4. `WO-0175` — extract the internal `UM UI` component system from the tuned MVP shell -- COMPLETED
-5. `WO-0176` — reintroduce reading surfaces under the shared public shell -- COMPLETED
-6. `WO-0177` — reintroduce tool and proof surfaces under the shared tool shell -- COMPLETED
-7. `WO-0178` — fix the `/spec/latest/` inline TOC overlap and verify in browser -- COMPLETED
+1. `WO-0183` — canonical route and compatibility alias policy -- ACTIVE
+2. `WO-0184` — static tool surface shell alignment -- PLANNED
+3. `WO-0185` — latest spec surface strategy and shell implementation -- PLANNED
+4. `WO-0186` — fixture mirror source-of-truth consolidation -- PLANNED
+5. `WO-0187` — animation and diagram asset naming normalization -- PLANNED
+6. `WO-0188` — compatibility surface retirement readiness -- PLANNED
+7. `WO-0189` — v0.2 publication readiness and adopter verification -- PLANNED
+8. `WO-0190` — additional integrity profile decision package -- PLANNED
+9. `WO-0191` — revocation cursor and status contract -- PLANNED
+10. `WO-0192` — conformance suite TTL, replay, and security expansion -- PLANNED
+11. `WO-0193` — interactive manifest workbench hardening wave -- PLANNED
+12. `WO-0194` — first-time reader validation evidence pack -- PLANNED
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. There are currently no open formal work orders in `docs/workorders/`.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. The queue is now reopened around the remaining documented loose ends, starting with WO-0183.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 

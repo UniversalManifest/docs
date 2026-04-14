@@ -328,3 +328,21 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0180-surface-disposition-audit-and-route-classification.md` — [COMPLETED] Classified the current route families into shared-shell, Starlight-owned, and fragmented/legacy groups and recorded the audit in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.
 - `docs/workorders/WO-0181-remaining-site-unification-execution-sequence.md` — [COMPLETED] Defined the recommended next execution order for any future public-surface unification wave and recorded it in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.
 - `docs/workorders/WO-0182-tool-runtime-static-surface-boundary-decision-package.md` — [COMPLETED] Produced the keep/merge/alias/retire decision package for the remaining static, tool, and runtime-adjacent surfaces in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.
+
+### Remaining Site Architecture Execution Wave (WO-0183 through WO-0188)
+
+- `docs/workorders/WO-0183-canonical-route-and-compatibility-alias-policy.md` — [ACTIVE] Define the canonical-versus-alias-versus-retirement route policy so future public-surface work proceeds from one authoritative path model.
+- `docs/workorders/WO-0184-static-tool-surface-shell-alignment.md` — [PLANNED] Normalize the remaining raw static tool surfaces such as resolver pages, concept explorer framing, harness raw entry framing, and standalone 404 presentation.
+- `docs/workorders/WO-0185-latest-spec-surface-strategy-and-shell-implementation.md` — [PLANNED] Decide and implement the long-term architectural model for `/spec/latest/` so it remains standards-reader-friendly without staying an unresolved structural exception.
+- `docs/workorders/WO-0186-fixture-mirror-source-of-truth-consolidation.md` — [PLANNED] Make `examples/` the authored fixture source of truth while keeping site-published fixture copies as generated mirrors for browser tools.
+- `docs/workorders/WO-0187-animation-and-diagram-asset-naming-normalization.md` — [PLANNED] Normalize animation and diagram asset naming families while preserving continuity for externally referenced paths.
+- `docs/workorders/WO-0188-compatibility-surface-retirement-readiness.md` — [PLANNED] Define exit criteria for retiring compatibility-only routes and deploy layers once evidence shows they are no longer needed.
+
+### Remaining Standards and Proof Hardening Wave (WO-0189 through WO-0194)
+
+- `docs/workorders/WO-0189-v0-2-publication-readiness-and-adopter-verification.md` — [PLANNED] Move v0.2 toward publication readiness by defining broader adopter verification and evidence requirements.
+- `docs/workorders/WO-0190-additional-integrity-profile-decision-package.md` — [PLANNED] Evaluate whether and when UM should add integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline.
+- `docs/workorders/WO-0191-revocation-cursor-and-status-contract.md` — [PLANNED] Define whether revocation cursors, status references, and related status semantics become normative parts of the UM contract.
+- `docs/workorders/WO-0192-conformance-suite-ttl-replay-and-security-expansion.md` — [PLANNED] Expand conformance coverage for broader TTL, replay, and security cases that remain beyond the current baseline.
+- `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [PLANNED] Harden the interactive manifest workbench beyond its first public release while preserving the current public route/payload architecture unless a bounded migration is justified.
+- `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [PLANNED] Capture optional first-time reader validation evidence for the current public explanatory surfaces without turning it into a mandatory closure gate.
