@@ -318,3 +318,7 @@ Drift governance and follow-on WO trigger criteria:
 ### Public Spec Surface Bugfixes (WO-0178)
 
 - `docs/workorders/WO-0178-spec-latest-inline-toc-layout-and-gas-visual-verification.md` — [COMPLETED] Fixed the `/spec/latest/` inline table-of-contents overlap bug and verified both inline and sidebar modes in the browser.
+
+### Comprehensive Project Documentation Map (WO-0179)
+
+- `docs/workorders/WO-0179-comprehensive-project-properties-and-surfaces-documentation.md` — [COMPLETED] Added the canonical full-project/property/surface map in `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md` and wired it into the docs index and project knowledge pointer layer.

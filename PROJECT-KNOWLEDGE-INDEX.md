@@ -19,11 +19,12 @@ This document is the local pointer to the global GAS shared project index for Un
 ## Local-first quick start
 
 1. `docs/STATE-OF-THE-PROJECT.md`
-2. `docs/PROJECT-VISION.md`
-3. `spec/v0.1/README.md`
-4. `spec/v0.1/CONFORMANCE.md`
-5. `docs/DONE-DONE-DEFINITION.md`
-6. `docs/DECISIONS.md`
+2. `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`
+3. `docs/PROJECT-VISION.md`
+4. `spec/v0.1/README.md`
+5. `spec/v0.1/CONFORMANCE.md`
+6. `docs/DONE-DONE-DEFINITION.md`
+7. `docs/DECISIONS.md`
 
 ## Maintenance rule
 
