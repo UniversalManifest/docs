@@ -322,3 +322,9 @@ Drift governance and follow-on WO trigger criteria:
 ### Comprehensive Project Documentation Map (WO-0179)
 
 - `docs/workorders/WO-0179-comprehensive-project-properties-and-surfaces-documentation.md` — [COMPLETED] Added the canonical full-project/property/surface map in `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md` and wired it into the docs index and project knowledge pointer layer.
+
+### Post-WO-0179 Surface Strategy Wave (WO-0180 through WO-0182)
+
+- `docs/workorders/WO-0180-surface-disposition-audit-and-route-classification.md` — [COMPLETED] Classified the current route families into shared-shell, Starlight-owned, and fragmented/legacy groups and recorded the audit in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.
+- `docs/workorders/WO-0181-remaining-site-unification-execution-sequence.md` — [COMPLETED] Defined the recommended next execution order for any future public-surface unification wave and recorded it in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.
+- `docs/workorders/WO-0182-tool-runtime-static-surface-boundary-decision-package.md` — [COMPLETED] Produced the keep/merge/alias/retire decision package for the remaining static, tool, and runtime-adjacent surfaces in `docs/reports/2026-04-13-post-wo-0179-surface-disposition-and-unification-strategy.md`.

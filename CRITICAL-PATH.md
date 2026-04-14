@@ -26,7 +26,7 @@ Current WO sequence:
 6. `WO-0177` — reintroduce tool and proof surfaces under the shared tool shell -- COMPLETED
 7. `WO-0178` — fix the `/spec/latest/` inline TOC overlap and verify in browser -- COMPLETED
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, and WO-0179 added the canonical full-project/property/surface map. There are currently no open formal work orders in `docs/workorders/`.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. There are currently no open formal work orders in `docs/workorders/`.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 
