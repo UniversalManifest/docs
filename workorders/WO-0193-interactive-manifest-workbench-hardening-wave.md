@@ -31,6 +31,7 @@ Out of scope:
 
 ## Dependencies
 
+- WO-0183 canonical route and compatibility alias policy.
 - Existing workbench payload and shared-shell hosting model.
 
 ## Acceptance Criteria

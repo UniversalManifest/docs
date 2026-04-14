@@ -33,6 +33,7 @@ Out of scope:
 ## Dependencies
 
 - WO-0183 canonical route and compatibility alias policy.
+- Outputs of WO-0184 through WO-0187, because retirement readiness depends on the post-alignment shell strategy, the `/spec/latest/` long-term model, fixture-mirror policy, and asset continuity decisions.
 
 ## Acceptance Criteria
 

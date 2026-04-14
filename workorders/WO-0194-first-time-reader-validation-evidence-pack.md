@@ -32,6 +32,8 @@ Out of scope:
 
 ## Dependencies
 
+- WO-0185 latest spec surface strategy and shell implementation.
+- Completion of the higher-signal public-surface changes that materially affect first-time-reader comprehension.
 - Current homepage, docs entry, one-pager, and latest spec split.
 
 ## Acceptance Criteria

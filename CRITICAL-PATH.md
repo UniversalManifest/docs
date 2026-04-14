@@ -16,22 +16,18 @@ Immediate rule:
 - reintegrated reading pages should stay under the shared public shell rather than reviving sprint-era visual fragmentation
 - tool and proof entry routes should return under a deliberate shared shell without replacing the calm MVP front door
 
-Current WO sequence:
+Execution batches for automated mode:
 
-1. `WO-0183` — canonical route and compatibility alias policy -- ACTIVE
-2. `WO-0184` — static tool surface shell alignment -- PLANNED
-3. `WO-0185` — latest spec surface strategy and shell implementation -- PLANNED
-4. `WO-0186` — fixture mirror source-of-truth consolidation -- PLANNED
-5. `WO-0187` — animation and diagram asset naming normalization -- PLANNED
-6. `WO-0188` — compatibility surface retirement readiness -- PLANNED
-7. `WO-0189` — v0.2 publication readiness and adopter verification -- PLANNED
-8. `WO-0190` — additional integrity profile decision package -- PLANNED
-9. `WO-0191` — revocation cursor and status contract -- PLANNED
-10. `WO-0192` — conformance suite TTL, replay, and security expansion -- PLANNED
-11. `WO-0193` — interactive manifest workbench hardening wave -- PLANNED
-12. `WO-0194` — first-time reader validation evidence pack -- PLANNED
+1. Serial gate: `WO-0183` — canonical route and compatibility alias policy -- ACTIVE
+2. Independent parallel lane: `WO-0186` — fixture mirror source-of-truth consolidation -- PLANNED
+3. Parallel site-architecture lane after `WO-0183`: `WO-0184`, `WO-0185`, and `WO-0187` -- PLANNED
+4. Site-architecture convergence after `WO-0184`, `WO-0185`, and `WO-0187`: `WO-0188` -- PLANNED
+5. Parallel standards/proof decision lanes: `WO-0190`, `WO-0191`, and `WO-0193` -- PLANNED
+6. Standards/proof convergence after `WO-0190` and `WO-0191`: `WO-0192` -- PLANNED
+7. Publication-readiness synthesis after `WO-0190`, `WO-0191`, and `WO-0192`: `WO-0189` -- PLANNED
+8. Final optional validation after the major public-surface and standards/proof changes are stable: `WO-0194` -- PLANNED
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. The queue is now reopened around the remaining documented loose ends, starting with WO-0183.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. The queue is now reopened around the remaining documented loose ends, and the remaining work is organized into automation-ready serial gates, parallel lanes, and convergence batches starting with WO-0183.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 

@@ -31,6 +31,7 @@ Out of scope:
 
 ## Dependencies
 
+- Outputs of WO-0190 and WO-0191 where integrity-profile and revocation/status decisions affect expected conformance behavior.
 - Existing `examples/`, `spec/`, and `conformance/` baselines.
 
 ## Acceptance Criteria

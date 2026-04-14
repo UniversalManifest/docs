@@ -346,3 +346,54 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0192-conformance-suite-ttl-replay-and-security-expansion.md` — [PLANNED] Expand conformance coverage for broader TTL, replay, and security cases that remain beyond the current baseline.
 - `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [PLANNED] Harden the interactive manifest workbench beyond its first public release while preserving the current public route/payload architecture unless a bounded migration is justified.
 - `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [PLANNED] Capture optional first-time reader validation evidence for the current public explanatory surfaces without turning it into a mandatory closure gate.
+
+### Automated Orchestrator Execution Order for Remaining Queue
+
+Use this section as the canonical long-run plan. It defines what must run serially, what may run in parallel, and where the queue must reconverge before later work starts.
+
+#### Batch 0 — Serial gate
+
+- `WO-0183` must run first. It establishes the canonical route, alias, and retirement model that the remaining site-architecture lane depends on.
+
+#### Batch 1 — Parallel site-architecture lanes
+
+`WO-0186` is already unblocked because its dependency (`WO-0182`) is complete. It does not need to wait for `WO-0183`.
+
+Run now or alongside Batch 0:
+
+- `WO-0186` fixture mirror source-of-truth consolidation
+
+After `WO-0183`, these can run in parallel because they depend on route policy but address different surface families:
+
+- `WO-0184` static tool surface shell alignment
+- `WO-0185` latest spec surface strategy and shell implementation
+- `WO-0187` animation and diagram asset naming normalization
+
+#### Batch 2 — Serial site-architecture convergence
+
+- `WO-0188` runs after `WO-0184`, `WO-0185`, and `WO-0187`. Retirement readiness is only meaningful once the post-alignment canonical, alias, and asset-continuity decisions are settled.
+
+#### Batch 3 — Parallel standards/proof decision lanes
+
+These can run in parallel with the site-architecture wave once staffing is available:
+
+- `WO-0190` additional integrity profile decision package
+- `WO-0191` revocation cursor and status contract
+- `WO-0193` interactive manifest workbench hardening wave
+
+`WO-0193` is parallel-safe here because it is a tool-hardening lane rather than a normative standards-decision lane, but it should still respect the canonical route model from `WO-0183`.
+
+#### Batch 4 — Standards/proof convergence
+
+- `WO-0192` runs after `WO-0190` and `WO-0191`, because conformance expansion should reflect the settled integrity-profile and revocation/status decisions wherever those decisions change expected behavior.
+- `WO-0189` runs after `WO-0190`, `WO-0191`, and `WO-0192`, because publication readiness is the synthesis and evidence package that should be based on the settled standards decisions rather than preceding them.
+
+#### Batch 5 — Final optional validation lane
+
+- `WO-0194` runs last, after the major public-surface and standards/proof decisions that affect first-time-reader comprehension are stable. It is intentionally last because it is validation evidence, not a design-input gate.
+
+#### Parallelization rule for automated mode
+
+- Do not start a work order early just because staffing is available if its upstream batch is not complete.
+- Within an open batch, parallelize freely as long as the write scopes do not overlap and each agent has a bounded ownership area.
+- When a batch contains both governance/decision work and implementation work, land the governance artifact first if the implementation depends on it materially.

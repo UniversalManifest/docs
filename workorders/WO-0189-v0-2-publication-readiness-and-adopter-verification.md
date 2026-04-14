@@ -32,6 +32,7 @@ Out of scope:
 
 ## Dependencies
 
+- Outputs of WO-0190, WO-0191, and WO-0192 where integrity-profile, revocation/status, and conformance decisions materially affect v0.2 publication readiness.
 - Existing v0.2 artifacts in `spec/v0.2/`, `examples/v0.2/`, and current conformance material.
 
 ## Acceptance Criteria
