@@ -29,6 +29,8 @@ Canonical repo path: `<repo-root>`
 - [`docs/DEPTH-AND-SCOPE.md`](DEPTH-AND-SCOPE.md) — High-level depth + scope map for this repo
 - [`docs/STATE-OF-THE-PROJECT.md`](STATE-OF-THE-PROJECT.md) — Current status, milestones, and next steps
 - [`docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`](COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md) — Full structural map of repo ownership, public properties, route families, runtime surfaces, and source-of-truth boundaries
+- [`docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`](CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md) — Canonical versus alias-only route policy for public paths, compatibility shims, and retirement candidates
+- [`docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`](FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md) — Canonical authored-versus-generated policy for fixtures, browser-published mirrors, and sync behavior
 - [`docs/CRITICAL-PATH.md`](CRITICAL-PATH.md) — Minimal sequence for adoption + publishing + “world-ready” claims
 - [`docs/UNIVERSAL-MANIFEST-BRIEFING.md`](UNIVERSAL-MANIFEST-BRIEFING.md) — Full AI agent briefing on the Universal Manifest standard
 - [`docs/MANDATE-interactive-implementation-sandbox.md`](MANDATE-interactive-implementation-sandbox.md) — CEO mandate for the interactive implementation sandbox

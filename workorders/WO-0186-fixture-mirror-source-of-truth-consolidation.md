@@ -1,8 +1,9 @@
 # WO-0186 -- Fixture Mirror Source-of-Truth Consolidation
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
+**Completed:** 2026-04-13
 
 ## Objective
 
@@ -31,12 +32,22 @@ Out of scope:
 - Sync/generation policy for published mirrors.
 - Implementation pass if tooling updates are needed.
 
+## Completion Notes
+
+- Added the canonical fixture policy document at `docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`.
+- Recorded the docs-side closeout in `docs/reports/2026-04-13-fixture-mirror-source-of-truth-consolidation.md`.
+- The paired implementation slice now centralizes fixture mirror definitions in `site/scripts/fixture-mirrors.mjs` and uses that shared model from:
+  - `site/scripts/sync-harness-fixtures.mjs`
+  - `site/scripts/sync-sandbox-fixtures.mjs`
+  - `site/scripts/sync-agent-discovery.mjs`
+- The public fixture catalog now exposes authored provenance alongside published paths so generated mirrors are explicit rather than implied.
+
 ## Dependencies
 
 - WO-0182 tool/runtime/static boundary decision package.
 
 ## Acceptance Criteria
 
-- [ ] Authored fixture truth is explicit.
-- [ ] Published fixture mirrors are documented as generated copies.
-- [ ] Drift risk between fixture trees is materially reduced.
+- [x] Authored fixture truth is explicit.
+- [x] Published fixture mirrors are documented as generated copies.
+- [x] Drift risk between fixture trees is materially reduced.

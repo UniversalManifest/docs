@@ -331,10 +331,10 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Remaining Site Architecture Execution Wave (WO-0183 through WO-0188)
 
-- `docs/workorders/WO-0183-canonical-route-and-compatibility-alias-policy.md` — [ACTIVE] Define the canonical-versus-alias-versus-retirement route policy so future public-surface work proceeds from one authoritative path model.
+- `docs/workorders/WO-0183-canonical-route-and-compatibility-alias-policy.md` — [COMPLETED] Defined the canonical-versus-alias-versus-retirement route policy in `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md` and recorded the closeout in `docs/reports/2026-04-13-canonical-route-and-compatibility-alias-policy.md`.
 - `docs/workorders/WO-0184-static-tool-surface-shell-alignment.md` — [PLANNED] Normalize the remaining raw static tool surfaces such as resolver pages, concept explorer framing, harness raw entry framing, and standalone 404 presentation.
 - `docs/workorders/WO-0185-latest-spec-surface-strategy-and-shell-implementation.md` — [PLANNED] Decide and implement the long-term architectural model for `/spec/latest/` so it remains standards-reader-friendly without staying an unresolved structural exception.
-- `docs/workorders/WO-0186-fixture-mirror-source-of-truth-consolidation.md` — [PLANNED] Make `examples/` the authored fixture source of truth while keeping site-published fixture copies as generated mirrors for browser tools.
+- `docs/workorders/WO-0186-fixture-mirror-source-of-truth-consolidation.md` — [COMPLETED] Defined `examples/` as authored fixture truth, documented generated site mirrors in `docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`, and closed the docs-side slice in `docs/reports/2026-04-13-fixture-mirror-source-of-truth-consolidation.md`.
 - `docs/workorders/WO-0187-animation-and-diagram-asset-naming-normalization.md` — [PLANNED] Normalize animation and diagram asset naming families while preserving continuity for externally referenced paths.
 - `docs/workorders/WO-0188-compatibility-surface-retirement-readiness.md` — [PLANNED] Define exit criteria for retiring compatibility-only routes and deploy layers once evidence shows they are no longer needed.
 
@@ -351,19 +351,19 @@ Drift governance and follow-on WO trigger criteria:
 
 Use this section as the canonical long-run plan. It defines what must run serially, what may run in parallel, and where the queue must reconverge before later work starts.
 
-#### Batch 0 — Serial gate
+#### Batch 0 — Serial gate -- COMPLETE
 
-- `WO-0183` must run first. It establishes the canonical route, alias, and retirement model that the remaining site-architecture lane depends on.
+- `WO-0183` established the canonical route, alias, and retirement model that the remaining site-architecture lane depends on.
 
-#### Batch 1 — Parallel site-architecture lanes
+#### Batch 1 — Parallel site-architecture lanes -- ACTIVE
 
-`WO-0186` is already unblocked because its dependency (`WO-0182`) is complete. It does not need to wait for `WO-0183`.
+`WO-0186` was already unblocked because its dependency (`WO-0182`) was complete. It did not need to wait for `WO-0183`, and it is now closed.
 
-Run now or alongside Batch 0:
+Completed in this batch:
 
 - `WO-0186` fixture mirror source-of-truth consolidation
 
-After `WO-0183`, these can run in parallel because they depend on route policy but address different surface families:
+Next unblocked in this batch after the closed route-policy gate:
 
 - `WO-0184` static tool surface shell alignment
 - `WO-0185` latest spec surface strategy and shell implementation

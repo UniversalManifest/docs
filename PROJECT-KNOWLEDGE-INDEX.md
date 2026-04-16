@@ -20,11 +20,13 @@ This document is the local pointer to the global GAS shared project index for Un
 
 1. `docs/STATE-OF-THE-PROJECT.md`
 2. `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`
-3. `docs/PROJECT-VISION.md`
-4. `spec/v0.1/README.md`
-5. `spec/v0.1/CONFORMANCE.md`
-6. `docs/DONE-DONE-DEFINITION.md`
-7. `docs/DECISIONS.md`
+3. `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`
+4. `docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`
+5. `docs/PROJECT-VISION.md`
+6. `spec/v0.1/README.md`
+7. `spec/v0.1/CONFORMANCE.md`
+8. `docs/DONE-DONE-DEFINITION.md`
+9. `docs/DECISIONS.md`
 
 ## Maintenance rule
 

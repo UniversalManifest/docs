@@ -70,7 +70,9 @@ Current repo history contains `localartist.network` namespace references in v0.1
 Migration policy:
 
 - Keep `localartist.network/ns/universal-manifest/...` resolvable as compatibility aliases.
+- Treat `localartist.network` as compatibility infrastructure rather than a canonical active property.
 - Implementation note: `docs/LEGACY-LOCALARTIST-NETWORK-COMPATIBILITY.md`
+- Canonical route posture: `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`
 - Publish new canonical artifacts on `universalmanifest.net/ns/universal-manifest/...`.
 - Do not break old references once published.
 

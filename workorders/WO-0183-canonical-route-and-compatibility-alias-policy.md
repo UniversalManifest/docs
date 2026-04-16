@@ -1,8 +1,9 @@
 # WO-0183 -- Canonical Route and Compatibility Alias Policy
 
-**Status:** ACTIVE
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
+**Completed:** 2026-04-13
 
 ## Objective
 
@@ -33,6 +34,19 @@ Out of scope:
 - Alias/redirect policy for legacy public paths.
 - Updated docs and deploy guidance reflecting the canonical route set.
 
+## Completion Notes
+
+- Added the canonical policy document at `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`.
+- Classified the current public route model into canonical routes, compatibility aliases, and retirement candidates.
+- Wired the route policy into:
+  - `docs/DOMAIN-ARCHITECTURE.md`
+  - `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`
+  - `docs/README.md`
+  - `docs/PROJECT-KNOWLEDGE-INDEX.md`
+  - `deploy/universalmanifest.net/README.md`
+  - `deploy/universalmanifest.net/CLOUDFLARE-PAGES.md`
+- Recorded the closeout in `docs/reports/2026-04-13-canonical-route-and-compatibility-alias-policy.md`.
+
 ## Dependencies
 
 - WO-0180 classified the current route families.
@@ -40,7 +54,7 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Canonical routes are explicitly documented.
-- [ ] Compatibility-only routes are explicitly documented.
-- [ ] Retirement candidates have documented exit criteria.
-- [ ] Future site work can reference one authoritative route policy.
+- [x] Canonical routes are explicitly documented.
+- [x] Compatibility-only routes are explicitly documented.
+- [x] Retirement candidates have documented exit criteria.
+- [x] Future site work can reference one authoritative route policy.

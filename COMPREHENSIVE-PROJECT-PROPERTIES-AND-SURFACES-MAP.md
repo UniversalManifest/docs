@@ -12,6 +12,10 @@ It exists to answer five questions clearly:
 
 If `README.md` is the short front door and `STATE-OF-THE-PROJECT.md` is the current snapshot, this file is the full structural map.
 
+Route posture for canonical versus compatibility-only public paths is defined separately in:
+
+- `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`
+
 ## 1. Executive Model
 
 Universal Manifest is not a single app and not only a specification.
