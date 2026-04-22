@@ -332,7 +332,7 @@ Drift governance and follow-on WO trigger criteria:
 ### Remaining Site Architecture Execution Wave (WO-0183 through WO-0188)
 
 - `docs/workorders/WO-0183-canonical-route-and-compatibility-alias-policy.md` — [COMPLETED] Defined the canonical-versus-alias-versus-retirement route policy in `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md` and recorded the closeout in `docs/reports/2026-04-13-canonical-route-and-compatibility-alias-policy.md`.
-- `docs/workorders/WO-0184-static-tool-surface-shell-alignment.md` — [PLANNED] Normalize the remaining raw static tool surfaces such as resolver pages, concept explorer framing, harness raw entry framing, and standalone 404 presentation.
+- `docs/workorders/WO-0184-static-tool-surface-shell-alignment.md` — [COMPLETED] Aligned `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` under the shared shell strategy while preserving subordinate raw payload paths; closeout recorded in `docs/reports/2026-04-22-static-tool-surface-shell-alignment-closeout.md`.
 - `docs/workorders/WO-0185-latest-spec-surface-strategy-and-shell-implementation.md` — [PLANNED] Decide and implement the long-term architectural model for `/spec/latest/` so it remains standards-reader-friendly without staying an unresolved structural exception.
 - `docs/workorders/WO-0186-fixture-mirror-source-of-truth-consolidation.md` — [COMPLETED] Defined `examples/` as authored fixture truth, documented generated site mirrors in `docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`, and closed the docs-side slice in `docs/reports/2026-04-13-fixture-mirror-source-of-truth-consolidation.md`.
 - `docs/workorders/WO-0187-animation-and-diagram-asset-naming-normalization.md` — [PLANNED] Normalize animation and diagram asset naming families while preserving continuity for externally referenced paths.
@@ -361,17 +361,17 @@ Use this section as the canonical long-run plan. It defines what must run serial
 
 Completed in this batch:
 
+- `WO-0184` static tool surface shell alignment
 - `WO-0186` fixture mirror source-of-truth consolidation
 
-Next unblocked in this batch after the closed route-policy gate:
+Remaining active in this batch:
 
-- `WO-0184` static tool surface shell alignment
 - `WO-0185` latest spec surface strategy and shell implementation
 - `WO-0187` animation and diagram asset naming normalization
 
 #### Batch 2 — Serial site-architecture convergence
 
-- `WO-0188` runs after `WO-0184`, `WO-0185`, and `WO-0187`. Retirement readiness is only meaningful once the post-alignment canonical, alias, and asset-continuity decisions are settled.
+- `WO-0188` runs after the remaining `WO-0185` and `WO-0187` lanes and depends on the already-closed `WO-0184` and `WO-0186` outputs. Retirement readiness is only meaningful once the post-alignment canonical, alias, asset-continuity, and raw-payload-preservation decisions are settled.
 
 #### Batch 3 — Parallel standards/proof decision lanes
 

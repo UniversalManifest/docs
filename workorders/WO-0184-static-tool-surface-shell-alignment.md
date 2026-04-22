@@ -1,8 +1,9 @@
 # WO-0184 -- Static Tool Surface Shell Alignment
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
+**Completed:** 2026-04-22
 
 ## Objective
 
@@ -30,12 +31,20 @@ Out of scope:
 - Shell/framing strategy for resolver static pages, concept explorer, harness raw entry, and 404.
 - Implementation pass on the chosen route-level alignment.
 
+## Completion Notes
+
+- Closed the docs-side slice against the verified clean-branch implementation for `WO-0184`.
+- Route/shell alignment now covers `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/`.
+- Raw payloads remain preserved behind subordinate app paths where needed, including `/resolver/app/` and `/tools/concept-explorer/app/`, so the route framing changed without rewriting the underlying tool payloads.
+- Build passed for the paired implementation slice, and browser verification was clean for `/404.html`, `/proof/harness/`, `/resolver/`, and `/tools/concept-explorer/` after fixing the concept explorer payload path.
+- Recorded the docs closeout in `docs/reports/2026-04-22-static-tool-surface-shell-alignment-closeout.md`.
+
 ## Dependencies
 
 - WO-0183 canonical route and alias policy.
 
 ## Acceptance Criteria
 
-- [ ] Remaining static tool surfaces have a deliberate shell strategy.
-- [ ] Route-level fragmentation is reduced without destabilizing the raw payloads.
-- [ ] 404 and auxiliary static pages no longer feel disconnected from the broader site language.
+- [x] Remaining static tool surfaces have a deliberate shell strategy.
+- [x] Route-level fragmentation is reduced without destabilizing the raw payloads.
+- [x] 404 and auxiliary static pages no longer feel disconnected from the broader site language.
