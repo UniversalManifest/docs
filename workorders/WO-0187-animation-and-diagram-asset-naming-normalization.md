@@ -1,6 +1,6 @@
 # WO-0187 -- Animation and Diagram Asset Naming Normalization
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P2
 **Created:** 2026-04-13
 
@@ -37,6 +37,17 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Asset naming has a canonical convention.
-- [ ] Backward-compatibility needs are documented.
-- [ ] Future asset publication no longer compounds naming drift.
+- [x] Asset naming has a canonical convention.
+- [x] Backward-compatibility needs are documented.
+- [x] Future asset publication no longer compounds naming drift.
+
+## Closeout
+
+Docs-side closeout completed on 2026-04-22 after the root implementation slice was verified.
+
+Evidence:
+
+- `node site/scripts/verify-canonical-animations.mjs` passed.
+- `npm run build` passed.
+- Canonical overview diagram: `/diagrams/universal-manifest-system-overview.svg`.
+- Compatibility alias retained: `/diagrams/universal-manifest-overview-template.svg`.
