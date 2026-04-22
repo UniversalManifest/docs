@@ -1,8 +1,9 @@
 # WO-0185 -- Latest Spec Surface Strategy and Shell Implementation
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
+**Completed:** 2026-04-22
 
 ## Objective
 
@@ -30,12 +31,19 @@ Out of scope:
 - Decision package for the `/spec/latest/` architecture.
 - Implementation pass on the approved shell strategy.
 
+## Completion Notes
+
+- Chosen durable model: keep `/spec/latest/` as a dedicated W3C-style standards-reader surface, but move route-shell ownership into Astro instead of continuing to inject a full standalone HTML document verbatim.
+- `site/src/pages/spec/latest.astro` now extracts the checked-in spec document's head/body markup, emits the canonical page shell for `/spec/latest/`, and keeps internal public links host-relative.
+- `docs/W3C-STYLE-SPEC.html` remains the source of truth for the specification body, W3C reader styling, and TOC behavior, but it no longer owns the site navigation for the route.
+- Recorded the closeout and verification evidence in `docs/reports/2026-04-22-latest-spec-surface-strategy-and-shell-implementation.md`.
+
 ## Dependencies
 
 - WO-0183 canonical route and compatibility alias policy.
 
 ## Acceptance Criteria
 
-- [ ] `/spec/latest/` has a documented long-term architectural model.
-- [ ] The resulting surface preserves easy public access to the latest spec.
-- [ ] The implementation no longer feels like an unresolved structural exception.
+- [x] `/spec/latest/` has a documented long-term architectural model.
+- [x] The resulting surface preserves easy public access to the latest spec.
+- [x] The implementation no longer feels like an unresolved structural exception.
