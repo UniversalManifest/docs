@@ -1,6 +1,6 @@
 # WO-0188 -- Compatibility Surface Retirement Readiness
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P2
 **Created:** 2026-04-13
 
@@ -37,6 +37,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Compatibility-only surfaces have documented exit criteria.
-- [ ] Retirement sequencing is explicit.
-- [ ] The project can retire legacy surfaces deliberately rather than indefinitely.
+- [x] Compatibility-only surfaces have documented exit criteria.
+- [x] Retirement sequencing is explicit.
+- [x] The project can retire legacy surfaces deliberately rather than indefinitely.
+
+## Completion Notes
+
+- Retirement-readiness criteria are now documented in `docs/reports/2026-04-22-compatibility-surface-retirement-readiness.md`.
+- The readiness matrix distinguishes redirect-only compatibility surfaces, keep-for-now compatibility infrastructure, and later retire candidates.
+- The explicit retirement sequence now starts with low-risk alias-only routes, defers asset alias cleanup until later, and leaves `deploy/localartist.network/` as the highest-risk and latest retirement candidate.

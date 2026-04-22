@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
 **Date:** 2026-04-22
-**Status:** 182 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Consumer-first homepage and spec-subpage rebalance (WO-0171) COMPLETED. MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) COMPLETED. Public spec surface bugfix wave (WO-0178) COMPLETED. Comprehensive project/property/surface documentation wave (WO-0179) COMPLETED. Post-WO-0179 surface strategy wave (WO-0180 through WO-0182) COMPLETED. Remaining site architecture execution wave (WO-0183 through WO-0188) ACTIVE, with `WO-0183` through `WO-0187` now completed, and `WO-0188` pending that convergence. Remaining standards and proof hardening wave (WO-0189 through WO-0194) PLANNED.
+**Status:** 182 formal work orders defined in `docs/workorders/`. WO-0001 through WO-0052 complete. Interactive Sandbox Wave (WO-0060 through WO-0068) COMPLETED. Sandbox V2 Redesign (WO-0069 through WO-0080) COMPLETED. Audit-driven waves (WO-0081 through WO-0112) COMPLETED. External Adopter Wave (WO-0053 through WO-0059) COMPLETED (all seven work orders delivered with evidence on 2026-03-02). Deployment/Ops hardening follow-on (WO-0113 through WO-0118) COMPLETED. Runtime reality + credential durability waves (WO-0119 through WO-0124) COMPLETED. Go-Now Program Execution Wave (WO-0125 through WO-0126) COMPLETED. Privacy Signal Standards Review + Execution (WO-0127 through WO-0128) COMPLETED. Inbox Corpus Hygiene Wave (WO-0129) COMPLETED. Localized Source Follow-on Wave (WO-0130 through WO-0136) COMPLETED. Runtime Guidance and Spatial-Fabric Refresh Wave (WO-0137 through WO-0138) COMPLETED. RP1/MSF Adversarial Hardening Wave (WO-0139) COMPLETED. K2B Concept Integration Traceability (WO-0140) COMPLETED. Metaverse Portaling Integration (WO-0141) COMPLETED. Ecosystem Expansion & Architecture Research (WO-0142 through WO-0145) COMPLETED. IWPS Alignment and OMA3 Presentation Wave (WO-0146 through WO-0149) COMPLETED. Hackathon Learnings and Concept Documents (WO-0150 through WO-0155) COMPLETED. Agent-Friendly Multi-Surface Program (WO-0157 through WO-0160) COMPLETED. Landing-first public experience and cleanup wave (WO-0161 through WO-0164) COMPLETED. Consumer-first homepage and spec-subpage rebalance (WO-0171) COMPLETED. MVP-first site publication and staged reintegration wave (WO-0172 through WO-0177) COMPLETED. Public spec surface bugfix wave (WO-0178) COMPLETED. Comprehensive project/property/surface documentation wave (WO-0179) COMPLETED. Post-WO-0179 surface strategy wave (WO-0180 through WO-0182) COMPLETED. Remaining site architecture execution wave (WO-0183 through WO-0188) COMPLETED. Remaining standards and proof hardening wave (WO-0189 through WO-0194) ACTIVE, with `WO-0190`, `WO-0191`, and `WO-0193` now the active next batch.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -9,7 +9,7 @@ This repo remains a **spec-first project with fixtures and tooling**, but it is 
 
 The most important change in this refresh is that the public front door has now been rebalanced. `/` is once again a consumer-facing homepage, the latest W3C-style draft specification now lives at `/spec/latest/`, and the specification shell has site-level navigation instead of behaving like an isolated homepage.
 
-The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. The queue remains active for the remaining documented loose ends across site architecture, v0.2 publication, integrity profiles, revocation/status semantics, conformance depth, workbench hardening, and optional reader-validation evidence. The work-order index now encodes the automation-ready execution order, hard dependencies, and parallel-safe lanes for `WO-0183` through `WO-0194`; `WO-0183` through `WO-0187` are now closed, and `WO-0188` is the remaining active site-architecture lane before broader convergence.
+The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. `WO-0188` has now defined explicit retirement-readiness criteria for compatibility-only routes, deploy layers, and asset aliases, including the sequencing that keeps `deploy/localartist.network/` as the highest-risk and latest retirement candidate. The queue remains active for the remaining documented loose ends across v0.2 publication, integrity profiles, revocation/status semantics, conformance depth, workbench hardening, and optional reader-validation evidence. The work-order index now encodes the automation-ready execution order, hard dependencies, and parallel-safe lanes for `WO-0183` through `WO-0194`; `WO-0183` through `WO-0188` are now closed, and the active next batch is `WO-0190`, `WO-0191`, and `WO-0193`.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For the deepest single-file structural map, see: `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`.
@@ -133,22 +133,22 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 
 - Completed: `WO-0178` spec-latest inline TOC layout and GAS visual verification
 
-#### Remaining site architecture execution wave (WO-0183 through WO-0188) — ACTIVE
+#### Remaining site architecture execution wave (WO-0183 through WO-0188) — COMPLETED
 
 - Completed: `WO-0183` canonical route and compatibility alias policy
 - Completed: `WO-0184` static tool surface shell alignment
 - Completed: `WO-0185` latest spec surface strategy and shell implementation
 - Completed: `WO-0186` fixture mirror source-of-truth consolidation
 - Completed: `WO-0187` animation and diagram asset naming normalization
-- Planned: `WO-0188` compatibility surface retirement readiness
+- Completed: `WO-0188` compatibility surface retirement readiness
 
-#### Remaining standards and proof hardening wave (WO-0189 through WO-0194) — PLANNED
+#### Remaining standards and proof hardening wave (WO-0189 through WO-0194) — ACTIVE
 
 - Planned: `WO-0189` v0.2 publication readiness and adopter verification
-- Planned: `WO-0190` additional integrity profile decision package
-- Planned: `WO-0191` revocation cursor and status contract
+- Active next batch: `WO-0190` additional integrity profile decision package
+- Active next batch: `WO-0191` revocation cursor and status contract
 - Planned: `WO-0192` conformance suite TTL, replay, and security expansion
-- Planned: `WO-0193` interactive manifest workbench hardening wave
+- Active next batch: `WO-0193` interactive manifest workbench hardening wave
 - Planned: `WO-0194` first-time reader validation evidence pack
 
 - Completed: `WO-0001` through `WO-0013` (including `WO-0003` publishing/deploy)
@@ -361,7 +361,7 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 
 #### Formal queue status (2026-04-22)
 
-- The formal queue is open again under `docs/workorders/`, and the remaining active site-architecture lane is now `WO-0188` after the completed `WO-0183`, `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` gates.
+- The formal queue is open again under `docs/workorders/`, and the active next batch is now `WO-0190`, `WO-0191`, and `WO-0193` after the completed `WO-0183` through `WO-0188` site-architecture sequence.
 - `WO-0171` remains the closure artifact for the homepage/spec-route rebalance.
 - The previously cited frontier items `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` remain `COMPLETED`.
 - The identity-binding / Bag-of-Claims follow-on remains integrated into committed decision, threat-model, spec-delta, and schema artifacts rather than re-opened as a standalone proposal thread.

@@ -336,7 +336,7 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0185-latest-spec-surface-strategy-and-shell-implementation.md` — [COMPLETED] Kept `/spec/latest/` as the W3C-style latest-spec surface while moving route-shell ownership into `site/src/pages/spec/latest.astro`, with closeout recorded in `docs/reports/2026-04-22-latest-spec-surface-strategy-and-shell-implementation.md`.
 - `docs/workorders/WO-0186-fixture-mirror-source-of-truth-consolidation.md` — [COMPLETED] Defined `examples/` as authored fixture truth, documented generated site mirrors in `docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`, and closed the docs-side slice in `docs/reports/2026-04-13-fixture-mirror-source-of-truth-consolidation.md`.
 - `docs/workorders/WO-0187-animation-and-diagram-asset-naming-normalization.md` — [COMPLETED] Normalized animation and diagram asset naming families, established the canonical overview diagram path, and preserved continuity for externally referenced paths; closeout recorded in `docs/reports/2026-04-22-animation-and-diagram-asset-naming-normalization.md`.
-- `docs/workorders/WO-0188-compatibility-surface-retirement-readiness.md` — [PLANNED] Define exit criteria for retiring compatibility-only routes and deploy layers once evidence shows they are no longer needed.
+- `docs/workorders/WO-0188-compatibility-surface-retirement-readiness.md` — [COMPLETED] Defined the retirement-readiness matrix for compatibility-only routes, deploy layers, and asset aliases; closeout recorded in `docs/reports/2026-04-22-compatibility-surface-retirement-readiness.md`.
 
 ### Remaining Standards and Proof Hardening Wave (WO-0189 through WO-0194)
 
@@ -366,11 +366,11 @@ Completed in this batch:
 - `WO-0186` fixture mirror source-of-truth consolidation
 - `WO-0187` animation and diagram asset naming normalization
 
-#### Batch 2 — Serial site-architecture convergence
+#### Batch 2 — Serial site-architecture convergence -- COMPLETE
 
-- `WO-0188` runs after the closed `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` outputs. Retirement readiness is only meaningful once the post-alignment canonical, alias, asset-continuity, and raw-payload-preservation decisions are settled.
+- `WO-0188` ran after the closed `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` outputs. Retirement readiness is now defined against the settled canonical, alias, asset-continuity, and raw-payload-preservation decisions.
 
-#### Batch 3 — Parallel standards/proof decision lanes
+#### Batch 3 — Parallel standards/proof decision lanes -- ACTIVE
 
 These can run in parallel with the site-architecture wave once staffing is available:
 

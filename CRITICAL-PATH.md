@@ -4,9 +4,9 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current execution focus — Remaining site-architecture convergence -- ACTIVE
+## Current execution focus — Parallel standards/proof decision lanes -- ACTIVE
 
-Goal: execute the post-route-policy site-architecture lanes in the documented order while keeping the calm public MVP, the canonical route model, and the standards/runtime boundary intact.
+Goal: execute the next standards/proof decision batch in the documented order while preserving the calm public MVP, the canonical route model, and the standards/runtime boundary already established.
 
 Immediate rule:
 
@@ -21,13 +21,13 @@ Execution batches for automated mode:
 1. Serial gate: `WO-0183` — canonical route and compatibility alias policy -- COMPLETED
 2. Independent parallel lane: `WO-0186` — fixture mirror source-of-truth consolidation -- COMPLETED
 3. Final remaining site-architecture lane after closed `WO-0184`, `WO-0185`, and `WO-0186`: `WO-0187` -- COMPLETED
-4. Site-architecture convergence after the closed `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` outputs: `WO-0188` -- ACTIVE NEXT LANE
-5. Parallel standards/proof decision lanes: `WO-0190`, `WO-0191`, and `WO-0193` -- PLANNED
+4. Site-architecture convergence after the closed `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` outputs: `WO-0188` -- COMPLETED
+5. Parallel standards/proof decision lanes: `WO-0190`, `WO-0191`, and `WO-0193` -- ACTIVE NEXT BATCH
 6. Standards/proof convergence after `WO-0190` and `WO-0191`: `WO-0192` -- PLANNED
 7. Publication-readiness synthesis after `WO-0190`, `WO-0191`, and `WO-0192`: `WO-0189` -- PLANNED
 8. Final optional validation after the major public-surface and standards/proof changes are stable: `WO-0194` -- PLANNED
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` closed the route-policy gate, `WO-0184` aligned `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` under the shared shell model while preserving subordinate raw payloads where needed, `WO-0185` moved `/spec/latest/` from raw full-document injection to an Astro-owned route shell while preserving the W3C-style reading surface, `WO-0186` closed the fixture source-of-truth lane, and `WO-0187` closes the animation and diagram asset naming normalization lane. `WO-0188` is now the remaining active site-architecture lane before broader convergence.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` closed the route-policy gate, `WO-0184` aligned `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` under the shared shell model while preserving subordinate raw payloads where needed, `WO-0185` moved `/spec/latest/` from raw full-document injection to an Astro-owned route shell while preserving the W3C-style reading surface, `WO-0186` closed the fixture source-of-truth lane, `WO-0187` closed the animation and diagram asset naming normalization lane, and `WO-0188` defined retirement-readiness criteria for compatibility-only surfaces. The active queue now advances into the parallel standards/proof decision batch: `WO-0190`, `WO-0191`, and `WO-0193`.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 
