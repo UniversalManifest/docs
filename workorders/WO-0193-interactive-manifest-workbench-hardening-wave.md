@@ -1,6 +1,6 @@
 # WO-0193 -- Interactive Manifest Workbench Hardening Wave
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P2
 **Created:** 2026-04-13
 
@@ -36,6 +36,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] The key post-first-release hardening gaps are documented.
-- [ ] The workbench becomes more reliable and maintainable.
-- [ ] Verification evidence exists for the hardening slice.
+- [x] The key post-first-release hardening gaps are documented.
+- [x] The workbench becomes more reliable and maintainable.
+- [x] Verification evidence exists for the hardening slice.
+
+## Completion Notes
+
+- The chosen hardening slice addressed silent loss and misuse of unapplied edits in the workbench.
+- Core draft-state and validation logic was extracted into a testable module, and the UI now autosaves local drafts, warns before destructive actions, and reports draft status clearly.
+- Closeout evidence is recorded in `docs/reports/2026-04-22-interactive-manifest-workbench-hardening-wave.md`.

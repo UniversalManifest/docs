@@ -1,6 +1,6 @@
 # WO-0192 -- Conformance Suite TTL, Replay, and Security Expansion
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
 
@@ -36,6 +36,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Missing TTL/replay/security gaps are explicitly covered.
-- [ ] New fixtures and expected behaviors are documented.
-- [ ] Conformance coverage is materially broader than the current baseline.
+- [x] Missing TTL/replay/security gaps are explicitly covered.
+- [x] New fixtures and expected behaviors are documented.
+- [x] Conformance coverage is materially broader than the current baseline.
+
+## Completion Notes
+
+- Added explicit v0.2 invalid fixtures for expired-for-use replay/freshness rejection and malformed `issuedAt`/`expiresAt` timestamps.
+- Updated `spec/v0.2/CONFORMANCE.md` and `conformance/v0.2/expected.json` to name the new cases.
+- Kept the slice bounded to validator-capable TTL/security checks and avoided new revocation transport machinery.

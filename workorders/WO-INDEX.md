@@ -341,10 +341,10 @@ Drift governance and follow-on WO trigger criteria:
 ### Remaining Standards and Proof Hardening Wave (WO-0189 through WO-0194)
 
 - `docs/workorders/WO-0189-v0-2-publication-readiness-and-adopter-verification.md` — [PLANNED] Move v0.2 toward publication readiness by defining broader adopter verification and evidence requirements.
-- `docs/workorders/WO-0190-additional-integrity-profile-decision-package.md` — [PLANNED] Evaluate whether and when UM should add integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline.
-- `docs/workorders/WO-0191-revocation-cursor-and-status-contract.md` — [PLANNED] Define whether revocation cursors, status references, and related status semantics become normative parts of the UM contract.
-- `docs/workorders/WO-0192-conformance-suite-ttl-replay-and-security-expansion.md` — [PLANNED] Expand conformance coverage for broader TTL, replay, and security cases that remain beyond the current baseline.
-- `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [PLANNED] Harden the interactive manifest workbench beyond its first public release while preserving the current public route/payload architecture unless a bounded migration is justified.
+- `docs/workorders/WO-0190-additional-integrity-profile-decision-package.md` — [COMPLETED] Deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline; closeout recorded in `docs/reports/2026-04-22-additional-integrity-profile-decision-package.md`.
+- `docs/workorders/WO-0191-revocation-cursor-and-status-contract.md` — [COMPLETED] Defined revocation/status as an optional extension lane rather than a universal v0.2 baseline requirement; closeout recorded in `docs/reports/2026-04-22-revocation-cursor-and-status-contract.md`.
+- `docs/workorders/WO-0192-conformance-suite-ttl-replay-and-security-expansion.md` — [COMPLETED] Added bounded v0.2 TTL/security invalid-fixture coverage and updated conformance packaging; closeout recorded in `docs/reports/2026-04-22-conformance-suite-ttl-replay-and-security-expansion.md`.
+- `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [COMPLETED] Hardened workbench draft safety and maintainability while preserving the current route architecture; closeout recorded in `docs/reports/2026-04-22-interactive-manifest-workbench-hardening-wave.md`.
 - `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [PLANNED] Capture optional first-time reader validation evidence for the current public explanatory surfaces without turning it into a mandatory closure gate.
 
 ### Automated Orchestrator Execution Order for Remaining Queue
@@ -370,7 +370,7 @@ Completed in this batch:
 
 - `WO-0188` ran after the closed `WO-0184`, `WO-0185`, `WO-0186`, and `WO-0187` outputs. Retirement readiness is now defined against the settled canonical, alias, asset-continuity, and raw-payload-preservation decisions.
 
-#### Batch 3 — Parallel standards/proof decision lanes -- ACTIVE
+#### Batch 3 — Parallel standards/proof decision lanes -- COMPLETE
 
 These can run in parallel with the site-architecture wave once staffing is available:
 
@@ -380,10 +380,10 @@ These can run in parallel with the site-architecture wave once staffing is avail
 
 `WO-0193` is parallel-safe here because it is a tool-hardening lane rather than a normative standards-decision lane, but it should still respect the canonical route model from `WO-0183`.
 
-#### Batch 4 — Standards/proof convergence
+#### Batch 4 — Standards/proof convergence -- ACTIVE
 
-- `WO-0192` runs after `WO-0190` and `WO-0191`, because conformance expansion should reflect the settled integrity-profile and revocation/status decisions wherever those decisions change expected behavior.
-- `WO-0189` runs after `WO-0190`, `WO-0191`, and `WO-0192`, because publication readiness is the synthesis and evidence package that should be based on the settled standards decisions rather than preceding them.
+- `WO-0192` ran after `WO-0190` and `WO-0191`, because conformance expansion should reflect the settled integrity-profile and revocation/status decisions wherever those decisions change expected behavior.
+- `WO-0189` now runs after the closed `WO-0190`, `WO-0191`, and `WO-0192` outputs, because publication readiness is the synthesis and evidence package that should be based on the settled standards decisions rather than preceding them.
 
 #### Batch 5 — Final optional validation lane
 
