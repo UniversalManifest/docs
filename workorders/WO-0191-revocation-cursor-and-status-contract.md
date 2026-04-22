@@ -1,6 +1,6 @@
 # WO-0191 -- Revocation Cursor and Status Contract
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
 
@@ -35,6 +35,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] The revocation/status problem is formally specified.
-- [ ] The repo has a clear normative-boundary decision.
-- [ ] Any resulting schema/conformance deltas are identified.
+- [x] The revocation/status problem is formally specified.
+- [x] The repo has a clear normative-boundary decision.
+- [x] Any resulting schema/conformance deltas are identified.
+
+## Completion Notes
+
+- The decision package is recorded in `docs/reports/2026-04-22-revocation-cursor-and-status-contract.md`.
+- The base v0.2 contract keeps revocation/status metadata optional and non-normative for ordinary verifiers.
+- Revocation-aware verification remains an opt-in conformance lane with explicit status resolution and cursor freshness rules.
