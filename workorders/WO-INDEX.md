@@ -340,12 +340,12 @@ Drift governance and follow-on WO trigger criteria:
 
 ### Remaining Standards and Proof Hardening Wave (WO-0189 through WO-0194)
 
-- `docs/workorders/WO-0189-v0-2-publication-readiness-and-adopter-verification.md` — [PLANNED] Move v0.2 toward publication readiness by defining broader adopter verification and evidence requirements.
+- `docs/workorders/WO-0189-v0-2-publication-readiness-and-adopter-verification.md` — [COMPLETED] Defined explicit v0.2 publication-readiness criteria, adopter-verification needs, and blocker evidence; closeout recorded in `docs/reports/2026-04-22-v0-2-publication-readiness-and-adopter-verification.md`.
 - `docs/workorders/WO-0190-additional-integrity-profile-decision-package.md` — [COMPLETED] Deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline; closeout recorded in `docs/reports/2026-04-22-additional-integrity-profile-decision-package.md`.
 - `docs/workorders/WO-0191-revocation-cursor-and-status-contract.md` — [COMPLETED] Defined revocation/status as an optional extension lane rather than a universal v0.2 baseline requirement; closeout recorded in `docs/reports/2026-04-22-revocation-cursor-and-status-contract.md`.
 - `docs/workorders/WO-0192-conformance-suite-ttl-replay-and-security-expansion.md` — [COMPLETED] Added bounded v0.2 TTL/security invalid-fixture coverage and updated conformance packaging; closeout recorded in `docs/reports/2026-04-22-conformance-suite-ttl-replay-and-security-expansion.md`.
 - `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [COMPLETED] Hardened workbench draft safety and maintainability while preserving the current route architecture; closeout recorded in `docs/reports/2026-04-22-interactive-manifest-workbench-hardening-wave.md`.
-- `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [PLANNED] Capture optional first-time reader validation evidence for the current public explanatory surfaces without turning it into a mandatory closure gate.
+- `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [COMPLETED] Packaged the current first-time-reader validation method and available evidence without turning it into a mandatory closure gate; closeout recorded in `docs/reports/2026-04-22-first-time-reader-validation-evidence-pack.md`.
 
 ### Automated Orchestrator Execution Order for Remaining Queue
 
@@ -380,14 +380,14 @@ These can run in parallel with the site-architecture wave once staffing is avail
 
 `WO-0193` is parallel-safe here because it is a tool-hardening lane rather than a normative standards-decision lane, but it should still respect the canonical route model from `WO-0183`.
 
-#### Batch 4 — Standards/proof convergence -- ACTIVE
+#### Batch 4 — Standards/proof convergence -- COMPLETE
 
 - `WO-0192` ran after `WO-0190` and `WO-0191`, because conformance expansion should reflect the settled integrity-profile and revocation/status decisions wherever those decisions change expected behavior.
-- `WO-0189` now runs after the closed `WO-0190`, `WO-0191`, and `WO-0192` outputs, because publication readiness is the synthesis and evidence package that should be based on the settled standards decisions rather than preceding them.
+- `WO-0189` then ran after the closed `WO-0190`, `WO-0191`, and `WO-0192` outputs, because publication readiness is the synthesis and evidence package that should be based on the settled standards decisions rather than preceding them.
 
-#### Batch 5 — Final optional validation lane
+#### Batch 5 — Final optional validation lane -- COMPLETE
 
-- `WO-0194` runs last, after the major public-surface and standards/proof decisions that affect first-time-reader comprehension are stable. It is intentionally last because it is validation evidence, not a design-input gate.
+- `WO-0194` ran last, after the major public-surface and standards/proof decisions that affect first-time-reader comprehension were stable. It remains optional evidence, not a design-input gate.
 
 #### Parallelization rule for automated mode
 

@@ -1,6 +1,6 @@
 # WO-0194 -- First-Time Reader Validation Evidence Pack
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P3
 **Created:** 2026-04-13
 
@@ -38,6 +38,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] Reader-validation evidence exists.
-- [ ] The method is documented.
-- [ ] The resulting findings are recorded without changing the closure model.
+- [x] Reader-validation evidence exists.
+- [x] The method is documented.
+- [x] The resulting findings are recorded without changing the closure model.
+
+## Completion Notes
+
+- The current method and evidence posture are now packaged in `docs/reports/2026-04-22-first-time-reader-validation-evidence-pack.md`.
+- Existing protocol/checklist and the dated first-time-reader evidence artifact are now explicitly linked as the optional evidence package for this lane.
+- The report records the limitation that the currently available evidence is AI-simulated/internal rather than a fresh external human run, without treating that limitation as a closure blocker.

@@ -1,6 +1,6 @@
 # WO-0189 -- v0.2 Publication Readiness and Adopter Verification
 
-**Status:** PLANNED
+**Status:** COMPLETED
 **Priority:** P1
 **Created:** 2026-04-13
 
@@ -37,6 +37,12 @@ Out of scope:
 
 ## Acceptance Criteria
 
-- [ ] v0.2 publication criteria are explicit.
-- [ ] Broader adopter-verification needs are explicit.
-- [ ] Remaining blockers are documented as evidence-based gaps rather than vague draft status.
+- [x] v0.2 publication criteria are explicit.
+- [x] Broader adopter-verification needs are explicit.
+- [x] Remaining blockers are documented as evidence-based gaps rather than vague draft status.
+
+## Completion Notes
+
+- Publication-readiness criteria and blocker evidence are now recorded in `docs/reports/2026-04-22-v0-2-publication-readiness-and-adopter-verification.md`.
+- The current honest posture remains “draft artifacts exist, but stronger publication readiness is still blocked.”
+- The blocker list is now explicit rather than implied.
