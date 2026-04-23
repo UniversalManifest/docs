@@ -347,6 +347,40 @@ Drift governance and follow-on WO trigger criteria:
 - `docs/workorders/WO-0193-interactive-manifest-workbench-hardening-wave.md` — [COMPLETED] Hardened workbench draft safety and maintainability while preserving the current route architecture; closeout recorded in `docs/reports/2026-04-22-interactive-manifest-workbench-hardening-wave.md`.
 - `docs/workorders/WO-0194-first-time-reader-validation-evidence-pack.md` — [COMPLETED] Packaged the current first-time-reader validation method and available evidence without turning it into a mandatory closure gate; closeout recorded in `docs/reports/2026-04-22-first-time-reader-validation-evidence-pack.md`.
 
+### Home-Cluster IA and Explorer Strategy (WO-0195)
+
+- `docs/workorders/WO-0195-home-cluster-sitemap-domain-audit-and-explorer-strategy.md` — [COMPLETED] Defined the `Home`-cluster sitemap, local-tab architecture, domain-of-thought audit, depth model, and metaverse-first explorer strategy in `docs/reports/2026-04-22-home-cluster-sitemap-domain-audit-and-explorer-strategy.md`.
+
+### Home-Cluster Content and Audience Rollout Wave (WO-0196 through WO-0205)
+
+Wave status:
+
+- [COMPLETED] `WO-0195` defined the home-cluster sitemap, domain audit, depth model, and explorer strategy.
+- [COMPLETED] `WO-0196` through `WO-0205` delivered the content architecture, audience strategy, explorer schema, content packs, route implementation, and publication-readiness pass.
+- There are currently no open formal work orders under `docs/workorders/`.
+
+Completed sequence:
+
+1. `docs/workorders/WO-0196-home-cluster-page-content-architecture-and-source-map.md` — [COMPLETED] Defined the page-by-page content architecture and source map for `Overview`, `Use Cases`, `Explorer`, `How It Works`, and `Standards Fit`; closeout recorded in `docs/reports/2026-04-22-home-cluster-page-content-architecture-and-source-map.md`.
+2. `docs/workorders/WO-0197-audience-landing-family-architecture-and-route-strategy.md` — [COMPLETED] Defined the audience-landing-page family, route model, and source mapping; closeout recorded in `docs/reports/2026-04-22-audience-landing-family-architecture-and-route-strategy.md`.
+3. `docs/workorders/WO-0198-explorer-lane-schema-content-template-and-hero-asset-brief-system.md` — [COMPLETED] Defined the explorer lane schema, hero-asset brief format, and ordered lane inventory; closeout recorded in `docs/reports/2026-04-22-explorer-lane-schema-content-template-and-hero-asset-brief-system.md`.
+4. `docs/workorders/WO-0199-metaverse-portaling-and-digital-worlds-content-pack.md` — [COMPLETED] Produced the lead metaverse portaling and digital-worlds content pack; closeout recorded in `docs/reports/2026-04-22-metaverse-portaling-and-digital-worlds-content-pack.md`.
+5. `docs/workorders/WO-0200-eu-self-sovereign-identity-and-digital-identity-content-pack.md` — [COMPLETED] Produced the EU SSI audience content pack; closeout recorded in `docs/reports/2026-04-22-eu-self-sovereign-identity-and-digital-identity-content-pack.md`.
+6. `docs/workorders/WO-0201-remaining-audience-and-use-case-content-packs.md` — [COMPLETED] Produced the remaining first-rollout audience and use-case content packs; closeout recorded in `docs/reports/2026-04-22-remaining-audience-and-use-case-content-packs.md`.
+7. `docs/workorders/WO-0202-home-cluster-route-shell-and-local-tab-navigation-implementation.md` — [COMPLETED] Implemented the `Home`-cluster route shell and local tab navigation; closeout recorded in `docs/reports/2026-04-22-home-cluster-route-shell-explorer-and-audience-implementation.md`.
+8. `docs/workorders/WO-0203-explorer-component-and-first-lane-integration.md` — [COMPLETED] Implemented the explorer component and first-lane integration; closeout recorded in `docs/reports/2026-04-22-home-cluster-route-shell-explorer-and-audience-implementation.md`.
+9. `docs/workorders/WO-0204-audience-landing-page-implementation-wave.md` — [COMPLETED] Implemented the first audience landing pages and family route; closeout recorded in `docs/reports/2026-04-22-home-cluster-route-shell-explorer-and-audience-implementation.md`.
+10. `docs/workorders/WO-0205-home-cluster-migration-harmonization-and-publication-readiness.md` — [COMPLETED] Verified, harmonized, and prepared the rollout for publication; closeout recorded in `docs/reports/2026-04-22-home-cluster-publication-readiness-and-harmonization.md`.
+
+Historical execution order:
+
+- `WO-0197` and `WO-0198` ran after the `WO-0196` serial gate
+- `WO-0199` and `WO-0200` then established the lead content packs
+- `WO-0201` completed the remaining first-wave content family
+- `WO-0202` implemented the shared route/tab shell
+- `WO-0203` and `WO-0204` implemented the explorer and audience-family surfaces
+- `WO-0205` closed the wave with harmonization and publication-readiness verification
+
 ### Automated Orchestrator Execution Order for Remaining Queue
 
 Use this section as the canonical long-run plan. It defines what must run serially, what may run in parallel, and where the queue must reconverge before later work starts.
