@@ -1,0 +1,553 @@
+{
+  "runId": "2026-04-24T04-06-15-409Z",
+  "createdAt": "2026-04-24T04:06:22.498Z",
+  "repoRoot": "/Users/grig/work/repo/universalmanifest",
+  "runtimeConfig": {
+    "lanSmokeMode": "auto",
+    "lanRepoPath": null
+  },
+  "preflight": [
+    {
+      "id": "P01",
+      "name": "universalmanifest.net build output",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:15.410Z",
+      "endedAt": "2026-04-24T04:06:15.652Z",
+      "details": {
+        "type": "command",
+        "startedAt": "2026-04-24T04:06:15.410Z",
+        "endedAt": "2026-04-24T04:06:15.651Z",
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": "",
+        "details": {
+          "distRoot": "/Users/grig/work/repo/universalmanifest/deploy/universalmanifest.net/dist"
+        }
+      }
+    }
+  ],
+  "journeys": [
+    {
+      "id": "J01",
+      "name": "Parse and ignore unknown fields",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:15.652Z",
+      "endedAt": "2026-04-24T04:06:16.927Z",
+      "details": {
+        "type": "shared-command",
+        "sharedCommand": "npm test",
+        "mappedCoverage": "J01 parse-and-ignore-unknown-fields",
+        "evidence": "v0.1 unknown-fields fixture is validated in the core conformance suite",
+        "startedAt": "2026-04-24T04:06:15.652Z",
+        "endedAt": "2026-04-24T04:06:16.927Z"
+      }
+    },
+    {
+      "id": "J02",
+      "name": "TTL and freshness",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:16.927Z",
+      "endedAt": "2026-04-24T04:06:16.927Z",
+      "details": {
+        "type": "shared-command",
+        "sharedCommand": "npm test",
+        "mappedCoverage": "J02 ttl-and-freshness",
+        "evidence": "issuedAt/expiresAt validity checks run in the core conformance suite",
+        "startedAt": "2026-04-24T04:06:15.652Z",
+        "endedAt": "2026-04-24T04:06:16.927Z"
+      }
+    },
+    {
+      "id": "J03",
+      "name": "Signature verification (v0.2)",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:16.927Z",
+      "endedAt": "2026-04-24T04:06:16.927Z",
+      "details": {
+        "type": "shared-command",
+        "sharedCommand": "npm test",
+        "mappedCoverage": "J03 signature-verification-v0.2",
+        "evidence": "v0.2 fixtures and invalid-signature cases run in the core conformance suite",
+        "startedAt": "2026-04-24T04:06:15.652Z",
+        "endedAt": "2026-04-24T04:06:16.927Z"
+      }
+    },
+    {
+      "id": "J04",
+      "name": "UMID resolution (myum resolver E2E)",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:16.927Z",
+      "endedAt": "2026-04-24T04:06:22.489Z",
+      "details": {
+        "type": "e2e",
+        "startedAt": "2026-04-24T04:06:16.928Z",
+        "endedAt": "2026-04-24T04:06:22.478Z",
+        "baseUrl": "http://localhost:8791",
+        "stdout": "\n ⛅️ wrangler 4.67.0 (update available 4.84.1)\n─────────────────────────────────────────────\nYour Worker has access to the following bindings:\nBinding                                             Resource          Mode\nenv.UMID_KV (83f581c0ca164d6bad52e4e63b708050)      KV Namespace      local\n\n⎔ Starting local server...\n[wrangler:info] Ready on http://localhost:8791\n[wrangler:info] GET /health 200 OK (142ms)\n[wrangler:info] GET /urn:uuid:does-not-exist 404 Not Found (5ms)\n[wrangler:info] GET /.well-known/myum-resolver.json 200 OK (1ms)\n[wrangler:info] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (2ms)\n[wrangler:info] GET /urn%3Auuid%3Aaaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa 200 OK (1ms)\n[wrangler:info] GET /b64u:dXJuOnV1aWQ6YWFhYWFhYWEtYWFhYS00YWFhLThhYWEtYWFhYWFhYWFhYWFh 200 OK (1ms)\n[wrangler:info] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (1ms)\n[wrangler:info] GET /urn%3Auuid%3Abbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb 307 Temporary Redirect (1ms)\n[wrangler:info] GET /urn%3Auuid%3Acccccccc-cccc-4ccc-8ccc-cccccccccccc 410 Gone (1ms)\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "J05",
+      "name": "LAN edge to display smoke (optional)",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.489Z",
+      "endedAt": "2026-04-24T04:06:22.489Z",
+      "details": {
+        "type": "skip",
+        "reason": "LAN repo path not configured (set UM_LAN_REPO_PATH or --lan-repo-path to enable)"
+      }
+    },
+    {
+      "id": "J06",
+      "name": "Public profile projection (non-LAN adopter proof)",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.489Z",
+      "endedAt": "2026-04-24T04:06:22.490Z",
+      "details": {
+        "type": "projection",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/social-profile-manifest.jsonld",
+        "projection": {
+          "umid": "urn:uuid:9db256d6-e70d-4d07-806d-185f7972aa14",
+          "subject": "did:key:z6MkiJulesChenExampleDid",
+          "name": "Jules Chen",
+          "description": "Generative visuals + ambient synth performances for small rooms and late-night galleries.",
+          "image": "https://media.localartist.network/avatars/jules-chen.jpg",
+          "activityPubActor": "https://localartist.network/@jules",
+          "sameAs": [
+            "https://localartist.network/@jules",
+            "https://matrix.to/#/@jules:localartist.network"
+          ],
+          "knowsAbout": [
+            "generative art",
+            "synth",
+            "projection mapping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J07",
+      "name": "RP1 spatial fabric projection lane",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.490Z",
+      "endedAt": "2026-04-24T04:06:22.491Z",
+      "details": {
+        "type": "projection",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:5f5e6f7a-1111-4a9a-8d5e-7c9a5f3e2b10",
+          "subject": "did:example:rp1-user-01",
+          "pointers": [
+            "rp1.fabric",
+            "rp1.anchorSet",
+            "rp1.placeGraph",
+            "rp1.attachmentIndex",
+            "rp1.assetProfile",
+            "rp1.sessionContext"
+          ],
+          "attachmentCount": 1,
+          "childScopeRef": "https://spatial.example.com/fabrics/gallery-lobby/index.msf",
+          "assetDeliveryFormats": [
+            "gltf",
+            "glb"
+          ],
+          "attachmentIndexObservedAt": "2026-03-06T18:02:00Z",
+          "attachmentIndexExpiresAt": "2026-03-06T18:17:00Z",
+          "attachmentIndexStatus": "active",
+          "sessionContextObservedAt": "2026-03-06T18:03:00Z",
+          "sessionContextExpiresAt": "2026-03-06T18:09:00Z",
+          "sessionContextStatus": "active",
+          "spatialLocationShare": "allowed",
+          "spatialAnchorShare": "allowed",
+          "spatialCrossWorldLinking": "denied",
+          "spatialSessionReplay": "denied"
+        }
+      }
+    },
+    {
+      "id": "J08",
+      "name": "Smart-glasses consent enforcement lane",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.491Z",
+      "endedAt": "2026-04-24T04:06:22.493Z",
+      "details": {
+        "type": "consent-enforcement",
+        "fixtures": [
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-consent-allowed-manifest.jsonld",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/smart-glasses-consent-denied-manifest.jsonld"
+        ],
+        "details": {
+          "allowedFixtureUmid": "urn:uuid:6a7b8c9d-2222-4b8d-9d44-9fd2d00a1201",
+          "deniedFixtureUmid": "urn:uuid:6a7b8c9d-3333-4b8d-9d44-9fd2d00a1202",
+          "faceVisibleAllowed": "allowed",
+          "faceVisibleDenied": "denied",
+          "autoSharePublicDenied": "denied"
+        }
+      }
+    },
+    {
+      "id": "J09",
+      "name": "Metaverse portaling and cross-world projection lane",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.493Z",
+      "endedAt": "2026-04-24T04:06:22.493Z",
+      "details": {
+        "type": "projection",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-crossworld-profile-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:7b8c9d0e-4444-4a3d-8a11-0dbf2ce44210",
+          "subject": "did:example:metaverse-user-01",
+          "pointers": [
+            "metaverse.profile",
+            "metaverse.avatar",
+            "metaverse.inventory",
+            "metaverse.socialGraph"
+          ],
+          "profilePublic": "allowed",
+          "voiceCapture": "denied"
+        }
+      }
+    },
+    {
+      "id": "J10",
+      "name": "Multi-provider personhood coexistence",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.493Z",
+      "endedAt": "2026-04-24T04:06:22.494Z",
+      "details": {
+        "type": "fixture-validation",
+        "fixtures": [
+          "mastodon-personhood-multi-credential-manifest.jsonld",
+          "bluesky-personhood-multi-credential-manifest.jsonld",
+          "multi-did-method-coverage-manifest.jsonld",
+          "did-vc-credential-lane-manifest.jsonld"
+        ],
+        "details": {
+          "mastodonPersonhoodClaims": 2,
+          "blueskyPersonhoodClaims": 2,
+          "didMethodCount": 3,
+          "didVcClaimsPresent": [
+            "didvc.credentialAttestation",
+            "didvc.identityBinding"
+          ],
+          "uniqueIds": 4,
+          "uniqueSubjects": 4
+        }
+      }
+    },
+    {
+      "id": "J11",
+      "name": "OMATrust attestation interoperability",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.494Z",
+      "endedAt": "2026-04-24T04:06:22.495Z",
+      "details": {
+        "type": "fixture-validation",
+        "fixtures": [
+          "oma-trust-proof-based-service-manifest.jsonld",
+          "oma-trust-trusted-attester-service-manifest.jsonld",
+          "oma-trust-lifecycle-edge-service-manifest.jsonld"
+        ],
+        "details": {
+          "supportedProofType": "pop-eip712",
+          "proofBasedAttestationClaims": 3,
+          "trustedAttesterClaimsChecked": [
+            "omatrust.attestation.endorsement",
+            "omatrust.attestation.certification"
+          ],
+          "lifecycleStatuses": [
+            "active",
+            "revoked",
+            "superseded"
+          ],
+          "uniqueIds": 3
+        }
+      }
+    },
+    {
+      "id": "J12",
+      "name": "Portable Identity Profile XR projection and consent behavior",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.495Z",
+      "endedAt": "2026-04-24T04:06:22.495Z",
+      "details": {
+        "type": "projection",
+        "fixtures": [
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-minimal-manifest.jsonld",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-avatar-pointers-manifest.jsonld",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-consent-matrix-manifest.jsonld"
+        ],
+        "details": {
+          "minimalSubject": "did:web:xr.example:users:alpha",
+          "avatarSubject": "did:web:xr.example:users:beta",
+          "consentSubject": "did:web:xr.example:users:gamma",
+          "minimalPointers": [
+            "portableIdentity.profile"
+          ],
+          "avatarPointers": [
+            "portableIdentity.avatar",
+            "portableIdentity.wearables",
+            "portableIdentity.translationProfile"
+          ],
+          "consentKeys": [
+            "portableIdentity.profilePublic",
+            "portableIdentity.voiceCapture",
+            "portableIdentity.translationEnabled",
+            "portableIdentity.analyticsShare",
+            "portableIdentity.recording.faceVisible"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J13",
+      "name": "Portable Identity Profile pairwise subject privacy",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.495Z",
+      "endedAt": "2026-04-24T04:06:22.495Z",
+      "details": {
+        "type": "privacy-lane",
+        "fixtures": [
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-a.jsonld",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/portable-identity-profile-xr-pairwise-subject-variant-b.jsonld"
+        ],
+        "details": {
+          "variantASubject": "did:web:retail-world.example:users:pairwise-9a3",
+          "variantBSubject": "did:web:game-world.example:users:pairwise-7f1",
+          "variantAProfilePointer": "https://profiles.example/xr/pairwise-9a3",
+          "variantBProfilePointer": "https://profiles.example/xr/pairwise-7f1"
+        }
+      }
+    },
+    {
+      "id": "J14",
+      "name": "Portable Identity Profile revocation-aware policy checks",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.495Z",
+      "endedAt": "2026-04-24T04:06:22.495Z",
+      "details": {
+        "type": "revocation-aware",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.2/portable-identity-profile-xr-revocation-metadata-v02.jsonld",
+        "details": {
+          "umid": "urn:uuid:2fbc6a45-aec3-40db-8a4b-8f7cab20f4ff",
+          "subject": "did:web:xr.example:issuers:portable-identity",
+          "statusRef": "https://status.xr.example/revocations/portable-identity/2fbc6a45",
+          "revocationCursor": "v1.cursor-20260305-122500",
+          "pointers": [
+            "portableIdentity.proofBundle"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J15",
+      "name": "MUM onboarding projection flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.495Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "projection",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-onboarding-projection-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:5fb44bd8-9d55-40af-80d1-3a07bda30f01",
+          "subject": "did:web:metaverse.example:users:onboarding-001",
+          "pointers": [
+            "metaverse.profile",
+            "metaverse.avatar",
+            "metaverse.inventory"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J16",
+      "name": "MUM consent propagation flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "consent-enforcement",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-consent-propagation-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:14b5c9ab-4ef1-4a84-94e5-2e5da30f0202",
+          "consentKeys": [
+            "metaverse.profilePublic",
+            "metaverse.socialGraphShare",
+            "metaverse.voiceCapture",
+            "metaverse.recording.faceVisible",
+            "metaverse.preferences.sync"
+          ],
+          "propagationScopeCount": 2
+        }
+      }
+    },
+    {
+      "id": "J17",
+      "name": "MUM compliance transaction flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "transaction-compliance",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-compliance-transaction-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:0f4fcbf1-8bf2-43e4-83a0-35fc0f2d0303",
+          "pointers": [
+            "metaverse.complianceProof",
+            "metaverse.profile"
+          ],
+          "complianceStatus": "approved"
+        }
+      }
+    },
+    {
+      "id": "J18",
+      "name": "MUM social and reputation portability flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "social-reputation",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-social-reputation-portability-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:6ed799ea-f6f8-4436-8ad5-fced0f4f0404",
+          "reputationLevel": "tier-2",
+          "reputationScore": "742",
+          "pointers": [
+            "metaverse.socialGraph",
+            "metaverse.reputation"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J19",
+      "name": "MUM preferences bundle projection flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "preferences",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-preferences-bundle-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:3bd94f5f-6d0c-45b3-b750-c90b39cc0505",
+          "pointerCount": 1,
+          "preferenceKeys": [
+            "prefs.language.primary",
+            "prefs.financial.currency",
+            "prefs.logistics.defaultRegion",
+            "prefs.security.mfaRequired",
+            "prefs.credentials.preferredFormat"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J20",
+      "name": "MUM freshness and change-log flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.496Z",
+      "details": {
+        "type": "freshness",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.2/metaverse-mum-cache-freshness-and-change-log-v02.jsonld",
+        "details": {
+          "umid": "urn:uuid:c8e9b0f7-8618-4ffd-b8a7-4fd00b4f0606",
+          "statusRef": "https://status.metaverse.example/revocations/freshness-001",
+          "revocationCursor": "v1.cursor-20260305-132500",
+          "pointers": [
+            "metaverse.profile",
+            "metaverse.complianceProof",
+            "metaverse.changeLog"
+          ]
+        }
+      }
+    },
+    {
+      "id": "J21",
+      "name": "GPC runtime signal and evidence projection flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.496Z",
+      "endedAt": "2026-04-24T04:06:22.497Z",
+      "details": {
+        "type": "privacy-signal",
+        "fixtures": [
+          "/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/header-active.json",
+          "/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/intermediary-active.json",
+          "/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/runtime/no-signal-unknown.json",
+          "/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/valid.json",
+          "/Users/grig/work/repo/universalmanifest/examples/integrations/gpc/support-resource/invalid-last-update.json",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/gpc-evidence-projection-manifest.jsonld"
+        ],
+        "details": {
+          "activeSource": "ua-header",
+          "intermediarySource": "intermediary",
+          "unknownState": "unknown",
+          "supportLastUpdate": "2026-03-06T12:10:00Z",
+          "projectedConsentName": "privacy.globalOptOut.gpc",
+          "projectedPointerName": "privacy.gpcSupportResource",
+          "effectiveInScopeDecision": "denied"
+        }
+      }
+    },
+    {
+      "id": "J22",
+      "name": "RP1 attachment freshness and session-context safety",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.497Z",
+      "endedAt": "2026-04-24T04:06:22.498Z",
+      "details": {
+        "type": "adversarial-projection",
+        "fixtures": [
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-stale-attachment-manifest.jsonld",
+          "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/rp1-spatial-fabric-revoked-session-manifest.jsonld"
+        ],
+        "details": {
+          "staleAttachmentUmid": "urn:uuid:5f5e6f7a-2222-4a9a-8d5e-7c9a5f3e2b10",
+          "staleAttachmentStatus": "stale",
+          "staleAttachmentExpiresAt": "2026-03-06T17:05:00Z",
+          "staleAttachmentTraversal": "blocked",
+          "staleAttachmentReason": "attachment-index-stale",
+          "staleChildScopeRef": "https://spatial.example.com/fabrics/gallery-lobby/index.msf",
+          "revokedSessionUmid": "urn:uuid:5f5e6f7a-3333-4a9a-8d5e-7c9a5f3e2b10",
+          "revokedSessionStatus": "revoked",
+          "revokedSessionExpiresAt": "2026-03-06T17:59:00Z",
+          "sessionContextReuse": "blocked",
+          "sessionContextReason": "session-context-revoked"
+        }
+      }
+    },
+    {
+      "id": "J23",
+      "name": "MUM payment handles and fiat/crypto gateway flow",
+      "status": "pass",
+      "startedAt": "2026-04-24T04:06:22.498Z",
+      "endedAt": "2026-04-24T04:06:22.498Z",
+      "details": {
+        "type": "payment-handles",
+        "fixturePath": "/Users/grig/work/repo/universalmanifest/examples/v0.1/stubs/metaverse-mum-payment-handles-manifest.jsonld",
+        "details": {
+          "umid": "urn:uuid:9f4a2e7a-24b1-4fa7-947d-36f2f15d7315",
+          "subject": "did:web:metaverse.example:users:payments-001",
+          "initiationUrl": "https://payments.metaverse.example/checkout/session-abc123",
+          "protectedBundlePointer": "payment.protected.bundle",
+          "deliveryModel": "projection-or-encrypted-inline",
+          "pointers": [
+            "payment.public.checkout",
+            "payment.gateway.stripe.accountRef",
+            "payment.gateway.paypal.merchantRef",
+            "payment.gateway.crypto.settlementRef",
+            "payment.protected.bundle"
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "preflightPass": 1,
+    "preflightFail": 0,
+    "pass": 23,
+    "fail": 0
+  }
+}
