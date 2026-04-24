@@ -432,3 +432,30 @@ These can run in parallel with the site-architecture wave once staffing is avail
 - Do not start a work order early just because staffing is available if its upstream batch is not complete.
 - Within an open batch, parallelize freely as long as the write scopes do not overlap and each agent has a bounded ownership area.
 - When a batch contains both governance/decision work and implementation work, land the governance artifact first if the implementation depends on it materially.
+
+### Post-WO-0206 Micro-Closeouts (2026-04-24)
+
+These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` and the surface-drift scan. They were not promoted to formal work orders and therefore intentionally do not receive WO IDs. They are listed here so future canonical readers can trace each micro-closeout to its source file.
+
+- Orchestrator WO-scope and Phase 9 evidence closeout — `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-24-orchestrator-wo-scope-and-phase9-closeout.md`
+- Private facets, encryption, and attested identifier/control binding surfacing — `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-24-private-facets-attested-ownership-surfacing.md`
+- Private facets and attested-ownership source-grounding review — `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-24-private-facets-attested-ownership-source-review.md`
+- IWPS portaling source-grounding correction — `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-24-iwps-portaling-source-grounding-correction.md`
+- Home-cluster copy briefs and source-fidelity closeout — `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-24-home-cluster-copy-briefs-and-source-fidelity-closeout.md`
+
+### Drift Scan Follow-On Wave (WO-0207 through WO-0209)
+
+**Trigger:** 2026-04-24 drift scan (`.dev/ai/subtask-comms/2026-04-24-surface-drift-scan.md`).
+**Sequencing:** strictly serial — WO-0209 → WO-0207 → WO-0208. Canonical docs settle first, agent-facing metadata syncs second, CI automation baselines against that clean state last.
+
+- WO-0209 (COMPLETED): `docs/workorders/WO-0209-internal-closeout-audit-trail-reconciliation.md` — 2026-04-24 subtask-level closeouts woven into STATE-OF-THE-PROJECT.md, WO-INDEX.md, and CRITICAL-PATH.md
+- WO-0207 (COMPLETED): `docs/workorders/WO-0207-metadata-sync-and-catalog-audit.md` — `.well-known/universal-manifest.json` `lastUpdated` synced (2026-03-15 → 2026-04-24); catalog counts verified accurate (138 fixtures, 50 scenarios)
+- WO-0208 (COMPLETED): `docs/workorders/WO-0208-phase-9-drift-governance-automation-hardening.md` — `.github/workflows/phase-9-gate.yml`, `docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md`, and `docs/reports/drift-scans/README.md` created; K2B gate kept manual with documented playbook
+
+### Follow-On Loose-End Wave (WO-0210 through WO-0211)
+
+**Trigger:** Gaps surfaced by the drift-scan follow-on wave's own delivery. WO-0208 built `phase-9-gate.yml` but never ran it; WO-0207 verified catalog accuracy manually without adding a CI gate to prevent recurrence.
+**Sequencing:** strictly serial — WO-0210 → WO-0211. Prove the Phase 9 gate works green before extending it with a new job.
+
+- WO-0210 (NOT_STARTED): `docs/workorders/WO-0210-phase-9-gate-first-run-verification-and-hardening.md` — actionlint + first PR-trigger run + first workflow_dispatch run of `phase-9-gate.yml`; fix bugs surfaced (MEDIUM; depends on sibling commit wave landing on main; gates WO-0211)
+- WO-0211 (NOT_STARTED): `docs/workorders/WO-0211-agent-catalog-regeneration-drift-gate.md` — add `--check` mode to `site/scripts/sync-agent-discovery.mjs`, expose as `sync:agent-discovery:check`, wire into CI so PRs fail loudly if `fixture-catalog.json` / `sandbox-scenarios.json` drift from canonical sources (MEDIUM; depends on WO-0210)
