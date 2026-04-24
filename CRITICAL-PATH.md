@@ -29,7 +29,7 @@ Completed execution sequence:
 6. `WO-0203` and `WO-0204` implemented the explorer and audience-family public surfaces.
 7. `WO-0205` closed the wave with harmonization and publication-readiness verification.
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` restored the K2B artifact contract and re-ran the full Phase 9 mandatory command set successfully. There are currently no open formal work orders.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` restored the K2B artifact contract and re-ran the full Phase 9 mandatory command set successfully. There are currently no open formal work orders. Five subtask-level micro-closeouts landed on 2026-04-24 alongside `WO-0206` (Home-cluster copy briefs and source-fidelity process, IWPS portaling source correction, private-facets/attested-binding surfacing plus its source-grounding review, and the orchestrator WO-scope/Phase 9 evidence closeout); these are not formal WOs and are itemized with source paths in `docs/STATE-OF-THE-PROJECT.md` and `docs/workorders/WO-INDEX.md`.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 
@@ -168,9 +168,16 @@ Follow-on WO trigger thresholds:
 - open a new WO if status docs contradict active WO status or production reality
 - open a new WO if newly ingested corpus signals require IA/spec/proof deltas beyond trivial wording edits
 
+Automation and runbook (added by `WO-0208`):
+
+- `.github/workflows/phase-9-gate.yml` runs the non-K2B portion of the mandatory command set. On every PR it executes the docs link-hygiene ripgrep. On a weekly cron (Mondays 09:00 UTC) and on manual `workflow_dispatch` it additionally runs `npm test`, `npm run journeys`, the validator parity check, and the production-route HEAD check, then writes a timestamped report to `docs/reports/drift-scans/`.
+- The strict K2B gate (`~/.agents/scripts/validate-k2b-gates.sh ... --strict`) remains a manual maintainer step because its inputs are gitignored `.dev/ai/` artifacts that must not be vendored into the tracked surface. See `docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md` section 2.1 for the rationale and the reference restoration procedure (worked example: `WO-0206`).
+- Recovery for any mandatory-command failure is procedurally documented in `docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md`.
+
 Current Phase 9 status:
 
 - `WO-0206` is completed. The strict K2B gate passes against `.dev/ai` with 41 pass, 0 warn, 0 fail, and the rest of the mandatory command set passed on 2026-04-24.
+- `WO-0208` landed the automated Phase 9 gate and drift-recovery playbook on 2026-04-24.
 
 ## Phase 10 — Interactive Sandbox (WO-0060-0068) -- COMPLETED, HIGHEST PRIORITY
 

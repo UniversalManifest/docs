@@ -388,6 +388,18 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 - The previously cited frontier items `WO-0142`, `WO-0143`, `WO-0145`, and `WO-0155` remain `COMPLETED`.
 - The identity-binding / Bag-of-Claims follow-on remains integrated into committed decision, threat-model, spec-delta, and schema artifacts rather than re-opened as a standalone proposal thread.
 
+#### 2026-04-24 micro-closeouts (subtask-level, not formal WOs)
+
+The following subtask-level refinements landed on 2026-04-24 alongside `WO-0206` and the surface-drift scan. They are captured here for canonical traceability only; none of them were promoted to formal work orders, and the formal queue remains closed.
+
+- Orchestrator WO-scope and Phase 9 evidence closeout — `.dev/ai/subtask-comms/2026-04-24-orchestrator-wo-scope-and-phase9-closeout.md`
+- Private facets, encryption, and attested identifier/control binding surfacing across Home-cluster IA, copy briefs, and audience briefs — `.dev/ai/subtask-comms/2026-04-24-private-facets-attested-ownership-surfacing.md`
+- Private facets and attested-ownership source-grounding review (reference-only, no IA/copy edits) — `.dev/ai/subtask-comms/2026-04-24-private-facets-attested-ownership-source-review.md`
+- IWPS portaling source-grounding correction across Home-cluster sitemap, copy briefs, and audience briefs — `.dev/ai/subtask-comms/2026-04-24-iwps-portaling-source-grounding-correction.md`
+- Home-cluster copy briefs and source-fidelity closeout (copy briefs, audience briefs, and markdown/source fidelity process) — `.dev/ai/subtask-comms/2026-04-24-home-cluster-copy-briefs-and-source-fidelity-closeout.md`
+
+These closeouts did not change spec, fixture, or runtime behavior; they refined the Home-cluster brief layer and the markdown/source fidelity governance process. Readers arriving here should treat each bullet's path as the authoritative source of what was done and why.
+
 ## Priority context (2026-04-12)
 
 The project is no longer blocked on the public front door. The homepage now leads with audience comprehension and routing, while the latest W3C-style spec has a dedicated subordinate route.
