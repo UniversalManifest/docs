@@ -37,7 +37,7 @@
 | Item | Status | What It Does |
 |------|--------|-------------|
 | IWPS alignment and OMA3 positioning | Active | Maps UM as the cargo layer for IWPS transport. Proposes UM as the payload for the `assets` parameter. |
-| Facet encryption architectural decision | Pending | Deciding between encrypted inline facets (JWE per-facet), the projection model, or supporting both. Research complete; decision not yet made. |
+| Facet encryption architectural decision | Accepted | Uses an additive privacy model: projection remains the normative path, while encrypted inline facets are optional guidance for confidentiality at rest. |
 | Payment handle integration | Not started | Creating standard pointers for fiat and crypto payment gateways. A natural collaboration area with OMA3. |
 
 ### Deferred Items (tracked, not forgotten)

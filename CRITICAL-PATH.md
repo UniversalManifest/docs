@@ -4,9 +4,9 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current execution focus — Formal queue closed after Home-Cluster rollout -- COMPLETE
+## Current Execution Focus -- Home-Cluster Rollout Complete; Phase 9 Gate Restored
 
-Goal: record the completion state after the content-first `Home`-cluster wave delivered the structured public learning family, explorer, and audience landings.
+Goal: preserve the completed state after the content-first `Home`-cluster wave and keep Phase 9 drift governance green before any future completion claim.
 
 Immediate rule:
 
@@ -29,7 +29,7 @@ Completed execution sequence:
 6. `WO-0203` and `WO-0204` implemented the explorer and audience-family public surfaces.
 7. `WO-0205` closed the wave with harmonization and publication-readiness verification.
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. There are currently no open formal work orders.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` restored the K2B artifact contract and re-ran the full Phase 9 mandatory command set successfully. There are currently no open formal work orders.
 
 ## Phase 0 — Define “done” (gates + evidence) -- COMPLETE
 
@@ -98,7 +98,7 @@ Must-have:
 - at least one cross-runtime adopter journey (e.g., profile projection)
 - journeys act as proof, not marketing
 
-Status: 22 executable journeys passing. Multiple integration lanes documented with fixture-backed proof, including GPC runtime-signal handling and RP1 fail-closed hardening as non-normative proof lanes.
+Status: 23 executable journeys passing. Multiple integration lanes documented with fixture-backed proof, including GPC runtime-signal handling and RP1 fail-closed hardening as non-normative proof lanes.
 
 ## Phase 6 — Full-corpus synthesis before IA and journey expansion -- COMPLETE
 
@@ -167,6 +167,10 @@ Follow-on WO trigger thresholds:
 - open a new WO immediately if any mandatory command fails
 - open a new WO if status docs contradict active WO status or production reality
 - open a new WO if newly ingested corpus signals require IA/spec/proof deltas beyond trivial wording edits
+
+Current Phase 9 status:
+
+- `WO-0206` is completed. The strict K2B gate passes against `.dev/ai` with 41 pass, 0 warn, 0 fail, and the rest of the mandatory command set passed on 2026-04-24.
 
 ## Phase 10 — Interactive Sandbox (WO-0060-0068) -- COMPLETED, HIGHEST PRIORITY
 

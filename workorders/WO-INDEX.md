@@ -357,7 +357,7 @@ Wave status:
 
 - [COMPLETED] `WO-0195` defined the home-cluster sitemap, domain audit, depth model, and explorer strategy.
 - [COMPLETED] `WO-0196` through `WO-0205` delivered the content architecture, audience strategy, explorer schema, content packs, route implementation, and publication-readiness pass.
-- There are currently no open formal work orders under `docs/workorders/`.
+- [COMPLETED] `WO-0206` restored the Phase 9 K2B drift-governance artifact contract from legitimate git history and verified the full mandatory command set.
 
 Completed sequence:
 
@@ -371,6 +371,10 @@ Completed sequence:
 8. `docs/workorders/WO-0203-explorer-component-and-first-lane-integration.md` — [COMPLETED] Implemented the explorer component and first-lane integration; closeout recorded in `docs/reports/2026-04-22-home-cluster-route-shell-explorer-and-audience-implementation.md`.
 9. `docs/workorders/WO-0204-audience-landing-page-implementation-wave.md` — [COMPLETED] Implemented the first audience landing pages and family route; closeout recorded in `docs/reports/2026-04-22-home-cluster-route-shell-explorer-and-audience-implementation.md`.
 10. `docs/workorders/WO-0205-home-cluster-migration-harmonization-and-publication-readiness.md` — [COMPLETED] Verified, harmonized, and prepared the rollout for publication; closeout recorded in `docs/reports/2026-04-22-home-cluster-publication-readiness-and-harmonization.md`.
+
+### Phase 9 Drift-Governance Follow-up (WO-0206)
+
+- `docs/workorders/WO-0206-k2b-drift-governance-artifact-contract-restoration.md` — [COMPLETED] Restored legitimate `.dev/ai` artifact-root files from git history, path-normalized restored metadata for the current checkout, and re-ran the full Phase 9 mandatory command set successfully.
 
 Historical execution order:
 
