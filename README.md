@@ -31,6 +31,10 @@ Canonical repo path: `<repo-root>`
 - [`docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`](COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md) — Full structural map of repo ownership, public properties, route families, runtime surfaces, and source-of-truth boundaries
 - [`docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`](CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md) — Canonical versus alias-only route policy for public paths, compatibility shims, and retirement candidates
 - [`docs/FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md`](FIXTURE-SOURCE-OF-TRUTH-AND-PUBLISHED-MIRROR-POLICY.md) — Canonical authored-versus-generated policy for fixtures, browser-published mirrors, and sync behavior
+- [`docs/HOME-CLUSTER-SITEMAP.md`](HOME-CLUSTER-SITEMAP.md) — Approved IA direction for the public Home cluster before implementation resumes
+- [`docs/HOME-CLUSTER-COPY-BRIEFS.md`](HOME-CLUSTER-COPY-BRIEFS.md) — Copy briefs for the approved Home-cluster pages
+- [`docs/AUDIENCE-PAGE-BRIEFS.md`](AUDIENCE-PAGE-BRIEFS.md) — First-wave audience-page briefs for approved audience routes
+- [`docs/MARKDOWN-SOURCE-FIDELITY-PROCESS.md`](MARKDOWN-SOURCE-FIDELITY-PROCESS.md) — Process for keeping markdown/source, rendered pages, machine-readable files, and agent-facing variants aligned
 - [`docs/CRITICAL-PATH.md`](CRITICAL-PATH.md) — Minimal sequence for adoption + publishing + “world-ready” claims
 - [`docs/UNIVERSAL-MANIFEST-BRIEFING.md`](UNIVERSAL-MANIFEST-BRIEFING.md) — Full AI agent briefing on the Universal Manifest standard
 - [`docs/MANDATE-interactive-implementation-sandbox.md`](MANDATE-interactive-implementation-sandbox.md) — CEO mandate for the interactive implementation sandbox
@@ -41,6 +45,7 @@ Canonical repo path: `<repo-root>`
 - [`docs/DEPLOY-CHECKLIST.md`](DEPLOY-CHECKLIST.md) — One linear checklist for first real deploy (`universalmanifest.net` + `myum.net`)
 - [`docs/CRUCIAL-DETAILS.md`](CRUCIAL-DETAILS.md) — Non-obvious decisions and “gotchas”
 - [`docs/DECISIONS.md`](DECISIONS.md) — Decisions made while drafting the standard
+- [`docs/VERSION-DIFFERENCES-V01-V02.md`](VERSION-DIFFERENCES-V01-V02.md) — v0.1 to v0.2 delta including signatures, claim authenticity, tiered trust, `claimProof`, and identity binding
 - [`docs/ENVELOPE-TOPOLOGY.md`](ENVELOPE-TOPOLOGY.md) — Structural topology analysis: what “envelope” means, how manifest layers relate, terminology guide
 - [`docs/PROJECT-KNOWLEDGE-INDEX.md`](PROJECT-KNOWLEDGE-INDEX.md) — Pointer to GAS shared Universal Manifest master index
 - [`docs/DONE-DONE-DEFINITION.md`](DONE-DONE-DEFINITION.md) — Official completion criteria (“done done”) for releases
@@ -66,6 +71,7 @@ Canonical repo path: `<repo-root>`
   - [`one-pager.md`](explainers/one-pager.md) — One-page explainer
   - [`full-briefing.md`](explainers/full-briefing.md) — Full briefing document
   - [`metaverse-portaling.md`](explainers/metaverse-portaling.md) — Explainer for cross-platform portaling with UM as the portable envelope
+  - [`facet-encryption-deep-dive.md`](explainers/facet-encryption-deep-dive.md) — Facet privacy, projection, encrypted inline facets, and selective-disclosure tradeoffs
   - [`agent-briefing.md`](explainers/agent-briefing.md) — AI agent briefing
   - [`animation-briefing.md`](explainers/animation-briefing.md) — Animation briefing
 - [`docs/scripts/`](scripts/) — Animation scripts

@@ -334,7 +334,7 @@ A signed manifest contains claims from multiple issuers and references to multip
 
 3. **Attested cross-DID binding (v0.2, non-normative):** The `identity.crossDidBinding` claim convention enables trust-delegated DID correlation with attester accountability. Strength depends on attester trust.
 
-4. **VP evidence references (v0.2, optional):** The `claims[].evidence` field enables Verifiable Presentation proof of claim issuance. When populated, consumers can verify the claim's authenticity chain.
+4. **VP claim proof references (v0.2, optional):** The `claims[].claimProof` field enables Verifiable Presentation proof of claim issuance. When populated, consumers can verify the claim's authenticity chain.
 
 5. **Multi-signature binding (v0.3, deferred):** Each DID in the manifest co-signs a binding statement, providing cryptographic proof of control.
 
@@ -342,7 +342,7 @@ A signed manifest contains claims from multiple issuers and references to multip
 
 **Residual Risk:**
 
-In v0.2, credential stacking and issuer impersonation have HIGH residual risk because the `evidence` field is optional and no credential providers currently issue W3C VCs. This is explicitly accepted as a pre-1.0 limitation with a defined upgrade path (Tier 1/2 trust model).
+In v0.2, credential stacking and issuer impersonation have HIGH residual risk because the `claimProof` field is optional and no credential providers currently issue W3C VCs. This is explicitly accepted as a pre-1.0 limitation with a defined upgrade path (Tier 1/2 trust model).
 
 Cross-DID identity theft has MEDIUM residual risk — the attested binding claim (L1) provides pragmatic mitigation when a trusted attester is available.
 
