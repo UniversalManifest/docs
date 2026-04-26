@@ -459,3 +459,40 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 
 - WO-0210 (NOT_STARTED): `docs/workorders/WO-0210-phase-9-gate-first-run-verification-and-hardening.md` — actionlint + first PR-trigger run + first workflow_dispatch run of `phase-9-gate.yml`; fix bugs surfaced (MEDIUM; depends on sibling commit wave landing on main; gates WO-0211)
 - WO-0211 (NOT_STARTED): `docs/workorders/WO-0211-agent-catalog-regeneration-drift-gate.md` — add `--check` mode to `site/scripts/sync-agent-discovery.mjs`, expose as `sync:agent-discovery:check`, wire into CI so PRs fail loudly if `fixture-catalog.json` / `sandbox-scenarios.json` drift from canonical sources (MEDIUM; depends on WO-0210)
+
+### v0.2 Publication Readiness Nit Wave (WO-0212 through WO-0214)
+
+**Trigger:** 2026-04-24 v0.2 publication readiness scan (`.dev/ai/subtask-comms/2026-04-24-v0-2-publication-readiness-scan.md`). Scan returned GO with 0 blockers and 3 non-blocking nits; this wave converts the nits into trackable WOs.
+
+- WO-0212 (COMPLETED, NO-OP): `docs/workorders/WO-0212-spec-schema-root-property-addition.md` — `$schema` already declared as Draft 2020-12 in both v0.1/v0.2 schema files (preexisting from commit `2b27d55`); publication-scan nit was stale
+- WO-0213 (COMPLETED, NO-OP): `docs/workorders/WO-0213-integration-lane-cross-reference-freshness-sweep.md` — 28 dates audited, all intentional vintage citations or filename references; 0 patched; publication-scan nit was over-inclusive
+- WO-0214 (NOT_STARTED, DEFERRED to post-publication): `docs/workorders/WO-0214-post-publication-external-human-reader-validation.md` — run an external-human first-time-reader validation cohort against the post-Home-cluster published surface; produces follow-on WO drafts if comprehension drift is found (MEDIUM; not a release gate; awaits v0.2 publication)
+
+### Resolver Runtime Drift Wave (WO-0215 through WO-0219)
+
+**Trigger:** 2026-04-26 resolver runtime drift scan (`.dev/ai/subtask-comms/2026-04-26-resolver-runtime-drift-scan.md`). Resolver verdict was HEALTHY but with 7 findings — 1 CRITICAL, 2 HIGH, 3 MEDIUM, 1 INFO. WO-0215 is a P0 alert-blindness fix; WO-0216/0217 close the largest adopter-onboarding gaps; WO-0218/0219 are smaller cleanup items.
+
+- WO-0215 (COMPLETED 2026-04-26): `docs/workorders/WO-0215-extend-synthetic-monitoring-to-full-resolver-contract-coverage.md` — synthetic monitoring expanded; 6/8 status codes always-on + OPTIONS (3 opt-in via env-var fixture UMIDs); full header-contract assertions; SLO policy + playbook updated; actionlint clean
+- WO-0216 (NOT_STARTED): `docs/workorders/WO-0216-integration-lane-fixture-baseline.md` — establish v0.1-conformant fixture baseline for the 14 documented integration lanes that today have only GPC fixtures; tie at least one journey to each lane (HIGH P1; multi-week, batched)
+- WO-0217 (COMPLETED 2026-04-26): `docs/workorders/WO-0217-integrate-reference-typescript-impl-into-spec-repo-ci.md` — `.github/workflows/um-typescript-conformance.yml` shipped (clone-from-HEAD model; path-filtered PR gate + Monday 10:00 UTC scheduled report job); resolver-agnostic `journey-04b` sibling (J04 untouched); new `docs/IMPLEMENTING-UM.md` (175 lines, Path A fork-and-conform + Path B any-language); README + `for-agents.md` cross-linked; actionlint clean
+- WO-0218 (COMPLETED 2026-04-26): `docs/workorders/WO-0218-parametrize-dev-fixture-ttl-and-add-expiration-test.md` — `UM_FIXTURE_EXPIRY_OFFSET_SECONDS` env var wired into resolver Worker via `buildDevFixtureV02MinimalSigned()` factory; default unset = static 2036-03-01 (no regression); new `runFixtureTtlExpiryCheck()` contract test spawns wrangler dev with `-3600` offset and asserts expired-detection; 13/13 contract tests pass
+- WO-0219 (NOT_STARTED): `docs/workorders/WO-0219-cross-domain-integration-lane-reference-consolidation.md` — standardize "Implementation notes" block across all `integrations/{lane}.md`; lane discovery page; depends on WO-0216 fixtures landing (MEDIUM P2; depends on WO-0216)
+
+### v0.2 Publication Push Wave (WO-0220 through WO-0231)
+
+**Trigger:** 2026-04-26 v0.2 publication push plan (`.dev/ai/subtask-comms/2026-04-26-v0-2-publication-push-plan.md`) following the GO verdict from the 2026-04-24 publication-readiness scan. Twelve WOs sequence the publication: lock the artifacts, flip the surfaces, announce, verify in production, wire monitoring, reset planning, and close out the wave.
+
+**Critical path (seven WOs deep):** WO-0220 → WO-0221 → WO-0222 → WO-0227 → WO-0229 → WO-0230 → WO-0231.
+
+- WO-0220 (NOT_STARTED): `docs/workorders/WO-0220-v0-2-release-tag-and-immutable-artifact-hash-pinning.md` — cut the v0.2 git tag, draft the GitHub release command, and pin SHA-256 artifact hashes in the changelog so future drift is detectable (P0; head of wave; operator-gated `git tag` + `gh release create`)
+- WO-0221 (NOT_STARTED): `docs/workorders/WO-0221-spec-page-transition-draft-to-published.md` — flip `/spec/latest/` from draft to published, rewrite Status-of-This-Document, and stand up the durable `/spec/v0.2/` route (P0; depends on WO-0220; gates WO-0222–WO-0226)
+- WO-0222 (NOT_STARTED): `docs/workorders/WO-0222-machine-readable-surface-refresh-v0-2.md` — update `.well-known/universal-manifest.json`, `llms.txt`, and the agent catalogs to declare v0.2 as the current published spec (P0; depends on WO-0221; unblocks WO-0226/0227/0228)
+- WO-0223 (NOT_STARTED): `docs/workorders/WO-0223-migration-guide-promotion-to-published-reading-path.md` — promote the v0.1→v0.2 migration guide into the published reading path and replace the `MIGRATION_GUIDE_HREF` placeholder (P1; depends on WO-0221; unblocks WO-0226)
+- WO-0224 (NOT_STARTED): `docs/workorders/WO-0224-conformance-badge-and-adopter-onboarding-cross-link-wiring.md` — surface the conformance suite, badges, adopter onboarding, and reference TS implementation from the published spec page (P1; depends on WO-0221)
+- WO-0225 (NOT_STARTED): `docs/workorders/WO-0225-governance-and-rfc-mechanism-cross-link-from-published-spec.md` — replace `RFC_HREF`/`BREAKING_CHANGE_HREF` placeholders and add a Normative References section linking the full governance set (P1; depends on WO-0221)
+- WO-0226 (NOT_STARTED): `docs/workorders/WO-0226-announcement-copy-changelog-banner-and-social-blurbs.md` — author the changelog entry, home-page banner, and social/email blurbs (1-line, 2-paragraph, 5-paragraph) for the v0.2 launch (P1; depends on WO-0221, WO-0222, WO-0223; unblocks WO-0229)
+- WO-0227 (NOT_STARTED): `docs/workorders/WO-0227-post-publish-smoke-ci-runnable-harness.md` — add a CI-runnable `smoke:publication` harness asserting the eight production publication invariants (P0; depends on WO-0222; unblocks WO-0229)
+- WO-0228 (NOT_STARTED): `docs/workorders/WO-0228-synthetic-monitoring-slo-recheck-published-not-draft.md` — re-read the WO-0117 SLO policy against the published surface and add `/spec/v0.2/` plus governance routes to the monitored set (P1; depends on WO-0222)
+- WO-0229 (NOT_STARTED): `docs/workorders/WO-0229-critical-path-and-state-of-project-update-v0-2-published.md` — update CRITICAL-PATH.md, STATE-OF-THE-PROJECT.md, and WO-INDEX.md to declare v0.2 published and stub Phase 19 (P1; depends on WO-0220–WO-0228; unblocks WO-0230)
+- WO-0230 (NOT_STARTED): `docs/workorders/WO-0230-phase-19-what-comes-next-definition.md` — define Phase 19 goals and stub follow-on WO IDs (WO-0232+) for adopter feedback, deferred identity-binding tiers, RDF profile, and revocation decisions (P2; depends on WO-0229)
+- WO-0231 (NOT_STARTED): `docs/workorders/WO-0231-publication-closeout-audit-and-evidence-pack.md` — walk the done-done checklist, author the evidence pack, re-run publication smoke, and mark the wave COMPLETED (P1; depends on WO-0220–WO-0230; final WO of the wave)
