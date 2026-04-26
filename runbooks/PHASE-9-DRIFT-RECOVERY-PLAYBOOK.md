@@ -163,6 +163,41 @@ rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/int
 
 **Escalation threshold:** Open a P0 WO immediately if the root path returns non-2xx and persists for more than one edge cycle.
 
+### 2.7 Alert: resolver contract violation detected
+
+**Symptom:** The synthetic monitoring workflow (`synthetic-monitoring.yml` or `synthetic-monitoring-staging.yml`) fails on the "Resolver contract suite (status matrix + headers)" step. The webhook payload includes `runbook: docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md#27-alert-contract-violation-detected`.
+
+**Why this is treated as a resolver outage:** Latency probes can be green while the contract has silently drifted (for example, revoked records returning `404` instead of `410`, or `X-UM-Resolver-Source` missing). Adopters relying on contract semantics will see breakage even though `/health` looks fine. WO-0215 wired the contract suite into synthetic monitoring precisely to surface this fast.
+
+**Diagnosis order:**
+
+1. Pull the failing workflow log. The first `FAIL contract <status> ...` line names the assertion that drifted (status code, header, or `Cache-Control` mismatch).
+2. Reproduce locally against the same target:
+   ```bash
+   cd packages/universal-manifest
+   # Production:
+   npm run smoke:endpoints:prod:contract
+   # Or staging:
+   npm run smoke:endpoints:staging:contract
+   ```
+   If the failure is opt-in (`307`/`410`/`500`) and you want to reproduce, export the appropriate fixture UMID env var first (`UM_SMOKE_REDIRECT_UMID` / `UM_SMOKE_REVOKED_UMID` / `UM_SMOKE_CORRUPT_UMID`).
+3. Cross-reference the failing assertion against `services/myum-resolver/CONTRACT.md` to confirm what the contract specifies. The standalone resolver test suite (`cd services/myum-resolver && npm run test:contract`) is the authoritative reproduction harness.
+4. Identify the most recent change to either:
+   - `services/myum-resolver/src/index.ts` (runtime regression)
+   - the resolver KV data (an authoritative record was rewritten or deleted)
+   - the resolver's Cloudflare route bindings (CORS / `access-control-expose-headers` may regress at the edge if a route rule is rewritten without the header allowlist).
+
+**Remediation:**
+
+- Runtime regression -> revert the offending commit or land a forward-fix that restores the contract assertion. Do not silently widen the SLO; the contract is the contract.
+- KV record drift -> reseed the affected UMID (or the deterministic redirect/revoked/corrupt fixtures used by contract-mode UMIDs) using the documented KV seeding procedure in `services/myum-resolver/CLOUDFLARE-DEPLOY.md`.
+- Edge / route-rule drift -> restore the canonical route mapping (`docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`) and re-verify with `npm run smoke:endpoints:prod:contract`.
+- Header contract drift (missing `X-UM-Resolver-Contract` / `X-UM-Resolver-Source` / exposed-header tokens) -> these are MUST-have on every response (CONTRACT.md sections 2-3); fix in `addCommonHeaders` in `services/myum-resolver/src/index.ts` and ship.
+
+**Escalation threshold:** This is always P0. A contract violation is adopter-visible by definition. Open a WO immediately, mirror the failing assertion in the WO description, and link the failing run URL.
+
+**Skip lines are not failures.** The contract suite emits `SKIP contract 307|410|500 (UM_SMOKE_*_UMID not set; ...)` when the optional fixture UMIDs are unconfigured. That is the documented "do not poke prod" path; only `FAIL` lines warrant alerting.
+
 ---
 
 ## 3. WO-0206 case study -- reference restoration procedure
