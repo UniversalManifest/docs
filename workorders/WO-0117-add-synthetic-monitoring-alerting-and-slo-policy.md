@@ -112,3 +112,21 @@ Remaining optional enhancement:
 Reliability summary artifact (latest):
 
 - `.dev/ai/reports/2026-03-03-reliability-summary.md`
+
+## Cross-Reference: WO-0215 (Error-Path Coverage Extension)
+
+WO-0117 established latency-only synthetic monitoring with happy-path coverage.
+The 2026-04-26 resolver runtime drift scan found that contract violations on
+error-status paths (304, 307, 400, 404, 405, 410, 500) and the header contract
+went undetected. WO-0215 extends the SLO policy and synthetic workflows to
+assert the full resolver contract status matrix and header contract on every
+synthetic run.
+
+- WO-0215: `docs/workorders/WO-0215-extend-synthetic-monitoring-to-full-resolver-contract-coverage.md`
+- Contract-mode invocations:
+  - `npm run smoke:endpoints:prod:contract`
+  - `npm run smoke:endpoints:staging:contract`
+- SLO additions: `resolver_contract_sli`, header-contract `100%` per run, opt-in
+  `307`/`410`/`500` coverage. See `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md`
+  sections 3, 4, 5.3, and 6.
+- Escalation runbook: `docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md` section 2.7.
