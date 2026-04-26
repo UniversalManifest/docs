@@ -36,6 +36,74 @@ Integration-lane stubs:
 - `examples/v0.1/stubs/multi-did-method-coverage-manifest.jsonld`
 - `examples/v0.1/stubs/did-vc-credential-lane-manifest.jsonld`
 
+Integration-lane proof packs (under `examples/integrations/`, non-normative; see
+`spec/v0.1/CONFORMANCE.md` §7.1 for how proof packs differ from the core conformance corpus):
+
+Smart-glasses lane (WO-0216 batch 1):
+
+- `examples/integrations/smart-glasses/baseline-public-venue-manifest.jsonld` — minimum-shape wearer manifest with default-deny recording consents and single public profile pointer.
+- `examples/integrations/smart-glasses/near-real-context-aware-overlay-manifest.jsonld` — multi-context wearer with audience-scoped consents, professional credential, enrolled device, `arPolicyPack` priority rules.
+
+Metaverse lane (WO-0216 batch 1):
+
+- `examples/integrations/metaverse/baseline-portaling-manifest.jsonld` — minimum-shape visitor portaling envelope (profile + avatar pointers, default-deny social/voice).
+- `examples/integrations/metaverse/near-real-portal-handshake-with-loading-content-manifest.jsonld` — verified-builder cross-world portaling envelope with portal-loading pointers, preload consent, compliance-share consent, and preference bundle.
+
+Social lane (WO-0216 batch 1):
+
+- `examples/integrations/social/baseline-public-profile-manifest.jsonld` — minimum-shape public profile with ActivityPub + Matrix pointers, default-deny indexing.
+- `examples/integrations/social/near-real-multi-surface-profile-manifest.jsonld` — multi-surface creator profile (Pod canonical, ActivityPub, atproto, Matrix, website) with audience-scoped indexing consent.
+
+Portable-identity-profile-xr lane (WO-0216 batch 2):
+
+- `examples/integrations/portable-identity-profile-xr/baseline-conversational-ar-session-manifest.jsonld` — Scenario A baseline: pairwise subject conversational AR session with default-deny voice/recording, language-preference `portableProfile` facet, scenario-tagged `policyProfile` facet.
+- `examples/integrations/portable-identity-profile-xr/near-real-immersive-retail-session-manifest.jsonld` — Scenarios B+C: immersive retail commerce + cross-world portability with audience-scoped commerce consent, age-over-18 claim, avatar/wearables/translation/proof-bundle/revocation pointers, multi-world `capabilityProfile`, freshness+revocation requirements, per-world pairwise strategy.
+
+Runtime-profile lane (WO-0216 batch 2):
+
+- `examples/integrations/runtime-profile/baseline-edge-issued-display-envelope-manifest.jsonld` — minimum-shape edge-issued display envelope: `edgeBaseUrl` + `edgeDescriptor` + `universalManifest.current` pointers, ID-only `telemetry.proofOfPlay` consent, single enrolled display device.
+- `examples/integrations/runtime-profile/near-real-edge-discovery-with-bridge-adapter-manifest.jsonld` — full reference-runtime endpoint contract (`current`, `by-id`, `issue`, `resolve`, `ids`, `logs`), discovery descriptor with mDNS hint and fallback base URL, role-based federation taxonomy facet, push-signal-then-pull `transportProfile`, `freshnessPolicy` with `fail-closed-on-trust-sensitive`, v0.1-vs-v0.2 `signaturePolicy`, audience-scoped bridge-adapter consent, `authoritativeSource` + `changeLog` pointers.
+
+DID + VC lane (WO-0216 batch 3):
+
+- `examples/integrations/did-vc/baseline-did-web-vc-attestation-manifest.jsonld` — Tier 0 attestation-by-reference: `did:web` subject, default-deny `didvc.credentialShare`, status-list pointer, `didMethodProfile` + `vcAttestationProfile` facets.
+- `examples/integrations/did-vc/near-real-multi-method-vp-claimproof-manifest.jsonld` — Tier 1 VP-claimProof: URI-reference + embedded-VP `claimProof` patterns, three-method DID profile (`did:web` subject + `did:key` recovery + `did:pkh` wallet-link), `identity.crossDidBinding` claim, audience-of-one consent, `trustPolicy` facet with `audienceBindingRequired` and `presentationReusePolicy: audience-of-one`.
+
+Proof-of-personhood lane (WO-0216 batch 3):
+
+- `examples/integrations/proof-of-personhood/baseline-single-provider-worldid-manifest.jsonld` — single-provider baseline: `did:key:` subject, one World ID Orb-level binary attestation with per-claim expiry independent of manifest TTL, default-deny `personhood.crossPlatformLink`.
+- `examples/integrations/proof-of-personhood/near-real-multi-provider-aggregate-manifest.jsonld` — multi-provider aggregate: World ID + Gitcoin Passport + BrightID claims under distinct namespaces with per-claim VP `claimProof`, `identity.crossDidBinding` to a personhood-nullifier DID, audience-scoped cross-platform-link + provider-disclosure consent, `thresholdPolicy` (consumer-computed), `providerNamespaces` collision policy, `expirationPolicy` (`ignore-do-not-treat-as-current`).
+
+Healthcare-patient-consent lane (WO-0216 batch 4):
+
+- `examples/integrations/healthcare-patient-consent/baseline-emergency-allergy-share-manifest.jsonld` — baseline emergency/allergy share: `did:key:` patient subject, `health.shareEmergencyInfo` + `health.shareAllergies` allowed, `health.shareRecords` denied, `allergyAlerts` + `emergencyContact` + `patientConsent` facets, all three suggested pointer names, insurer-attested coverage claim with per-claim expiry independent of manifest TTL.
+- `examples/integrations/healthcare-patient-consent/near-real-emergency-department-handoff-manifest.jsonld` — pairwise `did:web:` subject, audience-scoped `health.shareRecords: restricted` per the firewall-model rule pattern (audience + contexts: emergency/clinical + ruleId + scope.facets/fields + priority), `identity.crossDidBinding` from wallet DID to legacy EHR MRN, insurer-attested coverage with VP `claimProof` reference, clinical-grade RxNorm-coded allergy alerts, `freshnessPolicy` (`fail-closed` on stale consent), `auditPolicy` facet (id-only retention; HIPAA + GDPR-health basis).
+
+Education-credentials lane (WO-0216 batch 4):
+
+- `examples/integrations/education-credentials/baseline-degree-skill-attestation-manifest.jsonld` — baseline graduate manifest: `did:key:` subject, three issuer-attested claims (`edu.degreeStatus: conferred`, `edu.enrollmentStatus: graduated`, `edu.certificationValid: valid`) with per-claim expiry on the certification, `edu.verifyDegree` + `edu.shareSkills` allowed and `edu.shareTranscript` denied, `academicCredential` + `skillAttestation` + `credentialPolicy` facets, all three suggested pointer names.
+- `examples/integrations/education-credentials/near-real-employer-verification-with-claimproof-manifest.jsonld` — `did:web:wallet.example` subject, four issuer-attested claims with `claimProof` (URI reference for registrar claims; embedded VP for the certification — exercises both lane patterns), audience-of-one `edu.verifyDegree` + `edu.shareSkills` for a named hiring organization in `hiring` context, `identity.crossDidBinding` to the registrar's student-record DID, `credentialPolicy` with `audienceBindingRequired` + `claimProofPolicy.issuerBindingRequired: true` + `expirationPolicy.expiredClaimsTreatment: ignore-do-not-treat-as-current`.
+
+Smart-home lane (WO-0216 batch 4):
+
+- `examples/integrations/smart-home/baseline-household-policy-manifest.jsonld` — baseline household policy: `did:key:` household subject, all three lane consents default-denied (`home.shareUsageData`, `home.allowRemoteAccess`, `home.shareLocation`), `homePolicy` facet (`default-private`, `dataRetention: local-only`, `telemetryPolicy: none`), single `deviceIdentity` facet, all three suggested pointer names.
+- `examples/integrations/smart-home/near-real-multi-device-onboarding-manifest.jsonld` — `did:web:home.rivera.example` subject, three enrolled devices in the top-level `devices` array plus matching `deviceIdentity` facets, audience-scoped `home.shareUsageData: restricted` for a named energy provider in `demand-response` context, audience-scoped `home.allowRemoteAccess: restricted` for the owner's named cloud relay, location stays default-deny, `automationRules` facet, `policyEnforcementProfile` with `freshnessPolicy.staleManifestTreatment: fail-closed` + `remoteAccessPolicy.rejectAnyOtherOrigin: true` + `telemetryPolicy.locationStripping: always`.
+
+Data-firewall-ux lane (WO-0216 batch 5):
+
+- `examples/integrations/data-firewall-ux/baseline-default-deny-rule-set-manifest.jsonld` — baseline default-deny rule set: `did:key:` subject, three default-deny consents (`data.shareProfile`, `data.shareTelemetry`, `data.shareLocation`) each with a `ruleId`, self-asserted `firewall.policy.defaultEffect: deny` claim, `firewallPolicy` facet (`tieBreaker: deny-wins`, `rulePrecedence: specific-over-broad`, `logging.keyedBy: manifestId`, `fullPayloadRetention: never`), `ruleSet` facet enumerating the three baseline rules, three suggested pointer names (rule editor, decision panel, audit log).
+- `examples/integrations/data-firewall-ux/near-real-audience-scoped-rule-overrides-manifest.jsonld` — pairwise `did:web:` subject, two `data.shareProfile` rules at differing priorities (high-priority audience-scoped restricted for the named clinic in `emergency`/`clinical` contexts at `priority: 90` + low-priority deny fallback at `priority: 10`) demonstrating "specific-over-broad, deny-wins-ties", audience-scoped `data.shareTelemetry: restricted` with per-rule `expiresAt` independent of manifest TTL, `firewall.ruleSet.version` claim correlating decisions to a frozen rule snapshot, `firewallPolicy` + `decisionPanelDescriptor` (renderer contract for matched rule id, factors, reason text) + `auditViewDescriptor` (id-keyed-only retention contract) facets.
+
+OMA-Trust lane (WO-0216 batch 5; complements the three WO-0027 stubs under `examples/v0.1/stubs/`):
+
+- `examples/integrations/oma-trust/baseline-self-attesting-service-manifest.jsonld` — baseline self-attesting service tier: `did:web:` subject is also the issuer, `omatrust.policy.trustMode: self-attested`, all attestation claims `self-asserted`, `omatrust.attestation.securityAssessment.status: not-assessed`, `omatrust.shareReputation: allowed` + `omatrust.shareProofMeta: denied` (no proof metadata to surface), all four suggested pointer names, `omaTrustReputation` + `omaTrustLifecycle` facets. Documents the lowest trust tier explicitly so consumers know to evaluate additional out-of-band signals before promoting.
+- `examples/integrations/oma-trust/near-real-multi-attester-aggregate-manifest.jsonld` — multi-attester aggregate: `omatrust.policy.trustMode: trusted-attester-aggregate`, two distinct trusted-attester endorsement claims (operational + security) with per-claim expiry, SOC2 Type-2 certification, security-assessment claim with embedded VP `claimProof` matching the issuer DID, audience-scoped `omatrust.shareProofMeta: restricted` for a named relying party in `high-trust-evaluation` context, `omaTrustReputation` with `attesters[]` + consumer-computed `thresholdPolicy` (`minEndorsements: 2`, `minDistinctAttesterDomains: 2`), `omaTrustLifecycle` with `freshnessPolicy.staleEvidenceTreatment: fail-closed`, `trustEvaluationProfile` codifying consumer evaluation order.
+
+RP1 spatial-fabric lane (WO-0216 batch 5; complements the three stubs under `examples/v0.1/stubs/`):
+
+- `examples/integrations/rp1-spatial-fabric/baseline-single-fabric-anchor-set-manifest.jsonld` — baseline visitor tier: `did:key:` visitor subject, all four lane consents at default settings (`spatial.locationShare` + `spatial.crossWorldLinking` + `spatial.sessionReplay` denied; `spatial.anchorShare` allowed for portable saved anchors), four of the six suggested pointer names (no `rp1.attachmentIndex` / `rp1.sessionContext` because the baseline tier has no child-scope mounts and no live session), single saved-entry anchor in `spatialAnchors`, single place membership, baseline `spatialAssetProfile` (`maxEmbeddedBytes: 0`).
+- `examples/integrations/rp1-spatial-fabric/near-real-multi-fabric-cross-world-attachment-manifest.jsonld` — multi-fabric cross-world tour: pairwise `did:web:` subject, trust-broker-issued `spatial.crossWorldEligibility` claim with per-claim expiry, `identity.crossDidBinding` to a `did:pkh` chain wallet (creator recognition across fabrics), audience-scoped `spatial.locationShare: restricted` for a named wayfinding service in `wayfinding` context (place-membership only — no anchor coordinates), audience-scoped `spatial.crossWorldLinking: restricted` for one named child fabric scope under `creator-tour` context with field-level scope selector, full six-pointer set with `observedAt` + tight `expiresAt` on `rp1.attachmentIndex` (15 min) and `rp1.sessionContext` (6 min), multi-anchor `spatialAnchors` (portal + tour-stop), `spatialFabricAttachmentPolicy` with `cycleHandling: track-visited-scopes` + `repeatedMountPolicy: single-mount-per-traversal`, `crossWorldWayfinding` (`audienceBindingRequired: true`), `spatialEnforcementProfile` (`staleAttachmentTreatment: deny-child-scope-traversal` + `expiredSessionTreatment: deny-replay-and-reuse` + `assetEmbeddingPolicy.embeddingAllowed: false`).
+
 ## Vision drivers (by section)
 
 Use these links to understand **why a section exists** and what direction it’s meant to support.

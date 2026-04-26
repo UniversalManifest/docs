@@ -40,9 +40,11 @@ If changes are purely additive (new optional fields/fixtures/docs), you may stay
    - `git status` clean
    - `git commit` with a clear message
    - `git push`
-7. (Optional) Tag the release:
-   - `git tag vX.Y.Z`
-   - `git push --tags`
+7. Tag the release using the spec-version tag convention (annotated tag, pushed explicitly so it is fetchable but does not interfere with future SDK package tags):
+   - `git tag -a spec-vX.Y -m "Universal Manifest vX.Y published"`
+   - `git push origin spec-vX.Y`
+
+   This convention (`spec-vX.Y`) is reserved for spec-version cuts. Tooling/SDK packages MUST use a different tag namespace (for example `sdk-vX.Y.Z` or `pkg-name-vX.Y.Z`) so spec tags and package release tags do not collide.
 
 ## 2.1) Release steps (conformance suite)
 
