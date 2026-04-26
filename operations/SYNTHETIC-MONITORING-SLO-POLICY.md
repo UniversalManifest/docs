@@ -72,6 +72,10 @@ Optional check configuration:
   - staging: `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING`
   - shared fallback: `UM_SYNTHETIC_ALERT_WEBHOOK`
 
+For operator onboarding (where to obtain each secret, what fails if it is
+missing, webhook payload contract, curl probes, and rotation procedure)
+see `docs/operations/SYNTHETIC-MONITORING-SETUP.md`.
+
 ## 3) SLI Definitions
 
 SLIs are calculated from synthetic runs and retained artifacts:

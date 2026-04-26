@@ -198,6 +198,27 @@ rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/int
 
 **Skip lines are not failures.** The contract suite emits `SKIP contract 307|410|500 (UM_SMOKE_*_UMID not set; ...)` when the optional fixture UMIDs are unconfigured. That is the documented "do not poke prod" path; only `FAIL` lines warrant alerting.
 
+### 2.8 wrangler env cross-check fails (`wrangler-env-cross-check` job)
+
+**Symptom:** The `wrangler.toml <-> workflow env cross-check` job in `.github/workflows/phase-9-gate.yml` exits non-zero with one of:
+
+- `EMPTY  --env "" is forbidden (WO-0232 regression). Omit --env or use a declared env.`
+- `MISSING  --env "<name>" but no [env.<name>] block in any wrangler.toml`
+
+**Why this gate exists:** WO-0232 shipped `--env ""` to production resolver deploy because no static check connected `wrangler --env <name>` invocations in workflows to `[env.<name>]` blocks in `wrangler.toml`. WO-0240 added `scripts/validate-wrangler-env-references.mjs` to close that bug class. The script runs on every PR via this job.
+
+**Diagnosis:** The failure message names the workflow file, line number, and offending value.
+
+- `EMPTY` finding: a `wrangler --env ""` invocation slipped in. This is always a bug -- wrangler's behavior on an empty env name is undefined and was the WO-0232 production-deploy regression.
+- `MISSING` finding: a `wrangler --env <name>` references an env that no `wrangler.toml` declares.
+
+**Remediation:**
+
+- For `EMPTY`: either omit `--env` entirely (uses the top-level config = implicit production env) or pass the name of an existing `[env.<name>]` block. See WO-0232 result report for the worked-example fix.
+- For `MISSING`: either add `[env.<name>]` to the relevant `services/*/wrangler.toml` mirroring the existing block shape (KV bindings, routes, account_id), or correct the workflow to reference an env that does exist. Do NOT delete the gate to make the build green.
+
+**Escalation threshold:** None on its own -- this is a build-time PR gate, not a runtime alert. Fix the workflow or the wrangler.toml in the same PR. If the legitimate fix requires structural wrangler.toml changes (new env block with new KV namespace), open a WO so the reviewer knows new infrastructure is being declared.
+
 ---
 
 ## 3. WO-0206 case study -- reference restoration procedure
