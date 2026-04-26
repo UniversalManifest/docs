@@ -1,6 +1,6 @@
 # WO-0220: v0.2 Release Tag, GitHub Release, and Immutable Artifact Hash Pinning
 
-**Status:** NOT_STARTED
+**Status:** PREP COMPLETE — awaiting operator to run `git tag -a spec-v0.2` + `git push origin spec-v0.2` + `gh release create spec-v0.2` (commands inlined in `.dev/ai/subtask-comms/2026-04-26-wo-0220-result.md`)
 **Priority:** P0 (head of publication wave; blocks all downstream WOs)
 **Depends on:** none
 **Unblocks:** WO-0221 through WO-0231

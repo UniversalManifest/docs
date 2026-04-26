@@ -1,6 +1,6 @@
 # WO-0216: Establish Integration-Lane Fixture Baseline
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED 2026-04-26 — all 5 batches shipped; 26 integration-pack fixtures across 13 active integration-lane dirs (gpc retains its dedicated runner with 11 fixtures = 14 lanes total). `npm test` reports `26 integration-lane ok, 0 failed` (gated by WO-0239's validator-walk extension). Existing 49 valid + 26 invalid + GPC (6/4/1) baselines unchanged. Closure status table in `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-26-wo-0216-batch-5-result.md`.
 **Priority:** HIGH (P1)
 **Depends on:** none directly; coordinate with WO-0213 if integration-lane doc edits land first
 **Unblocks:** WO-0017 lane-coverage closure, WO-0219 cross-reference consolidation
