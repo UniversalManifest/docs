@@ -1,15 +1,17 @@
 # Phase 9 Drift-Recovery Playbook
 
+> **STALE — 2026-04-28:** The automated `phase-9-gate.yml` workflow this playbook references was removed in revert commit `e493b3e`. References to "the Phase 9 gate" in this document refer to a workflow that no longer exists. The MANUAL mandatory command set (documented in `docs/CRITICAL-PATH.md` Phase 9 section) still applies; treat the workflow-specific procedures here as historical until the workflow is intentionally re-introduced under explicit authorization.
+
 **Purpose:** Procedural remediation for failures of the Phase 9 drift-governance mandatory command set. Converts the one-off restoration pattern exercised in WO-0206 into a repeatable maintainer playbook.
 
-**Scope:** Applies whenever the Phase 9 gate (`.github/workflows/phase-9-gate.yml`) or the manual mandatory command set (documented in `docs/CRITICAL-PATH.md` Phase 9 section) fails.
+**Scope:** Applies whenever the manual mandatory command set (documented in `docs/CRITICAL-PATH.md` Phase 9 section) fails. The automated gate referenced below was reverted; the manual procedure remains current.
 
 **Companion documents:**
 
 - `docs/CRITICAL-PATH.md` -- Phase 9 cadence, mandatory command set, and follow-on WO thresholds.
-- `.github/workflows/phase-9-gate.yml` -- automated gate that runs the non-K2B portion of the mandatory command set.
+- ~~`.github/workflows/phase-9-gate.yml`~~ -- removed 2026-04-28 (revert commit `e493b3e`); not currently a live gate.
 - `docs/workorders/WO-0206-k2b-drift-governance-artifact-contract-restoration.md` -- reference case study.
-- `docs/workorders/WO-0208-phase-9-drift-governance-automation-hardening.md` -- the WO that created this playbook.
+- `docs/workorders/WO-0208-phase-9-drift-governance-automation-hardening.md` -- WO that created this playbook (workflow component now reverted).
 
 ---
 

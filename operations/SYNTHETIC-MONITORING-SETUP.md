@@ -1,9 +1,11 @@
 # Synthetic Monitoring Setup (Secrets and Webhook Configuration)
 
-Status: Active
+Status: Reference (synthetic-monitoring crons currently disabled)
 Owner: Platform / Operations
 Work Order: WO-0236 (operator onboarding hygiene)
-Last updated: 2026-04-26
+Last updated: 2026-04-26 (banner added 2026-04-28)
+
+> **NOTE — 2026-04-28:** The synthetic-monitoring workflows were reverted to their budget-zero state in commit `e493b3e` (cron schedules commented out per the prior `93683fe` cost-control commit). The secrets documented below still apply IF a maintainer re-enables the schedules; until then, this document is reference material only and no automated probes are running.
 
 ## Purpose
 

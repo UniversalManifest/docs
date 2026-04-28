@@ -1,9 +1,11 @@
 # Synthetic Monitoring, Alerting, and SLO Policy
 
-Status: Active  
+Status: Reference (active monitoring suspended; cron disabled)
 Owner: Platform / Operations  
-Work Order: WO-0117 (baseline), WO-0215 (error-path coverage extension)  
-Last updated: 2026-04-26
+Work Order: WO-0117 (baseline), ~~WO-0215 (error-path coverage extension)~~ — reverted 2026-04-28
+Last updated: 2026-04-26 (banner added 2026-04-28)
+
+> **NOTE — 2026-04-28:** WO-0215's expanded error-path coverage and the synthetic-monitoring cron were reverted in commit `e493b3e`. The SLO targets defined here remain the documented intent, but no automated monitoring is currently asserting them. Sections that reference the WO-0215-extended assertions (contract status codes, header contract checks, expanded SLO indicators) describe a posture that does not currently exist in CI.
 
 ## 1) Scope
 
