@@ -1,6 +1,6 @@
 # WO-0211: Agent Catalog Regeneration Drift Gate
 
-**Status:** NOT_STARTED
+**Status:** OBSOLETE 2026-04-28 — target workflow `.github/workflows/phase-9-gate.yml` was removed in revert commit `e493b3e`. The underlying need (gate agent-catalog regeneration) may still be valid but would require a different mechanism; re-scope from scratch if pursued.
 **Priority:** MEDIUM (closes the same drift class WO-0207 manually audited; prevents silent divergence)
 **Depends on:** WO-0210 (Phase 9 gate proven green first, so we extend a known-working workflow rather than debugging two gates at once)
 **Unblocks:** —

@@ -1,6 +1,6 @@
 # WO-0210: Phase 9 Gate First-Run Verification and Hardening
 
-**Status:** NOT_STARTED
+**Status:** OBSOLETE 2026-04-28 — target workflow `.github/workflows/phase-9-gate.yml` was removed in revert commit `e493b3e`. WO is structurally defunct; no first-run verification needed for a non-existent workflow.
 **Priority:** MEDIUM (a never-run CI gate is a latent landmine; this WO proves it works)
 **Depends on:** WO-0208 (created the gate), sibling commit agent's wave landing on `main`
 **Unblocks:** —

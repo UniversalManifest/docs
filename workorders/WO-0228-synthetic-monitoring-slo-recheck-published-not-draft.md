@@ -1,6 +1,6 @@
 # WO-0228: Synthetic-Monitoring SLO Re-check Against Published-Not-Draft Surface
 
-**Status:** NOT_STARTED
+**Status:** OBSOLETE 2026-04-28 — depended on the WO-0215 expanded synthetic monitoring (reverted in commit `e493b3e`). The synthetic-monitoring workflow is back to its budget-zero state. Re-scope a fresh WO if the user later re-enables monitoring against the published surface.
 **Priority:** P1
 **Depends on:** WO-0222
 **Unblocks:** none

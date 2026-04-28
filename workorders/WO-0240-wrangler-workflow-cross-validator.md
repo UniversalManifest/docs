@@ -1,6 +1,6 @@
 # WO-0240: wrangler.toml ↔ Workflow Cross-Validator
 
-**Status:** COMPLETED 2026-04-26 — `scripts/validate-wrangler-env-references.mjs` (64 LOC) + new `wrangler-env-cross-check` job in phase-9-gate.yml; catches 7 bug classes including `--env ""` regression; playbook §2.8 added; actionlint clean
+**Status:** OBSOLETE 2026-04-28 — `scripts/validate-wrangler-env-references.mjs` and the `wrangler-env-cross-check` job in `phase-9-gate.yml` were both removed in revert commit `e493b3e`. The bug class this guarded against (the WO-0232 `--env ""` failure) is also back since `deploy-gated.yml` was reverted; address separately if/when the user wants to re-apply the prod fix.
 **Priority:** HIGH (P1) — closes the highest-leverage class of bugs that produced WO-0232
 **Depends on:** WO-0232 (the bug it would have caught is now fixed; this WO prevents recurrence)
 **Unblocks:** —

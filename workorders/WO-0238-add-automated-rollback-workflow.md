@@ -1,6 +1,6 @@
 # WO-0238: Add Automated Rollback Workflow
 
-**Status:** COMPLETED 2026-04-26 — new `.github/workflows/rollback-manual.yml` with 6 jobs (confirm_gate → build → rollback_docs+rollback_resolver in parallel → verify_rollback → audit_trail); reuses existing smoke + verify:postdeploy scripts; INCIDENT-RESPONSE.md §6.4 added; audit trail via artifact + operator-commits; actionlint clean
+**Status:** OBSOLETE 2026-04-28 — `.github/workflows/rollback-manual.yml` was removed in revert commit `e493b3e` due to unauthorized creation. INCIDENT-RESPONSE.md §6.4 (which referenced the workflow) is now stale and should be edited or reverted manually; that edit is NOT in the revert commit.
 **Priority:** MEDIUM (P2)
 **Depends on:** WO-0232 (deploy must work correctly before automated rollback can re-deploy a prior ref reliably)
 **Unblocks:** Incident-response automation (operationalizes WO-0059)

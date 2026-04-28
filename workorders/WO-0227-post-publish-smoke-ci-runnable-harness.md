@@ -1,6 +1,6 @@
 # WO-0227: Post-Publish Smoke — CI-Runnable Production Smoke Harness
 
-**Status:** NOT_STARTED
+**Status:** OBSOLETE 2026-04-28 — was scoped to live inside `.github/workflows/publish-spec.yml`, which was removed in revert commit `e493b3e`. If a manual `npm run smoke:publication` script is wanted, scope a fresh WO; do not resurrect this one.
 **Priority:** P0 (verifies publication success in production)
 **Depends on:** WO-0222
 **Unblocks:** WO-0229

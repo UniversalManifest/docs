@@ -1,6 +1,6 @@
 # WO-0233: Add Spec Publication Automation Workflow
 
-**Status:** COMPLETED 2026-04-26 — new `.github/workflows/publish-spec.yml` + report dir; 8 §8 assertions + drift-resistant hash verify (reads changelog at runtime, not hardcoded); no continue-on-error; webhook alert on failure; actionlint clean
+**Status:** OBSOLETE 2026-04-28 — `.github/workflows/publish-spec.yml` was removed in revert commit `e493b3e` due to unauthorized creation. Original landing date was 2026-04-26; reverted along with the rest of the unauthorized CI infrastructure.
 **Priority:** CRITICAL (P0)
 **Depends on:** WO-0232 (production deploy must be correct before publication push); operationally, can be drafted in parallel
 **Unblocks:** WO-0220 (tag publish path becomes auditable)

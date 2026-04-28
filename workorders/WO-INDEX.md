@@ -457,8 +457,8 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 **Trigger:** Gaps surfaced by the drift-scan follow-on wave's own delivery. WO-0208 built `phase-9-gate.yml` but never ran it; WO-0207 verified catalog accuracy manually without adding a CI gate to prevent recurrence.
 **Sequencing:** strictly serial — WO-0210 → WO-0211. Prove the Phase 9 gate works green before extending it with a new job.
 
-- WO-0210 (NOT_STARTED): `docs/workorders/WO-0210-phase-9-gate-first-run-verification-and-hardening.md` — actionlint + first PR-trigger run + first workflow_dispatch run of `phase-9-gate.yml`; fix bugs surfaced (MEDIUM; depends on sibling commit wave landing on main; gates WO-0211)
-- WO-0211 (NOT_STARTED): `docs/workorders/WO-0211-agent-catalog-regeneration-drift-gate.md` — add `--check` mode to `site/scripts/sync-agent-discovery.mjs`, expose as `sync:agent-discovery:check`, wire into CI so PRs fail loudly if `fixture-catalog.json` / `sandbox-scenarios.json` drift from canonical sources (MEDIUM; depends on WO-0210)
+- WO-0210 (OBSOLETE 2026-04-28): `docs/workorders/WO-0210-phase-9-gate-first-run-verification-and-hardening.md` — target workflow `phase-9-gate.yml` was removed in revert commit `e493b3e`; nothing left to verify
+- WO-0211 (OBSOLETE 2026-04-28): `docs/workorders/WO-0211-agent-catalog-regeneration-drift-gate.md` — would have added a job to the deleted `phase-9-gate.yml`; structurally defunct. Underlying need (gate agent-catalog regeneration) may still be valid — re-scope from scratch if pursued
 
 ### v0.2 Publication Readiness Nit Wave (WO-0212 through WO-0214)
 
@@ -491,8 +491,8 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 - WO-0224 (NOT_STARTED): `docs/workorders/WO-0224-conformance-badge-and-adopter-onboarding-cross-link-wiring.md` — surface the conformance suite, badges, adopter onboarding, and reference TS implementation from the published spec page (P1; depends on WO-0221)
 - WO-0225 (NOT_STARTED): `docs/workorders/WO-0225-governance-and-rfc-mechanism-cross-link-from-published-spec.md` — replace `RFC_HREF`/`BREAKING_CHANGE_HREF` placeholders and add a Normative References section linking the full governance set (P1; depends on WO-0221)
 - WO-0226 (NOT_STARTED): `docs/workorders/WO-0226-announcement-copy-changelog-banner-and-social-blurbs.md` — author the changelog entry, home-page banner, and social/email blurbs (1-line, 2-paragraph, 5-paragraph) for the v0.2 launch (P1; depends on WO-0221, WO-0222, WO-0223; unblocks WO-0229)
-- WO-0227 (NOT_STARTED): `docs/workorders/WO-0227-post-publish-smoke-ci-runnable-harness.md` — add a CI-runnable `smoke:publication` harness asserting the eight production publication invariants (P0; depends on WO-0222; unblocks WO-0229)
-- WO-0228 (NOT_STARTED): `docs/workorders/WO-0228-synthetic-monitoring-slo-recheck-published-not-draft.md` — re-read the WO-0117 SLO policy against the published surface and add `/spec/v0.2/` plus governance routes to the monitored set (P1; depends on WO-0222)
+- WO-0227 (OBSOLETE 2026-04-28): `docs/workorders/WO-0227-post-publish-smoke-ci-runnable-harness.md` — was scoped to live inside the deleted `publish-spec.yml`. Re-scope as a manual `npm run smoke:publication` script if wanted
+- WO-0228 (OBSOLETE 2026-04-28): `docs/workorders/WO-0228-synthetic-monitoring-slo-recheck-published-not-draft.md` — synthetic monitoring was reverted to the budget-zero state in `e493b3e`; SLO re-check has nothing to re-check against. Re-scope if monitoring is later re-enabled
 - WO-0229 (NOT_STARTED): `docs/workorders/WO-0229-critical-path-and-state-of-project-update-v0-2-published.md` — update CRITICAL-PATH.md, STATE-OF-THE-PROJECT.md, and WO-INDEX.md to declare v0.2 published and stub Phase 19 (P1; depends on WO-0220–WO-0228; unblocks WO-0230)
 - WO-0230 (NOT_STARTED): `docs/workorders/WO-0230-phase-19-what-comes-next-definition.md` — define Phase 19 goals and stub follow-on WO IDs (WO-0232+) for adopter feedback, deferred identity-binding tiers, RDF profile, and revocation decisions (P2; depends on WO-0229)
 - WO-0231 (NOT_STARTED): `docs/workorders/WO-0231-publication-closeout-audit-and-evidence-pack.md` — walk the done-done checklist, author the evidence pack, re-run publication smoke, and mark the wave COMPLETED (P1; depends on WO-0220–WO-0230; final WO of the wave)
@@ -503,12 +503,12 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 **Note:** Scan also recommended a "WO-0235 Implement Publication Smoke Automation" — that scope is already covered by `WO-0227` in the publication wave; WO-0235 is intentionally skipped to avoid duplication.
 
 - WO-0232 (COMPLETED 2026-04-26): `docs/workorders/WO-0232-fix-production-resolver-deploy-environment-parameter.md` — `--env ""` removed (wrangler.toml has no `[env.production]` block; top-level config IS production); new KV-binding assertion step with secret-redaction. **OPERATOR ACTION:** set repo secrets `PROD_RESOLVER_UMID_KV_ID` (required) + `STAGING_RESOLVER_UMID_KV_ID` (optional) before next prod deploy
-- WO-0233 (COMPLETED 2026-04-26): `docs/workorders/WO-0233-add-spec-publication-automation-workflow.md` — new `.github/workflows/publish-spec.yml` (triggers on `spec-v*` tags + `workflow_dispatch`); 8 PUBLISHING-AND-VERSIONING §8 assertions + drift-resistant hash verification (reads changelog at runtime); no `continue-on-error`; webhook alert on failure via existing synthetic-monitoring secret pattern; actionlint clean
+- WO-0233 (OBSOLETE 2026-04-28): `docs/workorders/WO-0233-add-spec-publication-automation-workflow.md` — the workflow it created (`publish-spec.yml`) was removed in revert commit `e493b3e` due to unauthorized creation
 - WO-0234 (COMPLETED 2026-04-26): `docs/workorders/WO-0234-harden-staging-deploy-failure-handling.md` — kept `continue-on-error: true` but added compensating hard gate: staging-deploy `deploy_outcome` outputs + new `Assert staging deploys succeeded` first-step in `verify_staging` that fails fast if either staging deploy != success; runbook documents Gate-Failure Semantics
 - WO-0235: SKIPPED — duplicates WO-0227 in publication wave; do not execute
 - WO-0236 (COMPLETED 2026-04-26): `docs/workorders/WO-0236-document-synthetic-monitoring-secrets-configuration.md` — new `docs/operations/SYNTHETIC-MONITORING-SETUP.md`; 4 secrets enumerated (UM_SYNTHETIC_SMOKE_UMID + 3 webhook variants with precedence rules); placeholder-only curl examples; cross-linked from SLO policy
 - WO-0237 (COMPLETED 2026-04-26): `docs/workorders/WO-0237-add-reachability-assertion-to-staging-smoke-gate.md` — `verify_staging` now probes `${DOCS_BASE}/` + `${RESOLVER_BASE}/health` with curl --max-time 30; fails fast on non-2xx; resolver `/health` confirmed extant; runbook gains Reachability Gate section
-- WO-0238 (COMPLETED 2026-04-26): `docs/workorders/WO-0238-add-automated-rollback-workflow.md` — new `.github/workflows/rollback-manual.yml` with 6 jobs (confirm_gate → build → rollback_docs+rollback_resolver in parallel → verify_rollback → audit_trail); reuses existing smoke + verify:postdeploy scripts (no composite action — avoided sibling conflicts); INCIDENT-RESPONSE.md §6.4 added; audit trail via artifact + operator-commits
+- WO-0238 (OBSOLETE 2026-04-28): `docs/workorders/WO-0238-add-automated-rollback-workflow.md` — the workflow it created (`rollback-manual.yml`) was removed in revert commit `e493b3e`. INCIDENT-RESPONSE.md §6.4 still references the workflow and is now stale
 
 ### Validator Walk Gap (WO-0239) — surfaced by WO-0216 batch 1
 
@@ -516,4 +516,4 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 
 ### wrangler ↔ Workflow Cross-Validator (WO-0240) — surfaced by WO-0232 closeout
 
-- WO-0240 (COMPLETED 2026-04-26): `docs/workorders/WO-0240-wrangler-workflow-cross-validator.md` — `scripts/validate-wrangler-env-references.mjs` (64 LOC); new `wrangler-env-cross-check` job in `phase-9-gate.yml` runs on every PR + push to main; catches 7 bug classes including `--env ""` regression; playbook §2.8 added
+- WO-0240 (OBSOLETE 2026-04-28): `docs/workorders/WO-0240-wrangler-workflow-cross-validator.md` — both the script and the workflow job it added were removed in revert commit `e493b3e`. The bug class it guarded against (the WO-0232 `--env ""` failure in `deploy-gated.yml`) is also re-introduced by the same revert
