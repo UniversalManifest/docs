@@ -58,39 +58,22 @@ This runbook defines how Universal Manifest maintainers detect, triage, resolve,
 2. Re-check canonical endpoints and cache headers.
 3. Run smoke checks for docs and resolver surfaces.
 
-### 6.4 Automated rollback (operator playbook)
+### 6.4 Historical automated rollback workflow (removed 2026-04-28)
 
-The `Rollback (Manual)` GitHub Actions workflow (`.github/workflows/rollback-manual.yml`) re-deploys a chosen prior git ref to staging or production and re-runs the same smoke + post-deploy verify harness used by `deploy-gated.yml`. Use this when the documented manual rollback is too slow (target MTTR: ~5 minutes for resolver, ~10 minutes for docs).
+The former `Rollback (Manual)` GitHub Actions workflow
+(`.github/workflows/rollback-manual.yml`) was removed in revert commit
+`e493b3e`. It is not a live operator path today.
 
-**When to use:** P0 or P1 incident where reverting code via a known-good prior ref is faster than rolling forward with a fix.
+**Current rollback path:** use the manual procedure in section 6.3, then run
+the same environment-appropriate smoke and post-deploy verification commands
+documented in `docs/site/STAGING-PROMOTION-RUNBOOK.md`.
 
-**Operator steps:**
-
-1. Identify the last known-good git ref (tag preferred, SHA acceptable). Cross-check against:
-   - `docs/reports/deploy-checks/` (artifact filenames carry the deployed ref)
-   - the most recent green `Deploy (Gated)` workflow run
-2. Open GitHub → Actions → `Rollback (Manual)` → `Run workflow`.
-3. Select inputs:
-   - `environment`: `staging` or `production`
-   - `git-ref`: the prior ref to re-deploy (e.g., `spec-v0.2.0`, or a commit SHA)
-   - `confirm`: must equal `ROLLBACK` exactly (hard sanity gate; the workflow fails immediately if not matched)
-4. Click `Run workflow`. The workflow will:
-   - Re-checkout, rebuild the publish bundle and resolver from the target ref
-   - Re-deploy Cloudflare Pages and the resolver Worker against the chosen environment
-   - Re-run `smoke:endpoints:{env}` and `verify:postdeploy:{env}`
-   - Upload a rollback audit record artifact (`rollback-record-{env}`)
-5. After the workflow finishes:
-   - Download the `rollback-record-{env}` artifact and commit the contained markdown file to `docs/reports/rollbacks/{date}-{env}-{ref}.md`.
-   - Download `rollback-deploy-checks-{env}` and attach the smoke/verify artifacts to the incident report (per section 8).
-   - Open or update the incident report under `docs/reports/` with the rollback record link, root cause hypothesis, and the planned roll-forward fix.
-
-**If the workflow fails:**
-
-- `confirm_gate` failure: the `confirm` input did not equal `ROLLBACK`. Re-run with the correct value.
-- `rollback_docs` or `rollback_resolver` failure: deploy did not complete. Investigate Cloudflare auth and target ref before re-running. Do NOT retry blindly against production.
-- `verify_rollback` failure: deploy completed but smoke or post-deploy verify failed. The target ref may itself be unhealthy against the current environment configuration. Escalate to manual rollback (section 6.3) and choose a different prior ref.
-
-**Audit trail location:** `docs/reports/rollbacks/{YYYY-MM-DD}-{env}-{ref}.md` (record per invocation).
+**Historical note:** the removed workflow used to rebuild a chosen prior git
+ref, redeploy it to staging or production, and upload rollback audit
+artifacts. Keep references to that workflow in past incident reports as
+historical evidence only. If equivalent automation is intentionally
+reintroduced later, update this section with the new workflow name, inputs,
+and audit-trail procedure.
 
 ## 7. Communication Template
 

@@ -36,7 +36,9 @@ curl -I -s https://universalmanifest.net/getting-started/workbench/
 curl -I -s https://universalmanifest.net/proof/harness/
 ```
 
-If any command fails locally, proceed to the matching section below. If all pass locally but CI reports a failure, re-run the CI job and attach the local evidence to the failure ticket before escalating.
+If any command fails locally, proceed to the matching section below. If all
+pass locally but another report or manually dispatched workflow run claims a
+failure, attach the local evidence to the ticket before escalating.
 
 ---
 
@@ -154,7 +156,9 @@ rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/int
 
 1. Retry from a clean environment. Cloudflare occasionally returns transient 5xx or cached-negative responses; a single `curl -I` is not conclusive.
 2. Check the deploy pipeline (`.github/workflows/deploy-gated.yml`) for a failed or skipped recent deploy.
-3. Check the synthetic monitoring workflow (`.github/workflows/synthetic-monitoring.yml`) -- if its ping-monitor is also failing, the outage is live.
+3. There is no cron-driven synthetic monitor right now. If needed, manually
+   dispatch `.github/workflows/synthetic-monitoring.yml` as a second data
+   point; if its ping monitor also fails, the outage is live.
 4. Open `https://dash.cloudflare.com/` route rules and verify the canonical route is still mapped. `docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md` documents the expected mapping.
 
 **Remediation:**
@@ -165,61 +169,111 @@ rg -n '/harness/|/proof/|/getting-started/|/spec/|/conformance/|/workbench/|/int
 
 **Escalation threshold:** Open a P0 WO immediately if the root path returns non-2xx and persists for more than one edge cycle.
 
-### 2.7 Alert: resolver contract violation detected
+### 2.7 Manual resolver contract verification
 
-**Symptom:** The synthetic monitoring workflow (`synthetic-monitoring.yml` or `synthetic-monitoring-staging.yml`) fails on the "Resolver contract suite (status matrix + headers)" step. The webhook payload includes `runbook: docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md#27-alert-contract-violation-detected`.
+**Historical note:** WO-0215 briefly wired the resolver contract suite into
+the synthetic-monitoring workflows, but revert commit `e493b3e` removed that
+live alert path. Current synthetic monitoring only performs latency pings.
 
-**Why this is treated as a resolver outage:** Latency probes can be green while the contract has silently drifted (for example, revoked records returning `404` instead of `410`, or `X-UM-Resolver-Source` missing). Adopters relying on contract semantics will see breakage even though `/health` looks fine. WO-0215 wired the contract suite into synthetic monitoring precisely to surface this fast.
+**Current symptom:** A maintainer manually runs contract verification and it
+fails:
+
+```bash
+cd packages/universal-manifest
+# Production:
+npm run smoke:endpoints:prod:contract
+# Or staging:
+npm run smoke:endpoints:staging:contract
+```
+
+If the failure is opt-in (`307`/`410`/`500`) and you want to reproduce it,
+export the appropriate fixture UMID env var first
+(`UM_SMOKE_REDIRECT_UMID` / `UM_SMOKE_REVOKED_UMID` /
+`UM_SMOKE_CORRUPT_UMID`).
+
+**Why this is treated as a resolver outage:** Latency probes can be green
+while the contract has silently drifted (for example, revoked records
+returning `404` instead of `410`, or `X-UM-Resolver-Source` missing).
+Adopters relying on contract semantics will see breakage even though
+`/health` looks fine.
 
 **Diagnosis order:**
 
-1. Pull the failing workflow log. The first `FAIL contract <status> ...` line names the assertion that drifted (status code, header, or `Cache-Control` mismatch).
-2. Reproduce locally against the same target:
-   ```bash
-   cd packages/universal-manifest
-   # Production:
-   npm run smoke:endpoints:prod:contract
-   # Or staging:
-   npm run smoke:endpoints:staging:contract
-   ```
-   If the failure is opt-in (`307`/`410`/`500`) and you want to reproduce, export the appropriate fixture UMID env var first (`UM_SMOKE_REDIRECT_UMID` / `UM_SMOKE_REVOKED_UMID` / `UM_SMOKE_CORRUPT_UMID`).
-3. Cross-reference the failing assertion against `services/myum-resolver/CONTRACT.md` to confirm what the contract specifies. The standalone resolver test suite (`cd services/myum-resolver && npm run test:contract`) is the authoritative reproduction harness.
+1. Reproduce locally against the target environment with the command above.
+2. Cross-reference the failing assertion against
+   `services/myum-resolver/CONTRACT.md` to confirm what the contract
+   specifies.
+3. Run the standalone resolver test suite
+   (`cd services/myum-resolver && npm run test:contract`) for a deeper
+   reproduction harness.
 4. Identify the most recent change to either:
    - `services/myum-resolver/src/index.ts` (runtime regression)
    - the resolver KV data (an authoritative record was rewritten or deleted)
-   - the resolver's Cloudflare route bindings (CORS / `access-control-expose-headers` may regress at the edge if a route rule is rewritten without the header allowlist).
+   - the resolver's Cloudflare route bindings (CORS /
+     `access-control-expose-headers` may regress at the edge if a route rule
+     is rewritten without the header allowlist)
 
 **Remediation:**
 
-- Runtime regression -> revert the offending commit or land a forward-fix that restores the contract assertion. Do not silently widen the SLO; the contract is the contract.
-- KV record drift -> reseed the affected UMID (or the deterministic redirect/revoked/corrupt fixtures used by contract-mode UMIDs) using the documented KV seeding procedure in `services/myum-resolver/CLOUDFLARE-DEPLOY.md`.
-- Edge / route-rule drift -> restore the canonical route mapping (`docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`) and re-verify with `npm run smoke:endpoints:prod:contract`.
-- Header contract drift (missing `X-UM-Resolver-Contract` / `X-UM-Resolver-Source` / exposed-header tokens) -> these are MUST-have on every response (CONTRACT.md sections 2-3); fix in `addCommonHeaders` in `services/myum-resolver/src/index.ts` and ship.
+- Runtime regression -> revert the offending commit or land a forward-fix
+  that restores the contract assertion. Do not silently widen the SLO; the
+  contract is the contract.
+- KV record drift -> reseed the affected UMID (or the deterministic
+  redirect/revoked/corrupt fixtures used by contract-mode UMIDs) using the
+  documented KV seeding procedure in
+  `services/myum-resolver/CLOUDFLARE-DEPLOY.md`.
+- Edge / route-rule drift -> restore the canonical route mapping
+  (`docs/CANONICAL-ROUTE-AND-COMPATIBILITY-ALIAS-POLICY.md`) and re-verify
+  with `npm run smoke:endpoints:prod:contract`.
+- Header contract drift (missing `X-UM-Resolver-Contract` /
+  `X-UM-Resolver-Source` / exposed-header tokens) -> these are MUST-have on
+  every response (CONTRACT.md sections 2-3); fix in `addCommonHeaders` in
+  `services/myum-resolver/src/index.ts` and ship.
 
-**Escalation threshold:** This is always P0. A contract violation is adopter-visible by definition. Open a WO immediately, mirror the failing assertion in the WO description, and link the failing run URL.
+**Escalation threshold:** This is always P0. A contract violation is
+adopter-visible by definition. Open a WO immediately and mirror the failing
+assertion in the WO description.
 
-**Skip lines are not failures.** The contract suite emits `SKIP contract 307|410|500 (UM_SMOKE_*_UMID not set; ...)` when the optional fixture UMIDs are unconfigured. That is the documented "do not poke prod" path; only `FAIL` lines warrant alerting.
+**Skip lines are not failures.** The contract suite emits
+`SKIP contract 307|410|500 (UM_SMOKE_*_UMID not set; ...)` when the optional
+fixture UMIDs are unconfigured. That is the documented "do not poke prod"
+path; only `FAIL` lines warrant escalation.
 
-### 2.8 wrangler env cross-check fails (`wrangler-env-cross-check` job)
+### 2.8 Manual wrangler env audit
 
-**Symptom:** The `wrangler.toml <-> workflow env cross-check` job in `.github/workflows/phase-9-gate.yml` exits non-zero with one of:
+**Historical note:** The former `wrangler-env-cross-check` job in
+`.github/workflows/phase-9-gate.yml` and its helper script
+`scripts/validate-wrangler-env-references.mjs` were removed in revert commit
+`e493b3e`. There is no current CI gate for this check.
 
-- `EMPTY  --env "" is forbidden (WO-0232 regression). Omit --env or use a declared env.`
-- `MISSING  --env "<name>" but no [env.<name>] block in any wrangler.toml`
+**Current symptom:** A maintainer notices a suspicious wrangler invocation in
+workflow or deploy code, especially one resembling the reverted WO-0232
+regression:
 
-**Why this gate exists:** WO-0232 shipped `--env ""` to production resolver deploy because no static check connected `wrangler --env <name>` invocations in workflows to `[env.<name>]` blocks in `wrangler.toml`. WO-0240 added `scripts/validate-wrangler-env-references.mjs` to close that bug class. The script runs on every PR via this job.
+- `--env ""`
+- `--env "<name>"` where no `[env.<name>]` block exists in the matching
+  `wrangler.toml`
 
-**Diagnosis:** The failure message names the workflow file, line number, and offending value.
+**Diagnosis:**
 
-- `EMPTY` finding: a `wrangler --env ""` invocation slipped in. This is always a bug -- wrangler's behavior on an empty env name is undefined and was the WO-0232 production-deploy regression.
-- `MISSING` finding: a `wrangler --env <name>` references an env that no `wrangler.toml` declares.
+- `EMPTY` case: a `wrangler --env ""` invocation is always a bug. The
+  reverted `deploy-gated.yml` currently contains this regression on the
+  production resolver path.
+- `MISSING` case: a `wrangler --env <name>` reference points at an env that
+  no `wrangler.toml` declares.
 
 **Remediation:**
 
-- For `EMPTY`: either omit `--env` entirely (uses the top-level config = implicit production env) or pass the name of an existing `[env.<name>]` block. See WO-0232 result report for the worked-example fix.
-- For `MISSING`: either add `[env.<name>]` to the relevant `services/*/wrangler.toml` mirroring the existing block shape (KV bindings, routes, account_id), or correct the workflow to reference an env that does exist. Do NOT delete the gate to make the build green.
+- For `EMPTY`: either omit `--env` entirely (uses the top-level config =
+  implicit production env) or pass the name of an existing `[env.<name>]`
+  block.
+- For `MISSING`: either add `[env.<name>]` to the relevant
+  `services/*/wrangler.toml` mirroring the existing block shape, or correct
+  the workflow to reference an env that does exist.
 
-**Escalation threshold:** None on its own -- this is a build-time PR gate, not a runtime alert. Fix the workflow or the wrangler.toml in the same PR. If the legitimate fix requires structural wrangler.toml changes (new env block with new KV namespace), open a WO so the reviewer knows new infrastructure is being declared.
+**Escalation threshold:** Open a WO if fixing the mismatch requires a tracked
+workflow or infrastructure change. Until a new gate is intentionally
+introduced, treat this as a manual review item rather than a live CI check.
 
 ---
 
@@ -243,7 +297,11 @@ This is the canonical worked example for a strict K2B gate failure.
 **Key lessons captured in WO-0208:**
 
 - The strict K2B gate cannot run in CI without either vendoring `.dev/ai/` (unsafe -- widens the tracked surface to include sensitive agent state) or rewriting the gate against a tracked governance mirror. The decision documented in WO-0208 is to keep the gate manual and to rely on this playbook to make the procedure fast.
-- Link-hygiene, parity, journeys, and `npm test` all CAN run in CI and are now gated in `.github/workflows/phase-9-gate.yml`. Had that gate existed on 2026-04-24, the K2B failure would still have required manual intervention, but the non-K2B mandatory commands would have caught any co-drift automatically instead of depending on a maintainer to remember the checklist.
+- Link-hygiene, parity, journeys, and `npm test` all CAN run in CI and were
+  briefly gated in `.github/workflows/phase-9-gate.yml`, but that workflow
+  was removed in revert commit `e493b3e`. The lesson still stands: these
+  checks are automatable, but they are currently back to a manual maintainer
+  cadence unless equivalent automation is explicitly reintroduced later.
 
 ---
 
@@ -267,12 +325,17 @@ Do NOT open a WO for:
 
 ## 5. After remediation -- record the run
 
-For any remediation that touched the tracked tree or changed the gate state, record the evidence under `docs/reports/drift-scans/` with a timestamp prefix (see `~/.agents/scripts/get-filename-prefix.sh`). The Phase 9 workflow writes its own scheduled-run reports to the same directory; manual runs should follow the same format so the audit trail is uniform.
+For any remediation that touched the tracked tree or changed the verified
+manual state, record the evidence under `docs/reports/drift-scans/` with a
+timestamp prefix (see `~/.agents/scripts/get-filename-prefix.sh`).
+Historical Phase 9 workflow runs also wrote to this directory; current
+entries are maintainer-generated/manual unless a new workflow is explicitly
+introduced later.
 
 Minimum recorded fields:
 
 - UTC timestamp
-- Trigger (scheduled, manual, WO-driven)
+- Trigger (manual, WO-driven, or imported historical workflow run)
 - Which mandatory commands ran and their result
 - Link to the fix commit or WO if any tracked files changed
 - Final PASS/FAIL status

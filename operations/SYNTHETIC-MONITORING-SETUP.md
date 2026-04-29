@@ -36,154 +36,110 @@ because:
 
 ## Secret Inventory (Names and Shapes Only — never paste live values)
 
-The following secrets are referenced by the monitoring and publication
-workflows. Configure them under
+After revert commit `e493b3e`, the currently live synthetic-monitoring
+workflows consume only alert-webhook secrets. Configure them under
 `Repository -> Settings -> Secrets and variables -> Actions -> Secrets`.
 
-| Secret name                               | Type / shape                          | Consumed by                                                                                                  | Purpose                                                                                                             | Required? |
-|-------------------------------------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
-| `UM_SYNTHETIC_SMOKE_UMID`                 | UMID string (e.g. `umid:...`)         | `.github/workflows/synthetic-monitoring.yml`, `.github/workflows/synthetic-monitoring-staging.yml`           | Default UMID used by the resolver contract suite when no `workflow_dispatch` `umid` input is supplied.              | Optional  |
-| `UM_SYNTHETIC_ALERT_WEBHOOK`              | HTTPS POST webhook URL                | All three monitoring/publication workflows (shared fallback)                                                 | Shared fallback alert webhook (used when an environment-specific webhook secret is not configured).                 | Optional  |
-| `UM_SYNTHETIC_ALERT_WEBHOOK_PROD`         | HTTPS POST webhook URL                | `.github/workflows/synthetic-monitoring.yml`, `.github/workflows/publish-spec.yml`                           | Production-only alert webhook. Takes precedence over `UM_SYNTHETIC_ALERT_WEBHOOK` for production failures.          | Optional  |
-| `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING`      | HTTPS POST webhook URL                | `.github/workflows/synthetic-monitoring-staging.yml`                                                         | Staging-only alert webhook. Takes precedence over `UM_SYNTHETIC_ALERT_WEBHOOK` for staging failures.                | Optional  |
+| Secret name                          | Type / shape           | Consumed by                                             | Purpose                                                                                           | Required? |
+|--------------------------------------|------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------|
+| `UM_SYNTHETIC_ALERT_WEBHOOK`         | HTTPS POST webhook URL | `.github/workflows/synthetic-monitoring.yml`, `.github/workflows/synthetic-monitoring-staging.yml` | Shared fallback alert webhook when an environment-specific secret is not configured.              | Optional  |
+| `UM_SYNTHETIC_ALERT_WEBHOOK_PROD`    | HTTPS POST webhook URL | `.github/workflows/synthetic-monitoring.yml`            | Production-only alert webhook. Takes precedence over `UM_SYNTHETIC_ALERT_WEBHOOK` for prod runs. | Optional  |
+| `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING` | HTTPS POST webhook URL | `.github/workflows/synthetic-monitoring-staging.yml`    | Staging-only alert webhook. Takes precedence over `UM_SYNTHETIC_ALERT_WEBHOOK` for staging runs. | Optional  |
 
 Note on shapes:
 
-- All three webhook secrets are HTTPS URLs that accept a POST request with
-  a JSON body and a `Content-Type: application/json` header. The exact
-  upstream service does not matter (Slack incoming webhook, Discord
-  webhook, PagerDuty Events v2 endpoint, generic Cloud Run receiver, etc.)
-  as long as it accepts the contract documented in
-  `Webhook Payload Contract` below.
-- `UM_SYNTHETIC_SMOKE_UMID` is treated as a secret because the chosen UMID
-  may correspond to a non-public fixture record. Live UMID values are
-  never logged.
+- All webhook secrets are HTTPS URLs that accept a POST request with a JSON
+  body and a `Content-Type: application/json` header.
+- The current workflows do not parse response bodies; they only require the
+  receiver to accept the request successfully.
 
-### Related repository variables (NOT secrets — listed for completeness)
+### Historical monitoring inputs (not currently consumed)
 
-These are configured under
-`Repository -> Settings -> Secrets and variables -> Actions -> Variables`
-and are referenced by the same monitoring workflows:
+The following inputs were used by the reverted WO-0215 contract-monitoring
+expansion and are not consumed by the current workflows:
 
-- Production fixture UMIDs (added in WO-0215):
-  - `UM_SMOKE_REDIRECT_UMID`
-  - `UM_SMOKE_REVOKED_UMID`
-  - `UM_SMOKE_CORRUPT_UMID`
-- Staging fixture UMIDs (added in WO-0215):
-  - `UM_SMOKE_REDIRECT_UMID_STAGING`
-  - `UM_SMOKE_REVOKED_UMID_STAGING`
-  - `UM_SMOKE_CORRUPT_UMID_STAGING`
-- Optional staging-target overrides:
-  - `STAGING_DOCS_BASE`
-  - `STAGING_RESOLVER_BASE`
-  - `STAGING_RESOLVER_WWW_BASE`
+- `UM_SYNTHETIC_SMOKE_UMID`
+- `UM_SMOKE_REDIRECT_UMID`
+- `UM_SMOKE_REVOKED_UMID`
+- `UM_SMOKE_CORRUPT_UMID`
+- `UM_SMOKE_REDIRECT_UMID_STAGING`
+- `UM_SMOKE_REVOKED_UMID_STAGING`
+- `UM_SMOKE_CORRUPT_UMID_STAGING`
 
-These are intentionally repository variables (not secrets) because they
-are non-sensitive identifiers and are also used as in-workflow log
-context. See `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md` section 2
-for usage.
+The `workflow_dispatch` `umid` input still exists in the workflow files, but
+after `e493b3e` it is currently unused because the contract-suite steps were
+removed. Treat these names as historical unless contract monitoring is
+explicitly reintroduced later.
 
 ## Per-Secret Operator Guide
-
-### `UM_SYNTHETIC_SMOKE_UMID`
-
-- **What it is:** A canonical UMID used by the resolver contract suite as
-  the default `200`/`304` probe target. May be a production-published
-  manifest or a fixture seeded into the resolver KV namespace.
-- **Where to obtain it:** Coordinate with the operator who seeds the
-  resolver KV namespace. The UMID must resolve to a manifest that:
-  - returns `200` with a stable `ETag` for the `200` assertion;
-  - revalidates with `304` against `If-None-Match` for the `304`
-    assertion.
-- **Workflows that consume it:**
-  - `.github/workflows/synthetic-monitoring.yml` (line 81)
-  - `.github/workflows/synthetic-monitoring-staging.yml` (line 81)
-- **Failure mode if missing:** The workflow falls back to whatever default
-  the contract scripts choose. If the scripts have no usable default the
-  contract suite logs a `SKIP` line for the affected status class and the
-  rolling-window calculation excludes that class. Workflows do not hard
-  fail solely from this secret being unset.
-- **Override:** A `workflow_dispatch` input (`umid`) is preferred for
-  one-off probes; the secret is only consulted when the input is empty.
 
 ### `UM_SYNTHETIC_ALERT_WEBHOOK_PROD`
 
 - **What it is:** HTTPS endpoint that accepts `POST application/json` and
-  fans out to the on-call channel for production incidents.
+  fans out to the on-call channel for production ping-monitor failures.
 - **Where to obtain it:**
-  - Slack: create an Incoming Webhook in the on-call workspace, scope it
-    to the channel that owns production alerts, copy the webhook URL.
-  - PagerDuty: create an Events API v2 routing key and wrap it in a small
-    receiver that translates to the contract below, or POST directly to
-    the v2 endpoint with a transform proxy.
-  - Generic: any HTTPS endpoint that returns `2xx` on POST is acceptable;
-    workflows do not parse the response body.
-- **Workflows that consume it:**
-  - `.github/workflows/synthetic-monitoring.yml` (line 90)
-  - `.github/workflows/publish-spec.yml` (line 452)
+  - Slack: create an Incoming Webhook in the on-call workspace, scope it to
+    the production-alerts channel, and copy the webhook URL.
+  - PagerDuty: create or reuse a receiver that accepts the JSON contract
+    below and forwards it into the desired escalation path.
+  - Generic: any HTTPS endpoint that returns `2xx` on POST is acceptable.
+- **Workflow that consumes it:** `.github/workflows/synthetic-monitoring.yml`
 - **Precedence:** Used first; falls back to `UM_SYNTHETIC_ALERT_WEBHOOK`.
 - **Failure mode if missing:** If both this and `UM_SYNTHETIC_ALERT_WEBHOOK`
-  are unset, the failure-alert step logs
-  `No webhook configured; skipping alert.` and exits `0`. The synthetic
-  failure itself still fails the workflow run; only the alert is skipped.
+  are unset, the workflow logs `No webhook configured; skipping alert.` and
+  exits the alert step successfully. The ping failure still fails the
+  workflow run.
 
 ### `UM_SYNTHETIC_ALERT_WEBHOOK_STAGING`
 
-- **What it is:** HTTPS endpoint for staging-only alerts. Often points at
-  a less-noisy channel than production (e.g. `#alerts-staging`).
-- **Where to obtain it:** Same procedure as the production webhook;
-  scope the destination to a staging-only audience.
-- **Workflows that consume it:**
-  - `.github/workflows/synthetic-monitoring-staging.yml` (line 90)
+- **What it is:** HTTPS endpoint for staging-only ping-monitor alerts.
+- **Where to obtain it:** Same procedure as the production webhook; scope the
+  receiver to a staging-only audience if you want lower noise.
+- **Workflow that consumes it:** `.github/workflows/synthetic-monitoring-staging.yml`
 - **Precedence:** Used first; falls back to `UM_SYNTHETIC_ALERT_WEBHOOK`.
-- **Failure mode if missing:** Same as the production webhook fallback —
-  alert is skipped, workflow still fails on the underlying assertion.
+- **Failure mode if missing:** Same as the production case; the alert is
+  skipped, but the failed workflow run remains failed.
 
 ### `UM_SYNTHETIC_ALERT_WEBHOOK` (shared fallback)
 
-- **What it is:** Single shared HTTPS webhook that catches alerts from
-  every environment when an environment-specific webhook is not set.
+- **What it is:** Single shared HTTPS webhook that catches production or
+  staging ping-monitor failures when an environment-specific webhook is not
+  set.
 - **Where to obtain it:** Same procedure as the per-environment webhooks.
 - **Workflows that consume it:**
-  - `.github/workflows/synthetic-monitoring.yml` (line 91)
-  - `.github/workflows/synthetic-monitoring-staging.yml` (line 91)
-  - `.github/workflows/publish-spec.yml` (line 453)
+  - `.github/workflows/synthetic-monitoring.yml`
+  - `.github/workflows/synthetic-monitoring-staging.yml`
 - **Precedence:** Last resort; only used when the env-specific webhook is
   empty.
-- **Failure mode if missing:** If no environment-specific webhook is set
-  AND this is also missing, alerts are skipped (workflows still fail).
+- **Failure mode if missing:** Alerts are skipped, but workflow failures are
+  still visible in Actions history.
 
 ## Webhook Payload Contract
 
-All three webhook secrets receive the same shape. The payload is built
-inline in each workflow with `jq`:
+The current workflows send a small JSON payload built inline with `jq`:
 
 ```json
 {
-  "text": "Production synthetic monitor failure detected (latency or resolver contract violation)",
+  "text": "Production Ping Monitor failure detected",
   "workflow": "Synthetic Production Monitoring",
   "repository": "<owner>/<repo>",
-  "run_url": "https://github.com/<owner>/<repo>/actions/runs/<run-id>",
-  "runbook": "docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md#27-alert-contract-violation-detected"
+  "run_url": "https://github.com/<owner>/<repo>/actions/runs/<run-id>"
 }
 ```
 
 Variations:
 
-- Staging swaps `"text"` to `"Staging synthetic monitor failure detected ..."`.
-- The publish-spec workflow swaps `"text"` to
-  `"Spec publication verification failed -- post-publication assertion drift detected"`
-  and adds two extra fields (`spec_version`, `ref`).
+- Staging swaps `"text"` to `"Staging Ping Monitor failure detected"`.
+- No current workflow includes `runbook`, `spec_version`, or `ref` fields.
 
-The receiver MAY ignore unknown fields. The receiver MUST NOT log the
-webhook URL itself; the workflows already redact `${WEBHOOK_URL_*}` from
-output. Only HTTP status is logged.
+The receiver MAY ignore unknown fields. The receiver MUST NOT log the webhook
+URL itself.
 
 ## Curl Examples (Webhook Shape — no live secret values)
 
 Use these to verify a webhook before configuring it as a GitHub secret.
-**Replace placeholders below with values from your local shell or env;
-never paste secret URLs into shared logs.**
+**Replace placeholders below with values from your local shell or env; never
+paste secret URLs into shared logs.**
 
 ### Production-shape probe
 
@@ -194,11 +150,10 @@ never paste secret URLs into shared logs.**
 curl -sS -o /dev/null -w '%{http_code}\n' -X POST \
   -H 'Content-Type: application/json' \
   -d '{
-    "text": "TEST: Production synthetic monitor probe",
+    "text": "TEST: Production ping monitor probe",
     "workflow": "Synthetic Production Monitoring",
     "repository": "OWNER/REPO",
-    "run_url": "https://github.com/OWNER/REPO/actions/runs/000000",
-    "runbook": "docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md#27-alert-contract-violation-detected"
+    "run_url": "https://github.com/OWNER/REPO/actions/runs/000000"
   }' \
   "$WEBHOOK_URL"
 ```
@@ -211,69 +166,39 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST \
 curl -sS -o /dev/null -w '%{http_code}\n' -X POST \
   -H 'Content-Type: application/json' \
   -d '{
-    "text": "TEST: Staging synthetic monitor probe",
+    "text": "TEST: Staging ping monitor probe",
     "workflow": "Synthetic Staging Monitoring",
     "repository": "OWNER/REPO",
-    "run_url": "https://github.com/OWNER/REPO/actions/runs/000000",
-    "runbook": "docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md#27-alert-contract-violation-detected"
-  }' \
-  "$WEBHOOK_URL"
-```
-
-### Spec-publication-shape probe
-
-```bash
-# export WEBHOOK_URL='<paste once, locally only>'
-
-curl -sS -o /dev/null -w '%{http_code}\n' -X POST \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "text": "TEST: Spec publication verification probe",
-    "workflow": "Publish Spec",
-    "repository": "OWNER/REPO",
-    "ref": "refs/tags/spec-v0.0.0-test",
-    "spec_version": "0.0.0-test",
-    "run_url": "https://github.com/OWNER/REPO/actions/runs/000000",
-    "runbook": "docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md"
+    "run_url": "https://github.com/OWNER/REPO/actions/runs/000000"
   }' \
   "$WEBHOOK_URL"
 ```
 
 Expected result: `2xx` HTTP status. A `4xx` indicates the payload shape is
-rejected by the upstream (e.g. Slack expects a `text` field — present —
-plus optional `attachments`). A `5xx` indicates the receiver is unhealthy.
+rejected by the upstream. A `5xx` indicates the receiver is unhealthy.
 
 Operational hygiene:
 
 - Always `unset WEBHOOK_URL` after testing.
 - Never echo `$WEBHOOK_URL` into shell history or shared transcripts.
-- If a webhook URL leaks, rotate it at the upstream provider and update
-  the corresponding GitHub Actions secret immediately.
+- If a webhook URL leaks, rotate it at the upstream provider and update the
+  corresponding GitHub Actions secret immediately.
 
 ## Rotation Procedure
 
 1. Generate a new webhook URL at the upstream provider (Slack/PagerDuty/etc.).
 2. Update the corresponding GitHub Actions secret
    (`UM_SYNTHETIC_ALERT_WEBHOOK*`) via the repo settings UI.
-3. Trigger the relevant workflow with `workflow_dispatch` and a known-bad
-   input (or temporarily set a latency threshold so the run fails) to
-   confirm the new webhook receives the alert.
+3. Validate the new receiver with the local curl probe above before relying
+   on it in Actions.
 4. Revoke the old webhook URL at the upstream provider.
 5. Record the rotation date in the operator log.
 
-For `UM_SYNTHETIC_SMOKE_UMID`, rotate by re-seeding a fresh fixture UMID
-and updating the secret value; coordinate with the resolver KV operator
-to avoid breaking in-flight contract assertions.
-
 ## Cross-References
 
-- `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md` — SLO targets, SLI
-  definitions, alert escalation policy.
-- `docs/site/STAGING-PROMOTION-RUNBOOK.md` — staging-to-production
-  promotion gates and Cloudflare deploy secrets.
-- `docs/runbooks/PHASE-9-DRIFT-RECOVERY-PLAYBOOK.md` — incident response
-  playbook referenced from the alert payloads.
-- `.github/workflows/synthetic-monitoring.yml` — production monitor.
-- `.github/workflows/synthetic-monitoring-staging.yml` — staging monitor.
-- `.github/workflows/publish-spec.yml` — spec publication verification
-  (also fires the production webhook on failure).
+- `docs/operations/SYNTHETIC-MONITORING-SLO-POLICY.md` — current monitoring
+  posture, SLO targets, and escalation policy.
+- `docs/site/STAGING-PROMOTION-RUNBOOK.md` — staging-to-production deploy
+  verification and Cloudflare deploy secrets.
+- `.github/workflows/synthetic-monitoring.yml` — production ping monitor.
+- `.github/workflows/synthetic-monitoring-staging.yml` — staging ping monitor.

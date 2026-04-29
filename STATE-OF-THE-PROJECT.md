@@ -1,7 +1,7 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-04-24
-**Status:** 194 formal work orders defined in `docs/workorders/`, all completed. WO-0001 through WO-0205 completed the public-surface, standards, proof, and Home-cluster waves. `WO-0206` restored the K2B drift-governance artifact contract from legitimate git history, path-normalized the restored artifacts for the current checkout, and re-ran the full Phase 9 mandatory command set successfully on 2026-04-24.
+**Date:** 2026-04-29
+**Status:** Formal work now extends through `WO-0242`. The Home-cluster wave (`WO-0195` through `WO-0205`) is complete, `WO-0206` through `WO-0209` closed the first late-April drift-governance follow-up, `WO-0219` plus follow-ons `WO-0241` and `WO-0242` completed the integration-lane reference/route/journey consolidation, and v0.2 publication prep (`WO-0220`) is complete but still operator-gated. After revert commit `e493b3e` removed the unauthorized CI/workflow layer on 2026-04-28, Phase 9 is back to a manual-only posture, several infrastructure WOs are audit-only `OBSOLETE`, and the publication wave (`WO-0221` through `WO-0231`, excluding obsolete items) remains pending.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
@@ -9,7 +9,7 @@ This repo remains a **spec-first project with fixtures and tooling**, but it is 
 
 The most important change in this refresh is that the public front door has now been rebalanced. `/` is once again a consumer-facing homepage, the latest W3C-style draft specification now lives at `/spec/latest/`, and the specification shell has site-level navigation instead of behaving like an isolated homepage.
 
-The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. `WO-0188` has now defined explicit retirement-readiness criteria for compatibility-only routes, deploy layers, and asset aliases, including the sequencing that keeps `deploy/localartist.network/` as the highest-risk and latest retirement candidate. `WO-0190` then deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline, `WO-0191` kept revocation/status signaling as an optional extension lane, `WO-0192` expanded bounded TTL/security invalid-fixture coverage and propagated those fixtures into the published mirrors, and `WO-0193` hardened workbench draft safety with autosave, discard guards, extracted core logic, and tests. `WO-0189` then defined the explicit v0.2 publication-readiness criteria and blocker list, and `WO-0194` packaged the available first-time-reader validation method and evidence without turning it into a release gate. `WO-0195` then defined the next homepage architecture as a content-first `Home` cluster with local sub-navigation, a domain-of-thought audit, a depth model, and a metaverse-first interactive explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience landings, explorer content model, lead content packs, route implementation, and publication-readiness pass for that cluster. `WO-0206` then restored the K2B artifact contract and verified the Phase 9 command set. The formal queue is closed again; there are currently no open formal work orders.
+The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. `WO-0188` has now defined explicit retirement-readiness criteria for compatibility-only routes, deploy layers, and asset aliases, including the sequencing that keeps `deploy/localartist.network/` as the highest-risk and latest retirement candidate. `WO-0190` then deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline, `WO-0191` kept revocation/status signaling as an optional extension lane, `WO-0192` expanded bounded TTL/security invalid-fixture coverage and propagated those fixtures into the published mirrors, and `WO-0193` hardened workbench draft safety with autosave, discard guards, extracted core logic, and tests. `WO-0189` then defined the explicit v0.2 publication-readiness criteria and blocker list, and `WO-0194` packaged the available first-time-reader validation method and evidence without turning it into a release gate. `WO-0195` then defined the next homepage architecture as a content-first `Home` cluster with local sub-navigation, a domain-of-thought audit, a depth model, and a metaverse-first interactive explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience landings, explorer content model, lead content packs, route implementation, and publication-readiness pass for that cluster. `WO-0206` then restored the K2B artifact contract and `WO-0207` through `WO-0209` extended that closeout across metadata, internal audit traceability, and the now-reverted first automation pass. `WO-0219`, `WO-0241`, and `WO-0242` have now consolidated integration-lane implementation notes, public route coverage, and dedicated journey coverage through `J27`. The current late-April reality is narrower than the old automation plan: the Home cluster and integration-lane consolidation are complete, v0.2 is still unpublished, publication prep is ready but blocked on the operator-run `WO-0220` tag/release step, and the 2026-04-28 revert moved Phase 9 back to manual governance while marking several workflow-era WOs as historical `OBSOLETE`.
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For the deepest single-file structural map, see: `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`.
@@ -72,7 +72,7 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Shared tool/proof hub: `site/src/pages/learning/index.astro`
   - Sandbox chooser under shared shell: `site/src/pages/sandbox/index.astro`
   - Workbench under shared shell with subordinate raw payload: `site/src/pages/workbench/index.astro`, `site/public/workbench/app/index.html`
-  - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`; 23 executable journeys passing)
+  - Journeys → executable proof suite: `docs/journeys/` (run via `packages/universal-manifest` → `npm run journeys`; 27 executable journeys passing)
   - Harness → visual endpoint/fixture debugger under the shared shell: `site/src/pages/proof/harness/index.astro`
   - Published raw harness payload remains available at `site/public/harness/index.html`
   - Endpoint smoke (dev/prod) for docs + resolver contract: `packages/universal-manifest/scripts/smoke-endpoints.mjs`
@@ -115,11 +115,25 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 ### What is *not* finalized yet (by design)
 
 - v0.1 signature is still a permissive placeholder; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
+- v0.2 publication prep is complete, but `WO-0220` still requires operator-run tag/release commands before the downstream publication wave can start
+- The late-April publication wave remains unfinished: `WO-0221` through `WO-0226`, `WO-0229`, `WO-0230`, and `WO-0231` are still pending; `WO-0214` remains deferred until after publication
+- Phase 9 is currently manual-only after the 2026-04-28 revert removed workflow automation; any future automation must be re-scoped rather than assumed live
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
 - A complete conformance suite (we have baseline valid/invalid fixtures plus non-normative GPC proof coverage; broader TTL/replay/security cases remain)
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
+
+## Late-April queue reality (2026-04-28)
+
+- Home-cluster execution remains complete: `WO-0195` through `WO-0205` are still the closed architecture/content/publication-readiness wave for the public front door.
+- First late-April follow-up is complete: `WO-0206` through `WO-0209` restored the K2B artifact contract, synchronized metadata, and reconciled closeout traceability.
+- Phase 9 is currently manual-only. `WO-0208` briefly introduced workflow automation, but revert commit `e493b3e` removed that layer on 2026-04-28 along with the related workflow-era infrastructure.
+- Publication prep is ready but not executed. `WO-0220` finished the hash verification, changelog, and release-command prep, but the actual `git tag`, `git push`, and `gh release create` actions remain operator-gated.
+- The active publication queue is still ahead of the repo: `WO-0221` through `WO-0226`, `WO-0229`, `WO-0230`, and `WO-0231` remain `NOT_STARTED`; `WO-0214` remains deferred until after publication.
+- Integration-lane follow-up is complete: `WO-0219` standardized implementation notes and the catalog baseline, `WO-0241` added the missing public routes for `runtime-profile` and `data-firewall-ux`, and `WO-0242` added dedicated executable journey coverage for `data-firewall-ux`, `smart-home`, `healthcare-patient-consent`, and `education-credentials`.
+- Obsolete WOs are retained for audit only and must not be executed: `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240`.
+- Revert-sensitive deployment-pipeline work needs careful reading: `WO-0232`, `WO-0234`, and `WO-0237` were completed on 2026-04-26, but their workflow changes were later removed by the 2026-04-28 revert, so those WO records describe historical work rather than the live workflow state.
 
 ## Work-order status (2026-04-22)
 
@@ -379,9 +393,10 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
   - Critical architectural vulnerabilities tracked under `WO-0170` have complete research theses.
   - Deployment processes execute without Starlight warnings.
 
-#### Formal queue status (2026-04-24)
+#### 2026-04-24 checkpoint (historical)
 
-- The formal queue is closed under `docs/workorders/`: `WO-0206` restored the K2B artifact contract and passed the Phase 9 mandatory command set.
+- This checkpoint predated the later `WO-0207` through `WO-0240` wave and should be read as history, not current queue state.
+- `WO-0206` restored the K2B artifact contract and passed the Phase 9 mandatory command set at that time.
 - `WO-0195` through `WO-0205` remain completed for the home-cluster execution sequence.
 - `WO-0206` is completed.
 - `WO-0171` remains the closure artifact for the homepage/spec-route rebalance.
@@ -390,7 +405,7 @@ All 12 work orders completed (2026-03-01). Build and browser verification comple
 
 #### 2026-04-24 micro-closeouts (subtask-level, not formal WOs)
 
-The following subtask-level refinements landed on 2026-04-24 alongside `WO-0206` and the surface-drift scan. They are captured here for canonical traceability only; none of them were promoted to formal work orders, and the formal queue remains closed.
+The following subtask-level refinements landed on 2026-04-24 alongside `WO-0206` and the surface-drift scan. They are captured here for canonical traceability only; none of them were promoted to formal work orders, and this section should be read as the 2026-04-24 checkpoint rather than the current late-April queue state.
 
 - Orchestrator WO-scope and Phase 9 evidence closeout — `.dev/ai/subtask-comms/2026-04-24-orchestrator-wo-scope-and-phase9-closeout.md`
 - Private facets, encryption, and attested identifier/control binding surfacing across Home-cluster IA, copy briefs, and audience briefs — `.dev/ai/subtask-comms/2026-04-24-private-facets-attested-ownership-surfacing.md`
@@ -404,10 +419,10 @@ These closeouts did not change spec, fixture, or runtime behavior; they refined 
 
 The project is no longer blocked on the public front door. The homepage now leads with audience comprehension and routing, while the latest W3C-style spec has a dedicated subordinate route.
 
-That returns the execution posture to drift governance and explicit re-entry for future work:
+That returned the execution posture to drift governance and explicit re-entry for future work at the time:
 
-- no formal work order is currently open
-- any additional execution should begin from a newly approved work order rather than implied continuation from older waves
+- later follow-on WOs (`WO-0207` through `WO-0240`) superseded this checkpoint
+- any additional execution should follow the current queue summary above rather than implied continuation from older waves
 
 ## Critical-path execution update (2026-02-20)
 
