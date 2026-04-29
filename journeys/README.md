@@ -5,7 +5,7 @@ These journeys are the project’s **“show it works”** layer.
 Each journey has:
 
 - a human-readable definition (this folder)
-- a corresponding executable row in the journey report (`J01` through `J23`)
+- a corresponding executable row in the journey report (`J01` through `J27`)
 
 Run the proof suite:
 
@@ -15,9 +15,9 @@ Run the proof suite:
 Outputs:
 
 - A JSON report is written under `docs/journeys/_artifacts/`.
-- The report includes explicit rows for every documented journey ID (`J01` through `J23`).
+- The report includes explicit rows for every documented journey ID (`J01` through `J27`).
 
-## Executable mapping (J01-J23)
+## Executable mapping (J01-J27)
 
 - `J01` Parse and ignore unknown fields -> `journeyParseAndIgnoreUnknownFields` (shared `npm test` conformance run)
 - `J02` TTL and freshness -> `journeyTtlAndFreshness` (shared `npm test` conformance run)
@@ -42,6 +42,10 @@ Outputs:
 - `J21` GPC runtime signal and evidence projection flow -> `journeyGpcRuntimeSignalAndEvidenceProjection`
 - `J22` RP1 attachment freshness and session-context safety -> `journeyRp1AttachmentFreshnessAndSessionSafety`
 - `J23` MUM payment handles and fiat/crypto gateway flow -> `journeyMumPaymentHandlesGatewayFlow`
+- `J24` Data Firewall UX decision flow and audit minimization -> `journeyDataFirewallUxDecisionFlow`
+- `J25` Smart-home device onboarding and policy enforcement -> `journeySmartHomeDeviceOnboarding`
+- `J26` Healthcare patient consent emergency handoff -> `journeyHealthcarePatientConsentEmergencyHandoff`
+- `J27` Education credential verification and claimProof binding -> `journeyEducationCredentialVerification`
 
 Execution source:
 
@@ -72,6 +76,10 @@ Execution source:
 21. `J21-gpc-runtime-signal-and-evidence-projection.md`
 22. `J22-rp1-attachment-freshness-and-session-safety.md`
 23. `J23-mum-payment-handles-and-gateway-flow.md`
+24. `J24-data-firewall-ux-decision-flow-and-audit-minimization.md`
+25. `J25-smart-home-device-onboarding-and-policy-enforcement.md`
+26. `J26-healthcare-patient-consent-emergency-handoff.md`
+27. `J27-education-credential-verification-and-claimproof-binding.md`
 
 ## Cross-Domain Overlay Lanes (WO-0017)
 
