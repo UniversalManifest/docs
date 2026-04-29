@@ -476,7 +476,7 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 - WO-0216 (COMPLETED 2026-04-26): `docs/workorders/WO-0216-integration-lane-fixture-baseline.md` — all 5 batches shipped; **26 integration-pack fixtures** across 13 active lane dirs + GPC's 11 = 14-lane coverage complete. `npm test` reports `26 integration-lane ok, 0 failed`. 49+26 normative baseline + GPC (6/4/1) preserved. Closure status: batch 1 (6, smart-glasses+metaverse+social), batch 2 (4, xr+runtime), batch 3 (4, did-vc+personhood), batch 4 (6, healthcare+education+smart-home), batch 5 (6, data-firewall-ux+oma-trust+rp1). Unblocks WO-0219.
 - WO-0217 (COMPLETED 2026-04-26): `docs/workorders/WO-0217-integrate-reference-typescript-impl-into-spec-repo-ci.md` — `.github/workflows/um-typescript-conformance.yml` shipped (clone-from-HEAD model; path-filtered PR gate + Monday 10:00 UTC scheduled report job); resolver-agnostic `journey-04b` sibling (J04 untouched); new `docs/IMPLEMENTING-UM.md` (175 lines, Path A fork-and-conform + Path B any-language); README + `for-agents.md` cross-linked; actionlint clean
 - WO-0218 (COMPLETED 2026-04-26): `docs/workorders/WO-0218-parametrize-dev-fixture-ttl-and-add-expiration-test.md` — `UM_FIXTURE_EXPIRY_OFFSET_SECONDS` env var wired into resolver Worker via `buildDevFixtureV02MinimalSigned()` factory; default unset = static 2036-03-01 (no regression); new `runFixtureTtlExpiryCheck()` contract test spawns wrangler dev with `-3600` offset and asserts expired-detection; 13/13 contract tests pass
-- WO-0219 (NOT_STARTED): `docs/workorders/WO-0219-cross-domain-integration-lane-reference-consolidation.md` — standardize "Implementation notes" block across all `integrations/{lane}.md`; lane discovery page; depends on WO-0216 fixtures landing (MEDIUM P2; depends on WO-0216)
+- WO-0219 (COMPLETED 2026-04-29): `docs/workorders/WO-0219-cross-domain-integration-lane-reference-consolidation.md` — standardized "Implementation notes" blocks across all 15 lane docs plus the template, updated the integrations catalog with Published/In Progress lane status, and recorded follow-on gaps as WO-0241 and WO-0242
 
 ### v0.2 Publication Push Wave (WO-0220 through WO-0231)
 
@@ -517,3 +517,8 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 ### wrangler ↔ Workflow Cross-Validator (WO-0240) — surfaced by WO-0232 closeout
 
 - WO-0240 (OBSOLETE 2026-04-28): `docs/workorders/WO-0240-wrangler-workflow-cross-validator.md` — both the script and the workflow job it added were removed in revert commit `e493b3e`. The bug class it guarded against (the WO-0232 `--env ""` failure in `deploy-gated.yml`) is also re-introduced by the same revert
+
+### Integration Lane Completion Follow-On (WO-0241 through WO-0242) — surfaced by WO-0219
+
+- WO-0241 (COMPLETED 2026-04-29): `docs/workorders/WO-0241-integration-lane-site-route-completion.md` — created dedicated public integration routes for `runtime-profile` and `data-firewall-ux`, then updated the integrations catalog status accurately
+- WO-0242 (COMPLETED 2026-04-29): `docs/workorders/WO-0242-integration-lane-dedicated-journey-coverage.md` — added dedicated executable journey coverage for `data-firewall-ux`, `smart-home`, `healthcare-patient-consent`, and `education-credentials`, then updated lane notes and catalog status
