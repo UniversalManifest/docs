@@ -1,6 +1,6 @@
 # WO-0223: Migration-Guide Promotion to Published Reading Path
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P1 (gates the spec body's migration link and the announcement)
 **Depends on:** WO-0221
 **Unblocks:** WO-0226

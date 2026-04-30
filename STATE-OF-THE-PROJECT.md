@@ -1,15 +1,32 @@
 # State of the Project — Universal Manifest
 
-**Date:** 2026-04-29
-**Status:** Formal work now extends through `WO-0242`. The Home-cluster wave (`WO-0195` through `WO-0205`) is complete, `WO-0206` through `WO-0209` closed the first late-April drift-governance follow-up, `WO-0219` plus follow-ons `WO-0241` and `WO-0242` completed the integration-lane reference/route/journey consolidation, and v0.2 publication prep (`WO-0220`) is complete but still operator-gated. After revert commit `e493b3e` removed the unauthorized CI/workflow layer on 2026-04-28, Phase 9 is back to a manual-only posture, several infrastructure WOs are audit-only `OBSOLETE`, and the publication wave (`WO-0221` through `WO-0231`, excluding obsolete items) remains pending.
+**Date:** 2026-04-30
+**Status:** Formal work now extends through `WO-0251` as Phase 19 planning stubs. The Home-cluster wave (`WO-0195` through `WO-0205`) is complete, `WO-0206` through `WO-0209` closed the first late-April drift-governance follow-up, `WO-0219` plus follow-ons `WO-0241` and `WO-0242` completed the integration-lane reference/route/journey consolidation, and Universal Manifest v0.2 is now published. The operator-gated release step (`WO-0220`) was executed on 2026-04-30, `WO-0221` through `WO-0226` completed the public-surface publication wave, `WO-0227` and `WO-0228` remain audit-only `OBSOLETE`, `WO-0229` reconciled the authority docs, `WO-0230` defined Phase 19, and `WO-0231` closed the publication wave with the evidence pack at `docs/reports/2026-04-30-v0-2-publication-evidence-pack.md`. After revert commit `e493b3e` removed the unauthorized CI/workflow layer on 2026-04-28, Phase 9 remains manual-only.
 **Canonical repository path:** `<repo-root>`
 **Legacy path:** archived (historical only)
 
 This repo remains a **spec-first project with fixtures and tooling**, but it is no longer only a spec/docs repo. It now operates a multi-surface public program: a consumer-first public homepage plus standards/docs site on `universalmanifest.net`, executable proof and interactive tooling surfaces, and the resolver/runtime contract surface on `myum.net` via Cloudflare Pages/Workers.
 
-The most important change in this refresh is that the public front door has now been rebalanced. `/` is once again a consumer-facing homepage, the latest W3C-style draft specification now lives at `/spec/latest/`, and the specification shell has site-level navigation instead of behaving like an isolated homepage.
+The most important change in this refresh is that the public front door has now been rebalanced and v0.2 has been published. `/` is once again a consumer-facing homepage, the current published W3C-style specification now lives at `/spec/latest/`, the durable v0.2 version lives at `/spec/v0.2/`, and the specification shell has site-level navigation instead of behaving like an isolated homepage.
 
-The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. `WO-0188` has now defined explicit retirement-readiness criteria for compatibility-only routes, deploy layers, and asset aliases, including the sequencing that keeps `deploy/localartist.network/` as the highest-risk and latest retirement candidate. `WO-0190` then deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline, `WO-0191` kept revocation/status signaling as an optional extension lane, `WO-0192` expanded bounded TTL/security invalid-fixture coverage and propagated those fixtures into the published mirrors, and `WO-0193` hardened workbench draft safety with autosave, discard guards, extracted core logic, and tests. `WO-0189` then defined the explicit v0.2 publication-readiness criteria and blocker list, and `WO-0194` packaged the available first-time-reader validation method and evidence without turning it into a release gate. `WO-0195` then defined the next homepage architecture as a content-first `Home` cluster with local sub-navigation, a domain-of-thought audit, a depth model, and a metaverse-first interactive explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience landings, explorer content model, lead content packs, route implementation, and publication-readiness pass for that cluster. `WO-0206` then restored the K2B artifact contract and `WO-0207` through `WO-0209` extended that closeout across metadata, internal audit traceability, and the now-reverted first automation pass. `WO-0219`, `WO-0241`, and `WO-0242` have now consolidated integration-lane implementation notes, public route coverage, and dedicated journey coverage through `J27`. The current late-April reality is narrower than the old automation plan: the Home cluster and integration-lane consolidation are complete, v0.2 is still unpublished, publication prep is ready but blocked on the operator-run `WO-0220` tag/release step, and the 2026-04-28 revert moved Phase 9 back to manual governance while marking several workflow-era WOs as historical `OBSOLETE`.
+The current public MVP is in place, publication continuity has been verified, and the first internal `UM UI` component layer now exists. The first reader reintegration wave is complete, and the first tool/proof reintegration wave is also complete: `/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`, `/learning/`, `/sandbox/`, and `/workbench/` now sit under the shared public/tool-shell family without widening the calm public MVP menu. `WO-0184` has now extended that route/shell alignment to `/404.html`, `/proof/harness/`, `/resolver/`, `/resolver/ops/`, `/resolver/result/`, and `/tools/concept-explorer/` while preserving subordinate raw payloads such as `/resolver/app/` and `/tools/concept-explorer/app/`. `WO-0185` has now given `/spec/latest/` a durable route model: Astro owns the outer shell and calm nav, while the checked-in W3C-style document remains the source of truth for the spec body and standards-reader behavior. `WO-0187` has now normalized the canonical diagram naming path to `/diagrams/universal-manifest-system-overview.svg` while preserving `/diagrams/universal-manifest-overview-template.svg` as a compatibility alias. `WO-0188` has now defined explicit retirement-readiness criteria for compatibility-only routes, deploy layers, and asset aliases, including the sequencing that keeps `deploy/localartist.network/` as the highest-risk and latest retirement candidate. `WO-0190` then deferred additional integrity-profile guidance beyond the current v0.2 JCS + Ed25519 baseline, `WO-0191` kept revocation/status signaling as an optional extension lane, `WO-0192` expanded bounded TTL/security invalid-fixture coverage and propagated those fixtures into the published mirrors, and `WO-0193` hardened workbench draft safety with autosave, discard guards, extracted core logic, and tests. `WO-0189` then defined the explicit v0.2 publication-readiness criteria and blocker list, and `WO-0194` packaged the available first-time-reader validation method and evidence without turning it into a release gate. `WO-0195` then defined the next homepage architecture as a content-first `Home` cluster with local sub-navigation, a domain-of-thought audit, a depth model, and a metaverse-first interactive explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience landings, explorer content model, lead content packs, route implementation, and publication-readiness pass for that cluster. `WO-0206` then restored the K2B artifact contract and `WO-0207` through `WO-0209` extended that closeout across metadata, internal audit traceability, and the now-reverted first automation pass. `WO-0219`, `WO-0241`, and `WO-0242` have now consolidated integration-lane implementation notes, public route coverage, and dedicated journey coverage through `J27`. The current late-April reality is narrower than the old automation plan: the Home cluster and integration-lane consolidation are complete, v0.2 has been published through the 2026-04-30 release wave, and the 2026-04-28 revert moved Phase 9 back to manual governance while marking several workflow-era WOs as historical `OBSOLETE`.
+
+### v0.2 Published (2026-04-30)
+
+Universal Manifest v0.2 is published at `https://universalmanifest.net/spec/v0.2/`, with `/spec/latest/` now pointing to the published v0.2 posture. The GitHub release is `https://github.com/grigb/universal-manifest/releases/tag/spec-v0.2`; the release was published on 2026-04-30.
+
+Publication-wave deliverables and result reports:
+
+- `WO-0220`: release tag and GitHub release execution — [`.dev/ai/subtask-comms/2026-04-30-wo-0220-release-executed-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0220-release-executed-result.md)
+- `WO-0221`: `/spec/latest/` published posture and durable `/spec/v0.2/` route — [`.dev/ai/subtask-comms/2026-04-30-wo-0221-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0221-result.md)
+- `WO-0222`: machine-readable discovery refresh declaring v0.2 current/stable — [`.dev/ai/subtask-comms/2026-04-30-wo-0222-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0222-result.md)
+- `WO-0223`: migration guide promoted into the published reading path — [`.dev/ai/subtask-comms/2026-04-30-wo-0223-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0223-result.md)
+- `WO-0224`: conformance badges, standalone suite, adopter onboarding, and reference implementation cross-links — [`.dev/ai/subtask-comms/2026-04-30-wo-0224-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0224-result.md)
+- `WO-0225`: governance/RFC placeholders replaced with live governance paths — [`.dev/ai/subtask-comms/2026-04-30-wo-0225-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0225-result.md)
+- `WO-0226`: changelog entry, home-page announcement callout, and announcement copy — [`.dev/ai/subtask-comms/2026-04-30-wo-0226-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0226-result.md)
+- `WO-0229`: authority-doc reconciliation and Phase 19 stub — [`.dev/ai/subtask-comms/2026-04-30-wo-0229-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0229-result.md)
+- `WO-0230`: Phase 19 post-publication planning queue — [`.dev/ai/subtask-comms/2026-04-30-wo-0230-result.md`](../.dev/ai/subtask-comms/2026-04-30-wo-0230-result.md)
+- `WO-0231`: publication closeout audit and evidence pack — [`docs/reports/2026-04-30-v0-2-publication-evidence-pack.md`](reports/2026-04-30-v0-2-publication-evidence-pack.md)
 
 For the “what has to happen next” sequence, see: `docs/CRITICAL-PATH.md`.
 For the deepest single-file structural map, see: `docs/COMPREHENSIVE-PROJECT-PROPERTIES-AND-SURFACES-MAP.md`.
@@ -49,7 +66,8 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - Audience landing-page family: `site/src/pages/audiences/[audience].astro`
   - Shared content model for the public home-cluster rollout: `site/src/data/home-cluster.ts`
   - Curated docs entry: `site/src/pages/docs/index.astro`
-  - Stable latest-draft spec route: `site/src/pages/spec/latest.astro`
+  - Stable latest published spec route: `site/src/pages/spec/latest.astro`
+  - Durable v0.2 spec route: `site/src/pages/spec/v0.2.astro`
   - Reintegrated reader routes under the shared shell: `site/src/pages/about/why-um.astro`, `site/src/pages/about/one-pager.astro`, `site/src/pages/use-cases/index.astro`
   - Long-form docs overview now published at `/docs/overview/`: `site/src/content/docs/index.md`
   - Public agent path: `site/src/content/docs/for-agents.md` and `site/src/content/docs/external-agent-onboarding.md`
@@ -104,19 +122,19 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
   - “Critical Path” reframed as adopter-facing “Adoption Roadmap”
   - Integration pages now include clear implementation checklists + fixture links + boundaries
   - Landing/docs/discovery/runtime boundaries are now reconciled across the site and authority docs
-- **v0.2 draft signature profile (artifacts exist)**
+- **v0.2 published signature profile (artifacts exist)**
   - Signature profile: `spec/v0.2/SIGNATURE-PROFILE.md`
-  - Draft schema + context: `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
-  - Draft conformance: `spec/v0.2/CONFORMANCE.md`
+  - Published schema + context: `spec/v0.2/schema.json` + `spec/v0.2/schema.jsonld`
+  - Published conformance: `spec/v0.2/CONFORMANCE.md`
   - Fixtures: `examples/v0.2/`
 - **Background research**
   - Imported docs under `research/` with an index at `research/README.md`
 
 ### What is *not* finalized yet (by design)
 
-- v0.1 signature is still a permissive placeholder; v0.2 defines an interop profile but remains draft until publishing and broader adopter verification
-- v0.2 publication prep is complete, but `WO-0220` still requires operator-run tag/release commands before the downstream publication wave can start
-- The late-April publication wave remains unfinished: `WO-0221` through `WO-0226`, `WO-0229`, `WO-0230`, and `WO-0231` are still pending; `WO-0214` remains deferred until after publication
+- v0.1 signature is still a permissive placeholder; v0.2 now defines the published interop profile, while broader external adopter feedback remains post-publication work
+- Phase 19 is defined as a post-publication planning queue, but its stubs (`WO-0243` through `WO-0251`) have not been promoted into full active WO files
+- `WO-0214` is blocked until a real external-reader cohort, consent/process, and transcript-capture plan are supplied
 - Phase 9 is currently manual-only after the 2026-04-28 revert removed workflow automation; any future automation must be re-scoped rather than assumed live
 - Additional integrity profiles (e.g., Data Integrity / RDF canonicalization) beyond the v0.2 baseline
 - Revocation cursor/events as a normative part of the contract
@@ -124,13 +142,13 @@ For recent audit reports, see the [`docs/reports/`](reports/) directory (include
 - Advanced hardening of the interactive manifest workbench beyond first public release (`WO-0014`)
 - First-time onboarding validation with human external reader testing is recommended as optional quality evidence (not a closure gate).
 
-## Late-April queue reality (2026-04-28)
+## Late-April queue reality (2026-04-30)
 
 - Home-cluster execution remains complete: `WO-0195` through `WO-0205` are still the closed architecture/content/publication-readiness wave for the public front door.
 - First late-April follow-up is complete: `WO-0206` through `WO-0209` restored the K2B artifact contract, synchronized metadata, and reconciled closeout traceability.
 - Phase 9 is currently manual-only. `WO-0208` briefly introduced workflow automation, but revert commit `e493b3e` removed that layer on 2026-04-28 along with the related workflow-era infrastructure.
-- Publication prep is ready but not executed. `WO-0220` finished the hash verification, changelog, and release-command prep, but the actual `git tag`, `git push`, and `gh release create` actions remain operator-gated.
-- The active publication queue is still ahead of the repo: `WO-0221` through `WO-0226`, `WO-0229`, `WO-0230`, and `WO-0231` remain `NOT_STARTED`; `WO-0214` remains deferred until after publication.
+- Publication is executed. `WO-0220` cut and pushed `spec-v0.2`, and the GitHub release was published at `https://github.com/grigb/universal-manifest/releases/tag/spec-v0.2` on 2026-04-30.
+- The publication surface wave is complete through `WO-0231`: `WO-0221` through `WO-0226` flipped the public spec, discovery, migration, conformance, governance, changelog, home-page announcement, and announcement-copy surfaces to the published v0.2 posture; `WO-0229` reconciled authority docs; `WO-0230` defined Phase 19; and `WO-0231` produced the publication closeout evidence pack. `WO-0214` is now blocked on real external-reader inputs and is represented by Phase 19 stub `WO-0243`.
 - Integration-lane follow-up is complete: `WO-0219` standardized implementation notes and the catalog baseline, `WO-0241` added the missing public routes for `runtime-profile` and `data-firewall-ux`, and `WO-0242` added dedicated executable journey coverage for `data-firewall-ux`, `smart-home`, `healthcare-patient-consent`, and `education-credentials`.
 - Obsolete WOs are retained for audit only and must not be executed: `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240`.
 - Revert-sensitive deployment-pipeline work needs careful reading: `WO-0232`, `WO-0234`, and `WO-0237` were completed on 2026-04-26, but their workflow changes were later removed by the 2026-04-28 revert, so those WO records describe historical work rather than the live workflow state.
@@ -526,7 +544,7 @@ Recommended adoption tier for external systems *right now*:
 - Enforce TTL for caching decisions
 - Use `pointers` and known `facets` for projection
 - Treat `signature` as optional and/or “best effort” until the signature profile is finalized
-- For v0.2 drafts: verify signatures when present and required by that profile
+- For v0.2: verify signatures when present and required by the published profile
 
 ## Notes on origin-runtime relationship
 

@@ -1,6 +1,6 @@
 # WO-0230: Phase 19 — What-Comes-Next Definition
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED 2026-04-30
 **Priority:** P2 (planning; runs after publication closes)
 **Depends on:** WO-0229
 **Unblocks:** none directly; produces the next planning baseline.
@@ -28,7 +28,8 @@ Define the Phase 19 work plan: what does the project do after v0.2 is published.
    - tier 2 / tier 3 identity-binding research (research-first decision package)
    - Data Integrity / RDF profile decision package
    - revocation-as-normative decision package (was optional in v0.2)
-3. **Sketch follow-on WO IDs** starting at WO-0232 (since WO-0220–WO-0231 are the publication wave). Provide title, priority, and one-line objective for each. Do not draft full WOs — this is a queue definition, not the WOs themselves.
+3. **Sketch follow-on WO IDs** starting at the next available non-conflicting ID. The original instruction said to start at WO-0232, but `WO-0232` through `WO-0242` already exist in the repository. Provide title, priority, and one-line objective for each. Do not draft full WOs — this is a queue definition, not the WOs themselves.
+   - Completion note: the Phase 19 queue uses `WO-0243` through `WO-0251`.
 4. **Update `docs/CRITICAL-PATH.md`** Phase 19 stub with the goal list and follow-on WO IDs.
 
 ## Files to modify
@@ -44,7 +45,7 @@ Define the Phase 19 work plan: what does the project do after v0.2 is published.
 ## Acceptance criteria
 
 - `docs/CRITICAL-PATH.md` Phase 19 has a list of named goals.
-- Each goal has a stub WO ID (WO-0232+) with title, priority, one-line objective.
+- Each goal has a stub WO ID (`WO-0243+`, reconciled against existing `WO-0232` through `WO-0242`) with title, priority, and one-line objective.
 - `SPEC-IMPROVEMENT-QUEUE.md` references Phase 19.
 
 ## Output

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Universal Manifest Latest Draft Specification</title>
+    <title>Universal Manifest v0.2 Specification</title>
     <link rel="canonical" href="https://universalmanifest.net/spec/latest/">
     <!-- Use the official W3C Working Draft style -->
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD" type="text/css">
@@ -10,9 +10,26 @@
         /* Specific enhancements per W3C specification layout */
         html, body { margin: 0; padding: 0; }
         body { max-width: none; line-height: 1.5; font-family: sans-serif; background-image: none !important; }
-        .head { margin-bottom: 3em; }
+        .head { margin-bottom: 1.25rem; }
         .head a.logo, img[alt="W3C"], .w3c-logo { display: none !important; } /* Strip W3C branding injected by fixup.js */
         .head h1 { color: #005a9c; }
+        .head h2 {
+            margin-bottom: 0.45rem;
+            margin-top: 0.45rem;
+        }
+        .head dl {
+            display: grid;
+            gap: 0.25rem 0.75rem;
+            grid-template-columns: max-content minmax(0, 1fr);
+            margin: 0.8rem 0;
+        }
+        .head dd,
+        .head dt {
+            margin: 0;
+        }
+        .head .copyright {
+            margin: 0.65rem 0;
+        }
         .um-site-nav {
             align-items: center;
             display: flex;
@@ -220,6 +237,17 @@
         .note, .issue, .example { padding: .5em; border-left: .5em solid; margin: 1em 0; }
         .example { border-color: #e0cb52; background: #fcfaee; }
         .example-title { font-weight: bold; margin-bottom: 0.5em; }
+        .migration-callout {
+            background: #eef4fb;
+            border-left: 0.35rem solid #005a9c;
+            box-sizing: border-box;
+            margin-bottom: 1.25rem;
+            margin-top: -1.25rem;
+            padding: 0.65rem 0.85rem;
+        }
+        .migration-callout p {
+            margin: 0;
+        }
         pre { background-color: #f8f8f8; border: 1px solid #ddd; padding: 1em; overflow: auto; }
         code { font-family: Inconsolata, Consolas, "Liberation Mono", monospace; color: #c83232; }
         .rfc2119 { text-transform: lowercase; font-variant: small-caps; font-style: normal; font-weight: bold; color: #900; }
@@ -251,14 +279,14 @@
 <body class="h-entry">
     <!-- Astro owns the outer /spec/latest/ route shell; this file remains the source of truth for the spec body, W3C styling, and reader behavior. -->
     <div class="head">
-        <h1 id="title" class="title p-name">Universal Manifest Latest Draft Specification</h1>
-        <h2 id="subtitle">W3C-style draft specification on a stable subordinate route</h2>
+        <h1 id="title" class="title p-name">Universal Manifest v0.2 Specification</h1>
+        <h2 id="subtitle">W3C-style specification on a stable subordinate route</h2>
         <h2><time class="dt-published" datetime="2026-04-01">1 April 2026</time></h2>
         <dl>
             <dt>This version:</dt>
-            <dd><a class="u-url" href="https://universalmanifest.net/spec/latest/">https://universalmanifest.net/spec/latest/</a></dd>
+            <dd><a class="u-url" href="https://universalmanifest.net/spec/v0.2/">https://universalmanifest.net/spec/v0.2/</a></dd>
             <dt>Latest published version:</dt>
-            <dd><a href="https://universalmanifest.net/spec/latest/">https://universalmanifest.net/spec/latest/</a></dd>
+            <dd><a href="https://universalmanifest.net/spec/v0.2/">https://universalmanifest.net/spec/v0.2/</a></dd>
             <dt>History:</dt>
             <dd><a href="https://universalmanifest.net/publishing/changelog/">Changelog</a></dd>
             <dt>Editors:</dt>
@@ -272,6 +300,10 @@
         <hr title="Separator for header">
     </div>
 
+    <aside class="migration-callout" aria-label="v0.1 migration guide">
+        <p><strong>Coming from v0.1?</strong> See the <a href="https://universalmanifest.net/guides/migration-v01-v02/">Migration Guide</a> before upgrading to v0.2.</p>
+    </aside>
+
     <!-- Abstract -->
     <section id="abstract" class="introductory">
         <h2>Abstract</h2>
@@ -283,9 +315,10 @@
     <section id="sotd" class="introductory">
         <h2>Status of This Document</h2>
         <p><em>This section describes the status of this document at the time of its publication.</em></p>
-        <p>This document is a draft specification of the Universal Manifest covering the v0.1 base format and v0.2 extensions. The v0.1 format defines the core JSON-LD envelope, lifecycle, and caching semantics. The v0.2 iteration introduces a normative signature profile (JCS + Ed25519), an identity binding framework with a tiered trust model, and a <code>claims[].claimProof</code> field for claim authenticity proofs, along with conventions for cross-DID binding and agent delegation.</p>
-        <p>Implementors need to be aware that this specification is not yet fully stable. The v0.2 signature profile and identity binding model have been drafted through synthetic peer review and are subject to revision as implementation experience accumulates. Implementors who are not taking part in the discussions will find the specification changing out from under them in incompatible ways.</p>
-        <p>This document uses layout formats established by major web standard groups to present normative requirements cleanly. It is inappropriate to cite this document as other than a work in progress.</p>
+        <p>Universal Manifest v0.2 is the current published version of the Universal Manifest specification, covering the v0.1 base format and v0.2 extensions. The v0.1 format defines the core JSON-LD envelope, lifecycle, and caching semantics. The v0.2 version introduces a normative signature profile (JCS + Ed25519), an identity binding framework with a tiered trust model, and a <code>claims[].claimProof</code> field for claim authenticity proofs, along with conventions for cross-DID binding and agent delegation.</p>
+        <p>Because Universal Manifest is still in the v0.x line, minor-version bumps may still include breaking changes when those changes are reflected by a new version folder, as required by <a href="/publishing/versioning/#52-v0x-policy">Publishing and Versioning section 5.2</a>. Implementors should review the <a href="https://universalmanifest.net/guides/migration-v01-v02/">v0.1 to v0.2 migration guide</a> before upgrading.</p>
+        <p>Future changes are managed through the <a href="https://universalmanifest.net/governance/spec-improvement-queue/">RFC mechanism</a> and the <a href="https://universalmanifest.net/governance/breaking-change-policy/">breaking-change policy</a>. This document uses layout formats established by major web standard groups to present normative requirements cleanly, and may be cited as the published Universal Manifest v0.2 specification.</p>
+        <p><strong>For implementers:</strong> use the <a href="https://universalmanifest.net/guides/implementation-guide/">Implementation Guide</a>, run the <a href="https://universalmanifest.net/conformance/standalone-suite/">Standalone Conformance Suite</a>, review <a href="https://universalmanifest.net/conformance/v0.2/">Conformance v0.2</a>, and compare against the <a href="https://github.com/grigb/um-typescript">TypeScript reference implementation</a>.</p>
     </section>
 
     <!-- Table of Contents -->
@@ -332,7 +365,12 @@
                 </ol>
             </li>
             <li><a href="#privacy-considerations">Privacy Considerations</a></li>
-            <li><a href="#references">References</a></li>
+            <li><a href="#references">References</a>
+                <ol>
+                    <li><a href="#normative-references">Normative References</a></li>
+                    <li><a href="#informative-references">Informative References</a></li>
+                </ol>
+            </li>
         </ol>
     </nav>
 
@@ -534,7 +572,8 @@
 
         <section id="standalone-conformance-suite">
             <h3><span class="secno">4.3. </span>Standalone Conformance Suite</h3>
-            <p>Implementations validate conformance claims natively by testing against the official <code>conformance/</code> suite&mdash;which includes fixture validation (accepting valid stubs and correctly isolating/flagging malformed artifacts like missing contexts or expired logic trees).</p>
+            <p>Implementations validate conformance claims natively by testing against the official <a href="https://universalmanifest.net/conformance/standalone-suite/"><code>conformance/</code> suite</a>&mdash;which includes fixture validation (accepting valid stubs and correctly isolating/flagging malformed artifacts like missing contexts or expired logic trees).</p>
+            <p>Implementations claiming v0.2 conformance <span class="rfc2119">MUST</span> pass the standalone conformance suite at <a href="https://universalmanifest.net/conformance/standalone-suite/">https://universalmanifest.net/conformance/standalone-suite/</a> and should publish their claimed level using the guidance at <a href="https://universalmanifest.net/conformance/v0.2/">https://universalmanifest.net/conformance/v0.2/</a>.</p>
         </section>
     </section>
 
@@ -720,6 +759,19 @@
 
     <section id="references">
         <h2><span class="secno">8. </span>References</h2>
+        <section id="normative-references">
+            <h3><span class="secno">8.1. </span>Normative References</h3>
+            <p>The following project governance documents control how published Universal Manifest specification changes, deprecations, incidents, releases, and RFC intake are handled.</p>
+            <ol>
+                <li><a href="https://universalmanifest.net/governance/breaking-change-policy/">Breaking-Change Policy</a></li>
+                <li><a href="https://universalmanifest.net/governance/deprecation-policy/">Deprecation Policy</a></li>
+                <li><a href="https://universalmanifest.net/governance/incident-response/">Incident Response and Rollback</a></li>
+                <li><a href="https://universalmanifest.net/governance/release-cadence/">Release Cadence</a></li>
+                <li><a href="https://universalmanifest.net/governance/spec-improvement-queue/">Spec Improvement Queue</a></li>
+            </ol>
+        </section>
+        <section id="informative-references">
+            <h3><span class="secno">8.2. </span>Informative References</h3>
         <p>The following standards and prior art inform the identity binding, tiered trust model, and signature profile design in this specification.</p>
         <ol>
             <li><strong>NIST SP 800-63-3</strong> &mdash; Digital Identity Guidelines. NIST Special Publication 800-63-3 (June 2017, updated 2024 supplement). Defines Identity Assurance Levels (IAL 1&ndash;3) and Authenticator Assurance Levels (AAL 1&ndash;3). The UM tiered trust model adapts NIST's tiered assurance framework to a local-first, portable document context.</li>
@@ -733,6 +785,7 @@
             <li><strong>ISO/IEC 29115</strong> &mdash; "Information technology &mdash; Security techniques &mdash; Entity authentication assurance framework" (2013). International standard defining four entity authentication assurance levels (LoA 1&ndash;4). Additional prior art for the tiered trust model.</li>
             <li><strong>RFC 8785</strong> &mdash; "JSON Canonicalization Scheme (JCS)," IETF (June 2020). Defines the deterministic JSON serialization used as the canonicalization step in the v0.2 signature profile.</li>
         </ol>
+        </section>
     </section>
 
     <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>

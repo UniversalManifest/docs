@@ -47,6 +47,22 @@ All candidate issues must also include `adopter-feedback`.
 
 No active entries yet.
 
+## Phase 19 Planning Queue
+
+Phase 19 uses the published v0.2 surface as the baseline for adopter feedback and v0.3 input triage. These entries are planning stubs, not active adopter-submitted queue items, because they originate from the 2026-04-24 publication-readiness scan rather than from external issues.
+
+Use the normal queue model above when an adopter issue, RFC, or accepted implementation report turns one of these stubs into a concrete spec-change candidate.
+
+- `WO-0243` — Post-publication external-human reader validation activation: promotes `WO-0214` after publication and captures comprehension evidence against the published Home cluster and v0.2 spec.
+- `WO-0244` — Adopter-feedback loop activation against published v0.2: reactivates the `WO-0056` feedback/SLA/spec-improvement path for real post-publication reports.
+- `WO-0245` — Tier 2 cryptographic identity-binding research package: evaluates promotion criteria for v0.3+ cryptographic binding.
+- `WO-0246` — Tier 3 multi-party ceremony research package: defines evidence requirements before ceremony support can become a spec candidate.
+- `WO-0247` — Data Integrity / RDF profile decision package: follows the future path described in `spec/v0.2/SIGNATURE-PROFILE.md` section 8.
+- `WO-0248` — Additional integrity-profile registry decision package: covers integrity profiles beyond the v0.2 JCS + Ed25519 baseline.
+- `WO-0249` — Revocation-as-normative decision package: determines whether revocation/status metadata remains optional or becomes conformance-bound.
+- `WO-0250` — Encrypted inline facet promotion decision: decides whether guidance-only encrypted facets need normative lifecycle and fixture coverage.
+- `WO-0251` — Broader cross-DID binding tier scope decision: evaluates cross-DID binding expansion beyond the v0.2 Tier 1 baseline.
+
 When entries exist, record each item using this format:
 
 ```markdown

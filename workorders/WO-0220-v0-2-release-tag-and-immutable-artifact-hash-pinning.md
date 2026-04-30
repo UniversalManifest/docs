@@ -1,6 +1,6 @@
 # WO-0220: v0.2 Release Tag, GitHub Release, and Immutable Artifact Hash Pinning
 
-**Status:** PREP COMPLETE — awaiting operator to run `git tag -a spec-v0.2` + `git push origin spec-v0.2` + `gh release create spec-v0.2` (commands inlined in `.dev/ai/subtask-comms/2026-04-26-wo-0220-result.md`)
+**Status:** COMPLETED 2026-04-30 — `spec-v0.2` tag pushed and GitHub release published at `https://github.com/grigb/universal-manifest/releases/tag/spec-v0.2`; execution addendum: `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-30-wo-0220-release-executed-result.md`
 **Priority:** P0 (head of publication wave; blocks all downstream WOs)
 **Depends on:** none
 **Unblocks:** WO-0221 through WO-0231

@@ -1,6 +1,6 @@
 # WO-0225: Governance + RFC-Mechanism Cross-Link from Published Spec
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P1 (publication completeness)
 **Depends on:** WO-0221
 **Unblocks:** none

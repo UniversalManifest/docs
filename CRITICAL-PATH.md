@@ -4,9 +4,9 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current Execution Focus -- Home Cluster Complete; Manual Phase 9; Operator-Gated Publication
+## Current Execution Focus -- Home Cluster Complete; Manual Phase 9; v0.2 Published
 
-Goal: preserve the completed state after the content-first `Home`-cluster wave, keep Phase 9 truthfully manual after the 2026-04-28 revert, and move the v0.2 publication wave only when the operator-run release step is executed.
+Goal: preserve the completed state after the content-first `Home`-cluster wave, keep Phase 9 truthfully manual after the 2026-04-28 revert, and carry the repo from the completed v0.2 publication wave into the next post-publication phase.
 
 Immediate rule:
 
@@ -19,6 +19,8 @@ Immediate rule:
 - reintegrated reading pages should stay under the shared public shell rather than reviving sprint-era visual fragmentation
 - tool and proof entry routes should return under a deliberate shared shell without replacing the calm MVP front door
 
+These rules still hold after v0.2 publication: the home page now has a restrained publication callout, `/spec/latest/` remains obvious, and the durable `/spec/v0.2/` route exists without expanding the calm public menu.
+
 Completed execution sequence:
 
 1. `WO-0196` defined the page architecture and source map for the `Home` cluster.
@@ -29,17 +31,15 @@ Completed execution sequence:
 6. `WO-0203` and `WO-0204` implemented the explorer and audience-family public surfaces.
 7. `WO-0205` closed the wave with harmonization and publication-readiness verification.
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` through `WO-0209` completed the first late-April drift-governance follow-up. `WO-0219`, `WO-0241`, and `WO-0242` completed the integration-lane reference, public-route, and dedicated-journey consolidation, bringing the executable proof suite to 27 passing journeys. The live publication queue remains operator-gated: `WO-0220` publication prep is complete but still waiting for the operator-run tag/release step, `WO-0221` through `WO-0226` plus `WO-0229` through `WO-0231` remain pending behind that gate, `WO-0214` is deferred until post-publication, and reverted workflow-era WOs `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240` are audit-only `OBSOLETE` records that must not be executed.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` through `WO-0209` completed the first late-April drift-governance follow-up. `WO-0219`, `WO-0241`, and `WO-0242` completed the integration-lane reference, public-route, and dedicated-journey consolidation, bringing the executable proof suite to 27 passing journeys. `WO-0220` executed the operator-gated `spec-v0.2` tag and GitHub release on 2026-04-30, and `WO-0221` through `WO-0226` completed the public spec, discovery, migration, conformance, governance, changelog, home-announcement, and announcement-copy publication surfaces. `WO-0227` and `WO-0228` are obsolete after the 2026-04-28 revert, `WO-0229` closed the authority-doc reconciliation, `WO-0230` defined Phase 19, `WO-0231` closed the v0.2 publication wave with an evidence pack, `WO-0214` is deferred to Phase 19 external-human validation activation, and reverted workflow-era WOs `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240` are audit-only `OBSOLETE` records that must not be executed.
 
 Current critical path:
 
-1. Operator executes `WO-0220` tag/release commands.
-2. `WO-0221` flips the public spec surface from draft to published and establishes the durable `/spec/v0.2/` route.
-3. `WO-0222` refreshes machine-readable discovery surfaces to declare v0.2 published.
-4. `WO-0223` through `WO-0226` promote the migration/adopter/governance/announcement surfaces into the published reading path.
-5. `WO-0229` updates the authority docs to the published-v0.2 state.
-6. `WO-0230` defines the next phase after publication.
-7. `WO-0231` performs publication closeout and evidence capture.
+1. `WO-0220` through `WO-0226` are complete: the release exists, `/spec/latest/` and `/spec/v0.2/` carry the published posture, machine-readable surfaces declare v0.2 current/stable, and the migration/conformance/governance/announcement paths are linked.
+2. `WO-0227` and `WO-0228` are obsolete and must not be executed in their reverted workflow-era form.
+3. `WO-0229` is complete: authority docs now reflect the published-v0.2 state.
+4. `WO-0230` is complete: Phase 19 is defined with non-conflicting queue stubs starting at `WO-0243`.
+5. `WO-0231` is complete: the publication closeout evidence pack is recorded at `docs/reports/2026-04-30-v0-2-publication-evidence-pack.md`.
 
 Cleanup context that affects sequencing:
 
@@ -78,7 +78,7 @@ Must-have:
 - signed fixtures and invalid-signature fixtures
 - a reference verifier (small, testable, not a framework)
 
-Status: v0.2 signature profile (JCS + Ed25519) is drafted with 15 fixtures. Ed25519 signature verification confirmed working (WO-0040). Conformance suite expanded with adversarial cases (WO-0048).
+Status: v0.2 signature profile (JCS + Ed25519) is published with 15 fixtures. Ed25519 signature verification confirmed working (WO-0040). Conformance suite expanded with adversarial cases (WO-0048).
 
 ## Phase 3 — Publish like a real standard (`universalmanifest.net`) -- COMPLETE
 
@@ -197,6 +197,7 @@ Current Phase 9 status:
 - `WO-0207` through `WO-0209` are completed.
 - `WO-0208` now stands as a historical runbook/automation attempt rather than live workflow state.
 - `WO-0210` and `WO-0211` are obsolete because the workflow they extended no longer exists after the 2026-04-28 revert.
+- Before the 2026-04-30 v0.2 publication, Phase 9 was verified-clean in its manual posture: publication readiness was GO, `WO-0220` rechecked immutable artifact hashes before release execution, and no reverted workflow automation was treated as live.
 
 ## Phase 10 — Interactive Sandbox (WO-0060-0068) -- COMPLETED, HIGHEST PRIORITY
 
@@ -400,3 +401,44 @@ Primary evidence:
 - `docs/journeys/_artifacts/2026-03-06T18-57-58-721Z-journey-report.json`
 
 Status: Completed. The earlier follow-on work orders referenced here (WO-0142, WO-0143, WO-0145) have since been completed; this section is retained for historical sequencing, not as an active execution queue.
+
+## Phase 19 — Post-publication adopter feedback and v0.3 input -- DEFINED
+
+Goal: use the published v0.2 surface as the stable baseline for adopter feedback, publication closeout evidence, and the next round of spec-input triage.
+
+Queue ID reconciliation:
+
+- `WO-0230` originally said to start Phase 19 follow-on IDs at `WO-0232`, but `WO-0232` through `WO-0242` already exist in the repository.
+- Phase 19 queue-definition stubs therefore start at the next available range, `WO-0243+`.
+- These are queue stubs only. Full WO files should be drafted later if/when each item is accepted for execution.
+
+Deferred item catalog from the 2026-04-24 publication-readiness scan:
+
+1. Tier 2 assurance / cryptographic binding: public deferral for v0.3+.
+2. Tier 3 assurance / multi-party ceremony: public deferral for v0.4+.
+3. Data Integrity / RDF profile: `spec/v0.2/SIGNATURE-PROFILE.md` section 8 says this is future, not v0.2.
+4. Additional integrity profiles beyond JCS + Ed25519: deferred by the WO-0190 decision closure and the v0.2 signature profile.
+5. Revocation as a normative requirement: currently optional/extension-lane behavior, not a v0.2 baseline requirement.
+6. Encrypted inline facets: guidance-only optional privacy path, not a required v0.2 profile.
+7. Broader cross-DID binding tiers: research/future scope beyond the v0.2 Tier 1 baseline.
+
+Phase 19 goal queue:
+
+- `WO-0243` — Post-publication external-human reader validation activation (P2): promote the existing `WO-0214` plan now that v0.2 is published, assemble the cohort, and produce the external-reader evidence pack if candidates are available.
+- `WO-0244` — Adopter-feedback loop activation against published v0.2 (P1): reactivate the `WO-0056` feedback/SLA/spec-improvement machinery against the published spec, migration guide, conformance suite, and implementation guidance.
+- `WO-0245` — Tier 2 cryptographic identity-binding research package (P2): evaluate whether cryptographic binding is mature enough for a v0.3 candidate profile, with explicit promotion/permanent-deferral criteria.
+- `WO-0246` — Tier 3 multi-party ceremony research package (P3): define what evidence would be required before multi-party ceremony support can move from future signal to spec candidate.
+- `WO-0247` — Data Integrity / RDF profile decision package (P2): assess whether RDF graph-signing semantics are needed beyond the current JCS + Ed25519 interoperability baseline.
+- `WO-0248` — Additional integrity-profile registry decision package (P3): decide whether post-quantum, alternate-canonicalization, or multi-proof profile discovery belongs in the next spec cycle or remains deferred.
+- `WO-0249` — Revocation-as-normative decision package (P2): determine whether `statusRef` / `revocationCursor` behavior should stay optional or become a conformance requirement in a future version.
+- `WO-0250` — Encrypted inline facet promotion decision (P3): decide whether encrypted inline facets remain guidance-only or need fixtures, lifecycle conformance, and normative text.
+- `WO-0251` — Broader cross-DID binding tier scope decision (P3): evaluate cross-DID binding growth beyond the v0.2 Tier 1 baseline and align it with the Tier 2/Tier 3 research track.
+
+Phase 19 operating rules:
+
+- Use `docs/governance/SPEC-IMPROVEMENT-QUEUE.md` as the adopter-feedback routing surface before changing normative spec text.
+- Convert concrete post-publication feedback into scoped WOs, RFCs, or permanent-deferral decisions; do not reopen the v0.2 publication wave broadly.
+- Treat identity binding, RDF/Data Integrity profiles, revocation, encrypted inline facets, and cross-DID binding as v0.3+ inputs unless an explicit decision package promotes them.
+- Keep `/spec/latest/` obvious and keep the public menu calm while post-publication learning accumulates.
+
+Status: Defined by `WO-0230`; residual follow-ons are listed in the v0.2 publication evidence pack produced by `WO-0231`.

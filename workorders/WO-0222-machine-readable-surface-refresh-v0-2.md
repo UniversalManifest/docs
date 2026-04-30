@@ -1,6 +1,6 @@
 # WO-0222: Machine-Readable Surface Refresh — Well-Known, llms.txt, and Agent Catalogs
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P0 (announcement and smoke depend on this)
 **Depends on:** WO-0221
 **Unblocks:** WO-0226, WO-0227, WO-0228

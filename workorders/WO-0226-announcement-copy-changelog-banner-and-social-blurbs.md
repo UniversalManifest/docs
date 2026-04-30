@@ -1,10 +1,11 @@
 # WO-0226: Announcement Copy — Changelog Entry, Home Page Banner, Social Blurbs
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P1
 **Depends on:** WO-0221, WO-0222, WO-0223
 **Unblocks:** WO-0229
 **Derived from:** 2026-04-26 v0.2 publication push plan, item 4; `docs/MARKDOWN-SOURCE-FIDELITY-PROCESS.md`
+**Completed:** 2026-04-30
 
 ## Objective
 
@@ -20,12 +21,12 @@ Produce the public-facing announcement of v0.2 across three surfaces: changelog 
 
 ## Work to perform
 
-1. **Author the changelog entry** under the v0.2 section in `site/src/content/docs/publishing/changelog.md`. Replace the `(Draft)` heading with `(Published — 2026-04-26)`. Add a sub-entry describing what publication actually means: durable URL, immutable hashes (cite WO-0220's hashes), conformance suite, migration guide, governance.
+1. **Author the changelog entry** under the v0.2 section in `site/src/content/docs/publishing/changelog.md`. Replace the `(Draft)` heading with `(Published — 2026-04-30)`. Add a sub-entry describing what publication actually means: durable URL, immutable hashes (cite WO-0220's hashes), conformance suite, migration guide, governance.
 2. **Author the home page banner copy.** Two variants:
    - Variant A: a thin announcement strip above the home cluster ("Universal Manifest v0.2 is published. Read the spec → Read the migration guide.")
    - Variant B: a tile inserted into the home cluster's news/announcements slot (if `home-cluster.ts` has one).
    Pick one based on existing surface design — do not introduce a new home-page section. If neither slot exists, add a small announcement strip above the cluster fold.
-3. **Author the social/email blurbs** in a new file `docs/announcement/2026-04-26-v0-2-published.md`:
+3. **Author the social/email blurbs** in a new file `docs/announcement/2026-04-30-v0-2-published.md`:
    - 1-line version (X/Twitter, Mastodon, BlueSky)
    - 2-paragraph version (LinkedIn, mailing list, Discord)
    - 5-paragraph version (blog post seed)
@@ -36,7 +37,7 @@ Produce the public-facing announcement of v0.2 across three surfaces: changelog 
 
 - `site/src/content/docs/publishing/changelog.md` (primary announcement record)
 - `site/src/data/home-cluster.ts` (if it has a news/announcement slot) OR `site/src/pages/index.astro` (banner strip)
-- `docs/announcement/2026-04-26-v0-2-published.md` (new — three blurb variants)
+- `docs/announcement/2026-04-30-v0-2-published.md` (new — three blurb variants)
 
 ## Constraints
 
@@ -47,9 +48,9 @@ Produce the public-facing announcement of v0.2 across three surfaces: changelog 
 
 ## Acceptance criteria
 
-- The changelog has a v0.2 published-on-2026-04-26 entry citing the WO-0220 hashes and the migration guide.
+- The changelog has a v0.2 published-on-2026-04-30 entry citing the WO-0220 hashes and the migration guide.
 - The home page either has a banner strip or a news tile linking to the changelog and migration guide.
-- `docs/announcement/2026-04-26-v0-2-published.md` contains exactly three variants (1-line, 2-paragraph, 5-paragraph).
+- `docs/announcement/2026-04-30-v0-2-published.md` contains exactly three variants (1-line, 2-paragraph, 5-paragraph).
 - The home banner copy and social blurbs cite the changelog entry's URL as the canonical record.
 - `npm run build` passes.
 

@@ -1,6 +1,6 @@
 # WO-0224: Conformance-Suite + Badge + Adopter-Onboarding Cross-Link Wiring
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P1 (publication completeness; not a hard dependency for smoke)
 **Depends on:** WO-0221
 **Unblocks:** none

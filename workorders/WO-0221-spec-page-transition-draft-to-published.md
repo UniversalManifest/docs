@@ -1,6 +1,6 @@
 # WO-0221: Spec Page Transition — Draft to Published (Status-of-This-Document Rewrite)
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED 2026-04-30 — `/spec/latest/` now presents the published v0.2 posture, durable `/spec/v0.2/` route added, and focused build/diff verification passed; result report: `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-04-30-wo-0221-result.md`
 **Priority:** P0 (gates every downstream announcement and machine-readable surface)
 **Depends on:** WO-0220
 **Unblocks:** WO-0222, WO-0223, WO-0224, WO-0225, WO-0226

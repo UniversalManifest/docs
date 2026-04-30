@@ -1,6 +1,6 @@
 # WO-0229: CRITICAL-PATH and STATE-OF-THE-PROJECT Update — v0.2 Published, Queue Phase 19
 
-**Status:** NOT_STARTED
+**Status:** COMPLETED
 **Priority:** P1
 **Depends on:** WO-0220, WO-0221, WO-0222, WO-0223, WO-0224, WO-0225, WO-0226, WO-0227, WO-0228
 **Unblocks:** WO-0230
@@ -21,7 +21,7 @@ Update `docs/CRITICAL-PATH.md` and `docs/STATE-OF-THE-PROJECT.md` to reflect v0.
 
 1. **Update `docs/STATE-OF-THE-PROJECT.md`:**
    - Change the date stamp at the top.
-   - Add a "v0.2 Published (2026-04-26)" subsection summarizing the publication-wave deliverables and citing the result-report paths.
+   - Add a "v0.2 Published (2026-04-30)" subsection summarizing the publication-wave deliverables and citing the result-report paths.
    - Reconcile any "v0.2 draft" wording elsewhere in the file with the new published status.
 2. **Update `docs/CRITICAL-PATH.md`:**
    - Mark the previous Phase 9 status block as "verified-clean prior to publication."

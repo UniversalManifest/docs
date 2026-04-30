@@ -1,6 +1,6 @@
 # WO-0214: Post-Publication External-Human First-Time-Reader Validation
 
-**Status:** NOT_STARTED — DEFERRED to post-v0.2 publication
+**Status:** BLOCKED 2026-04-30 — v0.2 publication is complete, but no external-reader cohort or transcripts are available
 **Priority:** MEDIUM (quality evidence; intentionally not a release gate per WO-0194)
 **Depends on:** v0.2 publication push (whatever WO sequence the publication wave produces)
 **Unblocks:** —
@@ -18,6 +18,12 @@ Do NOT execute this WO until v0.2 publication has shipped. Watch for:
 - Public announcement copy visible
 
 Once those are in place, this WO is unblocked.
+
+## Current blocker
+
+v0.2 publication is complete: the release tag and GitHub release exist, `/spec/latest/` and `/spec/v0.2/` are published surfaces, and the publication evidence pack exists at `/Users/grig/work/repo/universalmanifest/docs/reports/2026-04-30-v0-2-publication-evidence-pack.md`.
+
+This WO still cannot execute without human input because the repo does not contain a real external-reader cohort, candidate list, consent/process record, scheduled/read-session notes, or transcript captures. Do not simulate external readers or fabricate transcript evidence.
 
 ## Files to read first
 
