@@ -4,14 +4,14 @@ This document captures the minimal execution sequence to make Universal Manifest
 
 “World-ready” is not a vibe. It requires passing the gates in `docs/DONE-DONE-DEFINITION.md` with evidence.
 
-## Current Execution Focus -- Home Cluster Complete; Manual Phase 9; v0.2 Published
+## Current Execution Focus -- Homepage Design Reset; Manual Phase 9; v0.2 Published
 
-Goal: preserve the completed state after the content-first `Home`-cluster wave, keep Phase 9 truthfully manual after the 2026-04-28 revert, and carry the repo from the completed v0.2 publication wave into the next post-publication phase.
+Goal: preserve the completed v0.2 publication state, keep Phase 9 truthfully manual after the 2026-04-28 revert, and reset the public front door through a design-first homepage-cluster sequence before external-reader validation resumes.
 
 Immediate rule:
 
 - the primary public menu should remain limited to `Home` and `Latest Spec`
-- the homepage should stay low-noise and plain-language
+- the homepage should be design-led, low-noise, plain-language, and immediately explain what Universal Manifest is
 - the latest spec must remain obviously one click away at `/spec/latest/`
 - the homepage should route into a `Home` cluster rather than trying to summarize everything itself
 - the explorer should remain use-case-first, with metaverse portaling as the lead lane
@@ -19,7 +19,7 @@ Immediate rule:
 - reintegrated reading pages should stay under the shared public shell rather than reviving sprint-era visual fragmentation
 - tool and proof entry routes should return under a deliberate shared shell without replacing the calm MVP front door
 
-These rules still hold after v0.2 publication: the home page now has a restrained publication callout, `/spec/latest/` remains obvious, and the durable `/spec/v0.2/` route exists without expanding the calm public menu.
+These rules still hold after v0.2 publication, but the existing homepage implementation is not accepted as the final public front door. `WO-0252` is superseded as final direction; the active path now starts with `WO-0253`.
 
 Completed execution sequence:
 
@@ -31,7 +31,7 @@ Completed execution sequence:
 6. `WO-0203` and `WO-0204` implemented the explorer and audience-family public surfaces.
 7. `WO-0205` closed the wave with harmonization and publication-readiness verification.
 
-Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` through `WO-0209` completed the first late-April drift-governance follow-up. `WO-0219`, `WO-0241`, and `WO-0242` completed the integration-lane reference, public-route, and dedicated-journey consolidation, bringing the executable proof suite to 27 passing journeys. `WO-0220` executed the operator-gated `spec-v0.2` tag and GitHub release on 2026-04-30, and `WO-0221` through `WO-0226` completed the public spec, discovery, migration, conformance, governance, changelog, home-announcement, and announcement-copy publication surfaces. `WO-0227` and `WO-0228` are obsolete after the 2026-04-28 revert, `WO-0229` closed the authority-doc reconciliation, `WO-0230` defined Phase 19, `WO-0231` closed the v0.2 publication wave with an evidence pack, `WO-0214` is deferred to Phase 19 external-human validation activation, and reverted workflow-era WOs `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240` are audit-only `OBSOLETE` records that must not be executed.
+Status: WO-0171 completed the homepage/spec route split. WO-0172 through WO-0174 then established and verified the two-page MVP, WO-0175 extracted the first reusable `UM UI` system, WO-0176 completed the first reader reintegration wave (`/docs/`, `/about/why-um/`, `/about/one-pager/`, `/use-cases/`), WO-0177 completed the first tool/proof reintegration wave (`/learning/`, `/sandbox/`, `/workbench/`), WO-0178 closed the outstanding `/spec/latest/` inline TOC bug, WO-0179 added the canonical full-project/property/surface map, and WO-0180 through WO-0182 established the post-map surface classification and keep/merge/alias/retire strategy. `WO-0183` through `WO-0194` then closed the remaining site-architecture and standards/proof hardening queue. `WO-0195` defined the `Home`-cluster sitemap, domain audit, audience-layer split, and metaverse-first explorer strategy. `WO-0196` through `WO-0205` then delivered the page architecture, audience strategy, explorer schema, content packs, route implementation, and harmonized publication-ready `Home` cluster. `WO-0206` through `WO-0209` completed the first late-April drift-governance follow-up. `WO-0219`, `WO-0241`, and `WO-0242` completed the integration-lane reference, public-route, and dedicated-journey consolidation, bringing the executable proof suite to 27 passing journeys. `WO-0220` executed the operator-gated `spec-v0.2` tag and GitHub release on 2026-04-30, and `WO-0221` through `WO-0226` completed the public spec, discovery, migration, conformance, governance, changelog, home-announcement, and announcement-copy publication surfaces. `WO-0227` and `WO-0228` are obsolete after the 2026-04-28 revert, `WO-0229` closed the authority-doc reconciliation, `WO-0230` defined Phase 19, `WO-0231` closed the v0.2 publication wave with an evidence pack, and `WO-0252` is superseded as the final homepage direction. `WO-0253` through `WO-0256` now define the corrected reader-path sequence before external-human validation resumes. Reverted workflow-era WOs `WO-0210`, `WO-0211`, `WO-0227`, `WO-0228`, `WO-0233`, `WO-0238`, and `WO-0240` are audit-only `OBSOLETE` records that must not be executed.
 
 Current critical path:
 
@@ -40,6 +40,11 @@ Current critical path:
 3. `WO-0229` is complete: authority docs now reflect the published-v0.2 state.
 4. `WO-0230` is complete: Phase 19 is defined with non-conflicting queue stubs starting at `WO-0243`.
 5. `WO-0231` is complete: the publication closeout evidence pack is recorded at `docs/reports/2026-04-30-v0-2-publication-evidence-pack.md`.
+6. `WO-0252` is superseded: retain it as historical evidence only; do not continue implementation from it as final direction.
+7. `WO-0253` is next: produce the homepage-cluster design report from the self-contained remote-agent brief.
+8. `WO-0254` follows `WO-0253`: implement the approved design across the five-page homepage cluster.
+9. `WO-0255` follows `WO-0254`: verify the production reader path, including `/spec/latest/` and `/spec/v0.2/`.
+10. `WO-0256` follows `WO-0255`: run real external-reader validation only when the public route path is verified and a real cohort/process exists.
 
 Cleanup context that affects sequencing:
 

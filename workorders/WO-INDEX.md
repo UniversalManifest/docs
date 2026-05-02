@@ -536,3 +536,11 @@ These are subtask-level closeouts that landed on 2026-04-24 alongside `WO-0206` 
 - WO-0249 (STUB): Revocation-as-normative decision package (P2) — determine whether status metadata remains optional or becomes conformance-bound
 - WO-0250 (STUB): Encrypted inline facet promotion decision (P3) — decide whether guidance-only encrypted facets need normative lifecycle and fixture coverage
 - WO-0251 (STUB): Broader cross-DID binding tier scope decision (P3) — evaluate cross-DID binding expansion beyond the v0.2 Tier 1 baseline
+
+### Homepage Reader-Validation Blocker
+
+- WO-0252 (SUPERSEDED 2026-05-02): `docs/workorders/WO-0252-homepage-product-story-redesign.md` — implementation pass retained as historical evidence only; do not extend as final homepage direction because the user rejected the result as still visually/narratively inadequate
+- WO-0253 (COMPLETED 2026-05-02): `docs/workorders/WO-0253-homepage-cluster-design-direction-package.md` — design report delivered at `/Users/grig/work/repo/universalmanifest/.dev/ai/designs/2026-05-02-homepage-cluster-design-report.md`; unblocks implementation
+- WO-0254 (COMPLETED 2026-05-02): `docs/workorders/WO-0254-implement-approved-homepage-cluster-redesign.md` — implemented the approved design across homepage, use cases, explorer, how it works, and standards fit using the delivered WO-0253 report
+- WO-0255 (BLOCKED): `docs/workorders/WO-0255-public-route-and-deployment-verification-v0-2-reader-path.md` — verify production reader routes after the approved redesign is implemented/deployed; blocked on public deployment of the new site
+- WO-0256 (BLOCKED): `docs/workorders/WO-0256-external-reader-validation-execution.md` — run real external-reader validation only after design, implementation, production verification, and cohort/process prerequisites are satisfied
