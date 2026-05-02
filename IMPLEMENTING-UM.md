@@ -61,7 +61,7 @@ You MAY rewrite any internal file. You MUST keep:
 The fastest path is to point the bundled wrapper at the spec repo's authoritative fixture matrix:
 
 ```bash
-git clone https://github.com/grigb/universalmanifest.git ../universalmanifest
+git clone https://github.com/grigb/universal-manifest.git ../universalmanifest
 UM_CONFORMANCE_ROOT=../universalmanifest/conformance npm run conformance
 ```
 
@@ -73,7 +73,7 @@ Copy `.github/workflows/conformance.yml` from the upstream `um-typescript` repos
 
 ### 5. Declare conformance
 
-Add a `Conformance` section to your README pointing to your latest report. Optionally consume one of the published badges from `https://github.com/grigb/universalmanifest/tree/main/conformance/badges`.
+Add a `Conformance` section to your README pointing to your latest report. Optionally consume one of the published badges from `https://github.com/grigb/universal-manifest/tree/main/conformance/badges`.
 
 ---
 
@@ -141,7 +141,7 @@ The Cloudflare-targeted J04 (`docs/journeys/journey-04-umid-resolution-myum.md`)
 
 The spec repo's README has a "Reference implementations" section. To get listed:
 
-1. Open a PR against `https://github.com/grigb/universalmanifest` modifying `README.md`.
+1. Open a PR against `https://github.com/grigb/universal-manifest` modifying `README.md`.
 2. Include:
    - Repository URL.
    - Language and runtime.
