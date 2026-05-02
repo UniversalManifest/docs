@@ -1,6 +1,6 @@
 # WO-0255: Public Route and Deployment Verification for v0.2 Reader Path
 
-**Status:** BLOCKED — run after WO-0254 implementation is deployed or otherwise available on the public target
+**Status:** BLOCKED 2026-05-02 — Cloudflare deployment credentials in GitHub Actions are invalid, so the redesigned site cannot be deployed to staging/production for public route verification
 **Priority:** P0 (blocks external-reader validation)
 **Depends on:** WO-0254
 **Unblocks:** WO-0256
@@ -11,6 +11,29 @@
 Local routes were verified during the homepage review, but production v0.2 reader routes were observed returning `404` on 2026-05-01 for `/spec/latest/` and `/spec/v0.2/`.
 
 External-reader validation cannot proceed against a public standard experience if critical public routes fail or drift from the local build.
+
+## Current blocker
+
+`WO-0254` implementation is committed and pushed, and `WO-0257` fixed the GitHub Actions submodule checkout/build blocker. The gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25244375424` then built the publish bundle successfully, but both Cloudflare deploy jobs failed before updating staging:
+
+- staging resolver deploy: `Invalid access token [code: 9109]`
+- staging docs deploy: `Invalid access token [code: 9109]`
+
+Repository secrets currently include `CF_ACCOUNT_ID` and `CF_API_TOKEN`, but the configured `CF_API_TOKEN` is not accepted by Cloudflare. Until the Cloudflare token is rotated or replaced in GitHub repository secrets, production cannot be updated and this WO cannot verify the redesigned public route path.
+
+Direct public checks after the failed deploy still show the old route state:
+
+- `https://universalmanifest.net/` -> `200`
+- `https://universalmanifest.net/use-cases/` -> `200`
+- `https://universalmanifest.net/explorer/` -> `404`
+- `https://universalmanifest.net/how-it-works/` -> `404`
+- `https://universalmanifest.net/standards-fit/` -> `404`
+- `https://universalmanifest.net/spec/latest/` -> `404`
+- `https://universalmanifest.net/spec/v0.2/` -> `404`
+- `https://universalmanifest.net/guides/migration-v01-v02/` -> `200`
+- `https://universalmanifest.net/publishing/changelog/` -> `200`
+- `https://universalmanifest.net/.well-known/universal-manifest.json` -> `200`
+- `https://universalmanifest.net/llms.txt` -> `200`
 
 ## Objective
 
