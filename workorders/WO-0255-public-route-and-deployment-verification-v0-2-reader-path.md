@@ -14,14 +14,20 @@ External-reader validation cannot proceed against a public standard experience i
 
 ## Current blocker
 
-`WO-0254` implementation is committed and pushed, and `WO-0257` fixed the GitHub Actions submodule checkout/build blocker. The gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25244375424` then built the publish bundle successfully, but both Cloudflare deploy jobs failed before updating staging:
+`WO-0254` implementation is committed and pushed, and `WO-0257` fixed the GitHub Actions submodule checkout/build blocker. `WO-0258` then repaired the remaining CI/deploy gate drift: `verify` passed at `https://github.com/grigb/universal-manifest/actions/runs/25253951175`, and `CI/CD Pipeline` passed at `https://github.com/grigb/universal-manifest/actions/runs/25253951171`.
+
+The latest gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25253991767` built the publish bundle successfully, then stopped at `Deploy staging resolver` during Cloudflare auth preflight:
+
+- staging resolver deploy: `Invalid access token [code: 9109]`
+
+The older gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25244375424` also showed the same credential failure before updating staging:
 
 - staging resolver deploy: `Invalid access token [code: 9109]`
 - staging docs deploy: `Invalid access token [code: 9109]`
 
-Repository secrets currently include `CF_ACCOUNT_ID` and `CF_API_TOKEN`, but the configured `CF_API_TOKEN` is not accepted by Cloudflare. Until the Cloudflare token is rotated or replaced in GitHub repository secrets, production cannot be updated and this WO cannot verify the redesigned public route path.
+Repository secrets currently include `CF_ACCOUNT_ID` and `CF_API_TOKEN`, but the configured `CF_API_TOKEN` is not accepted by Cloudflare. Until the Cloudflare token is rotated or replaced in GitHub repository secrets, production cannot be updated and this WO cannot verify the redesigned public route path. The workflow now fails directly at the deploy step instead of continuing into stale staging verification.
 
-Direct public checks after the failed deploy still show the old route state:
+Direct public checks after the 2026-05-02 14:21 UTC failed deploy still show the old route state:
 
 - `https://universalmanifest.net/` -> `200`
 - `https://universalmanifest.net/use-cases/` -> `200`

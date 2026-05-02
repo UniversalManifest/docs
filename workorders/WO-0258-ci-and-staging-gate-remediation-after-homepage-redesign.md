@@ -1,6 +1,6 @@
 # WO-0258: CI and Staging Gate Remediation After Homepage Redesign
 
-**Status:** IN_PROGRESS 2026-05-02
+**Status:** COMPLETED 2026-05-02
 **Priority:** P0 (blocks WO-0255 production verification)
 **Depends on:** WO-0254, WO-0257
 **Unblocks:** WO-0255
@@ -69,3 +69,30 @@ Restore the CI and deploy-gated verification path so the already-implemented hom
 ## Output
 
 Result report: `/Users/grig/work/repo/universalmanifest/.dev/ai/subtask-comms/2026-05-02-wo-0258-result.md`
+
+## Closeout Evidence
+
+Repository and workflow remediation completed:
+
+- First-read terminology violations were fixed in `/Users/grig/work/repo/universalmanifest/site/src/content/docs/index.md`.
+- Route artifact checks in `/Users/grig/work/repo/universalmanifest/.github/workflows/verify.yml` and `/Users/grig/work/repo/universalmanifest/.github/workflows/ci.yml` now check the actual generated sandbox scenario route plus the homepage-cluster and v0.2 reader routes.
+- Pre-deploy link checking no longer follows absolute `https://universalmanifest.net/...` self-links against stale production.
+- Broken conformance symlinks for the renamed facet fixtures were repaired.
+- Stale GitHub links in the agent-facing implementation path were repaired.
+- `deploy-gated.yml` no longer masks staging deploy failures with `continue-on-error`; Cloudflare auth failures now stop the deploy before stale staging verification can run.
+
+Verification completed:
+
+- `npm run check:terminology` passed.
+- `npm run build && cd /Users/grig/work/repo/universalmanifest/conformance/runner && npm test && node ./cli.mjs --mode command --adapter-command "node ../adapters/typescript/adapter.mjs" --versions 0.1,0.2 --baseline --report ./conformance-report-ci.json` passed with `v0.1 -> 32/32` and `v0.2 -> 17/17`.
+- `npm run build:clean` passed from `/Users/grig/work/repo/universalmanifest/site`.
+- Local required route artifact assertions passed for the tool routes, homepage cluster, and v0.2 reader routes.
+- YAML parsing and `actionlint` passed for `.github/workflows/deploy-gated.yml`, `.github/workflows/verify.yml`, and `.github/workflows/ci.yml`.
+- `npm run smoke:endpoints:prod` passed.
+- GitHub `verify` passed: `https://github.com/grigb/universal-manifest/actions/runs/25253951175`.
+- GitHub `CI/CD Pipeline` passed: `https://github.com/grigb/universal-manifest/actions/runs/25253951171`.
+
+Deploy-gated rerun evidence:
+
+- `https://github.com/grigb/universal-manifest/actions/runs/25253991767` built the publish bundle successfully.
+- The run stopped at `Deploy staging resolver` with `Invalid access token [code: 9109]`, confirming the remaining block is Cloudflare credential action, not stale-route verification drift.
