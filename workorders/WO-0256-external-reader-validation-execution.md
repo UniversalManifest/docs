@@ -1,6 +1,6 @@
 # WO-0256: External Reader Validation Execution
 
-**Status:** BLOCKED — requires WO-0253, WO-0254, WO-0255, and a real external-reader cohort/process
+**Status:** BLOCKED — requires a real external-reader cohort/process; WO-0253, WO-0254, and WO-0255 are complete
 **Priority:** P1 (post-publication quality evidence; not a v0.2 release gate)
 **Depends on:** WO-0214, WO-0243, WO-0253, WO-0254, WO-0255
 **Unblocks:** follow-on comprehension/copy/IA WOs from real reader evidence
@@ -10,7 +10,7 @@
 
 Post-publication external-reader evidence does not exist. `WO-0214` correctly blocks on a real cohort and forbids simulated readers.
 
-Reader validation also should not run until the redesigned homepage cluster is implemented and production routes are verified, otherwise the cohort would be testing a known-rejected or broken public experience.
+The redesigned homepage cluster is implemented and production routes are verified. The remaining blocker is user-supplied access to real readers plus consent/process expectations, because agents cannot simulate this evidence.
 
 ## Objective
 

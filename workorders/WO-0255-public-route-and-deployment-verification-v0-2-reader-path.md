@@ -1,6 +1,6 @@
 # WO-0255: Public Route and Deployment Verification for v0.2 Reader Path
 
-**Status:** BLOCKED 2026-05-02 — Cloudflare deployment credentials in GitHub Actions are invalid, so the redesigned site cannot be deployed to staging/production for public route verification
+**Status:** COMPLETED 2026-05-05 — production reader route verification passed after Cloudflare credential repair and a deploy artifact fix for hidden `.well-known` files
 **Priority:** P0 (blocks external-reader validation)
 **Depends on:** WO-0254
 **Unblocks:** WO-0256
@@ -12,34 +12,42 @@ Local routes were verified during the homepage review, but production v0.2 reade
 
 External-reader validation cannot proceed against a public standard experience if critical public routes fail or drift from the local build.
 
-## Current blocker
+## Completion evidence
 
-`WO-0254` implementation is committed and pushed, and `WO-0257` fixed the GitHub Actions submodule checkout/build blocker. `WO-0258` then repaired the remaining CI/deploy gate drift: `verify` passed at `https://github.com/grigb/universal-manifest/actions/runs/25253951175`, and `CI/CD Pipeline` passed at `https://github.com/grigb/universal-manifest/actions/runs/25253951171`.
+The Cloudflare credential blocker was resolved by supervisor `blocker-supervisor-2026-05-05-18-20-34Z`. Staging-only deploy run `https://github.com/grigb/universal-manifest/actions/runs/25394386494` then passed.
 
-The latest gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25253991767` built the publish bundle successfully, then stopped at `Deploy staging resolver` during Cloudflare auth preflight:
+The first production promotion after credential repair, `https://github.com/grigb/universal-manifest/actions/runs/25399107082`, passed the workflow gates, but independent route verification found `https://universalmanifest.net/.well-known/universal-manifest.json` returning `404`. Root cause: `actions/upload-artifact@v4` excluded hidden directories from the `publish-bundle` artifact, so deploy jobs received a bundle without `dist/.well-known/`.
 
-- staging resolver deploy: `Invalid access token [code: 9109]`
+Fix commit `4cdf0f890afe0d0234f105a43fd599003cb45849` added `include-hidden-files: true` to `/Users/grig/work/repo/universalmanifest/.github/workflows/deploy-gated.yml`. The post-push workflows passed:
 
-The older gated deploy run at `https://github.com/grigb/universal-manifest/actions/runs/25244375424` also showed the same credential failure before updating staging:
+- `verify`: `https://github.com/grigb/universal-manifest/actions/runs/25399422359`
+- `CI/CD Pipeline`: `https://github.com/grigb/universal-manifest/actions/runs/25399422262`
 
-- staging resolver deploy: `Invalid access token [code: 9109]`
-- staging docs deploy: `Invalid access token [code: 9109]`
+Final gated production deploy run `https://github.com/grigb/universal-manifest/actions/runs/25399523864` passed all deploy and verification jobs:
 
-Repository secrets currently include `CF_ACCOUNT_ID` and `CF_API_TOKEN`, but the configured `CF_API_TOKEN` is not accepted by Cloudflare. Until the Cloudflare token is rotated or replaced in GitHub repository secrets, production cannot be updated and this WO cannot verify the redesigned public route path. The workflow now fails directly at the deploy step instead of continuing into stale staging verification.
+- Build publish bundle: success
+- Deploy staging resolver: success
+- Deploy staging docs: success
+- Verify staging gates: success
+- Deploy production resolver: success
+- Deploy production docs: success
+- Verify production gates: success
 
-Direct public checks after the 2026-05-02 14:21 UTC failed deploy still show the old route state:
+Independent public route checks at `2026-05-05T20:13:37Z` all returned `200`:
 
-- `https://universalmanifest.net/` -> `200`
-- `https://universalmanifest.net/use-cases/` -> `200`
-- `https://universalmanifest.net/explorer/` -> `404`
-- `https://universalmanifest.net/how-it-works/` -> `404`
-- `https://universalmanifest.net/standards-fit/` -> `404`
-- `https://universalmanifest.net/spec/latest/` -> `404`
-- `https://universalmanifest.net/spec/v0.2/` -> `404`
-- `https://universalmanifest.net/guides/migration-v01-v02/` -> `200`
-- `https://universalmanifest.net/publishing/changelog/` -> `200`
-- `https://universalmanifest.net/.well-known/universal-manifest.json` -> `200`
-- `https://universalmanifest.net/llms.txt` -> `200`
+- `https://universalmanifest.net/`
+- `https://universalmanifest.net/use-cases/`
+- `https://universalmanifest.net/explorer/`
+- `https://universalmanifest.net/how-it-works/`
+- `https://universalmanifest.net/standards-fit/`
+- `https://universalmanifest.net/spec/latest/`
+- `https://universalmanifest.net/spec/v0.2/`
+- `https://universalmanifest.net/guides/migration-v01-v02/`
+- `https://universalmanifest.net/publishing/changelog/`
+- `https://universalmanifest.net/.well-known/universal-manifest.json`
+- `https://universalmanifest.net/llms.txt`
+
+Formal report: `/Users/grig/work/repo/universalmanifest/docs/reports/2026-05-05-v0-2-reader-path-production-verification.md`
 
 ## Objective
 
